@@ -1,0 +1,2 @@
+# raremat
+Rare materials ontology
