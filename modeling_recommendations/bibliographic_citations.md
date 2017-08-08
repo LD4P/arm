@@ -220,11 +220,16 @@ RDF Examples
 ------------
 
 ### Use case 1: Basic citation.
+![Use Case 1](/modeling_recommendations/modeling_diagrams/citations_useCase_1.png)
 
 ### Use case 2: Citation located, cataloger adds commentary on citation.
+![Use Case 2](/modeling_recommendations/modeling_diagrams/citations_useCase_2.png)
 
 ### Use case 3: Negative citation (without comment).
+![Use Case 3](/modeling_recommendations/modeling_diagrams/citations_useCase_3.png)
 
 ### Use case 4.1: Negative citation with comment.
+![Use Case 4.1](/modeling_recommendations/modeling_diagrams/citations_useCase_4_1.png)
 
 ### Use case 4.2: Negative citation plus additional citation.
+![Use Case 4.2](/modeling_recommendations/modeling_diagrams/citations_useCase_4_2.png)
