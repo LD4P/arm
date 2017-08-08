@@ -1,9 +1,18 @@
 Bibliographic Citations for Rare Materials Cataloging
 =====================================================
-
 2017-08-08
 
-Overview
+Table of Contents
+> - [Overview](#overview)
+> - [Entities to Be Modeled](#entities)
+> - [Summary of Recommendations](#recommendations)
+> - [Recommended Classes](#classes)
+> - [Recommended Properties](#properties)
+> - [Recommended Named Individuals](#individuals)
+> - [Diagrams](#diagrams)
+
+
+<a name="overview">Overview</a>
 --------
 
 Previous RareMat discussions posited two general use cases for bibliographic citations: first, to identify a resource (as a subclass of bf:Identifier) and second, to support descriptive information (using the Web Annotation model). At the ArtFrame/RareMat in-person meeting held at Columbia in March 2017, there was a consensus that it would be problematic to model citations as identifiers and that a single pattern based on Web Annotations would be preferable.
@@ -36,14 +45,14 @@ A negative citation is also modeled as an **oa:Annotation**, with the motivation
 
 Comments may also be added to negative citations using the Web Annotation model. A simple textual comment may be added as a second annotation body. If the cataloger wishes to include a related citation (for example, to a variant edition of a resource), a separate citation resource may be created (see diagram 4.2, below).
 
-Entities to Be Modeled
+<a name="entities">Entities to Be Modeled</a>
 ----------------------
 > - Resource of interest to cataloger; typically instance or item but may also be a work => bf:Instance, bf:Item, bf:Work
 > - Reference source => bf:Work
 > - Cataloger commentary => oa:Annotation
 > - Citation => bib:Citation
 
-Summary of Recommendations
+<a name="recommendations">Summary of Recommendations</a>
 --------------------------
 
 1.  Mint additional annotation motivations:  **bib:asserting**, **bib:assertingSourceDataNotFound**, and **bib:assertingCitationNotFound** (listed in order from broadest to narrowest) to represent negative citations.
@@ -54,7 +63,7 @@ Summary of Recommendations
 
 4.  Consider other location designators as appropriate.
 
-Recommended Classes
+<a name="classes">Recommended Classes</a>
 -------------------
 
 **bib:Citation**
@@ -113,7 +122,7 @@ Recommended Classes
 > - **Comment:** NA
 
 
-Recommended Properties
+<a name="properties">Recommended Properties</a>
 ----------------------
 
 **bib:atLocation**
@@ -175,7 +184,7 @@ Recommended Properties
 > - **Definition:** A related resource in which the described resource is physically or logically included.
 
 
-Recommended Named Individuals
+<a name="individuals">Recommended Named Individuals</a>
 -----------------------------
 **bib:asserting**
 > - **Label:** asserting
@@ -216,7 +225,7 @@ Recommended Named Individuals
 > - **Comment**:
 
 
-Diagrams
+<a name="diagrams">Diagrams</a>
 --------
 
 ### Use case 1: Basic citation.
