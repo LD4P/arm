@@ -58,162 +58,162 @@ Recommended Classes
 -------------------
 
 **bib:Citation**
->**Label:** Citation
->**URI:** TBD
->**Subclass of**:
->**Definition:** A single citation within a bibliographic source.
->**Comment:**
+> - **Label:** Citation
+> - **URI:** TBD
+> - **Subclass of**:
+> - **Definition:** A single citation within a bibliographic source.
+> - **Comment:**
 
 
 **bib:Entry**
->**Label:** Entry
->**URI:** TBD
->**Subclass of**:
->**Definition:** A specific entry that locates a citation within a bibliographic source.
->**Comment:** Used in parsing out hierarchically structured location designators for citations.
+> - **Label:** Entry
+> - **URI:** TBD
+> - **Subclass of**:
+> - **Definition:** A specific entry that locates a citation within a bibliographic source.
+> - **Comment:** Used in parsing out hierarchically structured location designators for citations.
 
 
 **bib:Page**
->**Label:** Page
->**URI:** TBD
->**Subclass of**:
->**Definition:** A single page within a resource.
->**Comment:** Used in any page-level description, as well as in parsing out hierarchically structured location designators for citations.
+> - **Label:** Page
+> - **URI:** TBD
+> - **Subclass of**:
+> - **Definition:** A single page within a resource.
+> - **Comment:** Used in any page-level description, as well as in parsing out hierarchically structured location designators for citations.
 
 
 **bib:Volume**
->**Label:** Volume
->**URI:** TBD
->**Subclass of**:
->**Definition:** A single bibliographic or physical volume of a resource.
->**Comment:** Used in any volume-level description, as well as in parsing out hierarchically structured location designators for citations.
+> - **Label:** Volume
+> - **URI:** TBD
+> - **Subclass of**:
+> - **Definition:** A single bibliographic or physical volume of a resource.
+> - **Comment:** Used in any volume-level description, as well as in parsing out hierarchically structured location designators for citations.
 
 **oa:Annotation**
->**Label:** Annotation
->**URI:** [*http://www.w3.org/ns/oa/#Annotation*](http://www.w3.org/ns/oa#Annotation)
->**Definition:** The class for Web Annotations.
->**Comment:** NA
+> - **Label:** Annotation
+> - **URI:** [*http://www.w3.org/ns/oa/#Annotation*](http://www.w3.org/ns/oa#Annotation)
+> - **Definition:** The class for Web Annotations.
+> - **Comment:** NA
 
 **oa:Motivation**
->**Label:** Motivation
->**URI:** [*http://www.w3.org/ns/oa/#Motivation*](http://www.w3.org/ns/oa#Motivation)
->**Definition:** The Motivation class is used to record the user's intent or motivation for the creation of the Annotation, or the inclusion of the body or target, that it is associated with.
->**Comment:** NA
+> - **Label:** Motivation
+> - **URI:** [*http://www.w3.org/ns/oa/#Motivation*](http://www.w3.org/ns/oa#Motivation)
+> - **Definition:** The Motivation class is used to record the user's intent or motivation for the creation of the Annotation, or the inclusion of the body or target, that it is associated with.
+> - **Comment:** NA
 
 **oa:SpecificResource**
->**Label:** Specific resource
->**URI:** [*http://www.w3.org/ns/oa/#SpecificResource*](http://www.w3.org/ns/oa#SpecificResource)
->**Definition:** Instances of the SpecificResource class identify part of another resource (referenced with oa:hasSource), a particular representation of a resource, a resource with styling hints for renders, or any combination of these, as used within an Annotation.
->**Comment:** NA
+> - **Label:** Specific resource
+> - **URI:** [*http://www.w3.org/ns/oa/#SpecificResource*](http://www.w3.org/ns/oa#SpecificResource)
+> - **Definition:** Instances of the SpecificResource class identify part of another resource (referenced with oa:hasSource), a particular representation of a resource, a resource with styling hints for renders, or any combination of these, as used within an Annotation.
+> - **Comment:** NA
 
 **oa:TextualBody**
->**Label:** Textual body
->**URI:** [*http://www.w3.org/ns/oa/#TextualBody*](http://www.w3.org/ns/oa#TextualBody)
->**Definition:** NA
->**Comment:** NA
+> - **Label:** Textual body
+> - **URI:** [*http://www.w3.org/ns/oa/#TextualBody*](http://www.w3.org/ns/oa#TextualBody)
+> - **Definition:** NA
+> - **Comment:** NA
 
 
 Recommended Properties
 ----------------------
 
 **bib:atLocation**
->**Label:** at location
->**URI:** [*http://bibliotek-o.org/1.1/ontology/atLocation*](http://bibliotek-o.org/1.1/ontology/atLocation)
->**Domain:** Unspecified
->**Range:** prov:Location
->**Definition:** The resource being described is at the specified location.
+> - **Label:** at location
+> - **URI:** [*http://bibliotek-o.org/1.1/ontology/atLocation*](http://bibliotek-o.org/1.1/ontology/atLocation)
+> - **Domain:** Unspecified
+> - **Range:** prov:Location
+> - **Definition:** The resource being described is at the specified location.
 
 **bib:hasSource**
->**Label:** has source
->**URI:** [*http://bibliotek-o.org/1.1/ontology/hasSource*](http://bibliotek-o.org/1.1/ontology/hasSource)
->**Domain:** Unspecified
->**Range:** Unspecified
->**Inverse:** bib:isSourceOf
->**Definition:** Relates this resource to the source from which it was derived.
+> - **Label:** has source
+> - **URI:** [*http://bibliotek-o.org/1.1/ontology/hasSource*](http://bibliotek-o.org/1.1/ontology/hasSource)
+> - **Domain:** Unspecified
+> - **Range:** Unspecified
+> - **Inverse:** bib:isSourceOf
+> - **Definition:** Relates this resource to the source from which it was derived.
 
 **cito:cites**
->**Label:** cites
->**URI:** [*http://purl.org/spar/cito/cites*](http://purl.org/spar/cito/cites)
->**Domain:** Unspecified
->**Range:** Unspecified
->**Inverse:** cito:isCitedBy
->**Definition:** The citing entity cites the cited entity, either directly and explicitly (as in the reference list of a journal article), indirectly (e.g. by citing a more recent paper by the same group on the same topic), or implicitly (e.g. as in artistic quotations or parodies, or in cases of plagiarism).
+> - **Label:** cites
+> - **URI:** [*http://purl.org/spar/cito/cites*](http://purl.org/spar/cito/cites)
+> - **Domain:** Unspecified
+> - **Range:** Unspecified
+> - **Inverse:** cito:isCitedBy
+> - **Definition:** The citing entity cites the cited entity, either directly and explicitly (as in the reference list of a journal article), indirectly (e.g. by citing a more recent paper by the same group on the same topic), or implicitly (e.g. as in artistic quotations or parodies, or in cases of plagiarism).
 
 **oa:hasBody**
->**Label:** has body
->**URI:** [*http://www.w3.org/ns/oa/#hasBody*](http://www.w3.org/ns/oa#hasBody)
->**Domain:** oa:Annotation
->**Definition:** The object of the relationship is a resource that is a body of the Annotation.
+> - **Label:** has body
+> - **URI:** [*http://www.w3.org/ns/oa/#hasBody*](http://www.w3.org/ns/oa#hasBody)
+> - **Domain:** oa:Annotation
+> - **Definition:** The object of the relationship is a resource that is a body of the Annotation.
 
 **oa:motivatedBy**
->**Label:** motivated by
->**URI:** [*http://www.w3.org/ns/oa/#motivatedBy*](http://www.w3.org/ns/oa#motivatedBy)
->**Domain:** oa:Annotation
->**Range:** oa:Motivation
->**Definition:** The relationship between an Annotation and a Motivation that describes the reason for the Annotation's creation.
+> - **Label:** motivated by
+> - **URI:** [*http://www.w3.org/ns/oa/#motivatedBy*](http://www.w3.org/ns/oa#motivatedBy)
+> - **Domain:** oa:Annotation
+> - **Range:** oa:Motivation
+> - **Definition:** The relationship between an Annotation and a Motivation that describes the reason for the Annotation's creation.
 
 **oa:hasPurpose**
->**Label:** has purpose
->**URI:** [*http://www.w3.org/ns/oa/#hasPurpose*](http://www.w3.org/ns/oa#hasPurpose)
->**Range:** oa:Motivation
->**Definition:** The purpose served by the resource in the Annotation.
+> - **Label:** has purpose
+> - **URI:** [*http://www.w3.org/ns/oa/#hasPurpose*](http://www.w3.org/ns/oa#hasPurpose)
+> - **Range:** oa:Motivation
+> - **Definition:** The purpose served by the resource in the Annotation.
 
 **oa:hasSource**
->**Label:** at location
->**URI:** [*http://www.w3.org/ns/oa/#hasSource*](http://www.w3.org/ns/oa#hasSource)
->**Definition:** The resource that the ResourceSelection, or its subclass SpecificResource, is refined from, or more specific than.
+> - **Label:** at location
+> - **URI:** [*http://www.w3.org/ns/oa/#hasSource*](http://www.w3.org/ns/oa#hasSource)
+> - **Definition:** The resource that the ResourceSelection, or its subclass SpecificResource, is refined from, or more specific than.
 
 **oa:hasTarget**
->**Label:** has target
->**URI:** [*http://www.w3.org/ns/oa/#hasTarget*](http://www.w3.org/ns/oa#hasTarget)
->**Domain:** oa:Annotation
->**Definition:** The relationship between an Annotation and its Target.
+> - **Label:** has target
+> - **URI:** [*http://www.w3.org/ns/oa/#hasTarget*](http://www.w3.org/ns/oa#hasTarget)
+> - **Domain:** oa:Annotation
+> - **Definition:** The relationship between an Annotation and its Target.
 
 **dcterms:isPartOf**
->**Label:** Is Part Of
->**URI:** [*http://purl.org/dc/terms/isPartOf*](http://purl.org/dc/terms/isPartOf)
->**Definition:** A related resource in which the described resource is physically or logically included.
+> - **Label:** Is Part Of
+> - **URI:** [*http://purl.org/dc/terms/isPartOf*](http://purl.org/dc/terms/isPartOf)
+> - **Definition:** A related resource in which the described resource is physically or logically included.
 
 
 Recommended Named Individuals
 -----------------------------
 **bib:asserting**
->**Label:** asserting
->**URI:** TBD
->**Named individual of**: oa:Motivation
->**Narrower of**: NA
->**Definition:** The motivation for when the user intends to make a claim or assertion.
->**Comment**: NA
+> - **Label:** asserting
+> - **URI:** TBD
+> - **Named individual of**: oa:Motivation
+> - **Narrower of**: NA
+> - **Definition:** The motivation for when the user intends to make a claim or assertion.
+> - **Comment**: NA
 
 **bib:assertingSourceDataNotFound**
->**Label:** asserting source data not found
->**URI:** TBD
->**Named individual of**: oa:Motivation
->**Narrower of**: bib:asserting
->**Definition:** The motivation for when the user intends to state that no data was found to support an assertion.
->**Comment**: skos:narrower of the oa:Motivation named individual bib:asserting.
+> - **Label:** asserting source data not found
+> - **URI:** TBD
+> - **Named individual of**: oa:Motivation
+> - **Narrower of**: bib:asserting
+> - **Definition:** The motivation for when the user intends to state that no data was found to support an assertion.
+> - **Comment**: skos:narrower of the oa:Motivation named individual bib:asserting.
 
 **bib:assertingCitationNotFound**
->**Label:** asserting citation not found
->**URI:** TBD
->**Named individual of**: oa:Motivation
->**Narrower of**: bib:assertingSourceDataNotFound
->**Definition:** The motivation for when the user intends to state that no citation was found in a source.
->**Comment**: skos:narrower of the oa:Motivation named individual bib:assertingSourceDataNotFound.
+> - **Label:** asserting citation not found
+> - **URI:** TBD
+> - **Named individual of**: oa:Motivation
+> - **Narrower of**: bib:assertingSourceDataNotFound
+> - **Definition:** The motivation for when the user intends to state that no citation was found in a source.
+> - **Comment**: skos:narrower of the oa:Motivation named individual bib:assertingSourceDataNotFound.
 
 **oa:commenting**
->**Label:** commenting
->**URI:** http://www.w3.org/ns/oa/#commenting
->**Named individual of**: oa:Motivation
->**Definition:** The motivation for when the user intends to comment about the Target.
->**Comment**:
+> - **Label:** commenting
+> - **URI:** http://www.w3.org/ns/oa/#commenting
+> - **Named individual of**: oa:Motivation
+> - **Definition:** The motivation for when the user intends to comment about the Target.
+> - **Comment**:
 
 **oa:identifying**
->**Label:** identifying
->**URI:**[*http://www.w3.org/ns/oa/#identifying*](http://www.w3.org/ns/oa#identifying)
->**Named individual of**: oa:Motivation
->**Definition:** The motivation for when the user intends to assign an identity to the Target or identify what is being depicted or described in the Target.
->**Comment**:
+> - **Label:** identifying
+> - **URI:**[*http://www.w3.org/ns/oa/#identifying*](http://www.w3.org/ns/oa#identifying)
+> - **Named individual of**: oa:Motivation
+> - **Definition:** The motivation for when the user intends to assign an identity to the Target or identify what is being depicted or described in the Target.
+> - **Comment**:
 
 
 RDF Examples
