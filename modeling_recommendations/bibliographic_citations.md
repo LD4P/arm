@@ -39,13 +39,14 @@ A negative citation is also modeled as an **oa:Annotation**, with the motivation
 Comments may also be added to negative citations using the Web Annotation model. A simple textual comment may be added as a second annotation body. If the cataloger wishes to include a related citation (for example, to a variant edition of a resource), a separate citation resource may be created (see diagram 4.2, below).
 
 <a name="entities">Entities to Be Modeled</a>
-----------------------
+
 | Entity       | Type         | 
 |:-------------|:-------------|
 | Resource of interest to cataloger; typically instance or item but may also be a work | bf:Instance, bf:Item, bf:Work |
 | Reference source    | bf:Work      |
 | Cataloger commentary | oa:Annotation      |
 | Citation | bib:Citation     |
+
 
 <a name="recommendations">Summary of Recommendations</a>
 --------------------------
