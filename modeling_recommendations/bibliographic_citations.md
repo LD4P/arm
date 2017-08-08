@@ -14,16 +14,9 @@ Table of Contents
 
 <a name="overview">Overview</a>
 --------
-
-Previous RareMat discussions posited two general use cases for bibliographic citations: first, to identify a resource (as a subclass of bf:Identifier) and second, to support descriptive information (using the Web Annotation model). At the ArtFrame/RareMat in-person meeting held at Columbia in March 2017, there was a consensus that it would be problematic to model citations as identifiers and that a single pattern based on Web Annotations would be preferable.
-
-The Web Annotation model provides a flexible framework for asserting relationships between two resources (the annotation body and the annotation target). Annotators are given autonomy in defining the content of annotation bodies. The difficulty in modeling bibliographic citations lies primarily in modeling the structure of the citation itself.
-
-At the Columbia meeting, participants from ArtFrame drew attention to the role of bibliographic citations in resource collocation: for example, being able to identify and select all resources indexed in a standard reference source such as the English Short Title Catalog.
-
 Rare materials catalogers often cite reference sources listed in the Standard Citation Forms (SCF) database ([*https://rbms.info/scf/*](https://rbms.info/scf/)) to support the description and identification of particular items or editions. SCF entries can be thought of as authority records for individual reference sources, but they do not currently provide canonical work-level URIs for those sources. Sources are typically cited using a controlled string that identifies the source--for example, "Wing, D.G. Short-title catalogue of books printed in England, Scotland, Ireland, Wales, and British America, and of English books printed in other countries, 1641-1700 (2nd ed. 1994)"--often accompanied by a value that describes the location within the source where the item or edition being cataloged is referenced. Users should be able to query on both the reference source and the specific location of an entry within the source.
 
-Finally, there is a need to model "negative citations": catalogers will often cite a reference source in order to indicate that the item being cataloged is not listed in standard sources.
+Additionally, there is a need to model "negative citations": catalogers will often cite a reference source in order to indicate that the item being cataloged is not listed in standard sources.
 
 In total, there are four use cases to be modeled:
 >1.  A citation is found, and the cataloger does not add commentary on the citation.
