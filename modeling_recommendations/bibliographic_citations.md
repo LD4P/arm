@@ -216,8 +216,8 @@ Recommended Named Individuals
 > - **Comment**:
 
 
-RDF Examples
-------------
+Diagrams
+--------
 
 ### Use case 1: Basic citation.
 ![Use Case 1](/modeling_recommendations/modeling_diagrams/citations_useCase_1.png)
