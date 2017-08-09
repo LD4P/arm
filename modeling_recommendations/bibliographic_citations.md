@@ -40,10 +40,12 @@ Comments may also be added to negative citations using the Web Annotation model.
 
 <a name="entities">Entities to Be Modeled</a>
 ----------------------
-> - Resource of interest to cataloger; typically instance or item but may also be a work => bf:Instance, bf:Item, bf:Work
-> - Reference source => bf:Work
-> - Cataloger commentary => oa:Annotation
-> - Citation => bib:Citation
+| Entity       | Type         | 
+|:-------------|:-------------|
+| Resource of interest to cataloger; typically instance or item but may also be a work | bf:Instance, bf:Item, bf:Work |
+| Reference source    | bf:Work      |
+| Cataloger commentary | oa:Annotation      |
+| Citation | bib:Citation     |
 
 <a name="recommendations">Summary of Recommendations</a>
 --------------------------
