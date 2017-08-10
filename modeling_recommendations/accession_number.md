@@ -1,12 +1,13 @@
-#Accession Number
+Accession Number
+================
 
 April 20, 2017
 
 Summary Recommendation 
 -----------------------
 
--   Create new sub-class bf:AccessionNumber as subclass of bf:Identifier to be used within the approved bibliotek-o [*Identifier*](https://wiki.duraspace.org/display/LD4P/bibliotek-o?preview=/79795231/83237327/bibliotek-o_pattern_identifiers_201612.pdf) pattern.
-	-	Note: LC accepted this recommendation and plan to create the bf:AccessionNumber class as a subclass of bf:Identifier
+Create new sub-class bf:AccessionNumber as subclass of bf:Identifier to be used within the approved bibliotek-o [*Identifier*](https://wiki.duraspace.org/display/LD4P/bibliotek-o?preview=/79795231/83237327/bibliotek-o_pattern_identifiers_201612.pdf) pattern.
+-	Note: LC accepted this recommendation and plan to create the bf:AccessionNumber class as a subclass of bf:Identifier
 
 Justification
 -------------
@@ -25,21 +26,20 @@ bibliotek-o ontology would not be the ideal modeling. So it was
 determined to work with the current Identifier pattern, and create a new
 subclass AccessionNumber.
 
-**bibliotek-o Identifier Model**
-============================
+bibliotek-o Identifier Model
+--------------------------------
 ![Accession Number Diagram](/modeling_recommendations/modeling_diagrams/accession_number_diagram.png)
-
+```
 _:item a bf:Item ;
-    bf:identifiedBy [  
+    bf:identifiedBy [
         a bib:AccessionNumber ;
         rdf:value "2017.001.004" ;
         bib:hasSource &lt;http://id.loc.gov/authorities/names/n80087582 &gt; ;
         bf:status bib:invalid ;
         dcterms:date "2017"
     ] .
-  -----------------------------------------------------------------------
-
-**LD4L-O v2 Resource-to-Identifier Relationships**
+```
+LD4L-O v2 Resource-to-Identifier Relationships
 --------------------------------------------------
 **bf:identifiedBy (object property)**
 > Label: Identifier
@@ -68,7 +68,8 @@ _:item a bf:Item ;
 > Definition: Token or name that is associated with a resource, such as a URI or an ISBN.
 > Comment: Used with Unspecified
 
-####**Proposed subclasses of bf:Identifier**
+**Proposed subclasses of bf:Identifier**
+
 **bf:AccessionNumber**
 > Label: AccessionNumber
 > URI: [*http://id.loc.gov/ontologies/bibframe/AccessionNumber*](http://id.loc.gov/ontologies/bibframe/Ansi)
