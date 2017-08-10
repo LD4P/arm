@@ -42,36 +42,36 @@ _:item a bf:Item ;
 LD4L-O v2 Resource-to-Identifier Relationships
 --------------------------------------------------
 **bf:identifiedBy (object property)**
-> Label: Identifier
-> URI: [*http://id.loc.gov/ontologies/bibframe/identifiedBy*](http://id.loc.gov/ontologies/bibframe/identifiedBy)
-> Definition: Character string associated with a resource that serves to differentiate that resource from other resources, i.e., that uniquely identifies an entity.
-> Comment: Used with Unspecified
-> Domain: unspecified
-> Range: bf:Identifier
-> Inverse: [*http://id.loc.gov/ontologies/bibframe/identifies*](http://id.loc.gov/ontologies/bibframe/identifies)
+> - Label: Identifier
+> - URI: [*http://id.loc.gov/ontologies/bibframe/identifiedBy*](http://id.loc.gov/ontologies/bibframe/identifiedBy)
+> - Definition: Character string associated with a resource that serves to differentiate that resource from other resources, i.e., that uniquely identifies an entity.
+> - Comment: Used with Unspecified
+> - Domain: unspecified
+> - Range: bf:Identifier
+> - Inverse: [*http://id.loc.gov/ontologies/bibframe/identifies*](http://id.loc.gov/ontologies/bibframe/identifies)
 
 **bf:identifies (object property)**
-> Label: identifies
-> URI: [*http://id.loc.gov/ontologies/bibframe/identifies*](http://id.loc.gov/ontologies/bibframe/identifies)
-> Definition: Resource that this character string serves to differentiate that resource from other resources, i.e., that uniquely identifies an entity.
-> Domain: bf:Identifier
-> Range: unspecified
-> Inverse: [*http://id.loc.gov/ontologies/bibframe/identifiedBy*](http://id.loc.gov/ontologies/bibframe/identifiedBy)
+> - Label: identifies
+> - URI: [*http://id.loc.gov/ontologies/bibframe/identifies*](http://id.loc.gov/ontologies/bibframe/identifies)
+> - Definition: Resource that this character string serves to differentiate that resource from other resources, i.e., that uniquely identifies an entity.
+> - Domain: bf:Identifier
+> - Range: unspecified
+> - Inverse: [*http://id.loc.gov/ontologies/bibframe/identifiedBy*](http://id.loc.gov/ontologies/bibframe/identifiedBy)
 
 
 **LD4L-O v2 Identifier Class Hierarchy**
 -------------------------------------------------------
 
 **bf:Identifier**
-> Label: Identifier
-> URI: [*http://id.loc.gov/ontologies/bibframe/Identifier*](http://id.loc.gov/ontologies/bibframe/Identifier)
-> Definition: Token or name that is associated with a resource, such as a URI or an ISBN.
-> Comment: Used with Unspecified
+> - Label: Identifier
+> - URI: [*http://id.loc.gov/ontologies/bibframe/Identifier*](http://id.loc.gov/ontologies/bibframe/Identifier)
+> - Definition: Token or name that is associated with a resource, such as a URI or an ISBN.
+> - Comment: Used with Unspecified
 
 **Proposed subclasses of bf:Identifier**
 
 **bf:AccessionNumber**
-> Label: AccessionNumber
-> URI: [*http://id.loc.gov/ontologies/bibframe/AccessionNumber*](http://id.loc.gov/ontologies/bibframe/Ansi)
-> Definition: Numeric, alphanumeric, or other identifying codes assigned when an art object, book, or other item enters the collection of a museum, library, or other repository. Such codes are unique within the set of codes, and specifically identify the particular item at hand. The numbers may be marked on the objects or not. ([*http://vocab.getty.edu/aat/300312355*](http://vocab.getty.edu/aat/300312355))
-> Subclass of: [*http://id.loc.gov/ontologies/bibframe/Identifier*](http://id.loc.gov/ontologies/bibframe/Identifier)
+> - Label: AccessionNumber
+> - URI: [*http://id.loc.gov/ontologies/bibframe/AccessionNumber*](http://id.loc.gov/ontologies/bibframe/Ansi)
+> - Definition: Numeric, alphanumeric, or other identifying codes assigned when an art object, book, or other item enters the collection of a museum, library, or other repository. Such codes are unique within the set of codes, and specifically identify the particular item at hand. The numbers may be marked on the objects or not. ([*http://vocab.getty.edu/aat/300312355*](http://vocab.getty.edu/aat/300312355))
+> - Subclass of: [*http://id.loc.gov/ontologies/bibframe/Identifier*](http://id.loc.gov/ontologies/bibframe/Identifier)
