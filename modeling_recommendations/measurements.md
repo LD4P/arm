@@ -6,7 +6,7 @@ Measurements of Whole, Part, and Arrangement
 > - [Overview](#overview)
 > - [Summary of Recommendations](#recommendations)
 > - [BIBFRAME Approach to Measurements](#bibframe)
-> - [bibliotek-o Approach to Measurements](#biblioteko)
+> - [Recommended Approach to Measurements](#recommended_approach)
 > - [Diagrams & Discussion](#diagrams)
 
 <a name="overview">Overview:</a>
@@ -64,22 +64,22 @@ Relevant documentation:
 > - **Range:** Literal
 > - **Definition:** Measurements of the carrier or carriers and/or the container of a resource.
 
-<a name="biblioteko">bibliotek-o Approach to Measurements</a>
+<a name="recommended_approach">Recommended Approach to Measurements</a>
 ------------------------------------
 Involved Classes
 -----------------------
 **ex:MeasurementGroup**
-> - **Label**: Measurement Group (new in bibliotek-o)
+> - **Label**: Measurement Group
 > - **IRI:** tbd
 > - **Definition:** A set of measurements pertaining to a specific resource, part of a resource, or resource in a particular arrangement. For example, a book may have a specified height, width, length, and/or weight, which are all attached to a MeasurementGroup; the binding may have measurements specified independently, which would constitute another MeasurementGroup. A MeasurementGroup has one or more specific Measurements attached to it.
 
 **ex:Measurement**
-> - **Label:** Measurement (new in bibliotek-o)
+> - **Label:** Measurement
 > - **IRI:** tbd
 > - **Definition:** The measurement of a single aspect of a resource, including value, units, and the aspect measured. For example, a book may have a height (aspect) of 10 (value) centimeters (units). Each such measurement is attached to a MeasurementGroup.
 
 **ex:Arrangement** 
-> - **Label:** Arrangement (new in bibliotek-o)
+> - **Label:** Arrangement
 > - **IRI**: tbd
 > - **Definition:** The arrangement, organization, or configuration of a single object or collection of objects. For example, a parchment may be rolled or unrolled; a collection of visual materials has a specific arrangement; computer files are organized and ordered in a specific way.
 
@@ -87,7 +87,7 @@ Involved Properties
 ---------------------------
 
 **ex:hasMeasurementGroup** (Object property)
-> - **Label:** has measurement group (new in bibliotek-o)
+> - **Label:** has measurement group
 > - **IRI:** tbd
 > - **Definition:** The relationship of a resource to a measurement group, indicating that the measurement group applies to the resource.
 > - **Domain:** Unspecified
@@ -95,7 +95,7 @@ Involved Properties
 > - **Inverse:** ex:isMeasurementGroupOf
 
 **ex:isMeasurementGroupOf** (Object property)
-> - **Label:** is measurement group of (new in bibliotek-o)\
+> - **Label:** is measurement group of
 > - **IRI:** tbd
 > - **Definition:** The relationship of a measurement group to a resource, indicating that the measurement group applies to the resource.
 > - **Domain:** ex:MeasurementGroup
@@ -103,7 +103,7 @@ Involved Properties
 > - **Inverse:** ex:hasMeasurementGroup
 
 **ex:hasMeasurement** (Object property)
-> - **Label:** has measurement (new in bibliotek-o)\
+> - **Label:** has measurement
 > - **IRI:** tbd
 > - **Definition:** The relationship of a MeasurementGroup to a Measurement, indicating that the Measurement is one part of the MeasurementGroup.
 > - **Domain:** Unspecified
@@ -111,7 +111,7 @@ Involved Properties
 > - **Inverse:** ex:isMeasurementOf
 
 **ex:isMeasurementOf** (Object property)
-> - **Label:** is measurement of (new in bibliotek-o)
+> - **Label:** is measurement of
 > - **IRI:** tbd
 > - **Definition:** The relationship of a Measurement to a MeasurementGroup, indicating that the Measurement is one part of the MeasurementGroup.
 > - **Domain:** ex:Measurement
@@ -119,7 +119,7 @@ Involved Properties
 > - **Inverse:** ex:hasMeasurement
 
 **ex:measures** (Object property)
-> - **Label:** measures (new in bibliotek-o)
+> - **Label:** measures
 > - **IRI:** tbd
 > - **Definition:** The relationship between a Measurement and the dimension or other aspect of a resource that is measured by this Measurement. For example, a Measurement may specify the length, height, weight, file size, etc. of a resource.
 > - **Domain:** ex:Measurement
@@ -127,7 +127,7 @@ Involved Properties
 > - **Inverse:** ex:measuredBy
 
 **ex:measuredBy** (Object property)
-> - **Label:** measured by (new in bibliotek-o)
+> - **Label:** measured by
 > - **IRI:** tbd
 > - **Definition:** The relationship between a dimension or other aspect of a resource and the Measurement that measures it. For example, the length, height, weight, file size, etc. of a resource may be the aspect that is measured by a particular Measurement.
 > - **Domain:** Unspecified
@@ -135,7 +135,7 @@ Involved Properties
 > - **Inverse:** ex:measures
 
 **ex:hasUnit** (Object property)
-> - **Label:** has unit (new in bibliotek-o)
+> - **Label:** has unit
 > - **IRI:** tbd
 > - **Definition:** Relationship between the measurement and the unit used to express the measurement.
 > - **Domain:** Unspecified
@@ -143,7 +143,7 @@ Involved Properties
 > - **Inverse:** ex:isUnitOf
 
 **ex:isUnitOf** (Object property)
-> - **Label:** is unit of (new in bibliotek-o)
+> - **Label:** is unit of
 > - **IRI:** tbd
 > - **Definition:** Relationship between the measurement and the unit used to express the measurement.
 > - **Domain:** Unspecified
@@ -151,7 +151,7 @@ Involved Properties
 > - **Inverse:** ex:hasUnit
 
 **ex:hasArrangement** (Object property)
-> - **Label:** has arrangement (new in bibliotek-o)
+> - **Label:** has arrangement
 > - **IRI:** tbd
 > - **Definition:** Relationship between the resource and a specified arrangement, organization, or configuration of it.
 > - **Domain:** Unspecified
@@ -159,7 +159,7 @@ Involved Properties
 > - **Inverse**: ex:isArrangementOf
 
 **ex:isArrangementOf**
-> - **Label:** is arrangement of (new in bibliotek-o)
+> - **Label:** is arrangement of
 > - **IRI:** tbd
 > - **Definition:** Relationship between a specified arrangement, organization, or configuration and a resource.
 > - **Domain:** ex:Arrangement
