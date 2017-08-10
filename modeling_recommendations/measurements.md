@@ -1,8 +1,8 @@
-Measurements Pattern: Measurements of Whole, Part, and Arrangement 
+Measurements of Whole, Part, and Arrangement 
 ======================
 2017-08-10
 
-Table of Contents
+**Table of Contents**
 > - [Overview](#overview)
 > - [Summary of Recommendations](#recommendations)
 > - [BIBFRAME Approach to Measurements](#bibframe)
@@ -86,7 +86,7 @@ Involved Classes
 Involved Properties
 ---------------------------
 
-**ex:hasMeasurementGroup **(Object property)
+**ex:hasMeasurementGroup** (Object property)
 > - **Label:** has measurement group (new in bibliotek-o)
 > - **IRI:** tbd
 > - **Definition:** The relationship of a resource to a measurement group, indicating that the measurement group applies to the resource.
@@ -180,7 +180,7 @@ Involved Properties
 > - **Comment:** Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.
 > - **Note:** A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/). See the Introduction to the document "DCMI Metadata Terms" (http://dublincore.org/documents/dcmi-terms/) for an explanation.
 
-<a name="diagram">Diagrams & Discussion</a>
+<a name="diagrams">Diagrams and Discussion</a>
 ---------------------
 Models of measurements of a resource, a part of the resource, and the resource in a particular arrangement.
 
