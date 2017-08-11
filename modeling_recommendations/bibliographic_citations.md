@@ -1,6 +1,6 @@
 Bibliographic Citations for Rare Materials Cataloging
 =====================================================
-2017-08-08
+RareMat, 2017-08-08
 
 Table of Contents
 > - [Overview](#overview)
