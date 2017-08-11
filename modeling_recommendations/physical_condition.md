@@ -1,7 +1,6 @@
 Activities Related to Physical Condition
 ===============
-by: ArtFrame and RareMat Ontology Extension groups 
-2017-08-10
+ArtFrame and RareMat Ontology Extension groups, 2017-08-10
 
 **Table of Contents**
 - [Overview](#overview)
@@ -19,13 +18,13 @@ Several LD4P domain-specific ontology extension groups identified the need to de
 
 <a name="summary">Summary of recommendations:</a>
 ---------------------------
--   Use  [*bib:ConservatorActivity*](http://bibliotek-o.org/ontology.html#ConservatorActivity)
+-   Use  [**bib:ConservatorActivity**](http://bibliotek-o.org/ontology.html#ConservatorActivity)
 
--   Recommend use of **seq:follows** and **seq:precedes** predicates and drop **vivo:rank**.
+-   Recommend use of [**seq:follows**](http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#follows) and [**seq:precedes**](http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes) predicates and drop [**vivo:rank**](http://www.essepuntato.it/lode/owlapi/http://vivoweb.org/ontology/core#d4e7099).
 
--   Recommend use of **frapo:hasOutput** and **frapo:isOutputOf**
+-   Recommend use of [**frapo:hasOutput**](http://purl.org/cerif/frapo/hasOutput) and [**frapo:isOutputOf**](http://purl.org/cerif/frapo/isOutputOf)
 
--   Remove **"documenting"** from the definition of **bib:ConservatorActivity**
+-   Remove **"documenting"** from the definition of [**bib:ConservatorActivity**](http://bibliotek-o.org/1.1/ontology/ConservatorActivity)
 
 -   Define the following new classes:
 > - ex:ConditionAssessmentActivity
@@ -46,7 +45,7 @@ One condition assessment can describe one or more physical conditions as an over
 
 <a name="classes">**Involved Classes**</a>
 
-> - **bib:Activity**
+**bib:Activity**
 > - **Label:** Activity
 > - **IRI:** [http://bibliotek-o.org/ontology/Activity](http://bibliotek-o.org/ontology/Activity)
 > - **Definition:** An activity or contribution by a single agent that affects or alters the existence or state of a resource.
@@ -72,7 +71,7 @@ One condition assessment can describe one or more physical conditions as an over
 > - **IRI:** [http://bibliotek-o.org/ontology/ConservatorActivity](http://bibliotek-o.org/ontology/ConservatorActivity)
 > - **Definition:** The activity of preserving or treating printed or manuscript material, works of art, artifacts, or other objects.
 
-<a name="properties">Involved Properties</a>
+**<a name="properties">Involved Properties</a>**
 
 **ex:describes** (Object property)
 > - **Label:** describes (new)
@@ -144,7 +143,7 @@ One condition assessment can describe one or more physical conditions as an over
 > - **Inverse:** bib:hasActivity
 
 **bib:isAgentOf** (Object property)
-> - **Label:**Agent for
+> - **Label:** Agent for
 > - **IRI:** [http://bibliotek-o.org/ontology/isAgentOf](http://bibliotek-o.org/ontology/isAgentOf)
 > - **Description:** Relates an agent to the activity it participated in.
 > - **Domain:** bib:Activity
@@ -181,9 +180,9 @@ One condition assessment can describe one or more physical conditions as an over
 > - **Range:** owl:Thing
 > - **Inverse:** seq:precedes
 
-**seq:precedes(( (Object property)
+**seq:precedes** (Object property)
 > - **Label:** precedes
-> - **IRI:** [*http://www.ontologydesignpatterns.org/cp/owl/sequence.owl\#precedes*](http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes)
+> - **IRI:** [http://www.ontologydesignpatterns.org/cp/owl/sequence.owl\#precedes](http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes)
 > - **Description:** A relation between entities, expressing a 'sequence' schema. E.g. 'year 1999 precedes 2000', 'deciding what coffee to use' precedes 'preparing coffee', 'World War II follows World War I', 'in the Milan to Rome autoroute, Bologna precedes Florence', etc.
 > - It can then be used between tasks, processes, time intervals, spatially locate objects, situations, etc. Subproperties can be defined in order to distinguish the different uses.
 > - **Domain:** owl:Thing
@@ -192,9 +191,10 @@ One condition assessment can describe one or more physical conditions as an over
 
 <a name="diagrams">Diagrams and Sample RDF</a>
 --------
-![Physical Condition diagram 1](/modeling_recommendations/modeling_diagrams/physical_condition_1.png)
+--------
 **Diagram 1: A condition assessment takes place, but does not result in a conservator activity.**
-'''
+![Physical Condition diagram 1](/modeling_recommendations/modeling_diagrams/physical_condition_1.png)
+```
 :Item1 a bf:Item ;
     bib:hasActivity :activity1 ;
     ex:hasPhysicalCondition :physicalCondition1 .
@@ -211,10 +211,11 @@ One condition assessment can describe one or more physical conditions as an over
     ex:describedBy :assessment 1 ;
     rdf:value "Page 5 missing" ;
     ex:isPhysicalConditionOf :item 1.
-'''
-![Physical Condition diagram 2](/modeling_recommendations/modeling_diagrams/physical_condition_2.png)
+```
+--------
 **Diagram 2: Conservator activity that is not the result of a condition assessment.**
-'''
+![Physical Condition diagram 2](/modeling_recommendations/modeling_diagrams/physical_condition_2.png)
+```
 :Item2 a bf:Item ;
     bib:hasActivity :activity2 ;
     ex:hasPhysicalCondition :physicalCondition2 .
@@ -228,10 +229,11 @@ One condition assessment can describe one or more physical conditions as an over
     frapo:isOutputOf :activity2 ;
     ex:isPhysicalConditionOf :item 2 ;
     rdf:value "good" .
-'''
-![Physical Condition diagram 3](/modeling_recommendations/modeling_diagrams/physical_condition_3.png)
+```
+---------
 **Diagram 3: One condition assessment describing one physical condition leading to one conservator activity resulting in a new physical condition.**
-'''
+![Physical Condition diagram 3](/modeling_recommendations/modeling_diagrams/physical_condition_3.png)
+```
 :Item3 a bf:Item ;
     bib:hasActivity :activity1 ;
     bib:hasActivity :activity2 ;
@@ -263,10 +265,11 @@ activity2 a bib:ConservatorActivity ;
     bib:isOutputOf :activity2 ;
     seq:follows :condition1 ;
     rdf:value "Page 10 mended" .
-'''
-![Physical Condition diagram 4](/modeling_recommendations/modeling_diagrams/physical_condition_4.png)
+```
+---------
 **Diagram 4: Condition assessment with two physical conditions, one leads to a conservator activity which results in a changed physical condition.**
-'''
+![Physical Condition diagram 4](/modeling_recommendations/modeling_diagrams/physical_condition_4.png)
+```
 :Item4 a bf:Item ;
     bib:hasActivity :activity1, activity2 ;
     ex:hasPhysicalCondition :condition1, :condition2, :condition3 .
@@ -289,10 +292,11 @@ assessment1 a ex:ConditionAssessment ;
     ex:isPhysicalConditionOf :item4 ;
     bib:isDescribedBy :assessment1 ;
     rdf:value "Page 5 missing" .
-'''
-![Physical Condition diagram 5](/modeling_recommendations/modeling_diagrams/physical_condition_5.png)
+```
+--------
 **Diagram 5: Two separate assessments identifying two different physical conditions. Each results in a conservator activity leading to a changed physical condition.**
-'''
+![Physical Condition diagram 5](/modeling_recommendations/modeling_diagrams/physical_condition_5.png)
+```
 :Item5 a bf:Item ;
     bib:hasActivity :activity1, activity2, activity3, activity4 ;
     ex:hasPhysicalCondition :condition1, :condition2, :condition3, :condition4 .
@@ -352,4 +356,4 @@ assessment1 a ex:ConditionAssessment ;
     frapo:IsOutputOf :activity3 ;
     seq:follows :condition3 ;
     rdf:value: "Dried. Condition good" .
-'''
+```
