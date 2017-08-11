@@ -1,7 +1,6 @@
 Accession Number
 ================
-
-April 20, 2017
+ArtFrame and RareMat, 2017-04-20
 
 Summary Recommendation 
 -----------------------
