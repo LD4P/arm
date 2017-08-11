@@ -1,6 +1,6 @@
 Activities Related to Physical Condition
 ===============
-ArtFrame and RareMat Ontology Extension groups, 2017-08-10
+ArtFrame and RareMat, 2017-08-10
 
 **Table of Contents**
 - [Overview](#overview)
