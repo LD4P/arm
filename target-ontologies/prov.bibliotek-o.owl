@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- TODO Add/remove namespaces as relevant -->
+<rdf:RDF  
+    xmlns="http://prov.bibliotek-o.org/0.1/ontology/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"  
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    > 
+    
+    <!-- ONTOLOGY DECLARATION -->
+    
+    <owl:Ontology rdf:about="http://prov.bibliotek-o.org/0.1/ontology/">
+        <owl:ontologyIRI rdf:resource="http://prov.bibliotek-o.org/0.1/ontology/"/>
+        <owl:versionIRI rdf:resource="http://prov.bibliotek-o.org/0.1/ontology/"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1</owl:versionInfo>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+        <rdfs:label xml:lang="en">Bibliographic Resource Provenance Ontology</rdfs:label>
+        <dcterms:title xml:lang="en">Bibliographic Resource Provenance Ontology</dcterms:title>
+        <rdfs:comment xml:lang="en">The Bibliographic Resource Provenance Ontology models the custodial history of bibliographic items, including events, such as transfer of ownership, and time periods, such as ownership.</rdfs:comment>
+        <vann:preferredNamespacePrefix>brpo</vann:preferredNamespacePrefix>
+        <dcterms:title xml:lang="en">Bibliographic Resource Provenance Ontology</dcterms:title>
+        <!-- Omitting, since bibliotek-o formally extends BIBFRAME and the relationships are transitive
+            <voaf:extends rdf:resource="http://id.loc.gov/ontologies/bibframe/"/>
+            <voaf:specializes rdf:resource="http://id.loc.gov/ontologies/bibframe/"/>
+        -->
+        <voaf:extends rdf:resource="http://bibliotek-o.org/ontology/"/>
+        <voaf:specializes rdf:resource="http://bibliotek-o.org/ontology/"/>
+        <owl:imports rdf:resource="http://bibliotek-o.org/1.1/ontology/"/>
+    </owl:Ontology>
+    
+    
+    <!-- CLASSES -->
+    
+    
+    <!-- OBJECT PROPERTIES -->
+
+    <!-- DATATYPE PROPERTIES -->
+
+</rdf:RDF>

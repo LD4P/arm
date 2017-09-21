@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- TODO Add/remove namespaces as relevant -->
+<rdf:RDF 
+    xmlns="http://raremat.org/ontology/"
+    xmlns:bib="http://bibliotek-o.org/1.1/ontology/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"  
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    > 
+    
+    <!-- ONTOLOGY DECLARATION -->
+    
+    <owl:Ontology rdf:about="http://raremat.org/ontology/">
+        <owl:ontologyIRI rdf:resource="http://raremat.org/ontology/"/>
+        <owl:versionIRI rdf:resource="http://raremat.org/0.1/ontology/"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1</owl:versionInfo>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+        <rdfs:label xml:lang="en">RareMat Ontology</rdfs:label>
+        <rdfs:comment xml:lang="en">The RareMat Ontology is an extension to the bibliotek-o ontology designed to model rare materials metadata. It is an extension of the bibliotek-o ontology.</rdfs:comment>
+        <vann:preferredNamespacePrefix>rare</vann:preferredNamespacePrefix>
+        <dcterms:title xml:lang="en">RareMat Ontology</dcterms:title>
+        <!-- Omitting, since bibliotek-o formally extends BIBFRAME and the relationships are transitive
+            <voaf:extends rdf:resource="http://id.loc.gov/ontologies/bibframe/"/>
+            <voaf:specializes rdf:resource="http://id.loc.gov/ontologies/bibframe/"/>
+        -->
+        <voaf:extends rdf:resource="http://bibliotek-o.org/ontology/"/>
+        <voaf:specializes rdf:resource="http://bibliotek-o.org/ontology/"/>
+        <owl:imports rdf:resource="http://bibliotek-o.org/1.1/ontology/"/>
+    </owl:Ontology>
+    
+    
+    <!-- CLASSES -->
+    
+    
+    <!-- OBJECT PROPERTIES -->
+    
+
+    <!-- DATATYPE PROPERTIES -->
+
+</rdf:RDF>
