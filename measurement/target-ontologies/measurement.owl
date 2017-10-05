@@ -44,7 +44,7 @@
     <owl:Class rdf:about="http://measurement.biblioteko-o.org/Measurement">
         <rdfs:label>Measurement</rdfs:label>
         <skos:definition xml:lang="en-us">The measurement of a single aspect of a resource,
-            including value, units, and the aspect measured. For example, a book may have a height
+            including value, units, and the dimension measured. For example, a book may have a height
             (aspect) of 10 (value) centimeters (units). Each such measurement is attached to a
             MeasurementGroup.</skos:definition>
     </owl:Class>
@@ -121,7 +121,7 @@
     
     <owl:ObjectProperty rdf:about="http://measurement.biblioteko-o.org/isUnitOf">
         <rdfs:label xml:lang="en">is unit of</rdfs:label>
-        <skos:definition xml:lang="en">Relationship between the measurement and the unit used to
+        <skos:definition xml:lang="en">Relationship between the unit and the measurement used to
             express the measurement.</skos:definition>
         <owl:inverseOf rdf:resource="http://measurement.biblioteko-o.org/hasUnit"/>
     </owl:ObjectProperty>
