@@ -15,4 +15,4 @@ Table of Contents
 
 <a name="sources">Sources</a>
 --------
-Bibliotek-o Titles Pattern (*https://wiki.duraspace.org/display/LD4P/bibliotek-o?preview=/79795231/83237331/bibliotek-o_pattern_titles_201612.pdf*]
+(*https://wiki.duraspace.org/display/LD4P/bibliotek-o?preview=/79795231/83237331/bibliotek-o_pattern_titles_201612.pdf*(Bibliotek-o Titles Pattern)
