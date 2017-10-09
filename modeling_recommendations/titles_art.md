@@ -61,3 +61,18 @@ In a MARC bibliographic record, many types of titles are recorded in the 20x-24x
 <a name="BIBFRAME">Titles in BIBFRAME</a>
 --------
 The classes and properties that are available to express in BIBFRAME are summarized here:
+![BIBFRAME Title Model](/modeling_recommendations/modeling_diagrams/art_titles_2.PNG)
+
+[*http://id.loc.gov/ontologies/bibframe-category.html*](http://id.loc.gov/ontologies/bibframe-category.html) accessed on July 31, 2017.
+Other properties that can be used in conjunction with title information are bf:source, bf:date, bf:qualifier, and bf:note.
+Subclasses of bf:VariantTitle: KeyTitle, AbbreviatedTitle, ParallelTitle, CollectiveTitle
+
+<a name="bibliotek-o">Titles in bibliotek-o</a>
+--------
+![bibliotek-o title properties](/modeling_recommendations/modeling_diagrams/art_titles_3_bibliotek-o.PNG
+)
+![bibliotek-o title classes](/modeling_recommendations/modeling_diagrams/art_titles_4_bibliotek-o.PNG)
+Named individuals to be used with bib:Origin: binder, caption, container, cover, margin, spine, supplied, transcribed 
+
+<a name="examples">Side-by-Side Examples</a>
+--------
