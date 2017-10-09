@@ -51,3 +51,13 @@ Where the source of the title can be clearly identified and adequately represent
 <a name="useCase">Relevant ArtFrame Use Case</a>
 --------
 ![Title Use Case](/modeling_recommendations/modeling_diagrams/art_titles_1.PNG)
+
+Examples: Les Demoiselles d'Avignon (The Young Ladies of Avignon, and originally titled The Brothel of Avignon) (Wikipedia); Swimming, by Thomas Eakins (formerly The Swimming Hole) (title change based on research)
+
+<a name="MARC">Titles in MARC</a>
+--------
+In a MARC bibliographic record, many types of titles are recorded in the 20x-24x area [*http://www.loc.gov/marc/bibliographic/bd20x24x.html*](http://www.loc.gov/marc/bibliographic/bd20x24x.html). The instance title is tagged as a 245. A work title is recorded in a 240 or 130. If neither one of these are present, then the 245 can be interpreted as the title of the work as well as the instance title. The 245 allows for sub-fielding of non-sorting characters and subtitles. Variant titles are recorded in a 246, where indicators can be used to show the type or source of the variant tiles. Related titles can occur in the 6xx $t, 7xx $t, 730 or 740.
+
+<a name="BIBFRAME">Titles in BIBFRAME</a>
+--------
+The classes and properties that are available to express in BIBFRAME are summarized here:
