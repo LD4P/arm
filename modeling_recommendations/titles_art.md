@@ -43,3 +43,10 @@ After testing the bibliotek-o title model, the ArtFrame group agreed that it can
 > - **Title Origin**
 
 Title origins (the place from which a title originates, i.e. container, margin, spine) are less clearly defined for objects different from regular print books. Established owl:NamedIndividuals in bibliotek-o, such as bib:supplied and bib:transcribed should be applied where appropriate, but no additional art specific named individuals will be defined within the ArtFrame namespace. DCRM(G) 1B2 states: Always make a note on the source of the title proper. The examples given are: Title from lower margin; Title from ink note on book of mount; title from item, etc. This list could potentially be endless. For the sake of consistency, title origins should always be treated as annotations attached to the title resource, following the Notes and Annotations pattern.
+
+> - **Title Source**
+
+Where the source of the title can be clearly identified and adequately represented by a URI, bib:hasSource should be applied. However, use of annotations are more appropriate for more complex and “fuzzy” situations.
+
+<a name="useCase">Relevant ArtFrame Use Case</a>
+--------
