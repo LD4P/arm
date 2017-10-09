@@ -50,3 +50,4 @@ Where the source of the title can be clearly identified and adequately represent
 
 <a name="useCase">Relevant ArtFrame Use Case</a>
 --------
+![Title Use Case](/modeling_recommendations/modeling_diagrams/art_titles_1.PNG)
