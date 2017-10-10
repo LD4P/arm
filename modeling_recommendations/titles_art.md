@@ -76,3 +76,617 @@ Named individuals to be used with bib:Origin: binder, caption, container, cover,
 
 <a name="examples">Side-by-Side Examples</a>
 --------
+> - **Title transcribed from resource -- BIBFRAME**
+```
+:w1 a bf:Work ;
+ bf:title :t1 ;
+ bf:hasInstance :instance1 .
+
+:t1 a bf:Title ;
+ rdfs:label "Burial of Famine Victim,
+ Hengyang, China" ;
+ bf:mainTitle “Burial of Famine Victim,
+ Hengyang, China" .
+
+:instance1 a bf:Instance ;
+ bf:isInstanceOf :w1 ;
+ bf:title :t2 .
+
+:t2 a bf:Title ;
+ rdfs:label "Burial of Famine Victim,
+ Hengyang, China" ;
+ bf:note :n1 ;
+ bf:mainTitle “Burial of Famine Victim,
+ Hengyang, China" .
+ 
+:n1 a bf:Note ;
+ noteType “TitleOrigin” ;
+ rdfs:label “Title from verso” .
+
+```
+> - **Title transcribed from resource -- bibliotek-o/ArtFrame**
+```
+:w1 a bf:Work ;
+ bib:hasPreferredTitle :t1 ;
+ bf:hasInstance :instance1 .
+
+:t1 a bf:Title ;
+ bib:isPreferredTitleOf :w1 ;
+ rdfs:label "Burial of Famine Victim,
+ Hengyang, China" ;
+ dcterms:hasPart :MainTitleElement1 .
+
+:MainTitleElement1 a bib:MainTitleElement ;
+ rdfs:label “Burial of Famine Victim,
+ Hengyang, China” ;
+ dcterms:isPartOf :t1 .
+
+:instance1 a bf:Instance ;
+ bf:isInstanceOf :w1 ;
+ bib:hasPreferredTitle :t2 .
+
+:t2 a bf:Title ;
+ bib:isPreferredTitleOf :instance1 ;
+ rdfs:label "Burial of Famine Victim,  
+ Hengyang, China" ;
+ bib:origin :transcribed ;
+ bib:isTargetOf :n1 ;
+ dcterms:hasPart :MainTitleElement2 .
+
+:MainTitleElement2 a bib:MainTitleElement ;
+ rdfs:label “Burial of Famine Victim,
+ Hengyang, China” ;
+ dcterms:isPartOf :t2 .
+
+:transcribed a owl:NamedIndividual ,   
+ bib:TitleOrigin ;
+ rdfs:label "transcribed" .
+ :n1 a oa:Annotation ;
+ oa:hasTarget :instance1 ;
+ oa:motivatedBy oa:describing ;
+ oa:hasBody :b1 .
+ :b1 a oa:TextualBody, a bf:Note ;
+ rdfs:label “Title from verso.” .
+
+```
+> - **Supplied, transcribed, incorrect title -- BIBFRAME**
+```
+:w1 a bf:Work ;
+ bf:title :t1 ;
+ bf:hasInstance :instance1, :instance2 .
+
+:t1 a bf:Title ;
+ bf:titleOf :w1 ;
+ rdfs:label "Barracks near Segezha  
+ Station"@en ;
+ bf:mainTitle “Barracks near Segezha  
+ Station" ;
+ bf:note :note1, :note2 .
+
+:note1 a bf:Note ;
+ bf:noteType "title source" ;
+ rdfs:label "Title devised by Library staff.
+(Source: International Research Project
+"The Legacy of S.M. Prokudin Gorsky" 2012-2016)" .
+
+:n2 a bf:Note ;
+ bf:noteType "title source" ;
+ "http://prokudin-gorsky.org/?lang=en"^^xsd:anyURI .
+
+ 
+:instance1 a bf:Instance ;
+ bf:genreForm :negatives (photographs) ;
+ bf:isInstanceOf :w1 ;
+ bf:title :t2 .
+
+:instance2 a bf:Instance ;
+ bf:genreForm :photographic prints ;
+ bf:isInstanceOf :w1 ;
+ bf:title :t3, :t4 .
+ 
+
+:t2 a bf:Title ;
+ rdfs:label "Barracks near Segezha  
+ Station"@en ;
+ bf:mainTitle “Barracks near Segezha  
+ Station" .
+
+
+:t3 a bf:Title ;
+ rdfs:label "Barracks near Segezha 
+ Station"@en ;
+ bf:mainTitle “Barracks near Segezha  
+ Station" .
+
+:t4 a bf:VariantTitle ;
+ rdfs:label "Baraki dli︠a︡ voennopi︠e︡nnykh u st. 
+ Segezh (Prisoner of war barracks near the 
+ Segezh Station)" ;
+ bf:mainTitle “Baraki dli︠a︡ voennopi︠e︡nnykh u 
+ St.  Segezh (Prisoner of war barracks near 
+ the  Segezh Station)" ;
+ bf:note :note3 .
+
+:n3 a bf:Note ;
+ bf:noteType "title source" ;
+ rdfs:label "Incorrect caption in album LOT 10334" .
+
+
+```
+> - **Supplied, transcribed, incorrect title -- bibliotek-o/ArtFrame**
+```
+:w1 a bf:Work ;
+ bib:hasPreferredTitle :t1 ;
+ bf:hasInstance :instance1,  :instance2 .
+
+:t1 a bf:Title ;
+ bib:isPreferredTitleOf :w1 ;
+ rdfs:label "Barracks near Segezha
+ Station"@en ;
+ dcterms:hasPart :mainTitleElement1 .
+ 
+:mainTitleElement1 a bib:MainTitleElement ;
+ rdfs:label "Barracks near Segezha
+ Station"@en ;
+ dcterms:isPartOf :t1.
+
+:instance1 a bf:Instance ;
+ bf:isInstanceOf :w1 ;
+ bib:hasPreferredTitle :t2 ;
+ bf:genreForm :negatives (photographs) ;
+ bf:title :t2 .
+ 
+:t2 a bf:Title ;
+ bib:isPreferredTitleOf :instance1 ;
+ rdfs:label "Barracks near Segezha
+ Station"@en ;
+ bib:origin :supplied ;
+ bib:hasSource :source1 ;
+ bib:isTargetOf :n1 ;
+ dcterms:hasPart :mainTitleElement2 .
+ 
+ :mainTitleElement2 a bib:MainTitleElement ;
+ rdfs:label "Barracks near Segezha
+ Station"@en ;
+ dcterms:isPartOf :t2 .
+
+:n1 a oa:Annotation ;
+ oa:hasTarget :t2,  :t3 ;
+ dcterms:creator <http://id.loc.gov/rwo/agents/n79055161> ;
+ oa:motivatedBy oa:describing ;
+ oa:hasBody :b1 .
+
+:b1 a oa:TextualBody ;
+ rdfs:label "Title devised by Library staff."
+
+:source1 a bf:Source ;
+ rdfs:label
+"http://prokudin-gorsky.org/?lang=en"^^xsd:anyURI .
+ 
+:instance2 a bf:Instance ;
+ bib:hasPreferredTitle :t3 ;
+ bf:title :t4 ;
+ bf:genreForm :photographic prints ;
+ bf:isInstanceOf :w1 .
+
+:t3 a bf:Title ;
+ bib:isPreferedTitleOf :instance2 ;
+ rdfs:label "Barracks near Segezha
+ Station"@en ;
+ bib:origin :supplied ;
+ bib:hasSource :source1 ;
+ bib:isTargetOf :n1 ;
+ dcterms:hasPart :mainTitleElement3 .
+:mainTitleElement3 a bib:MainTitleElement ;
+ rdfs:label "Barracks near Segezha
+ Station"@en ;
+ dcterms:isPartOf :t3 .
+
+:t4 a bf:Title ;
+ bib:isTitleOf :instance2 ;
+ rdfs:label "Baraki dli︠a︡ voennopi︠e︡nnykh u st.
+ Segezh (Prisoner of war barracks near the
+ Segezh Station)" ;
+ dcterms:hasPart :mainTitleElement4 ;
+ bib:origin :transcribed :caption ;
+ bf:status :invalid ;
+ rdfs:comment "Incorrect caption in album" .
+
+:supplied a owl:NamedIndividual ,
+ bf:TitleOrigin ;
+ rdfs:label "supplied" .
+
+:transcribed a owl:NamedIndividual ,
+ bf:TitleOrigin ;
+ rdfs:label "transcribed" .
+
+:caption a owl:NamedIndividual , bf:TitleOrigin ;
+ rdfs:label "caption" .
+
+:mainTitleElement4 a bib:MainTitleElement ;
+ rdfs:label "Baraki dli︠a︡ voennopi︠e︡nnykh u st.
+ Segezh (Prisoner of war barracks near the
+ Segezh Station)" ;
+ dcterms:isPartOf :t4 .
+
+```
+> - **Example for title change -- BIBFRAME**
+```
+:w1 a bf:Work ;
+ bf:contribution :contribution1 ;
+ bf:title :title1, :title2, :title3, :title4 .
+
+:contribution1 a bf:Contribution ;
+ bf:agent <http://id.loc.gov/rwo/agents/n80061185> ;
+ bf:role <http://id.loc.gov/vocabulary/relators/art> .
+ <http://id.loc.gov/rwo/agents/n80061185> a bfAgent, bf:Person ;
+ rdfs:label "Eakins, Thomas, 1844-1916" .
+
+:title1 a bf:Title ;
+ rdfs:label "Swimming" ;
+ bf:mainTitle "Swimming ;
+ bf:note :note 1, :note2 .
+
+:title2 a bf:Title, bf:VariantTitle ;
+ rdfs:label "Old swimming hole" ;
+ bf:mainTitle "Old swimming hole ;
+ bf:note :note1 .
+
+:title3 a bf:Title, bf:VariantTitle ;
+ rdfs:label "Swimming hole" ;
+ bf:mainTitle "Swimming hole” ;
+ bf:note :note1.
+
+:title4 a bf:Title, bf:VariantTitle ;
+ rdfs:label "Swimmers" ;
+ bf:mainTitle "Swimmers";
+ bf:note :note1 .
+
+:note 1 a bf:Note ;
+ bf:noteType "Title source" ;
+ rdfs:label "Work cat.: 95-45967:
+ Thomas Eakins and the swimming picture, 
+ c1996:
+ CIP pref. (Thomas Eakins' The swimming 
+ hole--now known more accurately as   
+ Swimming) p. 8 (original title of work, 1885:   
+ Swimming; later Swimmers, Swimming hole, 
+ or Old swimming hole)" .
+
+:note2 a bf:Note ;
+ bf:noteType "Title source" ;
+ rdfs:label "Correspondence with
+ Sam Duncan, Asst. Museum Librarian, Amon  
+ Carter Museum, 4/11/96
+ (based on new research, "Swimming" has 
+ been determined to be Eakins' original
+ title and the title under which it was first 
+ exhibited; wall labels,
+ catalog listings, etc. have been changed 
+ from "The Swimming hole" to
+ "Swimming" to reflect this new research.) ;
+ bf:date "1996-11-04"^^edtf:edtf .
+```
+> - **Example for title change -- bibliotek-o/ArtFrame**
+```
+:w1 a bf:Work ;
+ bib:hasActivity :c1 ;
+ bib:hasPreferredTitle :title1 ;
+ bf:title :title2, :title3, :title4 .
+
+:c1 a bib:ArtistActivity ;
+ bf:agent <http://id.loc.gov/rwo/agents/n80061185> .
+
+<http://id.loc.gov/rwo/agents/n80061185> a   
+ bf:Person, bfAgent ;
+  rdfs:label "Eakins, Thomas, 1844-1916" .
+
+:title1 a bf:Title, ex:CreatorsTitle ;
+ rdfs:label "Swimming" ;
+ bib:isPreferredTitleOf :w1 ;
+ dcterms:hasPart :MainTitleElement1 ;
+ bib:hasSource <http://worldcat.org/entity/work/id/36654331> ;
+ bib:isTargetOf :n1 .
+
+
+:MainTitleElement1 a bib:MainTitleElement ;
+ dcterms:isPartOf :title1 ;
+ rdfs:label "Swimming" .
+ 
+
+:n1 a oa:Annotation ;
+ oa:hasTarget :title1 ;
+ oa:motivatedBy oa:replying ;
+ oa:hasBody :b1 .
+
+:b1 a oa:TextualBody ;
+ rdfs:label "Correspondence with Sam Duncan, Asst. Museum Librarian,
+ Amon Carter Museum, 4/11/96 (based on new research, "Swimming" has
+ been determined to be Eakins' original title and the title under which
+ it was first exhibited; wall labels, catalog listings, etc. have been
+ changed from "The Swimming hole" to "Swimming" to reflect this new research.)" ;
+ dcterms:created "1996-04-11"^^edtf:edtf .
+
+:title2 a bf:Title ;
+ bf:isTitleOf :w1 ;
+ rdfs:label "Swimming hole" ;
+ dcterms:hasPart :MainTitleElement2 ;
+ bib:hasSource :source2 .
+
+:source2 a bf:Source ;
+ bib:isSourceOf :title2 ;
+ rdfs:label "Britannica Micro., 1995:
+ v. 4, p. 315 (Eakins, Thomas; treading water
+ next to his setter dog Harry and watching a
+ group of students swimming in "The 
+ Swimming Hole.")" .
+
+:MainTitleElement2 a bib:MainTitleElement ;
+ dcterms:isPartOf :title2 ;
+ rdfs:label "Swimming hole" .
+
+:title3 a bf:Title ;
+ bf:isTitleOf :w1 ;
+ rdfs:label "Old swimming hole" ;
+ dcterms:hasPart :MainTitleElement3 ;
+ bib:hasSource <http://worldcat.org/entity/work/id/36654331> .
+
+:MainTitleElement3 a bib:MainTitleElement ;
+ dcterms:isPartOf :title3 ;
+ rdfs:label "Old swimming hole" .
+
+<http://worldcat.org/entity/work/id/36654331> a bf:Source ;
+ bib:isSourceOf :title3, title2, title1 ;
+ rdf:value "Work cat.: 95-45967: Thomas Eakins and the swimming picture, c1996:
+ CIP pref. (Thomas Eakins' The swimming hole--now known more accurately as Swimming)
+ p. 8 (original title of work, 1885: Swimming; later Swimmers, Swimming hole, or Old
+ swimming hole)" .
+
+:title4 a bf:Title ;
+ bf:isTitleOf :w1 ;
+ rdfs:label "Swimmers" ;
+ dcterms:hasPart :MainTitleElement4 ;
+ bib:hasSource <http://worldcat.org/entity/work/id/36654331> .
+
+:MainTitleElement4 a bib:MainTitleElement ;
+ dcterms:isPartOf :title4 ;
+ rdfs:label "Swimmers" .
+
+```
+> - **Work title in multiple languages -- BIBFRAME**
+```
+:w1 a bf:Work ;
+ bf:contribution :contribution1 ;
+ bf:title :title1, :title2, :title3, :title4 ;
+ owl:sameAs <http://viaf.org/viaf/181566483>, <http://dbpedia.org/page/Les_Demoiselles_d'Avignon> .
+
+:contribution1 a bf:Contribution ;
+ bf:agent <http://id.loc.gov/rwo/agents/n78086005> ;
+ bf:role <http://id.loc.gov/vocabulary/relators/art> .
+
+:title1 a bf:Title ;
+ rdfs:label "Les Demoiselles d'Avignon"@fr ;
+ bf:mainTitle "Les Demoiselles d'Avignon"@fr ;
+ bf:note :note 1, :note2, :note3, :note4 .
+
+:title2 a bf:Title, bf:VariantTitle ;
+ rdfs:label "Young ladies of Avignon"@en ;
+ bf:mainTitle "Young ladies of Avignon"@en ;
+ bf:note :note4 .
+
+:title3 a bf:Title, bf:VariantTitle ;
+ rdfs:label "Avignon brothel"@en ;
+ bf:mainTitle "Avignon brothel"@en ;
+ bf:note :note1 .
+
+:title4 a bf:Title, bf:VariantTitle ;
+ rdfs:label "Le Bordel"@fr ;
+ bf:mainTitle "Le Bordel"@fr ;
+ bf:note :note3 .
+
+:note1 a bf:Note ;
+ bf:noteType "title source" ;
+ rdfs:label "Picasso's brothel, 2001: CIP 
+ galleys (according to Picasso, the original 
+ title of Les demoiselles d'Avignon was: The 
+ Avignon brothel)" .
+
+:note2 a bf:Note ;
+ bf:noteType "title source" ;
+ rdfs:label "Grove Dict. of art online, Mar. 18, 
+ 2002 (under Picasso: Les Demoiselles 
+ d'Avignon (1907; New York, MOMA))" .
+
+:note3 a bf:Note ;
+ bf:noteType "title source" ;
+ rdfs:label "Daix, P. Picasso, life and art, 
+ c1993:
+ p. 65 (painting le Bordel, whose name was 
+ later changed to Demoiselles d'Avignon)" .
+
+:note4 a bf:Note ;
+ bf:noteType "title source" ;
+ rdfs:label "Index to reproductions of  
+ European art
+ (Demoiselles d'Avignon see Young ladies of Avignon)" .
+
+```
+> - **Work title in multiple languages -- bibliotek-o/ArtFrame**
+```
+:w1 a bf:Work ;
+ bib:hasActivity :c1 ;
+ bib:hasPreferredTitle :title1 ;
+ bf:title :title2, :title3, :title4, :title5 ;
+ owl:sameAs <http://viaf.org/viaf/181566483>, <http://dbpedia.org/page/Les_Demoiselles_d'Avignon> .
+
+:c1 a bib:ArtistActivity ;
+ bib:hasAgent <http://id.loc.gov/rwo/agents/n78086005> .
+
+:title1 a bf:Title, ex:RepositoryTitle ;
+ bib:isPreferredTitleOf :w1 ;
+ rdfs:label "Les Demoiselles d'Avignon"@fr ;
+ dcterms:hasPart :mainTitleElement1, :nonSort1 ;
+ bib:hasSource <http://id.loc.gov/rwo/agents/n79021281> .
+
+:mainTitleElement1 a bib:MainTitleElement ;
+ dcterms:isPartOf :title1 ;
+ rdfs:label "Demoiselles d'Avignon"@fr .
+
+:nonSort1 a bib:NonSortElement ;
+ dcterms:isPartOf :title1 ;
+ rdfs:label "Les"@fr .
+
+
+:title2 a bf:Title ;
+ bf:isTitleOf :w1 ;
+ rdfs:label "Young ladies of Avignon"@en ;
+ dcterms:hasPart :mainTitleElement2 ;
+ bib:hasSource :source1 .
+
+:mainTitleElement2 a bib:MainTitleElement ;
+ dcterms:isPartOf :title2 ;
+ rdfs:label "Young ladies of Avignon"@en .
+
+:source1 a bf:Work ,
+ bf:title :title6 .
+
+:title6 a bf:Title ;
+ rdfs:label "Index to reproductions of    
+ European art" .
+
+:title3 a bf:Title ;
+ bf:isTitleOf :w1 ;
+ rdfs:label "Avignon brothel"@en ;
+ dcterms:hasPart :mainTitleElement3 ;
+ bib:hasSource <http://worldcat.org/entity/work/id/56688045> .
+
+:mainTitleElement3 a bib:MainTitleElement ;
+ dcterms:isPartOf :title3 ;
+ rdfs:label "Avignon brothel"@en .
+
+:title4 a bf:Title ;
+ bf:isTitleOf :w1 ;
+ rdfs:label "Le Bordel"@fr ;
+ dcterms:hasPart :mainTitleElement4, :nonSort2 ;
+ bib:hasSource <http://worldcat.org/entity/work/id/3901310255> .
+
+:mainTitleElement4 a bib:MainTitleElement ;
+ dcterms:isPartOf :title4 ;
+ rdfs:label "Bordel"@fr .
+
+:nonSort4 a bib:NonSortElement ;
+ dcterms:isPartOf :title4 ;
+ rdfs:label "Le"@fr .
+
+```
+> - **Example of title, subtitle and a variant title -- BIBFRAME**
+```
+
+:w1 a bf:Work ;
+ bf:title :title1, :title2 ;
+ bf:hasInstance :Instance1 .
+
+
+:title1 a bf:Title ;
+ rdfs:label "I [love] Venice"@en ;
+ bf:mainTitle "I [love] Venice"@en .
+
+:title2 a bf:Title, bf:VariantTitle ;
+ rdfs:label "I heart Venice"@en ;
+ bf:mainTitle "I heart Venice"@en ;
+
+:instance1 a bf:Instance ;
+ bf:IsInstanceOf :w1 ;
+ bf:title :title3, title4 .
+
+
+:title3 a bf:Title ;
+ rdfs:label "I [love] Venice : portable pocket ashtray"@en ;
+ bf:mainTitle "I [love] Venice"@en ;
+ bf:subtitle "portable pocket ashtray"@en ;
+ bf:note :note1 .
+
+:title4 a bf:Title, bf:VariantTitle ;
+ rdfs:label "I heart Venice : portable pocket ashtray"@en ;
+ bf:mainTitle "I heart Venice"@en ;
+ bf:subtitle "portable pocket ashtray"@en .
+
+:note1 a bf:note ;
+ bf:noteType "title note" ;
+ rdfs:label "In title, the word "love" is represented by a heart symbol."
+
+```
+> - **Example of title, subtitle and a variant title -- bibliotek-o/ArtFrame**
+```
+
+:w1 a bf:Work ;
+ bib:hasPreferredTitle :title1 ;
+ bf:title :title2 ;
+ bf:hasInstance :instance1 .
+
+:title1 a bf:Title ;
+ bib:isPreferredTitleOf :w1 ;
+ rdfs:label "I [love] Venice"@en ;
+ dcterms:hasPart :mainTitleElement1 .
+
+
+:mainTitleElement1 a bib:MainTitleElement ;
+ dcterms:isPartOf :title1 ;
+ rdfs:label "I [love] Venice"@en .
+
+
+:title2 a bfTitle ;
+ bf:isTitleOf :w1 ;
+ rdfs:label "I heart Venice"@en ;
+ dcterms:hasPart :mainTitleElement2 .
+
+:mainTitleElement2 a bib:MainTitleElement ;
+ dcterms:isPartOf :title2 ;
+ rdfs:label "I heart Venice"@en .
+
+ :instance1 a bf:Instance
+ bf:isInstanceOf :w1 ;
+ bib:hasPreferredTitle :title3 ;
+ bf:title :title4 .
+ 
+:title3 a bf:Title ;
+ bib:isPreferredTitleOf :instance1 ;
+ rdfs:label "I [love] Venice : portable pocket ashtray"@en ;
+ dcterms:hasPart :mainTitleElement3, :subtitle1 ;
+ bib:origin :transcribed ;
+ bib:isTargetOf :n1 .
+
+
+:mainTitleElement3 a bib:MainTitleElement ;
+ dcterms:isPartOf :title3 ;
+ rdfs:label "I [love] Venice"@en .
+
+:subtitle1 a bib:SubTitleElement ;
+ dcterms:isPartOf :title3 ;
+ rdfs:label "portable pocket ashtray"@en .
+
+
+:title4 a bf:Title ;
+bf:isTitleOf :instance1 ;
+ rdfs:label "I heart Venice : portable pocket ashtray"@en ;
+ dcterms:hasPart :mainTitleElement4, :subtitle2 .
+
+:mainTitleElement4 a bib:MainTitleElement ;
+ dcterms:isPartOf :title2 ;
+ rdfs:label "I heart Venice"@en .
+
+:subtitle2 a bib:SubTitleElement ;
+ dcterms:isPartOf :title2 ;
+ rdfs:label "portable pocket ashtray"@en .
+
+:n1 a oa:Annotation ;
+ oa:hasTarget :title3 ;
+ oa:motivatedBy oa:describing ;
+ oa:hasBody :body1 .
+
+:body1 a oa:TextualBody, a bf:Note ;
+ rdfs:label “In title, the word "love" is   
+ represented by a heart symbol.” .
+
+
+```
