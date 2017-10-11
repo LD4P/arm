@@ -73,7 +73,7 @@ Involved Classes
 
 Diagram
 --------
-![Signature Statement Diagram](/modeling_recommendations/modeling_diagrams/signature_statement.jpg)
+![Signature Statement Diagram](/modeling_recommendations/modeling_diagrams/signature_statement.png)
 
 RDF Sample
 --------
