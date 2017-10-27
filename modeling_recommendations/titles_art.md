@@ -71,7 +71,9 @@ Subclasses of bf:VariantTitle: KeyTitle, AbbreviatedTitle, ParallelTitle, Collec
 --------
 ![bibliotek-o title properties](/modeling_recommendations/modeling_diagrams/art_titles_3_bibliotek-o.PNG
 )
+
 ![bibliotek-o title classes](/modeling_recommendations/modeling_diagrams/art_titles_4_bibliotek-o.PNG)
+
 Named individuals to be used with bib:Origin: binder, caption, container, cover, margin, spine, supplied, transcribed 
 
 <a name="examples">Side-by-Side Examples</a>
@@ -688,5 +690,65 @@ bf:isTitleOf :instance1 ;
  rdfs:label “In title, the word "love" is   
  represented by a heart symbol.” .
 
+> - **Example of multiple subtitles -- BIBFRAME**
+```
+:w1 a bf:Work ;
+ bf:title :title1 ;
+ bf:hasInstance :Instance1 .
+
+:title1 a bf:Title ;
+ rdfs:label "New York City"@en ;
+ bf:mainTitle "New York City"@en .
+
+:instance1 a bf:Instance ;
+ bf:IsInstanceOf :w1 ;
+ bf:title :title2.
+
+:title2 a bf:Title ;
+ rdfs:label "New York City : Newspaper Row on an Election Night : Announcing the Returns"@en ;
+ bf:mainTitle "New York City"@en ;
+ bf:subtitle "Newspaper Row on an Election  
+ Night"@en ; “Announcing the Returns"@en .
+
+```
+> - **Example of multiple subtitles -- bibliotek-o/ArtFrame**
+```
+:w1 a bf:Work ;
+ bib:hasPreferredTitle :title1 ;
+ bf:hasInstance :instance .
+
+:title1 a bf:Title ;
+ bib:isPreferredTitleOf:w1 ;
+ rdfs:label "New York City"@en  ;
+ dcterms:hasPart:mainTitleElement1 .
+
+:mainTitleElement1 a bib:MainTitleElement ;
+ dcterms:isPartOf :title1 ;
+ rdfs:label ""New York City"@en .
+
+:instance1 a bf:Instance
+ bf:isInstanceOf :w1 ;
+ bib:hasPreferredTitle :title2 .
+
+:title2 a bf:Title ;
+ bib:isPreferredTitleOf :instance1 ;
+ rdfs:label "New York City : Newspaper Row 
+ on an Election Night : Announcing the 
+ Returns ;
+ dcterms:hasPart :mainTitleElement2, :subtitle1, :subtitle2 ;
+ bib:origin :transcribed .
+
+:mainTitleElement2 a bib:MainTitleElement ;
+ dcterms:isPartOf :title2 ;
+ rdfs:label "New York City"@en ;
+ vivo:rank 1 .
+
+:subtitle1 a bib:SubtitleElement ;
+ rdfs:label “Newspaper Row on an Election Night”@en ;
+ vivo:rank 2 .    
+ 
+:subtitle2 a bib:SubtitleElement ;
+ rdfs:label “Announcing the Returns”@en ;
+ vivo:rank 3 .
 
 ```
