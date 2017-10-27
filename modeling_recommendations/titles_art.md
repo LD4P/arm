@@ -690,6 +690,7 @@ bf:isTitleOf :instance1 ;
  rdfs:label “In title, the word "love" is   
  represented by a heart symbol.” .
 
+```
 > - **Example of multiple subtitles -- BIBFRAME**
 ```
 :w1 a bf:Work ;
@@ -751,4 +752,3 @@ bf:isTitleOf :instance1 ;
  rdfs:label “Announcing the Returns”@en ;
  vivo:rank 3 .
 
-```
