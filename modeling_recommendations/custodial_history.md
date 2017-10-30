@@ -310,329 +310,329 @@ SuperclassOf**: ex:Bequest
 > - **Comment**: Typical associated Activities: TranfererActivity, RecipientActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
-
-bib:Activity
-Label: Activity
-URI: http://bibliotek-o.org/1.1/ontology/Activity
-Definition: An activity or contribution by a single agent that affects or alters the existence or state of a resource.
+--------
+**bib:Activity**
+> - **Label**: Activity
+> - **URI**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: An activity or contribution by a single agent that affects or alters the existence or state of a resource.
 
 Activity Subclasses
+---------- 
 
-ex:AccessionerActivity
-Label: Accessioner
-URI: TBD
-SubclassOf: http://bibliotek-o.org/1.1/ontology/Activity
-Definition: The act of adding an item to a collection.
+**ex:AccessionerActivity**
+> - **Label**: Accessioner
+> - **URI**: TBD
+> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: The act of adding an item to a collection.
 
-bib:AcquisitionActivity
-Label: Acquisition
-URI: http://bibliotek-o.org/1.1/ontology/AcquisitionActivity
-SubclassOf: http://bibliotek-o.org/1.1/ontology/Activity
-Definition: The act of gaining possession of a resource.
+**bib:AcquisitionActivity**
+> - **Label**: Acquisition
+> - **URI**: http://bibliotek-o.org/1.1/ontology/AcquisitionActivity
+> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: The act of gaining possession of a resource.
 
-ex:BorrowerActivity
-Label: Borrower
-URI: TBD
-SubclassOf: http://bibliotek-o.org/1.1/ontology/Activity
-Definition: The act of taking possession, but not ownership, of an Item.
+**ex:BorrowerActivity**
+> - **Label**: Borrower
+> - **URI**: TBD
+> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: The act of taking possession, but not ownership, of an Item.
 
-ex:BrokerActivity
-Label: Broker
-URI: TBD
-SubclassOf: http://bibliotek-o.org/1.1/ontology/Activity
-Definition: The act of negotiating or arranging for a transaction.
+**ex:BrokerActivity**
+> - **Label**: Broker
+> - **URI**: TBD
+> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: The act of negotiating or arranging for a transaction.
 
-ex:ClaimantActivity
-Label: Claimant
-URI: TBD
-SubclassOf: http://bibliotek-o.org/1.1/ontology/Activity
-Definition: The act of declaring ownership for an Item, notably when the claim is not clearly substantiated.
+**ex:ClaimantActivity**
+> - **Label**: Claimant
+> - **URI**: TBD
+> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: The act of declaring ownership for an Item, notably when the claim is not clearly substantiated.
 
-ex:DeaccessionerActivity
-Label: Deaccessioner
-URI: TBD
-SubclassOf: http://bibliotek-o.org/1.1/ontology/Activity
-Definition: The act of permanently removing accessioned items from a collection or repository.
+**ex:DeaccessionerActivity**
+> - **Label**: Deaccessioner
+> - **URI**: TBD
+> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: The act of permanently removing accessioned items from a collection or repository.
 
-bib:DepositorActivity
-Label: Depositor
-URI: http://bibliotek-o.org/1.1/ontology/DepositorActivity
-SubclassOf: http://bibliotek-o.org/1.1/ontology/Activity
-Definition: The act of placing an item into the custody of another person, family, or organization.
+**bib:DepositorActivity**
+> - **Label**: Depositor
+> - **URI**: http://bibliotek-o.org/1.1/ontology/DepositorActivity
+> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: The act of placing an item into the custody of another person, family, or organization.
 
-ex:DestructionActivity
-Label: Destroyer
-URI: TBD
-SubclassOf: http://bibliotek-o.org/1.1/ontology/Activity
-Definition: The act of permanently destroying an Item.
+**ex:DestructionActivity**
+> - **Label**: Destroyer
+> - **URI**: TBD
+> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: The act of permanently destroying an Item.
 
-ex:DiscarderActivity
-Label: Discarder
-URI: TBD
-SubclassOf: http://bibliotek-o.org/1.1/ontology/Activity
-Definition: The act of permanently removing an item or part of an item from a collection for disposal.
+**ex:DiscarderActivity**
+> - **Label**: Discarder
+> - **URI**: TBD
+> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: The act of permanently removing an item or part of an item from a collection for disposal.
 
-ex:DisputantActivity
-Label: Disputant
-URI: TBD
-SubclassOf: http://bibliotek-o.org/1.1/ontology/Activity
-Definition: The act of challenging a claim, such as a claim of ownership.
+**ex:DisputantActivity**
+> - **Label**: Disputant
+> - **URI**: TBD
+> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: The act of challenging a claim, such as a claim of ownership.
 
-bib:DonorActivity
-Label: Donor
-URI: http://bibliotek-o.org/1.1/ontology/DonorActivity
-SubclassOf: http://bibliotek-o.org/1.1/ontology/Activity
-Definition: The act of giving an Item to another owner without monetary exchange.
+**bib:DonorActivity**
+> - **Label**: Donor
+> - **URI**: http://bibliotek-o.org/1.1/ontology/DonorActivity
+> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: The act of giving an Item to another owner without monetary exchange.
 
-ex:InheritorActivity
-Label: Inheritor
-URI: TBD
-SubclassOf: http://bibliotek-o.org/1.1/ontology/Activity
-Definition: The act of taking possession of an Item upon the death of the previous owner, either through bequest or application of law.
+**ex:InheritorActivity**
+> - **Label**: Inheritor
+> - **URI**: TBD
+> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: The act of taking possession of an Item upon the death of the previous owner, either through bequest or application of law.
+
+**bib:LenderActivity**
+> - **Label**: Lender
+> - **URI**: http://bibliotek-o.org/1.1/ontology/LenderActivity
+> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: The act of permitting the temporary possession of one more more Items.
+
+**ex:LossActivity**
+> - **Label**: Loss
+> - **URI**: Tbd
+> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: Responsibility for the disappearance of an Item where the circumstances of the disappearance are unknown.
+
+**bib:OfferActivity**
+> - **Label**: Offerer
+> - **URI**: http://bibliotek-o.org/1.1/ontology/OfferActivity
+> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: The act of providing an Item for purchase or other form of acquisition. Use for booksellers and sellers of other resources.
+
+**bib:OwnerActivity**
+> - **Label**: Owner
+> - **URI**: http://bibliotek-o.org/1.1/ontology/OwnerActivity
+> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: The legal possession of an Item..
+
+**ex:RecipientActivity**
+> - **Label**: Recipient
+> - **URI**: TBD
+> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: The act of receiving an Item, via bequest, donation, etc.
+
+**ex:RecovererActivity**
+> - **Label**: Recoverer
+> - **URI**: TBD
+> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: The act of re-assuming ownership of an Item following a period of loss, possibly due to theft.
+
+**ex:RepatriatorActivity**
+> - **Label**: Repatriator
+> - **URI**: TBD
+> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: The act of returning an item to its home country.
+
+**bib:SellerActivity**
+> - **Label**: Seller
+> - **URI**: http://bibliotek-o.org/1.1/ontology/SellerActivity
+> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: The act of exchanging ownership of an Item for money or other object of value. 
+
+**ex:TestatorActivity**
+> - **Label**: Testator
+> - **URI**: TBD
+> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: The act of bequeathing an Item in a will.
+
+**ex:ThiefActivity**
+> - **Label**: Thief
+> - **URI**: TBD
+> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: The act of acquiring an Item without the consent of the legal owner.
+
+**ex:TransfererActivity**
+> - **Label**: Transferer
+> - **URI**: TBD
+> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: The act of giving possession of an Item to another party, notably without a defined sale or donation.
+
+**ex:AccessionNumber**
+> - **Label**: AccessionNumber
+> - **URI**: TBD
+> - **Definition**: Numeric, alphanumeric, or other identifying codes assigned when an art object, book, or other item enters the collection of a museum, library, or other repository. Such codes are unique within the set of codes, and specifically identify the particular item at hand. The numbers may be marked on the objects or not. (http://vocab.getty.edu/aat/300312355)
+> - **SubclassOf**: http://id.loc.gov/ontologies/bibframe/Identifier  
+
+**foaf:Agent**
+> - **Label**: Agent
+> - **URI**: http://xmlns.com/foaf/0.1/Agent
+> - **Definition**: An agent (eg. person, group, software or physical artifact).
+
+**prov:Location**
+> - **Label**: Location
+> - **URI**: http://www.w3.org/ns/prov#Location
+> - **Definition**: A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth.
+
+**schema:PriceSpecification**
+> - **Label**: Price Specification
+> - **URI**: https://schema.org/PriceSpecification
+> - **Comment**: One or more detailed price specifications, indicating the unit price and delivery or payment charges.
 
 
-bib:LenderActivity
-Label: Lender
-URI: http://bibliotek-o.org/1.1/ontology/LenderActivity
-SubclassOf: http://bibliotek-o.org/1.1/ontology/Activity
-Definition: The act of permitting the temporary possession of one more more Items.
 
-ex:LossActivity
-Label: Loss
-URI: Tbd
-SubclassOf: http://bibliotek-o.org/1.1/ontology/Activity
-Definition: Responsibility for the disappearance of an Item where the circumstances of the disappearance are unknown.
-
-bib:OfferActivity
-Label: Offerer
-URI: http://bibliotek-o.org/1.1/ontology/OfferActivity
-SubclassOf: http://bibliotek-o.org/1.1/ontology/Activity
-Definition: The act of providing an Item for purchase or other form of acquisition. Use for booksellers and sellers of other resources.
-
-bib:OwnerActivity
-Label: Owner
-URI: http://bibliotek-o.org/1.1/ontology/OwnerActivity
-SubclassOf: http://bibliotek-o.org/1.1/ontology/Activity
-Definition: The legal possession of an Item..
-
-ex:RecipientActivity
-Label: Recipient
-URI: TBD
-SubclassOf: http://bibliotek-o.org/1.1/ontology/Activity
-Definition: The act of receiving an Item, via bequest, donation, etc.
-
-ex:RecovererActivity
-Label: Recoverer
-URI: TBD
-SubclassOf: http://bibliotek-o.org/1.1/ontology/Activity
-Definition: The act of re-assuming ownership of an Item following a period of loss, possibly due to theft.
-
-ex:RepatriatorActivity
-Label: Repatriator
-URI: TBD
-SubclassOf: http://bibliotek-o.org/1.1/ontology/Activity
-Definition: The act of returning an item to its home country.
-
-bib:SellerActivity
-Label: Seller
-URI: http://bibliotek-o.org/1.1/ontology/SellerActivity
-SubclassOf: http://bibliotek-o.org/1.1/ontology/Activity
-Definition: The act of exchanging ownership of an Item for money or other object of value. 
-
-ex:TestatorActivity
-Label: Testator
-URI: TBD
-SubclassOf: http://bibliotek-o.org/1.1/ontology/Activity
-Definition: The act of bequeathing an Item in a will.
-
-ex:ThiefActivity
-Label: Thief
-URI: TBD
-SubclassOf: http://bibliotek-o.org/1.1/ontology/Activity
-Definition: The act of acquiring an Item without the consent of the legal owner.
-
-ex:TransfererActivity
-Label: Transferer
-URI: TBD
-SubclassOf: http://bibliotek-o.org/1.1/ontology/Activity
-Definition: The act of giving possession of an Item to another party, notably without a defined sale or donation.
-
-
-ex:AccessionNumber
-Label: AccessionNumber
-URI: TBD
-Definition: Numeric, alphanumeric, or other identifying codes assigned when an art object, book, or other item enters the collection of a museum, library, or other repository. Such codes are unique within the set of codes, and specifically identify the particular item at hand. The numbers may be marked on the objects or not. (http://vocab.getty.edu/aat/300312355)
-Subclass of: http://id.loc.gov/ontologies/bibframe/Identifier  
-
-foaf:Agent
-Label: Agent
-URI: http://xmlns.com/foaf/0.1/Agent
-Definition: An agent (eg. person, group, software or physical artifact).
-
-prov:Location
-Label: Location
-URI: http://www.w3.org/ns/prov#Location
-Definition: A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth.
-
-schema:PriceSpecification
-Label: Price Specification
-URI: https://schema.org/PriceSpecification
-Comment: One or more detailed price specifications, indicating the unit price and delivery or payment charges.
 Properties
+-----------
+**ex:accessions**
+> - **Label**: accessions
+> - **URI**: TBD
+> - **Domain**: ex:AccessionNumber
+> - **Range**: unspecified
+> - **Definition**: 
+> - **Inverse**: ex:accessionedBy
 
-ex:accessions 
-Label: accessions
-URI: TBD
-Domain: ex:AccessionNumber
-Range: unspecified
-Definition: 
-Inverse of: ex:accessionedBy
+**ex:accessionedBy**
+> - **Label**: accessionedBy
+> - **URI**: TBD
+> - **Domain**: unspecified
+> - **Range**: ex:AccessionNumber
+> - **Definition**: 
+> - **Inverse**: ex:accessions
 
-ex:accessionedBy 
-Label: accessionedBy
-URI: TBD
-Domain: unspecified
-Range: ex:AccessionNumber
-Definition: 
-Inverse of: ex:accessions
+**bib:hasActivity**
+> - **Label**: has activity
+> - **URI**: http://bibliotek-o.org/1.1/ontology/hasActivity
+> - **Domain**: unspecified
+> - **Range**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Inverse**: http://bibliotek-o.org/1.1/ontology/isActivityOf
+> - **Definition**: Relates this resource to an activity or contribution by a single agent that affects or alters its existence or state.
 
-bib:hasActivity
-Label: has activity
-URI: http://bibliotek-o.org/1.1/ontology/hasActivity
-Domain: unspecified
-Range: http://bibliotek-o.org/1.1/ontology/Activity
-Inverse: http://bibliotek-o.org/1.1/ontology/isActivityOf
-Definition: Relates this resource to an activity or contribution by a single agent that affects or alters its existence or state.
+**bib:isActivityOf**
+> - **Label**: is activity of
+> - **URI**: http://bibliotek-o.org/1.1/ontology/isActivityOf
+> - **Domain**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Range**: unspecified
+> - **Inverse**: http://bibliotek-o.org/1.1/ontology/hasActivity
+> - **Definition**: Relates an activity to the affected resource.
 
+**ex:hasCustodialHistory** 
+> - **Label**: has custodial history
+> - **URI**: TBD
+> - **Domain**: bf:Item
+> - **Range**: ex:CustodialHistory
+> - **Inverse**: ex:isCustodialHistoryOf
+> - **Definition**: Relates a bf:Item to its ex:CustodialHistory resource.
+> - **Comment**: 
 
-bib:isActivityOf
-Label: is activity of
-URI: http://bibliotek-o.org/1.1/ontology/isActivityOf
-Domain: http://bibliotek-o.org/1.1/ontology/Activity
-Range: unspecified
-Inverse: http://bibliotek-o.org/1.1/ontology/hasActivity
-Definition: Relates an activity to the affected resource.
+**ex:isCustodialHistoryOf** 
+> - **Label**: is custodial history of
+> - **URI**: TBD
+> - **Domain**: ex:CustodialHistory
+> - **Range**: bf:Item
+> - **Inverse**: ex:hasCustodialHistory
+> - **Definition**: Relates a bf:Item to its ex:CustodialHistory resource.
 
+**dcterms:hasPart** 
+> - **Label**: Has Part
+> - **URI**: http://purl.org/dc/terms/hasPart
+> - **Domain**: unspecified
+> - **Range**: unspecified
+> - **Comment**: A related resource that is included either physically or logically in the described resource.
 
-ex:hasCustodialHistory 
-Label: has custodial history
-URI: TBD
-Domain: bf:Item
-Range: ex:CustodialHistory
-Inverse: ex:isCustodialHistoryOf
-Definition: Relates a bf:Item to its ex:CustodialHistory resource.
-Comment: 
+**dcterms:isPartOf** 
+> - **Label**: Is Part Of
+> - **URI**: http://purl.org/dc/terms/isPartOf
+> - **Domain**: unspecified
+> - **Range**: unspecified
+> - **Comment**: A related resource in which the described resource is physically or logically included.
 
-ex:isCustodialHistoryOf 
-Label: is custodial history of
-URI: TBD
-Domain: ex:CustodialHistory
-Range: bf:Item
-Inverse: ex:hasCustodialHistory
-Definition: Relates a bf:Item to its ex:CustodialHistory resource.
- 
-dcterms:hasPart 
-Label: Has Part
-URI: http://purl.org/dc/terms/hasPart
-Domain: unspecified
-Range: unspecified
-Comment: A related resource that is included either physically or logically in the described resource.
+**seq:precedes**
+> - **Label**: precedes
+> - **URI**: http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes
+> - **Domain**: owl:Thing
+> - **Range**: owl:Thing
+> - **Comment**: A relation between entities, expressing a 'sequence' schema. E.g. 'year 1999 precedes 2000', 'deciding what coffee to use' precedes 'preparing coffee', 'World War II follows World War I', 'in the Milan to Rome autoroute, Bologna precedes Florence', etc. It can then be used between tasks, processes, time intervals, spatially locate objects, situations, etc. Subproperties can be defined in order to distinguish the different uses.
 
-dcterms:isPartOf 
-Label: Is Part Of
-URI: http://purl.org/dc/terms/isPartOf
-Domain: unspecified
-Range: unspecified
-Comment: A related resource in which the described resource is physically or logically included.
- 
-seq:precedes
-Label: precedes
-URI: http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes
-Domain: owl:Thing
-Range: owl:Thing
-Comment: A relation between entities, expressing a 'sequence' schema. E.g. 'year 1999 precedes 2000', 'deciding what coffee to use' precedes 'preparing coffee', 'World War II follows World War I', 'in the Milan to Rome autoroute, Bologna precedes Florence', etc. It can then be used between tasks, processes, time intervals, spatially locate objects, situations, etc. Subproperties can be defined in order to distinguish the different uses.
+**seq:follows**
+> - **Label**: follows
+> - **URI**: http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#follows
+> - **Domain**: owl:Thing
+> - **Range**: owl:Thing
+> - **Comment**: "A relation between entities, expressing a 'sequence' schema. E.g. 'year 2000 follows 1999', 'preparing coffee' follows 'deciding what coffee to use', 'II World War follows I World War', etc. It can be used between tasks, processes or time intervals, and subproperties would fit best in order to distinguish the different uses."
 
-seq:follows
-Label: follows
-URI: http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#follows
-Domain: owl:Thing
-Range: owl:Thing
-Comment: "A relation between entities, expressing a 'sequence' schema. E.g. 'year 2000 follows 1999', 'preparing coffee' follows 'deciding what coffee to use', 'II World War follows I World War', etc. It can be used between tasks, processes or time intervals, and subproperties would fit best in order to distinguish the different uses."
+**bib:atLocation** 
+> - **Label**: at location
+> - **URI**: http://bibliotek-o.org/1.1/ontology/atLocation
+> - **Domain**: unspecified
+> - **Range**: http://www.w3.org/ns/prov#Location
+> - **Inverse**: http://bibliotek-o.org/1.1/ontology/isLocationOf
+> - **Definition**: The resource being described is at the specified location.
 
+**bib:isLocationOf** 
+> - **Label**: isLocationOf
+> - **URI**: http://bibliotek-o.org/1.1/ontology/isLocationOf
+> - **Domain**: http://www.w3.org/ns/prov#Location
+> - **Range**: unspecified
+> - **Inverse**: http://bibliotek-o.org/1.1/ontology/atLocation
+> - **Definition**: The resource being described is at the specified location.
 
-bib:atLocation 
-Label: at location
-URI: http://bibliotek-o.org/1.1/ontology/atLocation
-Domain: unspecified
-Range: http://www.w3.org/ns/prov#Location
-Inverse: http://bibliotek-o.org/1.1/ontology/isLocationOf
-Definition: The resource being described is at the specified location.
+**dcterms:date** 
+> - **Label**: date
+> - **URI**: http://purl.org/dc/terms/date
+> - **Domain**: unspecified 
+> - **Range**: unspecified
+> - **Definition**: A point or period of time associated with an event in the lifecycle of the resource.
+> - **Comment**: Date may be used to express temporal information at any level of granularity.
 
-bib:isLocationOf 
-Label: isLocationOf
-URI: http://bibliotek-o.org/1.1/ontology/isLocationOf
-Domain: http://www.w3.org/ns/prov#Location
-Range: unspecified
-Inverse: http://bibliotek-o.org/1.1/ontology/atLocation
-Definition: The resource being described is at the specified location.
+**schema:price**
+> - **Label**: price
+> - **URI**: http://schema.org/price
+> - **Domain**: unspecified
+> - **Used with**: schema:PriceSpecification
+> - **Range**: unspecified
+> - **Expected value**: Literal
+> - **Definition**: The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.
 
-dcterms:date 
-Label: date
-URI: http://purl.org/dc/terms/date
-Domain: unspecified 
-Range: unspecified
-Definition: A point or period of time associated with an event in the lifecycle of the resource.
-Comment: Date may be used to express temporal information at any level of granularity.
+**schema:priceCurrency**
+> - **Label**: Price Currency
+> - **URI**: https://schema.org/priceCurrency
+> - **Domain**: unspecified
+> - **Used with**: schema:PriceSpecification
+> - **Range**: unspecified 
+> - **Expected value**: Literal
+> - **Definition**: The currency (in 3-letter ISO 4217 format) of the price or a price component, when attached to PriceSpecification and its subtypes.
 
-schema:price
-Label: price
-URI: http://schema.org/price
-Domain: unspecified
-Used with: schema:PriceSpecification
-Range: unspecified
-Expected value: Literal
-Definition: The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.
+**schema:priceSpecification**
+> - **Label**: Price Specification
+> - **URI**: https://schema.org/priceSpecification
+> - **Domain**: unspecified
+> - **Range**: unspecified 
+> - **Expected value**: schema:PriceSpecification
+> - **Definition**: One or more detailed price specifications, indicating the unit price and delivery or payment charges.
 
-schema:priceCurrency
-Label: Price Currency
-URI: https://schema.org/priceCurrency
-Domain: unspecified
-Used with: schema:PriceSpecification
-Range: unspecified 
-Expected value: Literal
-Definition: The currency (in 3-letter ISO 4217 format) of the price or a price component, when attached to PriceSpecification and its subtypes.
+**bib:hasAgent** 
+> - **Label**: has agent
+> - **URI**: http://bibliotek-o.org/1.1/ontology/hasAgent
+> - **Domain**: unspecified 
+> - **Range**: foaf:Agent
+> - **Inverse**: http://bibliotek-o.org/1.1/ontology/isAgentOf
+> - **Definition**: Relates an activity to its agent.
 
-schema:priceSpecification
-Label: Price Specification
-URI: https://schema.org/priceSpecification
-Domain: unspecified
-Range: unspecified 
-Expected value: schema:PriceSpecification
-Definition: One or more detailed price specifications, indicating the unit price and delivery or payment charges.
-
-bib:hasAgent 
-Label: has agent
-URI: http://bibliotek-o.org/1.1/ontology/hasAgent
-Domain: unspecified 
-Range: foaf:Agent
-Inverse: http://bibliotek-o.org/1.1/ontology/isAgentOf
-Definition: Relates an activity to its agent.
-
-bib:isAgentOf 
-Label: is agent of
-URI: http://bibliotek-o.org/1.1/ontology/isAgentOf
-Domain: foaf:Agent
-Range: unspecified 
-Inverse: http://bibliotek-o.org/1.1/ontology/hasAgent
-Definition: Relates an agent to the activity it participated in.
+**bib:isAgentOf** 
+> - **Label**: is agent of
+> - **URI**: http://bibliotek-o.org/1.1/ontology/isAgentOf
+> - **Domain**: foaf:Agent
+> - **Range**: unspecified 
+> - **Inverse**: http://bibliotek-o.org/1.1/ontology/hasAgent
+> - **Definition**: Relates an agent to the activity it participated in.
 
 Areas for Future Research
-Public versus private data in this model is left as an implementation issue. Given that this model contains potentially sensitive data (e.g.: donors, value, etc.), implementers must consider how sensitive data are handled in their application. Note that the public/private issue is not specific to provenance data and extends into other library and non-library data as well.
-Modeling of confidence level. This also applies beyond the provenance domain.
-Concurrent and overlapping events. The lending use case, for example, will raise issues of sequencing, overlapping, and concurrency. We should not rely on dates to provide this type of nuanced sequencing since dates (even approximate dates) may not be known.
-Consider use of a predicate such as frapo:hasOutput (also used in the PhysicalCondition model) to express a causal relationship to another event or state (e.g., a sale results in an ownership). This cannot always be determined from sequencing, since there can be gaps in the sequence. 
-How strong is the case for the CustodialHistory class? It is essentially a container for the various CustodialEvent pertaining to an Item. However, there may be assertions on the history as a whole that do not apply to a specific event, such as an annotation. We expect this question to be addressed by implementation of and experimentation with the model, and leave open the possibility of future deprecation.
-Would there be value in defining a superclass of “static” events such as ownership, parallel to the use of schema:Event? Would it be a subclass of CustodialEvent, or orthogonal to it, like schema:Event? Are there existing terms for this concept?
-Consider augmenting the Activity class hierarchy by capturing general concepts of “giver” and “recipient” (for the latter, the RecipientActivity is already defined), and defining more specific activities such as SellerActivity, LenderActivity, TestatorActivity, etc. as “givers” and BuyerActivity, BorrowerActivity, InheritorActivity, etc. as subclasses of RecipientActivity.
-The modeling of unary events (with only one associated Activity, such as AccessionerActivity) involves some redundancy. Should the model be made more concise by eliminating the event and allowing an activity to link directly to the CustodialHistory? (Note that this would require keeping the CustodialHistory class in order to fully reconstruct an Item’s custodial history; see above on the value of the CustodialHistory class.) On the other hand, maintaining the Event-Activity distinction allows for other activities related to such an event, not currently apparent, to easily be added.
-Extend the Event-to-Activity model to other modeling areas, and bibliotek-o as a whole, where relevant. Consider renaming Activity to “Role” to clearly differentiate it from an event. The Activity is really the reification of an agent’s role in a resource, whether that be a bibliographic resource or an event, etc.
+========
+- Public versus private data in this model is left as an implementation issue. Given that this model contains potentially sensitive data (e.g.: donors, value, etc.), implementers must consider how sensitive data are handled in their application. Note that the public/private issue is not specific to provenance data and extends into other library and non-library data as well.
+- Modeling of confidence level. This also applies beyond the provenance domain.
+- Concurrent and overlapping events. The lending use case, for example, will raise issues of sequencing, overlapping, and concurrency. We should not rely on dates to provide this type of nuanced sequencing since dates (even approximate dates) may not be known.
+- Consider use of a predicate such as frapo:hasOutput (also used in the PhysicalCondition model) to express a causal relationship to another event or state (e.g., a sale results in an ownership). This cannot always be determined from sequencing, since there can be gaps in the sequence. 
+- How strong is the case for the CustodialHistory class? It is essentially a container for the various CustodialEvent pertaining to an Item. However, there may be assertions on the history as a whole that do not apply to a specific event, such as an annotation. We expect this question to be addressed by implementation of and experimentation with the model, and leave open the possibility of future deprecation.
+- Would there be value in defining a superclass of “static” events such as ownership, parallel to the use of schema:Event? - Would it be a subclass of CustodialEvent, or orthogonal to it, like schema:Event? Are there existing terms for this concept?
+- Consider augmenting the Activity class hierarchy by capturing general concepts of “giver” and “recipient” (for the latter, the RecipientActivity is already defined), and defining more specific activities such as SellerActivity, LenderActivity, TestatorActivity, etc. as “givers” and BuyerActivity, BorrowerActivity, InheritorActivity, etc. as subclasses of RecipientActivity.
+- The modeling of unary events (with only one associated Activity, such as AccessionerActivity) involves some redundancy. Should the model be made more concise by eliminating the event and allowing an activity to link directly to the CustodialHistory? (Note that this would require keeping the CustodialHistory class in order to fully reconstruct an Item’s custodial history; see above on the value of the CustodialHistory class.) On the other hand, maintaining the Event-Activity distinction allows for other activities related to such an event, not currently apparent, to easily be added.
+- Extend the Event-to-Activity model to other modeling areas, and bibliotek-o as a whole, where relevant. Consider renaming Activity to “Role” to clearly differentiate it from an event. The Activity is really the reification of an agent’s role in a resource, whether that be a bibliographic resource or an event, etc.
