@@ -13,7 +13,7 @@ ArtFrame and RareMat, 2017-08-10
 ---------
 In current MARC cataloging practice dimensions are recorded in one single subfield (300 \$c) even if the content standard or domain specific cataloging practice direct the cataloger to record the measurements in much more detail. BIBFRAME has carried this forward by defining the datatype property bf:dimensions. However, there are number of domain specific ontologies (such as [*QUDT*](http://qudt.org/doc/2016/DOC_SCHEMA-QUDT-v2.0.html), [*VRA
 RDF*](https://s3.amazonaws.com/VRA/ontology.html#) and [*CIDOC CRM*](http://www.cidoc-crm.org/)) that do provide more granularity and in 2015 a discussion paper was submitted to the Committee on Cataloging: Description & Access to expand RDA instructions in this area. Measurements were also identified at the [*In-Person Meeting of ArtFrame and the Rare Materials Ontology
-Extension*](https://wiki.duraspace.org/pages/viewpage.action?pageId=83230960) groups as an area in need of more in-depths modeling.
+Extension*](https://wiki.duraspace.org/pages/viewpage.action?pageId=83230960) groups as an area in need of more in-depth modeling.
 
 The above mentioned ontologies and the RDA discussion paper were all considered for possible reuse and informed the proposed bibliotek-o pattern. QUDT does not support the ability to specify which part of an object was measured (e.g. visible image or written space) or in which arrangement the object was when it was measured (e.g. rolled or folded). However, the QUDT [*Units Ontology*](http://qudt.org/1.1/vocab/unit) can be re-used to express measurement units such as inches or centimeter.
 
