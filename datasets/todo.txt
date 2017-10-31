@@ -1,0 +1,13 @@
+To be added to this folder:
+
+* MEASUREMENT RECOMMENDATION
+
+- Units: NASA QUDT Units Ontology http://www.qudt.org/qudt/owl/1.0.0/unit/index.html
+- For arrangements, such as rolled, folded, etc. a vocabulary will have to be 
+developed. 
+- For dimension types, such as height, width, weight, etc. use AAT, Art & 
+Architecture Thesaurus.
+
+For parts measured (e.g. container, mount, platemark): Each domain 
+implementing this model will need to define their own classes.
+
