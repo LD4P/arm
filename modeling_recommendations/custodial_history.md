@@ -413,7 +413,7 @@ Activity Subclasses
 > - **Label**: Owner
 > - **URI**: http://bibliotek-o.org/1.1/ontology/OwnerActivity
 > - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
-> - **Definition**: The legal possession of an Item..
+> - **Definition**: The legal possession of an Item.
 
 **ex:RecipientActivity**
 > - **Label**: Recipient
@@ -458,9 +458,9 @@ Activity Subclasses
 > - **Definition**: The act of giving possession of an Item to another party, notably without a defined sale or donation.
 
 **ex:AccessionNumber**
-> - **Label**: AccessionNumber
+> - **Label**: Accession Number
 > - **URI**: TBD
-> - **Definition**: Numeric, alphanumeric, or other identifying codes assigned when an art object, book, or other item enters the collection of a museum, library, or other repository. Such codes are unique within the set of codes, and specifically identify the particular item at hand. The numbers may be marked on the objects or not. (http://vocab.getty.edu/aat/300312355)
+> - **Definition**: Numeric, alphanumeric, or other identifying code assigned when an art object, book, or other item enters the collection of a museum, library, or other repository. Such codes are unique within the set of codes, and specifically identify the particular item at hand. The numbers may be marked on the objects or not (http://vocab.getty.edu/aat/300312355)
 > - **SubclassOf**: http://id.loc.gov/ontologies/bibframe/Identifier  
 
 **foaf:Agent**
