@@ -2,7 +2,7 @@
 
 <!-- TODO Add/remove namespaces as relevant -->
 <rdf:RDF  
-    xmlns="http://prov.bibliotek-o.org/0.1/ontology/"
+    xmlns="http://cho.bibliotek-o.org/0.1/ontology/"
     xmlns:dcterms="http://purl.org/dc/terms/"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
@@ -14,16 +14,16 @@
     
     <!-- ONTOLOGY DECLARATION -->
     
-    <owl:Ontology rdf:about="http://prov.bibliotek-o.org/0.1/ontology/">
-        <owl:ontologyIRI rdf:resource="http://prov.bibliotek-o.org/ontology/"/>
-        <owl:versionIRI rdf:resource="http://prov.bibliotek-o.org/0.1/ontology/"/>
+    <owl:Ontology rdf:about="http://cho.bibliotek-o.org/0.1/ontology/">
+        <owl:ontologyIRI rdf:resource="http://cho.bibliotek-o.org/ontology/"/>
+        <owl:versionIRI rdf:resource="http://cho.bibliotek-o.org/0.1/ontology/"/>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1</owl:versionInfo>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
-        <rdfs:label xml:lang="en">Provenance Ontology for Bibliographic Resources</rdfs:label>
-        <dcterms:title xml:lang="en">Provenance Ontology for Bibliographic Resources</dcterms:title>
-        <rdfs:comment xml:lang="en">The Provenance Ontology for Bibliographic Resources models the custodial history of bibliographic items, including events, such as transfer of ownership, and time periods, such as ownership.</rdfs:comment>
-        <vann:preferredNamespacePrefix>brpo</vann:preferredNamespacePrefix>
+        <rdfs:label xml:lang="en">Custodial History Ontology</rdfs:label>
+        <dcterms:title xml:lang="en">Custodial History Ontology</dcterms:title>
+        <rdfs:comment xml:lang="en">The Custodial History Ontology models the custodial history of bibliographic items, including events, such as transfer of ownership, and time periods, such as ownership.</rdfs:comment>
+        <vann:preferredNamespacePrefix>cho</vann:preferredNamespacePrefix>
         <voaf:extends rdf:resource="http://id.loc.gov/ontologies/bibframe/"/>
         <voaf:specializes rdf:resource="http://id.loc.gov/ontologies/bibframe/"/>
         <voaf:extends rdf:resource="http://bibliotek-o.org/ontology/"/>
@@ -34,7 +34,7 @@
     
     <!-- CLASSES -->
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/CustodialHistory">
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/CustodialHistory">
         <rdfs:label xml:lang="en">Custodial history</rdfs:label>    
         <skos:definition xml:lang="en">Entity that aggregates all of the custodial events for an Item.</skos:definition>
         <skos:scopeNote>An Item has a single CustodialHistory, which is composed of one or more CustodialEvent resources. The Item is directly linked only to its CustodialHistory.</skos:scopeNote>
@@ -42,7 +42,7 @@
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/CustodialEvent">
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/CustodialEvent">
         <rdfs:label xml:lang="en">Custodial event</rdfs:label>    
         <skos:definition xml:lang="en">A custodial event encompassing one or more Items, such as a sale or loan.</skos:definition>
         <skos:scopeNote>A CustodialEvent may pertain to only a single Item (an individual CustodialEvent) in which case it is linked directly to the Item’s CustodialHistory, or it may encompass multiple Items (such as an auction lot), in which case the CustodialEvent aggregates multiple individual CustodialEvents. A CustodialEvent may be what is typically conceived of as an “event,” or a “static” event such as ownership. Subclasses of CustodialEvent are accordingly either defined as subclasses of schema:Event or not.</skos:scopeNote>
@@ -50,17 +50,17 @@
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/Accessioning">
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/Accessioning">
         <rdfs:label xml:lang="en">Accessioning</rdfs:label>    
         <skos:definition xml:lang="en">The act of adding an Item to the accessions records of a cultural heritage institution.</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://prov.bibliotek-o.org/ontology/CustodialEvent" />
+        <rdfs:subClassOf rdf:resource="http://cho.bibliotek-o.org/ontology/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: AccessionerActivity.</skos:scopeNote>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/Auction">
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/Auction">
         <rdfs:label xml:lang="en">Auction</rdfs:label>    
         <skos:definition xml:lang="en">The sale at auction of an Item.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Sale" />
@@ -71,7 +71,7 @@
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/Bequest">
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/Bequest">
         <rdfs:label xml:lang="en">Bequest</rdfs:label>    
         <skos:definition xml:lang="en">The transfer of an Item under the terms of a will.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Inheritance" />
@@ -81,254 +81,342 @@
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/ClaimOfOwnership">
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/ClaimOfOwnership">
         <rdfs:label xml:lang="en">Claim of ownership</rdfs:label>    
         <skos:definition xml:lang="en">A legal claim to the right of possession of an Item.</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://prov.bibliotek-o.org/ontology/CustodialEvent" />
+        <rdfs:subClassOf rdf:resource="http://cho.bibliotek-o.org/ontology/CustodialEvent" />
         <skos:scopeNote>Typical associated Activities: ClaimantActivity, DisputantActivity.</skos:scopeNote>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/Deaccessioning">
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/Deaccessioning">
         <rdfs:label xml:lang="en">Deaccessioning</rdfs:label>    
         <skos:definition xml:lang="en">The removal of an Item from the accessions records of a cultural heritage institution.</skos:definition>        
-        <rdfs:subClassOf rdf:resource="http://prov.bibliotek-o.org/ontology/CustodialEvent" />
+        <rdfs:subClassOf rdf:resource="http://cho.bibliotek-o.org/ontology/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: DeaccessionerActivity.</skos:scopeNote>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/Deposit">
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/Deposit">
         <rdfs:label xml:lang="en">Deposit</rdfs:label>    
         <skos:definition xml:lang="en">The placement of an Item in the collections of a cultural heritage institution.</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://prov.bibliotek-o.org/ontology/CustodialEvent" />
+        <rdfs:subClassOf rdf:resource="http://cho.bibliotek-o.org/ontology/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: DepositorActivity.</skos:scopeNote>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/Destruction">
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/Destruction">
         <rdfs:label xml:lang="en">Destruction</rdfs:label>    
         <skos:definition xml:lang="en">The permanent ruination of an Item.</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://prov.bibliotek-o.org/ontology/CustodialEvent" />
+        <rdfs:subClassOf rdf:resource="http://cho.bibliotek-o.org/ontology/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: DestructionActivity, OwnershipActivity.</skos:scopeNote>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/Discarding">
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/Discarding">
         <rdfs:label xml:lang="en">Discarding</rdfs:label>    
         <skos:definition xml:lang="en">The abandonment or disposal of an Item.</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://prov.bibliotek-o.org/ontology/CustodialEvent" />
+        <rdfs:subClassOf rdf:resource="http://cho.bibliotek-o.org/ontology/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: DiscarderActivity, OwnershipActivity.</skos:scopeNote>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/Donation">
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/Donation">
         <rdfs:label xml:lang="en">Donation</rdfs:label>    
         <skos:definition xml:lang="en">The giving of an Item, typically for charitable purposes and/or to benefit a cause.</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://prov.bibliotek-o.org/ontology/CustodialEvent" />
+        <rdfs:subClassOf rdf:resource="http://cho.bibliotek-o.org/ontology/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: DonorActivity, RecipientActivity.</skos:scopeNote>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/Inheritance">
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/Inheritance">
         <rdfs:label xml:lang="en">Inheritance</rdfs:label>    
         <skos:definition xml:lang="en">The transfer of an Item following the death of the previous owner, either by bequest or by the application of law.</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://prov.bibliotek-o.org/ontology/CustodialEvent" />
+        <rdfs:subClassOf rdf:resource="http://cho.bibliotek-o.org/ontology/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: TestatorActivity, InheritorActivity.</skos:scopeNote>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/Loan">
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/Loan">
         <rdfs:label xml:lang="en">Loan</rdfs:label>    
         <skos:definition xml:lang="en">The temporary transfer of an Item.</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://prov.bibliotek-o.org/ontology/CustodialEvent" />
+        <rdfs:subClassOf rdf:resource="http://cho.bibliotek-o.org/ontology/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: LenderActivity, BorrowerActivity.</skos:scopeNote>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/Loss">
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/Loss">
         <rdfs:label xml:lang="en">Loss</rdfs:label>    
         <skos:definition xml:lang="en">The disappearance of an Item under unknown circumstances (e.g., not in the case of theft).</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://prov.bibliotek-o.org/ontology/CustodialEvent" />
+        <rdfs:subClassOf rdf:resource="http://cho.bibliotek-o.org/ontology/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: LossActivity, OwnershipActivity.</skos:scopeNote>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/Offer">
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/Offer">
         <rdfs:label xml:lang="en">Offer</rdfs:label>    
         <skos:definition xml:lang="en">The provision of an Item for purchase or other form of acquisition.</skos:definition>        
-        <rdfs:subClassOf rdf:resource="http://prov.bibliotek-o.org/ontology/CustodialEvent" />
+        <rdfs:subClassOf rdf:resource="http://cho.bibliotek-o.org/ontology/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: OfferActivity, RecipientActivity.</skos:scopeNote>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/Ownership">
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/Ownership">
         <rdfs:label xml:lang="en">Ownership</rdfs:label>    
         <skos:definition xml:lang="en">The possession of full and complete right of control over an Item.</skos:definition>        
-        <rdfs:subClassOf rdf:resource="http://prov.bibliotek-o.org/ontology/CustodialEvent" />
+        <rdfs:subClassOf rdf:resource="http://cho.bibliotek-o.org/ontology/CustodialEvent" />
         <skos:scopeNote>Typical associated Activities: OwnerActivity.</skos:scopeNote>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/Recovery">
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/Recovery">
         <rdfs:label xml:lang="en">Recovery</rdfs:label>    
         <skos:definition xml:lang="en">The restitution or regaining possession of an Item.</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://prov.bibliotek-o.org/ontology/CustodialEvent" />
+        <rdfs:subClassOf rdf:resource="http://cho.bibliotek-o.org/ontology/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: RecovererActivity.</skos:scopeNote>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/Repatriation">
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/Repatriation">
         <rdfs:label xml:lang="en">Repatriation</rdfs:label>    
         <skos:definition xml:lang="en">The return of an Item to its country of origin.</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://prov.bibliotek-o.org/ontology/CustodialEvent" />
+        <rdfs:subClassOf rdf:resource="http://cho.bibliotek-o.org/ontology/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: RepatriatorActivity.</skos:scopeNote>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/Sale">
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/Sale">
         <rdfs:label xml:lang="en">Sale</rdfs:label>    
         <skos:definition xml:lang="en">The exchange of an Item for money or other object of value.</skos:definition>
         <skos:scopeNote>A CustodialEvent may pertain to only a single Item (an individual CustodialEvent) in which case it is linked directly to the Item’s CustodialHistory, or it may encompass multiple Items (such as an auction lot), in which case the CustodialEvent aggregates multiple individual CustodialEvents. A CustodialEvent may be what is typically conceived of as an “event,” or a “static” event such as ownership. Subclasses of CustodialEvent are accordingly either defined as subclasses of schema:Event or not.</skos:scopeNote>
-        <rdfs:subClassOf rdf:resource="http://prov.bibliotek-o.org/ontology/CustodialEvent" />
+        <rdfs:subClassOf rdf:resource="http://cho.bibliotek-o.org/ontology/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/SaleEvent"/>
         <skos:scopeNote>Typical associated Activities: BuyerActivity, SellerActivity, BrokerActivity.</skos:scopeNote>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/Theft">
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/Theft">
         <rdfs:label xml:lang="en">Theft</rdfs:label>    
         <skos:definition xml:lang="en">The removal of an Item from the possession of the rightful owner without the latter’s consent.</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://prov.bibliotek-o.org/ontology/CustodialEvent" />
+        <rdfs:subClassOf rdf:resource="http://cho.bibliotek-o.org/ontology/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: ThiefActivity, OwnerActivity.</skos:scopeNote>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/Transfer">
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/Transfer">
         <rdfs:label xml:lang="en">Transfer</rdfs:label>    
         <skos:definition xml:lang="en">The passing of ownership or other right from one party to another.</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://prov.bibliotek-o.org/ontology/CustodialEvent" />
+        <rdfs:subClassOf rdf:resource="http://cho.bibliotek-o.org/ontology/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: TranfererActivity, RecipientActivity.</skos:scopeNote>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/AccessionerActivity">
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/AccessionerActivity">
         <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
-        <skos:definition xml:lang="en">The act of adding an item to a collection</skos:definition>
+        <skos:definition xml:lang="en">The act of adding an item to a collection.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/AccessionerActivity">
-        <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
-        <skos:definition xml:lang="en">The act of adding an item to a collection</skos:definition>
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/BorrowerActivity">
+        <rdfs:label xml:lang="en">Borrower</rdfs:label>    
+        <skos:definition xml:lang="en">The act of taking possession, but not ownership, of an Item.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/AccessionerActivity">
-        <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
-        <skos:definition xml:lang="en">The act of adding an item to a collection</skos:definition>
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/BrokerActivity">
+        <rdfs:label xml:lang="en">Broker</rdfs:label>    
+        <skos:definition xml:lang="en">The act of negotiating or arranging for a transaction.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/AccessionerActivity">
-        <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
-        <skos:definition xml:lang="en">The act of adding an item to a collection</skos:definition>
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/ClaimantActivity">
+        <rdfs:label xml:lang="en">Claimant</rdfs:label>    
+        <skos:definition xml:lang="en">The act of declaring ownership for an Item, notably when the claim is not clearly substantiated.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/AccessionerActivity">
-        <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
-        <skos:definition xml:lang="en">The act of adding an item to a collection</skos:definition>
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/DeaccessionerActivity">
+        <rdfs:label xml:lang="en">Deaccessioner</rdfs:label>    
+        <skos:definition xml:lang="en">TThe act of permanently removing accessioned items from a collection or repository.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/AccessionerActivity">
-        <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
-        <skos:definition xml:lang="en">The act of adding an item to a collection</skos:definition>
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/DepositorActivity">
+        <rdfs:label xml:lang="en">Depositor</rdfs:label>    
+        <skos:definition xml:lang="en">The act of placing an item into the custody of another person, family, or organization.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/AccessionerActivity">
-        <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
-        <skos:definition xml:lang="en">The act of adding an item to a collection</skos:definition>
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/DestructionActivity">
+        <rdfs:label xml:lang="en">Destroyer</rdfs:label>    
+        <skos:definition xml:lang="en">The act of permanently destroying an Item.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/AccessionerActivity">
-        <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
-        <skos:definition xml:lang="en">The act of adding an item to a collection</skos:definition>
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/DiscarderActivity">
+        <rdfs:label xml:lang="en">Discarder</rdfs:label>    
+        <skos:definition xml:lang="en">The act of permanently removing an item or part of an item from a collection for disposal.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/AccessionerActivity">
-        <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
-        <skos:definition xml:lang="en">The act of adding an item to a collection</skos:definition>
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/DisputantActivity">
+        <rdfs:label xml:lang="en">Disputant</rdfs:label>    
+        <skos:definition xml:lang="en">The act of challenging a claim, such as a claim of ownership.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/AccessionerActivity">
-        <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
-        <skos:definition xml:lang="en">The act of adding an item to a collection</skos:definition>
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/DonorActivity">
+        <rdfs:label xml:lang="en">Donor</rdfs:label>    
+        <skos:definition xml:lang="en">The act of giving an Item to another owner without monetary exchange.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/AccessionerActivity">
-        <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
-        <skos:definition xml:lang="en">The act of adding an item to a collection</skos:definition>
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/InheritorActivity">
+        <rdfs:label xml:lang="en">Inheritor</rdfs:label>    
+        <skos:definition xml:lang="en">The act of taking possession of an Item upon the death of the previous owner, either through bequest or application of law.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
         
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/AccessionerActivity">
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/LenderActivity">
+        <rdfs:label xml:lang="en">Lender</rdfs:label>    
+        <skos:definition xml:lang="en">The act of permitting the temporary possession of one more more Items.</skos:definition>
+        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/LossActivity">
+        <rdfs:label xml:lang="en">Loss</rdfs:label>    
+        <skos:definition xml:lang="en">Responsibility for the disappearance of an Item where the circumstances of the disappearance are unknown.</skos:definition>
+        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/OfferActivity">
+        <rdfs:label xml:lang="en">Offerer</rdfs:label>    
+        <skos:definition xml:lang="en">The act of providing an Item for purchase or other form of acquisition. Use for booksellers and sellers of other resources.</skos:definition>
+        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/OwnerActivity">
+        <rdfs:label xml:lang="en">Owner</rdfs:label>    
+        <skos:definition xml:lang="en">The legal possession of an Item.</skos:definition>
+        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/RecipientActivity">
+        <rdfs:label xml:lang="en">Recipient</rdfs:label>    
+        <skos:definition xml:lang="en">TThe act of receiving an Item, via bequest, donation, etc.</skos:definition>
+        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/RecovererActivity">
+        <rdfs:label xml:lang="en">Recoverer</rdfs:label>    
+        <skos:definition xml:lang="en">The act of re-assuming ownership of an Item following a period of loss, possibly due to theft.</skos:definition>
+        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/RepatriatorActivity">
+        <rdfs:label xml:lang="en">Repatriator</rdfs:label>    
+        <skos:definition xml:lang="en">The act of returning an item to its home country.</skos:definition>
+        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/SellerActivity">
+        <rdfs:label xml:lang="en">Seller</rdfs:label>    
+        <skos:definition xml:lang="en">The act of exchanging ownership of an Item for money or other object of value.</skos:definition>
+        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/TestatorActivity">
+        <rdfs:label xml:lang="en">Testator</rdfs:label>    
+        <skos:definition xml:lang="en">The act of bequeathing an Item in a will.</skos:definition>
+        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/ThiefActivity">
+        <rdfs:label xml:lang="en">Thief</rdfs:label>    
+        <skos:definition xml:lang="en">The act of acquiring an Item without the consent of the legal owner.</skos:definition>
+        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/TransfererActivity">
+        <rdfs:label xml:lang="en">Transferer</rdfs:label>    
+        <skos:definition xml:lang="en">The act of giving possession of an Item to another party, notably without a defined sale or donation.</skos:definition>
+        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/AccessionerActivity">
         <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
         <skos:definition xml:lang="en">The act of adding an item to a collection</skos:definition>
         <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
@@ -336,89 +424,9 @@
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/AccessionerActivity">
-        <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
-        <skos:definition xml:lang="en">The act of adding an item to a collection</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/AccessionerActivity">
-        <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
-        <skos:definition xml:lang="en">The act of adding an item to a collection</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/AccessionerActivity">
-        <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
-        <skos:definition xml:lang="en">The act of adding an item to a collection</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/AccessionerActivity">
-        <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
-        <skos:definition xml:lang="en">The act of adding an item to a collection</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/AccessionerActivity">
-        <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
-        <skos:definition xml:lang="en">The act of adding an item to a collection</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/AccessionerActivity">
-        <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
-        <skos:definition xml:lang="en">The act of adding an item to a collection</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/AccessionerActivity">
-        <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
-        <skos:definition xml:lang="en">The act of adding an item to a collection</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/AccessionerActivity">
-        <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
-        <skos:definition xml:lang="en">The act of adding an item to a collection</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/AccessionerActivity">
-        <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
-        <skos:definition xml:lang="en">The act of adding an item to a collection</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/AccessionerActivity">
-        <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
-        <skos:definition xml:lang="en">The act of adding an item to a collection</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/AccessionerActivity">
-        <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
-        <skos:definition xml:lang="en">The act of adding an item to a collection</skos:definition>
+    <owl:Class rdf:about="http://cho.bibliotek-o.org/1.1/ontology/AccessionNumber">
+        <rdfs:label xml:lang="en">Accession Number</rdfs:label>    
+        <skos:definition xml:lang="en">Numeric, alphanumeric, or other identifying code assigned when an art object, book, or other item enters the collection of a museum, library, or other repository. Such codes are unique within the set of codes, and specifically identify the particular item at hand. The numbers may be marked on the objects or not (http://vocab.getty.edu/aat/300312355).</skos:definition>
         <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
@@ -426,7 +434,42 @@
     
    
     <!-- OBJECT PROPERTIES -->
+    
+    <owl:ObjectProperty rdf:about="http://cho.bibliotek-o.org/1.1/ontology/accessionedBy">
+        <rdfs:label xml:lang="en">accessioned by</rdfs:label>    
+        <skos:definition xml:lang="en"></skos:definition>
+        <rdfs:domain rdf:resource="http://cho.bibliotek-o.org/1.1/ontology/AccessionNumber"/>
+        <owl:inverseOf rdf:resource="cho.bibliotek-o.org/1.1/ontology/AccessionNumber/accessions" />
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://cho.bibliotek-o.org/1.1/ontology/accessions">
+        <rdfs:label xml:lang="en">accessions</rdfs:label>    
+        <skos:definition xml:lang="en"></skos:definition>
+        <rdfs:range rdf:resource="http://cho.bibliotek-o.org/1.1/ontology/AccessionNumber"/>
+        <owl:inverseOf rdf:resource="cho.bibliotek-o.org/1.1/ontology/AccessionNumber/accessionedBy" />
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://cho.bibliotek-o.org/1.1/ontology/hasCustodialHistory">
+        <rdfs:label xml:lang="en">accessioned by</rdfs:label>    
+        <skos:definition xml:lang="en"></skos:definition>
+        <rdfs:domain rdf:resource="http://cho.bibliotek-o.org/1.1/ontology/CustodialHistory"/>
+        <owl:inverseOf rdf:resource="cho.bibliotek-o.org/1.1/ontology/AccessionNumber/accessions" />
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://cho.bibliotek-o.org/1.1/ontology/isCustodialHistoryOf">
+        <rdfs:label xml:lang="en">is custodial history of</rdfs:label>    
+        <skos:definition xml:lang="en"></skos:definition>
+        <rdfs:domain rdf:resource="http://cho.bibliotek-o.org/1.1/ontology/AccessionNumber"/>
+        <owl:inverseOf rdf:resource="cho.bibliotek-o.org/1.1/ontology/AccessionNumber/hasCustodialHistory" />
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
 
-    <!-- DATATYPE PROPERTIES -->
 
 </rdf:RDF>
