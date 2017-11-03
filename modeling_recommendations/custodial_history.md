@@ -42,9 +42,9 @@ Relationships between resources
 -	Only the CustodialHistory resource is linked directly to the Item, via the predicate hasCustodialHistory. Each Item is linked to a maximum of one CustodialHistory.
 -	The CustodialHistory of the Item is linked to one or more CustodialEvents via dcterms:hasPart (inverse dcterms:isPartOf).
 -	An individual CustodialEvent may be linked to an aggregate CustodialEvent via dcterms:isPartOf (inverse dcterms:hasPart). 
--	Individual CustodialEvents may be sequenced in the CustodialHistory via seq:precedes and seq:follows. 
+-	Individual CustodialEvents may be sequenced in the CustodialHistory via seq:precedes, seq:follows, seq:directlyPrecedes, and seq:directlyFollows. 
+> - Because seq:precedes and seq:follows do not imply immediate precedence or succession, new event assertions may be interjected between two existing events. When immediate precedence or succession is known, seq:directlyPrecedes and seq:directlyFollows can be used.
 > -	The modeling of concurrent and overlapping events (e.g., when the loan of a manuscript to one institution overlaps two ownerships) is left for future research. 
-> -	Note that seq:precedes and seq:follows do not imply immediate precedence or succession. This allows new event assertions to be interjected between two existing events.
 > -	When two CustodialEvents belonging to two different Items are part of the same aggregrate CustodialEvent, they may well occupy different positions in the sequencing of each Item’s CustodialHistory. For example, a sale including two items may be the first event in one Item’s history and the second Event in the other Item’s history.
 > -	While the model allows for sequencing of aggregate CustodialEvents, we expect this to have little utility in an implementation.
 -	CustodialEvents may be linked to one or more bib:Activity objects, price subgraphs, dates (both intervals and discrete dates), locations, and so on. These relations may pertain to either individual or aggregate CustodialEvents; for example, an entire lot of manuscripts may have been purchased for $100K, but the price of a specific item in the lot was negotiated at $10K and its inclusion in the lot was brokered by an agent not related to the aggregate CustodialEvent.
@@ -564,7 +564,21 @@ Properties
 > - **URI**: http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#follows
 > - **Domain**: owl:Thing
 > - **Range**: owl:Thing
-> - **Comment**: "A relation between entities, expressing a 'sequence' schema. E.g. 'year 2000 follows 1999', 'preparing coffee' follows 'deciding what coffee to use', 'II World War follows I World War', etc. It can be used between tasks, processes or time intervals, and subproperties would fit best in order to distinguish the different uses."
+> - **Comment**: A relation between entities, expressing a 'sequence' schema. E.g. 'year 2000 follows 1999', 'preparing coffee' follows 'deciding what coffee to use', 'II World War follows I World War', etc. It can be used between tasks, processes or time intervals, and subproperties would fit best in order to distinguish the different uses.
+
+**seq:directlyPrecedes**
+> - **Label**: directly precedes
+> - **URI**: http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyPrecedes
+> - **Domain**: owl:Thing
+> - **Range**: owl:Thing
+> - **Comment**: The intransitive precedes relation. For example, Monday directly precedes Tuesday. Directness of precedence depends on the designer conceptualization.
+
+**seq:directlyFollows**
+> - **Label**: directly follows
+> - **URI**: http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows
+> - **Domain**: owl:Thing
+> - **Range**: owl:Thing
+> - **Comment**: The intransitive follows relation. For example, Wednesday directly precedes Thursday. Directness of precedence depends on the designer conceptualization.
 
 **bib:atLocation** 
 > - **Label**: at location
