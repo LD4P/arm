@@ -4,15 +4,15 @@ RareMat & ArtFrame, 2017-10-04
 
 Table of Contents
 =======
-Overview
-Summary of the Model
-Diagram
-RDF Sample
-Requests to Library of Congress
-Term Specifications
-Areas for Future Research
+- [Overview](#overview)
+- [Summary of the Model](#SummaryoftheModel)
+- [Diagram](#Diagram)
+- [RDF Sample](#RDFSample)
+- [Requests to Library of Congress](#RequeststoLibraryofCongress)
+- [Term Specifications](#TermSpecifications)
+- [Areas for Future Research](#AreasforFutureResearch)
 
-Overview
+<a name="overview">Overview</a>
 =======
 Understanding the ownership or custodial history of an item is fundamental in understanding its contextual and historical importance as well as during valuation, when applicable. 
 
@@ -24,7 +24,7 @@ In modeling ownership and custodial history, the ArtFrame and Rare Materials Ont
 An item's custodial history is complex and provides a rich area for querying. Through the model proposed below, we believe we can both trace individual custodial histories for items in collections while aggregating materials related to the same auction, sale or donation.
 
 
-Summary of the Model
+<a name="SummaryoftheModel">Summary of the Model</a>
 =======
 
 New resource types
@@ -88,12 +88,12 @@ Concepts similar to but disjoint from ownership (i.e., to be represented by othe
 - Creation activities (e.g., creator holds all items at time of creation)
 - Commissions (involves Works rather than Items, not part of the custodial history of an Item)
 
-Diagram
+<a name="Diagram">Diagram</a>
 ======
 ![Custodial History Diagram](/modeling_recommendations/modeling_diagrams/custodial_history.png)
 
 
-RDF Sample
+<a name="RDFSample">RDF Sample</a>
 ======
 This sample describes a scenario in which one item has been sold twice, with an intervening period of ownership, and a second item has been sold once, as part of a lot that included the first sale of the first item.
 
@@ -136,7 +136,7 @@ This sample describes a scenario in which one item has been sold twice, with an 
     schema:priceCurrency <iso-4217-code> .  
 ```
 
-Requests to Library of Congress
+<a name="RequeststoLibraryofCongress">Requests to Library of Congress</a>
 -----------
 - Change bf:custodialHistory into an object property
 - Define the following classes:
@@ -148,7 +148,7 @@ If LC does not approve these requests, RareMat/ArtFrame will define these terms 
 - Activity types (detailed below)
 
 
-Term Specifications
+<a name="TermSpecifications">Term Specifications</a>
 ========
 Classes
 -------
@@ -625,7 +625,7 @@ Properties
 > - **Inverse**: http://bibliotek-o.org/1.1/ontology/hasAgent
 > - **Definition**: Relates an agent to the activity it participated in.
 
-Areas for Future Research
+<a name="AreasforFutureResearch">Areas for Future Research</a>
 ========
 - Public versus private data in this model is left as an implementation issue. Given that this model contains potentially sensitive data (e.g.: donors, value, etc.), implementers must consider how sensitive data are handled in their application. Note that the public/private issue is not specific to provenance data and extends into other library and non-library data as well.
 - Modeling of confidence level. This also applies beyond the provenance domain.
