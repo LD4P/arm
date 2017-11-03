@@ -195,7 +195,7 @@ Some of these classes are also defined as subclasses of schema:Event. â€œStaticâ
 > - **Label**: Bequest
 > - **URI**: TBD
 > - **Definition**: The transfer of an Item under the terms of a will.
-> - **Comment**: Typical associated Activities: TestatorActivity, InheritorActivity.
+> - **Comment**: Typical associated Activities: TestatorActivity, InheritorActivity, bib:WitnessActivity.
 > - **SubclassOf**: ex:Inheritance, schema:Event
 
 **ex:ClaimOfOwnership**
@@ -457,6 +457,12 @@ Activity Subclasses
 > - **URI**: TBD
 > - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
 > - **Definition**: The act of giving possession of an Item to another party, notably without a defined sale or donation.
+
+**bib:WitnessActivity**
+> - **Label**: Witness
+> - **URI**: http://bibliotek-o.org/1.1/ontology/WitnessActivity
+> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: The activity of verifying the truthfulness of an event or action.
 
 **ex:AccessionNumber**
 > - **Label**: Accession Number
