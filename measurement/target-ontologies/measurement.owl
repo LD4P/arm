@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
-    WARNING:  THIS IS A WORKING DRAFT ONTOLOGY AND STILL UNDER DEVELOPMENT, this file will change frequently and significantly as development continues.
+    WARNING:  THIS IS A WORKING DRAFT ONTOLOGY AND STILL UNDER DEVELOPMENT; this file will change frequently and significantly as development continues.
     
-    Note:  http://measurement.biblioteko-o.org/ is a placeholder (fake) namespace for the LD4P/L Measurements ontology extension until a proper home is found
+    Note:  http://measurement.biblioteko-o.org/ is a placeholder (fake) namespace for the LD4P/L Measurements ontology extension until a proper home is found.
   -->
 
 <rdf:RDF xmlns="http://measurement.biblioteko-o.org/"
@@ -22,9 +22,9 @@
         <rdfs:label xml:lang="en">ArtFrame: extension ontology for describing art
             materials</rdfs:label>
         <vann:preferredNamespacePrefix>meas</vann:preferredNamespacePrefix>
-        <rdfs:comment xml:lang="en">This measurements ontology was developed as a stand alone
+        <rdfs:comment xml:lang="en">This measurement ontology was developed as a stand-alone
             ontology as part of the bibliotek-o BIBFRAME 2.0 extension ontology
-            project</rdfs:comment>
+            project.</rdfs:comment>
         <voaf:extends rdf:resource="http://bibliotek-o.org/ontology/"/>
         <voaf:specializes rdf:resource="http://bibliotek-o.org/ontology/"/>
     </owl:Ontology>
@@ -34,7 +34,7 @@
 
     <owl:Class rdf:about="http://measurement.biblioteko-o.org/MeasurementGroup">
         <rdfs:label>Measurement Group</rdfs:label>
-        <skos:definition xml:lang="en-us">A set of measurements pertaining to a specific resource,
+        <skos:definition xml:lang="en">A set of measurements pertaining to a specific resource,
             part of a resource, or resource in a particular arrangement. For example, a book may
             have a specified height, width, length, and/or weight, which are all attached to a
             MeasurementGroup; the binding may have measurements specified independently, which would
@@ -44,7 +44,7 @@
 
     <owl:Class rdf:about="http://measurement.biblioteko-o.org/Measurement">
         <rdfs:label>Measurement</rdfs:label>
-        <skos:definition xml:lang="en-us">The measurement of a single aspect of a resource,
+        <skos:definition xml:lang="en">The measurement of a single aspect of a resource,
             including value, units, and the dimension measured. For example, a book may have a
             height (aspect) of 10 (value) centimeters (units). Each such measurement is attached to
             a MeasurementGroup.</skos:definition>
@@ -52,7 +52,7 @@
 
     <owl:Class rdf:about="http://measurement.biblioteko-o.org/Arrangement">
         <rdfs:label>Arrangement</rdfs:label>
-        <skos:definition xml:lang="en-us">The arrangement, organization, or configuration of a
+        <skos:definition xml:lang="en">The arrangement, organization, or configuration of a
             single object or collection of objects. For example, a parchment may be rolled or
             unrolled; a collection of visual materials has a specific arrangement; computer files
             are organized and ordered in a specific way.</skos:definition>
