@@ -69,16 +69,12 @@ Discussion
 ======
 
 **Fonts**
+
 BF is right to separate font from the other types of “notation,” since font refers to the style in which symbols are printed rather than to the symbol systems themselves. However, typeface is semantically related more to font size than to these symbol systems. Further, it is hard to understand why BF models only font size and not the other properties of a font - typeface and style.
 
 Conventional definitions from the publishing world
-
-nerdplusart.com/type-terminology-smackdown/
-A typeface is a family of fonts (very often by the same designer). Within a typeface there will be fonts of varying weights or other variations. E.g., light, bold, semi-bold, condensed, italic, etc. Each such variation is a different font.
-
-
-http://smad.jmu.edu/shen/webtype/facefontfamily.html
-A font is the digital representation of a typeface. It is a collection of all the characters of a typeface in one size (12pt/1in) and one style (bold/italic). For example, Arial in 12pt size is a font, Arial in 18pt size is a font, and Arial bold in 24pt is also a font. Adobe's type glossary lists a font as “one weight, width, and style of a typeface.”
+> - A typeface is a family of fonts (very often by the same designer). Within a typeface there will be fonts of varying weights or other variations. E.g., light, bold, semi-bold, condensed, italic, etc. Each such variation is a different font. nerdplusart.com/type-terminology-smackdown/
+> - A font is the digital representation of a typeface. It is a collection of all the characters of a typeface in one size (12pt/1in) and one style (bold/italic). For example, Arial in 12pt size is a font, Arial in 18pt size is a font, and Arial bold in 24pt is also a font. Adobe's type glossary lists a font as “one weight, width, and style of a typeface.” http://smad.jmu.edu/shen/webtype/facefontfamily.html
 
 **Handwriting Types**
 
