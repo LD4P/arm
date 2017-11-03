@@ -17,7 +17,7 @@ Table of Contents
 Understanding the ownership or custodial history of an item is fundamental in understanding its contextual and historical importance as well as during valuation, when applicable. 
 
 Current descriptive practice includes these data as strings. For instance:
-"Unrecorded until purchased in 1893 from Agnew's by J. Pierpont Morgan; sold by him at auction in 1905; Christie's 1910; Pres. and Mrs. Nicholas Murray Butler; donated by their estate to Columbia in 1955"
+"Unrecorded until purchased in 1893 from Agnew's by J. Pierpont Morgan; sold by him at auction in 1905; Christie's 1910; Pres. and Mrs. Nicholas Murray Butler; donated by their estate to Columbia in 1955."
 
 In modeling ownership and custodial history, the ArtFrame and Rare Materials Ontology Extension (RareMat) groups wanted to leverage more queryable data afforded by an entity-focused model; this differs from both current descriptive practice as well as BIBFRAME use of bf:custodialHistory as a datatype property. As such, we recommend using object properties alongside resources for different components of custodial history.
 
@@ -105,7 +105,7 @@ This sample describes a scenario in which one item has been sold twice, with an 
     ex:hasCustodialHistory :history2 .
 
 :history1 a ex:CustodialHistory ;
-    dcterms:hasPart :individualEvent1 ; :individualEvent2 ,     :individualEvent3 .
+    dcterms:hasPart :individualEvent1 ; :individualEvent2 ,  :individualEvent3 .
 
 :history2 a ex:CustodialHistory ;
     dcterms:hasPart :individualEvent4 .
@@ -115,7 +115,7 @@ This sample describes a scenario in which one item has been sold twice, with an 
     dcterms:isPartOf :aggregateEvent1 .
 
 :individualEvent2 a ex:OwnershipEvent ; 
-    seq:precedes :individualEvent3 ;
+    seq:precedes :individualEvent3 .
     
 :individualEvent3 a ex:SaleEvent .
 
@@ -169,12 +169,13 @@ Classes
 > - **Label**: Custodial event
 > - **URI**: TBD
 > - **Definition**: A custodial event encompassing one or more Items, such as a sale or loan.
-> - **Comment**: A CustodialEvent may pertain to only a single Item, in which case it is linked directly to the Item’s CustodialHistory, or it may pertain to multiple items (such as an auction lot), in which case the CustodialEvent aggregates multiple CustodialEvents linked directly to an Item’s CustodialHistory. A CustodialEvent may be what is typically conceived of as an “event,” or a “static” event such as Ownership. Subclasses are accordingly either defined as subclasses of schema:Event or not.
+> - **Comment**: A CustodialEvent may pertain to only a single Item, in which case it is linked directly to the Item’s CustodialHistory, or it may encompass multiple Items (such as an auction lot), in which case the CustodialEvent aggregates multiple individual CustodialEvents. A CustodialEvent may be what is typically conceived of as an “event,” or a “static” event such as Ownership. Subclasses are accordingly either defined as subclasses of schema:Event or not.
 
 
 CustodialEvent Subclasses
 ----------
 Some of these classes are also defined as subclasses of schema:Event. “Static” events such as Ownership do not subclass schema:Event.
+
 
 **ex:Accessioning**
 > - **Label**: Accessioning
@@ -187,7 +188,7 @@ Some of these classes are also defined as subclasses of schema:Event. “Static�
 > - **Label**: Auction
 > - **URI**: TBD
 > - **Definition**: The sale at auction of an Item. 
-> - **Comment**: Refers to the transfer of ownership through auction, rather than the auction in which that occurs. Typical associated Activities: BuyerActivity, SellerActivity, BrokerActivity.
+> - **Comment**: Refers to the transfer of ownership through auction, rather than the auction in which that occurs. Typical associated Activities: BuyerActivity, bib:SellerActivity, BrokerActivity.
 > - **SubclassOf**: ex:Sale, schema:Event.
 
 **ex:Bequest**
@@ -215,21 +216,21 @@ Some of these classes are also defined as subclasses of schema:Event. “Static�
 > - **Label**: Deposit
 > - **URI**: TBD
 > - **Definition**: The placement of an Item in the collections of a cultural heritage institution.
-> - **Comment**: Typical associated Activities: DepositorActivity.
+> - **Comment**: Typical associated Activities: bib:DepositorActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Destruction**
 > - **Label**: Destruction
 > - **URI**: TBD
 > - **Definition**: The permanent ruination of an Item.
-> - **Comment**: Typical associated Activities: DestructionActivity, OwnershipActivity.
+> - **Comment**: Typical associated Activities: DestructionActivity, bib:OwnerActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Discarding**
 > - **Label**: Discarding
 > - **URI**: TBD
 > - **Definition**: The abandonment or disposal of an Item.
-> - **Comment**: Typical associated Activities: DiscarderActivity, OwnershipActivity.
+> - **Comment**: Typical associated Activities: DiscarderActivity, bib:OwnerActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Donation**
@@ -258,21 +259,21 @@ SuperclassOf**: ex:Bequest
 > - **Label**: Loss
 > - **URI**: TBD
 > - **Definition**: The disappearance  of an Item under unknown circumstances (e.g., not in the case of theft).
-> - **Comment**: Typical associated Activities: LossActivity, OwnershipActivity.
+> - **Comment**: Typical associated Activities: LossActivity, bib:OwnerActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Offer**
 > - **Label**: Offer
 > - **URI**: TBD
 > - **Definition**: The provision of an Item for purchase or other form of acquisition.
-> - **Comment**: Typical associated Activities: OfferActivity, RecipientActivity.
+> - **Comment**: Typical associated Activities: bib:OfferActivity, RecipientActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Ownership**
 > - **Label**: Ownership
 > - **URI**: bib:OwnerActivity
 > - **Definition**: The possession of full and complete right of control over an Item.
-> - **Comment**: Typical associated Activities: OwnerActivity.
+> - **Comment**: Typical associated Activities: bib:OwnerActivity.
 > - **SubclassOf**: ex:CustodialEvent.
 
 **ex:Recovery**
@@ -293,14 +294,14 @@ SuperclassOf**: ex:Bequest
 > - **Label**: Sale
 > - **URI**: TBD
 > - **Definition**: The exchange of an Item for money or other object of value.
-> - **Comment**: Typical associated Activities: BuyerActivity, SellerActivity, BrokerActivity.
+> - **Comment**: Typical associated Activities: BuyerActivity, bib:SellerActivity, BrokerActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:SaleEvent.
 
 **ex:Theft**
 > - **Label**: Theft
 > - **URI**: TBD
 > - **Definition**: The removal of an Item from the possession of the rightful owner without the latter’s consent.
-> - **Comment**: Typical associated Activities: ThiefActivity, OwnerActivity.
+> - **Comment**: Typical associated Activities: ThiefActivity, bib:OwnerActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Transfer**
@@ -347,7 +348,7 @@ Activity Subclasses
 > - **Label**: Claimant
 > - **URI**: TBD
 > - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
-> - **Definition**: The act of declaring ownership for an Item, notably when the claim is not clearly substantiated.
+> - **Definition**: The act of declaring ownership of an Item, notably when the claim is not clearly substantiated.
 
 **ex:DeaccessionerActivity**
 > - **Label**: Deaccessioner
@@ -517,19 +518,19 @@ Properties
 **ex:hasCustodialHistory** 
 > - **Label**: has custodial history
 > - **URI**: TBD
-> - **Domain**: bf:Item
+> - **Domain**: unspecified
 > - **Range**: ex:CustodialHistory
 > - **Inverse**: ex:isCustodialHistoryOf
-> - **Definition**: Relates a bf:Item to its ex:CustodialHistory resource.
+> - **Definition**: Relates a resource to its custodial history.
 > - **Comment**: 
 
 **ex:isCustodialHistoryOf** 
 > - **Label**: is custodial history of
 > - **URI**: TBD
 > - **Domain**: ex:CustodialHistory
-> - **Range**: bf:Item
+> - **Range**: unspecified
 > - **Inverse**: ex:hasCustodialHistory
-> - **Definition**: Relates a bf:Item to its ex:CustodialHistory resource.
+> - **Definition**: Relates a CustodialHistory resource to the resource it belongs to.
 
 **dcterms:hasPart** 
 > - **Label**: Has Part
