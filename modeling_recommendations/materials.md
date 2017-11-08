@@ -204,7 +204,7 @@ Vocabularies for materials and colour content. Consider the following and others
 <a name="Diagram">Diagram</a>
 ===========
 ![Materials model diagram](/modeling_recommendations/modeling_diagrams/materials.png)
-Note that ex is the namespace of the current model, while ex1 is the namespace of a controlled vocabulary for materials. These may or may not be the same; moreover, different material terms could belong to different namespaces. Namespaces of other terms are currently undefined; see below.
+Note that ex is the namespace of the current model, while ex1 is the namespace of a controlled vocabulary for materials. These may or may not be the same; moreover, different material terms could belong to different namespaces. Namespaces of terms shown without prefixes are currently undefined, and depend on the outcome of BIBFRAME recommendations.
 
 <a name="RDFSample">Sample RDF</a>
 ===========
