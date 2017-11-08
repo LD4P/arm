@@ -172,13 +172,26 @@ Properties
 > - **URI**: http://purl.org/dc/terms/isPartOf
 > - **Definition**: A related resource in which the described resource is physically or logically included.
 
+**crm:P2_has_type**
+> - **Label**: has type
+> - **URI**:http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#P2
+> - **Scope note**: This property allows sub typing of CRM entities - a form of specialisation – through the use of a terminological hierarchy, or thesaurus. The CRM is intended to focus on the high-level entities and relationships needed to describe data structures. Consequently, it does not specialise entities any further than is required for this immediate purpose. However, entities in the isA hierarchy of the CRM may by specialised into any number of sub entities, which can be defined in the E55 Type hierarchy. E51 Contact Point, for example, may be specialised into “e-mail address”, “telephone number”, “post office box”, “URL” etc. none of which figures explicitly in the CRM hierarchy. Sub typing obviously requires consistency between the meaning of the terms assigned and the more general intent of the CRM entity in question.
+> - **Domain**: crm:E1_CRM_Entity
+> - **Range**: crm:E55_Type
+
+**crm:P2i_is_type_of**
+> - **Label**: is type of
+> - **URI**: http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#P2
+> - **Domain**: crm:E55_Type
+> - **Range**: crm:E1_CRM_Entity
+
 **rdau:P60558**
 > - **Label**: has colour content
 > - **URI**: http://rdaregistry.info/Elements/u/colourContent.en
 > - **Scope note**: Black, white, single colour shades of black, single colour tints of white, and single colour tones of gray are considered to be single colours.
 > - **Domain**: undefined
 > - **Range**: undefined
-> - **Subproperty of**: rdau:P20224
+> - **Subproperty of**: rdae:P20224
 
 Named Individuals
 ----------
@@ -203,7 +216,7 @@ Note that ex is the namespace of the current model, while ex1 is the namespace o
      ex2:hasbaseMaterial :baseMaterial1 .
  
  :baseMaterial1 a crm:E57_Material ;
-      rdf:type :wood (plant material) ;
+      crm:P2_has_type :wood (plant material) ;
       rdau:P60558 :brown (color) .
 ```
 
