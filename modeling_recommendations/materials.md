@@ -172,6 +172,14 @@ Properties
 > - **URI**: http://purl.org/dc/terms/isPartOf
 > - **Definition**: A related resource in which the described resource is physically or logically included.
 
+**rdau:P60558**
+> - **Label**: has colour content
+> - **URI**: http://rdaregistry.info/Elements/u/colourContent.en
+> - **Scope note**: Black, white, single colour shades of black, single colour tints of white, and single colour tones of gray are considered to be single colours.
+> - **Domain**: undefined
+> - **Range**: undefined
+> - **Subproperty of**: rdau:P20224
+
 **crm:P2_has_type**
 > - **Label**: has type
 > - **URI**:http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#P2
@@ -185,13 +193,7 @@ Properties
 > - **Domain**: crm:E55_Type
 > - **Range**: crm:E1_CRM_Entity
 
-**rdau:P60558**
-> - **Label**: has colour content
-> - **URI**: http://rdaregistry.info/Elements/u/colourContent.en
-> - **Scope note**: Black, white, single colour shades of black, single colour tints of white, and single colour tones of gray are considered to be single colours.
-> - **Domain**: undefined
-> - **Range**: undefined
-> - **Subproperty of**: rdae:P20224
+Note that crm:P2_has_type and its inverse are used to type an individual material resource within a taxonomic hierarchy, where the object is a named individual; the range of rdf:type is rdfs:Class.
 
 Named Individuals
 ----------
