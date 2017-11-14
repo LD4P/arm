@@ -376,6 +376,7 @@
         <rdfs:label xml:lang="en">Accession Number</rdfs:label>    
         <skos:definition xml:lang="en">Numeric, alphanumeric, or other identifying code assigned when an art object, book, or other item enters the collection of a museum, library, or other repository. Such codes are unique within the set of codes, and specifically identify the particular item at hand. The numbers may be marked on the objects or not (http://vocab.getty.edu/aat/300312355).</skos:definition>
         <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity" />
+        <skos:editorialNote xml:lang="en">This class has been approved for adoption in BIBFRAME, but not yet implemented, so defining here temporarily.</skos:editorialNote>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
