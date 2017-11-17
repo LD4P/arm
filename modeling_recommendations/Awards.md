@@ -77,3 +77,51 @@ Classes
 > - **Definition**: The activity of nominating or judging a resource in relation to an award, honor, etc.
 > - **scopeNote**: This class is not derived from a MARC relator.
 > - **Subclass of**: bib:Activity
+
+**AwardGranterActivity**
+> - **Label**: Award Granter
+> - **URI**: TBD
+> - **Definition**: The activity of granting an award.
+> - **scopeNote**: This class is not derived from a MARC relator.
+> - **Subclass of**: bib:Activity
+
+**AwardReceipt**
+> - **Label**: Award Receipt
+> - **URI**: TBD
+> - **Definition**: The bestowal of an award, honor, or distinction to an Agent or Work. The award bestowed should be represented with the Award class. The AwardReceipt is a context node between the award and the recipient which may contain further information, such as date.
+
+**AwardWinner**
+> - **Label**: Award Winner
+> - **URI**: TBD
+> - **Definition**: The specific nature of the award receipt is award winner.
+> - **Subclass of**: af:AwardReceipt
+
+**AwardShortlist**
+> - **Label**: Award Shortlist
+> - **URI**: TBD
+> - **Definition**: The specific nature of the award receipt is award shortlist.
+> - **Subclass of**: af:AwardReceipt
+
+**AwardHonoraryMention**
+> - **Label**: Award Honorary Mention
+> - **URI**: TBD
+> - **Definition**: The specific nature of the award receipt is honorary mention.
+> - **Subclass of**: af:AwardReceipt
+
+**AwardNominee**
+> - **Label**: Award Nominee
+> - **URI**: TBD
+> - **Definition**: The specific nature of the award receipt is nominee.
+> - **Subclass of**: af:AwardReceipt
+
+**AwardCitation**
+> - **Label**: Award Citation
+> - **URI**: TBD
+> - **Definition**: The specific nature of the award receipt is citation.
+> - **Subclass of**: af:AwardReceipt
+
+**AwardLonglist**
+> - **Label**: Award Longlist
+> - **URI**: TBD
+> - **Definition**: TThe specific nature of the award receipt is longlist.
+> - **Subclass of**: af:AwardReceipt
