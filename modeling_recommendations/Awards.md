@@ -57,4 +57,23 @@ Properties
 <a name="recommendations">Recommendations for Moving Forward</a>
 ===========================
 
-The proposed Awards model for ArtFrame is in part based on the award classes and properties developed for the LD4L 2014 Ontology and a proposal developed for bibliotek-o that remained unfinished due to time constraint. However, these models were adjusted and extended to accommodate use cases and data examples identified by the ArtFrame group.
+The proposed Awards model for ArtFrame is in part based on the award classes and properties developed for the LD4L 2014 Ontology ([*https://www.ld4l.org/ld4l-2014/ontology*](https://www.ld4l.org/ld4l-2014/ontology)) and a proposal developed for bibliotek-o that remained unfinished due to time constraint. However, these models were adjusted and extended to accommodate use cases and data examples identified by the ArtFrame group.
+
+Classes
+---------
+**Award**
+> - **Label**: Award or Honor
+> - **URI**: http://vivoweb.org/ontology/core#Award
+> - **Definition**: An award or honor
+
+**Activity**
+> - **Label**: Activity
+> - **URI**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **Definition**: An activity or contribution by a single agent that affects or alters the existence or state of a resource.
+
+**SelectorActivity**
+> - **Label**: Award Selector
+> - **URI**: TBD
+> - **Definition**: The activity of nominating or judging a resource in relation to an award, honor, etc.
+> - **scopeNote**: This class is not derived from a MARC relator.
+> - **Subclass of**: bib:Activity
