@@ -21,7 +21,7 @@ Table of Contents
 
 Many artists, artworks or art related publications represented in our library collections are recipients of awards. 
 Being able to find all the resources connected to a specific award within one collection or across different collections 
-has been identified as a critical use case by the ArtFrame group. An award could be given to a creator for a specific work 
+has been identified as a critical use case ([*https://wiki.duraspace.org/display/LD4P/ArtFrame?preview=/79795202/83235173/PublicUseCases.pdf*](https://wiki.duraspace.org/display/LD4P/ArtFrame?preview=/79795202/83235173/PublicUseCases.pdf))by the ArtFrame group. An award could be given to a creator for a specific work 
 (in which case the award would need to be associated with that work) or it could be a career achievement award that can only 
 be associated with the agent, but not with a specific work.
 
