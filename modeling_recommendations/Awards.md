@@ -7,13 +7,12 @@ Summary Recommendation
 
 Table of Contents
 > - [Overview](#overview)
-> - [Background](#background)
+> - [Awards in BIBFRAME](#bfawards)
 > - [Recommendations for Moving Forward](#recommendations)
-> - [Relevant ArtFrame Use Case](#useCase)
-> - [Titles in MARC](#MARC)
-> - [Titles in BIBFRAME](#BIBFRAME)
-> - [Titles in bibliotek-o](#bibliotek-o)
-> - [Side-by-Side Examples](#examples)
+> - [Involved Classes](#classes)
+> - [Involved Properties](#properties)
+> - [Diagram](#diagram)
+> - [Examples](#examples)
 
 
 <a name="overview">Overview</a>
@@ -30,7 +29,7 @@ The ArtFrame group considered the inclusion of awards in the LD4P event model (t
 the actual event, e.g. an awards ceremony, is not what is considered important. It is sufficient to say that a specific work or 
 agent received a specific award on a given date.
 
-In the traditional MARC environment, catalogers have recorded award information in the Awards note: 586. ([*http://www.loc.gov/marc/bibliographic/bd586.html*](http://www.loc.gov/marc/bibliographic/bd586.html))Access points related 
+In the traditional MARC environment, catalogers have recorded award information in the Awards note: 586. ([*http://www.loc.gov/marc/bibliographic/bd586.html*](http://www.loc.gov/marc/bibliographic/bd586.html)) Access points related 
 to awards are generally coded as LC subject headings (150 with a 550 Art--Awards), however these LCSH terms are applied to 
 resources about that award, not to those receiving an award. The content standard RDA covers awards in 7.28. The instructions 
 are limited to “Record information on an award if considered important for identification or selection.” The examples reflect a 
@@ -43,3 +42,19 @@ Wikidata (e.g. Sobey Art Award) ([*https://www.wikidata.org/wiki/Q7549952*](http
 The VIVO ontology has a class vivo:Award ([*http://vivoweb.org/sites/vivoweb.org/files/vivo-isf-public-1.6.owl#Award*](http://vivoweb.org/sites/vivoweb.org/files/vivo-isf-public-1.6.owl#Award))and related properties, however those tend to have ranges limiting their use to foaf:Agent or foaf:Organization.
 
 The art specific standards and ontologies that were investigated do not specifically address the issue of awards.
+
+<a name="bfawards">Awards in BIBFRAME</a>
+============
+Properties
+---------
+**bf:awards**
+> - **Label**: Award note
+> - **URI**: http://id.loc.gov/ontologies/bibframe/awards
+> - **Definition**: Information on awards associated with the described resource.
+> - **Used with**: Work or Instance
+> - **Range**: Literal
+
+<a name="recommendations">Recommendations for Moving Forward</a>
+===========================
+
+The proposed Awards model for ArtFrame is in part based on the award classes and properties developed for the LD4L 2014 Ontology and a proposal developed for bibliotek-o that remained unfinished due to time constraint. However, these models were adjusted and extended to accommodate use cases and data examples identified by the ArtFrame group.
