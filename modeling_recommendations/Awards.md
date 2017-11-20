@@ -193,3 +193,129 @@ Properties
 ===========
 
 ![Awards model diagram](/modeling_recommendations/modeling_diagrams/Awards2.jpg)
+
+<a name="examples">Examples</a>
+--------
+
+> - **586 (awards note): Man Booker Prize, 1987, shortlist -- BIBFRAME**
+```
+
+:w1 a bf:Work ;
+bf:awards "Man Booker Prize, 1987, shortlist" .
+
+```
+> - **586 (awards note): Man Booker Prize, 1987, shortlist -- biblioteko/ArtFrame**
+```
+:chatterton a bf:Work ;
+ af:received :awardReceipt1 .
+
+:awardReceipt1 a af:AwardReceipt, af:AwardShortlist ;
+af:hasAward :award1 ;
+ af:receivedBy :chatterton ;
+ dcterms:date "1987" .
+
+:award1 a vivo:Award ;
+ rdfs:label "Man Booker Prize" .
+
+```
+> - **586 (awards note): George Wittenborn Award, Art Libraries Society of North  America, 1998 -- BIBFRAME**
+```
+w1 a bf:Work ;
+bf:awards "George Wittenborn Award, Art Libraries Society of North  America, 1998" .
+
+```
+> - **586 (awards note): George Wittenborn Award, Art Libraries Society of North  America, 1998 -- biblioteko/ArtFrame**
+```
+:Ikat a bf:Work ;
+ af:received :awardReceipt1 .
+
+:awardReceipt1 a af:AwardReceipt, af:AwardWinner  ;
+ af:hasAward :award1 ;
+ af:receivedBy :Ikat ;
+ dcterms:date "1998" ;
+ bib:hasActivity :activity1 .
+
+:award1 a vivo:Award ;
+ rdfs:label "George Wittenborn Award" .
+
+:activity1 a af:AwardGranterActivity ;
+ bib:hasAgent <http://id.loc.gov/row/agents/n82039281> .
+
+```
+> - **586 (awards note): Smith Award, Decorative Arts Society, 2006, for the essay,  "The most artistic house in New York City" -- BIBFRAME**
+```
+w1 a bf:Work ;
+bf:title :t1 ;
+bf:partOf :w2 ;
+bf:awards "Smith Award, Decorative Arts Society, 2006” .
+
+:t1 a bf:Title ;
+rdfs:label "The most artistic house in New York City" ;
+bf:mainTitle "The most artistic house in New York City" .
+
+:w2 a bf:Work ;
+bf:title :t2 ;
+bf:hasPart :W1 .
+
+:t2 a bf:Title ;
+rdfs:label "Louis Comfort Tiffany and Laurelton Hall" ;
+bf:mainTitle "Louis Comfort Tiffany and Laurelton Hall" .
+
+```
+> - **586 (awards note): Smith Award, Decorative Arts Society, 2006, for the essay,  "The most artistic house in New York City" -- biblioteko/ArtFrame**
+```
+:w1 a bf:Work ;
+ dcterms:isPartOf :w2 ;
+ af:received :awardReceipt1 .
+
+:awardReceipt1 a af:AwardReceipt, af:AwardWinner ;
+ af:hasAward :award2 ;
+ af:receivedBy :w1 ;
+ dcterms:date "2006" ;
+ bib:hasActivity :activity1 .
+ 
+:award2 a vivo:Award ;
+ rdfs:label "Smith Award" .
+
+:activity1 a af:AwardGranterActivity ;
+ bib:hasAgent :agent1 .
+
+:agent1 a bf:Organization ;
+ rdfs:label "Decorative Arts Society" .
+
+```
+> - **Someone talked! (Poster) "Winner R. Hoe & Co., Inc. Award - National War Poster Competition. -- BIBFRAME**
+```
+:w a bf:Work ;
+bf:award "Winner R. Hoe & Co., Inc. Award - National War Poster Competition."
+
+```
+> - **Someone talked! (Poster) "Winner R. Hoe & Co., Inc. Award - National War Poster Competition. -- biblioteko/ArtFrame**
+```
+:SomeoneTalked! a bf:Work ;
+ af:received :awardReceipt1 .
+
+:awardReceipt1 a af:AwardReceipt, af:AwardWinner ;
+ af:hasAward :award1 ;
+ af:receivedBy :SomeoneTalked! .
+
+:award1 a vivo:Award ;
+ rdfs:label "R. Hoe & Co., Inc. Award--National War Poster Competition" .
+
+```
+> - **Award selector/judge -- biblioteko/ArtFrame**
+```
+:MurrayHill a bf:Person ;
+ :received :awardReceipt.
+
+:awardReceipt a af:AwardReceipt, a af:AwardWinner ;
+ af:isReceiptOf :AnnualContemporaryCrafExhibitionforGlass ;
+ af:receivedBy :MurrayHill ;
+ dcterms:date "1987" ;
+ bib:hasActivity :activity1, :activity2 .
+
+:activity1 a af:SelectorActivity ;
+ bib:hasAgent <http://id.loc.gov/row/agents/no2003101967> .
+
+:activity2 a af:AwardGranterActivity ;
+ bib:hasAgent :agent2 .
