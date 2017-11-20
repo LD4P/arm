@@ -9,8 +9,6 @@ Table of Contents
 > - [Overview](#overview)
 > - [Awards in BIBFRAME](#bfawards)
 > - [Recommendations for Moving Forward](#recommendations)
-> - [Involved Classes](#classes)
-> - [Involved Properties](#properties)
 > - [Diagram](#diagram)
 > - [Examples](#examples)
 
@@ -126,7 +124,7 @@ Classes
 > - **Definition**: TThe specific nature of the award receipt is longlist.
 > - **Subclass of**: af:AwardReceipt
 
-Propertoes
+Properties
 ---------
 **received (object property)**
 > - **Label**: received
@@ -134,5 +132,64 @@ Propertoes
 > - **Definition**: This Agent or Work is the recipient of the specified AwardReceipt
 > - **Domain**: unspecified
 > - **Inverse**: af:receivedBy
+> - **Range**: af:AwardReceipt
 
-> - **Range**: af:AwardReceipt>
+**receivedBy (object property)**
+> - **Label**: received by
+> - **URI**: TBD
+> - **Definition**: This AwardReceipt was received by the specified award recipient (Agent or Work).
+> - **Domain**: af:AwardReceipt
+> - **Range**: unspecified
+> - **Inverse**: af:received
+
+**hasAward (object property)**
+> - **Label**: has award
+> - **URI**: TBD
+> - **Definition**: This resource is a receipt of the specified resource, such as an award or honor.
+> - **Domain**: af:AwardReceipt
+> - **Range**: af:Award
+> - **Inverse**: af:isAwardOf
+
+**isAwardOf (object property)**
+> - **Label**: is award of
+> - **URI**: TBD
+> - **Definition**: An object property linking a specified resource, such as an award or honor, to the receipt.
+> - **Domain**: af:Award
+> - **Range**: af:AwardReceipt
+> - **Inverse**: af:hasAward
+
+**dcterms:date**
+> - **Label**: Date
+> - **URI**: http://purl.org/dc/terms/date
+> - **Definition**: A point or period of time associated with an event in the lifecycle of the resource.
+
+**hasAgent (Object property)**
+> - **Label**: has Agent
+> - **URI**: http://bibliotek-o.org/1.1/ontology/hasAgent
+> - **Definition**: Relates an activity to its agent.
+> - **Inverse**: bib:isAgentOf
+
+**isAgentOf (Object property)**
+> - **Label**: is Agent of
+> - **URI**: http://bibliotek-o.org/1.1/ontology/isAgentOf
+> - **Definition**: Relates an Agent to an Activity they participated in.
+> - **Domain**: bf:Agent
+> - **Inverse**: bib:hasAgent
+
+**hasActivity (Object property)**
+> - **Label**: has activity
+> - **URI**: http://bibliotek-o.org/1.1/ontology/hasActivity
+> - **Definition**: Relates this resource to an activity or contribution by a single agent that affects or alters its existence  
+                    or state.
+> - **Inverse**: bib:isActivityOf
+
+**isActivityOf (Object property)**
+> - **Label**: is activity of
+> - **URI**: http://bibliotek-o.org/1.1/ontology/isActivityOf
+> - **Definition**: Relates an activity to the affected resource.
+> - **Inverse**: bib:hasActivity
+
+<a name="Diagram">Diagram</a>
+===========
+
+![Awards model diagram](/modeling_recommendations/modeling_diagrams/Awards2.jpg)
