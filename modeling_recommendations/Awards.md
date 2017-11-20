@@ -125,3 +125,14 @@ Classes
 > - **URI**: TBD
 > - **Definition**: TThe specific nature of the award receipt is longlist.
 > - **Subclass of**: af:AwardReceipt
+
+Propertoes
+---------
+**received (object property)**
+> - **Label**: received
+> - **URI**: TBD
+> - **Definition**: This Agent or Work is the recipient of the specified AwardReceipt
+> - **Domain**: unspecified
+> - **Inverse**: af:receivedBy
+
+> - **Range**: af:AwardReceipt>
