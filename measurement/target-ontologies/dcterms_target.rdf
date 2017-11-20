@@ -22,7 +22,6 @@
         <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</dcterms:modified>
     </rdf:Description>
     
-    
     <rdf:Description rdf:about="http://purl.org/dc/terms/hasPart">
         <rdfs:label xml:lang="en">Has Part</rdfs:label>
         <rdfs:comment xml:lang="en">A related resource that is included either physically or logically in the described resource.</rdfs:comment>
@@ -31,6 +30,18 @@
         <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dcterms:modified>
         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
         <dcterms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#hasPart-003"/>
+        <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://purl.org/dc/terms/isPartOf">
+        <rdfs:label xml:lang="en">Is Part Of</rdfs:label>
+        <rdfs:comment xml:lang="en">A related resource in which the described resource is physically or logically included.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dcterms:modified>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <dcterms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#isPartOf-003"/>
         <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
     </rdf:Description>
