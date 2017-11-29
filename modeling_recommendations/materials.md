@@ -83,7 +83,7 @@ We diverge from the BIBFRAME model in the following respects:
 <a name="RequeststoLibraryofCongress">Requests for Modifications to BF2</a>
 -------
 
-- Remove domain and ranges from bf:appliedMaterial and bf:baseMaterial, along with a superproperty bf:material. If the request is rejected, the Rare Materials Ontology Extension Group and the ArtFrame  group will use rdau:P60159 “has applied material” and rda:P60596 “has base material” and define its own hasMaterial predicate, with inverse.
+- Remove domain and ranges from bf:appliedMaterial and bf:baseMaterial, and add a superproperty bf:material with domain and range also unspecified. If the request is rejected, the Rare Materials Ontology Extension Group and the ArtFrame  group will use rdau:P60159 “has applied material” and rda:P60596 “has base material” and define its own hasMaterial predicate, with inverse.
 - Add inverses of bf:appliedMaterial and bf:baseMaterial. If the request is rejected, the Rare Materials Ontology Extension Group and the ArtFrame  group will create inverses of rdau:P60159 and rdau:P60596.
 - Remove property bf:mount.
 - Remove classes bf:AppliedMaterial and bf:BaseMaterial.
@@ -193,7 +193,7 @@ Properties
 > - **Domain**: crm:E55_Type
 > - **Range**: crm:E1_CRM_Entity
 
-Note that crm:P2_has_type and its inverse are used to type an individual material resource within a taxonomic hierarchy, where the object is a named individual; the range of rdf:type is rdfs:Class.
+Note that crm:P2_has_type and its inverse are used to type an individual material resource within a taxonomic hierarchy, where the object is a named individual, as opposed to rdf:type with range rdfs:Class.
 
 Named Individuals
 ----------
@@ -224,6 +224,7 @@ Note that ex is the namespace of the current model, while ex1 is the namespace o
 
 <a name="AreasforFutureResearch">Areas for Future Research</a>
 ===========
+- Use of crm:P2_has_type vs skos:broader. Do they have the same semantics?
 - Can emulsion (bf:emulsion, bf:Emulsion) be integrated into the Materials model, or does it require different treatment?
 - Consider whether the hasAppliedMaterial predicate should actually connect the applied material to the base material rather than the object; that seems to be more semantically accurate. Could there be layers of applied materials, each applied on top of the other? That couldn’t be captured by multiple hasAppliedMaterial assertions on the resource.
 - Consider whether it would be useful to ask RDA to define a superproperty “has material” of properties “has applied material” and “has base material”.
