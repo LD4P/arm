@@ -194,7 +194,8 @@ Predicates
 
 **hasStyle**
 > - **rdfs:label**: has style
-> - **Skos:definition**: A relationship between a resource and a style. Style types will vary depending on the type of resource.  
+> - **Skos:definition**: A relationship between a resource and a style. 
+> - **Skos:scopeNote**: Style vocabularies will vary depending on the type of resource. For example, in the context of Fonts, styles include bold, italic, etc. A resource may have more than one style; e.g., a font may be both bold and italic, with two separate hasStyle assertions.
 > - **Domain**: unspecified
 > - **Range**: unspecified
 
@@ -210,4 +211,5 @@ Areas for future research - beyond present scope
 - If the use case arises for the need to know which fonts and handwriting types were used with which bf:Scripts, consider modeling that would reflect these relationships in a particular case.
 - Ask community for better label/naming for :writtenIn.
 - Other notation subtypes, such as mathematical, chemical, and logical symbol systems.
+
 
