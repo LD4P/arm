@@ -9,7 +9,7 @@ In rare material cataloging the capture of information about writing systems, fo
 Summary of recommendations:
 ==============
 - Define classes Font, Typeface, FontStyle, and HandwritingType
-- Define predicates writtenIn, hasTypeface, hasFontStyle, and hasHandwritingType
+- Define predicates writtenIn, hasTypeface, hasStyle, and hasHandwritingType
 - Eliminate class bf:FontSize and predicate bf:fontSize.
 - Define a set of named individuals to represent typefaces, or use an external controlled vocabulary if one exists. This is not a closed set, since new typefaces can be created.
 - Define a set of named individuals to represent font styles, or use an external controlled vocabulary if one exists.
@@ -90,7 +90,7 @@ Font
 ==========
 Following the usage described above, we propose a Font class to describe all font properties of a resource (or part of a resource), including typeface (e.g., Courier, Arial), size, and style (e.g., bold, italics). We propose a class Typeface with named individuals from a typeface vocabulary, and a class FontStyle with named individuals from a controlled font style vocabulary. We propose using the Measurement model to describe size as detailed below. 
 
-We propose predicates :writtenIn to relate a bibliographic resource (most likely Instance or Item) to a Font, and predicates hasTypeface, hasStyle to relate a Font instance to its Typeface and FontStyle. Predicates from the Measurement model would be used to model font size.
+We propose predicate :writtenIn to relate a bibliographic resource (most likely Instance or Item) to a Font, and predicates hasTypeface, hasStyle to relate a Font instance to its Typeface and FontStyle. Predicates from the Measurement model would be used to model font size.
 
 Diagram
 ---------
@@ -182,24 +182,25 @@ Classes
 Predicates
 ---------
 **writtenIn**
-> - **rdfs:label**: Written in
+> - **rdfs:label**: written in
 > - **Skos:definition**: The relationship between a resource containing text and the Font or HandWriting the textual information is displayed in.
 > - **skos:editorialNote**: Use with BF Instance or Item
 
 **hasTypeface**
-> - **rdfs:label**: Has typeface
+> - **rdfs:label**: has typeface
 > - **Skos:definition**: A relationship between a Font and its design or “font family”
 > - **Domain**: Font
 > - **Range**: Typeface
 
-**hasFontStyle**
-> - **rdfs:label**: Has font style
-> - **Skos:definition**: A relationship between a Font and the style of the font used, e.g. bold, italic 
-> - **Domain**: Font
-> - **Range**: FontStyle
+**hasStyle**
+> - **rdfs:label**: has style
+> - **Skos:definition**: A relationship between a resource and a style. 
+> - **Skos:scopeNote**: Style vocabularies will vary depending on the type of resource. For example, in the context of Fonts, styles include bold, italic, etc. A resource may have more than one style; e.g., a font may be both bold and italic, with two separate hasStyle assertions.
+> - **Domain**: unspecified
+> - **Range**: unspecified
 
 **hasHandwritingType**
-> - **rdfs:label**: Has handwriting type
+> - **rdfs:label**: has handwriting type
 > - **Skos:definition**: A relationship between a resource that includes handwriting and the type of writing hand, e.g. Gothic, Secretary, Carolingian minuscule, and Sütterlin. 
 > - **Range**: HandwritingType
 > - **skos:editorialNote**: Use on a :Handwriting
@@ -210,4 +211,5 @@ Areas for future research - beyond present scope
 - If the use case arises for the need to know which fonts and handwriting types were used with which bf:Scripts, consider modeling that would reflect these relationships in a particular case.
 - Ask community for better label/naming for :writtenIn.
 - Other notation subtypes, such as mathematical, chemical, and logical symbol systems.
+
 
