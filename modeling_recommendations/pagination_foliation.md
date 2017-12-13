@@ -16,7 +16,7 @@ The Sample Data section below provides numerous pagination and foliation example
 
 If not using separate bf:Unit resources to capture information (and rather than introducing a new datatype property for pagination and foliation), creating :PagintationFoliation as a subclass of bf:Extent allows the property query path to remain the same as the more general bf:Extent pattern, while still saying this particular extent is speaking specifically to the pagination and foliation of a bibliographic resource.
 
-LD4P recommends using/creating the following Classes and Properties to allow for expansion on the details of pagination and foliation.
+The Rare Materials Ontology Group recommends using/creating the following Classes and Properties to allow for expansion on the details of pagination and foliation.
 
 Request to LC
 --------------
