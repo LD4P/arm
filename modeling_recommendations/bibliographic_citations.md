@@ -130,4 +130,4 @@ A negative citation is also modeled as an **bf:Note**, with the value "not found
 ![Use Case 3](/modeling_recommendations/modeling_diagrams/citations_useCase_3.png)
 
 ### Use case 4: Negative citation with comment.
-![Use Case 4.1](/modeling_recommendations/modeling_diagrams/citations_useCase_4_.png)
+![Use Case 4.1](/modeling_recommendations/modeling_diagrams/citations_useCase_4.png)
