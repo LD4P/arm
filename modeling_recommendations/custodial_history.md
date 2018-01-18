@@ -271,7 +271,7 @@ SuperclassOf**: ex:Bequest
 
 **ex:Ownership**
 > - **Label**: Ownership
-> - **URI**: bib:OwnerActivity
+> - **URI**: TBD
 > - **Definition**: The possession of full and complete right of control over an Item.
 > - **Comment**: Typical associated Activities: bib:OwnerActivity.
 > - **SubclassOf**: ex:CustodialEvent.
