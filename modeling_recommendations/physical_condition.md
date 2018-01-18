@@ -109,7 +109,7 @@ One condition assessment can describe one or more physical conditions as an over
 > - **Inverse:** ex:isPhysicalConditionOf
 
 **ex:isPhysicalConditionOf** (Object property)
-> - **Label:** has physical condition (new)
+> - **Label:** is physical condition of (new)
 > - **IRI:** tbd
 > - **Definition:** Relates a specific physical condition to an object or part of an object.
 > - **Domain:** ex:PhysicalCondition
