@@ -36,15 +36,19 @@ Copy 2 numbered : D.L. I/I, signed by the artist under the platemark.
 Diagrams
 ----------------
 Ex. 1
+
 ![Limitation Statement diagram ex1](/modeling_recommendations/modeling_diagrams/limitation_statement_1.png)
 
 Ex. 2
+
 ![Limitation Statement diagram ex2](/modeling_recommendations/modeling_diagrams/limitation_statement_2.png)
 
 Ex. 3
+
 ![Limitation Statement diagram ex3](/modeling_recommendations/modeling_diagrams/limitation_statement_3.png)
 
 Ex. 4
+
 ![Limitation Statement diagram ex4](/modeling_recommendations/modeling_diagrams/limitation_statement_4.png)
 
 RDF sample
