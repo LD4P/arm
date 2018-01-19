@@ -1,4 +1,4 @@
-Awards
+Award
 ================
 ArtFrame, 2017-11-17
 
@@ -13,7 +13,6 @@ Table of Contents
 > - [Examples](#examples)
 
 
-<a name="overview">Overview</a>
 --------
 
 Many artists, artworks or art related publications represented in our library collections are recipients of awards. 
@@ -52,10 +51,10 @@ Properties
 > - **Used with**: Work or Instance
 > - **Range**: Literal
 
-<a name="recommendations">Recommendations for Moving Forward</a>
+<a name="recommendations">Recommendations</a>
 ===========================
 
-The proposed Awards model for ArtFrame is in part based on the award classes and properties developed for the LD4L 2014 Ontology ([*https://www.ld4l.org/ld4l-2014/ontology*](https://www.ld4l.org/ld4l-2014/ontology)) and a proposal developed for bibliotek-o that remained unfinished due to time constraint. However, these models were adjusted and extended to accommodate use cases and data examples identified by the ArtFrame group.
+The proposed Award model for ArtFrame is in part based on the award classes and properties developed for the LD4L 2014 Ontology ([*https://www.ld4l.org/ld4l-2014/ontology*](https://www.ld4l.org/ld4l-2014/ontology)) and a proposal developed for bibliotek-o that remained unfinished due to time constraint. However, these models were adjusted and extended to accommodate use cases and data examples identified by the ArtFrame group.
 
 Classes
 ---------
@@ -69,59 +68,59 @@ Classes
 > - **URI**: http://bibliotek-o.org/1.1/ontology/Activity
 > - **Definition**: An activity or contribution by a single agent that affects or alters the existence or state of a resource.
 
-**SelectorActivity**
-> - **Label**: Award Selector
+**AwardSelectorActivity**
+> - **Label**: Award selector
 > - **URI**: TBD
 > - **Definition**: The activity of nominating or judging a resource in relation to an award, honor, etc.
 > - **scopeNote**: This class is not derived from a MARC relator.
 > - **Subclass of**: bib:Activity
 
 **AwardGranterActivity**
-> - **Label**: Award Granter
+> - **Label**: Award granter
 > - **URI**: TBD
 > - **Definition**: The activity of granting an award.
 > - **scopeNote**: This class is not derived from a MARC relator.
 > - **Subclass of**: bib:Activity
 
 **AwardReceipt**
-> - **Label**: Award Receipt
+> - **Label**: Award receipt
 > - **URI**: TBD
 > - **Definition**: The bestowal of an award, honor, or distinction to an Agent or Work. The award bestowed should be represented with the Award class. The AwardReceipt is a context node between the award and the recipient which may contain further information, such as date.
 
 **AwardWinner**
-> - **Label**: Award Winner
+> - **Label**: Award winner
 > - **URI**: TBD
 > - **Definition**: The specific nature of the award receipt is award winner.
 > - **Subclass of**: af:AwardReceipt
 
 **AwardShortlist**
-> - **Label**: Award Shortlist
+> - **Label**: Award shortlist
 > - **URI**: TBD
 > - **Definition**: The specific nature of the award receipt is award shortlist.
 > - **Subclass of**: af:AwardReceipt
 
 **AwardHonoraryMention**
-> - **Label**: Award Honorary Mention
+> - **Label**: Award honorary mention
 > - **URI**: TBD
 > - **Definition**: The specific nature of the award receipt is honorary mention.
 > - **Subclass of**: af:AwardReceipt
 
 **AwardNominee**
-> - **Label**: Award Nominee
+> - **Label**: Award nominee
 > - **URI**: TBD
 > - **Definition**: The specific nature of the award receipt is nominee.
 > - **Subclass of**: af:AwardReceipt
 
 **AwardCitation**
-> - **Label**: Award Citation
+> - **Label**: Award citation
 > - **URI**: TBD
 > - **Definition**: The specific nature of the award receipt is citation.
 > - **Subclass of**: af:AwardReceipt
 
 **AwardLonglist**
-> - **Label**: Award Longlist
+> - **Label**: Award longlist
 > - **URI**: TBD
-> - **Definition**: TThe specific nature of the award receipt is longlist.
+> - **Definition**: The specific nature of the award receipt is longlist.
 > - **Subclass of**: af:AwardReceipt
 
 Properties
@@ -129,7 +128,7 @@ Properties
 **received (object property)**
 > - **Label**: received
 > - **URI**: TBD
-> - **Definition**: This Agent or Work is the recipient of the specified AwardReceipt
+> - **Definition**: This resource, such as an Agent or Work, is the recipient of the specified AwardReceipt
 > - **Domain**: unspecified
 > - **Inverse**: af:receivedBy
 > - **Range**: af:AwardReceipt
@@ -137,7 +136,7 @@ Properties
 **receivedBy (object property)**
 > - **Label**: received by
 > - **URI**: TBD
-> - **Definition**: This AwardReceipt was received by the specified award recipient (Agent or Work).
+> - **Definition**: This AwardReceipt was received by the specified award recipient (such as an Agent or Work).
 > - **Domain**: af:AwardReceipt
 > - **Range**: unspecified
 > - **Inverse**: af:received
@@ -145,7 +144,7 @@ Properties
 **hasAward (object property)**
 > - **Label**: has award
 > - **URI**: TBD
-> - **Definition**: This resource is a receipt of the specified resource, such as an award or honor.
+> - **Definition**: This resource is a receipt of the specified award or honor.
 > - **Domain**: af:AwardReceipt
 > - **Range**: af:Award
 > - **Inverse**: af:isAwardOf
@@ -153,7 +152,7 @@ Properties
 **isAwardOf (object property)**
 > - **Label**: is award of
 > - **URI**: TBD
-> - **Definition**: An object property linking a specified resource, such as an award or honor, to the receipt.
+> - **Definition**: Links a specified award or honor to its receipt.
 > - **Domain**: af:Award
 > - **Range**: af:AwardReceipt
 > - **Inverse**: af:hasAward
@@ -192,7 +191,7 @@ Properties
 <a name="Diagram">Diagram</a>
 ===========
 
-![Awards model diagram](/modeling_recommendations/modeling_diagrams/Awards2.jpg)
+![Award model diagram](/modeling_recommendations/modeling_diagrams/Awards2.jpg)
 
 <a name="examples">Examples</a>
 --------
