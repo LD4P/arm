@@ -44,6 +44,7 @@
         <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
         <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
     </owl:Class>
+    
     <owl:Class rdf:about="http://example.org/Entry">
         <rdfs:label xml:lang="en">Entry</rdfs:label>
         <skos:definition xml:lang="en">A specific entry that locates a citation within a bibliographic source.</skos:definition>
@@ -51,6 +52,7 @@
         <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
         <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
     </owl:Class>
+    
     <owl:Class rdf:about="http://example.org/Page">
         <rdfs:label xml:lang="en">Page</rdfs:label>
         <skos:definition xml:lang="en">A single page within a resource.</skos:definition>
@@ -58,6 +60,7 @@
         <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
         <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
     </owl:Class>
+    
     <owl:Class rdf:about="http://example.org/Volume">
         <rdfs:label xml:lang="en"></rdfs:label>
         <skos:definition xml:lang="en">A single bibliographic or physical volume of a resource.</skos:definition>
@@ -67,18 +70,21 @@
     </owl:Class>
     
     <!-- Fonts, Handwriting &amp; Notation -->
+    
     <owl:Class rdf:about="http://example.org/Font">
         <rdfs:label xml:lang="en">Font</rdfs:label>
         <skos:definition xml:lang="en">A font is the digital representation of a typeface. It is a collection of all the characters of a typeface in one size (12pt/1in) and one style (bold/italic). For example, Arial in 12pt size is a font, Arial in 18pt size is a font, and Arial bold in 24pt is also a font.</skos:definition>
         <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
         <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
     </owl:Class>
+    
     <owl:Class rdf:about="http://example.org/FontStyle">
         <rdfs:label xml:lang="en">Font style</rdfs:label>
         <skos:definition xml:lang="en">Style of the font, e.g. bold, italic</skos:definition>
         <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
         <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
     </owl:Class>
+    
     <owl:Class rdf:about="http://example.org/Typeface">
         <rdfs:label xml:lang="en">Typeface</rdfs:label>
         <skos:definition xml:lang="en">A design or “font family” created by a typographer or type designer. It defines specific stylistic features to determine the type display of a writing system.</skos:definition>
@@ -86,12 +92,14 @@
         <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
         <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
     </owl:Class>
+    
     <owl:Class rdf:about="http://example.org/Handwriting">
         <rdfs:label xml:lang="en">Handwriting</rdfs:label>
         <skos:definition xml:lang="en">A specific example of a handwriting found in a textual resource. A handwriting can have a particular HandWritingType.</skos:definition>
         <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
         <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
     </owl:Class>
+    
     <owl:Class rdf:about="http://example.org/HandwritingType">
         <rdfs:label xml:lang="en">Handwriting type</rdfs:label>
         <skos:definition xml:lang="en">A type of writing hand; not the same as a writing system or a handwriting style (such as cursive or block letters). Examples include Gothic, Secretary, Carolingian minuscule, and Sütterlin.</skos:definition>
@@ -100,6 +108,7 @@
     </owl:Class>
     
     <!-- Pagination &amp; Foliation-->
+    
     <owl:Class rdf:about="http://example.org/PaginationFoliation">
         <rdfs:label xml:lang="en">Pagination foliation</rdfs:label>
         <skos:definition xml:lang="en">Sequential numbering of individual leaves, plates, pages (numbering on both sides), or columns (used as a sequence of numbering) of a resource.</skos:definition>
@@ -109,6 +118,7 @@
     </owl:Class>
     
     <!-- Physical Condition -->
+    
     <owl:Class rdf:about="http://example.org/ConditionAssessmentActivity">
         <rdfs:label xml:lang="en">Condition Assessment Activity</rdfs:label>
         <skos:definition xml:lang="en">The activity of assessing and documenting the physical condition of an item, including damage, material vulnerabilities, special storage requirements, etc. This activity outputs a ConditionAssessment.</skos:definition>
