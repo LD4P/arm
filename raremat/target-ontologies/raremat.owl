@@ -15,13 +15,13 @@
     
     <!-- ONTOLOGY DECLARATION -->
     
-    <owl:Ontology rdf:about="http://raremat.org/ontology/">
-        <owl:ontologyIRI rdf:resource="http://raremat.org/ontology/"/>
-        <owl:versionIRI rdf:resource="http://raremat.org/0.1/ontology/"/>
+    <owl:Ontology rdf:about="http://raremat.org/ontology/"> <!-- update domain when known -->
+        <owl:ontologyIRI rdf:resource="http://raremat.org/ontology/"/> <!-- update domain when known -->
+        <owl:versionIRI rdf:resource="http://raremat.org/0.1/ontology/"/>   <!-- update domain when known -->
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1</owl:versionInfo>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
-        <rdfs:label xml:lang="en">RareMat Ontology</rdfs:label>
+        <rdfs:label xml:lang="en">Rare Materials Ontology Extension</rdfs:label>
         <rdfs:comment xml:lang="en">The RareMat Ontology is an extension to the bibliotek-o ontology designed to model rare materials metadata. It is an extension of the bibliotek-o ontology.</rdfs:comment>
         <vann:preferredNamespacePrefix>rare</vann:preferredNamespacePrefix>
         <dcterms:title xml:lang="en">RareMat Ontology</dcterms:title>
@@ -31,16 +31,223 @@
         -->
         <voaf:extends rdf:resource="http://bibliotek-o.org/ontology/"/>
         <voaf:specializes rdf:resource="http://bibliotek-o.org/ontology/"/>
-        <owl:imports rdf:resource="http://bibliotek-o.org/1.1/ontology/"/>
+        <!--owl:imports rdf:resource="http://bibliotek-o.org/1.1/ontology/"/-->  <!-- NOTE: adjust imports based on alignment with BF work -->
     </owl:Ontology>
     
     
     <!-- CLASSES -->
     
+    <!-- Bibliographic Citations -->
+    <owl:Class rdf:about="http://example.org/Citation">
+        <rdfs:label xml:lang="en">Citation</rdfs:label>
+        <skos:definition xml:lang="en">A single citation within a bibliographic source.</skos:definition>
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/Entry">
+        <rdfs:label xml:lang="en">Entry</rdfs:label>
+        <skos:definition xml:lang="en">A specific entry that locates a citation within a bibliographic source.</skos:definition>
+        <rdfs:comment xml:lang="en">Used in parsing out hierarchically structured location designators for citations.</rdfs:comment>
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/Page">
+        <rdfs:label xml:lang="en">Page</rdfs:label>
+        <skos:definition xml:lang="en">A single page within a resource.</skos:definition>
+        <rdfs:comment xml:lang="en">Used in any page-level description, as well as in parsing out hierarchically structured location designators for citations.</rdfs:comment>
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/Volume">
+        <rdfs:label xml:lang="en"></rdfs:label>
+        <skos:definition xml:lang="en">A single bibliographic or physical volume of a resource.</skos:definition>
+        <rdfs:comment xml:lang="en">Used in any volume-level description, as well as in parsing out hierarchically structured location designators for citations.</rdfs:comment>
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    
+    <!-- Fonts, Handwriting &amp; Notation -->
+    <owl:Class rdf:about="http://example.org/Font">
+        <rdfs:label xml:lang="en">Font</rdfs:label>
+        <skos:definition xml:lang="en">A font is the digital representation of a typeface. It is a collection of all the characters of a typeface in one size (12pt/1in) and one style (bold/italic). For example, Arial in 12pt size is a font, Arial in 18pt size is a font, and Arial bold in 24pt is also a font.</skos:definition>
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/FontStyle">
+        <rdfs:label xml:lang="en">Font style</rdfs:label>
+        <skos:definition xml:lang="en">Style of the font, e.g. bold, italic</skos:definition>
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/Typeface">
+        <rdfs:label xml:lang="en">Typeface</rdfs:label>
+        <skos:definition xml:lang="en">A design or “font family” created by a typographer or type designer. It defines specific stylistic features to determine the type display of a writing system.</skos:definition>
+        <rdfs:comment xml:lang="en">BIBFRAME uses bf:Script to refer to writing systems</rdfs:comment>
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/Handwriting">
+        <rdfs:label xml:lang="en">Handwriting</rdfs:label>
+        <skos:definition xml:lang="en">A specific example of a handwriting found in a textual resource. A handwriting can have a particular HandWritingType.</skos:definition>
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    <owl:Class rdf:about="http://example.org/HandwritingType">
+        <rdfs:label xml:lang="en">Handwriting type</rdfs:label>
+        <skos:definition xml:lang="en">A type of writing hand; not the same as a writing system or a handwriting style (such as cursive or block letters). Examples include Gothic, Secretary, Carolingian minuscule, and Sütterlin.</skos:definition>
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    
+    <!-- Pagination &amp; Foliation-->
+    <owl:Class rdf:about="http://example.org/PaginationFoliation">
+        <rdfs:label xml:lang="en">Pagination foliation</rdfs:label>
+        <skos:definition xml:lang="en">Sequential numbering of individual leaves, plates, pages (numbering on both sides), or columns (used as a sequence of numbering) of a resource.</skos:definition>
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Extent"/>
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    
+    <!-- Physical Condition -->
+    <owl:Class rdf:about="http://example.org/ConditionAssessmentActivity">
+        <rdfs:label xml:lang="en">Condition Assessment Activity</rdfs:label>
+        <skos:definition xml:lang="en">The activity of assessing and documenting the physical condition of an item, including damage, material vulnerabilities, special storage requirements, etc. This activity outputs a ConditionAssessment.</skos:definition>
+        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity"/>
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://example.org/ConditionAssessment">
+        <rdfs:label xml:lang="en">Condition Assessment</rdfs:label>
+        <skos:definition xml:lang="en">Assessment and/or documentation of the physical condition of an item, including damage, material vulnerabilities, special storage requirements, etc. The assessment is generally the output of a condition assessment activity, and may or may not result in a conservator activity.</skos:definition>
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://example.org/PhysicalCondition">
+        <rdfs:label xml:lang="en">Physical Condition</rdfs:label>
+        <skos:definition xml:lang="en">One specific aspect of the condition of an object or part of an object, including perceptible or measurable characteristics such as physical appearance, level of damage, quality, or completeness.</skos:definition>
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    
+    <!-- Signature Statements -->
+    
+    <owl:Class rdf:about="http://example.org/SignatureStatement">
+        <rdfs:label xml:lang="en">Signature statement</rdfs:label>
+        <skos:definition xml:lang="en">A formulaic statement describing the pattern followed in assembling the sheets of the book, as expressed in its signatures. Signatures are letters, numerals, symbols, or a group of such characters printed at the foot of the rectos of the first few leaves of each gathering (quire) to aid the binder in correctly assembling the sections.</skos:definition>
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    
     
     <!-- OBJECT PROPERTIES -->
     
-
+    <!-- Fonts, Handwriting &amp; Notation -->
+    <owl:ObjectProperty rdf:about="http://example.org/writtenIn">
+        <rdfs:label xml:lang="en">written in</rdfs:label>
+        <skos:definition xml:lang="en">The relationship between a resource containing text and the Font or HandWriting the textual information is displayed in.</skos:definition>
+        <rdfs:comment xml:lang="en">Use with BF Instance or Item</rdfs:comment>
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://example.org/hasTypeface">
+        <rdfs:label xml:lang="en">has typeface</rdfs:label>
+        <skos:definition xml:lang="en">A relationship between a Font and its design or “font family”</skos:definition>
+        <rdfs:domain rdf:resource="http://example.org/Font"/>
+        <rdfs:range rdf:resource="http://example.org/Typeface"/>
+        <owl:inverseOf rdf:resource=""/>
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://example.org/hasStyle">
+        <rdfs:label xml:lang="en">has style</rdfs:label>
+        <skos:definition xml:lang="en">A relationship between a resource and a style.</skos:definition>
+        <rdfs:comment xml:lang="en">Style vocabularies will vary depending on the type of resource. For example, in the context of Fonts, styles include bold, italic, etc. A resource may have more than one style; e.g., a font may be both bold and italic, with two separate hasStyle assertions.</rdfs:comment>
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://example.org/hasHandwritingType">
+        <rdfs:label xml:lang="en">has handwriting type</rdfs:label>
+        <skos:definition xml:lang="en">A relationship between a resource that includes handwriting and the type of writing hand, e.g. Gothic, Secretary, Carolingian minuscule, and Sütterlin.</skos:definition>
+        <rdfs:comment xml:lang="en">Use on a :Handwriting</rdfs:comment>
+        <rdfs:range rdf:resource="http://example.org/HandwritingType"/>
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>    
+    
+    <!-- Physical Condition -->
+        
+    <owl:ObjectProperty rdf:about="http://example.org/describes">
+        <rdfs:label xml:lang="en">describes</rdfs:label>
+        <skos:definition xml:lang="en">This resource provides a description of another, for example a ConditionAssessment describes a PhysicalCondition.</skos:definition>
+        <owl:inverseOf rdf:resource="http://example.org/describedBy"/>
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://example.org/describedBy">
+        <rdfs:label xml:lang="en">described by</rdfs:label>
+        <skos:definition xml:lang="en">This resource is described by another, for example a PhysicalCondition is described by a ConditionAssessment</skos:definition>
+        <owl:inverseOf rdf:resource="http://example.org/describes"/>
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>    
+    
+    <owl:ObjectProperty rdf:about="http://example.org/hasInput">
+        <rdfs:label xml:lang="en">has input</rdfs:label>
+        <skos:definition xml:lang="en">One resource has another resource as input, for example when one resource is informed or acted on by another. A ConservatorActivity has input from a ConditionAssessment.</skos:definition>
+        <owl:inverseOf rdf:resource="http://example.org/isInputTo"/>
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>    
+    
+    <owl:ObjectProperty rdf:about="http://example.org/isInputTo">
+        <rdfs:label xml:lang="en">is input to</rdfs:label>
+        <skos:definition xml:lang="en">One resource provides input to another. For example, a ConditionAssessment provides input to a ConservatorActivity.</skos:definition>
+        <owl:inverseOf rdf:resource="http://example.org/hasInput"/>
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>    
+    
+    <owl:ObjectProperty rdf:about="http://example.org/hasPhysicalCondition">
+        <rdfs:label xml:lang="en">has physical condition</rdfs:label>
+        <skos:definition xml:lang="en">Relates an object or part of an object to a specific aspect of its physical condition.</skos:definition> 
+        <rdfs:range rdf:resource="http://example.org/PhysicalCondition"/> 
+        <owl:inverseOf rdf:resource="http://example.org/isPhysicalConditionOf"/>
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>    
+    
+    <owl:ObjectProperty rdf:about="http://example.org/isPhysicalConditionOf">
+        <rdfs:label xml:lang="en">is physical condition of</rdfs:label>
+        <skos:definition xml:lang="en">Relates a specific physical condition to an object or part of an object.</skos:definition>
+        <rdfs:domain rdf:resource="http://example.org/PhysicalCondition"/> 
+        <owl:inverseOf rdf:resource="http://example.org/hasPhysicalCondition"/>
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>    
+    
+    <!-- Signature Statement -->
+    
+    <owl:ObjectProperty rdf:about="http://example.org/hasSignatureStatement">
+        <rdfs:label xml:lang="en">has signature statement</rdfs:label>
+        <skos:definition xml:lang="en">Relationship between a Resource and a signature statement.</skos:definition>
+        <rdfs:range rdf:resource="http://example.org/SignatureStatement"/> 
+        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>    
+    
+    
     <!-- DATATYPE PROPERTIES -->
-
+    
+    <owl:DatatypeProperty rdf:about="http://example.org/hasLimitation">
+        <rdfs:label>has Limitation</rdfs:label>
+        <skos:definition xml:lang="en">Statement relating to the size and nature of a print run limited to a specific quantity of copies produced, or a statement relating to the enumeration and nature of a copy in relation to the larger print run.</skos:definition>
+    </owl:DatatypeProperty>
+    
+    
 </rdf:RDF>
