@@ -14,46 +14,53 @@
     
     <!-- ONTOLOGY DECLARATION -->
     
-    <owl:Ontology rdf:about="http://conservation.bibliotek-o.org/0.1/ontology/">
-        <owl:ontologyIRI rdf:resource="http://conservation.bibliotek-o.org/ontology/"/>
-        <owl:versionIRI rdf:resource="http://conservation.bibliotek-o.org/0.1/ontology/"/>
+    <owl:Ontology rdf:about="http://conservation.bibliotek-o.org/0.1/ontology/"> <!-- update domain when known -->
+        <owl:ontologyIRI rdf:resource="http://conservation.bibliotek-o.org/ontology/"/> <!-- update domain when known -->
+        <owl:versionIRI rdf:resource="http://conservation.bibliotek-o.org/0.1/ontology/"/> <!-- update domain when known -->
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1</owl:versionInfo>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
         <rdfs:label xml:lang="en">Conservation Ontology for Bibliographic Resources</rdfs:label>
         <dcterms:title xml:lang="en">Conservation Ontology for Bibliographic Resources</dcterms:title>
         <rdfs:comment xml:lang="en">The Conservation Ontology for Bibliographic Resources models condition assessment and resulting conservation of bibliographic materials.</rdfs:comment>
-        <vann:preferredNamespacePrefix>cons</vann:preferredNamespacePrefix>
+        <vann:preferredNamespacePrefix>conserv</vann:preferredNamespacePrefix>
         <voaf:extends rdf:resource="http://id.loc.gov/ontologies/bibframe/"/>
         <voaf:specializes rdf:resource="http://id.loc.gov/ontologies/bibframe/"/>
-        <voaf:extends rdf:resource="http://bibliotek-o.org/ontology/"/>
-        <voaf:specializes rdf:resource="http://bibliotek-o.org/ontology/"/>
-        <owl:imports rdf:resource="http://bibliotek-o.org/1.1/ontology/"/>
     </owl:Ontology>
         
     
     <!-- CLASSES -->
     
     <owl:Class rdf:about="http://example.org/ConditionAssessmentActivity">
-        <rdfs:label xml:lang="en">Condition Assessment Activity</rdfs:label>
+        <rdfs:label xml:lang="en">Condition assessment activity</rdfs:label>
         <skos:definition xml:lang="en">The activity of assessing and documenting the physical condition of an item, including damage, material vulnerabilities, special storage requirements, etc. This activity outputs a ConditionAssessment.</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/Activity"/>
-        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
-        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+        <rdfs:subClassOf rdf:resource="http://example.org/Activity"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="http://example.org/ConditionAssessment">
-        <rdfs:label xml:lang="en">Condition Assessment</rdfs:label>
+        <rdfs:label xml:lang="en">Condition assessment</rdfs:label>
         <skos:definition xml:lang="en">Assessment and/or documentation of the physical condition of an item, including damage, material vulnerabilities, special storage requirements, etc. The assessment is generally the output of a condition assessment activity, and may or may not result in a conservator activity.</skos:definition>
-        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
-        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/ConservatorActivity">
+        <rdfs:label xml:lang="en">Conservator</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of preserving or treating printed or manuscript material, works of art, artifacts, or other objects.</skos:definition>
+        <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
+        <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/con.</skos:scopeNote>
+        <rdfs:subClassOf rdf:resource="http://example-o.org/Activity"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="http://example.org/PhysicalCondition">
         <rdfs:label xml:lang="en">Physical Condition</rdfs:label>
         <skos:definition xml:lang="en">One specific aspect of the condition of an object or part of an object, including perceptible or measurable characteristics such as physical appearance, level of damage, quality, or completeness.</skos:definition>
-        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
-        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
     </owl:Class>
 
         
@@ -63,32 +70,32 @@
         <rdfs:label xml:lang="en">describes</rdfs:label>
         <skos:definition xml:lang="en">This resource provides a description of another, for example a ConditionAssessment describes a PhysicalCondition.</skos:definition>
         <owl:inverseOf rdf:resource="http://example.org/describedBy"/>
-        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
-        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>
     
     <owl:ObjectProperty rdf:about="http://example.org/describedBy">
         <rdfs:label xml:lang="en">described by</rdfs:label>
         <skos:definition xml:lang="en">This resource is described by another, for example a PhysicalCondition is described by a ConditionAssessment</skos:definition>
         <owl:inverseOf rdf:resource="http://example.org/describes"/>
-        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
-        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>    
     
     <owl:ObjectProperty rdf:about="http://example.org/hasInput">
         <rdfs:label xml:lang="en">has input</rdfs:label>
         <skos:definition xml:lang="en">One resource has another resource as input, for example when one resource is informed or acted on by another. A ConservatorActivity has input from a ConditionAssessment.</skos:definition>
         <owl:inverseOf rdf:resource="http://example.org/isInputTo"/>
-        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
-        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>    
     
     <owl:ObjectProperty rdf:about="http://example.org/isInputTo">
         <rdfs:label xml:lang="en">is input to</rdfs:label>
         <skos:definition xml:lang="en">One resource provides input to another. For example, a ConditionAssessment provides input to a ConservatorActivity.</skos:definition>
         <owl:inverseOf rdf:resource="http://example.org/hasInput"/>
-        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
-        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>    
     
     <owl:ObjectProperty rdf:about="http://example.org/hasPhysicalCondition">
@@ -96,8 +103,8 @@
         <skos:definition xml:lang="en">Relates an object or part of an object to a specific aspect of its physical condition.</skos:definition> 
         <rdfs:range rdf:resource="http://example.org/PhysicalCondition"/> 
         <owl:inverseOf rdf:resource="http://example.org/isPhysicalConditionOf"/>
-        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
-        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>    
     
     <owl:ObjectProperty rdf:about="http://example.org/isPhysicalConditionOf">
@@ -105,8 +112,8 @@
         <skos:definition xml:lang="en">Relates a specific physical condition to an object or part of an object.</skos:definition>
         <rdfs:domain rdf:resource="http://example.org/PhysicalCondition"/> 
         <owl:inverseOf rdf:resource="http://example.org/hasPhysicalCondition"/>
-        <dcterms:issued>2018-01-26T00:00:00-04:00</dcterms:issued>
-        <dcterms:modified>2018-01-26T00:00:00-04:00</dcterms:modified>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>    
     
     <!-- DATATYPE PROPERTIES -->
