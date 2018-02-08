@@ -116,7 +116,7 @@ Classes
 > - **Label**: Frame
 > - **URI**: TBD
 > - **Definition**: Cases or structures that surround or enclose such items as works of art, mirrors, or documents, serving as support or protection or to call attention, while leaving the items visible. 
-> - **Subclass of**: ex:Mount or bf:Mount
+> - **Subclass of**: Mount
 
 
 Properties
