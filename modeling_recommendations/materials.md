@@ -115,7 +115,7 @@ Classes
 **Frame**
 > - **Label**: Frame
 > - **URI**: TBD
-> - **Definition**: Case or structure that surround or enclose an item such as a work of art, mirror, or document, serving as support or protection or to call attention, while leaving the item visible. 
+> - **Definition**: Case or structure that surrounds or encloses an item such as a work of art, mirror, or document, serving as support or protection or to call attention, while leaving the item visible. 
 
 
 Properties
