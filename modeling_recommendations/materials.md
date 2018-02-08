@@ -110,12 +110,12 @@ Classes
 > - **Options**: bf:Mount if LC agrees to our recommendation, otherwise Mount in our own namespace.
 > - **Label**: Mount
 > - **URI**: TBD
-> - **Definition**: Secondary surfaces on which works, often drawings, photographs, or other works on paper supports, are pasted, taped, or otherwise attached. 
+> - **Definition**: Secondary surface on which a work, such as a drawing, photograph, or other work on paper support, is pasted, taped, or otherwise attached. 
 
 **Frame**
 > - **Label**: Frame
 > - **URI**: TBD
-> - **Definition**: Cases or structures that surround or enclose such items as works of art, mirrors, or documents, serving as support or protection or to call attention, while leaving the items visible. 
+> - **Definition**: Case or structure that surround or enclose an item such as a work of art, mirror, or document, serving as support or protection or to call attention, while leaving the item visible. 
 > - **Subclass of**: Mount
 
 
