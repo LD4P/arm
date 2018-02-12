@@ -41,6 +41,24 @@
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
+    <owl:Class rdf:about="http://example.org/CreatorActivity">
+        <rdfs:label xml:lang="en">Creator</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of creating a resource.</skos:definition>
+        <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
+        <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/cre.</skos:scopeNote>
+        <rdfs:subClassOf rdf:resource="http://example.org/Activity"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://example.org/DesignerActivity">
+        <rdfs:label xml:lang="en">Designer</rdfs:label> 
+        <skos:definition xml:lang="en">The activity of creating a design for an object.</skos:definition>
+        <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
+        <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/dsr.</skos:scopeNote>        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
     
     <!-- Bibliographic Citations -->
     
@@ -180,6 +198,45 @@
     
     
     <!-- OBJECT PROPERTIES -->
+    
+    <!-- General -->
+    
+    <owl:ObjectProperty rdf:about="http://example.org/hasActivity">
+        <rdfs:label xml:lang="en">has activity</rdfs:label>
+        <skos:definition xml:lang="en">Relates this resource to an activity or contribution by a single agent that affects or alters its existence or state.</skos:definition>
+        <rdfs:range rdf:resource="http://example.org/Activity"/> 
+        <owl:inverseOf rdf:resource="http://example.org/isActivityOf"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://example.org/isActivityOf">
+        <rdfs:label xml:lang="en">is activity of</rdfs:label>
+        <skos:definition xml:lang="en">Relates an activity to the affected resource.</skos:definition>
+        <rdfs:range rdf:resource="http://example.org/Activity"/> 
+        <owl:inverseOf rdf:resource="http://example.org/hasActivity"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://example.org/subjectOf">
+        <rdfs:label xml:lang="en">subject of</rdfs:label>
+        <skos:definition xml:lang="en">Specifies a subject of this resource.</skos:definition> 
+        <!-- TODO Or bf:subject - which one are we using? -->
+        <owl:inverseOf rdf:resource="http://purl.org/dc/terms/subject"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://example.org/titleOf">
+        <rdfs:label xml:lang="en">title of</rdfs:label>
+        <skos:definition xml:lang="en">Resource that this title belongs to.</skos:definition>
+        <owl:inverseOf rdf:resource="http://id.loc.gov/ontologies/bibframe/title"/>
+        <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+    
     
     <!-- Fonts, Handwriting and Notation -->
     
