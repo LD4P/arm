@@ -70,56 +70,56 @@ Classes
 
 **AwardSelectorActivity**
 > - **Label**: Award selector
-> - **URI**: TBD
+> - **URI**: http://
 > - **Definition**: The activity of nominating or judging a resource in relation to an award, honor, etc.
 > - **scopeNote**: This class is not derived from a MARC relator.
-> - **Subclass of**: bib:Activity
+> - **Subclass of**: ex:Activity
 
 **AwardGranterActivity**
 > - **Label**: Award granter
-> - **URI**: TBD
+> - **URI**: http://example.org/AwardGranterActivity
 > - **Definition**: The activity of granting an award.
 > - **scopeNote**: This class is not derived from a MARC relator.
-> - **Subclass of**: bib:Activity
+> - **Subclass of**: ex:Activity
 
 **AwardReceipt**
 > - **Label**: Award receipt
-> - **URI**: TBD
+> - **URI**: http://example.org/AwardReceipt
 > - **Definition**: The bestowal of an award, honor, or distinction to an Agent or Work. The award bestowed should be represented with the Award class. The AwardReceipt is a context node between the award and the recipient which may contain further information, such as date.
 
 **AwardWinner**
 > - **Label**: Award winner
-> - **URI**: TBD
+> - **URI**: http://example.org/AwardWinner
 > - **Definition**: The specific nature of the award receipt is award winner.
 > - **Subclass of**: af:AwardReceipt
 
 **AwardShortlist**
 > - **Label**: Award shortlist
-> - **URI**: TBD
+> - **URI**: http://example.org/AwardShortlist
 > - **Definition**: The specific nature of the award receipt is award shortlist.
 > - **Subclass of**: af:AwardReceipt
 
 **AwardHonoraryMention**
 > - **Label**: Award honorary mention
-> - **URI**: TBD
+> - **URI**: http://example.org/AwardHonoraryMention
 > - **Definition**: The specific nature of the award receipt is honorary mention.
 > - **Subclass of**: af:AwardReceipt
 
 **AwardNominee**
 > - **Label**: Award nominee
-> - **URI**: TBD
+> - **URI**: http://example.org/AwardNominee
 > - **Definition**: The specific nature of the award receipt is nominee.
 > - **Subclass of**: af:AwardReceipt
 
 **AwardCitation**
 > - **Label**: Award citation
-> - **URI**: TBD
+> - **URI**: http://example.org/AwardCitation
 > - **Definition**: The specific nature of the award receipt is citation.
 > - **Subclass of**: af:AwardReceipt
 
 **AwardLonglist**
 > - **Label**: Award longlist
-> - **URI**: TBD
+> - **URI**: http://example.org/AwardLonglist
 > - **Definition**: The specific nature of the award receipt is longlist.
 > - **Subclass of**: af:AwardReceipt
 
@@ -127,7 +127,7 @@ Properties
 ---------
 **received (object property)**
 > - **Label**: received
-> - **URI**: TBD
+> - **URI**: http://example.org/received
 > - **Definition**: This resource, such as an Agent or Work, is the recipient of the specified AwardReceipt
 > - **Domain**: unspecified
 > - **Inverse**: af:receivedBy
@@ -135,7 +135,7 @@ Properties
 
 **receivedBy (object property)**
 > - **Label**: received by
-> - **URI**: TBD
+> - **URI**: http://example.org/receivedBy
 > - **Definition**: This AwardReceipt was received by the specified award recipient (such as an Agent or Work).
 > - **Domain**: af:AwardReceipt
 > - **Range**: unspecified
@@ -143,7 +143,7 @@ Properties
 
 **hasAward (object property)**
 > - **Label**: has award
-> - **URI**: TBD
+> - **URI**: http://example.org/hasAward
 > - **Definition**: This resource is a receipt of the specified award or honor.
 > - **Domain**: af:AwardReceipt
 > - **Range**: af:Award
@@ -151,42 +151,40 @@ Properties
 
 **isAwardOf (object property)**
 > - **Label**: is award of
-> - **URI**: TBD
+> - **URI**: http://example.org/isAwardOf
 > - **Definition**: Links a specified award or honor to its receipt.
 > - **Domain**: af:Award
 > - **Range**: af:AwardReceipt
 > - **Inverse**: af:hasAward
 
-**dcterms:date**
+**bf:date**
 > - **Label**: Date
-> - **URI**: http://purl.org/dc/terms/date
-> - **Definition**: A point or period of time associated with an event in the lifecycle of the resource.
+> - **URI**: http://id.loc.gov/ontologies/bibframe/date
+> - **Definition**: Date designation associated with a resource or element of description, such as date of title variation; year a degree was awarded; date associated with the publication, printing, distribution, issue, release or production of a resource. May be date typed.
 
-**hasAgent (Object property)**
-> - **Label**: has Agent
-> - **URI**: http://bibliotek-o.org/1.1/ontology/hasAgent
-> - **Definition**: Relates an activity to its agent.
-> - **Inverse**: bib:isAgentOf
+**bf:agent (Object property)**
+> - **Label**: Associated agent
+> - **URI**: http://id.loc.gov/ontologies/bibframe/agent
+> - **Definition**: Entity associated with a resource or element of description, such as the name of the entity responsible for the content or of the publication, printing, distribution, issue, release or production of a resource.
+> - **Domain**: bf:Agent
 
 **isAgentOf (Object property)**
 > - **Label**: is Agent of
-> - **URI**: http://bibliotek-o.org/1.1/ontology/isAgentOf
+> - **URI**: http://example.org/isAgentOf
 > - **Definition**: Relates an Agent to an Activity they participated in.
-> - **Domain**: bf:Agent
-> - **Inverse**: bib:hasAgent
+> - **Inverse**: bf:agent
 
 **hasActivity (Object property)**
 > - **Label**: has activity
-> - **URI**: http://bibliotek-o.org/1.1/ontology/hasActivity
-> - **Definition**: Relates this resource to an activity or contribution by a single agent that affects or alters its existence  
-                    or state.
-> - **Inverse**: bib:isActivityOf
+> - **URI**: http://example.org/hasActivity
+> - **Definition**: Relates this resource to an activity or contribution by a single agent that affects or alters its existence or state.
+> - **Inverse**: ex:isActivityOf
 
 **isActivityOf (Object property)**
 > - **Label**: is activity of
-> - **URI**: http://bibliotek-o.org/1.1/ontology/isActivityOf
+> - **URI**: http://example.org/isActivityOf
 > - **Definition**: Relates an activity to the affected resource.
-> - **Inverse**: bib:hasActivity
+> - **Inverse**: ex:hasActivity
 
 <a name="Diagram">Diagram</a>
 ===========
@@ -232,13 +230,13 @@ bf:awards "George Wittenborn Award, Art Libraries Society of North  America, 199
  af:hasAward :award1 ;
  af:receivedBy :Ikat ;
  dcterms:date "1998" ;
- bib:hasActivity :activity1 .
+ ex:hasActivity :activity1 .
 
 :award1 a vivo:Award ;
  rdfs:label "George Wittenborn Award" .
 
 :activity1 a af:AwardGranterActivity ;
- bib:hasAgent <http://id.loc.gov/row/agents/n82039281> .
+ ex:hasAgent <http://id.loc.gov/row/agents/n82039281> .
 
 ```
 > - **586 (awards note): Smith Award, Decorative Arts Society, 2006, for the essay,  "The most artistic house in New York City" -- BIBFRAME**
@@ -264,20 +262,20 @@ bf:mainTitle "Louis Comfort Tiffany and Laurelton Hall" .
 > - **586 (awards note): Smith Award, Decorative Arts Society, 2006, for the essay,  "The most artistic house in New York City" -- biblioteko/ArtFrame**
 ```
 :w1 a bf:Work ;
- dcterms:isPartOf :w2 ;
- af:received :awardReceipt1 .
+ bf:partOf :w2 ;
+ ex:received :awardReceipt1 .
 
-:awardReceipt1 a af:AwardReceipt, af:AwardWinner ;
- af:hasAward :award2 ;
- af:receivedBy :w1 ;
- dcterms:date "2006" ;
- bib:hasActivity :activity1 .
+:awardReceipt1 a ex:AwardReceipt, ex:AwardWinner ;
+ ex:hasAward :award2 ;
+ ex:receivedBy :w1 ;
+ bf:date "2006" ;
+ ex:hasActivity :activity1 .
  
 :award2 a vivo:Award ;
  rdfs:label "Smith Award" .
 
-:activity1 a af:AwardGranterActivity ;
- bib:hasAgent :agent1 .
+:activity1 a ex:AwardGranterActivity ;
+ bf:agent :agent1 .
 
 :agent1 a bf:Organization ;
  rdfs:label "Decorative Arts Society" .
@@ -292,11 +290,11 @@ bf:award "Winner R. Hoe & Co., Inc. Award - National War Poster Competition."
 > - **Someone talked! (Poster) "Winner R. Hoe & Co., Inc. Award - National War Poster Competition. -- biblioteko/ArtFrame**
 ```
 :SomeoneTalked! a bf:Work ;
- af:received :awardReceipt1 .
+ ex:received :awardReceipt1 .
 
-:awardReceipt1 a af:AwardReceipt, af:AwardWinner ;
- af:hasAward :award1 ;
- af:receivedBy :SomeoneTalked! .
+:awardReceipt1 a ex:AwardReceipt, ex:AwardWinner ;
+ ex:hasAward :award1 ;
+ ex:receivedBy :SomeoneTalked! .
 
 :award1 a vivo:Award ;
  rdfs:label "R. Hoe & Co., Inc. Award--National War Poster Competition" .
@@ -305,16 +303,16 @@ bf:award "Winner R. Hoe & Co., Inc. Award - National War Poster Competition."
 > - **Award selector/judge -- biblioteko/ArtFrame**
 ```
 :MurrayHill a bf:Person ;
- :received :awardReceipt.
+ ex:received :awardReceipt.
 
-:awardReceipt a af:AwardReceipt, a af:AwardWinner ;
- af:isReceiptOf :AnnualContemporaryCrafExhibitionforGlass ;
- af:receivedBy :MurrayHill ;
- dcterms:date "1987" ;
- bib:hasActivity :activity1, :activity2 .
+:awardReceipt a ex:AwardReceipt, a ex:AwardWinner ;
+ ex:isReceiptOf :AnnualContemporaryCrafExhibitionforGlass ;
+ ex:receivedBy :MurrayHill ;
+ bf:date "1987" ;
+ ex:hasActivity :activity1, :activity2 .
 
-:activity1 a af:SelectorActivity ;
- bib:hasAgent <http://id.loc.gov/row/agents/no2003101967> .
+:activity1 a ex:SelectorActivity ;
+ bf:agent <http://id.loc.gov/row/agents/no2003101967> .
 
-:activity2 a af:AwardGranterActivity ;
- bib:hasAgent :agent2 .
+:activity2 a ex:AwardGranterActivity ;
+ bf:agent :agent2 .
