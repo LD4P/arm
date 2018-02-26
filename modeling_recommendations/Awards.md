@@ -189,7 +189,7 @@ Properties
 <a name="Diagram">Diagram</a>
 ===========
 
-![Award model diagram](/modeling_recommendations/modeling_diagrams/Awards2.jpg)
+![Award model diagram](/modeling_recommendations/modeling_diagrams/Awards.png)
 
 <a name="examples">Examples</a>
 --------
