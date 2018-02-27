@@ -65,7 +65,7 @@ Classes
 
 **Activity**
 > - **Label**: Activity
-> - **URI**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/Activity
 > - **Definition**: An activity or contribution by a single agent that affects or alters the existence or state of a resource.
 
 **AwardSelectorActivity**
