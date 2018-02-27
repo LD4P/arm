@@ -23,13 +23,13 @@ In total, there are four use cases to be modeled:
 >3.  A citation is not found, and the cataloger does not add commentary.
 >4.  A citation is not found, and the cataloger adds further commentary about the reference source or a related citation.
 
-In addition, there is a need to model dates, identifiers, and other data related to citations. The proposed model will follow the general bibliotek-o modeling practices for dates, identifiers, and any other core data elements.
+In addition, there is a need to model dates, identifiers, and other data related to citations. The proposed model will follow the general BIBFRAME modeling practices for dates, identifiers, and any other core data elements.
 
-To address these four use cases, a new class should be created to represent bibliographic citation entities (**bib:Citation**). A citation functions as an intermediate node between a reference source (bf:Work), and a resource of interest to the cataloger (typically a bf:Item or bf:Instance).
+To address these four use cases, a new class should be created to represent bibliographic citation entities (**ex:Citation**). A citation functions as an intermediate node between a reference source (bf:Work), and a resource of interest to the cataloger (typically a bf:Item or bf:Instance).
 
-A citation is related to a resource of interest by the property **cito:cites** (inverse cito:isCitedBy) and to the citing work by the property **bib:hasSource** (inverse bib:isSourceOf).
+A citation is related to a resource of interest by the property **cito:cites** (inverse cito:isCitedBy) and to the citing work by the property **ex:hasSource** (inverse ex:isSourceOf).
 
-A citation may link directly to its source bf:Work, or it may link indirectly to the source through a specific location, modeled as a hierarchical chain proceeding from the most specific location up to the citing work. For example, a citation entity may be listed as a specific **bib:Entry** in a citing source, which may be located (**bib:atLocation**) on a **bib:Page**, which may be part of (**dcterms:isPartOf**) a **bib:Volume**, which may be part of (**dcterms:isPartOf**) the citing source (bf:Work).
+A citation may link directly to its source bf:Work, or it may link indirectly to the source through a specific location, modeled as a hierarchical chain proceeding from the most specific location up to the citing work. For example, a citation entity may be listed as a specific **ex:Entry** in a citing source, which may be located (**bf:place**) on a **ex:Page**, which may be part of (**bf:partOf**) a **ex:Volume**, which may be part of (**bf:partOf**) the citing source (bf:Work).
 
 Cataloger comments on citations are constructed using the BIBFRAME notes.
 
@@ -42,42 +42,42 @@ A negative citation is also modeled as an **bf:Note**, with the value "not found
 | Resource of interest to cataloger; typically instance or item but may also be a work | bf:Instance, bf:Item, bf:Work |
 | Reference source    | bf:Work      |
 | Cataloger commentary | bf:Note      |
-| Citation | bib:Citation     |
+| Citation | ex:Citation     |
 
 <a name="recommendations">Summary of Recommendations</a>
 --------------------------
 
-1.  Create a new class, **bib:Citation**, to represent bibliographic citations.
+1.  Create a new class, **ex:Citation**, to represent bibliographic citations.
 
-2.  Optionally, the location within a citing source may also be specified. Create new classes, **bib:Volume**, **bib:Page**, and **bib:Entry**, to record the location of a citation.
+2.  Optionally, the location within a citing source may also be specified. Create new classes, **ex:Volume**, **ex:Page**, and **ex:Entry**, to record the location of a citation.
 
 3.  Consider other location designators as appropriate.
 
 <a name="classes">Recommended Classes</a>
 -------------------
 
-**bib:Citation**
+**ex:Citation**
 > - **Label:** Citation
 > - **URI:** TBD
 > - **Subclass of**:
 > - **Definition:** A single citation within a bibliographic source.
 > - **Comment:**
 
-**bib:Entry**
+**ex:Entry**
 > - **Label:** Entry
 > - **URI:** TBD
 > - **Subclass of**:
 > - **Definition:** A specific entry that locates a citation within a bibliographic source.
 > - **Comment:** Used in parsing out hierarchically structured location designators for citations.
 
-**bib:Page**
+**ex:Page**
 > - **Label:** Page
 > - **URI:** TBD
 > - **Subclass of**:
 > - **Definition:** A single page within a resource.
 > - **Comment:** Used in any page-level description, as well as in parsing out hierarchically structured location designators for citations.
 
-**bib:Volume**
+**ex:Volume**
 > - **Label:** Volume
 > - **URI:** TBD
 > - **Subclass of**:
@@ -88,19 +88,19 @@ A negative citation is also modeled as an **bf:Note**, with the value "not found
 <a name="properties">Recommended Properties</a>
 ----------------------
 
-**bib:atLocation**
-> - **Label:** at location
-> - **URI:** [*http://bibliotek-o.org/1.1/ontology/atLocation*](http://bibliotek-o.org/1.1/ontology/atLocation)
+**bf:place**
+> - **Label:** Place
+> - **URI:** [*http://id.loc.gov/ontologies/bibframe/place*](http://id.loc.gov/ontologies/bibframe/place)
 > - **Domain:** Unspecified
-> - **Range:** prov:Location
-> - **Definition:** The resource being described is at the specified location.
+> - **Range:** http://id.loc.gov/ontologies/bibframe/Place
+> - **Definition:** Geographic location or place entity associated with a resource or element of description, such as the place associated with the publication, printing, distribution, issue, release or production of a resource, place of an event.
 
-**bib:hasSource**
+**ex:hasSource**
 > - **Label:** has source
-> - **URI:** [*http://bibliotek-o.org/1.1/ontology/hasSource*](http://bibliotek-o.org/1.1/ontology/hasSource)
+> - **URI:** [*http://example.org/hasSource*](http://example.org/hasSource)
 > - **Domain:** Unspecified
 > - **Range:** Unspecified
-> - **Inverse:** bib:isSourceOf
+> - **Inverse:** ex:isSourceOf
 > - **Definition:** Relates this resource to the source from which it was derived.
 
 **cito:cites**
@@ -111,10 +111,10 @@ A negative citation is also modeled as an **bf:Note**, with the value "not found
 > - **Inverse:** cito:isCitedBy
 > - **Definition:** The citing entity cites the cited entity, either directly and explicitly (as in the reference list of a journal article), indirectly (e.g. by citing a more recent paper by the same group on the same topic), or implicitly (e.g. as in artistic quotations or parodies, or in cases of plagiarism).
 
-**dcterms:isPartOf**
+**bf:partOf**
 > - **Label:** Is Part Of
-> - **URI:** [*http://purl.org/dc/terms/isPartOf*](http://purl.org/dc/terms/isPartOf)
-> - **Definition:** A related resource in which the described resource is physically or logically included.
+> - **URI:** [*http://id.loc.gov/ontologies/bibframe/hasPart*](http://id.loc.gov/ontologies/bibframe/hasPart)
+> - **Definition:** Resource that is included either physically or logically in the described resource
 
 
 <a name="diagrams">Diagrams</a>
