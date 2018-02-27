@@ -204,12 +204,12 @@ bf:awards "Man Booker Prize, 1987, shortlist" .
 > - **586 (awards note): Man Booker Prize, 1987, shortlist -- biblioteko/ArtFrame**
 ```
 :chatterton a bf:Work ;
- af:received :awardReceipt1 .
+ award:received :awardReceipt1 .
 
 :awardReceipt1 a af:AwardReceipt, af:AwardShortlist ;
-af:hasAward :award1 ;
- af:receivedBy :chatterton ;
- dcterms:date "1987" .
+ award:hasAward :award1 ;
+ award:receivedBy :chatterton ;
+ award:date "1987" .
 
 :award1 a vivo:Award ;
  rdfs:label "Man Booker Prize" .
@@ -224,19 +224,19 @@ bf:awards "George Wittenborn Award, Art Libraries Society of North  America, 199
 > - **586 (awards note): George Wittenborn Award, Art Libraries Society of North  America, 1998 -- biblioteko/ArtFrame**
 ```
 :Ikat a bf:Work ;
- af:received :awardReceipt1 .
+ award:received :awardReceipt1 .
 
-:awardReceipt1 a af:AwardReceipt, af:AwardWinner  ;
- af:hasAward :award1 ;
- af:receivedBy :Ikat ;
- dcterms:date "1998" ;
+:awardReceipt1 a award:AwardReceipt, award:AwardWinner  ;
+ award:hasAward :award1 ;
+ award:receivedBy :Ikat ;
+ bf:date "1998" ;
  ex:hasActivity :activity1 .
 
 :award1 a vivo:Award ;
  rdfs:label "George Wittenborn Award" .
 
-:activity1 a af:AwardGranterActivity ;
- ex:hasAgent <http://id.loc.gov/row/agents/n82039281> .
+:activity1 a award:AwardGranterActivity ;
+ bf:agent <http://id.loc.gov/row/agents/n82039281> .
 
 ```
 > - **586 (awards note): Smith Award, Decorative Arts Society, 2006, for the essay,  "The most artistic house in New York City" -- BIBFRAME**
@@ -263,18 +263,18 @@ bf:mainTitle "Louis Comfort Tiffany and Laurelton Hall" .
 ```
 :w1 a bf:Work ;
  bf:partOf :w2 ;
- ex:received :awardReceipt1 .
+ award:received :awardReceipt1 .
 
-:awardReceipt1 a ex:AwardReceipt, ex:AwardWinner ;
- ex:hasAward :award2 ;
- ex:receivedBy :w1 ;
+:awardReceipt1 a award:AwardReceipt, award:AwardWinner ;
+ award:hasAward :award2 ;
+ award:receivedBy :w1 ;
  bf:date "2006" ;
  ex:hasActivity :activity1 .
  
 :award2 a vivo:Award ;
  rdfs:label "Smith Award" .
 
-:activity1 a ex:AwardGranterActivity ;
+:activity1 a award:AwardGranterActivity ;
  bf:agent :agent1 .
 
 :agent1 a bf:Organization ;
@@ -290,11 +290,11 @@ bf:award "Winner R. Hoe & Co., Inc. Award - National War Poster Competition."
 > - **Someone talked! (Poster) "Winner R. Hoe & Co., Inc. Award - National War Poster Competition. -- biblioteko/ArtFrame**
 ```
 :SomeoneTalked! a bf:Work ;
- ex:received :awardReceipt1 .
+ award:received :awardReceipt1 .
 
-:awardReceipt1 a ex:AwardReceipt, ex:AwardWinner ;
- ex:hasAward :award1 ;
- ex:receivedBy :SomeoneTalked! .
+:awardReceipt1 a award:AwardReceipt, award:AwardWinner ;
+ award:hasAward :award1 ;
+ award:receivedBy :SomeoneTalked! .
 
 :award1 a vivo:Award ;
  rdfs:label "R. Hoe & Co., Inc. Award--National War Poster Competition" .
@@ -303,16 +303,16 @@ bf:award "Winner R. Hoe & Co., Inc. Award - National War Poster Competition."
 > - **Award selector/judge -- biblioteko/ArtFrame**
 ```
 :MurrayHill a bf:Person ;
- ex:received :awardReceipt.
+ award:received :awardReceipt.
 
-:awardReceipt a ex:AwardReceipt, a ex:AwardWinner ;
- ex:isReceiptOf :AnnualContemporaryCrafExhibitionforGlass ;
- ex:receivedBy :MurrayHill ;
+:awardReceipt a award:AwardReceipt, a award:AwardWinner ;
+ award:isReceiptOf :AnnualContemporaryCrafExhibitionforGlass ;
+ award:receivedBy :MurrayHill ;
  bf:date "1987" ;
  ex:hasActivity :activity1, :activity2 .
 
-:activity1 a ex:SelectorActivity ;
+:activity1 a award:SelectorActivity ;
  bf:agent <http://id.loc.gov/row/agents/no2003101967> .
 
-:activity2 a ex:AwardGranterActivity ;
+:activity2 a award:AwardGranterActivity ;
  bf:agent :agent2 .
