@@ -233,7 +233,7 @@
         <rdfs:label xml:lang="en">subject of</rdfs:label>
         <skos:definition xml:lang="en">Specifies a subject of this resource.</skos:definition> 
         <!-- TODO Or bf:subject - which one are we using? -->
-        <owl:inverseOf rdf:resource="http://purl.org/dc/terms/subject"/>
+        <owl:inverseOf rdf:resource="http://id.loc.gov/ontologies/bibframe/subject"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>
@@ -245,6 +245,22 @@
         <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://example.org/hasSource">
+        <rdfs:label xml:lang="en">has source</rdfs:label>
+        <skos:definition xml:lang="en">Relates this resource to the source from which it was derived.</skos:definition>
+        <skos:scopeNote xml:lang="en">Has general applicability to many types of sources and resources.</skos:scopeNote>
+        <owl:inverseOf rdf:resource="http://example.org/1.1/ontology/isSourceOf"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="ttp://example.org/isSourceOf">
+        <rdfs:label xml:lang="en">is source of</rdfs:label>
+        <skos:definition xml:lang="en">Relates this resource to a resource of which it is the source.</skos:definition>
+        <skos:scopeNote xml:lang="en">Has general applicability to many types of sources and resources.</skos:scopeNote>        
+        <owl:inverseOf rdf:resource="ttp://example.org/hasSource"/>
     </owl:ObjectProperty>
     
     
