@@ -70,56 +70,56 @@ Classes
 
 **AwardSelectorActivity**
 > - **Label**: Award selector
-> - **URI**: http://example.org/AwardSelectorActivity
+> - **URI**: http://award.example.org/AwardSelectorActivity
 > - **Definition**: The activity of nominating or judging a resource in relation to an award, honor, etc.
 > - **scopeNote**: This class is not derived from a MARC relator.
 > - **Subclass of**: ex:Activity
 
 **AwardGranterActivity**
 > - **Label**: Award granter
-> - **URI**: http://example.org/AwardGranterActivity
+> - **URI**: http://award.example.org/AwardGranterActivity
 > - **Definition**: The activity of granting an award.
 > - **scopeNote**: This class is not derived from a MARC relator.
 > - **Subclass of**: ex:Activity
 
 **AwardReceipt**
 > - **Label**: Award receipt
-> - **URI**: http://example.org/AwardReceipt
+> - **URI**: http://award.example.org/AwardReceipt
 > - **Definition**: The bestowal of an award, honor, or distinction to an Agent or Work. The award bestowed should be represented with the Award class. The AwardReceipt is a context node between the award and the recipient which may contain further information, such as date.
 
 **AwardWinner**
 > - **Label**: Award winner
-> - **URI**: http://example.org/AwardWinner
+> - **URI**: http://award.example.org/AwardWinner
 > - **Definition**: The specific nature of the award receipt is award winner.
 > - **Subclass of**: af:AwardReceipt
 
 **AwardShortlist**
 > - **Label**: Award shortlist
-> - **URI**: http://example.org/AwardShortlist
+> - **URI**: http://award.example.org/AwardShortlist
 > - **Definition**: The specific nature of the award receipt is award shortlist.
 > - **Subclass of**: af:AwardReceipt
 
 **AwardHonoraryMention**
 > - **Label**: Award honorary mention
-> - **URI**: http://example.org/AwardHonoraryMention
+> - **URI**: http://award.example.org/AwardHonoraryMention
 > - **Definition**: The specific nature of the award receipt is honorary mention.
 > - **Subclass of**: af:AwardReceipt
 
 **AwardNominee**
 > - **Label**: Award nominee
-> - **URI**: http://example.org/AwardNominee
+> - **URI**: http://award.example.org/AwardNominee
 > - **Definition**: The specific nature of the award receipt is nominee.
 > - **Subclass of**: af:AwardReceipt
 
 **AwardCitation**
 > - **Label**: Award citation
-> - **URI**: http://example.org/AwardCitation
+> - **URI**: http://award.example.org/AwardCitation
 > - **Definition**: The specific nature of the award receipt is citation.
 > - **Subclass of**: af:AwardReceipt
 
 **AwardLonglist**
 > - **Label**: Award longlist
-> - **URI**: http://example.org/AwardLonglist
+> - **URI**: http://award.example.org/AwardLonglist
 > - **Definition**: The specific nature of the award receipt is longlist.
 > - **Subclass of**: af:AwardReceipt
 
@@ -127,7 +127,7 @@ Properties
 ---------
 **received (object property)**
 > - **Label**: received
-> - **URI**: http://example.org/received
+> - **URI**: http://award.example.org/received
 > - **Definition**: This resource, such as an Agent or Work, is the recipient of the specified AwardReceipt
 > - **Domain**: unspecified
 > - **Inverse**: af:receivedBy
@@ -135,7 +135,7 @@ Properties
 
 **receivedBy (object property)**
 > - **Label**: received by
-> - **URI**: http://example.org/receivedBy
+> - **URI**: http://award.example.org/receivedBy
 > - **Definition**: This AwardReceipt was received by the specified award recipient (such as an Agent or Work).
 > - **Domain**: af:AwardReceipt
 > - **Range**: unspecified
@@ -143,7 +143,7 @@ Properties
 
 **hasAward (object property)**
 > - **Label**: has award
-> - **URI**: http://example.org/hasAward
+> - **URI**: http://award.example.org/hasAward
 > - **Definition**: This resource is a receipt of the specified award or honor.
 > - **Domain**: af:AwardReceipt
 > - **Range**: af:Award
@@ -151,7 +151,7 @@ Properties
 
 **isAwardOf (object property)**
 > - **Label**: is award of
-> - **URI**: http://example.org/isAwardOf
+> - **URI**: http://award.example.org/isAwardOf
 > - **Definition**: Links a specified award or honor to its receipt.
 > - **Domain**: af:Award
 > - **Range**: af:AwardReceipt
