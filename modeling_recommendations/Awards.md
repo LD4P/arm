@@ -70,7 +70,7 @@ Classes
 
 **AwardSelectorActivity**
 > - **Label**: Award selector
-> - **URI**: http://
+> - **URI**: http://example.org/AwardSelectorActivity
 > - **Definition**: The activity of nominating or judging a resource in relation to an award, honor, etc.
 > - **scopeNote**: This class is not derived from a MARC relator.
 > - **Subclass of**: ex:Activity
