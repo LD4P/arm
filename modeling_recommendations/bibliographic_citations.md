@@ -58,28 +58,28 @@ A negative citation is also modeled as an **bf:Note**, with the value "not found
 
 **ex:Citation**
 > - **Label:** Citation
-> - **URI:** TBD
+> - **URI:** http://example.org/Citation
 > - **Subclass of**:
 > - **Definition:** A single citation within a bibliographic source.
 > - **Comment:**
 
 **ex:Entry**
 > - **Label:** Entry
-> - **URI:** TBD
+> - **URI:** http://example.org/Entry
 > - **Subclass of**:
 > - **Definition:** A specific entry that locates a citation within a bibliographic source.
 > - **Comment:** Used in parsing out hierarchically structured location designators for citations.
 
 **ex:Page**
 > - **Label:** Page
-> - **URI:** TBD
+> - **URI:** http://example.org/Page
 > - **Subclass of**:
 > - **Definition:** A single page within a resource.
 > - **Comment:** Used in any page-level description, as well as in parsing out hierarchically structured location designators for citations.
 
 **ex:Volume**
 > - **Label:** Volume
-> - **URI:** TBD
+> - **URI:** http://example.org/Volume
 > - **Subclass of**:
 > - **Definition:** A single bibliographic or physical volume of a resource.
 > - **Comment:** Used in any volume-level description, as well as in parsing out hierarchically structured location designators for citations.
