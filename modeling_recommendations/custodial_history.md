@@ -72,7 +72,7 @@ The types of CustodialEvents encompassed by the provenance model include the fol
 
 Each of these event types is represented by a subclass of CustodialEvent.
 
-Note that these types of CustodialEvents include both what are typically thought of as “events” (sale, loan, etc.) and static time periods such as ownership. The former also subclass schema:Event. As a matter of implementation, a static period may pertain to only a single Item; e.g., Items sold together in one lot may later be sold in unrelated events, so that a single ownership event could not represent all Items. On the other hand, a single library can be sold multiple times together, and buyers may wish to keep the library intact as much as possible.
+Note that these types of CustodialEvents include both what are typically thought of as “events” (sale, loan, etc.) and static time periods such as ownership. The former also subclass bf:Event. As a matter of implementation, a static period may pertain to only a single Item; e.g., Items sold together in one lot may later be sold in unrelated events, so that a single ownership event could not represent all Items. On the other hand, a single library can be sold multiple times together, and buyers may wish to keep the library intact as much as possible.
 
 Both individual and aggregate CustodialEvents may be typed, but an individual event that is part of an aggregate event should have the same type, and typing is in that case redundant.
 
@@ -153,6 +153,11 @@ If LC does not approve these requests, RareMat/ArtFrame will define these terms 
 Classes
 -------
 
+**bf:Event**
+> - **Label**: Event
+> - **URI**: http://id.loc.gov/ontologies/bibframe/Event
+> - **Definition**: Something that happens at a certain time and location, such as a performance, speech, or athletic event, that is documented by a resource. 
+
 **bf:Item**
 > - **Label**: Item
 > - **URI**: http://id.loc.gov/ontologies/bibframe/Item
@@ -169,12 +174,12 @@ Classes
 > - **Label**: Custodial event
 > - **URI**: http://example.org/1.1/ontology/CustodialEvent
 > - **Definition**: A custodial event encompassing one or more Items, such as a sale or loan.
-> - **Comment**: A CustodialEvent may pertain to only a single Item, in which case it is linked directly to the Item’s CustodialHistory, or it may encompass multiple Items (such as an auction lot), in which case the CustodialEvent aggregates multiple individual CustodialEvents. A CustodialEvent may be what is typically conceived of as an “event,” or a “static” event such as Ownership. Subclasses are accordingly either defined as subclasses of schema:Event or not.
+> - **Comment**: A CustodialEvent may pertain to only a single Item, in which case it is linked directly to the Item’s CustodialHistory, or it may encompass multiple Items (such as an auction lot), in which case the CustodialEvent aggregates multiple individual CustodialEvents. A CustodialEvent may be what is typically conceived of as an “event,” or a “static” event such as Ownership. Subclasses are accordingly either defined as subclasses of bf:Event or not.
 
 
 CustodialEvent Subclasses
 ----------
-Some of these classes are also defined as subclasses of schema:Event. “Static” events such as Ownership do not subclass schema:Event.
+Some of these classes are also defined as subclasses of bf:Event. “Static” events such as Ownership do not subclass bf:Event.
 
 
 **ex:Accessioning**
@@ -182,21 +187,21 @@ Some of these classes are also defined as subclasses of schema:Event. “Static�
 > - **URI**: http://example.org/1.1/ontology/Accessioning
 > - **Definition**: The act of adding an Item to the accessions records of a cultural heritage institution.
 > - **Comment**: Typical associated Activities: AccessionerActivity.
-> - **SubclassOf**: ex:CustodialEvent, schema:Event.
+> - **SubclassOf**: ex:CustodialEvent, bf:Event.
 
 **ex:Auction**
 > - **Label**: Auction
 > - **URI**: http://example.org/1.1/ontology/Auction
 > - **Definition**: The sale at auction of an Item. 
 > - **Comment**: Refers to the transfer of ownership through auction, rather than the auction in which that occurs. Typical associated Activities: BuyerActivity, SellerActivity, BrokerActivity.
-> - **SubclassOf**: ex:Sale, schema:Event.
+> - **SubclassOf**: ex:Sale, bf:Event.
 
 **ex:Bequest**
 > - **Label**: Bequest
 > - **URI**: http://example.org/1.1/ontology/Bequest
 > - **Definition**: The transfer of an Item under the terms of a will.
 > - **Comment**: Typical associated Activities: TestatorActivity, InheritorActivity, WitnessActivity.
-> - **SubclassOf**: ex:Inheritance, schema:Event
+> - **SubclassOf**: ex:Inheritance, bf:Event
 
 **ex:ClaimOfOwnership**
 > - **Label**: Claim of ownership
@@ -210,64 +215,64 @@ Some of these classes are also defined as subclasses of schema:Event. “Static�
 > - **URI**: http://example.org/1.1/ontology/Deaccessioning
 > - **Definition**: The removal of an Item from the accessions records of a cultural heritage institution. 
 > - **Comment**: Typical associated Activities: DeaccessionerActivity.
-> - **SubclassOf**: ex:CustodialEvent, schema:Event.
+> - **SubclassOf**: ex:CustodialEvent, bf:Event.
 
 **ex:Deposit**
 > - **Label**: Deposit
 > - **URI**: http://example.org/1.1/ontology/Deposit
 > - **Definition**: The placement of an Item in the collections of a cultural heritage institution.
 > - **Comment**: Typical associated Activities: DepositorActivity.
-> - **SubclassOf**: ex:CustodialEvent, schema:Event.
+> - **SubclassOf**: ex:CustodialEvent, bf:Event.
 
 **ex:Destruction**
 > - **Label**: Destruction
 > - **URI**: http://example.org/1.1/ontology/Destruction
 > - **Definition**: The permanent ruination of an Item.
 > - **Comment**: Typical associated Activities: DestructionActivity, OwnerActivity.
-> - **SubclassOf**: ex:CustodialEvent, schema:Event.
+> - **SubclassOf**: ex:CustodialEvent, bf:Event.
 
 **ex:Discarding**
 > - **Label**: Discarding
 > - **URI**: http://example.org/1.1/ontology/Discarding
 > - **Definition**: The abandonment or disposal of an Item.
 > - **Comment**: Typical associated Activities: DiscarderActivity, OwnerActivity.
-> - **SubclassOf**: ex:CustodialEvent, schema:Event.
+> - **SubclassOf**: ex:CustodialEvent, bf:Event.
 
 **ex:Donation**
 > - **Label**: Donation
 > - **URI**: http://example.org/1.1/ontology/Donation
 > - **Definition**: The giving of an Item, typically for charitable purposes and/or to benefit a cause.
 > - **Comment**: Typical associated Activities: DonorActivity, RecipientActivity.
-> - **SubclassOf**: ex:CustodialEvent, schema:Event.
+> - **SubclassOf**: ex:CustodialEvent, bf:Event.
 
 **ex:Inheritance**
 > - **Label**: Inheritance
 > - **URI**: http://example.org/1.1/ontology/Inheritance
 > - **Definition**: The transfer of an Item following the death of the previous owner, either by bequest or by the application of law.
 > - **Comment**: Typical associated Activities: TestatorActivity, InheritorActivity.
-> - **SubclassOf**: ex:CustodialEvent, schema:Event.
-SuperclassOf**: ex:Bequest
+> - **SubclassOf**: ex:CustodialEvent, bf:Event.
+> - **SuperclassOf**: ex:Bequest
 
 **ex:Loan**
 > - **Label**: Loan
 > - **URI**: http://example.org/1.1/ontology/Loan
 > - **Definition**: The temporary transfer of an Item.
 > - **Comment**: Typical associated Activities: LenderActivity, BorrowerActivity.
-> - **SubclassOf**: ex:CustodialEvent, schema:Event.
+> - **SubclassOf**: ex:CustodialEvent, bf:Event.
 
 **ex:Loss**
 > - **Label**: Loss
 > - **URI**: http://example.org/1.1/ontology/Loss
 > - **Definition**: The disappearance  of an Item under unknown circumstances (e.g., not in the case of theft).
 > - **Comment**: Typical associated Activities: LossActivity, OwnerActivity.
-> - **SubclassOf**: ex:CustodialEvent, schema:Event.
+> - **SubclassOf**: ex:CustodialEvent, bf:Event.
 
 **ex:Offer**
 > - **Label**: Offer
 > - **URI**: http://example.org/1.1/ontology/Offer
 > - **Definition**: The provision of an Item for purchase or other form of acquisition.
 > - **Comment**: Typical associated Activities: OfferActivity, RecipientActivity.
-> - **SubclassOf**: ex:CustodialEvent, schema:Event.
+> - **SubclassOf**: ex:CustodialEvent, bf:Event.
 
 **ex:Ownership**
 > - **Label**: Ownership
@@ -281,35 +286,35 @@ SuperclassOf**: ex:Bequest
 > - **URI**: http://example.org/1.1/ontology/Recovery
 > - **Definition**: The restitution or regaining possession of an Item.
 > - **Comment**: Typical associated Activities: RecovererActivity.
-> - **SubclassOf**: ex:CustodialEvent, schema:Event.
+> - **SubclassOf**: ex:CustodialEvent, bf:Event.
 
 **ex:Repatriation**
 > - **Label**: Repatriation
 > - **URI**: http://example.org/1.1/ontology/Repatriation
 > - **Definition**: The return of an Item to its country of origin.
 > - **Comment**: Typical associated Activities: RepatriatorActivity
-> - **SubclassOf**: ex:CustodialEvent, schema:Event.
+> - **SubclassOf**: ex:CustodialEvent, bf:Event.
 
 **ex:Sale**
 > - **Label**: Sale
 > - **URI**: http://example.org/1.1/ontology/Sale
 > - **Definition**: The exchange of an Item for money or other object of value.
 > - **Comment**: Typical associated Activities: BuyerActivity, SellerActivity, BrokerActivity.
-> - **SubclassOf**: ex:CustodialEvent, schema:SaleEvent.
+> - **SubclassOf**: ex:CustodialEvent, bf:SaleEvent.
 
 **ex:Theft**
 > - **Label**: Theft
 > - **URI**: http://example.org/1.1/ontology/Theft
 > - **Definition**: The removal of an Item from the possession of the rightful owner without the latter’s consent.
 > - **Comment**: Typical associated Activities: ThiefActivity, OwnerActivity.
-> - **SubclassOf**: ex:CustodialEvent, schema:Event.
+> - **SubclassOf**: ex:CustodialEvent, bf:Event.
 
 **ex:Transfer**
 > - **Label**: Transfer
 > - **URI**: http://example.org/1.1/ontology/Transfer
 > - **Definition**: The passing of ownership or other right from one party to another.
 > - **Comment**: Typical associated Activities: TranfererActivity, RecipientActivity.
-> - **SubclassOf**: ex:CustodialEvent, schema:Event.
+> - **SubclassOf**: ex:CustodialEvent, bf:Event.
 
 --------
 **ex:Activity**
@@ -400,7 +405,7 @@ Activity Subclasses
 
 **ex:LossActivity**
 > - **Label**: Loss
-> - **URI**: Tbd
+> - **URI**: http://example.org/1.1/ontology/LossActivity
 > - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: Responsibility for the disappearance of an Item where the circumstances of the disappearance are unknown.
 
@@ -470,15 +475,15 @@ Activity Subclasses
 > - **Definition**: Numeric, alphanumeric, or other identifying code assigned when an art object, book, or other item enters the collection of a museum, library, or other repository. Such codes are unique within the set of codes, and specifically identify the particular item at hand. The numbers may be marked on the objects or not (http://vocab.getty.edu/aat/300312355)
 > - **SubclassOf**: http://id.loc.gov/ontologies/bibframe/Identifier  
 
-**foaf:Agent**
+**bf:Agent**
 > - **Label**: Agent
-> - **URI**: http://xmlns.com/foaf/0.1/Agent
-> - **Definition**: An agent (eg. person, group, software or physical artifact).
+> - **URI**: http://id.loc.gov/ontologies/bibframe/Agent
+> - **Definition**: Entity having a role in a resource, such as a person or organization.
 
-**prov:Location**
-> - **Label**: Location
-> - **URI**: http://www.w3.org/ns/prov#Location
-> - **Definition**: A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth.
+**bf:Place**
+> - **Label**: Place
+> - **URI**: http://id.loc.gov/ontologies/bibframe/Place
+> - **Definition**: Geographic location.
 
 **schema:PriceSpecification**
 > - **Label**: Price Specification
@@ -653,7 +658,7 @@ Properties
 - Concurrent and overlapping events. The lending use case, for example, will raise issues of sequencing, overlapping, and concurrency. We should not rely on dates to provide this type of nuanced sequencing since dates (even approximate dates) may not be known.
 - Consider use of a predicate such as frapo:hasOutput (also used in the PhysicalCondition model) to express a causal relationship to another event or state (e.g., a sale results in an ownership). This cannot always be determined from sequencing, since there can be gaps in the sequence. 
 - How strong is the case for the CustodialHistory class? It is essentially a container for the various CustodialEvent pertaining to an Item. However, there may be assertions on the history as a whole that do not apply to a specific event, such as an annotation. We expect this question to be addressed by implementation of and experimentation with the model, and leave open the possibility of future deprecation.
-- Would there be value in defining a superclass of “static” events such as ownership, parallel to the use of schema:Event? - Would it be a subclass of CustodialEvent, or orthogonal to it, like schema:Event? Are there existing terms for this concept?
+- Would there be value in defining a superclass of “static” events such as ownership, parallel to the use of bf:Event? - Would it be a subclass of CustodialEvent, or orthogonal to it, like bf:Event? Are there existing terms for this concept?
 - Consider augmenting the Activity class hierarchy by capturing general concepts of “giver” and “recipient” (for the latter, the RecipientActivity is already defined), and defining more specific activities such as SellerActivity, LenderActivity, TestatorActivity, etc. as “givers” and BuyerActivity, BorrowerActivity, InheritorActivity, etc. as subclasses of RecipientActivity.
 - The modeling of unary events (with only one associated Activity, such as AccessionerActivity) involves some redundancy. Should the model be made more concise by eliminating the event and allowing an activity to link directly to the CustodialHistory? (Note that this would require keeping the CustodialHistory class in order to fully reconstruct an Item’s custodial history; see above on the value of the CustodialHistory class.) On the other hand, maintaining the Event-Activity distinction allows for other activities related to such an event, not currently apparent, to easily be added.
 - Extend the Event-to-Activity model to other modeling areas, and bibliotek-o as a whole, where relevant. Consider renaming Activity to “Role” to clearly differentiate it from an event. The Activity is really the reification of an agent’s role in a resource, whether that be a bibliographic resource or an event, etc.
