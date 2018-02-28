@@ -21,6 +21,18 @@
     <dcterms:modified>2016-05-13 (New subclass)</dcterms:modified>
   </owl:Class>
   
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Event">
+    <rdfs:label>Event entity</rdfs:label>
+    <skos:definition>Something that happens at a certain time and location, such as a performance, speech, or athletic event, that is documented by a resource.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Item">
+    <rdfs:label>Item</rdfs:label>
+    <skos:definition>Single example of an Instance.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Place">
     <rdfs:label>Place</rdfs:label>
     <skos:definition>Geographic location.</skos:definition>
