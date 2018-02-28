@@ -229,6 +229,15 @@
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>
     
+    <owl:ObjectProperty rdf:about="http://example.org/isAgentOf">
+        <rdfs:label xml:lang="en">is agent of</rdfs:label>
+        <skos:definition xml:lang="en">Relates an agent to the activity it participated in.</skos:definition>
+        <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/> 
+        <owl:inverseOf rdf:resource="http://id.loc.gov/ontologies/bibframe/agent"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+    
     <owl:ObjectProperty rdf:about="http://example.org/subjectOf">
         <rdfs:label xml:lang="en">subject of</rdfs:label>
         <skos:definition xml:lang="en">Specifies a subject of this resource.</skos:definition> 
