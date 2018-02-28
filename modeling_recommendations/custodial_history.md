@@ -47,7 +47,7 @@ Relationships between resources
 > -	The modeling of concurrent and overlapping events (e.g., when the loan of a manuscript to one institution overlaps two ownerships) is left for future research. 
 > -	When two CustodialEvents belonging to two different Items are part of the same aggregrate CustodialEvent, they may well occupy different positions in the sequencing of each Item’s CustodialHistory. For example, a sale including two items may be the first event in one Item’s history and the second Event in the other Item’s history.
 > -	While the model allows for sequencing of aggregate CustodialEvents, we expect this to have little utility in an implementation.
--	CustodialEvents may be linked to one or more bib:Activity objects, price subgraphs, dates (both intervals and discrete dates), locations, and so on. These relations may pertain to either individual or aggregate CustodialEvents; for example, an entire lot of manuscripts may have been purchased for $100K, but the price of a specific item in the lot was negotiated at $10K and its inclusion in the lot was brokered by an agent not related to the aggregate CustodialEvent.
+-	CustodialEvents may be linked to one or more ex:Activity objects, price subgraphs, dates (both intervals and discrete dates), locations, and so on. These relations may pertain to either individual or aggregate CustodialEvents; for example, an entire lot of manuscripts may have been purchased for $100K, but the price of a specific item in the lot was negotiated at $10K and its inclusion in the lot was brokered by an agent not related to the aggregate CustodialEvent.
 -	An AccessionNumber may be linked as an Identifier to both a bf:Item (via bf:identifies/identifiedBy) and to a CustodialEvent (via ex:accessions/accessionedBy). See full AccessionNumber recommendation.
 
 Types of custodial events and related activities
@@ -78,7 +78,7 @@ Both individual and aggregate CustodialEvents may be typed, but an individual ev
 
 Activities appropriate to a specific CustodialEvent type are linked to a CustodialEvent instance. For example, a sale will typically have activities such as buyer and seller, while a loan may have activities such as borrower and lender. 
 
-Importantly, this model enhances the bibliotek-o Activity model by providing a way to connect interrelated or interdependent activities. For example, in bibliotek-o we can assert seller and buyer activities on an item, but have no way to express the fact that specific seller and buyer activities are related to one another. If multiple such activities are related to a single item, there is no way to express the relationship of particular activities to one another. Dates may sometimes serve that purpose but cannot be relied upon.
+Importantly, this model enhances the Activity model by providing a way to connect interrelated or interdependent activities. For example, we can assert seller and buyer activities on an item, but have no way to express the fact that specific seller and buyer activities are related to one another. If multiple such activities are related to a single item, there is no way to express the relationship of particular activities to one another. Dates may sometimes serve that purpose but cannot be relied upon.
 
 Out-of-scope event and activity types
 ------
@@ -123,13 +123,13 @@ This sample describes a scenario in which one item has been sold twice, with an 
     dcterms:isPartOf :aggregateEvent1 .
 
 :aggregateEvent1 a ex:SaleEvent ;
-    bib:hasActivity :sellerActivity1 ;
+    ex:hasActivity :sellerActivity1 ;
     dcterms:date “1984”^^edtf:edtf ;
-    bib:atLocation <uri-of-location> ;
+    ex:atLocation <uri-of-location> ;
     schema:priceSpecification :price1 .
 
-:sellerActivity1 a bib:SellerActivity ;
-    bib:hasAgent <uri-of-agent> .
+:sellerActivity1 a ex:SellerActivity ;
+    ex:hasAgent <uri-of-agent> .
 
 :price1 a schema:PriceSpecification ;
     schema:price “10” ;
@@ -160,14 +160,14 @@ Classes
 
 **ex:CustodialHistory**
 > - **Label**: Custodial history
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/CustodialHistory
 > - **Definition**: Entity that aggregates all of the custodial events for an Item.
 > - **Comment**: An Item has a single ex:CustodialHistory, which is composed of one or more ex:CustodialEvent resources. The Item is directly linked only to its CustodialHistory.
 
 
 **ex:CustodialEvent**
 > - **Label**: Custodial event
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/CustodialEvent
 > - **Definition**: A custodial event encompassing one or more Items, such as a sale or loan.
 > - **Comment**: A CustodialEvent may pertain to only a single Item, in which case it is linked directly to the Item’s CustodialHistory, or it may encompass multiple Items (such as an auction lot), in which case the CustodialEvent aggregates multiple individual CustodialEvents. A CustodialEvent may be what is typically conceived of as an “event,” or a “static” event such as Ownership. Subclasses are accordingly either defined as subclasses of schema:Event or not.
 
@@ -179,70 +179,70 @@ Some of these classes are also defined as subclasses of schema:Event. “Static�
 
 **ex:Accessioning**
 > - **Label**: Accessioning
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/Accessioning
 > - **Definition**: The act of adding an Item to the accessions records of a cultural heritage institution.
 > - **Comment**: Typical associated Activities: AccessionerActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Auction**
 > - **Label**: Auction
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/Auction
 > - **Definition**: The sale at auction of an Item. 
-> - **Comment**: Refers to the transfer of ownership through auction, rather than the auction in which that occurs. Typical associated Activities: BuyerActivity, bib:SellerActivity, BrokerActivity.
+> - **Comment**: Refers to the transfer of ownership through auction, rather than the auction in which that occurs. Typical associated Activities: BuyerActivity, SellerActivity, BrokerActivity.
 > - **SubclassOf**: ex:Sale, schema:Event.
 
 **ex:Bequest**
 > - **Label**: Bequest
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/Bequest
 > - **Definition**: The transfer of an Item under the terms of a will.
-> - **Comment**: Typical associated Activities: TestatorActivity, InheritorActivity, bib:WitnessActivity.
+> - **Comment**: Typical associated Activities: TestatorActivity, InheritorActivity, WitnessActivity.
 > - **SubclassOf**: ex:Inheritance, schema:Event
 
 **ex:ClaimOfOwnership**
 > - **Label**: Claim of ownership
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/ClaimOfOwnership
 > - **Definition**: A legal claim to the right of possession of an Item.
 > - **Comment**: Typical associated Activities: ClaimantActivity, DisputantActivity.
 > - **SubclassOf**: ex:CustodialEvent.
 
 **ex:Deaccessioning**
 > - **Label**: Deaccessioning
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/Deaccessioning
 > - **Definition**: The removal of an Item from the accessions records of a cultural heritage institution. 
 > - **Comment**: Typical associated Activities: DeaccessionerActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Deposit**
 > - **Label**: Deposit
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/Deposit
 > - **Definition**: The placement of an Item in the collections of a cultural heritage institution.
-> - **Comment**: Typical associated Activities: bib:DepositorActivity.
+> - **Comment**: Typical associated Activities: DepositorActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Destruction**
 > - **Label**: Destruction
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/Destruction
 > - **Definition**: The permanent ruination of an Item.
-> - **Comment**: Typical associated Activities: DestructionActivity, bib:OwnerActivity.
+> - **Comment**: Typical associated Activities: DestructionActivity, OwnerActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Discarding**
 > - **Label**: Discarding
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/Discarding
 > - **Definition**: The abandonment or disposal of an Item.
-> - **Comment**: Typical associated Activities: DiscarderActivity, bib:OwnerActivity.
+> - **Comment**: Typical associated Activities: DiscarderActivity, OwnerActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Donation**
 > - **Label**: Donation
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/Donation
 > - **Definition**: The giving of an Item, typically for charitable purposes and/or to benefit a cause.
-> - **Comment**: Typical associated Activities: bib:DonorActivity, RecipientActivity.
+> - **Comment**: Typical associated Activities: DonorActivity, RecipientActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Inheritance**
 > - **Label**: Inheritance
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/Inheritance
 > - **Definition**: The transfer of an Item following the death of the previous owner, either by bequest or by the application of law.
 > - **Comment**: Typical associated Activities: TestatorActivity, InheritorActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
@@ -250,71 +250,71 @@ SuperclassOf**: ex:Bequest
 
 **ex:Loan**
 > - **Label**: Loan
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/Loan
 > - **Definition**: The temporary transfer of an Item.
 > - **Comment**: Typical associated Activities: LenderActivity, BorrowerActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Loss**
 > - **Label**: Loss
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/Loss
 > - **Definition**: The disappearance  of an Item under unknown circumstances (e.g., not in the case of theft).
-> - **Comment**: Typical associated Activities: LossActivity, bib:OwnerActivity.
+> - **Comment**: Typical associated Activities: LossActivity, OwnerActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Offer**
 > - **Label**: Offer
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/Offer
 > - **Definition**: The provision of an Item for purchase or other form of acquisition.
-> - **Comment**: Typical associated Activities: bib:OfferActivity, RecipientActivity.
+> - **Comment**: Typical associated Activities: OfferActivity, RecipientActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Ownership**
 > - **Label**: Ownership
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/Ownership
 > - **Definition**: The possession of full and complete right of control over an Item.
-> - **Comment**: Typical associated Activities: bib:OwnerActivity.
+> - **Comment**: Typical associated Activities: OwnerActivity.
 > - **SubclassOf**: ex:CustodialEvent.
 
 **ex:Recovery**
 > - **Label**: Recovery
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/Recovery
 > - **Definition**: The restitution or regaining possession of an Item.
 > - **Comment**: Typical associated Activities: RecovererActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Repatriation**
 > - **Label**: Repatriation
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/Repatriation
 > - **Definition**: The return of an Item to its country of origin.
 > - **Comment**: Typical associated Activities: RepatriatorActivity
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Sale**
 > - **Label**: Sale
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/Sale
 > - **Definition**: The exchange of an Item for money or other object of value.
-> - **Comment**: Typical associated Activities: BuyerActivity, bib:SellerActivity, BrokerActivity.
+> - **Comment**: Typical associated Activities: BuyerActivity, SellerActivity, BrokerActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:SaleEvent.
 
 **ex:Theft**
 > - **Label**: Theft
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/Theft
 > - **Definition**: The removal of an Item from the possession of the rightful owner without the latter’s consent.
-> - **Comment**: Typical associated Activities: ThiefActivity, bib:OwnerActivity.
+> - **Comment**: Typical associated Activities: ThiefActivity, OwnerActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Transfer**
 > - **Label**: Transfer
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/Transfer
 > - **Definition**: The passing of ownership or other right from one party to another.
 > - **Comment**: Typical associated Activities: TranfererActivity, RecipientActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 --------
-**bib:Activity**
+**ex:Activity**
 > - **Label**: Activity
-> - **URI**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/Activity
 > - **Definition**: An activity or contribution by a single agent that affects or alters the existence or state of a resource.
 
 Activity Subclasses
@@ -322,151 +322,151 @@ Activity Subclasses
 
 **ex:AccessionerActivity**
 > - **Label**: Accessioner
-> - **URI**: TBD
-> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/AccessionerActivity
+> - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: The act of adding an item to a collection.
 
-**bib:AcquisitionActivity**
+**ex:AcquisitionActivity**
 > - **Label**: Acquisition
-> - **URI**: http://bibliotek-o.org/1.1/ontology/AcquisitionActivity
-> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/AcquisitionActivity
+> - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: The act of gaining possession of a resource.
 
 **ex:BorrowerActivity**
 > - **Label**: Borrower
-> - **URI**: TBD
-> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/BorrowerActivity
+> - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: The act of taking possession, but not ownership, of an Item.
 
 **ex:BrokerActivity**
 > - **Label**: Broker
-> - **URI**: TBD
-> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/BrokerActivity
+> - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: The act of negotiating or arranging for a transaction.
 
 **ex:ClaimantActivity**
 > - **Label**: Claimant
-> - **URI**: TBD
-> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/ClaimantActivity
+> - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: The act of declaring ownership of an Item, notably when the claim is not clearly substantiated.
 
 **ex:DeaccessionerActivity**
 > - **Label**: Deaccessioner
-> - **URI**: TBD
-> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/ClaimantActivity
+> - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: The act of permanently removing accessioned items from a collection or repository.
 
-**bib:DepositorActivity**
+**ex:DepositorActivity**
 > - **Label**: Depositor
-> - **URI**: http://bibliotek-o.org/1.1/ontology/DepositorActivity
-> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/DepositorActivity
+> - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: The act of placing an item into the custody of another person, family, or organization.
 
 **ex:DestructionActivity**
 > - **Label**: Destroyer
-> - **URI**: TBD
-> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/DestructionActivity
+> - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: The act of permanently destroying an Item.
 
 **ex:DiscarderActivity**
 > - **Label**: Discarder
-> - **URI**: TBD
-> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/ex:DiscarderActivity
+> - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: The act of permanently removing an item or part of an item from a collection for disposal.
 
 **ex:DisputantActivity**
 > - **Label**: Disputant
-> - **URI**: TBD
-> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/DisputantActivity
+> - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: The act of challenging a claim, such as a claim of ownership.
 
-**bib:DonorActivity**
+**ex:DonorActivity**
 > - **Label**: Donor
-> - **URI**: http://bibliotek-o.org/1.1/ontology/DonorActivity
-> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/DonorActivity
+> - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: The act of giving an Item to another owner without monetary exchange.
 
 **ex:InheritorActivity**
 > - **Label**: Inheritor
-> - **URI**: TBD
-> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/InheritorActivity
+> - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: The act of taking possession of an Item upon the death of the previous owner, either through bequest or application of law.
 
-**bib:LenderActivity**
+**ex:LenderActivity**
 > - **Label**: Lender
-> - **URI**: http://bibliotek-o.org/1.1/ontology/LenderActivity
-> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/LenderActivity
+> - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: The act of permitting the temporary possession of one more more Items.
 
 **ex:LossActivity**
 > - **Label**: Loss
 > - **URI**: Tbd
-> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: Responsibility for the disappearance of an Item where the circumstances of the disappearance are unknown.
 
-**bib:OfferActivity**
+**ex:OfferActivity**
 > - **Label**: Offerer
-> - **URI**: http://bibliotek-o.org/1.1/ontology/OfferActivity
-> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/OfferActivity
+> - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: The act of providing an Item for purchase or other form of acquisition. Use for booksellers and sellers of other resources.
 
-**bib:OwnerActivity**
+**ex:OwnerActivity**
 > - **Label**: Owner
-> - **URI**: http://bibliotek-o.org/1.1/ontology/OwnerActivity
-> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/OwnerActivity
+> - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: The legal possession of an Item.
 
 **ex:RecipientActivity**
 > - **Label**: Recipient
-> - **URI**: TBD
-> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/RecipientActivity
+> - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: The act of receiving an Item, via bequest, donation, etc.
 
 **ex:RecovererActivity**
 > - **Label**: Recoverer
-> - **URI**: TBD
-> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/RecovererActivity
+> - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: The act of re-assuming ownership of an Item following a period of loss, possibly due to theft.
 
 **ex:RepatriatorActivity**
 > - **Label**: Repatriator
-> - **URI**: TBD
-> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/RepatriatorActivity
+> - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: The act of returning an item to its home country.
 
-**bib:SellerActivity**
+**ex:SellerActivity**
 > - **Label**: Seller
-> - **URI**: http://bibliotek-o.org/1.1/ontology/SellerActivity
-> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/SellerActivity
+> - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: The act of exchanging ownership of an Item for money or other object of value. 
 
 **ex:TestatorActivity**
 > - **Label**: Testator
-> - **URI**: TBD
-> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/TestatorActivity
+> - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: The act of bequeathing an Item in a will.
 
 **ex:ThiefActivity**
 > - **Label**: Thief
-> - **URI**: TBD
-> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/ThiefActivity
+> - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: The act of acquiring an Item without the consent of the legal owner.
 
 **ex:TransfererActivity**
 > - **Label**: Transferer
-> - **URI**: TBD
-> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/TransfererActivity
+> - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: The act of giving possession of an Item to another party, notably without a defined sale or donation.
 
-**bib:WitnessActivity**
+**ex:WitnessActivity**
 > - **Label**: Witness
-> - **URI**: http://bibliotek-o.org/1.1/ontology/WitnessActivity
-> - **SubclassOf**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/WitnessActivity
+> - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: The activity of verifying the truthfulness of an event or action.
 
 **ex:AccessionNumber**
 > - **Label**: Accession Number
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/AccessionNumber
 > - **Definition**: Numeric, alphanumeric, or other identifying code assigned when an art object, book, or other item enters the collection of a museum, library, or other repository. Such codes are unique within the set of codes, and specifically identify the particular item at hand. The numbers may be marked on the objects or not (http://vocab.getty.edu/aat/300312355)
 > - **SubclassOf**: http://id.loc.gov/ontologies/bibframe/Identifier  
 
@@ -491,7 +491,7 @@ Properties
 -----------
 **ex:accessions**
 > - **Label**: accessions
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/accessions
 > - **Domain**: ex:AccessionNumber
 > - **Range**: unspecified
 > - **Definition**: 
@@ -499,31 +499,31 @@ Properties
 
 **ex:accessionedBy**
 > - **Label**: accessionedBy
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/accessionedBy
 > - **Domain**: unspecified
 > - **Range**: ex:AccessionNumber
 > - **Definition**: 
 > - **Inverse**: ex:accessions
 
-**bib:hasActivity**
+**ex:hasActivity**
 > - **Label**: has activity
-> - **URI**: http://bibliotek-o.org/1.1/ontology/hasActivity
+> - **URI**: http://example.org/1.1/ontology/hasActivity
 > - **Domain**: unspecified
-> - **Range**: http://bibliotek-o.org/1.1/ontology/Activity
-> - **Inverse**: http://bibliotek-o.org/1.1/ontology/isActivityOf
+> - **Range**: http://example.org/1.1/ontology/Activity
+> - **Inverse**: http://example.org/1.1/ontology/isActivityOf
 > - **Definition**: Relates this resource to an activity or contribution by a single agent that affects or alters its existence or state.
 
-**bib:isActivityOf**
+**ex:isActivityOf**
 > - **Label**: is activity of
-> - **URI**: http://bibliotek-o.org/1.1/ontology/isActivityOf
-> - **Domain**: http://bibliotek-o.org/1.1/ontology/Activity
+> - **URI**: http://example.org/1.1/ontology/isActivityOf
+> - **Domain**: http://example.org/1.1/ontology/Activity
 > - **Range**: unspecified
-> - **Inverse**: http://bibliotek-o.org/1.1/ontology/hasActivity
+> - **Inverse**: http://example.org/1.1/ontology/hasActivity
 > - **Definition**: Relates an activity to the affected resource.
 
 **ex:hasCustodialHistory** 
 > - **Label**: has custodial history
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/hasCustodialHistory
 > - **Domain**: unspecified
 > - **Range**: ex:CustodialHistory
 > - **Inverse**: ex:isCustodialHistoryOf
@@ -532,25 +532,25 @@ Properties
 
 **ex:isCustodialHistoryOf** 
 > - **Label**: is custodial history of
-> - **URI**: TBD
+> - **URI**: http://example.org/1.1/ontology/isCustodialHistoryOf
 > - **Domain**: ex:CustodialHistory
 > - **Range**: unspecified
 > - **Inverse**: ex:hasCustodialHistory
 > - **Definition**: Relates a CustodialHistory resource to the resource it belongs to.
 
-**dcterms:hasPart** 
+**bf:hasPart** 
 > - **Label**: Has Part
-> - **URI**: http://purl.org/dc/terms/hasPart
+> - **URI**: http://id.loc.gov/ontologies/bibframe/hasPart
 > - **Domain**: unspecified
 > - **Range**: unspecified
-> - **Comment**: A related resource that is included either physically or logically in the described resource.
+> - **Comment**: Resource that is included either physically or logically in the described resource
 
-**dcterms:isPartOf** 
-> - **Label**: Is Part Of
-> - **URI**: http://purl.org/dc/terms/isPartOf
+**bf:partOf** 
+> - **Label**: Is part of
+> - **URI**: http://id.loc.gov/ontologies/bibframe/partOf
 > - **Domain**: unspecified
 > - **Range**: unspecified
-> - **Comment**: A related resource in which the described resource is physically or logically included.
+> - **Comment**: Resource in which the described resource is physically or logically contained.
 
 **seq:precedes**
 > - **Label**: precedes
@@ -580,28 +580,28 @@ Properties
 > - **Range**: owl:Thing
 > - **Comment**: The intransitive follows relation. For example, Wednesday directly precedes Thursday. Directness of precedence depends on the designer conceptualization.
 
-**bib:atLocation** 
-> - **Label**: at location
-> - **URI**: http://bibliotek-o.org/1.1/ontology/atLocation
+**bf:place** 
+> - **Label**: Place
+> - **URI**: http://id.loc.gov/ontologies/bibframe/place
 > - **Domain**: unspecified
-> - **Range**: http://www.w3.org/ns/prov#Location
-> - **Inverse**: http://bibliotek-o.org/1.1/ontology/isLocationOf
-> - **Definition**: The resource being described is at the specified location.
+> - **Range**: http://id.loc.gov/ontologies/bibframe/Place
+> - **Inverse**: unspecified
+> - **Definition**: Geographic location or place entity associated with a resource or element of description, such as the place associated with the publication, printing, distribution, issue, release or production of a resource, place of an event.
 
-**bib:isLocationOf** 
-> - **Label**: isLocationOf
-> - **URI**: http://bibliotek-o.org/1.1/ontology/isLocationOf
-> - **Domain**: http://www.w3.org/ns/prov#Location
+**ex:isLocationOf** 
+> - **Label**: is location of
+> - **URI**: http://example.org/1.1/ontology/isLocationOf
+> - **Domain**: http://id.loc.gov/ontologies/bibframe/Place
 > - **Range**: unspecified
-> - **Inverse**: http://bibliotek-o.org/1.1/ontology/atLocation
+> - **Inverse**: http://id.loc.gov/ontologies/bibframe/place
 > - **Definition**: The resource being described is at the specified location.
 
-**dcterms:date** 
-> - **Label**: date
-> - **URI**: http://purl.org/dc/terms/date
+**bf:date** 
+> - **Label**: Date
+> - **URI**: http://id.loc.gov/ontologies/bibframe/date
 > - **Domain**: unspecified 
 > - **Range**: unspecified
-> - **Definition**: A point or period of time associated with an event in the lifecycle of the resource.
+> - **Definition**: Date designation associated with a resource or element of description, such as date of title variation; year a degree was awarded; date associated with the publication, printing, distribution, issue, release or production of a resource. May be date typed.
 > - **Comment**: Date may be used to express temporal information at any level of granularity.
 
 **schema:price**
@@ -630,20 +630,20 @@ Properties
 > - **Expected value**: schema:PriceSpecification
 > - **Definition**: One or more detailed price specifications, indicating the unit price and delivery or payment charges.
 
-**bib:hasAgent** 
-> - **Label**: has agent
-> - **URI**: http://bibliotek-o.org/1.1/ontology/hasAgent
+**bf:agent** 
+> - **Label**: Associated agent
+> - **URI**: http://id.loc.gov/ontologies/bibframe/agent
 > - **Domain**: unspecified 
-> - **Range**: foaf:Agent
-> - **Inverse**: http://bibliotek-o.org/1.1/ontology/isAgentOf
+> - **Range**: bf:Agent
+> - **Inverse**: 
 > - **Definition**: Relates an activity to its agent.
 
-**bib:isAgentOf** 
+**ex:isAgentOf** 
 > - **Label**: is agent of
-> - **URI**: http://bibliotek-o.org/1.1/ontology/isAgentOf
-> - **Domain**: foaf:Agent
+> - **URI**: http://example.org/1.1/ontology/isAgentOf
+> - **Domain**: bf:Agent
 > - **Range**: unspecified 
-> - **Inverse**: http://bibliotek-o.org/1.1/ontology/hasAgent
+> - **Inverse**: http://id.loc.gov/ontologies/bibframe/agent
 > - **Definition**: Relates an agent to the activity it participated in.
 
 <a name="AreasforFutureResearch">Areas for Future Research</a>
