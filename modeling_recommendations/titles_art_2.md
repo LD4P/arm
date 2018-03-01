@@ -151,4 +151,44 @@ Named individuals to be used with bib:Origin: binder, caption, container, cover,
 > - **Definition:** General textual information relating to a resource, such as Information about a specific copy of a resource or information about a particular attribute of a resource.
 > - **Comment:** Used with Unspecified.
 > - **Range:** http://id.loc.gov/ontologies/bibframe/Note
-> - **Inverse:** ex:hasUnit
+
+**bf:status** (Object property)
+> - **Label:** Status
+> - **IRI:** http://id.loc.gov/ontologies/bibframe/status
+> - **Definition:** Designation of the validity or position of something, such as indication that the classification number is canceled or invalid, circulation availability of an item, indication of whether the identifier is canceled or invalid.
+> - **Comment:** Used with Unspecified.
+> - **Range:** http://id.loc.gov/ontologies/bibframe/Status
+
+**bib:hasActivity** (Object property)
+> - **Label:** has activity
+> - **IRI:** http://bibliotek-o.org/1.1/ontology/hasActivity
+> - **Definition:** Relates this resource to an activity or contribution by a single agent that affects or alters its existence or state.
+> - **Range:** http://bibliotek-o.org/1.1/ontology/Activity
+> - **Inverse of:** http://bibliotek-o.org/1.1/ontology/isActivityOf
+
+**bib:isActivityOf** (Object property)
+> - **Label:** is activity of
+> - **IRI:** http://bibliotek-o.org/1.1/ontology/isActivityOf
+> - **Definition:** Relates an activity to the affected resource.
+> - **Domain:** http://bibliotek-o.org/1.1/ontology/Activity
+> - **Inverse of:** http://bibliotek-o.org/1.1/ontology/hasActivity
+
+**bib:hasOrigin** (Object property)
+> - **Label:** has origin
+> - **IRI:** http://bibliotek-o.org/1.1/ontology/hasOrigin
+> - **Definition:** Specifies the physical location from which this resource (e.g., a title) originates, such as spine, cover, container, etc.
+> - **Scope note:** Distinct from http://bibliotek-o.org/1.1/ontology/hasSource, which specifies an external organization or scheme from which the resource was obtained.
+
+**bib:hasSource** (Object property)
+> - **Label:** has Source
+> - **IRI:** http://bibliotek-o.org/1.1/ontology/hasSource
+> - **Definition:** Relates this resource to the source from which it was derived.
+> - **Scope note:** Has general applicability to many types of sources and resources.
+> - **Inverse of:** http://bibliotek-o.org/1.1/ontology/isSourceOf
+
+**bib:isSourceOf** (Object property)
+> - **Label:** is source of
+> - **IRI:** http://bibliotek-o.org/1.1/ontology/isSourceOf
+> - **Definition:** Relates this resource to a resource of which it is the source.
+> - **Scope note:** Has general applicability to many types of sources and resources.
+> - **Inverse of:** http://bibliotek-o.org/1.1/ontology/hasSource
