@@ -263,3 +263,11 @@ resource.
 Transcribed title
 
 ![TranscribedTitle](/modeling_recommendations/modeling_diagrams/TranscribedTitle.jpg)
+
+Creator's title
+
+![CreatorsTitle_2](/modeling_recommendations/modeling_diagrams/CreatorsTitle_2.jpg)
+
+Translated title
+
+![translatedTitle](/modeling_recommendations/modeling_diagrams/translatedTitle.jpg)
