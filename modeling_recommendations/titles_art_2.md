@@ -262,4 +262,4 @@ resource.
 
 Transcribed title
 
-![Transcribed title](/modeling_recommendations/modeling_diagrams/Transcribed Title.png)
+![TranscribedTitle](/modeling_recommendations/modeling_diagrams/TranscribedTitle.jpg)
