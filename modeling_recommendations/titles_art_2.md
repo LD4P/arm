@@ -260,4 +260,4 @@ resource.
 <a name="diagrams">Diagrams</a>
 --------
 Translated Title
-![Translated title](/modeling_recommendations/modeling_diagrams/translated title.jpg)
+[translated Title](/modeling_recommendations/modeling_diagrams/translated title.jpg)
