@@ -192,3 +192,72 @@ Named individuals to be used with bib:Origin: binder, caption, container, cover,
 > - **Definition:** Relates this resource to a resource of which it is the source.
 > - **Scope note:** Has general applicability to many types of sources and resources.
 > - **Inverse of:** http://bibliotek-o.org/1.1/ontology/hasSource
+
+**bib:hasPreferredTitle** (Object property)
+> - **Label:** has preferred title
+> - **IRI:** http://bibliotek-o.org/1.1/ontology/hasPreferredTitle
+> - **Definition:** Specifies the preferred title of this resource.
+> - **Scope note:** A resource may have multiple directly linked titles, among which this is the preferred title.
+> - **Subproperty of: http://id.loc.gov/ontologies/bibframe/title
+> - **Range:** http://id.loc.gov/ontologies/bibframe/Title
+> - **Inverse of:** http://bibliotek-o.org/1.1/ontology/isPreferredTitleOf
+
+**bib:isPreferredTitleOf** (Object property)
+> - **Label:** is preferred title of
+> - **IRI:** http://bibliotek-o.org/1.1/ontology/isPreferredTitleOf
+> - **Definition:** Specifies the resource for which this is the preferred title.
+> - **Scope note:** A resource may have multiple directly linked titles, among which this is the preferred title.
+> - **Subproperty of: http://bibliotek-o.org/1.1/ontology/isTitleOf
+> - **Domain:** http://id.loc.gov/ontologies/bibframe/Title
+> - **Inverse of:** http://bibliotek-o.org/1.1/ontology/hasPreferredTitle
+
+**dcterms:hasPart**
+> - **Label:** Has Part
+> - **IRI:** http://purl.org/dc/terms/hasPart
+> - **Comment:** A related resource that is included either physically or logically in the described
+resource.
+
+**vivo:rank**
+> - **Label:** rank
+> - **IRI:** http://vivoweb.org/ontology/core#rank
+> - **Comment:** An integer indicating the position of an entity in a list.
+
+<a name="individuals">Recommended Named Individuals</a>
+--------
+
+**bib:invalid**
+> - **Label:** invalid
+> - **IRI:** http://bibliotek-o.org/1.1/ontology/invalid
+> - **Definition:** Applies to an identifier or other resource that is invalid.
+> - **Belongs to:** http://id.loc.gov/ontologies/bibframe/Status
+
+> - *Note: Note: All available title origin named individuals defined in bibliotek-o may be used if applicable, e.g.:*
+
+**bib:caption**
+> - **Label:** caption
+> - **IRI:** http://bibliotek-o.org/1.1/ontology/caption
+> - **Definition:** Applies to a resource (e.g., a title) given at the beginning of the first page of the text.
+> - **Belongs to:** http://bibliotek-o.org/1.1/ontology/Origin
+
+**bib:supplied**
+> - **Label:** supplied
+> - **IRI:** http://bibliotek-o.org/1.1/ontology/supplied
+> - **Definition:** Supplied value, not directly transcribed from the resource itself.
+> - **Belongs to:** http://bibliotek-o.org/1.1/ontology/Origin
+
+**bib:transcribed**
+> - **Label:** supplied
+> - **IRI:** http://bibliotek-o.org/1.1/ontology/transcribed
+> - **Definition:** Value transcribed directly from the resource.
+> - **Belongs to:** http://bibliotek-o.org/1.1/ontology/Origin
+
+**ex:translated**
+> - **Label:** translated
+> - **IRI:** TBD
+> - **Definition:** Value translated from another language, not transcribed from the resource itself.
+> - **Belongs to:** http://bibliotek-o.org/1.1/ontology/Origin
+
+<a name="diagrams">Diagrams</a>
+--------
+Translated Title
+![Translated title](/modeling_recommendations/modeling_diagrams/translated title.jpg)
