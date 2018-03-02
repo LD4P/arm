@@ -259,5 +259,7 @@ resource.
 
 <a name="diagrams">Diagrams</a>
 --------
+
 Transcribed title
+
 ![Transcribed title](/modeling_recommendations/modeling_diagrams/Transcribed Title.png)
