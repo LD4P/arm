@@ -6,6 +6,7 @@ Table of Contents
 > - [Overview](#overview)
 > - [Entities to Be Modeled](#entities)
 > - [Summary of Recommendations](#recommendations)
+> - [Areas for Future Research]
 > - [Recommended Classes](#classes)
 > - [Recommended Properties](#properties)
 > - [Diagrams](#diagrams)
@@ -23,11 +24,11 @@ In total, there are four use cases to be modeled:
 >3.  A citation is not found, and the cataloger does not add commentary.
 >4.  A citation is not found, and the cataloger adds further commentary about the reference source or a related citation.
 
-In addition, there is a need to model dates, identifiers, and other data related to citations. The proposed model will follow the general BIBFRAME modeling practices for dates, identifiers, and any other core data elements.
+There is also a need to model dates, identifiers, and other data related to citations. The proposed model will follow the general BIBFRAME modeling practices for dates, identifiers, and any other core data elements.
 
 To address these four use cases, a new class should be created to represent bibliographic citation entities (**ex:Citation**). A citation functions as an intermediate node between a reference source (bf:Work), and a resource of interest to the cataloger (typically a bf:Item or bf:Instance).
 
-A citation is related to a resource of interest by the property **cito:cites** (inverse cito:isCitedBy) and to the citing work by the property **ex:hasSource** (inverse ex:isSourceOf).
+A citation is related to a resource of interest by the property **ex:hasCitation** (inverse ex:isCitationOf) and to the citing work by the property **ex:hasSource** (inverse ex:isSourceOf).
 
 A citation may link directly to its source bf:Work, or it may link indirectly to the source through a specific location, modeled as a hierarchical chain proceeding from the most specific location up to the citing work. For example, a citation entity may be listed as a specific **ex:Entry** in a citing source, which may be located (**bf:place**) on a **ex:Page**, which may be part of (**bf:partOf**) a **ex:Volume**, which may be part of (**bf:partOf**) the citing source (bf:Work).
 
@@ -49,9 +50,15 @@ A negative citation is also modeled as an **bf:Note**, with the value "not found
 
 1.  Create a new class, **ex:Citation**, to represent bibliographic citations.
 
+2.  Create a new property, **ex:hasCitation** (inverse ex:isCitationOf) to link a citation to a cited resource. 
+
 2.  Optionally, the location within a citing source may also be specified. Create new classes, **ex:Volume**, **ex:Page**, and **ex:Entry**, to record the location of a citation.
 
 3.  Consider other location designators as appropriate.
+
+<a name="future">Areas for Future Research</a>
+--------------------------
+Earlier versions of this recommendation attempted differing levels of integration with the Citation Typing Ontology ([CiTO](http://www.sparontologies.net/ontologies/cito)), a [SPAR](http://www.sparontologies.net/) ontology focused on modeling citations. A second SPAR ontology, the Bibliographic Reference Ontology ([BiRO](http://www.sparontologies.net/ontologies/biro)), is also relevant to the bibliographic citations use case in RareMat. However, the precise relationship, if any, among RareMat citations, CiTO citations, and BiRO bibliographic references is an area that requires further research and clarification and lies beyond the scope of the current proposal.
 
 <a name="classes">Recommended Classes</a>
 -------------------
@@ -103,13 +110,13 @@ A negative citation is also modeled as an **bf:Note**, with the value "not found
 > - **Inverse:** ex:isSourceOf
 > - **Definition:** Relates this resource to the source from which it was derived.
 
-**cito:cites**
-> - **Label:** cites
-> - **URI:** [*http://purl.org/spar/cito/cites*](http://purl.org/spar/cito/cites)
+**ex:hasCitation**
+> - **Label:** has citation
+> - **URI:** [*http://example.org/hasCitation*](http://example.org/hasCitation)
 > - **Domain:** Unspecified
 > - **Range:** Unspecified
-> - **Inverse:** cito:isCitedBy
-> - **Definition:** The citing entity cites the cited entity, either directly and explicitly (as in the reference list of a journal article), indirectly (e.g. by citing a more recent paper by the same group on the same topic), or implicitly (e.g. as in artistic quotations or parodies, or in cases of plagiarism).
+> - **Inverse:** ex:isCitationOf
+> - **Definition:** The resource that is the focus of description (e.g., a bf:Item or bf:Instance) has a citation located in a standard reference source.
 
 **bf:partOf**
 > - **Label:** Is Part Of
