@@ -40,8 +40,8 @@ The CustodialHistory class is provided so that additional assertions can be made
 Relationships between resources
 ------------------------
 -	Only the CustodialHistory resource is linked directly to the Item, via the predicate hasCustodialHistory. Each Item is linked to a maximum of one CustodialHistory.
--	The CustodialHistory of the Item is linked to one or more CustodialEvents via dcterms:hasPart (inverse dcterms:isPartOf).
--	An individual CustodialEvent may be linked to an aggregate CustodialEvent via dcterms:isPartOf (inverse dcterms:hasPart). 
+-	The CustodialHistory of the Item is linked to one or more CustodialEvents via bf:hasPart (inverse bf:partOf).
+-	An individual CustodialEvent may be linked to an aggregate CustodialEvent via bf:partOf (inverse bf:hasPart). 
 -	Individual CustodialEvents may be sequenced in the CustodialHistory via seq:precedes, seq:follows, seq:directlyPrecedes, and seq:directlyFollows. 
 > - Because seq:precedes and seq:follows do not imply immediate precedence or succession, new event assertions may be interjected between two existing events. When immediate precedence or succession is known, seq:directlyPrecedes and seq:directlyFollows can be used.
 > -	The modeling of concurrent and overlapping events (e.g., when the loan of a manuscript to one institution overlaps two ownerships) is left for future research. 
@@ -105,14 +105,14 @@ This sample describes a scenario in which one item has been sold twice, with an 
     ex:hasCustodialHistory :history2 .
 
 :history1 a ex:CustodialHistory ;
-    dcterms:hasPart :individualEvent1 ; :individualEvent2 ,  :individualEvent3 .
+    bf:hasPart :individualEvent1 ; :individualEvent2 ,  :individualEvent3 .
 
 :history2 a ex:CustodialHistory ;
-    dcterms:hasPart :individualEvent4 .
+    bf:hasPart :individualEvent4 .
 
 :individualEvent1 a ex:SaleEvent ; 
     seq:precedes :individualEvent2 ;
-    dcterms:isPartOf :aggregateEvent1 .
+    bf:partOf :aggregateEvent1 .
 
 :individualEvent2 a ex:OwnershipEvent ; 
     seq:precedes :individualEvent3 .
@@ -120,11 +120,11 @@ This sample describes a scenario in which one item has been sold twice, with an 
 :individualEvent3 a ex:SaleEvent .
 
 :individualEvent4 a ex:CustodialEvent ;
-    dcterms:isPartOf :aggregateEvent1 .
+    bf:partOf :aggregateEvent1 .
 
 :aggregateEvent1 a ex:SaleEvent ;
     ex:hasActivity :sellerActivity1 ;
-    dcterms:date “1984”^^edtf:edtf ;
+    bf:date “1984”^^edtf:edtf ;
     ex:atLocation <uri-of-location> ;
     schema:priceSpecification :price1 .
 
