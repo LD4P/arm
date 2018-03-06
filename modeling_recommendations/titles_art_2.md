@@ -2,6 +2,11 @@ Titles in Art Cataloging
 =====================================================
 ArtFrame, 2017-10-06, updated 2018-02-05
 
+____________________________________________________________________________________________________________________________
+NOTE: the following represents the direction taken by the ArtFrame group in the ontology development process and may not represent the final model. This pattern document was used internally to define a direction and is shared with the intention of contextualizing a pattern found within the ontology; terms specified below may not fully align to the ontology as published.
+Bibliotek-o properties and classes may get replaced with BIBFRAME terms or defined within the ArtFrame/RareMat ontology.
+_____________________________________________________________________________________________________________________________
+
 Table of Contents
 > - [Sources](#sources)
 > - [Background](#background)
