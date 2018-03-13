@@ -357,7 +357,7 @@ Activity Subclasses
 
 **ex:DeaccessionerActivity**
 > - **Label**: Deaccessioner
-> - **URI**: http://example.org/1.1/ontology/ClaimantActivity
+> - **URI**: http://example.org/1.1/ontology/DeaccessionerActivity
 > - **SubclassOf**: http://example.org/1.1/ontology/Activity
 > - **Definition**: The act of permanently removing accessioned items from a collection or repository.
 
