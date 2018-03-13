@@ -7,7 +7,6 @@
 
 <rdf:RDF xmlns="http://measurement.example.org/"
     xmlns:bf="http://id.loc.gov/ontologies/bibframe/" 
-    xmlns:bib="http://bibliotek-o.org/ontology/"
     xmlns:dcterms="http://purl.org/dc/terms/" 
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -29,8 +28,6 @@
         <rdfs:comment xml:lang="en">This measurements ontology was developed as a stand alone
             ontology as part of the bibliotek-o BIBFRAME 2.0 extension ontology
             project</rdfs:comment>
-        <voaf:extends rdf:resource="http://bibliotek-o.org/ontology/"/>
-        <voaf:specializes rdf:resource="http://bibliotek-o.org/ontology/"/>
     </owl:Ontology>
 
 
