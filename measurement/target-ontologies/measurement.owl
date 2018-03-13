@@ -130,7 +130,7 @@
         <rdfs:label xml:lang="en">has arrangement</rdfs:label>
         <skos:definition xml:lang="en">Relationship between the resource and a specified
             arrangement, organization, or configuration of it.</skos:definition>
-        <rdfs:range rdf:resource="http://measurement.bibliotek-o.org/Arranegement"/>
+        <rdfs:range rdf:resource="http://measurement.bibliotek-o.org/Arrangement"/>
         <owl:inverseOf rdf:resource="http://measurement.bibliotek-o.org/isArrangementOf"/>
     </owl:ObjectProperty>
 
@@ -138,7 +138,7 @@
         <rdfs:label xml:lang="en">is arrangement of</rdfs:label>
         <skos:definition xml:lang="en">Relationship between a specified arrangement, organization,
             or configuration and a resource.</skos:definition>
-        <rdfs:domain rdf:resource="http://measurement.bibliotek-o.org/Arranegement"/>
+        <rdfs:domain rdf:resource="http://measurement.bibliotek-o.org/Arrangement"/>
         <owl:inverseOf rdf:resource="http://measurement.bibliotek-o.org/hasArrangement"/>
     </owl:ObjectProperty>
 
