@@ -59,32 +59,32 @@ RDF sample
 Ex. 1
 ```
 :instance1 a bf:Instance ; bf:note :note1 .
-:note1 rdf:value “\"350 copies of this book have been designed and printed by Sebastian Carter at the Rampant Lions Press ... hand-set in Hunt Roman, and ... Monotype Plantin Light with Monotype Albertus for the title. The paper is Zerkall mould-made wove. 50 have been signed by Ronald Blythe, include an additional set of prints from the five blocks and are specially bound. Both bindings are by the Fine Bindery, Wellingborough\"--Colophon.” .
+:note1 a ex:LimitationNote ; rdf:value “\"350 copies of this book have been designed and printed by Sebastian Carter at the Rampant Lions Press ... hand-set in Hunt Roman, and ... Monotype Plantin Light with Monotype Albertus for the title. The paper is Zerkall mould-made wove. 50 have been signed by Ronald Blythe, include an additional set of prints from the five blocks and are specially bound. Both bindings are by the Fine Bindery, Wellingborough\"--Colophon.” .
 
 ```
 Ex. 2
 ```
 :item1 a bf:Item ; bf:note :note2 .
-:note2 rdf:value “Library’s copy numbered A.P. II” .
+:note2 a ex:LimitationNote ; rdf:value “Library’s copy numbered A.P. II” .
 ```
 Ex. 3
 ```
 :instance1 a bf:Instance ; bf:note :note3 .
-:note3 rdf:value “Limited edition of 100 numbered copies, signed by the author.”  .
+:note3 a ex:LimitationNote ; rdf:value “Limited edition of 100 numbered copies, signed by the author.”  .
 :instance1 bf:hasItem :item1 .
 
 :item1 a bf:Item ; bf:note :note4 .
-:note4 rdf:value “Library's copy is no. 80.” .
+:note4 a ex:LimitationNote ; rdf:value “Library's copy is no. 80.” .
 ```
 Ex. 4
 ```
 :instance1 a bf:Instance ; bf:note :note5 .
-:note5 rdf:value “Varied edition of 40 numbered copies plus 1 legal deposit proof.” .
+:note5 a ex:LimitationNote ; rdf:value “Varied edition of 40 numbered copies plus 1 legal deposit proof.” .
 :instance1 bf:hasItem :item1 , :item2 .
 
 :item1 a bf:Item ; bf:note :note6 .
-:note6 rdf:value “Copy 1 numbered : 11/40, signed by the artist under the platemark.” .
+:note6 a ex:LimitationNote ; rdf:value “Copy 1 numbered : 11/40, signed by the artist under the platemark.” .
 
 :item2 a bf:Item ; bf:note :note7 .
-:note7 rdf:value “Copy 2 numbered : D.L. I/I, signed by the artist under the platemark.” .
+:note7 a ex:LimitationNote ; rdf:value “Copy 2 numbered : D.L. I/I, signed by the artist under the platemark.” .
 ```
