@@ -541,7 +541,7 @@
     
     <owl:Class rdf:about="http://example.org/LimitationNote">
         <rdfs:label xml:lang="en">Limitation note</rdfs:label>
-        <skos:definition xml:lang="en"></skos:definition>
+        <skos:definition xml:lang="en">A note relating to the size and nature of a print run limited to a specific quantity of copies produced, or a statement relating to the enumeration and nature of a copy in relation to the larger print run.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
