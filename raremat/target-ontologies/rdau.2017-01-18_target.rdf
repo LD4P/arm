@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xml:base="http://rdaregistry.info/Elements/u/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdakit="http://metadataregistry.org/uri/profile/rdakit/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:reg="http://metadataregistry.org/uri/profile/regap/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+<!-- Element Set: RDA Unconstrained properties -->
+  
+<rdf:Description rdf:about="http://rdaregistry.info/Elements/u/">
+  <dc:title xml:lang="en">RDA Unconstrained properties</dc:title>
+  <foaf:homepage rdf:resource="http://www.rdaregistry.info/Elements/u/"/>
+  <skos:note  xml:lang="en">Properties derived from RDA elements and relationship designators without specific or implicit restrictions to RDA entities.</skos:note>
+</rdf:Description>
+  
+  <!-- only terms from RDAu used by RareMat -->
+  
+  <!-- Terms from the Materials Pattern -->
+
+  <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60159">
+    <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+    <reg:name xml:lang="en">appliedMaterial</reg:name>
+    <rdfs:label xml:lang="en">has applied material</rdfs:label>
+    <skos:definition xml:lang="en">Relates a resource to a physical or chemical substance applied to a base material of a resource.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60344" />
+    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30084" />
+    <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/appliedMaterial.en" />
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60558">
+    <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+    <reg:name xml:lang="en">colourContent</reg:name>
+    <rdfs:label xml:lang="en">has colour content</rdfs:label>
+    <skos:definition xml:lang="en">Relates a resource to a presence of colour, tone, etc., in the content of a resource.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20224" />
+    <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/colourContent.en" />
+    <skos:scopeNote xml:lang="en">Black, white, single colour shades of black, single colour tints of white, and single colour tones of gray are considered to be single colours.</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60596">
+    <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+    <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+    <reg:name xml:lang="en">baseMaterial</reg:name>
+    <rdfs:label xml:lang="en">has base material</rdfs:label>
+    <skos:definition xml:lang="en">Relates a resource to an underlying physical material of a resource.</skos:definition>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30208" />
+    <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/baseMaterial.en" />
+  </rdf:Description>
+
+</rdf:RDF>
