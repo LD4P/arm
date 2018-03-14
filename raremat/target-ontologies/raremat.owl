@@ -62,7 +62,7 @@
     </owl:Class>
     
     <owl:Class rdf:about="http://example.org/DescriptiveNote">
-        <rdfs:label xml:lang="en">Designer</rdfs:label> 
+        <rdfs:label xml:lang="en">Descriptive note</rdfs:label> 
         <skos:definition xml:lang="en">A note that describes the resource.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
         <dcterms:issued></dcterms:issued>
@@ -546,7 +546,7 @@
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
-    
+ 
     
     <!-- Pagination and Foliation-->
     
@@ -759,6 +759,32 @@
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>  
+    
+    <!-- Materials -->
+    
+    <owl:ObjectProperty rdf:about="http://example.org/isAppliedMaterialOf">
+        <rdfs:label xml:lang="en">is applied material of</rdfs:label>
+        <skos:definition xml:lang="en">Relates a material to the resource it was applied to.</skos:definition>
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60159"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://example.org/isbaseMaterialOf">
+        <rdfs:label xml:lang="en">is base material of</rdfs:label>
+        <skos:definition xml:lang="en">Relates a material to the resource it is the base of.</skos:definition>
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60596"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://example.org/isColorContentOf">
+        <rdfs:label xml:lang="en">is Color Content of</rdfs:label>
+        <skos:definition xml:lang="en">Relates a color/colour content to a resource.</skos:definition>
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60596"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
     
     <!-- Physical Condition and Conservation -->
     
