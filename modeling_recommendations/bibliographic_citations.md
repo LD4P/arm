@@ -6,7 +6,7 @@ Table of Contents
 > - [Overview](#overview)
 > - [Entities to Be Modeled](#entities)
 > - [Summary of Recommendations](#recommendations)
-> - [Areas for Future Research]
+> - [Areas for Future Research](#future)
 > - [Recommended Classes](#classes)
 > - [Recommended Properties](#properties)
 > - [Diagrams](#diagrams)
@@ -75,7 +75,7 @@ Earlier versions of this recommendation attempted differing levels of integratio
 > - **URI:** http://example.org/Entry
 > - **Subclass of**:
 > - **Definition:** A specific entry that locates a citation within a bibliographic source.
-> - **Comment:** Used in parsing out hierarchically structured location designators for citations.
+> - **Scope note:** Used in parsing out hierarchically structured location designators for citations.
 
 **ex:Page**
 > - **Label:** Page
