@@ -12,18 +12,19 @@ Limitation statements usually have two components: the limitation statement rela
 
 Limitation statements are important to researchers because they are a clear indication about the scarcity of an instance, and can give details about the production and distribution of a resource. The copy’s numbering, for its part, can provide specific details about a given item, such as whether it was one of the numbered copies that was issued with an additional print, or whether it was a copy that was distributed among the author’s friends rather than sold. 
 
+Because limitation statements are capturing string values, rather than creating a distinct predicate, the proposal is to create a subclass of bf:Note, http://example.org/LimitationNote.
+
 Term Specifications
 -------------------
 
-**Datatype property**
-
-**ex:hasLimitation**
-> - **Label:** has limitation
-> - **Definition:** Statement relating to the size and nature of a print run limited to a specific quantity of copies produced, or a statement relating to the enumeration and nature of a copy in relation to the larger print run.
+**ex:LimitationNote (class)**
+> - **Label:** Limitation note
+> - **Definition:** A note relating to the size and nature of a print run limited to a specific quantity of copies produced, or a statement relating to the enumeration and nature of a copy in relation to the larger print run.
+> - **Subclass of:** bf:Note
 
 Sample data
 -----------
-"350 copies of this book have been designed and printed by Sebastian Carter at the Rampant Lions Press ... hand-set in Hunt Roman, and ... Monotype Plantin Light with Monotype Albertus for the title. The paper is Zerkall mould-made wove. 50 have been signed by Ronald Blythe, include an additional set of prints from the five blocks and are specially bound. Both bindings are by the Fine Bindery, Wellingborough"--Colophon.
+"350 copies of this book have been designed and printed by Sebastian Carter at the Rampant Lions Press ... hand-set in Hunt Roman, and ... Monotype Plantin Light with Monotype Albertus for the title. The paper is Zerkall mould-made wove. 50 have been signed by Ronald Blythe, include an additional set of prints from the five blocks and are specially bound. Both bindings are by the Fine Bindery, Wellingborough" --Colophon.
 
 Library’s copy numbered A.P. II
 
@@ -35,53 +36,86 @@ Copy 2 numbered : D.L. I/I, signed by the artist under the platemark.
 
 Diagrams
 ----------------
-Ex. 1
+### Example 1
 
 ![Limitation Statement diagram ex1](/modeling_recommendations/modeling_diagrams/limitation_statement_1.png)
 
-Ex. 2
+### Example 2
 
 ![Limitation Statement diagram ex2](/modeling_recommendations/modeling_diagrams/limitation_statement_2.png)
 
-Ex. 3
+### Example 3
 
 ![Limitation Statement diagram ex3](/modeling_recommendations/modeling_diagrams/limitation_statement_3.png)
 
-Ex. 4
+### Example 4
 
 ![Limitation Statement diagram ex4](/modeling_recommendations/modeling_diagrams/limitation_statement_4.png)
 
-RDF sample
+RDF Samples
 ------------
-Ex. 1
-```
-:instance1 a bf:Instance ;
-:instance1 ex:hasLimitation “\"350 copies of this book have been designed and printed by Sebastian Carter at the Rampant Lions Press ... hand-set in Hunt Roman, and ... Monotype Plantin Light with Monotype Albertus for the title. The paper is Zerkall mould-made wove. 50 have been signed by Ronald Blythe, include an additional set of prints from the five blocks and are specially bound. Both bindings are by the Fine Bindery, Wellingborough\"--Colophon.” .
-```
-Ex. 2
-```
-:item1 a bf:Item ;
-:item1 ex:hasLimitation “Library’s copy numbered A.P. II” .
-```
-Ex. 3
-```
-:instance1 a bf:Instance ;
-:instance1 ex:hasLimitation “Limited edition of 100 numbered copies, signed by the author.”  ;
-:instance1 bf:hasItem :item1 .
+### Example 1
 
-:item1 a bf:Item ;
-:item1 ex:hasLimitation “Library's copy is no. 80.” .
 ```
-Ex. 4
+:instance1 a bf:Instance ; 
+    bf:note :note1 .
+    
+:note1 a ex:LimitationNote ; 
+    rdf:value "\"350 copies of this book have been designed and printed by 
+    Sebastian Carter at the Rampant Lions Press ... hand-set in Hunt Roman, 
+    and ... Monotype Plantin Light with Monotype Albertus for the title. 
+    The paper is Zerkall mould-made wove. 50 have been signed by Ronald Blythe, 
+    include an additional set of prints from the five blocks and are specially bound. 
+    Both bindings are by the Fine Bindery, Wellingborough\" --Colophon." .
 ```
-:instance1 a bf:Instance ;
-:instance1 ex:hasLimitation “Varied edition of 40 numbered copies plus 1 legal deposit proof.” ;
-:instance1 bf:hasItem :item1 ;
-:instance1 bf:hasItem :item2 .
 
-:item1 a bf:Item ;
-:item1 ex:hasLimitation “Copy 1 numbered : 11/40, signed by the artist under the platemark.” .
+### Example 2
 
-:item2 a bf:Item ;
-:item2 ex:hasLimitation “Copy 2 numbered : D.L. I/I, signed by the artist under the platemark.” .
+```
+:item1 a bf:Item ; 
+    bf:note :note2 .
+    
+:note2 a ex:LimitationNote ; 
+    rdf:value "Library’s copy numbered A.P. II" .
+```
+
+### Example 3
+
+```
+:instance1 a bf:Instance ; 
+    bf:hasItem :item1 ;
+    bf:note :note3 .
+
+:note3 a ex:LimitationNote ; 
+    rdf:value "Limited edition of 100 numbered copies, signed by the author."  .
+
+:item1 a bf:Item ; 
+    bf:note :note4 .
+    
+:note4 a ex:LimitationNote ; 
+    rdf:value "Library's copy is no. 80." .
+     
+```
+
+### Example 4
+
+```
+:instance1 a bf:Instance ; 
+    bf:hasItem :item1 , :item2 ;
+    bf:note :note5 . 
+    
+:note5 a ex:LimitationNote ; 
+    rdf:value "Varied edition of 40 numbered copies plus 1 legal deposit proof." .
+
+:item1 a bf:Item ; 
+    bf:note :note6 .
+    
+:note6 a ex:LimitationNote ; 
+    rdf:value "Copy 1 numbered : 11/40, signed by the artist under the platemark." .
+
+:item2 a bf:Item ; 
+    bf:note :note7 .
+    
+:note7 a ex:LimitationNote ; 
+    rdf:value "Copy 2 numbered : D.L. I/I, signed by the artist under the platemark." .
 ```
