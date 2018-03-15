@@ -55,8 +55,8 @@ Diagrams
 RDF samples
 ------------
 ### Example 1
-```
-:instance1 a bf:Instance ; 
+
+```:instance1 a bf:Instance ; 
     bf:note :note1 .
     
 :note1 a ex:LimitationNote ; 
@@ -66,18 +66,21 @@ RDF samples
     The paper is Zerkall mould-made wove. 50 have been signed by Ronald Blythe, 
     include an additional set of prints from the five blocks and are specially bound. 
     Both bindings are by the Fine Bindery, Wellingborough\" --Colophon." .
-
+```
 
 ### Example 2
-````
+
+```
 :item1 a bf:Item ; 
     bf:note :note2 .
     
 :note2 a ex:LimitationNote ; 
     rdf:value "Library’s copy numbered A.P. II" .
-````
+```
+
 ### Example 3
-````
+
+```
 :instance1 a bf:Instance ; 
     bf:hasItem :item1 ;
     bf:note :note3 .
@@ -91,9 +94,11 @@ RDF samples
 :note4 a ex:LimitationNote ; 
     rdf:value "Library's copy is no. 80." .
      
-````
+```
+
 ### Example 4
-````
+
+```
 :instance1 a bf:Instance ; 
     bf:hasItem :item1 , :item2 ;
     bf:note :note5 . 
