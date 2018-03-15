@@ -44,7 +44,7 @@ events, which is a very rich modeling area and includes modeling of items in exh
 ------------------------------------
 Classes
 -----------------------
-**ex:MeasurementGroup**
-> - **Label**: Measurement Group
-> - **IRI:** tbd
-> - **Definition:** 
+**bf:Note**
+> - **Label**: Note
+> - **IRI:** http://id.loc.gov/ontologies/bibframe/Note
+> - **Definition:** Information, usually in textual form, on attributes of a resource or some aspect of a resource.
