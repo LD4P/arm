@@ -174,11 +174,41 @@ Properties
 ------------------------
 **Term Specifications**
 --------------------------
-Classes
-schema:Event
-Label: Event
-IRI: http://schema.org/Event
-Definition: An event happening at a certain time and location, such as a concert, lecture, or festival. Ticketing information may be added via the offers property. Repeated events may be structured as separate Event objects.
-Note: See recommendation to LC above.
 
+*Classes*
+-------------
+**schema:Event**
+> - **Label:** Event
+> - **IRI:** http://schema.org/Event
+> - **Definition:** An event happening at a certain time and location, such as a concert, lecture, or festival. Ticketing 
+                    information may be added via the offers property. Repeated events may be structured as separate Event 
+                    objects.
+> - **Note:** See recommendation to LC above.
 
+**schema:ExhibitionEvent**
+> - **Label:** ExhibitionEvent
+> - **IRI:** http://schema.org/ExhibitionEvent
+> - **Definition:** Event type: Exhibition event, e.g. at a museum, library, archive, tradeshow.
+> - **Note:** See recommendation to LC above.
+
+**ex:Activity**
+> - **Label:** Activity
+> - **IRI:** TBD
+> - **Definition:** An activity or contribution by a single agent that affects or alters the existence or state of a resource.
+
+**ex:CuratorActivity**
+> - **Label:** Curator
+> - **IRI:** TBD
+> - **Definition:** The activity of conceiving, aggregating, and/or organizing an exhibition, collection, or other item.
+> - **Subclass of: ex:Activity
+> - **Editorial note:** Future work: consider more formal alignment between the class and corresponding MARC relator.
+> - **Scope note:** This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/cur.
+
+**ex:DirectorActivity**
+> - **Label:** Director
+> - **IRI:** TBD
+> - **Definition:** The activity of general management and supervision of a filmed performance, a radio or television program, 
+                    etc.
+> - **Subclass of: ex:Activity
+> - **Editorial note:** Future work: consider more formal alignment between the class and corresponding MARC relator.
+> - **Scope note:** This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/drt.
