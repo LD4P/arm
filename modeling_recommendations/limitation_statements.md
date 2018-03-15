@@ -52,11 +52,12 @@ Diagrams
 
 ![Limitation Statement diagram ex4](/modeling_recommendations/modeling_diagrams/limitation_statement_4.png)
 
-RDF samples
+RDF Samples
 ------------
 ### Example 1
 
-```:instance1 a bf:Instance ; 
+```
+:instance1 a bf:Instance ; 
     bf:note :note1 .
     
 :note1 a ex:LimitationNote ; 
