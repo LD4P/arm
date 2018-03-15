@@ -103,8 +103,8 @@ Properties
   modeled in contexts other than as the event content of a work. 
   - If this recommendation is accepted, we will use bf:Event and define a subclass ex:ExhibitionEvent. Otherwise, we will use  
     schema:Event and its subclass schema:ExhibitionEvent. 
-- Our ultimate recommendation would be to remove bf:Event and implement or use an Event ontology (so far we have been unable to   
-  identify an existing one), but this is likely far in the future.
+- Our ultimate recommendation would be to remove bf:Event and implement or use an Event ontology (so far we have not identified   
+  a suitable existing one), but this is a complex project and likely far in the future.
   
 **bf:genreForm and bf:GenreForm**
 
