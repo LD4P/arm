@@ -138,14 +138,28 @@ This sample describes a scenario in which one item has been sold twice, with an 
 
 <a name="RequeststoLibraryofCongress">Requests to Library of Congress</a>
 -----------
-- Change bf:custodialHistory into an object property
-- Define the following classes:
-> - bf:CustodialHistory
-> - bf:CustodialEvent
+**bf:custodialHistory**
 
-If LC does not approve these requests, RareMat/ArtFrame will define these terms in a namespace TBD. In either case, we will define:
-- Event types (detailed below)
-- Activity types (detailed below)
+- Change bf:custodialHistory into an object property, as in [Term Specifications](#TermSpecifications) below.
+  - If LC does not approve this request, ArtFrame/RareMat will define these terms in a namespace TBD for its Exhibition ontology.
+
+**Define custodial history-related classes**
+
+- Define the following classes as in [Term Specifications](#TermSpecifications) below.
+- bf:CustodialHistory
+- bf:CustodialEvent
+  - If LC does not approve this request, ArtFrame/RareMat will define these terms in a namespace TBD for its Exhibition ontology.
+
+**bf:Event**
+
+- The definition of bf:Event is “Something that happens at a certain time and location, such as a performance, speech, or athletic  
+  event, that is documented by a resource.” We request removal of the phrase “that is documented by a resource,” allowing events to be 
+  modeled in contexts other than as the event content of a work. 
+  - If this recommendation is accepted, we will use bf:Event and define a subclass ex:ExhibitionEvent. Otherwise, we will use  
+    schema:Event and its subclass schema:ExhibitionEvent. 
+  - In either case, we will define the [Event types detailed below](#TermSpecifications).
+- Our ultimate recommendation would be to remove bf:Event and implement or use an Event ontology (so far we have not identified   
+  a suitable existing one), but this is a complex project and likely far in the future.
 
 
 <a name="TermSpecifications">Term Specifications</a>
