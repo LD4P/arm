@@ -200,7 +200,7 @@ Properties
 > - **Label:** Curator
 > - **IRI:** TBD
 > - **Definition:** The activity of conceiving, aggregating, and/or organizing an exhibition, collection, or other item.
-> - **Subclass of: ex:Activity
+> - **Subclass of:** ex:Activity
 > - **Editorial note:** Future work: consider more formal alignment between the class and corresponding MARC relator.
 > - **Scope note:** This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/cur.
 
@@ -209,6 +209,350 @@ Properties
 > - **IRI:** TBD
 > - **Definition:** The activity of general management and supervision of a filmed performance, a radio or television program, 
                     etc.
-> - **Subclass of: ex:Activity
+> - **Subclass of:** ex:Activity
 > - **Editorial note:** Future work: consider more formal alignment between the class and corresponding MARC relator.
 > - **Scope note:** This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/drt.
+
+**ex:DonorActivity**
+> - **Label:** Donor
+> - **IRI:** TBD
+> - **Definition:** An activity or contribution by a single agent that affects or alters the existence or state of a resource.
+> - **Subclass of:** ex:Activity
+> - **Editorial note:** Future work: consider more formal alignment between the class and corresponding MARC relator.
+> - **Scope note:** This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/dst.
+
+**ex:OrganizerActivity**
+> - **Label:** Organizer
+> - **IRI:** TBD
+> - **Definition:** The activity of organizing the exhibit, event, conference, etc.
+> - **Subclass of:** ex:Activity
+> - **Editorial note:** Future work: consider more formal alignment between the class and corresponding MARC relator.
+> - **Scope note:** This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/orm.
+
+**ex:SponsorActivity**
+> - **Label:** Sponsor
+> - **IRI:** TBD
+> - **Definition:** The activity of sponsoring some aspect of a resource, e.g., funding research, sponsoring an event.
+> - **Subclass of:** ex:Activity
+> - **Editorial note:** Future work: consider more formal alignment between the class and corresponding MARC relator.
+> - **Scope note:** This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/spn.
+
+**ex:Arrangement**
+> - **Label:** Arrangement
+> - **IRI:** TBD
+> - **Definition:** Information about the organization and arrangement of a collection of items or a single item.
+> - **Scope note:** An Arrangement may be a NamedIndividual, a term from a controlled vocabulary, or an unnamed resource with an 
+                    rdf:value.
+> - **Example:** For computer files, organization and arrangement information may be the file structure and sort sequence of a 
+                 file.
+> - **Example:** For visual materials, this information may be how a collection is arranged.
+> - **Example:** For an individual book on display in an exhibition, the arrangement may be the page to which the book is opened 
+                 for display.
+> - **Example:** For a scroll, the arrangement may be rolled or unrolled.
+> - **Note:** See recommendation to LC above.
+
+**ex:DescriptiveNote**
+> - **Label:** Descriptive note
+> - **IRI:** TBD
+> - **Definition:** A note that describes the resource.
+> - **Subclass of:** bf:Note
+
+**ex:Entry**
+> - **Label:** Entry
+> - **IRI:** TBD
+> - **Definition:** A specific entry within a bibliographic resource.
+> - **Example (skos:example):** An entry locating a citation within a bibliographic source.
+> - **Example (skos:example):** An exhibition catalog entry describing a specific item in the exhibition.
+
+**ex:Exhibition**
+> - **Label:** Exhibition
+> - **IRI:** TBD
+> - **Definition:** The relationship between an ExhibitionEvent and an Item in that event.
+> - **Scope note:** Used to attach information to this relationship, such as title, dates, activities such as curatorship, 
+                    exhibit number, physical arrangement, etc. which does not properly attach to the Item in and of itself.
+
+*Properties*
+-------------
+
+**bf:genreForm (object property)**
+> - **Label:** Genre/form
+> - **IRI:** http://id.loc.gov/ontologies/bibframe/genreForm
+> - **Definition:** Form category or genre to which a resource belongs.
+> - **Comment** Used with Work, Instance or Item.
+> - **Note:** See recommendation to LC above.
+
+**bf:note (object property)**
+> - **Label:** Note
+> - **IRI:** http://id.loc.gov/ontologies/bibframe/note
+> - **Definition:** General textual information relating to a resource, such as Information about a specific copy of a resource 
+                    or information about a particular attribute of a resource.
+> - **Comment** Used with Work, Instance or Item.
+> - **Range:** bf:Note
+
+**bf:title (object property)**
+> - **Label:** Title resource
+> - **IRI:** http://id.loc.gov/ontologies/bibframe/title
+> - **Definition:** Name given to a resource.
+> - **Comment** Used with Work, Instance or Item.
+> - **Note:** See recommendation to LC above.
+
+**ex:titleOf (object property)**
+> - **Label:** title of
+> - **IRI:** TBD
+> - **Definition:** Name given to a resource.
+> - **Comment** Used with Work, Instance or Item.
+> - **Inverse:** bf:title
+> - **Note:** See recommendation to LC above.
+
+**dcterms:hasPart (property)**
+> - **Label:** Has Part
+> - **IRI:** http://purl.org/dc/terms/hasPart
+> - **Comment** A related resource that is included either physically or logically in the described resource.
+> - **Note:** This term is intended to be used with non-literal values as defined in the DCMI Abstract Model   
+              (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to 
+              express this intention with a formal range declaration.
+> - **Subproperty of:** dcterms:relation
+
+**dcterms:isPartOf (property)**
+> - **Label:** Is Part Of
+> - **IRI:** http://purl.org/dc/terms/isPartOf
+> - **Comment** A related resource in which the described resource is physically or logically included.
+> - **Note:** This term is intended to be used with non-literal values as defined in the DCMI Abstract Model   
+              (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to 
+              express this intention with a formal range declaration.
+> - **Subproperty of:** dcterms:relation
+
+**bf:subject (object property)**
+> - **Label:** Subject
+> - **IRI:** http://id.loc.gov/ontologies/bibframe/subject
+> - **Definition:** Subject term(s) describing a resource.
+
+**ex:subjectOf (object property)**
+> - **Label:** subject of
+> - **IRI:** TBD
+> - **Definition:** The relationship between a resource and another resource of which it is the subject.
+> - **Inverse:** bf:subject
+> - **Note:** See recommendation to LC above.
+
+**seq:follows (object property)**
+> - **Label:** follows
+> - **IRI:** http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#follows
+> - **Comment:** A relation between entities, expressing a 'sequence' schema. E.g. 'year 2000 follows 1999', 'preparing coffee' 
+                 follows 'deciding what coffee to use', 'II World War follows I World War', etc. It can be used between tasks, 
+                 processes or time intervals, and subproperties would fit best in order to distinguish the different uses.
+> - **Domain:** Owl:Thing
+> - **Range:** Owl:Thing
+> - **Inverse:** seq:precedes
+
+**seq:precedes (object property)**
+> - **Label:** precedes
+> - **IRI:** http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes
+> - **Comment:** A relation between entities, expressing a 'sequence' schema. E.g. 'year 1999 precedes 2000', 'deciding what 
+                 coffee to use' precedes 'preparing coffee', 'World War II follows World War I', 'in the Milan to Rome 
+                 autoroute, Bologna precedes Florence', etc.
+> - **Comment:** It can then be used between tasks, processes, time intervals, spatially locate objects, situations, etc. 
+                 Subproperties can be defined in order to distinguish the different uses.
+> - **Domain:** Owl:Thing
+> - **Range:** Owl:Thing
+> - **Inverse:** seq:follows
+
+**ex:atLocation (object property)**
+> - **Label:** at location
+> - **IRI:** TBD
+> - **Definition:** The resource being described is at the specified location.
+> - **Domain:** Unspecified
+> - **Range:* Unspecified
+> - **Inverse:** ex:isLocationOf
+> - **Note:** See recommendation to LC above.
+
+**ex:isLocationOf (object property)**
+> - **Label:** is location of
+> - **IRI:** TBD
+> - **Definition:** The specified resource is at the location being described.
+> - **Domain:** Unspecified
+> - **Range:* Unspecified
+> - **Inverse:** ex:atLocation
+> - **Note:** See recommendation to LC above.
+
+**ex:covers (object property)**
+> - **Label:** covers
+> - **IRI:** TBD
+> - **Definition:** Specifies a time period or location covered in the content of this resource.
+> - **Domain:** Unspecified
+> - **Range:* Unspecified
+> - **Inverse:** ex:coveredIn
+> - **Note:** See recommendation to LC above.
+
+**ex:coveredIn (object property)**
+> - **Label:** covered in
+> - **IRI:** TBD
+> - **Definition:** Specifies a resource the content of which covers this time period or location.
+> - **Domain:** Unspecified
+> - **Range:* Unspecified
+> - **Inverse:** ex:covers
+> - **Scope note:** Contrasts with ex:isSubjectOf: e.g., a book written by a French author may be set in France without France 
+                    being the subject of the work. Not all cases are expected to be unambiguous.
+> - **Note:** See recommendation to LC above.
+
+**ex:hasActivity (object property)**
+> - **Label:** has activity
+> - **IRI:** TBD
+> - **Definition:** Relates this resource to an activity or contribution by a single agent that affects or alters its existence 
+                    or state.
+> - **Range:* ex:Activity
+> - **Inverse:** ex:isActivityOf
+
+**ex:isActivityOf (object property)**
+> - **Label:** is activity of
+> - **IRI:** TBD
+> - **Definition:** Relates an activity to the affected resource.
+> - **Domain:* ex:Activity
+> - **Inverse:** ex:hasActivity
+
+**ex:hasArrangement (object property)**
+> - **Label:** has arrangement
+> - **IRI:** TBD
+> - **Definition:** Relates an object or collection of objects to information about its organization or arrangement.
+> - **Domain:** Unspecified
+> - **Range:* ex:Arrangement
+> - **Inverse:** ex:isArrangementOf
+> - **Example:** For computer files, organization and arrangement information may be the file structure and sort sequence of a 
+                 file.
+> - **Example:** For visual materials, this information may be how a collection is arranged.
+> - **Example:** For an individual book in an exhibition, the arrangement may be the page to which the book is opened for 
+                 display.
+> - **Example:** For a scroll, the arrangement may be rolled or unrolled.
+> - **Note:** See recommendation to LC above.
+
+**ex:isArrangementOf (object property)**
+> - **Label:** is arrangement of
+> - **IRI:** TBD
+> - **Definition:** Relates information about the organization or arrangement of an object or collection of objects to that 
+                    object or collection.
+> - **Domain:** ex:Arrangement
+> - **Range:* Unspecified
+> - **Inverse:** ex:hasArrangement
+> - **Example:** For computer files, organization and arrangement information may be the file structure and sort sequence of a 
+                 file.
+> - **Example:** For visual materials, this information may be how a collection is arranged.
+> - **Example:** For an individual book in an exhibition, the arrangement may be the page to which the book is opened for 
+                 display.
+> - **Example:** For a scroll, the arrangement may be rolled or unrolled.
+> - **Note:** See recommendation to LC above.
+
+**ex:hasExhibition (object property)**
+> - **Label:** has exhibition
+> - **IRI:** TBD
+> - **Definition:** Relates an Item to the Exhibition resource representing the relationship between the Item and an 
+                    ExhibitionEvent.
+> - **Domain:** Unspecified
+> - **Range:* ex:Exhibition
+> - **Inverse:** ex:isExhibitionOf
+
+**ex:isExhibitionOf (object property)**
+> - **Label:** is exhibition of
+> - **IRI:** TBD
+> - **Definition:** Relates an Exhibition resource representing the relationship between an Item and an ExhibitionEvent to the 
+                    Item.
+> - **Domain:** ex:Exhibition
+> - **Range:* Unspecified
+> - **Inverse:** ex:hasExhibition
+
+**ex:startDate (datatype property)**
+> - **Label:** start date
+> - **IRI:** TBD
+> - **Definition:** The start date and time of the resource, such as an event.
+> - **Note:** See recommendation to LC above.
+
+**ex:endDate (datatype property)**
+> - **Label:** end date
+> - **IRI:** TBD
+> - **Definition:** The end date and time of the resource, such as an event.
+> - **Note:** See recommendation to LC above.
+
+<a name="diagrams">Diagrams</a>
+---------
+
+**Notes**
+- There are three differences between the Multi-Site and Traveling ExhibitionEvent:
+  - Definitionally, a traveling exhibition moves items from one site to another, whereas the multi-site exhibition has different 
+    items at different sites.
+  - We do not distinguish these types by subclassing; rather, the properties listed below distinguish the two. An advantage of 
+    this is in some cases the boundaries between the two may be fuzzy, with some properties of one type and some properties of 
+    another.
+  - The start and end dates of the sites in a multi-site exhibition may be the same or overlapping. The start and end dates of 
+    sites in a traveling exhibition are non-overlapping.
+  - A traveling exhibition may use precedes and follows predicates between exhibition parts, but this is optional and generally 
+    redundant, because we expect to have start and end dates. 
+  - An Item may be displayed in more than one sub-exhibition of a traveling exhibition, but generally not of a multi-site 
+    exhibition.
+
+<a name="examples">Side-by-Side Examples</a>
+---------
+**BIBFRAME**
+```
+:item1 a bf:Item ;
+    bf:note :note1 .
+
+:note1 a bf:Note ;
+    rdf:value “Exhibited: ‘Groundbreakers: Great American Gardens and the Women Who 
+    Designed Them’ at the LuEsther T. Mertz Library, New York Botanical Gardens,
+    New York, N.Y., May - October 2014.” ; 
+    bf:noteType “exhibition” .
+```
+
+**ArtFrame / RareMat (non-exhaustive)**
+```
+:item1 a bf:Item ;
+    ex:hasExhibition :exhibition1 ;
+    bf:title :title1 ;
+    bf:itemOf :instance1.
+
+:title1 a bf:Title ;
+    rdf:value “The Mill on the Floss” .
+
+:instance1 a bf:Instance ;
+    bf:instanceOf :work1 .
+
+:work1 a bf:Work .
+
+:exhibition1 a ex:Exhibition ;
+    dcterms:isPartOf :exhibitionEvent1 ;
+    ex:startDate “2018-02-01”^^edtf:EDTF ;
+    ex:endDate “2018-04-30”^^edtf:EDTF ;
+    bf:title :title2 ;    
+    ex:hasArrangement ex:arrangement1 ; 
+    bf:identifiedBy :identifier1 .
+
+:title2 a bf:Title ;
+    rdf:value “Black-and-white Illustrations in The Mill on the Floss by George Eliot, first edition” .
+
+:identifier1 a bf:Identifier ;
+    rdf:value “MFGEed1” .
+
+:arrangement1 a ex:Arrangement ;
+    rdf:value “Open to plate 10” .
+
+:exhibitionEvent1 a schema:ExhibitionEvent ;
+    ex:startDate “2018-01-01”^^edtf:EDTF ;
+    ex:endDate “2018-06-30”^^edtf:EDTF ;
+    dcterms:subject <http://id.loc.gov/authorities/subjects/sh88007062> ;
+    bf:title “Victorian Era Illustrations” .
+
+:catalog1 a bf:Work ;
+    bf:genreForm <http://id.loc.gov/authorities/genreForms/gf2014026098> ;
+    dcterms:subject :exhibitionEvent1 ;
+    dcterms:hasPart :entry1 .
+
+:entry1 a ex:Entry ;
+    dcterms:subject :item1 , :instance1 , :work1 , :exhibition1 .
+
+```
+<a name="future_work">Future Work</a>
+
+- Other potential use cases are performance-based events and virtual (online) exhibitions. The group has not yet explored how 
+  the proposed model can be applied to these types of events.
+- Modeling of the full set of relationships that may obtain between bibliographic resources and events is well beyond the scope 
+  of the RareMat/ArtFrame ontology, but is needed for general bibliographic modeling. This could be based on an existing event 
+  ontology, if a suitable one exists, but may need extension for the specific relationships that hold in the bibliographic 
+  context.
