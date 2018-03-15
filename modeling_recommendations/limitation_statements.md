@@ -17,9 +17,7 @@ Because limitation statements are capturing string values, rather than creating 
 Term Specifications
 -------------------
 
-**Class**
-
-**ex:LimitationNote**
+**ex:LimitationNote (class)**
 > - **Label:** Limitation note
 > - **Definition:** A note relating to the size and nature of a print run limited to a specific quantity of copies produced, or a statement relating to the enumeration and nature of a copy in relation to the larger print run.
 > - **Subclass of:** bf:Note
@@ -54,7 +52,7 @@ Ex. 4
 
 ![Limitation Statement diagram ex4](/modeling_recommendations/modeling_diagrams/limitation_statement_4.png)
 
-RDF sample
+RDF samples
 ------------
 Ex. 1
 ```
