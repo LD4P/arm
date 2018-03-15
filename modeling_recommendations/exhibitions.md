@@ -472,7 +472,57 @@ Properties
 
 <a name="diagrams">Diagrams</a>
 ---------
+**Diagram 1. Exhibition Event**
+![Exhibition Event Diagram 1](/modeling_recommendations/modeling_diagrams/exhibition_event.png)
+**Notes**
+- Description, coverage, and subject are different options for describing the topic of the Exhibition Event.
 
+**Diagram 2. Items in an Exhibition Event**
+![Items_in_an_Exhibition_Event_2](/modeling_recommendations/modeling_diagrams/items_exhibitions_events.png)
+**Notes**
+- While it is the Item which is directly related to the ExhibitionEvent (via the Exhibition node), by following the links to 
+  Instance and Work, these are by extrapolation also “in” the ExhibitionEvent.
+ 
+ **Diagram 3. Item Description the the Context of an Exhibition**
+![Item_Description_in_the_Context_of_an_Exhibition_3](/modeling_recommendations/modeling_diagrams/Item_description_exhibition.png)
+**Notes**
+- The Exhibition context node provides for description of the Item in relation to the ExhibitionEvent that do not pertain to the 
+  Item in and of itself:
+  - Item title in the context of the ExhibitionEvent may differ from the Item title.
+  - Item may have its own dates and activities in relation to the ExhibitionEvent.
+  - Arrangement shows the particular arrangement of the Item in the ExhibitionEvent.
+  - Identifier is the identifier of the Item within the ExhibitionEvent. No specific subclass is needed; the linkage to the 
+    Exhibition is sufficient.
+  - Dates of exhibition of the Item may be different from the dates of the ExhibitionEvent itself.
+  - The Item may have particular activities attached to it in relation to the ExhibitionEvent, that are not activities of the 
+    ExhibitionEvent itself.
+  - Perhaps other features not illustrated here.
+
+**Diagram 4. Exhibition catalog**
+![Exhibition_Catalog 4](/modeling_recommendations/modeling_diagrams/exhibition_catalog.png)
+**Notes**
+- A catalog entry may describe the item, instance, work, or item in the context of the exhibition; thus the multiple 
+  dcterms:subject relationships.
+- Other publications associated with an ExhibitionEvent may include flyers, audio guides, etc. These will generally follow the 
+  model provided here for catalogs, with different genreForms.
+
+**Digram 5. Multi-Site Exhibition**
+![Multi_Site_Exhibitions_5](/modeling_recommendations/modeling_diagrams/multi_site_exhibitions.png)
+**Notes**
+- Each exhibition site has its own location, and may have the same, overlapping, or different start and end dates from other 
+  sites.
+- Each site, as well as the exhibition as a whole, may have particular relationships and features such as:
+  - Activities
+  - Titles (not illustrated)
+  - Catalog (not illustrated)
+  - Perhaps others not illustrated here
+- [*“Bestandsaufnahme Gurlitt”*](https://www.tagesspiegel.de/kultur/doppel-ausstellung-in-bern-und-bonn-bestandsaufnahme-
+  gurlitt-jetzt-kommen-die-bilder-zu-wort/20534814.html) is a good example of a multi-site exhibition where each sub-location 
+  has a distinct title, location, and start and end dates, and items on display, and the exhibition as a whole has a title as 
+  well. Only the entire exhibition has a catalog (though this is not a requirement).
+  
+**Diagram 6. Traveling Exhibition**
+![Traveling_Exhibitions_6](/modeling_recommendations/modeling_diagrams/traveling_exhibition.png)
 **Notes**
 - There are three differences between the Multi-Site and Traveling ExhibitionEvent:
   - Definitionally, a traveling exhibition moves items from one site to another, whereas the multi-site exhibition has different 
