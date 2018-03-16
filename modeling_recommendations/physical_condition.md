@@ -5,7 +5,7 @@ ArtFrame and RareMat, 2017-08-10
 **Table of Contents**
 - [Overview](#overview)
 - [Summary](#summary)
-- [bibliotek-o Approach to Activities Related to Physical Condition](#biblioteko)
+- [RareMat Approach to Activities Related to Physical Condition](#raremat)
 	- [Involved Classes](#classes)
 	- 	[Involved Properties](#properties)
 - [Diagrams and Sample RDF](#diagrams)
@@ -14,17 +14,16 @@ ArtFrame and RareMat, 2017-08-10
 -----------
 Several LD4P domain-specific ontology extension groups identified the need to describe the physical condition of an item, along with related condition assessment and conservation activities. Extension group members also described the use case of relating a specific condition assessment with the conservator activity that is triggered by the assessment. Further, it should be possible to relate this to a new physical condition that may be the result of the conservation activity. A high level of flexibility should be maintained since a condition assessment may take place without causing a conservator activity or a conservator activity may d take place without a prior formal condition assessment. None of these concepts are currently covered in BIBFRAME.
 
-[*CIDOC CRM*](http://www.cidoc-crm.org/), the [*Web Annotation Model*](https://www.w3.org/TR/annotation-model/) and [*PROV-O*](https://www.w3.org/TR/prov-o/) were consulted for possible re-use. It was determined that the Web Annotation Model would not support the requirements outlined above and the reuse of desired PROV-O properties is limited by domain and range restrictions. CIDOC-CRM does include the needed classes and properties; however, reusing CIDOC would introduce a model that would overlap with the existing [*Activities*](https://wiki.duraspace.org/display/LD4P/bibliotek-o?preview=/79795231/83237322/bibliotek-o_pattern_activities_201612.pdf) model already in use in [*bibliotek-o*](http://bibliotek-o.org/ontology.html), thus complicating querying the data. In addition, bibliotek-o’s Activities model already includes a ConservatorActivity that can be used.
-
+[*CIDOC CRM*](http://www.cidoc-crm.org/), the [*Web Annotation Model*](https://www.w3.org/TR/annotation-model/) and [*PROV-O*](https://www.w3.org/TR/prov-o/) were consulted for possible re-use. It was determined that the Web Annotation Model would not support the requirements outlined above and the reuse of desired PROV-O properties is limited by domain and range restrictions. CIDOC-CRM does possibly include the needed classes and properties; however future work is to evaluated whether reusing CIDOC would meet the desired semantics.
 <a name="summary">Summary of recommendations:</a>
 ---------------------------
--   Use  [**ex:ConservatorActivity**](http://bibliotek-o.org/ontology.html#ConservatorActivity)
+-   Use  [**ex:ConservatorActivity**](http://example.org/ConservatorActivity)
 
 -   Recommend use of [**seq:follows**](http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#follows) and [**seq:precedes**](http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes) predicates and drop [**vivo:rank**](http://www.essepuntato.it/lode/owlapi/http://vivoweb.org/ontology/core#d4e7099).
 
 -   Recommend use of [**frapo:hasOutput**](http://purl.org/cerif/frapo/hasOutput) and [**frapo:isOutputOf**](http://purl.org/cerif/frapo/isOutputOf)
 
--   Remove **"documenting"** from the definition of [**ex:ConservatorActivity**](http://bibliotek-o.org/1.1/ontology/ConservatorActivity)
+-   Remove **"documenting"** from the definition of [**ex:ConservatorActivity**](http://example.org/ConservatorActivity)
 
 -   Define the following new classes:
 > - ex:ConditionAssessmentActivity
@@ -38,9 +37,9 @@ One condition assessment can describe one or more physical conditions as an over
 > - ex:isInputTo/hasInput - domain/range open
 > - ex:describes/describedBy - domain/range open
 
--   New classes and properties should be included in bibliotek-o and not in a domain-extension ontology since at least three domain extensions identified use cases.
+-   New classes and properties should be included in a core ontology and not in separate domain-extension ontologies since at least three domain extensions identified use cases.
 
-<a name="biblioteko">bibliotek-o Approach to Activities Related to Physical Condition</a>
+<a name="raremat">RareMat Approach to Activities Related to Physical Condition</a>
 ----------------------------------------------------------------
 
 <a name="classes">**Involved Classes**</a>
@@ -123,12 +122,13 @@ One condition assessment can describe one or more physical conditions as an over
 > - **Inverse**: unspecified
 > - **Definition**: Geographic location or place entity associated with a resource or element of description, such as the place associated with the publication, printing, distribution, issue, release or production of a resource, place of an event.
 
-**dcterms:date** (Datatype property)
-> - **Label:** Date
-> - **URI:** [http://purl.org/dc/terms/date](http://purl.org/dc/terms/date)
-> - **Definition:** "A point or period of time associated with an event in the lifecycle of the resource."
-> - **Comment:**"Date may be used to express temporal information at any level of granularity. Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO.8601 [W3CDTF]."
-> - **Range:** rdfs:Literal
+**bf:date** 
+> - **Label**: Date
+> - **URI**: http://id.loc.gov/ontologies/bibframe/date
+> - **Domain**: unspecified 
+> - **Range**: unspecified
+> - **Definition**: Date designation associated with a resource or element of description, such as date of title variation; year a degree was awarded; date associated with the publication, printing, distribution, issue, release or production of a resource. May be date typed.
+> - **Comment**: Date may be used to express temporal information at any level of granularity.
 
 **ex:hasActivity** (Object property)
 > - **Label:** has Activity
@@ -303,12 +303,12 @@ assessment1 a ex:ConditionAssessment ;
 
 :activity1 a ex:ConditionAssessmentActivity ;
     ex:isActivityOf :item5 ;
-    dcterms:date "2010-12-01" ;
+    bf:date "2010-12-01" ;
     frapo:hasOutput :assessment1 .
 
 :activity2 a ex:ConditionAssessmentActivity ;
     ex:isActivityOf :item5 ;
-    dcterms:date "2017-05-31" ;
+    bf:date "2017-05-31" ;
     frapo:hasOutput :assessment2 .
 
 :assessment1 a ex:ConditionAssessment ;
