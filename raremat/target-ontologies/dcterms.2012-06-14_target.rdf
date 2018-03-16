@@ -22,7 +22,7 @@
         <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</dcterms:modified>
     </rdf:Description>
    
-    <!-- Used in pagination and foliation pattern -->
+    <!-- Used in pagination and foliation pattern and signature pattern -->
     
     <rdf:Description rdf:about="http://purl.org/dc/terms/description">
         <rdfs:label xml:lang="en">Description</rdfs:label>
