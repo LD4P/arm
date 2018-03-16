@@ -149,15 +149,15 @@ One condition assessment can describe one or more physical conditions as an over
 > - **Description:** Relates an agent to the activity it participated in.
 > - **Domain:** ex:Activity
 > - **Range:** ex:Agent
-> - **Inverse:** ex:hasAgent
+> - **Inverse:** bf:agent
 
-**ex:hasAgent** (Object property)
-> - **Label:** has agent
-> - **IRI:** [http://example.org/hasAgent](http://example.org/hasAgent)
-> - **Description:** Relates an activity to its agent.
-> - **Domain:** ex:Activity
-> - **Range:** ex:Agent
-> - **Inverse**: ex:isAgentOf
+**bf:agent** 
+> - **Label**: Associated agent
+> - **URI**: http://id.loc.gov/ontologies/bibframe/agent
+> - **Domain**: unspecified 
+> - **Range**: bf:Agent
+> - **Inverse**: 
+> - **Definition**: Relates an activity to its agent.
 
 **frapo:hasOutput** (Object property)
 > - **Label:** has output
