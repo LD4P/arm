@@ -111,19 +111,19 @@ Classes
 Properties
 --------
 **hasMaterial**
-> - **Options**: bf:material if LC agrees to our recommendation, or hasMaterial in our own namespace. Note that because we would be using rdau properties for base and applied materials, our property cannot be defined as a superproperty of these.
-> - **Label**: TBD
+> - **Label**: has material
 > - **URI**: TBD
-> - **Definition**: TBD
+> - **Definition**: Relates a resource to a physical or chemical substance that it consists of or is constructed from, either in whole or in part. 
+> - **Example**: Linen rag or wood pulp for paper, leather or cloth for a binding, bronze or glass for a sculpture, etc.
 > - **Domain**: unspecified
 > - **Range**: unspecified
 > - **Inverse**: isMaterialOf
 
 **isMaterialOf**
-> - **Options**: BIBFRAME term if LC agrees to our recommendation (see below), or define our own (see above for hasMaterial).
-> - **Label**: TBD
+> - **Label**: is material of
 > - **URI**: TBD
-> - **Definition**: TBD
+> - **Definition**: Relates a physical or chemical substance to an object that consists of or is constructed from it, either in whole or in part.
+> - **Example**: Linen rag or wood pulp for paper, leather or cloth for a binding, bronze or glass for a sculpture, etc.
 > - **Domain**: unspecified
 > - **Range**: unspecified
 > - **Inverse**: hasMaterial
@@ -132,37 +132,38 @@ Properties
 > - **Options**: bf:appliedMaterial if LC agrees to our recommendation, or rdau:P60159
 > - **Label**: TBD
 > - **URI**: TBD
-> - **Definition**: TBD
+> - **Definition**: Relates a resource to a physical or chemical substance applied to a base material of a resource. (rdau:P60159)
 > - **Domain**: unspecified
 > - **Range**: unspecified
-> - **Inverse**: isAppliedMaterialOf
 
 **isAppliedMaterialOf**
 > - **Options**: BIBFRAME term if LC agrees to our recommendation, or define our own as inverse of rdau:P60159.
-> - **Label**: TBD
+> - **Label**: is applied material of
 > - **URI**: TBD
-> - **Definition**: TBD
+> - **Definition**: Relates a physical or chemical substance to an object whose base material it is applied to. 
 > - **Domain**: unspecified
 > - **Range**: unspecified
-> - **Inverse**: hasAppliedMaterial
+> - **Inverse**: rdau:P60159
+> - **Subproperty of**: isMaterialOf
 
 **hasBaseMaterial**
 > - **Options**: bf:baseMaterial if LC agrees to our recommendation, or rdau:P60596
 > - **Label**: TBD
 > - **URI**: TBD
-> - **Definition**: TBD
+> - **Definition**: Relates a resource to an underlying physical material of a resource. (rdau:P60596)
 > - **Domain**: unspecified
 > - **Range**: unspecified
-> - **Inverse**: isBaseMaterialOf
+
 
 **isBaseMaterialOf**
 > - **Options**: BIBFRAME term if LC agrees to our recommendation (see below), or define our own as inverse of rdau:P60596.
-> - **Label**: TBD
+> - **Label**: is base material of
 > - **URI**: TBD
-> - **Definition**: TBD
+> - **Definition**: Relates a physical material to a resource of which it is the base. 
 > - **Domain**: unspecified
 > - **Range**: unspecified
-> - **Inverse**: hasBaseMaterial
+> - **Inverse**: rda:P60596
+> - **Subproperty of**: isMaterialOf
 
 **dcterms:hasPart**
 > - **Label**: Has Part
@@ -188,12 +189,14 @@ Properties
 > - **Scope note**: This property allows sub typing of CRM entities - a form of specialisation – through the use of a terminological hierarchy, or thesaurus. The CRM is intended to focus on the high-level entities and relationships needed to describe data structures. Consequently, it does not specialise entities any further than is required for this immediate purpose. However, entities in the isA hierarchy of the CRM may by specialised into any number of sub entities, which can be defined in the E55 Type hierarchy. E51 Contact Point, for example, may be specialised into “e-mail address”, “telephone number”, “post office box”, “URL” etc. none of which figures explicitly in the CRM hierarchy. Sub typing obviously requires consistency between the meaning of the terms assigned and the more general intent of the CRM entity in question.
 > - **Domain**: crm:E1_CRM_Entity
 > - **Range**: crm:E55_Type
+> - **Inverse**: crm:P2i_is_type_of
 
 **crm:P2i_is_type_of**
 > - **Label**: is type of
 > - **URI**: http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#P2
 > - **Domain**: crm:E55_Type
 > - **Range**: crm:E1_CRM_Entity
+> _ **Inverse**: crm:P2_has_type
 
 Note that crm:P2_has_type and its inverse are used to type an individual material resource within a taxonomic hierarchy, where the object is a named individual, as opposed to rdf:type with range rdfs:Class.
 
@@ -214,12 +217,12 @@ Note that ex is the namespace of the current model, while ex1 is the namespace o
 ===========
 ```
 :item a bf:Item ;
-    dcterms:hasPart :mount1.
+    dcterms:hasPart :mount.
 
- :mount1 a ex1:Mount ;
-     ex2:hasBaseMaterial :baseMaterial1 .
+ :mount a ex1:Mount ;
+     ex2:hasBaseMaterial :baseMaterial .
  
- :baseMaterial1 a crm:E57_Material ;
+ :baseMaterial a crm:E57_Material ;
       crm:P2_has_type :wood (plant material) ;
       rdau:P60558 :brown (color) .
 ```
