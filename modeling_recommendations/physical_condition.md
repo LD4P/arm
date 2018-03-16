@@ -15,6 +15,7 @@ ArtFrame and RareMat, 2017-08-10
 Several LD4P domain-specific ontology extension groups identified the need to describe the physical condition of an item, along with related condition assessment and conservation activities. Extension group members also described the use case of relating a specific condition assessment with the conservator activity that is triggered by the assessment. Further, it should be possible to relate this to a new physical condition that may be the result of the conservation activity. A high level of flexibility should be maintained since a condition assessment may take place without causing a conservator activity or a conservator activity may d take place without a prior formal condition assessment. None of these concepts are currently covered in BIBFRAME.
 
 [*CIDOC CRM*](http://www.cidoc-crm.org/), the [*Web Annotation Model*](https://www.w3.org/TR/annotation-model/) and [*PROV-O*](https://www.w3.org/TR/prov-o/) were consulted for possible re-use. It was determined that the Web Annotation Model would not support the requirements outlined above and the reuse of desired PROV-O properties is limited by domain and range restrictions. CIDOC-CRM does possibly include the needed classes and properties; however future work is to evaluated whether reusing CIDOC would meet the desired semantics.
+
 <a name="summary">Summary of recommendations:</a>
 ---------------------------
 -   Use  [**ex:ConservatorActivity**](http://example.org/ConservatorActivity)
