@@ -154,3 +154,6 @@ may be used as provided by the ontology.
     rdf:value "Some text about the attribution" .
 
 ```
+<a name="diagram">Diagram</a>
+-----------
+![Attribution](/modeling_recommendations/modeling_diagrams/attribution_diagram_2.png)
