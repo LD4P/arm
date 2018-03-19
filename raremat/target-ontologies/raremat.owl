@@ -69,6 +69,45 @@
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
+    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/MainTitleElement">
+        <rdfs:label xml:lang="en">Main title element</rdfs:label>   
+        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/TitleElement"/>
+        <skos:definition xml:lang="en">The main part of a title.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/NonSortElement">
+        <rdfs:label xml:lang="en">Non-sort element</rdfs:label>   
+        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/TitleElement"/>
+        <skos:definition xml:lang="en">The initial segment of a title that is removed for sorting.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class> 
+    
+    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/PartNameElement">
+        <rdfs:label xml:lang="en">Part name element</rdfs:label>   
+        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/TitleElement"/>
+        <skos:definition xml:lang="en">The part of a title that specifies the name of a part of the resource.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>       
+    
+    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/PartNumberElement">
+        <rdfs:label xml:lang="en">Part number element</rdfs:label>   
+        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/TitleElement"/>
+        <skos:definition xml:lang="en">The part of a title that specifies the number of a part of the resource.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class> 
+    
+    <owl:Class rdf:about="http://bibliotek-o.org/1.1/ontology/SubtitleElement">
+        <rdfs:label xml:lang="en">Subtitle element</rdfs:label>   
+        <rdfs:subClassOf rdf:resource="http://bibliotek-o.org/1.1/ontology/TitleElement"/>
+        <skos:definition xml:lang="en">The subtitle of a title.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>  
     
     <!-- Bibliographic Citations -->
     
@@ -229,11 +268,30 @@
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>
     
+    <owl:ObjectProperty rdf:about="http://example.org/hasOrigin">
+        <rdfs:label xml:lang="en">has origin</rdfs:label>    
+        <skos:definition xml:lang="en">Specifies the physical location from which this resource (e.g., a title) originates, such as spine, cover, container, etc.</skos:definition>
+        <skos:scopeNote xml:lang="en">Distinct from http://example.org/hasSource, which specifies an external organization or scheme from which the resource was obtained.</skos:scopeNote>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://example.org/hasPreferredTitle">
+        <rdfs:label xml:lang="en">has preferred title</rdfs:label>
+        <skos:definition xml:lang="en">Specifies the preferred title of this resource.</skos:definition>
+        <skos:scopeNote xml:lang="en">A resource may have multiple directly linked titles, among which this is the preferred title.</skos:scopeNote>
+        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/title"/>
+        <owl:inverseOf rdf:resource="http://example.org/isPreferredTitleOf"/>
+        <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+    
      <owl:ObjectProperty rdf:about="http://example.org/hasSource">
         <rdfs:label xml:lang="en">has source</rdfs:label>
         <skos:definition xml:lang="en">Relates this resource to the source from which it was derived.</skos:definition>
         <skos:scopeNote xml:lang="en">Has general applicability to many types of sources and resources.</skos:scopeNote>
-        <owl:inverseOf rdf:resource="http://example.org/1.1/ontology/isSourceOf"/>
+        <owl:inverseOf rdf:resource="http://example.org/isSourceOf"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>
@@ -270,6 +328,17 @@
         <skos:definition xml:lang="en">The resource being described is at the specified location.</skos:definition>
         <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Place"/> 
         <owl:inverseOf rdf:resource="http://id.loc.gov/ontologies/bibframe/place"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://bibliotek-o.org/1.1/ontology/isPreferredTitleOf">
+        <rdfs:label xml:lang="en">is preferred title of</rdfs:label>
+        <skos:definition xml:lang="en">Specifies the resource for which this is the preferred title.</skos:definition>
+        <skos:scopeNote xml:lang="en">A resource may have multiple directly linked titles, among which this is the preferred title.</skos:scopeNote>
+        <rdfs:subPropertyOf rdf:resource="http://example.org/titleOf"/>
+        <owl:inverseOf rdf:resource="http://bibliotek-o.org/1.1/ontology/hasPreferredTitle"/>
+        <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>
@@ -423,7 +492,123 @@
     
     <!-- DATATYPE PROPERTIES -->
     
+    <!-- NAMED INDIVIDUALS -->
 
+    <!-- Type http://id.loc.gov/ontologies/bibframe/Status -->
     
+    <owl:NamedIndividual rdf:about="http://bibliotek-o.org/1.1/ontology/cancelled">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
+        <rdfs:label xml:lang="en">cancelled</rdfs:label>
+        <skos:definition xml:lang="en">Applies to an identifier or other resource that has been cancelled.</skos:definition>
+        <dcterms:issued>2017-04-22T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2017-04-22T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://bibliotek-o.org/1.1/ontology/current">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
+        <rdfs:label xml:lang="en">current</rdfs:label>
+        <skos:definition xml:lang="en">Applies to an identifier or other resource that is currently valid.</skos:definition>
+        <dcterms:issued>2017-04-22T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2017-04-22T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://bibliotek-o.org/1.1/ontology/deprecated">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
+        <rdfs:label xml:lang="en">deprecated</rdfs:label>
+        <skos:definition xml:lang="en">Applies to an identifier or other resource that has been deprecated.</skos:definition>
+        <dcterms:issued>2017-04-22T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2017-04-22T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://bibliotek-o.org/1.1/ontology/invalid">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
+        <rdfs:label xml:lang="en">invalid</rdfs:label>
+        <skos:definition xml:lang="en">Applies to an identifier or other resource that is invalid.</skos:definition>
+        <dcterms:issued>2017-04-22T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2017-04-22T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    
+    <!-- Type http://bibliotek-o.org/1.1/ontology/Origin -->
+    
+    <owl:NamedIndividual rdf:about="http://bibliotek-o.org/1.1/ontology/addedTitlePage">
+        <rdf:type rdf:resource="http://bibliotek-o.org/1.1/ontology/Origin"/>
+        <rdfs:label xml:lang="en">added title page</rdfs:label>
+        <skos:definition xml:lang="en">Applies to a title appearing on a title page that has not been chosen as the chief source.</skos:definition>
+        <dcterms:issued>2017-04-22T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2017-04-22T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://bibliotek-o.org/1.1/ontology/binder">
+        <rdf:type rdf:resource="http://bibliotek-o.org/1.1/ontology/Origin"/>
+        <rdfs:label xml:lang="en">binder</rdfs:label>
+        <skos:definition xml:lang="en">Applies to a resource (e.g., a title) derived from a binding that is not that of the publisher.</skos:definition>
+        <dcterms:issued>2017-04-22T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2017-04-22T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://bibliotek-o.org/1.1/ontology/caption">
+        <rdf:type rdf:resource="http://bibliotek-o.org/1.1/ontology/Origin"/>
+        <rdfs:label xml:lang="en">caption</rdfs:label>
+        <skos:definition xml:lang="en">Applies to a resource (e.g., a title) given at the beginning of the first page of the text.</skos:definition>
+        <dcterms:issued>2017-04-22T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2017-04-22T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://bibliotek-o.org/1.1/ontology/container">
+        <rdf:type rdf:resource="http://bibliotek-o.org/1.1/ontology/Origin"/>
+        <rdfs:label xml:lang="en">container</rdfs:label>
+        <skos:definition xml:lang="en">Applies to a resource (e.g., a title) on the resource's container.</skos:definition>
+        <dcterms:issued>2017-04-22T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2017-04-22T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://bibliotek-o.org/1.1/ontology/cover">
+        <rdf:type rdf:resource="http://bibliotek-o.org/1.1/ontology/Origin"/>
+        <rdfs:label xml:lang="en">cover</rdfs:label>
+        <skos:definition xml:lang="en">Applies to a resource (e.g., a title) printed on the cover of a resource as issued.</skos:definition>
+        <dcterms:issued>2017-04-22T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2017-04-22T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://bibliotek-o.org/1.1/ontology/margin">
+        <rdf:type rdf:resource="http://bibliotek-o.org/1.1/ontology/Origin"/>
+        <rdfs:label xml:lang="en">margin</rdfs:label>
+        <skos:definition xml:lang="en">Applies to a resource printed on the top or bottom margin of each page of a publication (e.g., a running title).</skos:definition>
+        <dcterms:issued>2017-04-22T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2017-04-22T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://bibliotek-o.org/1.1/ontology/spine">
+        <rdf:type rdf:resource="http://bibliotek-o.org/1.1/ontology/Origin"/>
+        <rdfs:label xml:lang="en">spine</rdfs:label>
+        <skos:definition xml:lang="en">Applies to a resource found on the spine of a publication (e.g., a publisher's title).</skos:definition>
+        <dcterms:issued>2017-04-22T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2017-04-22T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://bibliotek-o.org/1.1/ontology/supplied">
+        <rdf:type rdf:resource="http://bibliotek-o.org/1.1/ontology/Origin"/>
+        <rdfs:label xml:lang="en">supplied</rdfs:label>
+        <skos:definition xml:lang="en">Supplied value, not directly transcribed from the resource itself.</skos:definition>
+        <dcterms:issued>2017-04-22T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2017-04-22T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://bibliotek-o.org/1.1/ontology/transcribed">
+        <rdf:type rdf:resource="http://bibliotek-o.org/1.1/ontology/Origin"/>
+        <rdfs:label xml:lang="en">transcribed</rdfs:label>
+        <skos:definition xml:lang="en">Value transcribed directly from the resource.</skos:definition>
+        <dcterms:issued>2017-04-22T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2017-04-22T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="http://bibliotek-o.org/1.1/ontology/translated">
+        <rdf:type rdf:resource="http://bibliotek-o.org/1.1/ontology/Origin"/>
+        <rdfs:label xml:lang="en">translated</rdfs:label>
+        <skos:definition xml:lang="en">Value translated from another language, not transcribed from the resource itself.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:NamedIndividual>
     
 </rdf:RDF>

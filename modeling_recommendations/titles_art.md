@@ -4,7 +4,7 @@ ArtFrame, 2017-10-06, updated 2018-02-05
 
 ____________________________________________________________________________________________________________________________
 NOTE: the following represents the direction taken by the ArtFrame group in the ontology development process and may not represent the final model. This pattern document was used internally to define a direction and is shared with the intention of contextualizing a pattern found within the ontology; terms specified below may not fully align to the ontology as published.
-Bibliotek-o properties and classes may get replaced with BIBFRAME terms or defined within the ArtFrame/RareMat ontology.
+bibliotek-o properties and classes will be replaced with BIBFRAME terms or defined within the ArtFrame/RareMat ontology.
 _____________________________________________________________________________________________________________________________
 
 Table of Contents
@@ -40,11 +40,11 @@ bibliotek-o, the BIBFRAME extension created by LD4L-Labs and the LD4P Ontology G
 After testing the bibliotek-o title model, the ArtFrame group agreed that it can generally be applied to art objects. The group also investigated specific art cataloging standards (such as CCO, CDWA and DCRM(G)) for other requirements unique to art objects. In particular, the group discussed title types listed in CCO Chapter 1, p. 49-50 ([*http://cco.vrafoundation.org/downloads/PartTwo_1-ObjectNaming.pdf*](http://cco.vrafoundation.org/downloads/PartTwo_1-ObjectNaming.pdf)) as well as CDWA ([*http://www.getty.edu/research/publications/electronic_publications/cdwa/4titles.html*](http://www.getty.edu/research/publications/electronic_publications/cdwa/4titles.html)). Most of these title types (e.g. creator’s title or repository title) are very relevant concepts, but can be expressed in other ways in a linked data environment. Two remaining title types were identified that need to be formally expressed in the ArtFrame ontology: exhibition title and translated title.
 
 > - **Recommendations:**
-Exhibition title will be addressed in the Exhibition Event Model. Translated title will be accomodated in the ArtFrame ontology as a named individual to be used with bib:origin. While ex:translated differs from most of the other named individuals in this category, including it follows precedent set by bib:supplied and bib:transcribed.
+Exhibition title will be addressed in the Exhibition Event Model. Translated title will be accomodated in the ArtFrame ontology as a named individual to be used with ex:origin. While ex:translated differs from most of the other named individuals in this category, including it follows precedent set by ex:supplied and ex:transcribed.
 
 > - **Title Origin**
 
-Title origins (the place from which a title originates, i.e. container, margin, spine) are less clearly defined for objects different from regular print books. Established owl:NamedIndividuals in bibliotek-o, such as bib:supplied and bib:transcribed should be applied where appropriate, along with the newly proposed ex:translated. No additional art specific named individuals will be defined within the ArtFrame namespace. DCRM(G) 1B2 states: Always make a note on the source of the title proper. The examples given are: Title from lower margin; Title from ink note on book of mount; title from item, etc. This list could potentially be endless. For the sake of consistency, this type of information will be recorded as a title origin using rdf:value.
+Title origins (the place from which a title originates, i.e. container, margin, spine) are less clearly defined for objects different from regular print books. Established owl:NamedIndividuals in bibliotek-o, such as ex:supplied and ex:transcribed should be applied where appropriate, along with the newly proposed ex:translated. No additional art specific named individuals will be defined within the ArtFrame namespace. DCRM(G) 1B2 states: Always make a note on the source of the title proper. The examples given are: Title from lower margin; Title from ink note on book of mount; title from item, etc. This list could potentially be endless. For the sake of consistency, this type of information will be recorded as a title origin using rdf:value.
 
 <a name="useCase">Relevant ArtFrame Use Case</a>
 --------
@@ -72,7 +72,7 @@ Subclasses of bf:VariantTitle: KeyTitle, AbbreviatedTitle, ParallelTitle, Collec
 
 ![bibliotek-o title classes](/modeling_recommendations/modeling_diagrams/art_titles_4_bibliotek-o.PNG)
 
-Named individuals to be used with bib:Origin: binder, caption, container, cover, margin, spine, supplied, transcribed 
+Named individuals to be used with ex:Origin: binder, caption, container, cover, margin, spine, supplied, transcribed 
 
 <a name="classes">Recommended Classes</a>
 --------
@@ -97,40 +97,45 @@ Named individuals to be used with bib:Origin: binder, caption, container, cover,
 > - **IRI:** http://id.loc.gov/ontologies/bibframe/Status
 > - **Definition:** Designation of the validity or position of something, e.g., whether something is incorrect or available.
 
-**bib:MainTitleElement**
+**ex:MainTitleElement**
 > - **Label**: Main title element
-> - **IRI:** http://bibliotek-o.org/1.1/ontology/MainTitleElement
+> - **IRI:** http://example.org/MainTitleElement
 > - **Definition:** The main part of a title.
-> - **Subclass of:** http://bibliotek-o.org/1.1/ontology/TitleElement
+> - **Subclass of:** http://example.org/TitleElement
 
-**bib:NonSortElement**
+**ex:NonSortElement**
 > - **Label**: Main title element
-> - **IRI:** http://bibliotek-o.org/1.1/ontology/NonSortElement
+> - **IRI:** http://example.org/NonSortElement
 > - **Definition:** The initial segment of a title that is removed for sorting.
-> - **Subclass of:** http://bibliotek-o.org/1.1/ontology/TitleElement
+> - **Subclass of:** http://example.org/TitleElement
 
-**bib:Origin**
+**ex:Origin**
 > - **Label**: Origin
-> - **IRI:** http://bibliotek-o.org/1.1/ontology/Origin
+> - **IRI:** http://example.org/Origin
 > - **Definition:** The place from which a resource (e.g., a title) originates, such as spine, cover, container, etc.
 
-**bib:PartNameElement**
+**ex:PartNameElement**
 > - **Label**: Part name element
-> - **IRI:** http://bibliotek-o.org/1.1/ontology/PartNameElement
+> - **IRI:** http://example.org/PartNameElement
 > - **Definition:** The part of a title that specifies the name of a part of the resource.
-> - **Subclass of:** http://bibliotek-o.org/1.1/ontology/TitleElement
+> - **Subclass of:** http://example.org/TitleElement
 
-**bib:PartNumberElement**
+**ex:PartNumberElement**
 > - **Label**: Part number element
-> - **IRI:** http://bibliotek-o.org/1.1/ontology/PartNumberElement
+> - **IRI:** http://example.org/PartNumberElement
 > - **Definition:** The part of a title that specifies the number of a part of the resource.
-> - **Subclass of:** http://bibliotek-o.org/1.1/ontology/TitleElement
+> - **Subclass of:** http://example.org/TitleElement
 
-**bib:SubTitleElement**
+**ex:SubTitleElement**
 > - **Label**: Subtitle element
-> - **IRI:** http://bibliotek-o.org/1.1/ontology/SubtitleElement
+> - **IRI:** http://example.org/SubtitleElement
 > - **Definition:** The subtitle of a title.
-> - **Subclass of:** http://bibliotek-o.org/1.1/ontology/TitleElement
+> - **Subclass of:** http://example.org/TitleElement
+
+**ex:TitleElement**
+> - **Label**: Title element
+> - **IRI:** http://example.org/TitleElement
+> - **Definition:** A part of a title, such as a subtitle, part number, or part name.
 
 <a name="properties">Recommended Properties</a>
 --------
@@ -142,11 +147,11 @@ Named individuals to be used with bib:Origin: binder, caption, container, cover,
 > - **Comment:** Used with Work, Instance or Item.
 > - **Range:** http://id.loc.gov/ontologies/bibframe/Title
 
-**bib:isTitleOf** (Object property)
+**ex:titleOf** (Object property)
 > - **Label:** is title of
-> - **IRI:** http://bibliotek-o.org/1.1/ontology/isTitleOf
-> - **Definition:** Resource of which this title is the title.
-> - **Skope note:** Expected value Work, Instance or Item.
+> - **IRI:** http://example.org/titleOf
+> - **Definition:** Resource that this title belongs to.
+> - **Scope note:** Expected value Work, Instance or Item.
 > - **Domain:** http://id.loc.gov/ontologies/bibframe/Title
 > - **Inverse:** http://id.loc.gov/ontologies/bibframe/title
 
@@ -164,57 +169,57 @@ Named individuals to be used with bib:Origin: binder, caption, container, cover,
 > - **Comment:** Used with Unspecified.
 > - **Range:** http://id.loc.gov/ontologies/bibframe/Status
 
-**bib:hasActivity** (Object property)
+**ex:hasActivity** (Object property)
 > - **Label:** has activity
-> - **IRI:** http://bibliotek-o.org/1.1/ontology/hasActivity
+> - **IRI:** http://example.org/hasActivity
 > - **Definition:** Relates this resource to an activity or contribution by a single agent that affects or alters its existence or state.
-> - **Range:** http://bibliotek-o.org/1.1/ontology/Activity
-> - **Inverse of:** http://bibliotek-o.org/1.1/ontology/isActivityOf
+> - **Range:** http://example.org/Activity
+> - **Inverse of:** http://example.org/isActivityOf
 
-**bib:isActivityOf** (Object property)
+**ex:isActivityOf** (Object property)
 > - **Label:** is activity of
-> - **IRI:** http://bibliotek-o.org/1.1/ontology/isActivityOf
+> - **IRI:** http://example.org/isActivityOf
 > - **Definition:** Relates an activity to the affected resource.
-> - **Domain:** http://bibliotek-o.org/1.1/ontology/Activity
-> - **Inverse of:** http://bibliotek-o.org/1.1/ontology/hasActivity
+> - **Domain:** http://example.org/Activity
+> - **Inverse of:** http://example.org/hasActivity
 
-**bib:hasOrigin** (Object property)
+**ex:hasOrigin** (Object property)
 > - **Label:** has origin
-> - **IRI:** http://bibliotek-o.org/1.1/ontology/hasOrigin
+> - **IRI:** http://example.org/hasOrigin
 > - **Definition:** Specifies the physical location from which this resource (e.g., a title) originates, such as spine, cover, container, etc.
-> - **Scope note:** Distinct from http://bibliotek-o.org/1.1/ontology/hasSource, which specifies an external organization or scheme from which the resource was obtained.
+> - **Scope note:** Distinct from http://example.org/hasSource, which specifies an external organization or scheme from which the resource was obtained.
 
-**bib:hasSource** (Object property)
+**ex:hasSource** (Object property)
 > - **Label:** has Source
-> - **IRI:** http://bibliotek-o.org/1.1/ontology/hasSource
+> - **IRI:** http://example.org/hasSource
 > - **Definition:** Relates this resource to the source from which it was derived.
 > - **Scope note:** Has general applicability to many types of sources and resources.
-> - **Inverse of:** http://bibliotek-o.org/1.1/ontology/isSourceOf
+> - **Inverse of:** http://example.org/isSourceOf
 
-**bib:isSourceOf** (Object property)
+**ex:isSourceOf** (Object property)
 > - **Label:** is source of
-> - **IRI:** http://bibliotek-o.org/1.1/ontology/isSourceOf
+> - **IRI:** http://example.org/isSourceOf
 > - **Definition:** Relates this resource to a resource of which it is the source.
 > - **Scope note:** Has general applicability to many types of sources and resources.
-> - **Inverse of:** http://bibliotek-o.org/1.1/ontology/hasSource
+> - **Inverse of:** http://example.org/hasSource
 
-**bib:hasPreferredTitle** (Object property)
+**ex:hasPreferredTitle** (Object property)
 > - **Label:** has preferred title
-> - **IRI:** http://bibliotek-o.org/1.1/ontology/hasPreferredTitle
+> - **IRI:** http://example.org/hasPreferredTitle
 > - **Definition:** Specifies the preferred title of this resource.
 > - **Scope note:** A resource may have multiple directly linked titles, among which this is the preferred title.
 > - **Subproperty of: http://id.loc.gov/ontologies/bibframe/title
 > - **Range:** http://id.loc.gov/ontologies/bibframe/Title
-> - **Inverse of:** http://bibliotek-o.org/1.1/ontology/isPreferredTitleOf
+> - **Inverse of:** http://example.org/isPreferredTitleOf
 
-**bib:isPreferredTitleOf** (Object property)
+**ex:isPreferredTitleOf** (Object property)
 > - **Label:** is preferred title of
-> - **IRI:** http://bibliotek-o.org/1.1/ontology/isPreferredTitleOf
+> - **IRI:** http://example.org/isPreferredTitleOf
 > - **Definition:** Specifies the resource for which this is the preferred title.
 > - **Scope note:** A resource may have multiple directly linked titles, among which this is the preferred title.
-> - **Subproperty of: http://bibliotek-o.org/1.1/ontology/isTitleOf
+> - **Subproperty of: http://example.org/isTitleOf
 > - **Domain:** http://id.loc.gov/ontologies/bibframe/Title
-> - **Inverse of:** http://bibliotek-o.org/1.1/ontology/hasPreferredTitle
+> - **Inverse of:** http://example.org/hasPreferredTitle
 
 **dcterms:hasPart**
 > - **Label:** Has Part
@@ -230,37 +235,35 @@ resource.
 <a name="individuals">Recommended Named Individuals</a>
 --------
 
-**bib:invalid**
+**ex:invalid**
 > - **Label:** invalid
-> - **IRI:** http://bibliotek-o.org/1.1/ontology/invalid
+> - **IRI:** http://example.org/invalid
 > - **Definition:** Applies to an identifier or other resource that is invalid.
 > - **Belongs to:** http://id.loc.gov/ontologies/bibframe/Status
 
-> - *Note: Note: All available title origin named individuals defined in bibliotek-o may be used if applicable, e.g.:*
-
-**bib:caption**
+**ex:caption**
 > - **Label:** caption
-> - **IRI:** http://bibliotek-o.org/1.1/ontology/caption
+> - **IRI:** http://example.org/caption
 > - **Definition:** Applies to a resource (e.g., a title) given at the beginning of the first page of the text.
-> - **Belongs to:** http://bibliotek-o.org/1.1/ontology/Origin
+> - **Belongs to:** http://example.org/Origin
 
-**bib:supplied**
+**ex:supplied**
 > - **Label:** supplied
-> - **IRI:** http://bibliotek-o.org/1.1/ontology/supplied
+> - **IRI:** http://example.org/supplied
 > - **Definition:** Supplied value, not directly transcribed from the resource itself.
-> - **Belongs to:** http://bibliotek-o.org/1.1/ontology/Origin
+> - **Belongs to:** http://example.org/Origin
 
-**bib:transcribed**
+**ex:transcribed**
 > - **Label:** supplied
-> - **IRI:** http://bibliotek-o.org/1.1/ontology/transcribed
+> - **IRI:** http://example.org/transcribed
 > - **Definition:** Value transcribed directly from the resource.
-> - **Belongs to:** http://bibliotek-o.org/1.1/ontology/Origin
+> - **Belongs to:** http://example.org/Origin
 
 **ex:translated**
 > - **Label:** translated
 > - **IRI:** TBD
 > - **Definition:** Value translated from another language, not transcribed from the resource itself.
-> - **Belongs to:** http://bibliotek-o.org/1.1/ontology/Origin
+> - **Belongs to:** http://example.org/Origin
 
 <a name="diagrams">Diagrams</a>
 --------
@@ -284,24 +287,24 @@ Translated title
 ```
 :instance1 a bf:Instance ;
  bf:isInstanceOf :w1 ;
- bib:hasPreferredTitle :t1 .
+ ex:hasPreferredTitle :t1 .
 
 :t1 a bf:Title ;
- bib:isPreferredTitleOf :instance1 ;
+ ex:isPreferredTitleOf :instance1 ;
  rdf:value "Burial of Famine Victim,  
  Hengyang, China" ;
- bib:hasOrigin :transcribed ; origin1 ;
+ ex:hasOrigin :transcribed ; origin1 ;
  dcterms:hasPart :mainTitleElement1 .
 
-:mainTitleElement1 a bib:MainTitleElement ;
+:mainTitleElement1 a ex:MainTitleElement ;
  rdf:value “Burial of Famine Victim,
  Hengyang, China” ;
  dcterms:isPartOf :t2 .
 
-bib:transcribed a owl:NamedIndividual, bib:Origin ;
+ex:transcribed a owl:NamedIndividual, ex:Origin ;
  rdfs:label "transcribed" .
 
-:origin1 a bib:Origin ;
+:origin1 a ex:Origin ;
 rdf:value “verso” .
 
 ```
@@ -309,36 +312,36 @@ rdf:value “verso” .
 
 ```
 :w1 a bf:Work ;
- bib:hasPreferredTitle :t1 ;
+ ex:hasPreferredTitle :t1 ;
  bf:hasInstance :instance1, :instance2 .
 
 :t1 a bf:Title ;
- bib:isPreferredTitleOf :w1 ;
+ ex:isPreferredTitleOf :w1 ;
  rdf:value "Barracks near Segezha
  Station"@en ;
  dcterms:hasPart :mainTitleElement1 .
  
-:mainTitleElement1 a bib:MainTitleElement ;
+:mainTitleElement1 a ex:MainTitleElement ;
  rdf:value "Barracks near Segezha
  Station"@en ;
  dcterms:isPartOf :t1.
 
 :instance1 a bf:Instance ;
  bf:isInstanceOf :w1 ;
- bib:hasPreferredTitle :t2 ;
+ ex:hasPreferredTitle :t2 ;
  bf:genreForm :negatives (photographs) ;
  bf:title :t2 .
  
 :t2 a bf:Title ;
- bib:isPreferredTitleOf :instance1 ;
+ ex:isPreferredTitleOf :instance1 ;
  rdf:value "Barracks near Segezha
  Station"@en ;
- bib:origin bib:supplied ;
- bib:hasSource :source1 ;
+ ex:origin ex:supplied ;
+ ex:hasSource :source1 ;
   bf:note :note1 .
  dcterms:hasPart :mainTitleElement2 .
  
- :mainTitleElement2 a bib:MainTitleElement ;
+ :mainTitleElement2 a ex:MainTitleElement ;
  rdf:value "Barracks near Segezha
  Station"@en ;
  dcterms:isPartOf :t2 .
@@ -350,63 +353,63 @@ rdf:value “verso” .
 rdf:value "http://prokudin-gorsky.org/?lang=en"^^xsd:anyURI .
  
 :instance2 a bf:Instance ;
- bib:hasPreferredTitle :t3 ;
+ ex:hasPreferredTitle :t3 ;
  bf:title :t4 ;
  bf:genreForm :photographic prints ;
  bf:isInstanceOf :w1 .
 
 :t3 a bf:Title ;
- bib:isPreferedTitleOf :instance2 ;
+ ex:isPreferedTitleOf :instance2 ;
  rdf:value "Barracks near Segezha
  Station"@en ;
- bib:origin bib:supplied ;
- bib:hasSource :source1 ;
+ ex:origin ex:supplied ;
+ ex:hasSource :source1 ;
  bf:note :note1 ;
  dcterms:hasPart :mainTitleElement3 .
 
-:mainTitleElement3 a bib:MainTitleElement ;
+:mainTitleElement3 a ex:MainTitleElement ;
  rdf:value "Barracks near Segezha
  Station"@en ;
  dcterms:isPartOf :t3 .
 
 :t4 a bf:Title ;
- bib:isTitleOf :instance2 ;
+ ex:isTitleOf :instance2 ;
  rdf:value "Baraki dli︠a︡ voennopi︠e︡nnykh u st.
  Segezh (Prisoner of war barracks near the
  Segezh Station)" ;
  dcterms:hasPart :mainTitleElement4 ;
- bib:origin bib:transcribed, bib:caption ;
- bf:status bib:invalid ;
+ ex:origin ex:transcribed, ex:caption ;
+ bf:status ex:invalid ;
  bf:note :note2 .
  
  :note2 a bf:Note ;
  rdfs:label "Incorrect caption in album" .
 
-bib:supplied a owl:NamedIndividual , bib:Origin ;
+ex:supplied a owl:NamedIndividual , ex:Origin ;
  rdfs:label "supplied" .
 
-bib:transcribed a owl:NamedIndividual , bib:Origin ;
+ex:transcribed a owl:NamedIndividual , ex:Origin ;
  rdfs:label "transcribed" .
 
 **Example for title change**
 
 :w1 a bf:Work ;
- bib:hasActivity :c1 ;
- bib:hasPreferredTitle :title1 ;
+ ex:hasActivity :c1 ;
+ ex:hasPreferredTitle :title1 ;
  bf:title :title2, :title3, :title4 .
 
-:c1 a bib:ArtistActivity ;
- bib:hasAgent <http://id.loc.gov/rwo/agents/n80061185> .
+:c1 a ex:ArtistActivity ;
+ ex:hasAgent <http://id.loc.gov/rwo/agents/n80061185> .
 
 :title1 a bf:Title ;
  rdf:value "Swimming" ;
- bib:isPreferredTitleOf :w1 ;
+ ex:isPreferredTitleOf :w1 ;
  dcterms:hasPart :MainTitleElement1 ; 
  bf:note :note1 ;
- bib:hasSource <http://worldcat.org/entity/work/id/36654331> , 
+ ex:hasSource <http://worldcat.org/entity/work/id/36654331> , 
 <http://id.loc.gov/rwo/agents/n80061185> .
 
-:MainTitleElement1 a bib:MainTitleElement ;
+:MainTitleElement1 a ex:MainTitleElement ;
  dcterms:isPartOf :title1 ;
  rdfs:label "Swimming" .
 
@@ -421,17 +424,17 @@ bib:transcribed a owl:NamedIndividual , bib:Origin ;
  bf:isTitleOf :w1 ;
   rdf:value "Swimming hole" ;
  dcterms:hasPart :MainTitleElement2 ;
- bib:hasSource :source2 .
+ ex:hasSource :source2 .
 
 :source2 a bf:Source ;
- bib:isSourceOf :title2 ;
+ ex:isSourceOf :title2 ;
  rdf:value "Britannica Micro., 1995:
  v. 4, p. 315 (Eakins, Thomas; treading water
  next to his setter dog Harry and watching a
  group of students swimming in "The 
  Swimming Hole.")" .
 
-:MainTitleElement2 a bib:MainTitleElement ;
+:MainTitleElement2 a ex:MainTitleElement ;
  dcterms:isPartOf :title2 ;
  rdf:value "Swimming hole" .
 
@@ -439,9 +442,9 @@ bib:transcribed a owl:NamedIndividual , bib:Origin ;
  bf:isTitleOf :w1 ;
  rdf:value "Old swimming hole" ;
  dcterms:hasPart :MainTitleElement3 ;
- bib:hasSource <http://worldcat.org/entity/work/id/36654331> .
+ ex:hasSource <http://worldcat.org/entity/work/id/36654331> .
 
-:MainTitleElement3 a bib:MainTitleElement ;
+:MainTitleElement3 a ex:MainTitleElement ;
  dcterms:isPartOf :title3 ;
  rdf:value "Old swimming hole" .
 
@@ -449,9 +452,9 @@ bib:transcribed a owl:NamedIndividual , bib:Origin ;
  bf:isTitleOf :w1 ;
  rdf:value "Swimmers" ;
  dcterms:hasPart :MainTitleElement4 ;
- bib:hasSource <http://worldcat.org/entity/work/id/36654331> .
+ ex:hasSource <http://worldcat.org/entity/work/id/36654331> .
 
-:MainTitleElement4 a bib:MainTitleElement ;
+:MainTitleElement4 a ex:MainTitleElement ;
  dcterms:isPartOf :title4 ;
  rdfs:label "Swimmers" .
 
@@ -459,24 +462,24 @@ bib:transcribed a owl:NamedIndividual , bib:Origin ;
 **Work in multiple languages**
 ```
 :w1 a bf:Work ;
- bib:hasActivity :c1 ;
- bib:hasPreferredTitle :title1 ;
+ ex:hasActivity :c1 ;
+ ex:hasPreferredTitle :title1 ;
  bf:title :title2, :title3, :title4 .
 
-:c1 a bib:ArtistActivity ;
- bib:hasAgent <http://id.loc.gov/rwo/agents/n78086005> .
+:c1 a ex:ArtistActivity ;
+ ex:hasAgent <http://id.loc.gov/rwo/agents/n78086005> .
 
 :title1 a bf:Title;
- bib:isPreferredTitleOf :w1 ;
+ ex:isPreferredTitleOf :w1 ;
  rdf:value "Les Demoiselles d'Avignon"@fr ;
  dcterms:hasPart :mainTitleElement1, :nonSort1 ;
- bib:hasSource <http://id.loc.gov/rwo/agents/n79021281> .
+ ex:hasSource <http://id.loc.gov/rwo/agents/n79021281> .
 
-:mainTitleElement1 a bib:MainTitleElement ;
+:mainTitleElement1 a ex:MainTitleElement ;
  dcterms:isPartOf :title1 ;
  rdf:value "Demoiselles d'Avignon"@fr .
 
-:nonSort1 a bib:NonSortElement ;
+:nonSort1 a ex:NonSortElement ;
  dcterms:isPartOf :title1 ;
  rdf:value "Les"@fr .
 
@@ -484,9 +487,9 @@ bib:transcribed a owl:NamedIndividual , bib:Origin ;
  bf:isTitleOf :w1 ;
  rdf:value "Young ladies of Avignon"@en ;
  dcterms:hasPart :mainTitleElement2 ;
- bib:hasSource :source1 .
+ ex:hasSource :source1 .
 
-:mainTitleElement2 a bib:MainTitleElement ;
+:mainTitleElement2 a ex:MainTitleElement ;
  dcterms:isPartOf :title2 ;
  rdf:value "Young ladies of Avignon"@en .
 
@@ -501,9 +504,9 @@ bib:transcribed a owl:NamedIndividual , bib:Origin ;
  bf:isTitleOf :w1 ;
  rdf:value "Avignon brothel"@en ;
  dcterms:hasPart :mainTitleElement3 ;
- bib:hasSource <http://worldcat.org/entity/work/id/56688045> .
+ ex:hasSource <http://worldcat.org/entity/work/id/56688045> .
 
-:mainTitleElement3 a bib:MainTitleElement ;
+:mainTitleElement3 a ex:MainTitleElement ;
  dcterms:isPartOf :title3 ;
  rdf:value "Avignon brothel"@en .
 
@@ -511,13 +514,13 @@ bib:transcribed a owl:NamedIndividual , bib:Origin ;
  bf:isTitleOf :w1 ;
  rdf:value "Le Bordel"@fr ;
  dcterms:hasPart :mainTitleElement4, :nonSort2 ;
- bib:hasSource <http://worldcat.org/entity/work/id/3901310255> .
+ ex:hasSource <http://worldcat.org/entity/work/id/3901310255> .
 
-:mainTitleElement4 a bib:MainTitleElement ;
+:mainTitleElement4 a ex:MainTitleElement ;
  dcterms:isPartOf :title4 ;
  rdf:value "Bordel"@fr .
 
-:nonSort4 a bib:NonSortElement ;
+:nonSort4 a ex:NonSortElement ;
  dcterms:isPartOf :title4 ;
  rdf:value "Le"@fr .
  
@@ -526,16 +529,16 @@ bib:transcribed a owl:NamedIndividual , bib:Origin ;
 
 ```
 :w1 a bf:Work ;
- bib:hasPreferredTitle :title1 ;
+ ex:hasPreferredTitle :title1 ;
  bf:title :title2 ;
  bf:hasInstance :instance1 .
 
 :title1 a bf:Title ;
- bib:isPreferredTitleOf :w1 ;
+ ex:isPreferredTitleOf :w1 ;
  rdf:value "I [love] Venice"@en ;
  dcterms:hasPart :mainTitleElement1 .
 
-:mainTitleElement1 a bib:MainTitleElement ;
+:mainTitleElement1 a ex:MainTitleElement ;
  dcterms:isPartOf :title1 ;
  rdf:value "I [love] Venice"@en .
 
@@ -545,25 +548,25 @@ bib:transcribed a owl:NamedIndividual , bib:Origin ;
  rdf:value "I heart Venice"@en ;
  dcterms:hasPart :mainTitleElement2 .
 
-:mainTitleElement2 a bib:MainTitleElement ;
+:mainTitleElement2 a ex:MainTitleElement ;
  dcterms:isPartOf :title2 ;
  rdf:value "I heart Venice"@en .
   :instance1 a bf:Instance
  bf:isInstanceOf :w1 ;
- bib:hasPreferredTitle :title3 ;
+ ex:hasPreferredTitle :title3 ;
  bf:title :title4 .
  
 :title3 a bf:Title ;
- bib:isPreferredTitleOf :instance1 ;
+ ex:isPreferredTitleOf :instance1 ;
  rdf:value "I [love] Venice : portable pocket ashtray"@en ;
  dcterms:hasPart :mainTitleElement3, :subtitle1 ;
  bf:note :note1 .
 
-:mainTitleElement3 a bib:MainTitleElement ;
+:mainTitleElement3 a ex:MainTitleElement ;
  dcterms:isPartOf :title3 ;
  rdf:value "I [love] Venice"@en .
 
-:subtitle1 a bib:SubTitleElement ;
+:subtitle1 a ex:SubTitleElement ;
  dcterms:isPartOf :title3 ;
  rdf:value "portable pocket ashtray"@en .
 
@@ -572,11 +575,11 @@ bib:transcribed a owl:NamedIndividual , bib:Origin ;
  rdf:value "I heart Venice : portable pocket ashtray"@en ;
  dcterms:hasPart :mainTitleElement4, :subtitle2 .
 
-:mainTitleElement4 a bib:MainTitleElement ;
+:mainTitleElement4 a ex:MainTitleElement ;
  dcterms:isPartOf :title2 ;
  rdf:value "I heart Venice"@en .
 
-:subtitle2 a bib:SubTitleElement ;
+:subtitle2 a ex:SubTitleElement ;
  dcterms:isPartOf :title2 ;
  rdfs:value "portable pocket ashtray"@en .
 
@@ -590,24 +593,24 @@ bib:transcribed a owl:NamedIndividual , bib:Origin ;
  ```
  :instance1 a bf:Instance
  bf:isInstanceOf :w1 ;
- bib:hasPreferredTitle :title1 .
+ ex:hasPreferredTitle :title1 .
 
 :title1 a bf:Title ;
- bib:isPreferredTitleOf :instance1 ;
+ ex:isPreferredTitleOf :instance1 ;
  rdf:value "New York City : Newspaper Row 
  on an Election Night : Announcing the Returns ;
  dcterms:hasPart :mainTitleElement1, :subtitle1, :subtitle2 ;
- bib:origin :transcribed .
+ ex:origin :transcribed .
 
-:mainTitleElement1 a bib:MainTitleElement ;
+:mainTitleElement1 a ex:MainTitleElement ;
  dcterms:isPartOf :title1 ;
  rdf:value "New York City"@en ;
  vivo:rank 1 .
 
-:subtitle1 a bib:SubtitleElement ;
+:subtitle1 a ex:SubtitleElement ;
  rdfs:label “Newspaper Row on an Election Night”@en ;
  vivo:rank 2 .    
  
-:subtitle2 a bib:SubtitleElement ;
+:subtitle2 a ex:SubtitleElement ;
  rdfs:label “Announcing the Returns”@en ;
  vivo:rank 3 .
