@@ -52,6 +52,14 @@
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
+    <owl:Class rdf:about="http://example.org/BoundCollection">
+        <rdfs:label xml:lang="en">Bound collection</rdfs:label>
+        <skos:definition xml:lang="en">An artificial gathering of two or more items physically into or on a single carrier, whether bound, affixed, or otherwise brought together into a single bound unit, and lacking a collective title. Includes only collections gathered subsequent to publication, rather than issued or reissued together by the publisher.</skos:definition>
+        <skos:scopeNote xml:lang="en"></skos:scopeNote>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
     <owl:Class rdf:about="http://example.org/DustJacket">
         <rdfs:subClassOf rdf:resource="http://example.org/Enclosure"/>
         <rdfs:label xml:lang="en">DustJacket</rdfs:label>
@@ -337,7 +345,23 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
+    
+    <owl:ObjectProperty rdf:about="http://example.org/atLocation">
+        <rdfs:label xml:lang="en">at location</rdfs:label>
+        <skos:definition xml:lang="en">The resource being described is at the specified location.</skos:definition>
+        <owl:inverseOf rdf:resource="http://example.org/isLocationOf"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
 
+    <owl:ObjectProperty rdf:about="http://example.org/carries">
+        <rdfs:label xml:lang="en">carries</rdfs:label>
+        <skos:definition xml:lang="en">A particular physical form, such as a volume, a sheet of paper, or a computer disk, contains or has on it the resource being described.</skos:definition>
+        <owl:inverseOf rdf:resource="http://example.org/isOnCarrier"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+    
     <owl:ObjectProperty rdf:about="http://example.org/hasActivity">
         <rdfs:label xml:lang="en">has activity</rdfs:label>
         <skos:definition xml:lang="en">Relates this resource to an activity or contribution by a single agent that affects or alters its existence or state.</skos:definition>
@@ -395,9 +419,16 @@
     
     <owl:ObjectProperty rdf:about="http://example.org/isLocationOf">
         <rdfs:label xml:lang="en">is location of</rdfs:label>
-        <skos:definition xml:lang="en">The resource being described is at the specified location.</skos:definition>
-        <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Place"/> 
-        <owl:inverseOf rdf:resource="http://id.loc.gov/ontologies/bibframe/place"/>
+        <skos:definition xml:lang="en">The specified resource is at the location being described.</skos:definition>
+        <owl:inverseOf rdf:resource="http://example.org/atLocation"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+ 
+    <owl:ObjectProperty rdf:about="http://example.org/isOnCarrier">
+        <rdfs:label xml:lang="en">is on carrier</rdfs:label>
+        <skos:definition xml:lang="en">The resource being described is on or contained in a particular physical form, such as a volume, a sheet of paper, or a computer disk.</skos:definition>
+        <owl:inverseOf rdf:resource="http://example.org/carries"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>

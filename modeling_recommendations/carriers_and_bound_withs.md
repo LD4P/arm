@@ -17,7 +17,7 @@ An individual resource in a bound-with may have its own particular custodial his
 
 Not all carriers are considered collections in the way bound-withs are, however. In the case of two paintings on a single sheet, for example, one may wish to describe the individual paintings, but the sheet would not constitute a “collection” and likely does not need its own description.
 
-BIBFRAME bf:carrier / bf:Carrier cannot be applied to our use cases because they are used for instance- rather than item-level description. In addition, bf:carrier indicates the type of carrier (“Categorization reflecting the format of the storage medium and housing of a carrier”), not a relationship between resources on a carrier and the carrier. 
+BIBFRAME bf:carrier/bf:Carrier cannot be applied to our use cases because they are used for instance- rather than item-level description. In addition, bf:carrier indicates the type of carrier (“Categorization reflecting the format of the storage medium and housing of a carrier”), not a relationship between resources on a carrier and the carrier. 
 
 Note that the relationships among the parts of a bound-with or items that share a carrier can be derived from the relationships of the parts to the whole, and it would therefore be redundant to define predicates for the part-part relationships. 
 
@@ -73,7 +73,7 @@ Classes
 **ex:BoundCollection**
 > - **URI:** TBD
 > - **Label:** Bound collection
-> - **Definition:** An artificial gathering of two or more items physically into or on a single carrier, whether bound, affixed, or otherwise brought together into a single bound unit, and lacking a collective title.
+> - **Definition:** An artificial gathering of two or more items physically into or on a single carrier, whether bound, affixed, or otherwise brought together into a single bound unit, and lacking a collective title. Includes only collections gathered subsequent to publication, rather than issued or reissued together by the publisher.
 
 **bf:Item**
 > - **URI:** http://id.loc.gov/ontologies/bibframe/Item
@@ -194,17 +194,17 @@ Properties
 **ex:isOnCarrier** (Object Property)
 > - **URI:** TBD
 > - **Label:** is on carrier
-> - **Definition:**
-> - **Domain:** bf:Item
+> - **Definition:** The item being described is on or contained in a particular physical form, such as a volume, a sheet of paper, or a computer disk.
+> - **Domain:** Unspecified
 > - **Range:** Unspecified
 > - **Inverse:** ex:carries
 
 **ex:carries** (Object Property)
 > - **URI:** TBD
 > - **Label:** carries
-> - **Definition:**
-> - **Domain:**
-> - **Range:** bf:Item
+> - **Definition:** A particular physical form, such as a volume, a sheet of paper, or a computer disk, contains or has on it the item being described.
+> - **Domain:** Unspecified
+> - **Range:** Unspecified
 > - **Inverse:** ex:isOnCarrier
 
 Sample RDF
