@@ -16,7 +16,13 @@
     xmlns:voaf="http://purl.org/vocommons/voaf#"
     > 
     
-    <!-- ONTOLOGY DECLARATION -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // ONTOLOGY DECLARATION
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
     
     <owl:Ontology rdf:about="http://example.org/">
         <owl:ontologyIRI rdf:resource="http://example.org/"/>
@@ -32,7 +38,13 @@
     </owl:Ontology>
     
     
-    <!-- CLASSES -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // CLASSES
+    //
+    /////////////////////////////////////////////////////////////////////////////////////// 
+    -->
     
     <owl:Class rdf:about="http://example.org/AccessionNumber">
         <rdfs:label xml:lang="en">Accession Number</rdfs:label>    
@@ -52,7 +64,7 @@
     </owl:Class>
     
     
-    <!-- CustodialEvent Classes -->
+    <!-- ////////// CustodialEvent Classes ////////// -->
     
     <owl:Class rdf:about="http://example.org/CustodialEvent">
         <rdfs:label xml:lang="en">Custodial event</rdfs:label>    
@@ -253,7 +265,7 @@
     </owl:Class>
     
     
-    <!-- Related Activities -->
+    <!-- ////////// Related Activities ////////// -->
     
     <owl:Class rdf:about="http://example.org/AccessionerActivity">
         <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
@@ -448,7 +460,13 @@
     </owl:Class>
     
    
-    <!-- OBJECT PROPERTIES -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // OBJECT PROPERTIES
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
     
     <owl:ObjectProperty rdf:about="http://example.org/accessionedBy">
         <rdfs:label xml:lang="en">accessioned by</rdfs:label>    

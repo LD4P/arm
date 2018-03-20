@@ -2,10 +2,10 @@
 <!-- 
     WARNING:  THIS IS A WORKING DRAFT ONTOLOGY AND STILL UNDER DEVELOPMENT, this file will change frequently and significantly as development continues.
     
-    Note:  http://measurement.example.org/ is a placeholder (fake) namespace for the LD4P/L Measurements ontology extension until a proper home is found
+    Note:  http://example.org/ is a placeholder (fake) namespace for the LD4P/L Measurements ontology extension until a proper home is found
   -->
 
-<rdf:RDF xmlns="http://measurement.example.org/"
+<rdf:RDF xmlns="http://example.org/"
     xmlns:bf="http://id.loc.gov/ontologies/bibframe/" 
     xmlns:dcterms="http://purl.org/dc/terms/" 
     xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -17,23 +17,36 @@
     xmlns:vann="http://purl.org/vocab/vann/"
     xmlns:voaf="http://purl.org/vocommons/voaf#">
 
-    <!-- ONTOLOGY DECLARATION -->
-
-    <owl:Ontology rdf:about="http://measurement.example.org/">
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version
-            0.0</owl:versionInfo>
-        <rdfs:label xml:lang="en">ArtFrame: extension ontology for describing art
-            materials</rdfs:label>
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // ONTOLOGY DECLARATION
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+    <owl:Ontology rdf:about="http://example.org/"> <!-- update domain when known -->
+        <owl:ontologyIRI rdf:resource="http://example.org/"/> <!-- update domain when known -->
+        <owl:versionIRI rdf:resource="http://example.org/"/>   <!-- update domain and version number when known -->
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1</owl:versionInfo>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+        <rdfs:label xml:lang="en">Measurement Ontology</rdfs:label>
+        <rdfs:comment xml:lang="en">The Measurement Ontology provides terms to model physical, digital, or other types of measurements. Appropriate vocabularies may be selected by the implementer for units, dimensions, arrangements, and resources measured.</rdfs:comment>
         <vann:preferredNamespacePrefix>meas</vann:preferredNamespacePrefix>
-        <rdfs:comment xml:lang="en">This measurements ontology was developed as a stand alone
-            ontology as part of the bibliotek-o BIBFRAME 2.0 extension ontology
-            project</rdfs:comment>
+        <dcterms:title xml:lang="en">Measurement Ontology</dcterms:title>
     </owl:Ontology>
+    
 
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // CLASSES
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-    <!-- CLASSES -->
-
-    <owl:Class rdf:about="http://measurement.example.org/MeasurementGroup">
+    <owl:Class rdf:about="http://example.org/MeasurementGroup">
         <rdfs:label>Measurement Group</rdfs:label>
         <skos:definition xml:lang="en-us">A set of measurements pertaining to a specific resource,
             part of a resource, or resource in a particular arrangement. For example, a book may
@@ -43,7 +56,7 @@
             Measurements attached to it.</skos:definition>
     </owl:Class>
 
-    <owl:Class rdf:about="http://measurement.example.org/Measurement">
+    <owl:Class rdf:about="http://example.org/Measurement">
         <rdfs:label>Measurement</rdfs:label>
         <skos:definition xml:lang="en-us">The measurement of a single aspect of a resource,
             including value, units, and the dimension measured. For example, a book may have a
@@ -51,7 +64,7 @@
             a MeasurementGroup.</skos:definition>
     </owl:Class>
 
-    <owl:Class rdf:about="http://measurement.example.org/Arrangement">
+    <owl:Class rdf:about="http://example.org/Arrangement">
         <rdfs:label>Arrangement</rdfs:label>
         <skos:definition xml:lang="en-us">The arrangement, organization, or configuration of a
             single object or collection of objects. For example, a parchment may be rolled or
@@ -59,88 +72,95 @@
             are organized and ordered in a specific way.</skos:definition>
     </owl:Class>
 
-    <!-- OBJECT PROPERTIES -->
 
-    <owl:ObjectProperty rdf:about="http://measurement.example.org/hasMeasurementGroup">
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // OBJECT PROPERTIES
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/hasMeasurementGroup">
         <rdfs:label xml:lang="en">has measurement group</rdfs:label>
         <skos:definition xml:lang="en">The relationship of a resource to a measurement group,
             indicating that the measurement group applies to the resource.</skos:definition>
-        <rdfs:range rdf:resource="http://measurement.example.org/MeasurementGroup"/>
-        <owl:inverseOf rdf:resource="http://measurement.example.org/isMeasurementGroupOf"/>
+        <rdfs:range rdf:resource="http://example.org/MeasurementGroup"/>
+        <owl:inverseOf rdf:resource="http://example.org/isMeasurementGroupOf"/>
     </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="http://measurement.example.org/isMeasurementGroupOf">
+    <owl:ObjectProperty rdf:about="http://example.org/isMeasurementGroupOf">
         <rdfs:label xml:lang="en">is measurement group of</rdfs:label>
         <skos:definition xml:lang="en">The relationship of a measurement group to a resource,
             indicating that the measurement group applies to the resource.</skos:definition>
-        <rdfs:domain rdf:resource="http://measurement.example.org/MeasurementGroup"/>
-        <owl:inverseOf rdf:resource="http://measurement.example.org/hasMeasurementGroup"/>
+        <rdfs:domain rdf:resource="http://example.org/MeasurementGroup"/>
+        <owl:inverseOf rdf:resource="http://example.org/hasMeasurementGroup"/>
     </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="http://measurement.example.org/hasMeasurement">
+    <owl:ObjectProperty rdf:about="http://example.org/hasMeasurement">
         <rdfs:label xml:lang="en">has measurement</rdfs:label>
         <skos:definition xml:lang="en">The relationship of a reasourse to a
             measurement.</skos:definition>
-        <rdfs:range rdf:resource="http://measurement.example.org/Measurement"/>
-        <owl:inverseOf rdf:resource="http://measurement.example.org/isMeasurementOf"/>
+        <rdfs:range rdf:resource="http://example.org/Measurement"/>
+        <owl:inverseOf rdf:resource="http://example.org/isMeasurementOf"/>
     </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="http://measurement.example.org/isMeasurementOf">
+    <owl:ObjectProperty rdf:about="http://example.org/isMeasurementOf">
         <rdfs:label xml:lang="en">is measurement of</rdfs:label>
         <skos:definition xml:lang="en">The relationship of a measurement to a
             resource.</skos:definition>
-        <rdfs:domain rdf:resource="http://measurement.example.org/Measurement"/>
-        <owl:inverseOf rdf:resource="http://measurement.example.org/hasMeasurement"/>
+        <rdfs:domain rdf:resource="http://example.org/Measurement"/>
+        <owl:inverseOf rdf:resource="http://example.org/hasMeasurement"/>
     </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="http://measurement.example.org/measures">
+    <owl:ObjectProperty rdf:about="http://example.org/measures">
         <rdfs:label xml:lang="en">measures</rdfs:label>
         <skos:definition xml:lang="en">The relationship between a Measurement and the dimension or
             other aspect of a resource that is measured by this Measurement. For example, a
             Measurement may specify the length, height, weight, file size, etc. of a
             resource.</skos:definition>
-        <rdfs:domain rdf:resource="http://measurement.example.org/Measurement"/>
-        <owl:inverseOf rdf:resource="http://measurement.example.org/measuredBy"/>
+        <rdfs:domain rdf:resource="http://example.org/Measurement"/>
+        <owl:inverseOf rdf:resource="http://example.org/measuredBy"/>
     </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="http://measurement.example.org/measuredBy">
+    <owl:ObjectProperty rdf:about="http://example.org/measuredBy">
         <rdfs:label xml:lang="en">measured by</rdfs:label>
         <skos:definition xml:lang="en">The relationship between a dimension or other aspect of a
             resource and the Measurement that measures it. For example, the length, height, weight,
             file size, etc. of a resource may be the aspect that is measured by a particular
             Measurement.</skos:definition>
-        <rdfs:range rdf:resource="http://measurement.example.org/Measurement"/>
-        <owl:inverseOf rdf:resource="http://measurement.example.org/measures"/>
+        <rdfs:range rdf:resource="http://example.org/Measurement"/>
+        <owl:inverseOf rdf:resource="http://example.org/measures"/>
     </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="http://measurement.example.org/hasUnit">
+    <owl:ObjectProperty rdf:about="http://example.org/hasUnit">
         <rdfs:label xml:lang="en">has unit</rdfs:label>
         <skos:definition xml:lang="en">Relationship between the measurement and the unit used to
             express the measurement.</skos:definition>
-        <owl:inverseOf rdf:resource="http://measurement.example.org/isUnitOf"/>
+        <owl:inverseOf rdf:resource="http://example.org/isUnitOf"/>
     </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="http://measurement.example.org/isUnitOf">
+    <owl:ObjectProperty rdf:about="http://example.org/isUnitOf">
         <rdfs:label xml:lang="en">is unit of</rdfs:label>
         <skos:definition xml:lang="en">Relationship between the unit and the measurement used to
             express the measurement.</skos:definition>
-        <owl:inverseOf rdf:resource="http://measurement.example.org/hasUnit"/>
+        <owl:inverseOf rdf:resource="http://example.org/hasUnit"/>
     </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="http://measurement.example.org/hasArrangement">
+    <owl:ObjectProperty rdf:about="http://example.org/hasArrangement">
         <rdfs:label xml:lang="en">has arrangement</rdfs:label>
         <skos:definition xml:lang="en">Relationship between the resource and a specified
             arrangement, organization, or configuration of it.</skos:definition>
-        <rdfs:range rdf:resource="http://measurement.example.org/Arrangement"/>
-        <owl:inverseOf rdf:resource="http://measurement.example.org/isArrangementOf"/>
+        <rdfs:range rdf:resource="http://example.org/Arrangement"/>
+        <owl:inverseOf rdf:resource="http://example.org/isArrangementOf"/>
     </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="http://measurement.example.org/isArrangementOf">
+    <owl:ObjectProperty rdf:about="http://example.org/isArrangementOf">
         <rdfs:label xml:lang="en">is arrangement of</rdfs:label>
         <skos:definition xml:lang="en">Relationship between a specified arrangement, organization,
             or configuration and a resource.</skos:definition>
-        <rdfs:domain rdf:resource="http://measurement.example.org/Arrangement"/>
-        <owl:inverseOf rdf:resource="http://measurement.example.org/hasArrangement"/>
+        <rdfs:domain rdf:resource="http://example.org/Arrangement"/>
+        <owl:inverseOf rdf:resource="http://example.org/hasArrangement"/>
     </owl:ObjectProperty>
 
 </rdf:RDF>

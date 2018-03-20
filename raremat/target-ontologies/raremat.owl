@@ -2,7 +2,7 @@
 
 <!-- TODO Add/remove namespaces as relevant -->
 <rdf:RDF 
-    xmlns="http://raremat.org/ontology/"
+    xmlns="http://example.org/"
     xmlns:bib="http://example.org/"
     xmlns:dcterms="http://purl.org/dc/terms/"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -13,11 +13,17 @@
     xmlns:voaf="http://purl.org/vocommons/voaf#"
     > 
     
-    <!-- ONTOLOGY DECLARATION -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // ONTOLOGY DECLARATION
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
     
-    <owl:Ontology rdf:about="http://raremat.org/ontology/"> <!-- update domain when known -->
-        <owl:ontologyIRI rdf:resource="http://raremat.org/ontology/"/> <!-- update domain when known -->
-        <owl:versionIRI rdf:resource="http://raremat.org/0.1/ontology/"/>   <!-- update domain when known -->
+    <owl:Ontology rdf:about="http://example.org/"> <!-- update domain when known -->
+        <owl:ontologyIRI rdf:resource="http://example.org/"/> <!-- update domain when known -->
+        <owl:versionIRI rdf:resource="http://example.org/"/>   <!-- update domain when known -->
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1</owl:versionInfo>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
@@ -30,9 +36,15 @@
     </owl:Ontology>
     
     
-    <!-- CLASSES -->
-    
-    <!-- General - multiple domains -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // CLASSES
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- ////////// Activities ////////// -->
     
     <owl:Class rdf:about="http://example.org/Activity">
         <rdfs:label xml:lang="en">Activity</rdfs:label>    
@@ -60,6 +72,9 @@
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
+
+
+    <!-- ////////// Titles ////////// -->
     
     <owl:Class rdf:about="http://example.org/MainTitleElement">
         <rdfs:label xml:lang="en">Main title element</rdfs:label>   
@@ -101,7 +116,8 @@
         <dcterms:modified></dcterms:modified>
     </owl:Class> 
 
-    <!-- Bibliographic Citations -->
+
+    <!-- ////////// Bibliographic Citations ////////// -->
     
     <owl:Class rdf:about="http://example.org/Citation">
         <rdfs:label xml:lang="en">Citation</rdfs:label>
@@ -135,7 +151,7 @@
     </owl:Class>
     
   
-    <!-- Fonts, Handwriting and Notation -->
+    <!-- ////////// Fonts, Handwriting and Notation ////////// -->
     
     <owl:Class rdf:about="http://example.org/Font">
         <rdfs:label xml:lang="en">Font</rdfs:label>
@@ -172,10 +188,10 @@
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
-    
-    <!-- Notes -->
-    
-    
+
+
+    <!-- ////////// Notes ////////// -->
+        
     <owl:Class rdf:about="http://example.org/DescriptiveNote">
         <rdfs:label xml:lang="en">Descriptive note</rdfs:label> 
         <skos:definition xml:lang="en">A note that describes the resource.</skos:definition>
@@ -193,7 +209,7 @@
     </owl:Class>
  
     
-    <!-- Pagination and Foliation-->
+    <!-- ////////// Pagination and Foliation ////////// -->
     
     <owl:Class rdf:about="http://example.org/PaginationFoliation">
         <rdfs:label xml:lang="en">Pagination foliation</rdfs:label>
@@ -204,7 +220,7 @@
     </owl:Class>
     
     
-    <!-- Physical Condition and Conservation -->
+    <!-- ////////// Physical Condition and Conservation ////////// -->
     
     <owl:Class rdf:about="http://example.org/ConditionAssessmentActivity">
         <rdfs:label xml:lang="en">Condition assessment activity</rdfs:label>
@@ -238,7 +254,7 @@
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <!-- Signature Statements -->
+    <!-- ////////// Signature Statements ////////// -->
     
     <owl:Class rdf:about="http://example.org/SignatureStatement">
         <rdfs:label xml:lang="en">Signature statement</rdfs:label>
@@ -248,9 +264,15 @@
     </owl:Class>
     
     
-    <!-- OBJECT PROPERTIES -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // OBJECT PROPERTIES
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
     
-    <!-- General -->
+    <!-- ////////// General ////////// -->
     
     <owl:ObjectProperty rdf:about="http://example.org/hasActivity">
         <rdfs:label xml:lang="en">has activity</rdfs:label>
@@ -361,7 +383,7 @@
     </owl:ObjectProperty>
     
     
-    <!-- Fonts, Handwriting and Notation -->
+    <!-- ////////// Fonts, Handwriting and Notation //////////  -->
     
     <owl:ObjectProperty rdf:about="http://example.org/writtenIn">
         <rdfs:label xml:lang="en">written in</rdfs:label>
@@ -398,7 +420,7 @@
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>  
     
-    <!-- Materials -->
+    <!-- ////////// Materials ////////// -->
     
     <owl:ObjectProperty rdf:about="http://example.org/isAppliedMaterialOf">
         <rdfs:label xml:lang="en">is applied material of</rdfs:label>
@@ -424,9 +446,10 @@
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>
     
-    <!-- Physical Condition and Conservation -->
     
-    <!-- Identified in Physical Condition recommendation, but should be more broadly applicable -->
+    <!-- ////////// Physical Condition and Conservation ////////// -->
+    
+    <!-- Identified in Physical Condition recommendation, but can be more broadly applicable -->
     <owl:ObjectProperty rdf:about="http://example.org/describes">
         <rdfs:label xml:lang="en">describes</rdfs:label>
         <skos:definition xml:lang="en">This resource provides a description of another, for example a ConditionAssessment describes a PhysicalCondition.</skos:definition>
@@ -435,7 +458,7 @@
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>
 
-    <!-- Identified in Physical Condition recommendation, but should be more broadly applicable -->
+    <!-- Identified in Physical Condition recommendation, but can be more broadly applicable -->
     <owl:ObjectProperty rdf:about="http://example.org/describedBy">
         <rdfs:label xml:lang="en">described by</rdfs:label>
         <skos:definition xml:lang="en">This resource is described by another, for example a PhysicalCondition is described by a ConditionAssessment</skos:definition>
@@ -444,7 +467,7 @@
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty> 
 
-    <!-- Identified in Physical Condition recommendation, but should be more broadly applicable -->
+    <!-- Identified in Physical Condition recommendation, but can be more broadly applicable -->
     <owl:ObjectProperty rdf:about="http://example.org/hasInput">
         <rdfs:label xml:lang="en">has input</rdfs:label>
         <skos:definition xml:lang="en">One resource has another resource as input, for example when one resource is informed or acted on by another. A ConservatorActivity has input from a ConditionAssessment.</skos:definition>
@@ -453,7 +476,7 @@
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>    
  
-    <!-- Identified in Physical Condition recommendation, but should be more broadly applicable -->
+    <!-- Identified in Physical Condition recommendation, but can be more broadly applicable -->
     <owl:ObjectProperty rdf:about="http://example.org/isInputTo">
         <rdfs:label xml:lang="en">is input to</rdfs:label>
         <skos:definition xml:lang="en">One resource provides input to another. For example, a ConditionAssessment provides input to a ConservatorActivity.</skos:definition>
@@ -480,7 +503,8 @@
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>    
     
-    <!-- Signature Statement -->
+    
+    <!-- ////////// Signature Statement ////////// -->
     
     <owl:ObjectProperty rdf:about="http://example.org/hasSignatureStatement">
         <rdfs:label xml:lang="en">has signature statement</rdfs:label>
@@ -490,8 +514,6 @@
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>    
     
-    
-    <!-- DATATYPE PROPERTIES -->
     
     
 </rdf:RDF>
