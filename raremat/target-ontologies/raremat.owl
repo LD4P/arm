@@ -23,7 +23,7 @@
     
     <owl:Ontology rdf:about="http://example.org/"> <!-- update domain when known -->
         <owl:ontologyIRI rdf:resource="http://example.org/"/> <!-- update domain when known -->
-        <owl:versionIRI rdf:resource="http://example.org/"/>   <!-- update domain when known -->
+        <owl:versionIRI rdf:resource="http://example.org/"/>   <!-- update domain and version number when known -->
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1</owl:versionInfo>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
@@ -44,7 +44,33 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <!-- ////////// Activities ////////// -->
+    <!-- ////////// General - multiple domains ////////// -->
+
+    <owl:Class rdf:about="http://example.org/Entry">
+        <rdfs:label xml:lang="en">Entry</rdfs:label>
+        <skos:definition xml:lang="en">A specific entry that locates a citation within a bibliographic source.</skos:definition>
+        <skos:scopeNote xml:lang="en">Used in parsing out hierarchically structured location designators for citations.</skos:scopeNote>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://example.org/Page">
+        <rdfs:label xml:lang="en">Page</rdfs:label>
+        <skos:definition xml:lang="en">A single page within a resource.</skos:definition>
+        <rdfs:comment xml:lang="en">Used in any page-level description, as well as in parsing out hierarchically structured location designators for citations.</rdfs:comment>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://example.org/Volume">
+        <rdfs:label xml:lang="en"></rdfs:label>
+        <skos:definition xml:lang="en">A single bibliographic or physical volume of a resource.</skos:definition>
+        <rdfs:comment xml:lang="en">Used in any volume-level description, as well as in parsing out hierarchically structured location designators for citations.</rdfs:comment>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <!-- ////////// General Activities ////////// -->
     
     <owl:Class rdf:about="http://example.org/Activity">
         <rdfs:label xml:lang="en">Activity</rdfs:label>    
@@ -122,30 +148,6 @@
     <owl:Class rdf:about="http://example.org/Citation">
         <rdfs:label xml:lang="en">Citation</rdfs:label>
         <skos:definition xml:lang="en">A single citation within a bibliographic source.</skos:definition>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://example.org/Entry">
-        <rdfs:label xml:lang="en">Entry</rdfs:label>
-        <skos:definition xml:lang="en">A specific entry that locates a citation within a bibliographic source.</skos:definition>
-        <skos:scopeNote xml:lang="en">Used in parsing out hierarchically structured location designators for citations.</skos:scopeNote>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://example.org/Page">
-        <rdfs:label xml:lang="en">Page</rdfs:label>
-        <skos:definition xml:lang="en">A single page within a resource.</skos:definition>
-        <rdfs:comment xml:lang="en">Used in any page-level description, as well as in parsing out hierarchically structured location designators for citations.</rdfs:comment>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://example.org/Volume">
-        <rdfs:label xml:lang="en"></rdfs:label>
-        <skos:definition xml:lang="en">A single bibliographic or physical volume of a resource.</skos:definition>
-        <rdfs:comment xml:lang="en">Used in any volume-level description, as well as in parsing out hierarchically structured location designators for citations.</rdfs:comment>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -271,22 +273,12 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-    
-    <!-- ////////// General ////////// -->
-    
+
     <owl:ObjectProperty rdf:about="http://example.org/hasActivity">
         <rdfs:label xml:lang="en">has activity</rdfs:label>
         <skos:definition xml:lang="en">Relates this resource to an activity or contribution by a single agent that affects or alters its existence or state.</skos:definition>
         <rdfs:range rdf:resource="http://example.org/Activity"/> 
         <owl:inverseOf rdf:resource="http://example.org/isActivityOf"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:ObjectProperty>
-    
-    <owl:ObjectProperty rdf:about="http://example.org/hasCitation">
-        <rdfs:label xml:lang="en">has citation</rdfs:label>
-        <skos:definition xml:lang="en">The resource that is the focus of description (e.g., a bf:Item or bf:Instance) has a citation located in a standard reference source.</skos:definition>
-        <owl:inverseOf rdf:resource="http://example.org/isCitationOf"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>
@@ -337,15 +329,6 @@
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>
     
-    <owl:ObjectProperty rdf:about="http://example.org/isCitationOf">
-        <rdfs:label xml:lang="en">is citation of</rdfs:label>
-        <skos:definition xml:lang="en"></skos:definition>
-        <rdfs:range rdf:resource="http://example.org/Activity"/> 
-        <owl:inverseOf rdf:resource="http://example.org/hasCitation"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:ObjectProperty>
-    
     <owl:ObjectProperty rdf:about="http://example.org/isLocationOf">
         <rdfs:label xml:lang="en">is location of</rdfs:label>
         <skos:definition xml:lang="en">The resource being described is at the specified location.</skos:definition>
@@ -381,10 +364,24 @@
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://example.org/hasCitation">
+        <rdfs:label xml:lang="en">has citation</rdfs:label>
+        <skos:definition xml:lang="en">The resource that is the focus of description (e.g., a bf:Item or bf:Instance) has a citation located in a standard reference source.</skos:definition>
+        <owl:inverseOf rdf:resource="http://example.org/isCitationOf"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
     
-    
-    <!-- ////////// Fonts, Handwriting and Notation //////////  -->
-    
+    <owl:ObjectProperty rdf:about="http://example.org/isCitationOf">
+        <rdfs:label xml:lang="en">is citation of</rdfs:label>
+        <skos:definition xml:lang="en"></skos:definition>
+        <rdfs:range rdf:resource="http://example.org/Activity"/> 
+        <owl:inverseOf rdf:resource="http://example.org/hasCitation"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+
     <owl:ObjectProperty rdf:about="http://example.org/writtenIn">
         <rdfs:label xml:lang="en">written in</rdfs:label>
         <skos:definition xml:lang="en">The relationship between a resource containing text and the Font or HandWriting the textual information is displayed in.</skos:definition>
@@ -420,8 +417,6 @@
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>  
     
-    <!-- ////////// Materials ////////// -->
-    
     <owl:ObjectProperty rdf:about="http://example.org/isAppliedMaterialOf">
         <rdfs:label xml:lang="en">is applied material of</rdfs:label>
         <skos:definition xml:lang="en">Relates a material to the resource it was applied to.</skos:definition>
@@ -445,10 +440,7 @@
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>
-    
-    
-    <!-- ////////// Physical Condition and Conservation ////////// -->
-    
+
     <!-- Identified in Physical Condition recommendation, but can be more broadly applicable -->
     <owl:ObjectProperty rdf:about="http://example.org/describes">
         <rdfs:label xml:lang="en">describes</rdfs:label>
@@ -502,10 +494,7 @@
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>    
-    
-    
-    <!-- ////////// Signature Statement ////////// -->
-    
+
     <owl:ObjectProperty rdf:about="http://example.org/hasSignatureStatement">
         <rdfs:label xml:lang="en">has signature statement</rdfs:label>
         <skos:definition xml:lang="en">Relationship between a Resource and a signature statement.</skos:definition>
