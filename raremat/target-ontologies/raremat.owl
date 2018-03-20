@@ -100,49 +100,6 @@
     </owl:Class>
 
 
-    <!-- ////////// Titles ////////// -->
-    
-    <owl:Class rdf:about="http://example.org/MainTitleElement">
-        <rdfs:label xml:lang="en">Main title element</rdfs:label>   
-        <rdfs:subClassOf rdf:resource="http://example.org/TitleElement"/>
-        <skos:definition xml:lang="en">The main part of a title.</skos:definition>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://example.org/NonSortElement">
-        <rdfs:label xml:lang="en">Non-sort element</rdfs:label>   
-        <rdfs:subClassOf rdf:resource="http://example.org/TitleElement"/>
-        <skos:definition xml:lang="en">The initial segment of a title that is removed for sorting.</skos:definition>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class> 
-    
-    <owl:Class rdf:about="http://example.org/PartNameElement">
-        <rdfs:label xml:lang="en">Part name element</rdfs:label>   
-        <rdfs:subClassOf rdf:resource="http://example.org/TitleElement"/>
-        <skos:definition xml:lang="en">The part of a title that specifies the name of a part of the resource.</skos:definition>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>       
-    
-    <owl:Class rdf:about="http://example.org/PartNumberElement">
-        <rdfs:label xml:lang="en">Part number element</rdfs:label>   
-        <rdfs:subClassOf rdf:resource="http://example.org/TitleElement"/>
-        <skos:definition xml:lang="en">The part of a title that specifies the number of a part of the resource.</skos:definition>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class> 
-    
-    <owl:Class rdf:about="http://example.org/SubtitleElement">
-        <rdfs:label xml:lang="en">Subtitle element</rdfs:label>   
-        <rdfs:subClassOf rdf:resource="http://example.org/TitleElement"/>
-        <skos:definition xml:lang="en">The subtitle of a title.</skos:definition>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class> 
-
-
     <!-- ////////// Bibliographic Citations ////////// -->
     
     <owl:Class rdf:about="http://example.org/Citation">
