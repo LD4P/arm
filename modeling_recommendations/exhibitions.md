@@ -52,8 +52,8 @@ Classes
 **bf:Event**
 > - **Label**: Event
 > - **IRI:** http://id.loc.gov/ontologies/bibframe/Event
-> - **Definition:** Something that happens at a certain time and location, such as a performance, speech, or athletic event, that is  
-                    documented by a resource.
+> - **Definition:** Something that happens at a certain time and location, such as a performance, speech, or athletic 
+                    event, that is documented by a resource.
 
 ------------------------------------
 Properties
@@ -64,8 +64,8 @@ Properties
 > - **IRI:** http://id.loc.gov/ontologies/bibframe/note
 > - **Comment:** Used with Unspecified
 > - **Range:** bf:Note
-> - **Definition:** General textual information relating to a resource, such as Information about a specific copy of a resource or 
-                    information about a particular attribute of a resource.
+> - **Definition:** General textual information relating to a resource, such as Information about a specific copy of a 
+                    resource or information about a particular attribute of a resource.
 
 **bf:noteType**
 > - **Label**: Note type
@@ -78,43 +78,45 @@ Properties
 ---------
 **bf:arrangement and bf:Arrangement**
 
-- Current definitions reference only the organization and arrangement of a collection of objects. We recommend the extension of the terms to include individual objects.
+- Current definitions reference only the organization and arrangement of a collection of objects. We recommend the 
+  extension of the terms to include individual objects.
   - If this recommendation is not accepted, we will define our own terms hasArrangement and Arrangement.
 - Define inverse bf:arrangementOf.
   - If this recommendation is not accepted, we will define our own inverse.
   
 **bf:geographicCoverage, bf:GeographicCoverage, bf:temporalCoverage, bf:Temporal**
 
-- The class and predicate pairs are redundant; specifically, a work covers an object, and the type of object does not need to be  
-  repeated in the predicate. We recommend a single predicate, bf:covers, and inverse.
+- The class and predicate pairs are redundant; specifically, a work covers an object, and the type of object 
+  does not need to be repeated in the predicate. We recommend a single predicate, bf:covers, and inverse.
 - Remove the domain Work, since other types of resources, such as ExhibitionEvents, can have coverage.
 - If these recommendations are not accepted, we will define ex:covers and ex:coveredIn.
 
 **bf:date**
 
 - Define subproperties startDate and endDate.
-  - If this recommendation is not accepted, we will define our own terms. While there are several candidate external terms, it does not 
-    make sense to use these if we are using bf:date. 
+  - If this recommendation is not accepted, we will define our own terms. While there are several candidate 
+    external terms, it does not make sense to use these if we are using bf:date. 
 
 **bf:Event**
 
-- The definition of bf:Event is “Something that happens at a certain time and location, such as a performance, speech, or athletic  
-  event, that is documented by a resource.” We request removal of the phrase “that is documented by a resource,” allowing events to be 
-  modeled in contexts other than as the event content of a work. 
-  - If this recommendation is accepted, we will use bf:Event and define a subclass ex:ExhibitionEvent. Otherwise, we will use  
-    schema:Event and its subclass schema:ExhibitionEvent. 
-- Our ultimate recommendation would be to remove bf:Event and implement or use an Event ontology (so far we have not identified   
-  a suitable existing one), but this is a complex project and likely far in the future.
+- The definition of bf:Event is “Something that happens at a certain time and location, such as a performance, 
+  speech, or athletic event, that is documented by a resource.” We request removal of the phrase “that is documented 
+  by a resource,” allowing events to be modeled in contexts other than as the event content of a work. 
+  - If this recommendation is accepted, we will use bf:Event and define a subclass ex:ExhibitionEvent. Otherwise, 
+    we will use schema:Event and its subclass schema:ExhibitionEvent. 
+- Our ultimate recommendation would be to remove bf:Event and implement or use an Event ontology (so far we have 
+  not identified a suitable existing one), but this is a complex project and likely far in the future.
   
 **bf:genreForm and bf:GenreForm**
 
-- Remove range bf:GenreForm to provide for objects that are not typed bf:GenreForm without undesirable entailments. The alternate 
-  formulation ‘x bf:genreForm :genreForm1 . :genreForm1 a bf:GenreForm, rdf:value <some-genre-form-uri> .’ rather than ‘x bf:genreForm 
-  <some-genre-form-uri>’ simply complicates the graph by inserting an extra node. In case there is no applicable vocabulary term, the 
-  object could be a GenreForm resource with an rdf:value literal, but we do not want to require that every object be of type GenreForm.
+- Remove range bf:GenreForm to provide for objects that are not typed bf:GenreForm without undesirable entailments. 
+  The alternate formulation ‘x bf:genreForm :genreForm1 . :genreForm1 a bf:GenreForm, rdf:value <some-genre-form-uri> .’ 
+  rather than ‘x bf:genreForm <some-genre-form-uri>’ simply complicates the graph by inserting an extra node. In case 
+  there is no applicable vocabulary term, the object could be a GenreForm resource with an rdf:value literal, but we 
+  do not want to require that every object be of type GenreForm.
 - Expand definition of bf:GenreForm (we understand it may be a mistake in the OWL file).
-- If these recommendations are not accepted, we will nevertheless use bf:genreForm, and bf:GenreForm when needed, judging that the 
-  entailment issue is not severe enough to warrant rejection of the term.
+- If these recommendations are not accepted, we will nevertheless use bf:genreForm, and bf:GenreForm when needed, 
+  judging that the entailment issue is not severe enough to warrant rejection of the term.
   
 **bf:part**
 
@@ -124,52 +126,54 @@ Properties
 
 **bf:place and bf:Place**
 
-- Extend definition beyond geographic locations to physical and electronic locations, as well as locators such as entries in a source 
-  and cell coordinates in a table. (Not all of these pertain to exhibitions, but electronic locations are relevant to online 
-  exhibitions, and it is good practice to define terms broadly for general use.) Subclasses can be defined either in BIBFRAME or 
-   extensions for specific types of locations.
+- Extend definition beyond geographic locations to physical and electronic locations, as well as locators such as 
+  entries in a source and cell coordinates in a table. (Not all of these pertain to exhibitions, but electronic 
+  locations are relevant to online exhibitions, and it is good practice to define terms broadly for general use.) 
+  Subclasses can be defined either in BIBFRAME or extensions for specific types of locations.
 - Remove range of bf:place to provide for objects that are not typed bf:Place without undesirable entailments. 
 - If these recommendations are implemented, we will use bf:place, bf:placeOf. Otherwise, we will define ex:atLocation and inverse 
-  ex:isLocationOf, similar to the bibliotek-o predicates but with no defined range. We will in any case use bf:Place where relevant, but 
-  our predicates will not define a domain or range.
+  ex:isLocationOf, similar to the bibliotek-o predicates but with no defined range. We will in any case use bf:Place 
+  where relevant, but our predicates will not define a domain or range.
   
 **bf:precededBy and bf:succeededBy**
 
 - Remove used with and expected value comments (Work or Instance) to refer to events and other resources.
-- Remove bf:relatedTo as superproperty, since this also refers to Work, Instance, or Item, or remove the used with and expected value 
-  comments.
+- Remove bf:relatedTo as superproperty, since this also refers to Work, Instance, or Item, or remove the 
+  used with and expected value comments.
 - If these recommendations are not accepted, we will continue to use seq:precedes and seq:follows.
-  Minor recommendation: change from passive to active forms bf:precedes and bf:follows on the grounds that the active forms are easier 
-  to comprehend: the subject-object order follow the precedence order rather than the reverse.
+  Minor recommendation: change from passive to active forms bf:precedes and bf:follows on the grounds 
+  that the active forms are easier to comprehend: the subject-object order follow the precedence order 
+  rather than the reverse.
   - If this recommendation is not accepted, it will not block use of the BIBFRAME terms. 
 
 **bf:subject**
 
 - Define inverse bf:subjectOf.
-- If this recommendation is not accepted, we will define our own inverse.
-- Remove used with Work, Instance, or Item recommendation, so that it can apply to ExhibitionEvents, Entries, and other types of 
-  resources.
-- If this recommendation is not accepted, we will ignore the used with comment since it is not a formal domain. 
+  - If this recommendation is not accepted, we will define our own inverse.
+- Remove used with Work, Instance, or Item recommendation, so that it can apply to ExhibitionEvents, 
+  Entries, and other types of resources.
+  - If this recommendation is not accepted, we will ignore the used with comment since it is not a formal domain. 
 
 **bf:title**
 
-- Remove “Used with Work, Instance, or Item” to allow use with events and other resources. In this recommendation, both ExhibitionEvent 
-  and Exhibition resources may have titles. 
-  - If this recommendation is not accepted, we will nevertheless use the predicate and ignore the expectation, since it is not stated as 
-    a formal domain.
+- Remove “Used with Work, Instance, or Item” to allow use with events and other resources. In this recommendation, 
+  both ExhibitionEvent and Exhibition resources may have titles. 
+  - If this recommendation is not accepted, we will nevertheless use the predicate and ignore the expectation, 
+    since it is not stated as a formal domain.
 - Define inverse bf:titleOf. 
-  - This recommendation has been made and approved in another context, but has not yet been added to the current OWL specification, so 
-    we will define our own term until it exists in BIBFRAME.
+  - This recommendation has been made and approved in another context, but has not yet been added to the current 
+    OWL specification, so we will define our own term until it exists in BIBFRAME.
 
 <a name="exhibition_model">ArtFrame/RareMat Exhibition Model</a>
 ---------
 **Notes**
 -----------------
-- The remainder of this document proceeds on the assumption that no changes will be made to BIBFRAME. Appropriate modifications will be 
-  required for any of the recommendations that are incorporated into LC’s implementation plan, with consideration for when and in which 
-  version these changes will be made.
-- All bibliotek-o terms have been culled from the recommendation. In their place, we adopt one of three alternatives, on a case-by-case 
-  basis: (1) use a BIBFRAME term, (2) use an external term, or (3) define a term in the (as yet to be determined) Raremat/ArtFrame 
+- The remainder of this document proceeds on the assumption that no changes will be made to BIBFRAME. Appropriate 
+  modifications will be required for any of the recommendations that are incorporated into LC’s implementation plan, 
+  with consideration for when and in which version these changes will be made.
+- All bibliotek-o terms have been culled from the recommendation. In their place, we adopt one of three alternatives, 
+  on a case-by-case basis: (1) use a BIBFRAME term, (2) use an external term, or (3) define a term in the (as yet to be 
+  determined) Raremat/ArtFrame 
   namespace. 
 ------------------------
 **Term Specifications**
@@ -207,8 +211,7 @@ Properties
 **ex:DirectorActivity**
 > - **Label:** Director
 > - **IRI:** TBD
-> - **Definition:** The activity of general management and supervision of a filmed performance, a radio or television program, 
-                    etc.
+> - **Definition:** The activity of general management and supervision of a filmed performance, a radio or television program, etc.
 > - **Subclass of:** ex:Activity
 > - **Editorial note:** Future work: consider more formal alignment between the class and corresponding MARC relator.
 > - **Scope note:** This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/drt.
@@ -241,13 +244,13 @@ Properties
 > - **Label:** Arrangement
 > - **IRI:** TBD
 > - **Definition:** Information about the organization and arrangement of a collection of items or a single item.
-> - **Scope note:** An Arrangement may be a NamedIndividual, a term from a controlled vocabulary, or an unnamed resource with an 
-                    rdf:value.
-> - **Example:** For computer files, organization and arrangement information may be the file structure and sort sequence of a 
-                 file.
+> - **Scope note:** An Arrangement may be a NamedIndividual, a term from a controlled vocabulary, or an unnamed 
+                    resource with an rdf:value.
+> - **Example:** For computer files, organization and arrangement information may be the file structure and 
+                 sort sequence of a file.
 > - **Example:** For visual materials, this information may be how a collection is arranged.
-> - **Example:** For an individual book on display in an exhibition, the arrangement may be the page to which the book is opened 
-                 for display.
+> - **Example:** For an individual book on display in an exhibition, the arrangement may be the page to which 
+                 the book is opened for display.
 > - **Example:** For a scroll, the arrangement may be rolled or unrolled.
 > - **Note:** See recommendation to LC above.
 
@@ -299,8 +302,7 @@ Properties
 **ex:titleOf (object property)**
 > - **Label:** title of
 > - **IRI:** TBD
-> - **Definition:** Name given to a resource.
-> - **Comment** Used with Work, Instance or Item.
+> - **Definition:** Resource that this title belongs to.
 > - **Inverse:** bf:title
 > - **Note:** See recommendation to LC above.
 
@@ -309,8 +311,8 @@ Properties
 > - **IRI:** http://purl.org/dc/terms/hasPart
 > - **Comment** A related resource that is included either physically or logically in the described resource.
 > - **Note:** This term is intended to be used with non-literal values as defined in the DCMI Abstract Model   
-              (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to 
-              express this intention with a formal range declaration.
+              (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking 
+              a way to express this intention with a formal range declaration.
 > - **Subproperty of:** dcterms:relation
 
 **dcterms:isPartOf (property)**
@@ -318,8 +320,8 @@ Properties
 > - **IRI:** http://purl.org/dc/terms/isPartOf
 > - **Comment** A related resource in which the described resource is physically or logically included.
 > - **Note:** This term is intended to be used with non-literal values as defined in the DCMI Abstract Model   
-              (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to 
-              express this intention with a formal range declaration.
+              (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is 
+              seeking a way to express this intention with a formal range declaration.
 > - **Subproperty of:** dcterms:relation
 
 **bf:subject (object property)**
@@ -379,26 +381,26 @@ Properties
 > - **IRI:** TBD
 > - **Definition:** Specifies a time period or location covered in the content of this resource.
 > - **Domain:** Unspecified
-> - **Range:* Unspecified
+> - **Range:** Unspecified
 > - **Inverse:** ex:coveredIn
 > - **Note:** See recommendation to LC above.
 
 **ex:coveredIn (object property)**
 > - **Label:** covered in
 > - **IRI:** TBD
-> - **Definition:** Specifies a resource the content of which covers this time period or location.
+> - **Definition:** Specifies a resource whose content covers this time period or location.
 > - **Domain:** Unspecified
 > - **Range:* Unspecified
 > - **Inverse:** ex:covers
-> - **Scope note:** Contrasts with ex:isSubjectOf: e.g., a book written by a French author may be set in France without France 
-                    being the subject of the work. Not all cases are expected to be unambiguous.
+> - **Scope note:** Contrasts with ex:subjectOf: e.g., a book written by a French author may be set in France without 
+                    France being the subject of the work. Not all cases are expected to be unambiguous.
 > - **Note:** See recommendation to LC above.
 
 **ex:hasActivity (object property)**
 > - **Label:** has activity
 > - **IRI:** TBD
-> - **Definition:** Relates this resource to an activity or contribution by a single agent that affects or alters its existence 
-                    or state.
+> - **Definition:** Relates this resource to an activity or contribution by a single agent that affects or alters  
+                    its existence or state.
 > - **Range:* ex:Activity
 > - **Inverse:** ex:isActivityOf
 
@@ -416,34 +418,34 @@ Properties
 > - **Domain:** Unspecified
 > - **Range:* ex:Arrangement
 > - **Inverse:** ex:isArrangementOf
-> - **Example:** For computer files, organization and arrangement information may be the file structure and sort sequence of a 
-                 file.
+> - **Example:** For computer files, organization and arrangement information may be the file structure and 
+                 sort sequence of a file.
 > - **Example:** For visual materials, this information may be how a collection is arranged.
-> - **Example:** For an individual book in an exhibition, the arrangement may be the page to which the book is opened for 
-                 display.
+> - **Example:** For an individual book on display in an exhibition, the arrangement may be the page to which 
+                 the book is opened for display.
 > - **Example:** For a scroll, the arrangement may be rolled or unrolled.
 > - **Note:** See recommendation to LC above.
 
 **ex:isArrangementOf (object property)**
 > - **Label:** is arrangement of
 > - **IRI:** TBD
-> - **Definition:** Relates information about the organization or arrangement of an object or collection of objects to that 
-                    object or collection.
+> - **Definition:** Relates information about the organization or arrangement of an object or collection of objects to 
+                    that object or collection.
 > - **Domain:** ex:Arrangement
 > - **Range:* Unspecified
 > - **Inverse:** ex:hasArrangement
-> - **Example:** For computer files, organization and arrangement information may be the file structure and sort sequence of a 
-                 file.
+> - **Example:** For computer files, organization and arrangement information may be the file structure and 
+                 sort sequence of a file.
 > - **Example:** For visual materials, this information may be how a collection is arranged.
-> - **Example:** For an individual book in an exhibition, the arrangement may be the page to which the book is opened for 
-                 display.
+> - **Example:** For an individual book on display in an exhibition, the arrangement may be the page to which 
+                 the book is opened for display.
 > - **Example:** For a scroll, the arrangement may be rolled or unrolled.
 > - **Note:** See recommendation to LC above.
 
 **ex:hasExhibition (object property)**
 > - **Label:** has exhibition
 > - **IRI:** TBD
-> - **Definition:** Relates an Item to the Exhibition resource representing the relationship between the Item and an 
+> - **Definition:** Relates an item to the Exhibition resource representing the relationship between the item and an 
                     ExhibitionEvent.
 > - **Domain:** Unspecified
 > - **Range:* ex:Exhibition
@@ -452,8 +454,8 @@ Properties
 **ex:isExhibitionOf (object property)**
 > - **Label:** is exhibition of
 > - **IRI:** TBD
-> - **Definition:** Relates an Exhibition resource representing the relationship between an Item and an ExhibitionEvent to the 
-                    Item.
+> - **Definition:** Relates an Exhibition resource representing the relationship between an Item and an ExhibitionEvent 
+                    to the Item.
 > - **Domain:** ex:Exhibition
 > - **Range:* Unspecified
 > - **Inverse:** ex:hasExhibition
@@ -461,30 +463,36 @@ Properties
 **ex:startDate (datatype property)**
 > - **Label:** start date
 > - **IRI:** TBD
-> - **Definition:** The start date and time of the resource, such as an event.
+> - **Definition:** The start date of a resource, such as an event.
 > - **Note:** See recommendation to LC above.
 
 **ex:endDate (datatype property)**
 > - **Label:** end date
 > - **IRI:** TBD
-> - **Definition:** The end date and time of the resource, such as an event.
+> - **Definition:** The end date of a resource, such as an event.
 > - **Note:** See recommendation to LC above.
 
 <a name="diagrams">Diagrams</a>
 ---------
 **Diagram 1. Exhibition Event**
+
 ![Exhibition Event Diagram 1](/modeling_recommendations/modeling_diagrams/exhibition_event.png)
+ 
 **Notes**
 - Description, coverage, and subject are different options for describing the topic of the Exhibition Event.
 
 **Diagram 2. Items in an Exhibition Event**
+
 ![Items_in_an_Exhibition_Event_2](/modeling_recommendations/modeling_diagrams/items_exhibitions_events.png)
+
 **Notes**
-- While it is the Item which is directly related to the ExhibitionEvent (via the Exhibition node), by following the links to 
-  Instance and Work, these are by extrapolation also “in” the ExhibitionEvent.
+- While it is the Item which is directly related to the ExhibitionEvent (via the Exhibition node), by following  
+  the links to Instance and Work, these are by extrapolation also “in” the ExhibitionEvent.
  
  **Diagram 3. Item Description the the Context of an Exhibition**
+ 
 ![Item_Description_in_the_Context_of_an_Exhibition_3](/modeling_recommendations/modeling_diagrams/Item_description_exhibition.png)
+
 **Notes**
 - The Exhibition context node provides for description of the Item in relation to the ExhibitionEvent that do not pertain to the 
   Item in and of itself:
@@ -499,7 +507,9 @@ Properties
   - Perhaps other features not illustrated here.
 
 **Diagram 4. Exhibition catalog**
+
 ![Exhibition_Catalog 4](/modeling_recommendations/modeling_diagrams/exhibition_catalog.png)
+
 **Notes**
 - A catalog entry may describe the item, instance, work, or item in the context of the exhibition; thus the multiple 
   dcterms:subject relationships.
@@ -507,7 +517,9 @@ Properties
   model provided here for catalogs, with different genreForms.
 
 **Digram 5. Multi-Site Exhibition**
+
 ![Multi_Site_Exhibitions_5](/modeling_recommendations/modeling_diagrams/multi_site_exhibitions.png)
+
 **Notes**
 - Each exhibition site has its own location, and may have the same, overlapping, or different start and end dates from other 
   sites.
@@ -598,7 +610,11 @@ Properties
     dcterms:subject :item1 , :instance1 , :work1 , :exhibition1 .
 
 ```
+
+
 <a name="future_work">Future Work</a>
+--------------------------
+
 
 - Other potential use cases are performance-based events and virtual (online) exhibitions. The group has not yet explored how 
   the proposed model can be applied to these types of events.

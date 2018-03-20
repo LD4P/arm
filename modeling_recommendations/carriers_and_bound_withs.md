@@ -165,7 +165,7 @@ Sample RDF
 
 Areas for Future Research
 --------------
-While description of nonce collections is outside the scope of this recommendation, it may be of future interest to determine to what extent the proposed model can be extended to such collections, and how the differences might be surfaced in the model.
+- While description of nonce collections is outside the scope of this recommendation, it may be of future interest to determine to what extent the proposed model can be extended to such collections, and how the differences might be surfaced in the model.
 
 
 <a name="carrier">Part II. The Carrier Model</a>
