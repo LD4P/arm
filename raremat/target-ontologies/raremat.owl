@@ -44,8 +44,30 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <!-- ////////// General - multiple domains ////////// -->
-
+    <owl:Class rdf:about="http://example.org/Binding">
+        <rdfs:subClassOf rdf:resource="http://example.org/Enclosure"/>
+        <rdfs:label xml:lang="en">Binding</rdfs:label>
+        <skos:definition xml:lang="en">Covering of a book which holds the sheets together to provide protection, and collectively all the parts of a book applied in the process of attaching the leaves and covering them.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://example.org/DustJacket">
+        <rdfs:subClassOf rdf:resource="http://example.org/Enclosure"/>
+        <rdfs:label xml:lang="en">DustJacket</rdfs:label>
+        <skos:definition xml:lang="en">A detachable, flexible covering for a book, usually of paper cut flush with the covers, folding around the binding with the ends tucked in between the cover boards and the free end paper.</skos:definition>    
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://example.org/Enclosure">
+        <rdfs:label xml:lang="en">Enclosure</rdfs:label>
+        <skos:definition xml:lang="en">Covering of a book which holds the sheets together to provide protection, and collectively all the parts of a book applied in the process of attaching the leaves and covering them.</skos:definition>
+        <skos:scopeNote xml:lang="en">This class includes containers, such as a box containing a paper doll set.</skos:scopeNote>  
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
     <owl:Class rdf:about="http://example.org/Entry">
         <rdfs:label xml:lang="en">Entry</rdfs:label>
         <skos:definition xml:lang="en">A specific entry that locates a citation within a bibliographic source.</skos:definition>
@@ -53,6 +75,21 @@
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
+    
+    <owl:Class rdf:about="http://example.org/Frame">
+        <rdfs:subClassOf rdf:resource="http://example.org/Mount"/>
+        <rdfs:label xml:lang="en">Frame</rdfs:label>
+        <skos:definition xml:lang="en">A supportive structure that surrounds or encloses an item.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://example.org/Mount">
+        <rdfs:label xml:lang="en">Mount</rdfs:label>
+        <skos:definition xml:lang="en">An item placed on a pedestal or a case, or otherwise attached to a print, photographic image, or document protected by framing, usually against a backing material.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class> 
     
     <owl:Class rdf:about="http://example.org/Page">
         <rdfs:label xml:lang="en">Page</rdfs:label>
@@ -62,6 +99,31 @@
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
+    <owl:Class rdf:about="http://example.org/Pedestal">
+        <rdfs:subClassOf rdf:resource="http://example.org/Mount"/>
+        <rdfs:label xml:lang="en">Pedestal</rdfs:label>
+        <skos:definition xml:lang="en">A solid, fixed base or support on which an item or part of an item is mounted.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class> 
+    
+    <owl:Class rdf:about="http://example.org/SlipCase">
+        <rdfs:subClassOf rdf:resource="http://example.org/Enclosure"/>
+        <rdfs:label xml:lang="en">SlipCase</rdfs:label>
+        <skos:definition xml:lang="en">Protective container designed to protect a book or item with open end along one edge.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class> 
+    
+    <owl:Class rdf:about="http://example.org/TextBlock">
+        <owl:disjointWith rdf:resource="http://example.org/Enclosure"/>
+        <rdfs:label xml:lang="en">Text block</rdfs:label>
+        <skos:definition xml:lang="en">Those parts of a book consisting of the stack of leaves or gatherings to be bound, exclusive of the materials, such as endpapers or boards, that are added in binding.</skos:definition>
+        <skos:scopeNote xml:lang="en">The measurements of a book may include the binding or not. A text block resource can be used in the specification of measurements exclusive of the binding.</skos:scopeNote>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class> 
+    
     <owl:Class rdf:about="http://example.org/Volume">
         <rdfs:label xml:lang="en"></rdfs:label>
         <skos:definition xml:lang="en">A single bibliographic or physical volume of a resource.</skos:definition>
@@ -70,13 +132,39 @@
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <!-- ////////// General Activities ////////// -->
+    <owl:Class rdf:about="http://example.org/WrapAroundBand">
+        <rdfs:subClassOf rdf:resource="http://example.org/Enclosure"/>
+        <rdfs:label xml:lang="en">Wrap around band</rdfs:label>
+        <skos:definition xml:lang="en">A printed paper the length of the dust jacket but smaller in height and wrapped around the book. It typically has reviews and is used for promotional purposes; may be added post-publication.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class> 
+    
+    <owl:Class rdf:about="http://example.org/Wrapper">
+        <rdfs:subClassOf rdf:resource="http://example.org/Enclosure"/>
+        <rdfs:label xml:lang="en">Wrapper</rdfs:label>
+        <skos:definition xml:lang="en">A flexible printed or unprinted cover, usually made of paper, attached to a book or pamphlet; commonly used as an inexpensive temporary binding in the late 18th and early 19th century.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class> 
+    
+
+    <!-- ////////// Activities ////////// -->
     
     <owl:Class rdf:about="http://example.org/Activity">
         <rdfs:label xml:lang="en">Activity</rdfs:label>    
         <skos:definition xml:lang="en">An activity or contribution by a single agent that affects or alters the existence or state of a resource.</skos:definition>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://example.org/BinderActivity">
+        <rdfs:subClassOf rdf:resource="http://example.org/Activity"/>
+        <rdfs:label xml:lang="en">Binder</rdfs:label>
+        <skos:definition xml:lang="en">The activity of attaching a Binding to a resource.</skos:definition>
+        <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
+        <skos:scopeNote xml:lang="en">Both instances and items can have Bindings, but generally there is need to describe this activity only in relation to an item</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/bnd.</skos:scopeNote>
     </owl:Class>
     
     <owl:Class rdf:about="http://example.org/CreatorActivity">
@@ -99,6 +187,25 @@
         <dcterms:modified></dcterms:modified>
     </owl:Class>
 
+    <owl:Class rdf:about="http://example.org/EngraverActivity">
+        <rdfs:label xml:lang="en">Engraver</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of cutting into a surface, such as a wooden or metal plate used for printing.</skos:definition>
+        <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
+        <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/egr.</skos:scopeNote>
+        <rdfs:subClassOf rdf:resource="http://example.org/Activity"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://example.org/MarblerActivity">
+        <rdfs:label xml:lang="en">Marbler</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of marbling paper, cloth, leather, etc. used in construction of a resource.</skos:definition>
+        <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
+        <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/mrb.</skos:scopeNote>
+        <rdfs:subClassOf rdf:resource="http://example.org/Activity"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
 
     <!-- ////////// Bibliographic Citations ////////// -->
     

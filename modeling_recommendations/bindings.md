@@ -166,11 +166,11 @@ Classes
 > - **Label:** Text block
 > - **Definition:** Those parts of a book consisting of the stack of leaves or gatherings to be bound, exclusive of the materials, such as endpapers or boards, that are added in binding.
 > - **Disjoint with:** ex:Enclosure
-> - **Editorial note:**  The measurements of a book may include the binding or not. It is useful to have a text block resource to link the binding-less measurements to.
+> - **Scope note:**  The measurements of a book may include the binding or not. A text block resource can be used in the specification of measurements exclusive of the binding.
 
 **ex:BinderActivity**
 > - **URI:** TBD
-> - **Label:** Binding 
+> - **Label:** Binder 
 > - **Definition:** The activity of attaching a Binding to a resource.
 > - **Scope note:** Both Instance and Items can have Bindings, but generally the binder is only identified in the case of an Item.
 > - **Scope note:** This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/bnd.
