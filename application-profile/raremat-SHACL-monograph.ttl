@@ -1,0 +1,2549 @@
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix core: <http://vivoweb.org/ontology/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix gn: <http://www.geonames.org/ontology/> .
+@prefix lingvo: <http://www.lingvoj.org/ontology#> .
+@prefix madsrdf: <http://www.loc.gov/standards/mads/rdf/v1.rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov> .
+@prefix raremat: <http://example.org/> .
+@prefix raremat_shapes_monograph: <http://example.org/shapes/monograph/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# WARNING!!!!!!!!!!!!!!! Very drafty version of SHACL for RareMat application profile. A lot of this currently reflects a cut and paste of an audio focused SHACL file. This is unsafe to use as long as this warning is here.
+
+# TODO Review namespaces
+
+# TODO annotation properties and imports for http://example.org/shapes/monograph/
+
+<http://example.org/shapes/monograph/>
+  rdf:type owl:Ontology .
+
+raremat_shapes_monograph:WorkForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Monographic Text" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass bf:Text ;
+  sh:property raremat_shapes_monograph:WorkForm_bf_title ;
+  sh:property raremat_shapes_monograph:WorkForm_bf_genreForm ;
+  sh:property raremat_shapes_monograph:WorkForm_bf_genreForm_madsrdf_isMemberOfMADSScheme ;
+  sh:property raremat_shapes_monograph:WorkForm_raremat_hasActivity ;
+  sh:property raremat_shapes_monograph:WorkForm_bf_hasPart ;
+  sh:property raremat_shapes_monograph:WorkForm_bf_partOf ;
+  sh:property raremat_shapes_monograph:WorkForm_bf_hasExpression ;
+# TODO finish WorkToWork skolemization  
+.
+
+# The following PropertyShape is subject to change depending on whether we follow BIBFRAME or bibliotek-o/ArtFrame. Going to stop work on this until a decision is made.
+
+raremat_shapes_monograph:WorkForm_bftitle sh:path <http://id.loc.gov/ontologies/bibframe/title> ;
+  sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
+  tosh:editWidget swa:NestedObjectEditor ;
+  sh:description "Record non-PreferredTitles here. Use Preferred Title to capture a preferred title." ;
+  sh:group raremat_shapes_monograph:TitlePropertyGroup ;
+  sh:name "Other title" ;
+  sh:nodeKind sh:IRI ;
+  sh:order "0"^^xsd:decimal .
+  
+raremat_shapes_monograph:WorkForm_raremat_hasActivity sh:path raremat:hasActivity ;
+  sh:name "Agent activity or role" ;
+  sh:order "0"^^xsd:decimal ;
+  sh:group raremat_shapes_monograph:WorkActivityPropertyGroup ;
+  tosh:editWidget swa:NestedObjectEditor ;
+  sh:class raremat:Activity .
+      
+raremat_shapes_monograph:WorkForm_bfgenreForm sh:path bf:genreForm ;
+  sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+  sh:group raremat_shapes_monograph:WorkSubjectGenreFormPropertyGroup ;
+  sh:name "Form Genre" ;
+  sh:nodeKind sh:IRI ;
+  sh:order "0"^^xsd:decimal ;
+  raremat_shapes_monograph:lookup raremat_shapes_monograph:LD4LookupService .
+  
+# The following sh:Property with sh:path bf:genreForm/madsrdf:isMemberOfMADSScheme isn't meant to be a field in the form, but rather state a restriction on the use of bf:genreForm to instances from http://id.loc.gov/authorities/genreForms. 
+  
+raremat_shapes_monograph:WorkForm_bf_genreForm_madsrdf_isMemberOfMADSScheme sh:path <bf:genreForm/madsrdf:isMemberOfMADSScheme> ;
+ sh:hasValue <http://id.loc.gov/authorities/genreForms> ;
+ sh:description "Values for form genre terms" ;
+ sh:group raremat_shapes_monograph:WorkSubjectGenreFormPropertyGroup ;
+ sh:name "LCGFT Form Genre Terms" ;
+ sh:nodeKind sh:IRI ;
+ skos:editorialNote "Use look up service; LCGFT is too big to load directly into an RDF editor, and more importantly we don't want to create MADSAuthorities, only link to them." .
+
+# TODO decide what types of parts bf:Works a bf:Text can have, e.g. bf:StillImage
+
+raremat_shapes_monograph:WorkForm_bf_hasPart sh:path <http://id.loc.gov/ontologies/bibframe/hasPart> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group raremat_shapes_monograph:WorkToWorkPropertyGroup ;
+      sh:name "Contents of Monograph" .
+
+# TODO decide what types of bf:Works a bf:Text can be a part of, e.g. another bf:Text
+
+raremat_shapes_monograph:WorkForm_bf_partOf sh:path <http://id.loc.gov/ontologies/bibframe/partOf> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group raremat_shapes_monograph:WorkToWorkPropertyGroup ;
+      sh:name "Is part or contents of" .
+
+raremat_shapes_monograph:WorkForm_bf_hasExpression sh:path <http://id.loc.gov/ontologies/bibframe/hasExpression> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:description "Work that is an expression of a described Work. For use to relate Works under FRBR/RDA rules." ;
+      sh:group raremat_shapes_monograph::WorkToWorkPropertyGroup ;
+      sh:name "Has expression" .
+
+raremat_shapes_monograph:WorkForm_bf_referencedBy sh:path <http://id.loc.gov/ontologies/bibframe/referencedBy> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:description "Resource that references the described resource." ;
+      sh:name "Referenced by" ;
+      sh:group raremat_shapes_monograph::WorkToWorkPropertyGroup .
+
+# TODO finish skolemization of WorkToWorkPropertyGroup
+    
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/references> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:description "Resource that is referenced by the described resource." ;
+      sh:name "References" ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+    
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60088> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is dramatized as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60102> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is sequel" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60104> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is replaced by" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60106> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Text> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is adapted in verse as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60110> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/MovingImage> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is adapted as motion picture" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60138> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Text> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is adapted as novel" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60177> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Audio> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is abstracted in" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60178> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Text> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is indexed in" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60180> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/NotetatedMovement> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is adapted as choreography" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60185> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Text> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is adapted as screenplay" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60188> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Text> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is adapted as radio script" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60189> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is freely translated as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60199> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is continued in part by" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60203> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is abstracted as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60205> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is summarized as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60214> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is imitated as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60216> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is expanded as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60220> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Has prequel" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60224> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is abstract of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60225> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is dramatization of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60238> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is digest of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60241> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is adaptation of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60243> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is free translation of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60244> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is translation of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60245> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is revised as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60246> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is parodied as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60247> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is absorbed by" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60248> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is absorbed in part by" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60250> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is derivative" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60260> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is adapted as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60275> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is abridged as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60276> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is continuation in part of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60277> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is separated from" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60278> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is succeeded by" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60279> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is digested as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60280> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is translated as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60289> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is summary of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60293> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/NotatedMovement> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is choreographic adaptation of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60295> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is remake of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60296> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is paraphrase of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60303> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is revision of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60305> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is based on" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60306> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is continued by" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60308> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is abstracts for" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60309> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is indexing for" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60310> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is prequel to" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60311> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is imitation of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60312> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is parody of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60354> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/MovingImage> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is adapted as television program" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60361> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/MovingImage> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is adapted as video" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60480> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is replacement of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60503> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is split into" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60504> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Iss merged to form" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60505> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is merger of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60574> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is absorption of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60575> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is absorption in part of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60576> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is continuation of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60577> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is sequel to" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60743> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is graphic novelization of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60831> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/NotatedMusic> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is adapted as oratorio" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60832> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is inspired by" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60833> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is inspiration for" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+    
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/dataSource> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Dataset> ;
+      sh:description "Resource that is a data source to which the described resource is related. It may contain information about other files, printed sources, or collection procedures." ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Data source" ;
+      sh:nodeKind sh:IRI ;
+
+
+raremat_shapes_monograph:InstanceForm rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Instance of Monographic Text" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass bf:Text ;
+  sh:property raremat_shapes_monograph:InstanceForm_bf_title ;
+  sh:property raremat_shapes_monograph:InstanceForm_raremat_hasActivity ;
+.
+
+# PropertyGroup Section
+
+raremat_shapes_monograph:WorkTitlePropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Titles" ;
+  sh:description "To group title information for the resource." ;
+  sh:order "0"^^xsd:decimal ;
+.
+
+raremat_shapes_monograph:WorkActivityPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Work Agent and Capture Information" ;
+  sh:description "To group Agent role information for the resource." ;
+  sh:order "1"^^xsd:decimal ;
+.
+  
+raremat_shapes_monograph:WorkSubjectGenreFormPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Type and Genre" ;
+  sh:description "To group type, Genre, and Form information for the resource." ;
+  sh:order "2"^^xsd:decimal ;
+.
+
+raremat_shapes_monograph:WorkToWorkPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Related Works" ;
+  sh:order "3"^^xsd:decimal ;
+.
+    
+
+
+
+# TODO Remove everything below this point once the all attempts at reuse have been made. It's copy and pasted from audio specific SHACL. 
+
+bibliotek-o_shapes_audio:AudioWorkForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Audio form" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass bf:Audio ;
+
+  sh:property [
+      sh:path bf:genreForm ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:group bibliotek-o_shapes_audio:TypeGenreFormPropertyGroup ;
+      sh:name "Form Genre" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "0"^^xsd:decimal ;
+      bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService ;
+    ] ;
+    
+  # The following sh:path bf:genreForm/ns0:isMemberOfMADSScheme isn't meant to be a field in the form, but rather state a restriction on the use of bf:genreForm to instances from http://id.loc.gov/authorities/genreForms. 
+  
+  sh:property [
+      sh:path <bf:genreForm/ns0:isMemberOfMADSScheme> ;
+      sh:hasValue <http://id.loc.gov/authorities/genreForms> ;
+      sh:description "Values for form genre terms" ;
+      sh:group bibliotek-o_shapes_audio:TypeGenreFormPropertyGroup ;
+      sh:name "LCGFT Form Genre Terms" ;
+      sh:nodeKind sh:IRI ;
+      skos:editorialNote "Use look up service; LCGFT is too big to load directly into an RDF editor, and more importantly we don't want to create MADSAuthorities, only link to them." ;
+    ] ;
+    
+  sh:property [
+      sh:path bib:hasPreferredTitle ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
+      sh:group bibliotek-o_shapes_audio:TitlePropertyGroup ;
+      sh:minCount 1 ;
+      sh:description "For audio works there can be only one preferred title per language." ;
+      sh:name "Preferred title" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "0"^^xsd:decimal ;
+    ] ;
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/title> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:description "Record non-PreferredTitles here. Use Preferred Title to capture a preferred title." ;
+      sh:group bibliotek-o_shapes_audio:TitlePropertyGroup ;
+      sh:name "Other title" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "1"^^xsd:decimal ;
+    ] ;
+  sh:property [
+      sh:path bib:hasActivity ;
+      sh:name "Agent activity or role" ;
+      sh:order "0"^^xsd:decimal ;
+      sh:group bibliotek-o_shapes_audio:WorkActivityPropertyGroup ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:class bib:Activity ;
+    ] ;
+    
+ # May decide to go with bf:eventContent to align with Performed Music decision to use BF instead of reusing schema:recordedAt. bf:eventContent domain should be open so schema:Events can be used without the added bf:Event entailment. Will need to reconcile schema and PMO class hierarchy.
+
+  sh:property [
+      sh:path <http://schema.org/recordedAt> ;
+      sh:description "An event (a performance, concert, audition, etc.) wholly or partially captured by the work." ;
+      sh:name "Recorded Event" ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:group bibliotek-o_shapes_audio:WorkActivityPropertyGroup ;
+      bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService ;
+      skos:editorialNote "Use look up service; though FAST has some events, catalogers will have to create most events because libraries traditionally haven't created many Event authorities." ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Event> ;
+    ] ;   
+  
+  sh:property [
+      sh:path <http://purl.org/dc/terms/subject> ;
+      sh:group bibliotek-o_shapes_audio:SubjectAndCoveragePropertyGroup ;
+      sh:name "Subject" ;
+      sh:nodeKind sh:IRI ;
+      sh:or (
+          [
+            sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+          ]
+          [
+            sh:class <http://id.loc.gov/ontologies/bibframe/Instance> ;
+          ]
+          [
+            sh:class <http://id.loc.gov/ontologies/bibframe/Item> ;
+          ]
+          [
+            sh:class <http://id.loc.gov/ontologies/bibframe/Temporal> ;
+          ]
+          [
+            sh:class <http://xmlns.com/foaf/0.1/Agent> ;
+          ]
+          [
+            sh:class <http://www.lingvoj.org/ontology/Lingvo> ;
+          ]
+          [
+            sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+          ]
+          [
+            sh:class gn:Feature ;
+          ]
+          [
+            sh:class <http://id.loc.gov/ontologies/bibframe/Event> ;
+          ]
+        ) ;
+    ] ;
+  sh:property [
+      sh:path bib:covers ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Temporal> ;
+      sh:description "Specifies a time period covered in the content of this resource, e.g. the decade a dataset covers, a map depicts boundaries from a given period." ;
+      sh:name "Time period covered" ;
+      sh:group bibliotek-o_shapes_audio:SubjectAndCoveragePropertyGroup ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path bib:covers ;
+      sh:class gn:Feature ;
+      sh:description "Specifies a location covered in the content of this resource, e.g. the geographic region a dataset covers, a map depicts a specific location." ;
+      sh:name "Location covered" ;
+      sh:group bibliotek-o_shapes_audio:SubjectAndCoveragePropertyGroup ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+    sh:property [
+      sh:path bib:isSubjectOf ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:description "Specifies other works that this work is the subject of" ;
+      sh:name "Is subject of" ;
+      sh:group bibliotek-o_shapes_audio:SubjectAndCoveragePropertyGroup ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+    
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60242> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Audio> ;
+      sh:group bibliotek-o_shapes_audio:AudioWorkToWorkPropertyGroup ;
+      sh:name "Is arrangement of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60274> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Audio> ;
+      sh:group bibliotek-o_shapes_audio:AudioWorkToWorkPropertyGroup ;
+      sh:name "Is arranged as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+    
+# TODO- Still need to add Perform Music Ontology patterns. 
+    
+    
+  sh:property [
+      sh:path <http://purl.org/dc/terms/hasPart> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Audio> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Content listing (track listing)" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+    
+  sh:property [
+      sh:path <http://purl.org/dc/terms/isPartOf> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is part of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+    
+   sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/hasExpression> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:description "Work that is an expression of a described Work. For use to relate Works under FRBR/RDA rules." ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+    
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/referencedBy> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:description "Resource that references the described resource" ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Referenced by" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+    
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/references> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:description "Resource that is referenced by the described resource." ;
+      sh:name "References" ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+    
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60088> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is dramatized as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60102> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is sequel" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60104> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is replaced by" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60106> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Text> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is adapted in verse as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60110> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/MovingImage> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is adapted as motion picture" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60138> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Text> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is adapted as novel" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60177> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Audio> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is abstracted in" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60178> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Text> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is indexed in" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60180> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/NotetatedMovement> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is adapted as choreography" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60185> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Text> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is adapted as screenplay" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60188> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Text> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is adapted as radio script" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60189> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is freely translated as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60199> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is continued in part by" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60203> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is abstracted as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60205> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is summarized as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60214> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is imitated as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60216> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is expanded as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60220> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Has prequel" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60224> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is abstract of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60225> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is dramatization of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60238> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is digest of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60241> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is adaptation of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60243> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is free translation of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60244> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is translation of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60245> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is revised as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60246> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is parodied as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60247> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is absorbed by" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60248> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is absorbed in part by" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60250> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is derivative" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60260> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is adapted as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60275> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is abridged as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60276> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is continuation in part of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60277> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is separated from" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60278> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is succeeded by" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60279> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is digested as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60280> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is translated as" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60289> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is summary of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60293> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/NotatedMovement> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is choreographic adaptation of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60295> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is remake of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60296> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is paraphrase of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60303> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is revision of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60305> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is based on" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60306> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is continued by" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60308> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is abstracts for" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60309> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is indexing for" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60310> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is prequel to" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60311> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is imitation of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60312> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is parody of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60354> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/MovingImage> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is adapted as television program" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60361> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/MovingImage> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is adapted as video" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60480> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is replacement of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60503> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is split into" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60504> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Iss merged to form" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60505> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is merger of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60574> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is absorption of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60575> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is absorption in part of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60576> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is continuation of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60577> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is sequel to" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60743> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is graphic novelization of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60831> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/NotatedMusic> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is adapted as oratorio" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60832> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is inspired by" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://rdaregistry.info/Elements/u/P60833> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Is inspiration for" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+    
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/dataSource> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Dataset> ;
+      sh:description "Resource that is a data source to which the described resource is related. It may contain information about other files, printed sources, or collection procedures." ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Data source" ;
+      sh:nodeKind sh:IRI ;
+    ] ;  
+  
+  sh:property [
+      sh:path bf:hasInstance ;
+      sh:name "Physical Instance or Manifestation" ;
+      sh:nodeKind sh:IRI ;
+      sh:group bibliotek-o_shapes_audio:WorkToInstancePropertyGroup ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:or (
+          [
+            sh:class <http://bibliotek-o.org/ontology/AudioDisc> ;
+          ]
+          [
+            sh:class <http://bibliotek-o.org/ontology/AudioRoll> ;
+          ]
+          [
+            sh:class <http://bibliotek-o.org/ontology/AudioCassette> ;
+          ]
+          [
+            sh:class <http://bibliotek-o.org/ontology/AudioBelt> ;
+          ]
+          [
+            sh:class <http://bibliotek-o.org/ontology/AudioCylinder> ;
+          ]
+          [
+            sh:class <http://bibliotek-o.org/ontology/AudioWireReel> ;
+          ]
+          [
+            sh:class <http://bibliotek-o.org/ontology/AudiotapeReel> ;
+          ]
+          [
+            sh:class <http://bibliotek-o.org/ontology/Cassette> ;
+          ]
+          [
+            sh:class <http://bibliotek-o.org/ontology/SoundTrackReel> ;
+          ]
+          [
+            sh:class <http://bibliotek-o.org/ontology/ComputerTapeReel> ;
+          ]
+          [
+            sh:class <http://bibliotek-o.org/ontology/Disc> ;
+          ]
+          [
+            sh:class <http://bibliotek-o.org/ontology/Reel> ;
+          ]
+        ) ;
+    ] ;
+    
+  sh:property [
+      sh:path <http://schema.org/duration> ;
+      sh:group bibliotek-o_shapes_audio:AudioWorkMiscellaneousPropertyGroup ;
+      sh:name "Duration of audio work" ;
+      sh:nodeKind sh:Literal ;
+      sh:maxCount "1" ;
+      skos:editorialNote "The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format." ;
+    ] ;
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/accompaniedBy> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:description "Resource that accompanies the described resource." ;
+      sh:name "Accompanied by" ;
+      sh:group bibliotek-o_shapes_audio:AudioWorkMiscellaneousPropertyGroup ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/accompanies> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+      sh:description "Resource that adds to or is issued with the described resource." ;
+      sh:name "Accompanies" ;
+      sh:group bibliotek-o_shapes_audio:AudioWorkMiscellaneousPropertyGroup ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/awards> ;
+      sh:datatype xsd:string ;
+      sh:description "Information on awards associated with the described resource." ;
+      sh:name "awards" ;
+      sh:group bibliotek-o_shapes_audio:AudioWorkMiscellaneousPropertyGroup ;
+    ] ;
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/contentAccessibility> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/ContentAccessibility> ;
+      sh:description "Information that assists those with a sensory impairment for greater understanding of content, e.g., captions." ;
+      sh:name "Content accessibility" ;
+      sh:nodeKind sh:IRI ;
+      sh:group bibliotek-o_shapes_audio:AudioWorkMiscellaneousPropertyGroup ;
+    ] ;
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/note> ;
+      sh:description "Work related notes for when more granualar information isn't captured." ;
+      sh:name "Work notes" ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:group bibliotek-o_shapes_audio:AudioWorkMiscellaneousPropertyGroup ;
+      sh:or (
+         
+         [
+           sh:class <http://audio.bibliotek-o.org/ContentsNote> ;
+         ]
+         [
+           sh:class <http://audio.bibliotek-o.org/SummaryNote> ;
+         ]
+         [
+           sh:class <http://audio.bibliotek-o.org/SupplementaryContentNote> ;
+         ]
+         [
+           sh:class <http://audio.bibliotek-o.org/ReviewNote> ;
+         ]
+         [
+           sh:class <http://audio.bibliotek-o.org/PurposeNote> ;
+         ]
+         
+        ) ;
+    ] ;
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/firstIssue> ;
+      sh:datatype xsd:string ;
+      sh:description "Beginning date of a resource and/or the sequential designations." ;
+      sh:maxCount "1" ;
+      sh:name "first issue" ;
+      sh:group bibliotek-o_shapes_audio:AudioWorkMiscellaneousPropertyGroup ;
+    ] ;
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/lastIssue> ;
+      sh:datatype xsd:string ;
+      sh:description "Ending date of a resource and/or the sequential designations." ;
+      sh:maxCount "1" ;
+      sh:name "last issue" ;
+      sh:group bibliotek-o_shapes_audio:AudioWorkMiscellaneousPropertyGroup ;
+    ] ;
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/identifiedBy> ;
+      sh:description "Record identifier string value and type of identifier" ;
+      sh:name "Identified by" ;
+      sh:group bibliotek-o_shapes_audio:AudioWorkMiscellaneousPropertyGroup ;
+      sh:or (
+          [
+           sh:class <http://id.loc.gov/ontologies/bibframe/AudioTake> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Isan> ;
+         ]
+   
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Isrc> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Issn> ;
+         ]
+
+         [
+           sh:class<http://id.loc.gov/ontologies/bibframe/Lccn> ;
+         ]
+
+        ) ;
+    ] ;
+.
+
+bibliotek-o_shapes_audio:AudioInstanceForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Instance of Audio form" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass <http://id.loc.gov/ontologies/bibframe/Instance> ;
+  sh:property [
+      sh:path rdf:type ;
+      sh:name "Type of Instance" ;
+      sh:nodeKind sh:IRI ;
+      sh:group bibliotek-o_shapes_audio:TypeGenreFormPropertyGroup ;
+      sh:in ( <http://bibliotek-o.org/ontology/AudioDisc> <http://bibliotek-o.org/ontology/AudioRoll> <http://bibliotek-o.org/ontology/AudioCassette> <http://bibliotek-o.org/ontology/AudioBelt> <http://bibliotek-o.org/ontology/AudioCylinder> <http://bibliotek-o.org/ontology/AudioWireReel> <http://bibliotek-o.org/ontology/AudiotapeReel> <http://bibliotek-o.org/ontology/Cassette> <http://bibliotek-o.org/ontology/SoundTrackReel> <http://bibliotek-o.org/ontology/ComputerTapeReel> <http://bibliotek-o.org/ontology/Disc> <http://bibliotek-o.org/ontology/Reel> ) ;
+    ] ;
+    
+  sh:property [
+      sh:path bib:hasPreferredTitle ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
+      sh:group bibliotek-o_shapes_audio:TitlePropertyGroup ;
+      sh:minCount 1 ;
+      sh:maxCount 1 ;
+      sh:name "Preferred title" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "0"^^xsd:decimal ;
+    ] ;
+    
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/title> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:description "Record non-PreferredTitles here. Use Preferred Title to capture a preferred title." ;
+      sh:group bibliotek-o_shapes_audio:TitlePropertyGroup ;
+      sh:name "Other title" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "1"^^xsd:decimal ;
+    ] ;
+    
+  sh:property [
+      sh:path bib:hasActivity ;
+      sh:name "Agent activity or role" ;
+      sh:order "0"^^xsd:decimal ;
+      sh:class bib:Activity ;
+      sh:group bibliotek-o_shapes_audio:InstanceActivityPropertyGroup ;
+      tosh:editWidget swa:NestedObjectEditor ;
+    ] ;
+    
+ sh:property [
+      sh:path bf:provisionActivityStatement ;
+      sh:name "Provider statement" ;
+      sh:order "1"^^xsd:decimal ;
+      sh:description "Statement relating to providers of a resource; usually transcribed." ;
+      sh:nodeKind sh:Literal ;
+      sh:group bibliotek-o_shapes_audio:InstanceActivityPropertyGroup ;
+    ] ;
+  
+    sh:property [
+      sh:path <http://measurement.example.org/hasMeasurementGroup> ;
+      sh:class <http://measurement.example.org/MeasurementGroup> ;
+      sh:group bibliotek-o_shapes_audio:MeasurementPropertyGroup ;
+      sh:name "Measurement information" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "0"^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor ;
+    ] ;
+    
+    sh:property [
+      sh:path bf:instanceOf ;
+      sh:name "Relates this Instance to the Work it is the Instance of" ;
+      sh:nodeKind sh:IRI ;
+      sh:group bibliotek-o_shapes_audio:InstancetoWorkPropertyGroup ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Audio> ;
+    ] ;
+    
+    sh:property [
+      sh:path bf:editionStatement ;
+      sh:name "Edition statement or version of the resource" ;
+      sh:description: "Edition or version of the resource and associated statements of responsibility for the edition; usually transcribed." ;
+      sh:nodeKind sh:Literal ;
+      sh:group bibliotek-o_shapes_audio:InstancetoWorkPropertyGroup ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
+      sh:description "Speed at which an audio carrier must be operated to produce the sound intended, e.g., 78 rpm, 19 cm/s." ;
+      sh:name "Playing speed" ;
+      sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/PlayingSpeed> ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
+      sh:description "A number of sound channels used to make a recording." ;
+      sh:name "Configuration of playback channels" ;
+      sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:class <http://audio.bibliotek-o.org/NumberOfPlaybackChannelsConcept> ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
+      sh:description "A groove width of an analog disc." ;
+      sh:name "Groove width of an analog disc" ;
+      sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:class <http://audio.bibliotek-o.org/GrooveWidthofDiscConcept> ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
+      sh:description "A groove pitch of an analog cylinder." ;
+      sh:name "Groove pitch of an analog cylinder" ;
+      sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:class <http://audio.bibliotek-o.org/GroovePitchOfCylinderConcept> ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
+      sh:description "An equalization system, noise reduction system, etc., used in making an audio recording." ;
+      sh:name "Special playback characteristic" ;
+      sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:class <http://audio.bibliotek-o.org/SpecialPlaybackConcept> ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
+      sh:description "A relationship between an original carrier and the carrier of a reproduction made from the original." ;
+      sh:name "Kind of disc, cylinder or tape in relation to original carrier" ;
+      sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:class <http://audio.bibliotek-o.org/SoundRecordingGenerationConcept> ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
+      sh:description "A method used to encode audio content for playback.." ;
+      sh:name "Type of recording" ;
+      sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:class <http://audio.bibliotek-o.org/TypeOfRecordingConcept> ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
+      sh:description "Number of tracks on an audiotape, e.g., 12 track." ;
+      sh:name "Tape configuration" ;
+      sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/TapeConfig> ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
+      sh:description "Recording process in which a stylus cuts a vertical or lateral groove into an audio disc." ;
+      sh:name "Disc cutting" ;
+      sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
+      sh:class <http://performedmusicontology.org/ontology/DiscCutting> ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
+      sh:description "The type of equipment used in making the recording, as opposed to the type of equipment required for playback." ;
+      sh:name "Capture and storage technique" ;
+      sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
+      sh:class <http://audio.bibliotek-o.org/CaptureAndStorageTechnique> ;
+    ] ;
+    
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/soundCharacteristic/skos:inScheme> ;
+      sh:description "Terms for sound characteristics should be taken from RDA Values List or individuals from Performed Music Ontology" ;
+      sh:name "Sound Characteristics" ;
+      sh:group bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup ;
+      sh:nodeKind sh:IRI ;
+      sh:or (
+          [
+            sh:hasValue <http://rdaregistry.info/termList/configPlayback> 
+          ]
+          [
+            sh:hasValue <http://rdaregistry.info/termList/groovePitch>
+          ]
+          [
+            sh:hasValue <http://rdaregistry.info/termList/grooveWidth> ;
+          ]
+          [
+            sh:hasValue <http://rdaregistry.info/termList/specPlayback> ;
+          ]
+          [
+            sh:hasValue <http://rdaregistry.info/termList/RDAGeneration> ;
+          ]
+           [
+            sh:hasValue <http://rdaregistry.info/termList/typeRec> ;
+          ]
+        ) ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/identifiedBy> ;
+      sh:description "Record identifier string value and type of identifier" ;
+      sh:name "Identified by" ;
+      sh:group bibliotek-o_shapes_audio:InstanceMiscellaneousPropertyGroup ;
+      sh:or (
+           [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Identifier> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Barcode> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Doi> ;
+         ]
+   
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Ean> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Gtin14Number> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Hdl> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Ismn> ;
+         ]
+
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Isan> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Isbn> ;
+         ]
+   
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Isni> ;
+         ]
+
+        [
+         sh:class <http://id.loc.gov/ontologies/bibframe/Issn> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/LcOverseasAcq> ;
+         ]
+   
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Lccn> ;
+         ]
+
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Local> ;
+         ]
+   
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/MusicDistributorNumber> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/PublisherNumber> ;
+         ]
+         
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/StockNumber> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Upc> ;
+         ]
+         
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/StudyNumber> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Urn> ;
+         ]
+         
+         [
+           sh:class <http://bibliotek-o.org/1.1/ontology/OclcIdentifier> ;
+         ]
+        ) ;
+    ] ;    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/note> ;
+      sh:description "Instance related note for when more granualar information isn't captured." ;
+      sh:name "Instance note" ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:group bibliotek-o_shapes_audio:InstanceMiscellaneousPropertyGroup ;
+      sh:or (
+         
+         [
+           sh:class <http://audio.bibliotek-o.org/ContentsNote> ;
+         ]
+         [
+           sh:class <http://audio.bibliotek-o.org/SummaryNote> ;
+         ]
+         [
+           sh:class <http://audio.bibliotek-o.org/SupplementaryContentNote> ;
+         ]
+         [
+           sh:class <http://audio.bibliotek-o.org/ReviewNote> ;
+         ]
+         [
+           sh:class <http://audio.bibliotek-o.org/PurposeNote> ;
+         ]
+         
+        ) ;
+    ] ;
+        
+    
+      sh:property [
+      sh:path <http://purl.org/dc/terms/hasPart> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Audio> ;
+      sh:group bibliotek-o_shapes_audio:WorkToWorkPropertyGroup ;
+      sh:name "Content listing (track listing)" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+    
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/hasItem> ;
+      sh:class bf:Item ;
+      sh:description "Item which is an example of the described Instance." ;
+      sh:name "Has item" ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:group bibliotek-o_shapes_audio:InstancetToItemPropertyGroup ;
+
+    ] ;
+    
+# TODO- Still need to add general instance properties, including materiality.
+.
+
+bibliotek-o_shapes_audio:AudioItemForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Audio Item form" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass bf:Item ;
+    
+  sh:property [
+      sh:path bib:hasPreferredTitle ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
+      sh:group bibliotek-o_shapes_audio:TitlePropertyGroup ;
+      sh:minCount 1 ;
+      sh:maxCount 1 ;
+      sh:name "Preferred title" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "0"^^xsd:decimal ;
+    ] ;
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/title> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:description "Record non-PreferredTitles here. Use Preferred Title to capture a preferred title." ;
+      sh:group bibliotek-o_shapes_audio:TitlePropertyGroup ;
+      sh:name "Other title" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "1"^^xsd:decimal ;
+    ] ;
+  sh:property [
+      sh:path bib:hasActivity ;
+      sh:name "Agent activity or role" ;
+      sh:order "0"^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:class bib:Activity ;
+      sh:group bibliotek-o_shapes_audio:ItemActivityPropertyGroup ;
+    ] ;
+  sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/itemOf> ;
+      sh:name "Item of a Particular Instance" ;
+      sh:order "0"^^xsd:decimal ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Instance> ;
+      sh:group bibliotek-o_shapes_audio:ItemToInstancePropertyGroup ;
+    ] ;  
+  sh:property [
+      sh:path <http://purl.org/dc/terms/isPartOf> ;
+      sh:name "Part of collection" ;
+      sh:order "0"^^xsd:decimal ;
+      sh:class bib:Collection ;
+      sh:group bibliotek-o_shapes_audio:ItemProvenanceGroup ;
+    ] ;
+  sh:property [
+      sh:path <http://performedmusicontology.org/ontology/associatedWith> ;
+      sh:description "To link an item to an event, e.g. concert, or event series, e.g. a tour, in which the item was used or associated" ;
+      sh:name "Associated with an event" ;
+      sh:group bibliotek-o_shapes_audio:ItemProvenanceGroup ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:order "1"^^xsd:decimal ;
+      bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService ;
+      skos:editorialNote "Use look up service; though FAST has some events, catalogers will have to create most events because libraries traditionally haven't created many Event authorities." ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Event> ;
+    ] ; 
+    
+    sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/note> ;
+      sh:description "Copy specific notes. These note types apply specifically to the Cornell Hip Hop Collection" ;
+      sh:name "Copy specific notes" ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:group bibliotek-o_shapes_audio:AudioItemMiscellaneousPropertyGroup ;
+      sh:or (
+         [
+           sh:class <http://audio.bibliotek-o.org/WritingOnAlbumNote> ;
+         ]
+         [
+           sh:class <http://audio.bibliotek-o.org/NumberedSRJacketNote> ;
+         ]
+   
+         [
+           sh:class <http://audio.bibliotek-o.org/InitialsOrNumberOnLabelNote> ;
+         ]
+         [
+           sh:class <http://audio.bibliotek-o.org/PostItNoteNote> ;
+         ]
+
+         [
+           sh:class <http://audio.bibliotek-o.org/SignatureNote> ;
+         ]
+         [
+           sh:class <http://audio.bibliotek-o.org/CuePointMarkerNote> ;
+         ]
+         [
+           sh:class <http://audio.bibliotek-o.org/TracksOfInterestNote> ;
+         ]
+          [
+           sh:class <http://audio.bibliotek-o.org/TapeOnLPDiscLabelOrCoverNote> ;
+         ]
+         [
+           sh:class <http://audio.bibliotek-o.org/NotInOriginalJacketNote> ;
+         ]
+         [
+           sh:class <http://audio.bibliotek-o.org/TwoCopiesInSameSleeveNote> ;
+         ]
+         [
+           sh:class <http://audio.bibliotek-o.org/SummaryNote> ;
+         ]
+        ) ;
+    ] ;
+    
+     sh:property [
+      sh:path <http://id.loc.gov/ontologies/bibframe/identifiedBy> ;
+      sh:description "Record identifier string value and type of identifier" ;
+      sh:name "Identified by" ;
+      sh:group bibliotek-o_shapes_audio:AudioItemMiscellaneousPropertyGroup ;
+      sh:or (
+          [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Barcode> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Local> ;
+         ]
+   
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/ShelfMarkDdc> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/ShelfMarkNlm> ;
+         ]
+
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/ShelfMarkUdc> ;
+         ]
+         
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/ShelfMark> ;
+         ]
+        ) ;
+    ] ;
+.
+
+bibliotek-o_shapes_audio:WorkTitleForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Title form" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass <http://id.loc.gov/ontologies/bibframe/Title> ;
+  sh:property [
+      sh:path rdf:type ;
+      sh:name "Type of Title" ;
+      sh:in ( <http://bibliotek-o.org/ontology/AbbreviatedTitle> <http://bibliotek-o.org/ontology/ConciseTitle> <http://bibliotek-o.org/ontology/DistinctiveTitle> <http://bibliotek-o.org/ontology/KeyTitle> <http://bibliotek-o.org/ontology/ParallelTitle> ) ;
+    ] ;
+  sh:property [
+      sh:path rdf:value ;
+      sh:description "Textual value of the title" ;
+      sh:name "Title" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      sh:path <http://purl.org/dc/terms/hasPart> ;
+      sh:class bib:TitleElement ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:description "Has title part" ;
+      sh:name "has part" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://bibliotek-o.org/ontology/isTitleOf> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Audio> ;
+      sh:description "Links this Title to an Audio" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+    
+.
+
+# Do we want to add rdf:value to Title Form Shapes, or concatenate TitleElements through automation?
+
+bibliotek-o_shapes_audio:InstanceTitleForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Instance title form" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass <http://id.loc.gov/ontologies/bibframe/Title> ;
+  sh:property [
+      sh:path rdf:type ;
+      sh:name "Type of Title" ;
+      sh:in ( <http://bibliotek-o.org/ontology/AbbreviatedTitle> <http://bibliotek-o.org/ontology/ConciseTitle> <http://bibliotek-o.org/ontology/DistinctiveTitle> <http://bibliotek-o.org/ontology/KeyTitle> <http://bibliotek-o.org/ontology/ParallelTitle> ) ;
+    ] ;
+  sh:property [
+      sh:path rdf:value ;
+      sh:description "Textual value of the title" ;
+      sh:name "Title" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      sh:path <http://bibliotek-o.org/ontology/hasOrigin> ;
+      sh:class <http://bibliotek-o.org/1.1/ontology/Origin> ;
+      sh:description "Describe the origin of the title, for example spine or cover" ;
+      sh:name "Title origin" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://purl.org/dc/terms/hasPart> ;
+      sh:class bib:TitleElement ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:description "Has title part" ;
+      sh:name "has part" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+    sh:property [
+      sh:path <http://bibliotek-o.org/ontology/isTitleOf> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Instance> ;
+      sh:description "Links this Title to an Instance" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+.
+
+bibliotek-o_shapes_audio:ItemTitleForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Item title form" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass <http://id.loc.gov/ontologies/bibframe/Title> ;
+  sh:property [
+      sh:path rdf:type ;
+      sh:name "Type of Title" ;
+      sh:in ( <http://bibliotek-o.org/ontology/AbbreviatedTitle> <http://bibliotek-o.org/ontology/ConciseTitle> <http://bibliotek-o.org/ontology/DistinctiveTitle> <http://bibliotek-o.org/ontology/KeyTitle> <http://bibliotek-o.org/ontology/ParallelTitle> ) ;
+    ] ;
+  sh:property [
+      sh:path rdf:value ;
+      sh:description "Textual value of the title" ;
+      sh:name "Title" ;
+      sh:nodeKind sh:Literal ;ertyGroup ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      sh:path <http://bibliotek-o.org/ontology/hasOrigin> ;
+      sh:class <http://bibliotek-o.org/1.1/ontology/Origin> ;
+      sh:description "Describe the origin of the title, for example spine or cover" ;
+      sh:name "Title origin" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://purl.org/dc/terms/hasPart> ;
+      sh:class bib:TitleElement ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:description "Has title part" ;
+      sh:name "has part" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://bibliotek-o.org/ontology/isTitleOf> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Item> ;
+      sh:description "Links this Title to an Item" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+.
+
+bibliotek-o_shapes_audio:TitleElementForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Title element form" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      sh:path rdf:type ;
+      sh:name "Type of Title Element" ;
+      sh:minCount "1" ;
+      sh:maxCount "1" ;
+      sh:in ( <http://bibliotek-o.org/ontology/NonSortElement> <http://bibliotek-o.org/ontology/MainTitleElement> <http://bibliotek-o.org/ontology/SubtitleElement> <http://bibliotek-o.org/ontology/PartNameElement> <http://bibliotek-o.org/ontology/PartNumberElement> ) ;
+    ] ;
+  sh:property [
+      sh:path rdf:value ;
+      sh:minCount "1" ;
+      sh:maxCount "1" ;
+      sh:description "String value for the title element" ;
+      sh:name "Title element value" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+    sh:property [
+      sh:path <http://vivoweb.org/ontology/core#rank> ;
+      sh:description "String value for the title element" ;
+      sh:name "Title element value" ;
+      sh:nodeKind sh:Literal ;
+      sh:datatype xsd:integer ;
+      sh:minCount "1" ;
+      sh:maxCount "1" ;
+    ] ;
+  sh:targetClass <http://bibliotek-o.org/ontology/TitleElement> ;
+.
+
+bibliotek-o_shapes_audio:AudioWorkActivityForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Agent Activity" ;
+  sh:targetClass bib:Activity ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      sh:path rdf:type ;
+      sh:order "0" ;
+      sh:description "Agent role or activity type" ;
+      sh:name "Agent role" ;
+      sh:in ( <http://bibliotek-o.org/ontology/ComposerActivity> <http://bibliotek-o.org/ontology/ArrangerActivity> <http://bibliotek-o.org/ontology/LibrettistActivity> <http://bibliotek-o.org/ontology/LyricistActivity> <http://bibliotek-o.org/ontology/PerformerActivity> <http://bibliotek-o.org/ontology/ConductorActivity> <http://bibliotek-o.org/ontology/MusicianActivity> <http://bibliotek-o.org/ontology/SingerActivity> <http://bibliotek-o.org/ontology/InstrumentalistActivity> <http://bibliotek-o.org/ontology/NarratorActivity> <http://bibliotek-o.org/ontology/CommentatorActivity> <http://bibliotek-o.org/ontology/ProducerActivity> <http://bibliotek-o.org/ontology/MusicalDirectorActivity> <http://bibliotek-o.org/ontology/SoundDesignerActivity> <http://bibliotek-o.org/ontology/RecordistActivity> <http://bibliotek-o.org/ontology/BroadcasterActivity> ) ;
+    ] ;
+  sh:property [
+      sh:path bib:hasAgent ;
+      sh:order "1" ;
+      sh:maxCount "1" ;
+      sh:class <http://xmlns.com/foaf/0.1/Agent> ;
+      sh:description "Agent" ;
+      sh:name "Agent" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path dcterms:date ;
+      sh:order "2" ;
+      sh:maxCount "1" ;
+      sh:description "Date of the activity" ;
+      sh:name "Date" ;
+      sh:nodeKind sh:Literal ;
+    ];
+    sh:property [
+      sh:path schema:location ;
+      sh:order "3" ;
+      sh:maxCount "1" ;
+      sh:description "Location of the activity" ;
+      sh:name "Location" ;
+      sh:class gn:Feature ;
+      sh:nodeKind sh:IRI ;
+      bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService ;
+    ];
+  sh:property [
+      sh:path bib:isActivityOf ;
+      sh:order "4" ;
+      sh:maxCount "1" ;
+      sh:description "Links this particular Activity form to Audio Works" ;
+      sh:class bf:Audio ;
+      sh:name "Activity of an Audio Work" ;
+    ] ;
+.
+
+bibliotek-o_shapes_audio:AudioInstanceActivityForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Agent Activity" ;
+  sh:targetClass bib:Activity ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      sh:path rdf:type ;
+      sh:order "0" ;
+      sh:description "Agent role or activity type" ;
+      sh:name "Agent role" ;
+      sh:in ( <http://bibliotek-o.org/ontology/PublisherActivity> <http://bibliotek-o.org/ontology/DistributorActivity> <http://bibliotek-o.org/ontology/ManufacturerActivity> ) ;
+    ] ;
+  sh:property [
+      sh:path bib:hasAgent ;
+      sh:order "1" ;
+      sh:maxCount "1" ;
+      sh:class <http://xmlns.com/foaf/0.1/Agent> ;
+      sh:description "Agent" ;
+      sh:name "Agent" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path dcterms:date ;
+      sh:order "2" ;
+      sh:description "Date of the activity" ;
+      sh:name "Date" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+    sh:property [
+      sh:path schema:location ;
+      sh:order "3" ;
+      sh:description "Location of the activity" ;
+      sh:name "Location" ;
+      sh:class gn:Feature ;
+      sh:nodeKind sh:IRI ;
+      bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService ;
+    ];
+    sh:property [
+      sh:path bib:isActivityOf ;
+      sh:order "4" ;
+      sh:description "Links this particular Activity form to Instances" ;
+      sh:class bf:Instance ;
+      sh:name "Activity of an Instance" ;
+    ] ;
+.
+
+bibliotek-o_shapes_audio:AudioItemActivityForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Agent Activity" ;
+  sh:targetClass bib:Activity ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      sh:path rdf:type ;
+      sh:order "0" ;
+      sh:description "Agent role or activity type" ;
+      sh:name "Agent role" ;
+      sh:in ( <http://bibliotek-o.org/ontology/DonorActivity> <http://bibliotek-o.org/1.1/ontology/AcquisitionActivity> ) ;
+    ] ;
+    
+# TODO Need more Item Activities
+
+  sh:property [
+      sh:path bib:hasAgent ;
+      sh:order "1" ;
+      sh:maxCount "1" ;
+      sh:class <http://xmlns.com/foaf/0.1/Agent> ;
+      sh:description "Agent" ;
+      sh:name "Agent" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path dcterms:date ;
+      sh:order "2" ;
+      sh:description "Date of the activity" ;
+      sh:name "Date" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+    sh:property [
+      sh:path schema:location ;
+      sh:order "3" ;
+      sh:description "Location of the activity" ;
+      sh:name "Location" ;
+      sh:class gn:Feature ;
+      sh:nodeKind sh:IRI ;
+      bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService ;
+    ];
+    sh:property [
+      sh:path bib:isActivityOf ;
+      sh:order "4" ;
+      sh:description "Links this particular Activity form to Items" ;
+      sh:class bf:Item ;
+      sh:name "Activity of an Item" ;
+    ] ;
+.
+
+bibliotek-o_shapes_audio:bfIdentifier
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Identifier Form" ;
+  sh:description "General identifer form" ;
+  sh:targetClass bf:Identifier ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      sh:path rdf:value ;
+      sh:description "Record the string value of the identifier" ;
+      sh:name "Identifier value" ;
+      sh:nodeKind sh:Literal ;
+      sh:order "0"^^xsd:decimal ;
+    ] ;
+    
+    sh:property [
+      sh:path rdf:type ;
+      sh:description "Record the type of identifier, e.g. ISBN, ISSN, OCLC." ;
+      sh:name "Type of identifier" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "1"^^xsd:decimal ;
+      sh:in ( <http://id.loc.gov/ontologies/bibframe/Ansi> <http://id.loc.gov/ontologies/bibframe/AudioIssueNumber> <http://id.loc.gov/ontologies/bibframe/AudioTake> <http://id.loc.gov/ontologies/bibframe/Barcode> <http://id.loc.gov/ontologies/bibframe/Coden> <http://id.loc.gov/ontologies/bibframe/CopyrightNumber> <http://id.loc.gov/ontologies/bibframe/DissertationIdentifier> <http://id.loc.gov/ontologies/bibframe/Doi> <http://id.loc.gov/ontologies/bibframe/Ean> <http://id.loc.gov/ontologies/bibframe/Fingerprint> <http://id.loc.gov/ontologies/bibframe/Gtin14Number> <http://id.loc.gov/ontologies/bibframe/Hdl> <http://id.loc.gov/ontologies/bibframe/Isan> <http://id.loc.gov/ontologies/bibframe/Isbn> <http://id.loc.gov/ontologies/bibframe/Ismn> <http://id.loc.gov/ontologies/bibframe/Isni> <http://id.loc.gov/ontologies/bibframe/Iso> <http://id.loc.gov/ontologies/bibframe/Isrc> <http://id.loc.gov/ontologies/bibframe/Issn> <http://id.loc.gov/ontologies/bibframe/IssnL> <http://id.loc.gov/ontologies/bibframe/Istc> <http://id.loc.gov/ontologies/bibframe/Iswc> <http://id.loc.gov/ontologies/bibframe/LcOverseasAcq> <http://id.loc.gov/ontologies/bibframe/Lccn> <http://id.loc.gov/ontologies/bibframe/Local> <http://id.loc.gov/ontologies/bibframe/MatrixNumber> <http://id.loc.gov/ontologies/bibframe/MusicDistributorNumber> <http://id.loc.gov/ontologies/bibframe/MusicPlate> <http://id.loc.gov/ontologies/bibframe/MusicPublisherNumber> <http://id.loc.gov/ontologies/bibframe/Nbn> <http://id.loc.gov/ontologies/bibframe/PostalRegistration> <http://id.loc.gov/ontologies/bibframe/PublisherNumber> <http://id.loc.gov/ontologies/bibframe/ReportNumber> <http://id.loc.gov/ontologies/bibframe/Sici> <http://id.loc.gov/ontologies/bibframe/StockNumber> <http://id.loc.gov/ontologies/bibframe/Strn> <http://id.loc.gov/ontologies/bibframe/StudyNumber> <http://id.loc.gov/ontologies/bibframe/Upc> <http://id.loc.gov/ontologies/bibframe/Urn> <http://id.loc.gov/ontologies/bibframe/VideoRecordingNumber> ) ;
+    ] ;
+.
+
+bibliotek-o_shapes_audio:MeasurementGroupForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Measurement Group Form" ;
+  sh:description "A group of measurements, e.g. length, width, height measuring the size of a resource would be one measurement group" ;
+  sh:targetClass <http://measurement.example.org/MeasurementGroup> ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      sh:path dcterms:description ;
+      sh:description "Record any qualifying information about the measurement, e.g. 'approximate', 'or smaller', 'in container', 'with handle' " ;
+      sh:name "Qualifying information about the measurement" ;
+      sh:nodeKind sh:Literal ;
+      sh:order "0"^^xsd:decimal ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://measurement.example.org/hasMeasurement> ;
+      sh:class <http://measurement.example.org/Measurement> ;
+      sh:description "The measurement of a single aspect of a resource, including value, units, and the dimension measured. For example, a book may have a height (aspect) of 10 (value) centimeters (units). Each such measurement is attached to a MeasurementGroup." ;
+      sh:name "Single measurement" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "1"^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor ;
+    ] ;
+.
+
+bibliotek-o_shapes_audio:EventForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Event" ;
+  sh:targetClass bf:Event ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      sh:path rdf:type ;
+      sh:order "0" ;
+      sh:description "Type of event" ;
+      sh:name "Event type" ;
+    ] ;
+  sh:property [
+      sh:path rdfs:label ;
+      sh:order "1" ;
+      sh:description "Human readable label/description of the Event" ;
+      sh:name "Event label" ;
+    ] ;
+
+  sh:property [
+      sh:path dcterms:date ;
+      sh:order "2" ;
+      sh:maxCount "1" ;
+      sh:description "Date of the event" ;
+      sh:name "Date" ;
+      sh:nodeKind sh:Literal ;
+    ];
+    sh:property [
+      sh:path schema:location ;
+      sh:order "3" ;
+      sh:maxCount "1" ;
+      sh:description "Location of the event" ;
+      sh:name "Location" ;
+      sh:class gn:Feature ;
+      sh:nodeKind sh:IRI ;
+      bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService ;
+    ];
+  sh:property [
+      sh:path schema:recordedIn ;
+      sh:order "4" ;
+      sh:description "Links this particular Event to a Audio Work recording of the event" ;
+      sh:class bf:Audio ;
+      sh:name "Activity of an Audio Work" ;
+    ] ;
+    sh:property [
+      sh:path pmo:associatedWith ;
+      sh:order "5" ;
+      sh:description "To link an event e.g. concert, or event series, e.g. a tour, to an item in which the item was used or associated" ;
+      sh:class bf:Item ;
+      sh:name "Associated Item" ;
+    ] ;
+.
+
+bibliotek-o_shapes_audio:NoteForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Note form" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass bf:Note ;
+  sh:property [
+      sh:path rdf:type ;
+      sh:name "Type of Note" ;
+      sh:minCount "1" ;
+      sh:maxCount "1" ;
+    ] ;
+  sh:property [
+      sh:path rdf:value ;
+      sh:minCount "1" ;
+      sh:maxCount "1" ;
+      sh:description "String value for the note" ;
+      sh:name "Note value" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+.
+
+bibliotek-o_shapes_audio:MeasurementForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Measurement form" ;
+  sh:targetClass <http://measurement.example.org/Measurement> ;
+  rdfs:subClassOf rdfs:Resource ;
+    
+    sh:property [
+      sh:path rdf:value ;
+      sh:description "Numeric value for the measurement" ;
+      sh:name "Numeric value" ;
+      sh:nodeKind sh:Literal ;
+      sh:order "0"^^xsd:decimal ;
+    ] ;
+    
+    sh:property [
+      sh:path <http://measurement.example.org/hasUnit> ;
+      sh:description "Unit used to express the measurement" ;
+      sh:name "Unit" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "1"^^xsd:decimal ;
+      sh:or (
+          [
+            sh:hasValue <ttp://qudt.org/vocab/unit#Centimeter> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#Foot> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#Gram> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#Inch> ;
+          ]
+           [
+            sh:hasValue <http://qudt.org/vocab/unit#Kilogram> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#Kilometer> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#Meter> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#MileUSStatute> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#Millimeter> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#MetricTon> ;
+          ]
+           [
+            sh:hasValue <http://qudt.org/vocab/unit#OunceMass> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#PoundMass> ;
+          ]
+        ) ;
+    ] ;
+
+# For dimension types, such as height, width, weight, etc. use AAT, Art & Architecture Thesaurus.
+
+    sh:property [
+      sh:path <http://measurement.example.org/measures> ;
+      sh:description "Dimension or other aspect of a resource that is measured by this Measurement. For example, a Measurement may specify the length, height, weight, file size, etc. of a resource." ;
+      sh:name "Dimension or other aspect" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "2"^^xsd:decimal ;
+      sh:or (
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300055621> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300055623> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300055624> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300055644> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300055645> ;
+          ]
+           [
+            sh:hasValue <http://vocab.getty.edu/aat/300055646> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300055647> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300055649> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300056240> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300072633> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300312044> ;
+          ]
+           [
+            sh:hasValue <http://vocab.getty.edu/aat/300404162> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300404164> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300404403> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300404430> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300404431> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300404432> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300404433> ;
+          ]
+           [
+            sh:hasValue <http://vocab.getty.edu/aat/300404437> ;
+          ]
+        ) ;
+    ] ;
+.
+
+
+bibliotek-o_shapes_audio:TitlePropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Titles" ;
+  sh:description "To group title information for the resource." ;
+  sh:order "1"^^xsd:decimal ;
+.
+
+bibliotek-o_shapes_audio:WorkActivityPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Work Agent and Capture Information" ;
+  sh:description "To group Agent role information for the resource." ;
+  sh:order "1"^^xsd:decimal ;
+.
+
+bibliotek-o_shapes_audio:TypeGenreFormPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Type and Genre" ;
+  sh:description "To group type, Genre, and Form information for the resource." ;
+  sh:order "2"^^xsd:decimal ;
+.
+
+bibliotek-o_shapes_audio:SubjectAndCoveragePropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Subjects" ;
+  sh:order "3"^^xsd:decimal ;
+.
+
+bibliotek-o_shapes_audio:AudioWorkToWorkPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Related Audio Works" ;
+  sh:order "4"^^xsd:decimal ;
+.
+
+bibliotek-o_shapes_audio:WorkToWorkPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Related Works" ;
+  sh:order "5"^^xsd:decimal ;
+.
+
+bibliotek-o_shapes_audio:WorkToInstancePropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Related Instances (Manifestations)" ;
+  sh:order "6"^^xsd:decimal ;
+.
+
+bibliotek-o_shapes_audio:AudioWorkMiscellaneousPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Miscellaneous Work Information" ;
+  sh:order "7"^^xsd:decimal ;
+.
+
+bibliotek-o_shapes_audio:InstanceActivityPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Instance Agent Information" ;
+  sh:description "To group Agent role information for the resource." ;
+  sh:order "2"^^xsd:decimal ;
+.
+
+bibliotek-o_shapes_audio:MeasurementPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Measurements" ;
+  sh:description "To group measurement information for the resource." ;
+  sh:order "4"^^xsd:decimal ;
+.
+
+bibliotek-o_shapes_audio:InstancetoWorkPropertyGroup
+ rdf:type sh:PropertyGroup ;
+  rdfs:label "Instance of Work" ;
+  sh:description "To group Instances of the Same Work, and provide edition information" ;
+  sh:order "5"^^xsd:decimal ;
+.
+
+bibliotek-o_shapes_audio:AudioInstanceCharacteristicsPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Audio Instance Characteristics" ;
+  sh:description "To group information about the Audio-specific instance characteristics, e.g. playback channel." ;
+  sh:order "6"^^xsd:decimal ;
+.
+
+bibliotek-o_shapes_audio:InstanceMiscellaneousPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Miscellaneous Work Information" ;
+  sh:order "7"^^xsd:decimal ;
+.
+
+bibliotek-o_shapes_audio:InstanceToItemPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Related Items (Copies)" ;
+  sh:order "8"^^xsd:decimal ;
+.
+
+bibliotek-o_shapes_audio:ItemActivityPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Item Agent Information" ;
+  sh:description "To group Agent role information for the resource." ;
+  sh:order "1"^^xsd:decimal ;
+.
+
+bibliotek-o_shapes_audio:ItemToInstancePropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Related Items (Copies)" ;
+  sh:order "2"^^xsd:decimal ;
+.
+
+bibliotek-o_shapes_audio:ItemProvenanceGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Item Provenance" ;
+  sh:description "To group item provenance information for the resource." ;
+  sh:order "3"^^xsd:decimal ;
+.
+
+bibliotek-o_shapes_audio:AudioItemMiscellaneousPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Miscellaneous Item Information" ;
+  sh:order "4"^^xsd:decimal ;
+.
+
+
+    
