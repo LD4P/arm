@@ -249,7 +249,7 @@ resource.
 > - **Belongs to:** http://example.org/Origin
 
 **ex:transcribed**
-> - **Label:** supplied
+> - **Label:** transcribed
 > - **IRI:** http://example.org/transcribed
 > - **Definition:** Value transcribed directly from the resource.
 > - **Belongs to:** http://example.org/Origin
