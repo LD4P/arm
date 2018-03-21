@@ -2,11 +2,22 @@ Markings
 =============
 RareMat and ArtFrame, 2018.03.16
 
+**Table of Contents**
+> - [Introduction](#intro)
+> - [Sample Data](#sampledata)
+> - [Markings in BIBFRAME](#bfmarkings)
+> - [Overview of the RareMat and ArtFrame Marking Model](#modeloverview)
+> - [Diagram](#diagram)
+> - [Terms](#terms)
+> - [Sample RDF](#samplerdf)
+> - [Areas for Future Research](#future)
+> - [Appendix. Markings and Marginalia](#appendix)
+
 <a name="intro">Introduction</a>
 -----------
 Markings, as defined in AAT, are “Standardized symbols, notations, or other markings applied to objects during or after creation, conveying information such as the object's origin or maker, its authenticity, or a change in its official status.”
 
-We contrast such markings with marginalia and other unofficial markings applied by individual users, rather than as an element of the creation or production process of the object, or of its custodial history, noting that in some cases the distinction may be subtle. For example, a binding autograph by the binding designer (see Sample Data) is distinguished here from an autograph hand-written in a book, by an author, owner, gift-giver, etc., when transferring ownership to another agent. In-depth pursuit of the distinctions and modeling issues is left for future research. Preliminary remarks are made in [Appendix](#appendix). 
+We contrast such markings with marginalia and other unofficial markings applied by individual users outside the creation or production process or custodial history of an object, noting that in some cases the distinction may be subtle. For example, a binding autograph by the binding designer (see [Sample Data](#sampledata) is distinguished here from an autograph hand-written in a book, by an author, owner, gift-giver, etc., when transferring ownership to another agent. In-depth pursuit of the distinctions and modeling issues is left for future research. Preliminary remarks are made in [Appendix](#appendix). 
 
 <a name="sampledata">Sample Data</a>
 --------
@@ -16,18 +27,18 @@ We contrast such markings with marginalia and other unofficial markings applied 
 -----------------
 By intent, BIBFRAME does not provide deep modeling of resource components or physical description; these areas are left to domain extensions.  
 
-<a name="rarematMarkings">Overview of the RareMat &amp; ArtFrame Marking Model</a>
+<a name="modeloverview">Overview of the RareMat and ArtFrame Marking Model</a>
 -------------
 The Marking model is quite simple, involving a class hierarchy descending from a Marking superclass, and a pair of predicates to relate the Marking to the object marked. Other modeling derives from other Raremat/ArtFrame models such as Activities and <a href="https://github.com/LD4P/ArtFrame-RareMat/blob/master/modeling_recommendations/materials.md">Materials</a>, as well as standard terms used in the Raremat/ArtFrame application profiles for dates, descriptions, and other properties.
 
-Diagram
+<a name="diagram">Diagram</a>
 -------
 ![Markings diagram](/modeling_recommendations/modeling_diagrams/markings.png)
 
 Note that while the diagram and Sample RDF below show a marking attached to a binding, markings can apply to many types of resources.
 
 
-Term Specifications
+<a name="terms">Term Specifications</a>
 ----------------
 
 Classes
@@ -36,11 +47,14 @@ Classes
 > - **URI:** TBD
 > - **Label:** Marking
 > - **Definition:** A standardized symbol, notation, or other marking present in or applied to the materials of which an object is composed, or applied to an object during or after creation, conveying information such as the object's origin or maker, its authenticity, or a change in its official status. 
+> - **Editorial note:** As currently defined, contrasts with marginialia and other unofficial markings applied by individual users outside the creation or production process or custodial history of an object. This distinction may at times be subtle, and is subject to future review.</skos:editorialNote>
 
 **ex:Autograph**
 > - **URI:** TBD
 > - **Label:** Autograph
-> - **Definition:** Persons' names written in their own hand.
+> - **Definition:** A person's name written on a resource in his or her own hand as part of the creation or production process.
+> - **Editorial note:** As currently defined, excludes post-production autographs on an item, such as on a gift. This distinction is subject to future review.
+> - **Example:** A binder's signature
 > - **Subclass of:** Marking
 
 **ex:BindersTicket**
@@ -93,12 +107,12 @@ Properties
 **ex:markedBy** (ObjectProperty)
 > - **URI:** TBD
 > - **Label:** markedBy
-> - **Definition:** The resource’s relationship to a Marking it bears. 
+> - **Definition:** A resource’s relationship to a Marking it bears. 
 > - **Domain:** unspecified
 > - **Range:** Marking
 > - **Inverse:** ex:marks
 
-Sample RDF
+<a name="samplerdf">Sample RDF</a>
 ------------
 ```
 :binding a ex:Binding ;
@@ -117,12 +131,12 @@ Sample RDF
 
 ```
 
-Areas for Future Research
+<a name="future">Areas for Future Research</a>
 -------------
 - Consider use of dcterms:isPartOf/dcterms:hasPart instead of marks/markedBy.
 - Marginalia and similar markings
 > - Define a class hierarchy
-> - Markings vs marginalia; see Appendix A for some preliminary remarks.
+> - Markings vs marginalia; see [Appendix](#appendix) for some preliminary remarks.
 - Use of controlled vocabularies rather than subclassing for Marking types. We could define the superclass Marking, and leave all typing to marking taxonomies such as AAT. Explore pros and cons of each approach. If the marking taxonomy is deep and complex, it is more practical to use it rather than defining a parallel set of subclasses.
 
 
