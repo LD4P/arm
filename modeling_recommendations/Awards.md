@@ -168,9 +168,9 @@ Properties
 > - **Definition**: Entity associated with a resource or element of description, such as the name of the entity responsible for the content or of the publication, printing, distribution, issue, release or production of a resource.
 > - **Domain**: bf:Agent
 
-**isAgentOf (Object property)**
-> - **Label**: is Agent of
-> - **URI**: http://example.org/isAgentOf
+**agentOf (Object property)**
+> - **Label**: agent of
+> - **URI**: http://example.org/agentOf
 > - **Definition**: Relates an Agent to an Activity they participated in.
 > - **Inverse**: bf:agent
 

@@ -113,10 +113,9 @@ Named individuals to be used with ex:Origin: binder, caption, container, cover, 
 > - **Range:** http://id.loc.gov/ontologies/bibframe/Title
 
 **ex:titleOf** (object property)
-> - **Label:** is title of
+> - **Label:** title of
 > - **IRI:** http://example.org/titleOf
 > - **Definition:** Resource that this title belongs to.
-> - **Scope note:** Expected value Work, Instance or Item.
 > - **Domain:** http://id.loc.gov/ontologies/bibframe/Title
 > - **Inverse:** http://id.loc.gov/ontologies/bibframe/title
 
@@ -217,7 +216,7 @@ Named individuals to be used with ex:Origin: binder, caption, container, cover, 
 > - **IRI:** http://example.org/isPreferredTitleOf
 > - **Definition:** Specifies the resource for which this is the preferred title.
 > - **Scope note:** A resource may have multiple directly linked titles, among which this is the preferred title.
-> - **Subproperty of: http://example.org/isTitleOf
+> - **Subproperty of: http://example.org/titleOf
 > - **Domain:** http://id.loc.gov/ontologies/bibframe/Title
 > - **Inverse of:** http://example.org/hasPreferredTitle
 
@@ -340,7 +339,7 @@ Translated title
     rdf:value "Title devised by Library staff."
 
 :title4 a bf:Title ;
-    ex:isTitleOf :instance2 ;
+    ex:titleOf :instance2 ;
     rdf:value "Baraki dli︠a︡ voennopi︠e︡nnykh u st. Segezh (Prisoner of war barracks near the Segezh Station)" ;
     ex:origin ex:transcribed, ex:caption ;
     bf:status ex:invalid ;
@@ -376,7 +375,7 @@ Translated title
         changed from \"The Swimming Hole\" to \"Swimming\" to reflect this new research.)" .
 
 :title2 a bf:Title ;
-    ex:isTitleOf :work1 ;
+    ex:titleOf :work1 ;
     rdf:value "The Swimming Hole" ;
     ex:hasSource :source2 .
 
@@ -387,12 +386,12 @@ Translated title
         Swimming Hole\")" .
 
 :title3 a bf:Title ;
-    ex:isTitleOf :work1 ;
+    ex:titleOf :work1 ;
     rdf:value "The Old Swimming Hole" ;
     ex:hasSource <http://worldcat.org/entity/work/id/36654331> .
 
 :title4 a bf:Title ;
-    ex:isTitleOf :work1 ;
+    ex:titleOf :work1 ;
     rdf:value "Swimmers" ;
     ex:hasSource <http://worldcat.org/entity/work/id/36654331> .
 
@@ -414,7 +413,7 @@ Translated title
     ex:hasSource <http://id.loc.gov/rwo/agents/n79021281> .
 
 :title2 a bf:Title ;
-    ex:isTitleOf :work1 ;
+    ex:titleOf :work1 ;
     rdf:value "Young ladies of Avignon"@en ;
     ex:hasSource :work2 .
 
@@ -425,12 +424,12 @@ Translated title
     rdf:value "Index to reproductions of European art" .
 
 :title3 a bf:Title ;
-     ex:isTitleOf :work1 ;
+     ex:titleOf :work1 ;
      rdf:value "Avignon brothel"@en ;
      ex:hasSource <http://worldcat.org/entity/work/id/56688045> .
 
 :title4 a bf:Title ;
-    ex:isTitleOf :work1 ;
+    ex:titleOf :work1 ;
     rdf:value "Le Bordel"@fr ;
     bf:mainTitle "Bordel"@fr ;
     ex:hasSource <http://worldcat.org/entity/work/id/3901310255> .
@@ -450,7 +449,7 @@ Translated title
     rdf:value "I [love] Venice"@en .
 
 :title2 a bf:Title ;
-    ex:isTitleOf :work1 ;
+    ex:titleOf :work1 ;
     rdf:value "I heart Venice"@en .
     
 :instance1 a bf:Instance
@@ -466,7 +465,7 @@ Translated title
     bf:note :note1 .
 
 :title4 a bf:Title ;
-    ex:isTitleOf :instance1 ;
+    ex:titleOf :instance1 ;
     rdf:value "I heart Venice : portable pocket ashtray"@en ;
     bf:mainTitle "I heart Venice"@en ;
     bf:subtitle "portable pocket ashtray"@en .

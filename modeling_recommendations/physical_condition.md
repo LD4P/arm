@@ -143,9 +143,9 @@ One condition assessment can describe one or more physical conditions as an over
 > - **Description:** Relates an activity to the affected resource.
 > - **Inverse:** ex:hasActivity
 
-**ex:isAgentOf** (Object property)
-> - **Label:** Agent for
-> - **IRI:** [http://example.org/isAgentOf](http://example.org/isAgentOf)
+**ex:agentOf** (Object property)
+> - **Label:** agent of
+> - **IRI:** [http://example.org/agentOf](http://example.org/agentOf)
 > - **Description:** Relates an agent to the activity it participated in.
 > - **Domain:** ex:Activity
 > - **Range:** ex:Agent
