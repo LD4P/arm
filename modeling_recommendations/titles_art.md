@@ -321,9 +321,8 @@ Translated title
 :note1 a bf:Note ;
     rdf:value "Title devised by Library staff."
 
-:source1 a bf:Source ;
-    rdf:value "http://prokudin-gorsky.org/?lang=en"^^xsd:anyURI .
- 
+:source1 rdf:value "http://prokudin-gorsky.org/?lang=en"^^xsd:anyURI .
+   
 :instance2 a bf:Instance ;
     ex:hasPreferredTitle :title3 ;
     bf:title :title4 ;
