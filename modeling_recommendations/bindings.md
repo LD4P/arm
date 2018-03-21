@@ -408,7 +408,8 @@ The following vocabularies will be used in modeling Enclosure and Binding types 
 
 <a name="futureresearch">Areas for Future Research</a>
 ---------------
-- Bindings, unlike the other Enclosure subtypes, are not ordinarily removable (that is, by ordinary users as opposed to professionals in the process of conservation or other institutional activity), but we have as yet seen no use cases that require making such a distinction within the ontology. If such use cases arise, one can imagine partitioning Enclosure into Binding and RemovableEnclosure, with DustJacket, SlipCase, and WrapAroundBand as subclasses of the latter.  
+- Bindings, unlike the other Enclosure subtypes, are not ordinarily removable (that is, by ordinary users as opposed to professionals in the process of conservation or other institutional activity), but we have as yet seen no use cases that require making such a distinction within the ontology. If such use cases arise, one can imagine partitioning Enclosure into Binding and RemovableEnclosure, with DustJacket, SlipCase, and WrapAroundBand as subclasses of the latter.
+- Related: Define new predicates enclosedBy/encloses rather than using dcterms:isPartOf/hasPart for the relationship of a book to its enclosure? This captures the fact that some of the enclosures, in particular some of the removable ones, are intuitively not "part" of the book - WrapAroundBand is a good example. But it is a fuzzy area (e.g., DustJackets vs Wrappers). In addition, since encloses would also be accurate for Bindings, this would provide two means of expression of the same relationship. 
 - Define other types of Enclosures as the need arises.
 - Define other types of resource parts as the need arises.
 - Consider other Activity subtypes related to Bindings (e.g., GilderActivity).
