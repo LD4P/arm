@@ -40,6 +40,8 @@ raremat_shapes_monograph:WorkForm
   sh:property raremat_shapes_monograph:WorkForm_bf_title ;
   sh:property raremat_shapes_monograph:WorkForm_bf_subject ;
   sh:property raremat_shapes_monograph:WorkForm_bf_genreForm ;
+  sh:property raremat_shapes_monograph:WorkForm_ex_hasStylePeriod ;
+  sh:property raremat_shapes_monograph:WorkForm_bf_hasInstance ;
   sh:property raremat_shapes_monograph:WorkForm_bf_genreForm_madsrdf_isMemberOfMADSScheme ;
   sh:property raremat_shapes_monograph:WorkForm_raremat_hasActivity ;
   sh:property raremat_shapes_monograph:WorkForm_bf_hasPart ;
@@ -108,22 +110,30 @@ raremat_shapes_monograph:WorkForm
   sh:property raremat_shapes_monograph:WorkForm_rdau_P60831 ;
   sh:property raremat_shapes_monograph:WorkForm_rdau_P60832 ;
   sh:property raremat_shapes_monograph:WorkForm_rdau_P60833 ;
-  sh:property raremat_shapes_monograph:WorkForm_bf_dataSource .
+  sh:property raremat_shapes_monograph:WorkForm_bf_dataSource ;
+  sh:property raremat_shapes_monograph:WorkForm_bf_note ;
+  sh:property raremat_shapes_monograph:WorkForm_bf_identifiedBy .
+
+
+
+# ///// PROPERTY SHAPES FOR TitlePropertyGroup START HERE. /////////////////////////////////////////////////////////////
+
 
 # TODO Review. The following PropertyShape is subject to change depending on whether we follow BIBFRAME or bibliotek-o/ArtFrame. Going to stop work on this until a decision is made.
 
-raremat_shapes_monograph:WorkForm_bftitle sh:path <http://id.loc.gov/ontologies/bibframe/title> ;
+raremat_shapes_monograph:WorkForm_bf_title sh:path <http://id.loc.gov/ontologies/bibframe/title> ;
   sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
   tosh:editWidget swa:NestedObjectEditor ;
   sh:description "Record non-PreferredTitles here. Use Preferred Title to capture a preferred title." ;
-  sh:group raremat_shapes_monograph:TitlePropertyGroup ;
+  sh:group raremat_shapes_monograph:WorkTitlePropertyGroup ;
   sh:name "Other title" ;
   sh:nodeKind sh:IRI ;
   sh:order "0"^^xsd:decimal .
 
 
-# ///// PROPERTY SHAPES FOR WorkActivityPropertyGroup START HERE. //////////////////////////////////////
+# ///// PROPERTY SHAPES FOR WorkActivityPropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
+# TODO Update list of Activity when there are subclasses.
 
 raremat_shapes_monograph:WorkForm_raremat_hasActivity sh:path raremat:hasActivity ;
   sh:name "Agent activity or role" ;
@@ -135,7 +145,7 @@ raremat_shapes_monograph:WorkForm_raremat_hasActivity sh:path raremat:hasActivit
   
   
   
-# ///// PROPERTY SHAPES FOR WorkSubjectGenreFormPropertyGroup START HERE. //////////////////////////////////////
+# ///// PROPERTY SHAPES FOR WorkSubjectGenreFormPropertyGroup START HERE. /////////////////////////////////////////////////////
 
 
 
@@ -198,11 +208,20 @@ raremat_shapes_monograph:WorkForm_ex_hasStylePeriod sh:path ex:hasStylePeriod ;
   sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
   sh:group raremat_shapes_monograph:WorkSubjectGenreFormPropertyGroup ;
   sh:name "Style Period" ;
-  sh:nodeKind sh:IRI ;sh:in ( <http://vocab.getty.edu/aat/300019257> <http://vocab.getty.edu/aat/300019280> <http://vocab.getty.edu/aat/300106711> <http://vocab.getty.edu/aat/300106716> <http://vocab.getty.edu/aat/300106723> <http://vocab.getty.edu/aat/300264736> <http://vocab.getty.edu/aat/300264737> <http://vocab.getty.edu/aat/300266744> <http://vocab.getty.edu/aat/300312378> <http://vocab.getty.edu/aat/300386009> <http://vocab.getty.edu/aat/300391250> <http://vocab.getty.edu/aat/300391448> <http://vocab.getty.edu/aat/300393217> <http://vocab.getty.edu/aat/300404836> <http://vocab.getty.edu/aat/300015647> <http://vocab.getty.edu/aat/300016617> <http://vocab.getty.edu/aat/300018279> <http://vocab.getty.edu/aat/300019255> <http://vocab.getty.edu/aat/300020656> <http://vocab.getty.edu/aat/300021516> <http://vocab.getty.edu/aat/300021854> <http://vocab.getty.edu/aat/300022097> <http://vocab.getty.edu/aat/300266481> <http://vocab.getty.edu/aat/300385955> <http://vocab.getty.edu/aat/300385959> <http://vocab.getty.edu/aat/300386794> <http://vocab.getty.edu/aat/300386974> <http://vocab.getty.edu/aat/300387737> <http://vocab.getty.edu/aat/300056487> <http://vocab.getty.edu/aat/300067402> <http://vocab.getty.edu/aat/300263555> <http://vocab.getty.edu/aat/300310539> <http://vocab.getty.edu/aat/300310540> <http://vocab.getty.edu/aat/300310541> <http://vocab.getty.edu/aat/300310542> <http://vocab.getty.edu/aat/300310543> <http://vocab.getty.edu/aat/300310544> <http://vocab.getty.edu/aat/300310545> <http://vocab.getty.edu/aat/300310546> <http://vocab.getty.edu/aat/300310547> <http://vocab.getty.edu/aat/300311734> <http://vocab.getty.edu/aat/300312275> <http://vocab.getty.edu/aat/300379388> <http://vocab.getty.edu/aat/300391392> <http://vocab.getty.edu/aat/300391437> <http://vocab.getty.edu/aat/300393250> <http://vocab.getty.edu/aat/300055513> <http://vocab.getty.edu/aat/300073708> <http://vocab.getty.edu/aat/300148033> ) ;
+  sh:nodeKind sh:IRI ;
+  sh:in ( <http://vocab.getty.edu/aat/300019257> <http://vocab.getty.edu/aat/300019280> <http://vocab.getty.edu/aat/300106711> <http://vocab.getty.edu/aat/300106716> <http://vocab.getty.edu/aat/300106723> <http://vocab.getty.edu/aat/300264736> <http://vocab.getty.edu/aat/300264737> <http://vocab.getty.edu/aat/300266744> <http://vocab.getty.edu/aat/300312378> <http://vocab.getty.edu/aat/300386009> <http://vocab.getty.edu/aat/300391250> <http://vocab.getty.edu/aat/300391448> <http://vocab.getty.edu/aat/300393217> <http://vocab.getty.edu/aat/300404836> <http://vocab.getty.edu/aat/300015647> <http://vocab.getty.edu/aat/300016617> <http://vocab.getty.edu/aat/300018279> <http://vocab.getty.edu/aat/300019255> <http://vocab.getty.edu/aat/300020656> <http://vocab.getty.edu/aat/300021516> <http://vocab.getty.edu/aat/300021854> <http://vocab.getty.edu/aat/300022097> <http://vocab.getty.edu/aat/300266481> <http://vocab.getty.edu/aat/300385955> <http://vocab.getty.edu/aat/300385959> <http://vocab.getty.edu/aat/300386794> <http://vocab.getty.edu/aat/300386974> <http://vocab.getty.edu/aat/300387737> <http://vocab.getty.edu/aat/300056487> <http://vocab.getty.edu/aat/300067402> <http://vocab.getty.edu/aat/300263555> <http://vocab.getty.edu/aat/300310539> <http://vocab.getty.edu/aat/300310540> <http://vocab.getty.edu/aat/300310541> <http://vocab.getty.edu/aat/300310542> <http://vocab.getty.edu/aat/300310543> <http://vocab.getty.edu/aat/300310544> <http://vocab.getty.edu/aat/300310545> <http://vocab.getty.edu/aat/300310546> <http://vocab.getty.edu/aat/300310547> <http://vocab.getty.edu/aat/300311734> <http://vocab.getty.edu/aat/300312275> <http://vocab.getty.edu/aat/300379388> <http://vocab.getty.edu/aat/300391392> <http://vocab.getty.edu/aat/300391437> <http://vocab.getty.edu/aat/300393250> <http://vocab.getty.edu/aat/300055513> <http://vocab.getty.edu/aat/300073708> <http://vocab.getty.edu/aat/300148033> ) ;
   sh:order "2"^^xsd:decimal .
 
-# ///// PROPERTY SHAPES FOR WorkToWorkPropertyGroup START HERE. //////////////////////////////////////
+raremat_shapes_monograph:WorkForm_bf_hasInstance sh:path bf:hasInstance ;
+      sh:name "Physical Instance or Manifestation" ;
+      sh:nodeKind sh:IRI ;
+      sh:group bibliotek-o_shapes_audio:WorkToInstancePropertyGroup ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:class bf:Instance .
 
+# ///// PROPERTY SHAPES FOR WorkToWorkPropertyGroup START HERE. //////////////////////////////////////////////////////////////////////////////
+
+# TODO review this list to make sure they make sense for bf:Text
 
 # TODO decide what types of parts bf:Works a bf:Text can have, e.g. bf:StillImage
 
@@ -623,9 +642,41 @@ raremat_shapes_monograph:WorkForm_bf_dataSource sh:path <http://id.loc.gov/ontol
       sh:name "Style Period" ;
       sh:nodeKind sh:IRI .
       
-     
+
+# ///// PROPERTY SHAPES FOR WorkNotePropertyGroup START HERE. /////////////////////////////////////////////////////////////////////////
+
+#TODO Review whether this list of note types is correct
+
+raremat_shapes_monograph:WorkForm_bf_note sh:path <http://id.loc.gov/ontologies/bibframe/note> ;
+      sh:description "Work related notes for when more granualar information isn't captured." ;
+      sh:name "Work notes" ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:group raremat_shapes_monograph:WorkNotePropertyGroup ;
+      sh:or (
+         
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Note> ;
+         ]
+         [
+           sh:class <http://example.org/DescriptiveNote> ;
+         ]
+         
+        ) ;
+    ] ;
+    .
+
+# ///// PROPERTY SHAPES FOR WorkIdentifierPropertyGroup START HERE. /////////////////////////////////////////////////////////////////////////
+
+# TODO Decide what Identifier Type are applicable for Monographic Works
+
+raremat_shapes_monograph:WorkForm_bf_identifiedBy sh:path <http://id.loc.gov/ontologies/bibframe/identifiedBy> ;
+      sh:class bf:Identifier ;
+      sh:description "Indentifiers for works." ;
+      sh:group raremat_shapes_monograph:WorkIdentifierPropertyGroup ;
+      sh:name "Work Identifier" ;
+      sh:nodeKind sh:IRI .
       
-# /////// INSTANCE FORM BEGINS HERE ///////////////////////////////
+# /////// INSTANCE FORM BEGINS HERE ///////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -633,17 +684,236 @@ raremat_shapes_monograph:InstanceForm rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Instance of Monographic Text" ;
   rdfs:subClassOf rdfs:Resource ;
-  sh:targetClass bf:Text ;
+  sh:targetClass bf:Instance ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_title ;
-  sh:property raremat_shapes_monograph:InstanceForm_raremat_hasActivity .
+  sh:property raremat_shapes_monograph:InstanceForm_bf_carrier ;
+  sh:property raremat_shapes_monograph:InstanceForm_raremat_hasActivity ;
+  sh:property raremat_shapes_monograph:InstanceForm_bf_provisionActivityStatement ;
+  sh:property raremat_shapes_monograph:InstanceForm_bf_hasPart ;
+  sh:property raremat_shapes_monograph:InstanceForm_bf_accompaniedBy ;
+  sh:property raremat_shapes_monograph:InstanceForm_bf_accompanies ;
+  sh:property raremat_shapes_monograph:InstanceForm_bf_note ;
+  sh:property raremat_shapes_monograph:InstanceForm_bf_identifiedBy .
+
+# TODO Review. The following PropertyShape is subject to change depending on whether we follow BIBFRAME or bibliotek-o/ArtFrame. Going to stop work on this until a decision is made.
+
+raremat_shapes_monograph:InstanceForm_bf_title sh:path <http://id.loc.gov/ontologies/bibframe/title> ;
+  sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
+  tosh:editWidget swa:NestedObjectEditor ;
+  sh:description "Record non-PreferredTitles here. Use Preferred Title to capture a preferred title." ;
+  sh:group raremat_shapes_monograph:InstanceTitlePropertyGroup ;
+  sh:name "Other title" ;
+  sh:nodeKind sh:IRI ;
+  sh:order "0"^^xsd:decimal .
+
+# TODO need sh:in list of carriers appropriate for monograph bf:Text 
+
+raremat_shapes_monograph:InstanceForm_bf_carrier sh:path <http://id.loc.gov/ontologies/bibframe/carrier> ;
+  sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+  tosh:editWidget swa:NestedObjectEditor ;
+  sh:description "Carrier type" ;
+  sh:group raremat_shapes_monograph:InstanceTypePropertyGroup ;
+  sh:name "Other title" ;
+  sh:nodeKind sh:IRI ;
+  sh:order "0"^^xsd:decimal .
+
+# The following sh:Property with sh:path bf:carrier/madsrdf:isMemberOfMADSScheme isn't meant to be a field in the form, but rather state a restriction on the use of bf:carrier to instances from http://id.loc.gov/vocabulary/carriers. 
+  
+raremat_shapes_monograph:WorkForm_bf_carrier_madsrdf_isMemberOfMADSScheme sh:path <bf:genreForm/madsrdf:isMemberOfMADSScheme> ;
+ sh:hasValue <http://id.loc.gov/vocabulary/carriers> ;
+ sh:description "Values for carrier terms" ;
+ sh:group raremat_shapes_monograph:InstanceTypePropertyGroup ;
+ sh:name "LC Carrier Terms" .
+
+# ///// PROPERTY SHAPES FOR InstanceActivityPropertyGroup START HERE. /////////////////////////////////////////////////////////////
+
+# TODO Update Activity List when there are subclasses.
+
+raremat_shapes_monograph:InstanceForm_raremat_hasActivity sh:path raremat:hasActivity ;
+  sh:name "Publisher, Distributor, etc. activity or role" ;
+  sh:description "Think MARC field 260 or 264" ;
+  sh:order "0"^^xsd:decimal ;
+  sh:group raremat_shapes_monograph:InstanceActivityPropertyGroup ;
+  tosh:editWidget swa:NestedObjectEditor ;
+  sh:class raremat:Activity .
+  
+raremat_shapes_monograph:InstanceForm_bf_provisionActivityStatement sh:path bf:provisionActivityStatement ;
+      sh:name "Provider statement" ;
+      sh:order "1"^^xsd:decimal ;
+      sh:description "Statement relating to providers of a resource; usually transcribed." ;
+      sh:nodeKind sh:Literal ;
+      sh:group raremat_shapes_monograph:InstanceActivityPropertyGroup .
+      
+# TODO decide what carrier types can be part of an Instance of a Monograph
+      
+raremat_shapes_monograph:InstanceForm_bf_hasPart sh:path bf:hasPart ;
+      sh:name "Instance part" ;
+      sh:order "0"^^xsd:decimal ;
+      sh:description "Part of the instance being described." ;
+      sh:class bf:Instance ;
+      sh:group raremat_shapes_monograph:InstancePartsAccompanimentsPropertyGroup .
+
+# TODO decide what carrier types can accompany an Instance of a Monograph
+     
+raremat_shapes_monograph:InstanceForm_bf_accompaniedBy sh:path <http://id.loc.gov/ontologies/bibframe/accompaniedBy> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Instance> ;
+      sh:description "Resource that accompanies the described resource." ;
+      sh:name "Accompanied by" ;
+      sh:group bibliotek-o_shapes_audio:InstancePartsAccompanimentsPropertyGroup .
+
+# TODO decide what carrier types can accompany an Instance of a Monograph
+      
+raremat_shapes_monograph:InstanceForm_bf_accompanies sh:path <http://id.loc.gov/ontologies/bibframe/accompanies> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Instance> ;
+      sh:description "Resource that adds to or is issued with the described resource." ;
+      sh:name "Accompanies" ;
+      sh:group bibliotek-o_shapes_audio:InstancePartsAccompanimentsPropertyGroup .
+      
+
+# ///// PROPERTY SHAPES FOR InstanceNotePropertyGroup START HERE. /////////////////////////////////////////////////////////////
+
+raremat_shapes_monograph:InstanceForm_bf_note sh:path <http://id.loc.gov/ontologies/bibframe/note> ;
+      sh:description "Instance related notes for when more granualar information isn't captured." ;
+      sh:name "Instance notes" ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:group raremat_shapes_monograph:InstanceNotePropertyGroup ;
+      sh:or (
+         
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Note> ;
+         ]
+         [
+           sh:class <http://example.org/DescriptiveNote> ;
+         ]
+         [
+           sh:class <http://example.org/LimitationNote>
+         ]
+         
+        ) ;
+    ] ;
+    .
+
+# ///// PROPERTY SHAPES FOR InstanceIdentifier PropertyGroup START HERE. /////////////////////////////////////////////////////////////
+
+# TODO Decide what Identifier Type are applicable for Monographic Instances
+
+raremat_shapes_monograph:InstanceForm_bf_identifiedBy sh:path <http://id.loc.gov/ontologies/bibframe/identifiedBy> ;
+      sh:class bf:Identifier ;
+      sh:description "Identifiers for Instances" ;
+      sh:group raremat_shapes_monograph:InstanceIdentifierPropertyGroup ;
+      sh:name "Instance Identifier" ;
+      sh:nodeKind sh:IRI .         
+          
+# /////// ITEM FORM BEGINS HERE /////////////////////////////////////////////////////////////////////
+
+
+
+raremat_shapes_monograph:ItemForm rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Item of Monographic Text" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass bf:Item ;
+  sh:property raremat_shapes_monograph:ItemForm_bf_title ;
+  sh:property raremat_shapes_monograph:ItemForm_raremat_hasActivity ;
+  sh:property raremat_shapes_monograph:ItemForm_bf_note 
+  sh:property raremat_shapes_monograph:ItemForm_bf_identifiedBy .
   
 # TODO Add all PropertyShapes
 
+raremat_shapes_monograph:ItemForm_bf_title sh:path <http://id.loc.gov/ontologies/bibframe/title> ;
+  sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
+  tosh:editWidget swa:NestedObjectEditor ;
+  sh:description "Item Title." ;
+  sh:group raremat_shapes_monograph:ItemTitlePropertyGroup ;
+  sh:name "Item title" ;
+  sh:nodeKind sh:IRI ;
+  sh:order "0"^^xsd:decimal .
+  
+# TODO Update Activity List when there are subclasses, and custodial history is added to the form.
+
+raremat_shapes_monograph:ItemForm_raremat_hasActivity sh:path raremat:hasActivity ;
+  sh:name "Agent activity and role for the item" ;
+  sh:description "Item level agent activities" ;
+  sh:order "0"^^xsd:decimal ;
+  sh:group raremat_shapes_monograph:ItemActivityPropertyGroup ;
+  tosh:editWidget swa:NestedObjectEditor ;
+  sh:class raremat:Activity .
+
+raremat_shapes_monograph:ItemForm_bf_note sh:path <http://id.loc.gov/ontologies/bibframe/note> ;
+      sh:description "Item related notes for when more granualar information isn't captured." ;
+      sh:name "Item notes" ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:group raremat_shapes_monograph:ItemNotePropertyGroup ;
+      sh:or (
+         
+         [
+           sh:class <http://id.loc.gov/ontologies/bibframe/Note> ;
+         ]
+         [
+           sh:class <http://example.org/DescriptiveNote> ;
+         ]
+         [
+           sh:class <http://example.org/LimitationNote>
+         ]
+         
+        ) ;
+    ] ;
+    .
+
+# ///// PROPERTY SHAPES FOR ItemIdentifier PropertyGroup START HERE. /////////////////////////////////////////////////////////////
+
+# TODO Decide what Identifier Type are applicable for Monographic Items
+
+raremat_shapes_monograph:ItemForm_bf_identifiedBy sh:path <http://id.loc.gov/ontologies/bibframe/identifiedBy> ;
+      sh:class bf:Identifier ;
+      sh:description "Identifiers for Items" ;
+      sh:group raremat_shapes_monograph:InstanceIdentifierPropertyGroup ;
+      sh:name "Item Identifier" ;
+      sh:nodeKind sh:IRI .     
 
 
-# /////PROPERTY GROUP SECTION ///////////////////////////////////
+# /////// NOTE FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+raremat_shapes_monograph:NoteForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Note form" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass bf:Note ;
+  sh:property raremat_shapes_monograph:ItemForm_bf_note ;
+  sh:property raremat_shapes_monograph:NoteForm_rdf_value ;
+  raremat_shapes_monograph:NoteForm_bf_noteType ;
+  .
+  
+raremat_shapes_monograph:NoteForm_rdf_type sh:path rdf:type ;
+      sh:name "Type of Note" ;
+      sh:minCount "1" ;
+      sh:maxCount "1" .     
+
+raremat_shapes_monograph:NoteForm_rdf_value sh:path rdf:value ;
+      sh:minCount "1" ;
+      sh:maxCount "1" ;
+      sh:description "String value for the note" ;
+      sh:name "Note value" ;
+      sh:nodeKind sh:Literal .
+      
+raremat_shapes_monograph:NoteForm_bf_noteType sh:path rdf:value ;
+      sh:maxCount "1" ;
+      sh:description "String value for the note type if a type (bf:Note subclass) hasn't been created for the drop down" ;
+      sh:name "Note type" ;
+      sh:nodeKind sh:Literal .
 
 
+
+#TODO a buch of embedded forms, e.g. Titles, Activities, Identifiers
+
+
+
+
+
+# ///// PROPERTY GROUP SECTION /////////////////////////////////////////////////////////////
+
+# ///// WORK PROPERTY GROUPS ///////////////////////////////////////////////////////////////
 
 raremat_shapes_monograph:WorkTitlePropertyGroup
   rdf:type sh:PropertyGroup ;
@@ -667,7 +937,77 @@ raremat_shapes_monograph:WorkToWorkPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Related Works" ;
   sh:order "3"^^xsd:decimal .
-    
+
+raremat_shapes_monograph:WorkNotePropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Item notes" ;
+  sh:order "4"^^xsd:decimal .
+  
+raremat_shapes_monograph:WorkIdentifierPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Item notes" ;
+  sh:order "5"^^xsd:decimal .
+
+
+# ///// INSTANCE PROPERTY GROUPS ///////////////////////////////////////////////////////////
+
+raremat_shapes_monograph:InstanceTitlePropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Titles" ;
+  sh:description "To group title information for the resource." ;
+  sh:order "0"^^xsd:decimal .
+
+raremat_shapes_monograph:InstanceTypePropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Istance Carrier Type" ;
+  sh:order ""^^xsd:decimal .
+  
+raremat_shapes_monograph:InstanceActivityPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Instance Agents and Roles" ;
+  sh:description "To group Agent role information for the resource." ;
+  sh:order ""^^xsd:decimal .
+  
+bibliotek-o_shapes_audio:InstancePartsAccompanimentsPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Instance Parts and Accompaniments" ;
+  sh:order ""^^xsd:decimal .
+
+raremat_shapes_monograph:InstanceNotePropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Item notes" ;
+  sh:order ""^^xsd:decimal .
+  
+raremat_shapes_monograph:InstanceIdentifierPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Item identifiers" ;
+  sh:order ""^^xsd:decimal .
+
+
+
+# ///// ITEM PROPERTY GROUPS ///////////////////////////////////////////////////////////////
+
+raremat_shapes_monograph:ItemTitlePropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Titles" ;
+  sh:description "To group title information for the resource." ;
+  sh:order "0"^^xsd:decimal .
+  
+raremat_shapes_monograph:ItemActivityPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Item Agent and Roles" ;
+  sh:description "To group Agent role information for the resource." ;
+  sh:order ""^^xsd:decimal .
+  
+raremat_shapes_monograph:ItemNotePropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Item notes" ;
+  sh:order ""^^xsd:decimal .
+  
+raremat_shapes_monograph:InstanceIdentifierPropertyGroup
+rdf:type sh:PropertyGroup ;
+  rdfs:label "Item indentifiers" ;
+  sh:order ""^^xsd:decimal .
 
 
 
