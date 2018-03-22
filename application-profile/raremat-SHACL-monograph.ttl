@@ -102,8 +102,7 @@ raremat_shapes_monograph:WorkForm
   sh:property raremat_shapes_monograph:WorkForm_rdau_P60831 ;
   sh:property raremat_shapes_monograph:WorkForm_rdau_P60832 ;
   sh:property raremat_shapes_monograph:WorkForm_rdau_P60833 ;
-  raremat_shapes_monograph:WorkForm_bf_dataSource .
-.
+  sh:property raremat_shapes_monograph:WorkForm_bf_dataSource .
 
 # The following PropertyShape is subject to change depending on whether we follow BIBFRAME or bibliotek-o/ArtFrame. Going to stop work on this until a decision is made.
 
