@@ -1,3 +1,4 @@
+@prefix aat: <http://vocab.getty.edu/aat/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix core: <http://vivoweb.org/ontology/core#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -26,6 +27,10 @@
 <http://example.org/shapes/monograph/>
   rdf:type owl:Ontology .
 
+
+# /////// WORK FORM BEGINS HERE ///////////////////////////////
+
+
 raremat_shapes_monograph:WorkForm
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -33,6 +38,7 @@ raremat_shapes_monograph:WorkForm
   rdfs:subClassOf rdfs:Resource ;
   sh:targetClass bf:Text ;
   sh:property raremat_shapes_monograph:WorkForm_bf_title ;
+  sh:property raremat_shapes_monograph:WorkForm_bf_subject ;
   sh:property raremat_shapes_monograph:WorkForm_bf_genreForm ;
   sh:property raremat_shapes_monograph:WorkForm_bf_genreForm_madsrdf_isMemberOfMADSScheme ;
   sh:property raremat_shapes_monograph:WorkForm_raremat_hasActivity ;
@@ -104,7 +110,7 @@ raremat_shapes_monograph:WorkForm
   sh:property raremat_shapes_monograph:WorkForm_rdau_P60833 ;
   sh:property raremat_shapes_monograph:WorkForm_bf_dataSource .
 
-# The following PropertyShape is subject to change depending on whether we follow BIBFRAME or bibliotek-o/ArtFrame. Going to stop work on this until a decision is made.
+# TODO Review. The following PropertyShape is subject to change depending on whether we follow BIBFRAME or bibliotek-o/ArtFrame. Going to stop work on this until a decision is made.
 
 raremat_shapes_monograph:WorkForm_bftitle sh:path <http://id.loc.gov/ontologies/bibframe/title> ;
   sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
@@ -114,20 +120,68 @@ raremat_shapes_monograph:WorkForm_bftitle sh:path <http://id.loc.gov/ontologies/
   sh:name "Other title" ;
   sh:nodeKind sh:IRI ;
   sh:order "0"^^xsd:decimal .
-  
+
+
+# ///// PROPERTY SHAPES FOR WorkActivityPropertyGroup START HERE. //////////////////////////////////////
+
+
 raremat_shapes_monograph:WorkForm_raremat_hasActivity sh:path raremat:hasActivity ;
   sh:name "Agent activity or role" ;
   sh:order "0"^^xsd:decimal ;
   sh:group raremat_shapes_monograph:WorkActivityPropertyGroup ;
   tosh:editWidget swa:NestedObjectEditor ;
   sh:class raremat:Activity .
-      
-raremat_shapes_monograph:WorkForm_bfgenreForm sh:path bf:genreForm ;
+  
+  
+  
+  
+# ///// PROPERTY SHAPES FOR WorkSubjectGenreFormPropertyGroup START HERE. //////////////////////////////////////
+
+
+
+raremat_shapes_monograph:WorkForm_bf_subject sh:path bf:subject ;
+      sh:group raremat_shapes_monograph:WorkSubjectGenreFormPropertyGroup ;
+      sh:name "Subject" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "0"^^xsd:decimal ;
+      raremat_shapes_monograph:lookup raremat_shapes_monograph:LD4LookupService ;
+      sh:or (
+          [
+            sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
+          ]
+          [
+            sh:class <http://id.loc.gov/ontologies/bibframe/Instance> ;
+          ]
+          [
+            sh:class <http://id.loc.gov/ontologies/bibframe/Item> ;
+          ]
+          [
+            sh:class <http://id.loc.gov/ontologies/bibframe/Temporal> ;
+          ]
+          [
+            sh:class <http://xmlns.com/foaf/0.1/Agent> ;
+          ]
+          [
+            sh:class <http://www.lingvoj.org/ontology/Lingvo> ;
+          ]
+          [
+            sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+          ]
+          [
+            sh:class gn:Feature ;
+          ]
+          [
+            sh:class <http://id.loc.gov/ontologies/bibframe/Event> ;
+          ]
+        ) ;
+    ] ; .
+
+raremat_shapes_monograph:WorkForm_bf_genreForm sh:path bf:genreForm ;
   sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
   sh:group raremat_shapes_monograph:WorkSubjectGenreFormPropertyGroup ;
   sh:name "Form Genre" ;
   sh:nodeKind sh:IRI ;
-  sh:order "0"^^xsd:decimal ;
+  sh:order "1"^^xsd:decimal ;
   raremat_shapes_monograph:lookup raremat_shapes_monograph:LD4LookupService .
   
 # The following sh:Property with sh:path bf:genreForm/madsrdf:isMemberOfMADSScheme isn't meant to be a field in the form, but rather state a restriction on the use of bf:genreForm to instances from http://id.loc.gov/authorities/genreForms. 
@@ -140,12 +194,22 @@ raremat_shapes_monograph:WorkForm_bf_genreForm_madsrdf_isMemberOfMADSScheme sh:p
  sh:nodeKind sh:IRI ;
  skos:editorialNote "Use look up service; LCGFT is too big to load directly into an RDF editor, and more importantly we don't want to create MADSAuthorities, only link to them." .
 
+raremat_shapes_monograph:WorkForm_ex_hasStylePeriod sh:path ex:hasStylePeriod ;
+  sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+  sh:group raremat_shapes_monograph:WorkSubjectGenreFormPropertyGroup ;
+  sh:name "Style Period" ;
+  sh:nodeKind sh:IRI ;sh:in ( <http://vocab.getty.edu/aat/300019257> <http://vocab.getty.edu/aat/300019280> <http://vocab.getty.edu/aat/300106711> <http://vocab.getty.edu/aat/300106716> <http://vocab.getty.edu/aat/300106723> <http://vocab.getty.edu/aat/300264736> <http://vocab.getty.edu/aat/300264737> <http://vocab.getty.edu/aat/300266744> <http://vocab.getty.edu/aat/300312378> <http://vocab.getty.edu/aat/300386009> <http://vocab.getty.edu/aat/300391250> <http://vocab.getty.edu/aat/300391448> <http://vocab.getty.edu/aat/300393217> <http://vocab.getty.edu/aat/300404836> <http://vocab.getty.edu/aat/300015647> <http://vocab.getty.edu/aat/300016617> <http://vocab.getty.edu/aat/300018279> <http://vocab.getty.edu/aat/300019255> <http://vocab.getty.edu/aat/300020656> <http://vocab.getty.edu/aat/300021516> <http://vocab.getty.edu/aat/300021854> <http://vocab.getty.edu/aat/300022097> <http://vocab.getty.edu/aat/300266481> <http://vocab.getty.edu/aat/300385955> <http://vocab.getty.edu/aat/300385959> <http://vocab.getty.edu/aat/300386794> <http://vocab.getty.edu/aat/300386974> <http://vocab.getty.edu/aat/300387737> <http://vocab.getty.edu/aat/300056487> <http://vocab.getty.edu/aat/300067402> <http://vocab.getty.edu/aat/300263555> <http://vocab.getty.edu/aat/300310539> <http://vocab.getty.edu/aat/300310540> <http://vocab.getty.edu/aat/300310541> <http://vocab.getty.edu/aat/300310542> <http://vocab.getty.edu/aat/300310543> <http://vocab.getty.edu/aat/300310544> <http://vocab.getty.edu/aat/300310545> <http://vocab.getty.edu/aat/300310546> <http://vocab.getty.edu/aat/300310547> <http://vocab.getty.edu/aat/300311734> <http://vocab.getty.edu/aat/300312275> <http://vocab.getty.edu/aat/300379388> <http://vocab.getty.edu/aat/300391392> <http://vocab.getty.edu/aat/300391437> <http://vocab.getty.edu/aat/300393250> <http://vocab.getty.edu/aat/300055513> <http://vocab.getty.edu/aat/300073708> <http://vocab.getty.edu/aat/300148033> ) ;
+  sh:order "2"^^xsd:decimal .
+
+# ///// PROPERTY SHAPES FOR WorkToWorkPropertyGroup START HERE. //////////////////////////////////////
+
+
 # TODO decide what types of parts bf:Works a bf:Text can have, e.g. bf:StillImage
 
 raremat_shapes_monograph:WorkForm_bf_hasPart sh:path <http://id.loc.gov/ontologies/bibframe/hasPart> ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Work> ;
       sh:group raremat_shapes_monograph:WorkToWorkPropertyGroup ;
-      sh:name "Contents of Monograph" .
+      sh:name "Contents of Monograph" .    
 
 # TODO decide what types of bf:Works a bf:Text can be a part of, e.g. another bf:Text
 
@@ -551,6 +615,19 @@ raremat_shapes_monograph:WorkForm_bf_dataSource sh:path <http://id.loc.gov/ontol
       sh:group raremat_shapes_monograph:WorkToWorkPropertyGroup ;
       sh:name "Data source" ;
       sh:nodeKind sh:IRI .
+      
+raremat_shapes_monograph:WorkForm_bf_dataSource sh:path <http://id.loc.gov/ontologies/bibframe/dataSource> ;
+      sh:class  ;
+      sh:description "Resource that is a data source to which the described resource is related. It may contain information about other files, printed sources, or collection procedures." ;
+      sh:group raremat_shapes_monograph:WorkToWorkPropertyGroup ;
+      sh:name "Style Period" ;
+      sh:nodeKind sh:IRI .
+      
+     
+      
+# /////// INSTANCE FORM BEGINS HERE ///////////////////////////////
+
+
 
 raremat_shapes_monograph:InstanceForm rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -559,8 +636,14 @@ raremat_shapes_monograph:InstanceForm rdf:type rdfs:Class ;
   sh:targetClass bf:Text ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_title ;
   sh:property raremat_shapes_monograph:InstanceForm_raremat_hasActivity .
+  
+# TODO Add all PropertyShapes
 
-# PropertyGroup Section
+
+
+# /////PROPERTY GROUP SECTION ///////////////////////////////////
+
+
 
 raremat_shapes_monograph:WorkTitlePropertyGroup
   rdf:type sh:PropertyGroup ;
