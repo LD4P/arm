@@ -5,6 +5,7 @@
 @prefix gn: <http://www.geonames.org/ontology/> .
 @prefix lingvo: <http://www.lingvoj.org/ontology#> .
 @prefix madsrdf: <http://www.loc.gov/standards/mads/rdf/v1.rdf#> .
+@prefix measurement: <http://measurement.bibliotek-o.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov> .
 @prefix raremat: <http://example.org/> .
@@ -775,7 +776,15 @@ raremat_shapes_monograph:InstanceForm_bf_accompanies sh:path <http://id.loc.gov/
       sh:name "Accompanies" ;
       sh:group raremat_shapes_monograph:InstancePartsAccompanimentsPropertyGroup .
       
-# TODO Add Measurement Group
+# ///// PROPERTY SHAPES FOR InstanceMeasurementPropertyGroup START HERE. /////////////////////////////////////////////////////////////
+
+raremat_shapes_monograph:InstanceForm_ex_hasMeasurementGroup sh:path <http://example.org/hasMeasurementGroup> ;
+      sh:class <http://example.org/MeasurementGroup> ;
+      sh:group raremat_shapes_monograph:InstanceMeasurementGroupPropertyGroup ;
+      sh:name "Instance measurement information" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "0"^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor .
 
 # ///// PROPERTY SHAPES FOR InstancetoItemPropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
@@ -896,6 +905,173 @@ raremat_shapes_monograph:ItemForm_bf_identifiedBy sh:path <http://id.loc.gov/ont
       sh:nodeKind sh:IRI .     
 
 
+
+# /////// MeasurementGroup FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+# NOTE!!!!!!! This pattern is only using http://measurement.bibliotek-o.org/ because custom forms in VitroLib began with this namespace before RareMat and ArtFrame decided on a different namespace. Anyone using this shape should use the new namespace. 
+
+raremat_shapes_monograph:MeasurementGroupForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Measurement Group Form" ;
+  sh:description "A group of measurements, e.g. length, width, height measuring the size of a resource would be one measurement group" ;
+  sh:targetClass <http://measurement.bibliotek-o.org/MeasurementGroup> ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property raremat_shapes_monograph:MeasurementGroupForm_dcterms_description ;
+  sh:property raremat_shapes_monograph:MeasurementGroupForm_measurement_hasMeasurement .
+  
+  
+raremat_shapes_monograph::MeasurementGroupForm_dcterms_description sh:path dcterms:description ;
+      sh:description "Record any qualifying information about the measurement, e.g. 'approximate', 'or smaller', 'in container', 'with handle' " ;
+      sh:name "Qualifying information about the measurement" ;
+      sh:nodeKind sh:Literal ;
+      sh:order "0"^^xsd:decimal .
+    
+raremat_shapes_monograph:MeasurementGroupForm_measurement_hasMeasurement
+      sh:path <http://measurement.bibliotek-o.org/hasMeasurement> ;
+      sh:class <http://measurement.bibliotek-o.org/Measurement> ;
+      sh:description "The measurement of a single aspect of a resource, including value, units, and the dimension measured. For example, a book may have a height (aspect) of 10 (value) centimeters (units). Each such measurement is attached to a MeasurementGroup." ;
+      sh:name "Single measurement" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "1"^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor ..
+
+
+
+# /////// Measurement FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+# WARNING!!!!!!! This pattern is only using http://measurement.bibliotek-o.org/ because custom forms in VitroLib began with this namespace before RareMat and ArtFrame decided on a different namespace. Anyone using this shape should use the new namespace. 
+
+raremat_shapes_monograph:MeasurementForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Measurement form" ;
+  sh:targetClass <http://measurement.bibliotek-o.org/Measurement> ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property raremat_shapes_monograph:MeasurementForm_rdf_value ;
+  
+    
+raremat_shapes_monograph:MeasurementForm_rdf_value sh:path rdf:value ;
+      sh:description "Numeric value for the measurement" ;
+      sh:name "Numeric value" ;
+      sh:nodeKind sh:Literal ;
+      sh:order "0"^^xsd:decimal ;
+    ] ;
+    
+raremat_shapes_monograph:MeasurementForm_measurement_hasUnit sh:path <http://measurement.bibliotek-o.org/hasUnit> ;
+      sh:description "Unit used to express the measurement" ;
+      sh:name "Unit" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "1"^^xsd:decimal ;
+      sh:or (
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#Centimeter> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#Foot> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#Gram> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#Inch> ;
+          ]
+           [
+            sh:hasValue <http://qudt.org/vocab/unit#Kilogram> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#Kilometer> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#Meter> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#MileUSStatute> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#Millimeter> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#MetricTon> ;
+          ]
+           [
+            sh:hasValue <http://qudt.org/vocab/unit#OunceMass> ;
+          ]
+          [
+            sh:hasValue <http://qudt.org/vocab/unit#PoundMass> ;
+          ]
+        ) ;
+    ] ;
+
+# For dimension types, such as height, width, weight, etc. use AAT, Art & Architecture Thesaurus.
+
+raremat_shapes_monograph:MeasurementForm_measurement_measures sh:path <http://measurement.bibliotek-o.org/measures> ;
+      sh:description "Dimension or other aspect of a resource that is measured by this Measurement. For example, a Measurement may specify the length, height, weight, file size, etc. of a resource." ;
+      sh:name "Dimension or other aspect" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "2"^^xsd:decimal ;
+      sh:or (
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300055621> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300055623> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300055624> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300055644> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300055645> ;
+          ]
+           [
+            sh:hasValue <http://vocab.getty.edu/aat/300055646> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300055647> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300055649> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300056240> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300072633> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300312044> ;
+          ]
+           [
+            sh:hasValue <http://vocab.getty.edu/aat/300404162> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300404164> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300404403> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300404430> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300404431> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300404432> ;
+          ]
+          [
+            sh:hasValue <http://vocab.getty.edu/aat/300404433> ;
+          ]
+           [
+            sh:hasValue <http://vocab.getty.edu/aat/300404437> ;
+          ]
+        ) ;
+    ] ;
+.
+
 # /////// NOTE FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
 raremat_shapes_monograph:NoteForm
@@ -904,9 +1080,9 @@ raremat_shapes_monograph:NoteForm
   rdfs:label "Note form" ;
   rdfs:subClassOf rdfs:Resource ;
   sh:targetClass bf:Note ;
-  sh:property raremat_shapes_monograph:ItemForm_bf_note ;
+  sh:property raremat_shapes_monograph:NoteForm_rdf_type ;
   sh:property raremat_shapes_monograph:NoteForm_rdf_value ;
-  raremat_shapes_monograph:NoteForm_bf_noteType ;
+  sh:property raremat_shapes_monograph:NoteForm_bf_noteType ;
   .
   
 raremat_shapes_monograph:NoteForm_rdf_type sh:path rdf:type ;
@@ -921,17 +1097,13 @@ raremat_shapes_monograph:NoteForm_rdf_value sh:path rdf:value ;
       sh:name "Note value" ;
       sh:nodeKind sh:Literal .
       
-raremat_shapes_monograph:NoteForm_bf_noteType sh:path rdf:value ;
+raremat_shapes_monograph:NoteForm_bf_noteType sh:path bf:noteType ;
       sh:maxCount "1" ;
       sh:description "String value for the note type if a type (bf:Note subclass) hasn't been created for the drop down" ;
       sh:name "Note type" ;
       sh:nodeKind sh:Literal .
 
-
-
 # TODO a buch of embedded forms, e.g. Titles, Activities, Identifiers
-
-
 
 
 
@@ -996,6 +1168,13 @@ raremat_shapes_monograph:InstancePartsAccompanimentsPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Instance Parts and Accompaniments" ;
   sh:order ""^^xsd:decimal .
+
+raremat_shapes_monograph:InstanceMeasurementGroupPropertyGroup  
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Measurements" ;
+  sh:description "To group measurement information for the resource." ;
+  sh:order ""^^xsd:decimal ;
+.
   
 raremat_shapes_monograph:InstanceHasItemPropertyGroup
   rdf:type sh:PropertyGroup ;
