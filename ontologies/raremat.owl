@@ -119,7 +119,14 @@
     <owl:Class rdf:about="http://example.org/BoundCollection">
         <rdfs:label xml:lang="en">Bound collection</rdfs:label>
         <skos:definition xml:lang="en">An artificial gathering of two or more items physically into or on a single carrier, whether bound, affixed, or otherwise brought together into a single bound unit, and lacking a collective title. Includes only collections gathered subsequent to publication, rather than issued or reissued together by the publisher.</skos:definition>
-        <skos:scopeNote xml:lang="en"></skos:scopeNote>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://example.org/CaptionNote">
+        <rdfs:label xml:lang="en">Caption note</rdfs:label>
+        <skos:definition xml:lang="en">Distinctive captions independent of the resource title, including mottos and headings.</skos:definition>
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/note"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -324,6 +331,14 @@
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
+    <owl:Class rdf:about="http://example.org/InaccuracyNote">
+        <rdfs:label xml:lang="en">Inaccuracy note</rdfs:label>
+        <skos:definition xml:lang="en">A note explaining an unintentional or intentional inaccuracy, misspelling, or misprint relating to a specific resource.</skos:definition>
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/note"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
     <owl:Class rdf:about="http://example.org/Inscription">
         <rdfs:label xml:lang="en">Inscription</rdfs:label>
         <skos:definition xml:lang="en">Words, texts, lettering, or symbols written in manuscript on a resource.</skos:definition>        
@@ -434,12 +449,30 @@
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
+    <owl:Class rdf:about="http://example.org/PreferredCitation">
+        <rdfs:label xml:lang="en">Preferred citation</rdfs:label>
+        <skos:definition xml:lang="en">A note providing a specific citation format for citing the resource.</skos:definition>
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/note"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
     <owl:Class rdf:about="http://example.org/PrintmakerActivity">
         <rdfs:label xml:lang="en">Printmaker</rdfs:label>    
         <skos:definition xml:lang="en">The activity of making a relief, intaglio, or planographic printing surface.</skos:definition>
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/prm.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="http://example.org/Activity"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://example.org/RelatedMaterialNote">
+        <rdfs:label xml:lang="en">Related material note</rdfs:label>
+        <skos:definition xml:lang="en">A note providing information on materials (e.g. archival materials or publications) related to the described resource.</skos:definition>
+        <skos:scopeNote xml:lang="en">Use if information describing the related material cannot be parsed into the appropriate relationship.</skos:scopeNote>
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/note"/>
+        
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -494,6 +527,14 @@
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>   
+    
+    <owl:Class rdf:about="http://example.org/SubjectNote">
+        <rdfs:label xml:lang="en">Subject note</rdfs:label>
+        <skos:definition xml:lang="en">Textual information describing the subject or iconographic details of a resource.</skos:definition>
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/note"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
  
     <owl:Class rdf:about="http://example.org/TextBlock">
         <owl:disjointWith rdf:resource="http://example.org/Enclosure"/>
