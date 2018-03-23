@@ -63,6 +63,24 @@
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
+    <owl:Class rdf:about="http://example.org/ArtistActivity">
+        <rdfs:label xml:lang="en">Artist</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of creating a work by conceiving, and implementing, an original graphic design, drawing, painting, etc.</skos:definition> 
+        <skos:scopeNote>For book illustrators, prefer IllustratorActivity.</skos:scopeNote>
+        <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
+        <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/art.</skos:scopeNote>
+        <rdfs:subClassOf rdf:resource="http://example.org/Activity"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://example.org/Attribution">
+        <rdfs:label xml:lang="en">Attribution</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of ascribing a work to a particular agent or agents. This attribution may change over time based on new evidence.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
     <owl:Class rdf:about="http://example.org/Autograph">
         <rdfs:label xml:lang="en">Autograph</rdfs:label>
         <skos:definition xml:lang="en">A person's name written on a resource in his or her own hand as part of the creation or production process.</skos:definition>        
@@ -109,6 +127,16 @@
     <owl:Class rdf:about="http://example.org/Citation">
         <rdfs:label xml:lang="en">Citation</rdfs:label>
         <skos:definition xml:lang="en">A single citation within a bibliographic source.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://example.org/ColoristActivity">
+        <rdfs:label xml:lang="en">Colorist</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of applying color to drawings, prints, photographs, maps, moving images, etc.</skos:definition>
+        <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
+        <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/clr.</skos:scopeNote>
+        <rdfs:subClassOf rdf:resource="http://example.org/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -196,6 +224,16 @@
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
+    <owl:Class rdf:about="http://example.org/DraftsmanActivity">
+        <rdfs:label xml:lang="en">Draftsman</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of making detailed plans or drawings for buildings, ships, aircraft, machines, objects, etc.</skos:definition>
+        <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
+        <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/drm.</skos:scopeNote>
+        <rdfs:subClassOf rdf:resource="http://example.org/Activity"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
     <owl:Class rdf:about="http://example.org/DustJacket">
         <rdfs:subClassOf rdf:resource="http://example.org/Enclosure"/>
         <rdfs:label xml:lang="en">DustJacket</rdfs:label>
@@ -228,6 +266,16 @@
         <skos:example xml:lang="en">An entry locating a citation within a bibliographic source.</skos:example>
         <skos:example xml:lang="en">An exhibition catalog entry describing a specific item in the exhibition.</skos:example>       
         <skos:scopeNote xml:lang="en">Used in parsing out hierarchically structured location designators for citations.</skos:scopeNote>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://example.org/EtcherActivity">
+        <rdfs:label xml:lang="en">Etcher</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of producing text or images for printing by subjecting metal, glass, or some other surface to acid or the corrosive action of some other substance.</skos:definition>
+        <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
+        <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/etr.</skos:scopeNote>
+        <rdfs:subClassOf rdf:resource="http://example.org/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -300,6 +348,16 @@
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
+    <owl:Class rdf:about="http://example.org/LithographerActivity">
+        <rdfs:label xml:lang="en">Lithographer</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of preparing the stone or plate for lithographic printing, including a graphic artist creating a design directly on the surface from which printing will be done.</skos:definition>
+        <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
+        <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/ltg.</skos:scopeNote>
+        <rdfs:subClassOf rdf:resource="http://example.org/Activity"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
     <owl:Class rdf:about="http://example.org/MarblerActivity">
         <rdfs:label xml:lang="en">Marbler</rdfs:label>    
         <skos:definition xml:lang="en">The activity of marbling paper, cloth, leather, etc. used in construction of a resource.</skos:definition>
@@ -357,11 +415,41 @@
         <skos:definition xml:lang="en">A solid, fixed base or support on which an item or part of an item is mounted.</skos:definition>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
-    </owl:Class> 
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://example.org/PhotographerActivity">
+        <rdfs:label xml:lang="en">Photographer</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of creating a photographic work.</skos:definition>
+        <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
+        <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/pht.</skos:scopeNote>
+        <rdfs:subClassOf rdf:resource="http://example.org/Activity"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
     
     <owl:Class rdf:about="http://example.org/PhysicalCondition">
         <rdfs:label xml:lang="en">Physical Condition</rdfs:label>
         <skos:definition xml:lang="en">One specific aspect of the condition of an object or part of an object, including perceptible or measurable characteristics such as physical appearance, level of damage, quality, or completeness.</skos:definition>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://example.org/PrintmakerActivity">
+        <rdfs:label xml:lang="en">Printmaker</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of making a relief, intaglio, or planographic printing surface.</skos:definition>
+        <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
+        <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/prm.</skos:scopeNote>
+        <rdfs:subClassOf rdf:resource="http://example.org/Activity"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://example.org/SculptorActivity">
+        <rdfs:label xml:lang="en">Sculptor</rdfs:label>    
+        <skos:definition xml:lang="en">The activity of creating a three-dimensional work by modeling, carving, or similar technique.</skos:definition>
+        <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
+        <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/scl.</skos:scopeNote>
+        <rdfs:subClassOf rdf:resource="http://example.org/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -544,6 +632,15 @@
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>  
     
+    <owl:ObjectProperty rdf:about="http://example.org/hasAttribution">
+        <rdfs:label xml:lang="en">has attribution</rdfs:label>
+        <skos:definition xml:lang="en">The attribution of an activity of ascribing a work to a particular agent or agents.</skos:definition>
+        <rdfs:range rdf:resource="http://example.org/Attribution"/> 
+        <owl:inverseOf rdf:resource="http://example.org/isAttributionOf"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+    
     <owl:ObjectProperty rdf:about="http://example.org/hasCitation">
         <rdfs:label xml:lang="en">has citation</rdfs:label>
         <skos:definition xml:lang="en">The resource that is the focus of description (e.g., a bf:Item or bf:Instance) has a citation located in a standard reference source.</skos:definition>
@@ -669,6 +766,15 @@
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty> 
+    
+    <owl:ObjectProperty rdf:about="http://example.org/isAttributionOf">
+        <rdfs:label xml:lang="en">is attribution of</rdfs:label>
+        <skos:definition xml:lang="en">Links the attribution to the activity of ascribing a work to a particular agent or agents.</skos:definition>
+        <rdfs:domain rdf:resource="http://example.org/Attribution"/> 
+        <owl:inverseOf rdf:resource="http://example.org/hasAttribution"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
     
     <owl:ObjectProperty rdf:about="http://example.org/isBaseMaterialOf">
         <rdfs:label xml:lang="en">is base material of</rdfs:label>
