@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/"
+    xml:base="http://example.org/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:voaf="http://purl.org/vocommons/voaf#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    >
+  
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // ONTOLOGY DECLARATION
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+    <owl:Ontology rdf:about="http://example.org/">
+        <owl:ontologyIRI rdf:resource="http://example.org/"/>
+        <owl:versionIRI rdf:resource="http://example.org/"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1</owl:versionInfo>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+        <rdfs:label xml:lang="en">Award Ontology</rdfs:label>
+        <skos:definition xml:lang="en">The Award Ontology models awards and their recipients.</skos:definition>
+        <vann:preferredNamespacePrefix>award</vann:preferredNamespacePrefix>
+        <dcterms:title xml:lang="en">Award Ontology</dcterms:title>
+    </owl:Ontology>
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // CLASSES
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+    
+    <!-- http://example.org/AwardCitation -->
+    
+    <owl:Class rdf:about="http://example.org/AwardCitation">
+        <rdfs:subClassOf rdf:resource="http://example.org/AwardReceipt"/>
+        <skos:definition>The specific nature of the award receipt is citation.</skos:definition>
+        <rdfs:label>Award citation</rdfs:label>
+    </owl:Class>
+    
+    
+    
+    <!-- http://example.org/AwardGranterActivity -->
+    
+    <owl:Class rdf:about="http://example.org/AwardGranterActivity">
+        <rdfs:subClassOf rdf:resource="http://example.org/Activity"/>
+        <skos:definition>The activity of granting an award.</skos:definition>
+        <skos:scopeNote>This class is not derived from a MARC relator.</skos:scopeNote>
+        <rdfs:label>Award granter</rdfs:label>
+    </owl:Class>
+    
+    
+    
+    <!-- http://example.org/AwardHonoraryMention -->
+    
+    <owl:Class rdf:about="http://example.org/AwardHonoraryMention">
+        <rdfs:subClassOf rdf:resource="http://example.org/AwardReceipt"/>
+        <skos:definition>The specific nature of the award receipt is honorary mention.</skos:definition>
+        <rdfs:label>Award honorary mention</rdfs:label>
+    </owl:Class>
+    
+    
+    
+    <!-- http://example.org/AwardLonglist -->
+    
+    <owl:Class rdf:about="http://example.org/AwardLonglist">
+        <rdfs:subClassOf rdf:resource="http://example.org/AwardReceipt"/>
+        <skos:definition>The specific nature of the award receipt is longlist.</skos:definition>
+        <rdfs:label>Award Longlist</rdfs:label>
+    </owl:Class>
+    
+    
+    
+    <!-- http://example.org/AwardNominee -->
+    
+    <owl:Class rdf:about="http://example.org/AwardNominee">
+        <rdfs:subClassOf rdf:resource="http://example.org/AwardReceipt"/>
+        <skos:definition>The specific nature of the award receipt is nominee.</skos:definition>
+        <rdfs:label>Award nominee</rdfs:label>
+    </owl:Class>
+    
+    
+    
+    <!-- http://example.org/AwardReceipt -->
+    
+    <owl:Class rdf:about="http://example.org/AwardReceipt">
+        <skos:definition>The bestowal of an award, honor, or distinction to an Agent or Work. The award bestowed should be represented with the Award class. The AwardReceipt is a context node between the award and the recipient which may contain further information, such as date.</skos:definition>
+        <rdfs:label>Award receipt</rdfs:label>
+    </owl:Class>
+    
+    
+    <!-- http://example.org/AwardSelectorActivity -->
+    
+    <owl:Class rdf:about="http://example.org/AwardSelectorActivity">
+        <rdfs:subClassOf rdf:resource="http://example.org/Activity"/>
+        <skos:definition>The activity of nominating or judging a resource in relation to an award, honor, etc.</skos:definition>
+        <skos:scopeNote>This class is not derived from a MARC relator.</skos:scopeNote>
+        <rdfs:label>Award selector</rdfs:label>
+    </owl:Class>
+    
+    
+    <!-- http://example.org/AwardShortlist -->
+    
+    <owl:Class rdf:about="http://example.org/AwardShortlist">
+        <rdfs:subClassOf rdf:resource="http://example.org/AwardReceipt"/>
+        <skos:definition>The specific nature of the award receipt is award shortlist.</skos:definition>
+        <rdfs:label>Award shortlist</rdfs:label>
+    </owl:Class>
+    
+    
+    
+    <!-- http://example.org/AwardWinner -->
+    
+    <owl:Class rdf:about="http://example.org/AwardWinner">
+        <rdfs:subClassOf rdf:resource="http://example.org/AwardReceipt"/>
+        <skos:definition>The specific nature of the award receipt is award winner.</skos:definition>
+        <rdfs:label>Award winner</rdfs:label>
+    </owl:Class>
+    
+    
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // OBJECT PROPERTIES
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- http://example.org/hasAward -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/hasAward">
+        <owl:inverseOf rdf:resource="http://example.org/isAwardOf"/>
+        <rdfs:domain rdf:resource="http://example.org/AwardReceipt"/>
+        <rdfs:range rdf:resource="http://vivoweb.org/ontology/core#Award"/>
+        <skos:definition>This resource is a receipt of the specified award or honor.</skos:definition>
+        <rdfs:label>has award</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/isAwardOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/isAwardOf">
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Award"/>
+        <rdfs:range rdf:resource="http://example.org/AwardReceipt"/>
+        <owl:inverseOf rdf:resource="http://example.org/hasAward"/>
+        <skos:definition>Links a specified award or honor to its receipt.</skos:definition>
+        <rdfs:label>is award of</rdfs:label>
+        <owl:inverseOf rdf:resource="http://example.org/hasAward"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/received -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/received">
+        <owl:inverseOf rdf:resource="http://example.org/receivedBy"/>
+        <rdfs:range rdf:resource="http://example.org/AwardReceipt"/>
+        <skos:definition>This resource, such as an Agent or Work, is the recipient of the specified AwardReceipt.</skos:definition>
+        <rdfs:label>received</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/receivedBy -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/receivedBy">
+        <owl:inverseOf rdf:resource="http://example.org/received"/>
+        <rdfs:domain rdf:resource="http://example.org/AwardReceipt"/>
+        <skos:definition>This AwardReceipt was received by the specified award recipient (such as an Agent or Work).</skos:definition>
+        <rdfs:label>received by</rdfs:label>
+    </owl:ObjectProperty>
+
+</rdf:RDF>
+
