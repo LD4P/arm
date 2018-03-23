@@ -314,13 +314,11 @@ Translated title
     ex:isPreferredTitleOf :instance1 ;
     rdf:value "Barracks near Segezha Station"@en ;
     ex:origin ex:supplied ;
-    ex:hasSource :source1 ;
+    ex:hasSource <http://prokudin-gorsky.org/?lang=en> ;
     bf:note :note1 .
 
 :note1 a bf:Note ;
     rdf:value "Title devised by Library staff."
-
-:source1 rdf:value "http://prokudin-gorsky.org/?lang=en"^^xsd:anyURI .
    
 :instance2 a bf:Instance ;
     ex:hasPreferredTitle :title3 ;

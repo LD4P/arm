@@ -471,8 +471,7 @@
         <rdfs:label xml:lang="en">Related material note</rdfs:label>
         <skos:definition xml:lang="en">A note providing information on materials (e.g. archival materials or publications) related to the described resource.</skos:definition>
         <skos:scopeNote xml:lang="en">Use if information describing the related material cannot be parsed into the appropriate relationship.</skos:scopeNote>
-        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/note"/>
-        
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/note"/>     
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
