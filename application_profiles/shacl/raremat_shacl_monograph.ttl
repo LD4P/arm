@@ -698,7 +698,7 @@ raremat_shapes_monograph:InstanceForm rdf:type rdfs:Class ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_hasPart ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_accompaniedBy ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_accompanies ;
-  sh:property raremat_shapes_monograph:InstanceForm_bf
+  sh:property raremat_shapes_monograph:InstanceForm_ex_hasMeasurementGroup ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_note ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_identifiedBy .
 
@@ -841,8 +841,10 @@ raremat_shapes_monograph:ItemForm rdf:type rdfs:Class ;
   sh:targetClass bf:Item ;
   sh:property raremat_shapes_monograph:ItemForm_bf_title ;
   sh:property raremat_shapes_monograph:ItemForm_raremat_hasActivity ;
-  sh:property raremat_shapes_monograph:ItemForm_bf_note 
+  sh:property raremat_shapes_monograph:ItemForm_ex_hasMeasurementGroup ;
+  sh:property raremat_shapes_monograph:ItemForm_bf_note ;
   sh:property raremat_shapes_monograph:ItemForm_bf_identifiedBy .
+
 
 raremat_shapes_monograph:ItemForm_bf_title sh:path <http://id.loc.gov/ontologies/bibframe/title> ;
   sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
@@ -869,8 +871,21 @@ raremat_shapes_monograph:ItemForm_raremat_hasActivity sh:path raremat:hasActivit
   tosh:editWidget swa:NestedObjectEditor ;
   sh:class raremat:Activity .
   
-# TODO Physical description, Measurement, Pagination/Foliation, Signature statements, Physical Condition, Activity (with curated list of Item roles for physical condition assessment and conservation), Materials, Bindings, Fonts, handwritings, notation, Markings
+# TODO Physical description, Pagination/Foliation, Signature statements, Physical Condition, Activity (with curated list of Item roles for physical condition assessment and conservation), Materials, Bindings, Fonts, handwritings, notation, Markings
 
+
+# ///// PROPERTY SHAPES FOR ItemMeasurementGroup PropertyGroup START HERE. /////////////////////////////////////////////////////////////
+
+raremat_shapes_monograph:ItemForm_ex_hasMeasurementGroup sh:path <http://example.org/hasMeasurementGroup> ;
+      sh:class <http://example.org/MeasurementGroup> ;
+      sh:group raremat_shapes_monograph:ItemMeasurementGroupPropertyGroup ;
+      sh:name "Instance measurement information" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "0"^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor .
+      
+      
+# ///// PROPERTY SHAPES FOR ItemNote PropertyGroup START HERE. /////////////////////////////////////////////////////////////
   
 raremat_shapes_monograph:ItemForm_bf_note sh:path <http://id.loc.gov/ontologies/bibframe/note> ;
       sh:description "Item related notes for when more granualar information isn't captured." ;
