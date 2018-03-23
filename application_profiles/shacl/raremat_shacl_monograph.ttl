@@ -1082,7 +1082,6 @@ raremat_shapes_monograph:NoteForm
   sh:targetClass bf:Note ;
   sh:property raremat_shapes_monograph:NoteForm_rdf_type ;
   sh:property raremat_shapes_monograph:NoteForm_rdf_value ;
-  sh:property raremat_shapes_monograph:NoteForm_bf_noteType ;
   .
   
 raremat_shapes_monograph:NoteForm_rdf_type sh:path rdf:type ;
@@ -1096,12 +1095,7 @@ raremat_shapes_monograph:NoteForm_rdf_value sh:path rdf:value ;
       sh:description "String value for the note" ;
       sh:name "Note value" ;
       sh:nodeKind sh:Literal .
-      
-raremat_shapes_monograph:NoteForm_bf_noteType sh:path bf:noteType ;
-      sh:maxCount "1" ;
-      sh:description "String value for the note type if a type (bf:Note subclass) hasn't been created for the drop down" ;
-      sh:name "Note type" ;
-      sh:nodeKind sh:Literal .
+   
 
 # TODO a buch of embedded forms, e.g. Titles, Activities, Identifiers
 
