@@ -17,6 +17,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix swa: <http://topbraid.org/swa#> .
 @prefix tosh: <http://topbraid.org/tosh#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # WARNING!!!!!!!!!!!!!!! Very drafty version of SHACL for RareMat application profile. A lot of this currently reflects a cut and paste of an audio focused SHACL file. This is unsafe to use as long as this warning is here.
@@ -112,6 +113,7 @@ raremat_shapes_monograph:WorkForm
   sh:property raremat_shapes_monograph:WorkForm_rdau_P60832 ;
   sh:property raremat_shapes_monograph:WorkForm_rdau_P60833 ;
   sh:property raremat_shapes_monograph:WorkForm_bf_dataSource ;
+  sh:property raremat_shapes_monograph:WorkForm_ex_recieved ;
   sh:property raremat_shapes_monograph:WorkForm_bf_note ;
   sh:property raremat_shapes_monograph:WorkForm_bf_identifiedBy .
 
@@ -184,8 +186,7 @@ raremat_shapes_monograph:WorkForm_bf_subject sh:path bf:subject ;
           [
             sh:class <http://id.loc.gov/ontologies/bibframe/Event> ;
           ]
-        ) ;
-    ] ; .
+        ) .
 
 raremat_shapes_monograph:WorkForm_bf_genreForm sh:path bf:genreForm ;
   sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
@@ -668,6 +669,16 @@ raremat_shapes_monograph:WorkForm_bf_note sh:path <http://id.loc.gov/ontologies/
         ) ;
     ] ;
     .
+    
+# ///// PROPERTY SHAPES FOR WorkAwardReceipt PropertyGroup START HERE. /////////////////////////////////////////////////////////////
+
+raremat_shapes_monograph:WorkForm_ex_recieved sh:path <http://example.org/received> ;
+sh:class <http://example.org/AwardReceipt> ;
+      sh:group raremat_shapes_monograph:WorkAwardReceiptPropertyGroup ;
+      sh:name "Work award receipt" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "0"^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor .
 
 # ///// PROPERTY SHAPES FOR WorkIdentifierPropertyGroup START HERE. /////////////////////////////////////////////////////////////////////////
 
@@ -795,6 +806,16 @@ raremat_shapes_monograph:InstanceForm_ex_hasMeasurementGroup sh:path <http://exa
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
+      
+# ///// PROPERTY SHAPES FOR InstanceAwardReceipt PropertyGroup START HERE. /////////////////////////////////////////////////////////////
+
+raremat_shapes_monograph:InstanceForm_ex_recieved sh:path <http://example.org/received> ;
+sh:class <http://example.org/AwardReceipt> ;
+      sh:group raremat_shapes_monograph:InstanceAwardReceiptPropertyGroup ;
+      sh:name "Instance award receipt" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "0"^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor .
 
 # ///// PROPERTY SHAPES FOR InstancetoItemPropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
@@ -854,6 +875,7 @@ raremat_shapes_monograph:ItemForm rdf:type rdfs:Class ;
   sh:property raremat_shapes_monograph:ItemForm_bf_hasPart ;
   sh:property raremat_shapes_monograph:ItemForm_bf_extent ;
   sh:property raremat_shapes_monograph:ItemForm_ex_hasMeasurementGroup ;
+  sh:property raremat_shapes_monograph:ItemForm_ex_recieved ;
   sh:property raremat_shapes_monograph:ItemForm_bf_note ;
   sh:property raremat_shapes_monograph:ItemForm_bf_identifiedBy .
 
@@ -908,6 +930,16 @@ raremat_shapes_monograph:ItemForm_ex_hasMeasurementGroup sh:path <http://example
       sh:class <http://example.org/MeasurementGroup> ;
       sh:group raremat_shapes_monograph:ItemMeasurementGroupPropertyGroup ;
       sh:name "Instance measurement information" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "0"^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor .
+      
+# ///// PROPERTY SHAPES FOR ItemAwardReceipt PropertyGroup START HERE. /////////////////////////////////////////////////////////////
+
+raremat_shapes_monograph:ItemForm_ex_recieved sh:path <http://example.org/received> ;
+sh:class <http://example.org/AwardReceipt> ;
+      sh:group raremat_shapes_monograph:ItemAwardReceiptPropertyGroup ;
+      sh:name "Item award receipt" ;
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
@@ -977,7 +1009,7 @@ raremat_shapes_monograph:MeasurementGroupForm_measurement_hasMeasurement
       sh:name "Single measurement" ;
       sh:nodeKind sh:IRI ;
       sh:order "1"^^xsd:decimal ;
-      tosh:editWidget swa:NestedObjectEditor ..
+      tosh:editWidget swa:NestedObjectEditor .
 
 
 
@@ -991,15 +1023,14 @@ raremat_shapes_monograph:MeasurementForm
   rdfs:label "Measurement form" ;
   sh:targetClass <http://measurement.bibliotek-o.org/Measurement> ;
   rdfs:subClassOf rdfs:Resource ;
-  sh:property raremat_shapes_monograph:MeasurementForm_rdf_value ;
+  sh:property raremat_shapes_monograph:MeasurementForm_rdf_value .
   
     
 raremat_shapes_monograph:MeasurementForm_rdf_value sh:path rdf:value ;
       sh:description "Numeric value for the measurement" ;
       sh:name "Numeric value" ;
       sh:nodeKind sh:Literal ;
-      sh:order "0"^^xsd:decimal ;
-    ] ;
+      sh:order "0"^^xsd:decimal .
     
 raremat_shapes_monograph:MeasurementForm_measurement_hasUnit sh:path <http://measurement.bibliotek-o.org/hasUnit> ;
       sh:description "Unit used to express the measurement" ;
@@ -1043,8 +1074,8 @@ raremat_shapes_monograph:MeasurementForm_measurement_hasUnit sh:path <http://mea
           [
             sh:hasValue <http://qudt.org/vocab/unit#PoundMass> ;
           ]
-        ) ;
-    ] ;
+        ) 
+.
 
 # For dimension types, such as height, width, weight, etc. use AAT, Art & Architecture Thesaurus.
 
@@ -1111,8 +1142,7 @@ raremat_shapes_monograph:MeasurementForm_measurement_measures sh:path <http://me
            [
             sh:hasValue <http://vocab.getty.edu/aat/300404437> ;
           ]
-        ) ;
-    ] ;
+        ) 
 .
 
 # /////// NOTE FORM BEGINS HERE ////////////////////////////////////////////////////////////
@@ -1148,8 +1178,8 @@ raremat_shapes_monograph:PaginationFoliationForm
   rdfs:label "Pagination and foliation form" ;
   rdfs:subClassOf rdfs:Resource ;
   sh:targetClass ex:PaginationFoliation ;
-  sh:property raremat_shapes_monograph:NoteForm_rdf_type ;
   sh:property raremat_shapes_monograph:NoteForm_rdf_value ;
+  sh:property raremat_shapes_monograph:NoteForm_dcterms_description ;
   .  
 
 raremat_shapes_monograph:PaginationFoliationForm_rdf_value sh:path rdf:value ;
@@ -1161,11 +1191,135 @@ raremat_shapes_monograph:NoteForm_dcterms_description sh:path dcterms:descriptio
       sh:description "Description of the pagination and/or foliation, including errors." ;
       sh:name "Description of pagination and foliation" ;
       sh:nodeKind sh:Literal .
+      
+# /////// AwardReceipt FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+raremat_shapes_monograph:AwardReceiptForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Award receipt" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass ex:AwardReceipt ;
+  sh:property raremat_shapes_monograph:NoteForm_rdf_type ;
+  sh:property raremat_shapes_monograph:NoteForm_ex_hasAward ;
+  sh:property raremat_shapes_monograph:NoteForm_bf_date ;
+  sh:property raremat_shapes_monograph:NoteForm_ex_hasActivity ; 
+  .  
+
+raremat_shapes_monograph:AwardReceiptForm_rdf_type sh:path rdf:type ;
+      sh:description "Sequential numbering of individual leaves, plates, pages (numbering on both sides), or columns (used as a sequence of numbering) of a resource." ;
+      sh:name "Type of Award Receipt" ;
+      sh:or (
+          [
+            sh:hasValue <http://example.org/AwardWinner> ;
+          ]
+          [
+            sh:hasValue <http://example.org/AwardNominee> ;
+          ]
+          [
+            sh:hasValue <http://example.org/AwardHonoraryMention> ;
+          ]
+          [
+            sh:hasValue <http://example.org/AwardCitation> ;
+          ]
+          [
+            sh:hasValue <http://example.org/AwardLonglist> ;
+          ]
+          [
+            sh:hasValue <http://example.org/AwardShortlist> ;
+          ]
+          ) ;
+          
+      sh:nodeKind sh:IRI ;
+      sh:order "0"^^xsd:decimal .
+      
+raremat_shapes_monograph:AwardReceiptForm_ex_hasAward sh:path ex:hasAward ;
+      sh:description "The related award being received" ;
+      sh:class vivo:Award ;
+      sh:name "Has award" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "1"^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor .
+      
+raremat_shapes_monograph:AwardReceiptForm_bf_date sh:path bf:date ;
+      sh:description "Date of award receipt." ;
+      sh:name "Date of award receipt" ;
+      sh:maxCount "1" ;
+      sh:nodeKind sh:Literal ;
+      sh:order "2"^^xsd:decimal .
+      
+raremat_shapes_monograph:AwardReceiptForm_ex_hasActivity sh:path ex:hasActivity ;
+      sh:description "Agent activities related to the Award Receipt" ;
+      sh:name "Award receipt agent activity" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "3"^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:or (
+          [
+            sh:class <http://example.org/AwardSelectorActivity> ;
+          ]
+          [
+            sh:class <http://example.org/AwardGranterActivity> ;
+           ]
+        ) 
+.
+
+
+# /////// AwardActivity FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+raremat_shapes_monograph:AwardReceiptActivityForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Award receipt agent activity" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:or (
+          [
+            sh:targetClass <http://example.org/AwardSelectorActivity> ;
+          ]
+          [
+            sh:targetClass <http://example.org/AwardGranterActivity> ;
+           ]
+        ) ;
+  sh:property raremat_shapes_monograph:AwardReceiptActivityForm_bf_agent ;
+  sh:property raremat_shapes_monograph:AwardReceiptActivityForm_bf_date ;
+.
+
+raremat_shapes_monograph:AwardReceiptActivityForm_bf_agent sh:path bf:agent ;
+      sh:description "Sequential numbering of individual leaves, plates, pages (numbering on both sides), or columns (used as a sequence of numbering) of a resource." ;
+      sh:name "Type of Award Receipt" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "0"^^xsd:decimal .
+      
+raremat_shapes_monograph:AwardReceiptActivityForm_bf_date sh:path bf:date ;
+      sh:description "Date of award receipt activity" ;
+      sh:name "Date of award receipt activity" ;
+      sh:maxCount "1" ;
+      sh:nodeKind sh:Literal ;
+      sh:order "1"^^xsd:decimal .
+      
+# /////// Award FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+raremat_shapes_monograph:AwardForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Award" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass vivo:Award ;
+  sh:property raremat_shapes_monograph:AwardForm_rdfs_label .
+.
+
+raremat_shapes_monograph:AwardForm_rdfs_label sh:path rdf:value ;
+      sh:description "Name to refer to the award" ;
+      sh:name "Name of award" ;
+      sh:nodeKind sh:Literal .
+
 
 # TODO a buch of embedded forms, e.g. Titles, Activities, Identifiers
 
 
 # ///// PROPERTY GROUP SECTION /////////////////////////////////////////////////////////////
+
+# TODO reflect all property groups across the various forms.
 
 # ///// WORK PROPERTY GROUPS ///////////////////////////////////////////////////////////////
 
