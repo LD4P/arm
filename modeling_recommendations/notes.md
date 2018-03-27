@@ -110,10 +110,34 @@ The ArtFrame group analyzed a number of content standards used in the library an
 ---------
 
 
+![subject notes](/modeling_recommendations/modeling_diagrams/subject_note.png)
+**Descriptive note**
+![descriptive notes](/modeling_recommendations/modeling_diagrams/descriptive_note.png)
 
 
+<a name="samples">RDF Samples</a>
+---------
+**Descriptive note specifying information about the label**
+```
+:item a bf:Item ;
+    ex:markedBy :marking .
 
+:marking a ex:Label ;
+     bf:note :note1 .
 
+:note1 a ex:DescriptiveNote ;
+     rdf:value "Two labels that were once affixed to the back and have now fallen off. One is 
+     an identifying label and the other is a xerox copy of a 1947 Boston Post news article
+     about the life and work of Norman Ritchie."
+```
 
+**Subject note**
+```
+:work a bf:Work ;
+    bf:note :note1 .
 
+:note1 a ex:SubjectNote ;
+    rdf:value "Two head-and-shoulder portraits in separate ornamental oval frames, one frame 
+    held by eagle. "
 
+```
