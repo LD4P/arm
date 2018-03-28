@@ -1,4 +1,4 @@
-Award
+Awards
 ================
 ArtFrame, 2017-11-17
 
@@ -21,7 +21,6 @@ has been identified as a critical use case ([*https://wiki.duraspace.org/display
 (in which case the award would need to be associated with that work) or it could be a career achievement award that can only 
 be associated with the agent, but not with a specific work.
 
-
 The ArtFrame group considered the inclusion of awards in the LD4P event model (tbd), but decided that for the ArtFrame use case 
 the actual event, e.g. an awards ceremony, is not what is considered important. It is sufficient to say that a specific work or 
 agent received a specific award on a given date.
@@ -32,13 +31,15 @@ resources about that award, not to those receiving an award. The content standar
 are limited to “Record information on an award if considered important for identification or selection.” The examples reflect a 
 note style. The RDA registry provides a property rdau:P60090. ([*http://metadataregistry.org/schemaprop/show/id/14686.html*](http://metadataregistry.org/schemaprop/show/id/14686.html))
 
-
 In BIBFRAME a property bf:awards is available. However, bf:awards is a datatype property and therefore carries the MARC practice 
 forward to record related information in a text string. It does currently not allow for linking out to awards, for example in 
 Wikidata (e.g. Sobey Art Award) ([*https://www.wikidata.org/wiki/Q7549952*](https://www.wikidata.org/wiki/Q7549952)).
 The VIVO ontology has a class vivo:Award ([*http://vivoweb.org/sites/vivoweb.org/files/vivo-isf-public-1.6.owl#Award*](http://vivoweb.org/sites/vivoweb.org/files/vivo-isf-public-1.6.owl#Award))and related properties, however those tend to have ranges limiting their use to foaf:Agent or foaf:Organization.
 
 The art specific standards and ontologies that were investigated do not specifically address the issue of awards.
+
+While the awards model was developed specifically to address the descriptive needs of bibliographic items in the art and rare materials domains, we define it as an independent model with the expectation that it could be useful in the description of awards related to a broad range of resources and therefore have defined it as an independent ontology.
+
 
 <a name="bfawards">Awards in BIBFRAME</a>
 ============
