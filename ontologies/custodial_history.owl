@@ -299,6 +299,14 @@
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
+    <owl:Class rdf:about="http://example.org/BuyerActivity">
+        <rdfs:label xml:lang="en">Buyer</rdfs:label>    
+        <skos:definition xml:lang="en">The act of purchasing a resource.</skos:definition>
+        <rdfs:subClassOf rdf:resource="http://example.org/Activity"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
     <owl:Class rdf:about="http://example.org/ClaimantActivity">
         <rdfs:label xml:lang="en">Claimant</rdfs:label>    
         <skos:definition xml:lang="en">The act of declaring ownership of an Item, notably when the claim is not clearly substantiated.</skos:definition>
@@ -309,7 +317,7 @@
     
     <owl:Class rdf:about="http://example.org/DeaccessionerActivity">
         <rdfs:label xml:lang="en">Deaccessioner</rdfs:label>    
-        <skos:definition xml:lang="en">TThe act of permanently removing accessioned items from a collection or repository.</skos:definition>
+        <skos:definition xml:lang="en">The act of permanently removing accessioned items from a collection or repository.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>

@@ -363,6 +363,12 @@ Activity Subclasses
 > - **SubclassOf**: http://example.org/Activity
 > - **Definition**: The act of negotiating or arranging for a transaction.
 
+**ex:BrokerActivity**
+> - **Label**: Broker
+> - **URI**: http://example.org/BuyerActivity
+> - **SubclassOf**: http://example.org/Activity
+> - **Definition**: The act of purchasing a resource.
+
 **ex:ClaimantActivity**
 > - **Label**: Claimant
 > - **URI**: http://example.org/ClaimantActivity
