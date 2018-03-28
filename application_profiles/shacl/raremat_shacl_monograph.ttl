@@ -705,6 +705,7 @@ raremat_shapes_monograph:InstanceForm rdf:type rdfs:Class ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_title ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_carrier ;
   sh:property raremat_shapes_monograph:InstanceForm_raremat_hasActivity ;
+  sh:property raremat_shapes_monograph:InstanceForm_bf_responsibilityStatement ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_provisionActivityStatement ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_hasPart ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_accompaniedBy ;
@@ -725,24 +726,14 @@ raremat_shapes_monograph:InstanceForm_bf_title sh:path <http://id.loc.gov/ontolo
   sh:nodeKind sh:IRI ;
   sh:order "0"^^xsd:decimal .
 
-# TODO need sh:in list of carriers appropriate for monograph bf:Text 
-
 raremat_shapes_monograph:InstanceForm_bf_carrier sh:path <http://id.loc.gov/ontologies/bibframe/carrier> ;
   sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
-  tosh:editWidget swa:NestedObjectEditor ;
+  sh:in ( <http://id.loc.gov/vocabulary/carriers/nc> <http://id.loc.gov/vocabulary/carriers/nb> <http://id.loc.gov/vocabulary/carriers/na> <http://id.loc.gov/vocabulary/carriers/no> <http://id.loc.gov/vocabulary/carriers/nz>) ;
   sh:description "Carrier type" ;
   sh:group raremat_shapes_monograph:InstanceTypePropertyGroup ;
-  sh:name "Other title" ;
+  sh:name "Carrier type" ;
   sh:nodeKind sh:IRI ;
   sh:order "0"^^xsd:decimal .
-
-# The following sh:Property with sh:path bf:carrier/madsrdf:isMemberOfMADSScheme isn't meant to be a field in the form, but rather state a restriction on the use of bf:carrier to instances from http://id.loc.gov/vocabulary/carriers. 
-  
-raremat_shapes_monograph:WorkForm_bf_carrier_madsrdf_isMemberOfMADSScheme sh:path <bf:genreForm/madsrdf:isMemberOfMADSScheme> ;
- sh:hasValue <http://id.loc.gov/vocabulary/carriers> ;
- sh:description "Values for carrier terms" ;
- sh:group raremat_shapes_monograph:InstanceTypePropertyGroup ;
- sh:name "LC Carrier Terms" .
 
 # ///// PROPERTY SHAPES FOR InstanceActivityPropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
@@ -756,9 +747,18 @@ raremat_shapes_monograph:InstanceForm_raremat_hasActivity sh:path raremat:hasAct
   tosh:editWidget swa:NestedObjectEditor ;
   sh:class raremat:Activity .
   
+http://id.loc.gov/ontologies/bibframe/responsibilityStatement
+
+raremat_shapes_monograph:InstanceForm_bf_responsibilityStatement sh:path bf:responsibilityStatement ;
+      sh:name "Responsibility statement" ;
+      sh:order "1"^^xsd:decimal ;
+      sh:description "Statement relating to contributors of a resource; usually transcribed." ;
+      sh:nodeKind sh:Literal ;
+      sh:group raremat_shapes_monograph:InstanceActivityPropertyGroup .
+      
 raremat_shapes_monograph:InstanceForm_bf_provisionActivityStatement sh:path bf:provisionActivityStatement ;
       sh:name "Provider statement" ;
-      sh:order "1"^^xsd:decimal ;
+      sh:order "2"^^xsd:decimal ;
       sh:description "Statement relating to providers of a resource; usually transcribed." ;
       sh:nodeKind sh:Literal ;
       sh:group raremat_shapes_monograph:InstanceActivityPropertyGroup .
@@ -796,7 +796,10 @@ raremat_shapes_monograph:InstanceForm_bf_extent sh:path bf:extent ;
       sh:class ex:PaginationFoliation ;
       sh:group raremat_shapes_monograph:ItemPaginationFoliationPropertyGroup ;
       tosh:editWidget swa:NestedObjectEditor .
-      
+
+
+# TODO Physical description property group once decided, measurement property group may be folded into the physical description property group
+     
 # ///// PROPERTY SHAPES FOR InstanceMeasurementPropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
 raremat_shapes_monograph:InstanceForm_ex_hasMeasurementGroup sh:path <http://example.org/hasMeasurementGroup> ;
@@ -804,8 +807,17 @@ raremat_shapes_monograph:InstanceForm_ex_hasMeasurementGroup sh:path <http://exa
       sh:group raremat_shapes_monograph:InstanceMeasurementGroupPropertyGroup ;
       sh:name "Instance measurement information" ;
       sh:nodeKind sh:IRI ;
-      sh:order "0"^^xsd:decimal ;
+      sh:order ""^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
+      
+raremat_shapes_monograph:InstanceForm_bf_bookFormat sh:path bf:bookFormat ;
+      sh:class <http://example.org/MeasurementGroup> ;
+      sh:group raremat_shapes_monograph:InstanceMeasurementGroupPropertyGroup ;
+      sh:description "Result of folding a printed sheet to form a gathering of leaves" ;
+      sh:name "Book format" ;
+      sh:in ( <http://rdaregistry.info/termList/bookFormat/1001> <http://rdaregistry.info/termList/bookFormat/1002> <http://rdaregistry.info/termList/bookFormat/1003> <http://rdaregistry.info/termList/bookFormat/1004> <http://rdaregistry.info/termList/bookFormat/1005> <http://rdaregistry.info/termList/bookFormat/1006> <http://rdaregistry.info/termList/bookFormat/1007> <http://rdaregistry.info/termList/bookFormat/1008> <http://rdaregistry.info/termList/bookFormat/1009> <http://rdaregistry.info/termList/bookFormat/1010> <http://rdaregistry.info/termList/bookFormat/1011> <http://rdaregistry.info/termList/bookFormat/1012> <http://rdaregistry.info/termList/bookFormat/1013> <http://rdaregistry.info/termList/bookFormat/1014> <http://rdaregistry.info/termList/bookFormat/1015>) ;
+      sh:nodeKind sh:IRI ;
+      sh:order ""^^xsd:decimal .
       
 # ///// PROPERTY SHAPES FOR InstanceAwardReceipt PropertyGroup START HERE. /////////////////////////////////////////////////////////////
 

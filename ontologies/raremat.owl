@@ -126,7 +126,7 @@
     <owl:Class rdf:about="http://example.org/CaptionNote">
         <rdfs:label xml:lang="en">Caption note</rdfs:label>
         <skos:definition xml:lang="en">Distinctive captions independent of the resource title, including mottos and headings.</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/note"/>
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -452,7 +452,7 @@
     <owl:Class rdf:about="http://example.org/PreferredCitation">
         <rdfs:label xml:lang="en">Preferred citation</rdfs:label>
         <skos:definition xml:lang="en">A note providing a specific citation format for citing the resource.</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/note"/>
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -471,7 +471,7 @@
         <rdfs:label xml:lang="en">Related material note</rdfs:label>
         <skos:definition xml:lang="en">A note providing information on materials (e.g. archival materials or publications) related to the described resource.</skos:definition>
         <skos:scopeNote xml:lang="en">Use if information describing the related material cannot be parsed into the appropriate relationship.</skos:scopeNote>
-        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/note"/>     
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>     
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -530,7 +530,7 @@
     <owl:Class rdf:about="http://example.org/SubjectNote">
         <rdfs:label xml:lang="en">Subject note</rdfs:label>
         <skos:definition xml:lang="en">Textual information describing the subject or iconographic details of a resource.</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/note"/>
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
