@@ -400,7 +400,7 @@
     
     <owl:Class rdf:about="http://example.org/OrganizerActivity">
         <rdfs:label xml:lang="en">Organizer</rdfs:label>    
-        <skos:definition xml:lang="en">The activity of organizing the exhibit, event, conference, etc.</skos:definition>
+        <skos:definition xml:lang="en">The activity of organizing an exhibit, event, conference, etc.</skos:definition>
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/orm.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="http://example.org/Activity"/>
