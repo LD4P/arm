@@ -125,7 +125,8 @@
     
     <owl:Class rdf:about="http://example.org/CaptionNote">
         <rdfs:label xml:lang="en">Caption note</rdfs:label>
-        <skos:definition xml:lang="en">Distinctive captions independent of the resource title, including mottos and headings.</skos:definition>
+        <skos:definition xml:lang="en">A distinctive caption independent of the resource title, including mottos and headings.</skos:definition>
+        <rdfs:comment xml:lang="en">Use separate notes for multiple captions.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
@@ -530,6 +531,7 @@
     <owl:Class rdf:about="http://example.org/SubjectNote">
         <rdfs:label xml:lang="en">Subject note</rdfs:label>
         <skos:definition xml:lang="en">Textual information describing the subject or iconographic details of a resource.</skos:definition>
+        <skos:scopeNote xml:lang="en">Use for textual notes only, not for subject terms from a controlled value vocabulary.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>

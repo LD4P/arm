@@ -59,14 +59,14 @@ The ArtFrame group analyzed a number of content standards used in the library an
 **ex:CaptionNote**
 > - **Label:** Caption note
 > - **IRI:** TBD
-> - **Definition:** Distinctive captions independent of the resource title, including mottos and headings.
+> - **Definition:** A distinctive caption independent of the resource title, including mottos and headings.
 > - **Comment:** Use separate notes for multiple captions.
 > - **Subclass of:** bf:Note
 
 **ex:LimitationNote**
 > - **Label:** Limitation note
 > - **IRI:** TBD
-> - **Definition:** DA note relating to the size and nature of a print run limited to a specific quantity of copies produced, or a statement relating to the enumeration and nature of a copy in relation to the larger print run.
+> - **Definition:** A note relating to the size and nature of a print run limited to a specific quantity of copies produced, or a statement relating to the enumeration and nature of a copy in relation to the larger print run.
 > - **Subclass of:** bf:Note
 
 **ex:InaccuracyNote**
