@@ -323,14 +323,14 @@ Translated title
 :instance2 a bf:Instance ;
     ex:hasPreferredTitle :title3 ;
     bf:title :title4 ;
-    bf:genreForm :photographic prints ;
+    bf:genreForm :photographic_prints ;
     bf:isInstanceOf :work1 .
 
 :title3 a bf:Title ;
     ex:isPreferedTitleOf :instance2 ;
     rdf:value "Barracks near Segezha Station"@en ;
     ex:origin ex:supplied ;
-    ex:hasSource :source1 ;
+    ex:hasSource <http://prokudin-gorsky.org/?lang=en> ;
     bf:note :note2 .
         
 :note2 a bf:Note ;
@@ -338,7 +338,8 @@ Translated title
 
 :title4 a bf:Title ;
     ex:titleOf :instance2 ;
-    rdf:value "Baraki dli︠a︡ voennopi︠e︡nnykh u st. Segezh (Prisoner of war barracks near the Segezh Station)" ;
+    rdf:value "Baraki dli︠a︡ voennopi︠e︡nnykh u st. Segezh (Prisoner of war 
+        barracks near the Segezh Station)" ;
     ex:origin ex:transcribed, ex:caption ;
     bf:status ex:invalid ;
     bf:note :note3 .
@@ -434,7 +435,7 @@ Translated title
  
 ```
 
-**Title, subtitle and a variant title**
+**Title, subtitle, and variant title**
 
 ```
 :work1 a bf:Work ;
