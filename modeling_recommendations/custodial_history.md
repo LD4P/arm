@@ -19,21 +19,22 @@ Understanding the ownership or custodial history of an item is fundamental in un
 Current descriptive practice includes these data as strings. For instance:
 "Unrecorded until purchased in 1893 from Agnew's by J. Pierpont Morgan; sold by him at auction in 1905; Christie's 1910; Pres. and Mrs. Nicholas Murray Butler; donated by their estate to Columbia in 1955."
 
-In modeling ownership and custodial history, the ArtFrame and Rare Materials Ontology Extension (RareMat) groups wanted to leverage more queryable data afforded by an entity-focused model; this differs from both current descriptive practice as well as BIBFRAME use of bf:custodialHistory as a datatype property. As such, we recommend using object properties alongside resources for different components of custodial history.
+In modeling ownership and custodial history, the ArtFrame and Rare Materials Ontology Extension groups wanted to leverage more queryable data afforded by an entity-focused model; this differs from both current descriptive practice as well as BIBFRAME use of bf:custodialHistory as a datatype property. As such, we recommend using object properties alongside resources for different components of custodial history.
 
 An item's custodial history is complex and provides a rich area for querying. Through the model proposed below, we believe we can both trace individual custodial histories for items in collections while aggregating materials related to the same auction, sale or donation.
 
+While the custodial history model was developed specifically to address the descriptive needs of bibliographic items in the art and rare materials domains, we define it as an independent model with the expectation that it could be useful in the description of the custodial history of a broad range of resources and therefore have defined it as an independent ontology.
 
 <a name="SummaryoftheModel">Summary of the Model</a>
 =======
 
 New resource types
 ------------------
-The model posits two new classes for the description of an Item’s custodial history: CustodialEvent and CustodialHistory. 
+The model posits two new classes for the description of a resource’s custodial history: CustodialEvent and CustodialHistory. 
 
-A CustodialEvent represents a single event or period in the custodial history of an Item, such as a sale, donation, or period of ownership. The CustodialEvents for a specific Item are aggregated and potentially ordered in a CustodialHistory resource representing the entire custodial history of that Item. 
+A CustodialEvent represents a single event or period in the custodial history of a resource, such as a sale, donation, or period of ownership. The CustodialEvents for a specific Item are aggregated and potentially ordered in a CustodialHistory resource representing the entire custodial history of that Item. 
 
-The CustodialEvent directly linked to the CustodialHistory of an Item (hereafter “individual CustodialEvent”) may be part of a larger CustodialEvent (hereafter “aggregate CustodialEvent”) encompassing multiple Items; e.g., a manuscript auctioned together with other manuscripts. Note that these are not distinct types of resources; rather, the distinction is maintained by direct or indirect linkage to an Item’s CustodialHistory. The individual CustodialEvent node intervening between an Item’s CustodialHistory and the aggregate CustodialEvent allows the individual events to be aggregated and sequenced independently of any other Item’s CustodialHistory. 
+The CustodialEvent directly linked to the CustodialHistory of a resource (hereafter “individual CustodialEvent”) may be part of a larger CustodialEvent (hereafter “aggregate CustodialEvent”) encompassing multiple Items; e.g., a manuscript auctioned together with other manuscripts. Note that these are not distinct types of resources; rather, the distinction is maintained by direct or indirect linkage to a resource’s CustodialHistory. The individual CustodialEvent node intervening between a resource’s CustodialHistory and the aggregate CustodialEvent allows the individual events to be aggregated and sequenced independently of any other Item’s CustodialHistory. 
 
 The CustodialHistory class is provided so that additional assertions can be made about it, distinct from assertions about specific events (the class also has conceptual appeal as a “container” of individual CustodialEvents). Whether this class is useful, as opposed to linking individual CustodialEvents directly to Items, remains to be seen through implementation and experimentation with the model (see Areas for Future Research).   
 
@@ -86,7 +87,7 @@ Concepts similar to but disjoint from ownership (i.e., to be represented by othe
 - Publication and production information (e.g., printer holds all items at time of printing)
 - Exhibition history (handled in forthcoming Exhibits model)
 - Creation activities (e.g., creator holds all items at time of creation)
-- Commissions (involves Works rather than Items, not part of the custodial history of an Item)
+- Commissions (involves works rather than items, not part of the custodial history of a resource)
 
 <a name="Diagram">Diagram</a>
 ======
@@ -180,7 +181,7 @@ Classes
 **ex:CustodialHistory**
 > - **Label**: Custodial history
 > - **URI**: http://example.org/CustodialHistory
-> - **Definition**: Entity that aggregates all of the custodial events for an Item.
+> - **Definition**: Entity that aggregates all of the custodial events for a resource.
 > - **Comment**: An Item has a single ex:CustodialHistory, which is composed of one or more ex:CustodialEvent resources. The Item is directly linked only to its CustodialHistory.
 
 
@@ -199,70 +200,70 @@ Some of these classes are also defined as subclasses of schema:Event. “Static�
 **ex:Accessioning**
 > - **Label**: Accessioning
 > - **URI**: http://example.org/Accessioning
-> - **Definition**: The act of adding an Item to the accessions records of a cultural heritage institution.
+> - **Definition**: The act of adding an item to the accessions records of a cultural heritage institution.
 > - **Comment**: Typical associated Activities: AccessionerActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Auction**
 > - **Label**: Auction
 > - **URI**: http://example.org/Auction
-> - **Definition**: The sale at auction of an Item. 
+> - **Definition**: The sale at auction of a resource. 
 > - **Comment**: Refers to the transfer of ownership through auction, rather than the auction in which that occurs. Typical associated Activities: BuyerActivity, SellerActivity, BrokerActivity.
 > - **SubclassOf**: ex:Sale, schema:Event.
 
 **ex:Bequest**
 > - **Label**: Bequest
 > - **URI**: http://example.org/Bequest
-> - **Definition**: The transfer of an Item under the terms of a will.
+> - **Definition**: The transfer of a resource under the terms of a will.
 > - **Comment**: Typical associated Activities: TestatorActivity, InheritorActivity, WitnessActivity.
 > - **SubclassOf**: ex:Inheritance, schema:Event
 
 **ex:ClaimOfOwnership**
 > - **Label**: Claim of ownership
 > - **URI**: http://example.org/ClaimOfOwnership
-> - **Definition**: A legal claim to the right of possession of an Item.
+> - **Definition**: A legal claim to the right of possession of a resource.
 > - **Comment**: Typical associated Activities: ClaimantActivity, DisputantActivity.
 > - **SubclassOf**: ex:CustodialEvent.
 
 **ex:Deaccessioning**
 > - **Label**: Deaccessioning
 > - **URI**: http://example.org/Deaccessioning
-> - **Definition**: The removal of an Item from the accessions records of a cultural heritage institution. 
+> - **Definition**: The removal of an item from the accessions records of a cultural heritage institution. 
 > - **Comment**: Typical associated Activities: DeaccessionerActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Deposit**
 > - **Label**: Deposit
 > - **URI**: http://example.org/Deposit
-> - **Definition**: The placement of an Item in the collections of a cultural heritage institution.
+> - **Definition**: The placement of an item in the collections of a cultural heritage institution.
 > - **Comment**: Typical associated Activities: DepositorActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Destruction**
 > - **Label**: Destruction
 > - **URI**: http://example.org/Destruction
-> - **Definition**: The permanent ruination of an Item.
+> - **Definition**: The permanent ruination of a resource.
 > - **Comment**: Typical associated Activities: DestructionActivity, OwnerActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Discarding**
 > - **Label**: Discarding
 > - **URI**: http://example.org/Discarding
-> - **Definition**: The abandonment or disposal of an Item.
+> - **Definition**: The abandonment or disposal of a resource.
 > - **Comment**: Typical associated Activities: DiscarderActivity, OwnerActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Donation**
 > - **Label**: Donation
 > - **URI**: http://example.org/Donation
-> - **Definition**: The giving of an Item, typically for charitable purposes and/or to benefit a cause.
+> - **Definition**: The giving of a resource, typically for charitable purposes and/or to benefit a cause.
 > - **Comment**: Typical associated Activities: DonorActivity, RecipientActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Inheritance**
 > - **Label**: Inheritance
 > - **URI**: http://example.org/Inheritance
-> - **Definition**: The transfer of an Item following the death of the previous owner, either by bequest or by the application of law.
+> - **Definition**: The transfer of a resource following the death of the previous owner, either by bequest or by the application of law.
 > - **Comment**: Typical associated Activities: TestatorActivity, InheritorActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 > - **SuperclassOf**: ex:Bequest
@@ -270,56 +271,56 @@ Some of these classes are also defined as subclasses of schema:Event. “Static�
 **ex:Loan**
 > - **Label**: Loan
 > - **URI**: http://example.org/Loan
-> - **Definition**: The temporary transfer of an Item.
+> - **Definition**: The temporary transfer of a resource.
 > - **Comment**: Typical associated Activities: LenderActivity, BorrowerActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Loss**
 > - **Label**: Loss
 > - **URI**: http://example.org/Loss
-> - **Definition**: The disappearance  of an Item under unknown circumstances (e.g., not in the case of theft).
+> - **Definition**: The disappearance  of a resource under unknown circumstances (e.g., not in the case of theft).
 > - **Comment**: Typical associated Activities: LossActivity, OwnerActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Offer**
 > - **Label**: Offer
 > - **URI**: http://example.org/Offer
-> - **Definition**: The provision of an Item for purchase or other form of acquisition.
+> - **Definition**: The provision of a resource for purchase or other form of acquisition.
 > - **Comment**: Typical associated Activities: OfferActivity, RecipientActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Ownership**
 > - **Label**: Ownership
 > - **URI**: http://example.org/Ownership
-> - **Definition**: The possession of full and complete right of control over an Item.
+> - **Definition**: The possession of full and complete right of control over a resource.
 > - **Comment**: Typical associated Activities: OwnerActivity.
 > - **SubclassOf**: ex:CustodialEvent.
 
 **ex:Recovery**
 > - **Label**: Recovery
 > - **URI**: http://example.org/Recovery
-> - **Definition**: The restitution or regaining possession of an Item.
+> - **Definition**: The restitution or regaining possession of a resource.
 > - **Comment**: Typical associated Activities: RecovererActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Repatriation**
 > - **Label**: Repatriation
 > - **URI**: http://example.org/Repatriation
-> - **Definition**: The return of an Item to its country of origin.
+> - **Definition**: The return of a resource to its country of origin.
 > - **Comment**: Typical associated Activities: RepatriatorActivity
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
 **ex:Sale**
 > - **Label**: Sale
 > - **URI**: http://example.org/Sale
-> - **Definition**: The exchange of an Item for money or other object of value.
+> - **Definition**: The exchange of a resource for money or other object of value.
 > - **Comment**: Typical associated Activities: BuyerActivity, SellerActivity, BrokerActivity.
 > - **SubclassOf**: ex:CustodialEvent, bf:SaleEvent.
 
 **ex:Theft**
 > - **Label**: Theft
 > - **URI**: http://example.org/Theft
-> - **Definition**: The removal of an Item from the possession of the rightful owner without the latter’s consent.
+> - **Definition**: The removal of a resource from the possession of the rightful owner without the latter’s consent.
 > - **Comment**: Typical associated Activities: ThiefActivity, OwnerActivity.
 > - **SubclassOf**: ex:CustodialEvent, schema:Event.
 
@@ -343,7 +344,7 @@ Activity Subclasses
 > - **Label**: Accessioner
 > - **URI**: http://example.org/AccessionerActivity
 > - **SubclassOf**: http://example.org/Activity
-> - **Definition**: The act of adding an item to a collection.
+> - **Definition**: The act of adding a resource to a collection.
 
 **ex:AcquisitionActivity**
 > - **Label**: Acquisition
@@ -355,7 +356,7 @@ Activity Subclasses
 > - **Label**: Borrower
 > - **URI**: http://example.org/BorrowerActivity
 > - **SubclassOf**: http://example.org/Activity
-> - **Definition**: The act of taking possession, but not ownership, of an Item.
+> - **Definition**: The act of taking possession, but not ownership, of a resource.
 
 **ex:BrokerActivity**
 > - **Label**: Broker
@@ -363,7 +364,7 @@ Activity Subclasses
 > - **SubclassOf**: http://example.org/Activity
 > - **Definition**: The act of negotiating or arranging for a transaction.
 
-**ex:BrokerActivity**
+**ex:BuyerActivity**
 > - **Label**: Broker
 > - **URI**: http://example.org/BuyerActivity
 > - **SubclassOf**: http://example.org/Activity
@@ -373,7 +374,7 @@ Activity Subclasses
 > - **Label**: Claimant
 > - **URI**: http://example.org/ClaimantActivity
 > - **SubclassOf**: http://example.org/Activity
-> - **Definition**: The act of declaring ownership of an Item, notably when the claim is not clearly substantiated.
+> - **Definition**: The act of declaring ownership of a resource, notably when the claim is not clearly substantiated.
 
 **ex:DeaccessionerActivity**
 > - **Label**: Deaccessioner
@@ -385,19 +386,19 @@ Activity Subclasses
 > - **Label**: Depositor
 > - **URI**: http://example.org/DepositorActivity
 > - **SubclassOf**: http://example.org/Activity
-> - **Definition**: The act of placing an item into the custody of another person, family, or organization.
+> - **Definition**: The act of placing a resource into the custody of another person, family, or organization.
 
 **ex:DestructionActivity**
 > - **Label**: Destroyer
 > - **URI**: http://example.org/DestructionActivity
 > - **SubclassOf**: http://example.org/Activity
-> - **Definition**: The act of permanently destroying an Item.
+> - **Definition**: The act of permanently destroying a resource.
 
 **ex:DiscarderActivity**
 > - **Label**: Discarder
 > - **URI**: http://example.org/ex:DiscarderActivity
 > - **SubclassOf**: http://example.org/Activity
-> - **Definition**: The act of permanently removing an item or part of an item from a collection for disposal.
+> - **Definition**: The act of permanently removing a resource or part of a resource from a collection for disposal.
 
 **ex:DisputantActivity**
 > - **Label**: Disputant
@@ -409,13 +410,13 @@ Activity Subclasses
 > - **Label**: Donor
 > - **URI**: http://example.org/DonorActivity
 > - **SubclassOf**: http://example.org/Activity
-> - **Definition**: The act of giving an Item to another owner without monetary exchange.
+> - **Definition**: The act of giving a resource to another owner without monetary exchange.
 
 **ex:InheritorActivity**
 > - **Label**: Inheritor
 > - **URI**: http://example.org/InheritorActivity
 > - **SubclassOf**: http://example.org/Activity
-> - **Definition**: The act of taking possession of an Item upon the death of the previous owner, either through bequest or application of law.
+> - **Definition**: The act of taking possession of a resource upon the death of the previous owner, either through bequest or application of law.
 
 **ex:LenderActivity**
 > - **Label**: Lender
@@ -427,61 +428,61 @@ Activity Subclasses
 > - **Label**: Loss
 > - **URI**: http://example.org/LossActivity
 > - **SubclassOf**: http://example.org/Activity
-> - **Definition**: Responsibility for the disappearance of an Item where the circumstances of the disappearance are unknown.
+> - **Definition**: Responsibility for the disappearance of a resource where the circumstances of the disappearance are unknown.
 
 **ex:OfferActivity**
 > - **Label**: Offerer
 > - **URI**: http://example.org/OfferActivity
 > - **SubclassOf**: http://example.org/Activity
-> - **Definition**: The act of providing an Item for purchase or other form of acquisition. Use for booksellers and sellers of other resources.
+> - **Definition**: The act of providing a resource for purchase or other form of acquisition. Use for booksellers and sellers of other resources.
 
 **ex:OwnerActivity**
 > - **Label**: Owner
 > - **URI**: http://example.org/OwnerActivity
 > - **SubclassOf**: http://example.org/Activity
-> - **Definition**: The legal possession of an Item.
+> - **Definition**: The legal possession of a resource.
 
 **ex:RecipientActivity**
 > - **Label**: Recipient
 > - **URI**: http://example.org/RecipientActivity
 > - **SubclassOf**: http://example.org/Activity
-> - **Definition**: The act of receiving an Item, via bequest, donation, etc.
+> - **Definition**: The act of receiving a resource, via bequest, donation, etc.
 
 **ex:RecovererActivity**
 > - **Label**: Recoverer
 > - **URI**: http://example.org/RecovererActivity
 > - **SubclassOf**: http://example.org/Activity
-> - **Definition**: The act of re-assuming ownership of an Item following a period of loss, possibly due to theft.
+> - **Definition**: The act of re-assuming ownership of a resource following a period of loss, possibly due to theft.
 
 **ex:RepatriatorActivity**
 > - **Label**: Repatriator
 > - **URI**: http://example.org/RepatriatorActivity
 > - **SubclassOf**: http://example.org/Activity
-> - **Definition**: The act of returning an item to its home country.
+> - **Definition**: The act of returning a resource to its home country.
 
 **ex:SellerActivity**
 > - **Label**: Seller
 > - **URI**: http://example.org/SellerActivity
 > - **SubclassOf**: http://example.org/Activity
-> - **Definition**: The act of exchanging ownership of an Item for money or other object of value. 
+> - **Definition**: The act of exchanging ownership of a resource for money or other object of value. 
 
 **ex:TestatorActivity**
 > - **Label**: Testator
 > - **URI**: http://example.org/TestatorActivity
 > - **SubclassOf**: http://example.org/Activity
-> - **Definition**: The act of bequeathing an Item in a will.
+> - **Definition**: The act of bequeathing a resource in a will.
 
 **ex:ThiefActivity**
 > - **Label**: Thief
 > - **URI**: http://example.org/ThiefActivity
 > - **SubclassOf**: http://example.org/Activity
-> - **Definition**: The act of acquiring an Item without the consent of the legal owner.
+> - **Definition**: The act of acquiring a resource without the consent of the legal owner.
 
 **ex:TransfererActivity**
 > - **Label**: Transferer
 > - **URI**: http://example.org/TransfererActivity
 > - **SubclassOf**: http://example.org/Activity
-> - **Definition**: The act of giving possession of an Item to another party, notably without a defined sale or donation.
+> - **Definition**: The act of giving possession of a resource to another party, notably without a defined sale or donation.
 
 **ex:WitnessActivity**
 > - **Label**: Witness
@@ -677,13 +678,13 @@ Properties
 - Modeling of confidence level. This also applies beyond the provenance domain.
 - Concurrent and overlapping events. The lending use case, for example, will raise issues of sequencing, overlapping, and concurrency. We should not rely on dates to provide this type of nuanced sequencing since dates (even approximate dates) may not be known.
 - Consider use of a predicate such as frapo:hasOutput (also used in the PhysicalCondition model) to express a causal relationship to another event or state (e.g., a sale results in an ownership). This cannot always be determined from sequencing, since there can be gaps in the sequence. 
-- How strong is the case for the CustodialHistory class? It is essentially a container for the various CustodialEvent pertaining to an Item. However, there may be assertions on the history as a whole that do not apply to a specific event, such as an annotation. We expect this question to be addressed by implementation of and experimentation with the model, and leave open the possibility of future deprecation.
+- How strong is the case for the CustodialHistory class? It is essentially a container for the various CustodialEvent pertaining to a resource. However, there may be assertions on the history as a whole that do not apply to a specific event, such as an annotation. We expect this question to be addressed by implementation of and experimentation with the model, and leave open the possibility of future deprecation.
 - Would there be value in defining a superclass of “static” events such as ownership, parallel to the use of schema:Event? - Would it be a subclass of CustodialEvent, or orthogonal to it, like schema:Event? Are there existing terms for this concept?
 - Consider augmenting the Activity class hierarchy by capturing general concepts of “giver” and “recipient” (for the latter, the RecipientActivity is already defined), and defining more specific activities such as SellerActivity, LenderActivity, TestatorActivity, etc. as “givers” and BuyerActivity, BorrowerActivity, InheritorActivity, etc. as subclasses of RecipientActivity.
-- The modeling of unary events (with only one associated Activity, such as AccessionerActivity) involves some redundancy. Should the model be made more concise by eliminating the event and allowing an activity to link directly to the CustodialHistory? (Note that this would require keeping the CustodialHistory class in order to fully reconstruct an Item’s custodial history; see above on the value of the CustodialHistory class.) On the other hand, maintaining the Event-Activity distinction allows for other activities related to such an event, not currently apparent, to easily be added.
+- The modeling of unary events (with only one associated Activity, such as AccessionerActivity) involves some redundancy. Should the model be made more concise by eliminating the event and allowing an activity to link directly to the CustodialHistory? (Note that this would require keeping the CustodialHistory class in order to fully reconstruct a resource’s custodial history; see above on the value of the CustodialHistory class.) On the other hand, maintaining the Event-Activity distinction allows for other activities related to such an event, not currently apparent, to easily be added.
 - Extend the Event-to-Activity model to other modeling areas, and bibliotek-o as a whole, where relevant. Consider renaming Activity to “Role” to clearly differentiate it from an event. The Activity is really the reification of an agent’s role in a resource, whether that be a bibliographic resource or an event, etc.
 - Consider expanding CustodialHistory to include non-provenance-related events, such as rebinding. Considerations:
-  - May want to replace CustodialHistory with the broader term History, though "custody" defined as “the protective care or guardianship of someone or something" may be broad enough to encompass conservation activities as well. There might be other events in the history of an item that do not fit under the definition of "custody," however.  
+  - May want to replace CustodialHistory with the broader term History, though "custody" defined as “the protective care or guardianship of someone or something" may be broad enough to encompass conservation activities as well. There might be other events in the history of a resource that do not fit under the definition of "custody," however.  
   - What are the pros and cons of including non-custodial and custodial events in the same timeline? 
   - Could provide another argument for allowing Activities to attach directly to the History, rather than requiring an intervening custodial or other event; otherwise, one would need to define events for all the activities in the physical condition model (and perhaps other models): condition assessment activity, conservator activity, etc. Or, as above, do away with the history aggregator node altogether and attach individual events and activities directly to the item. The history would then be reconstructed from the various events and activities rather than provided as a unit in a container node.
   - Would require confronting the issue of overlapping and concurrent events, since conservation activities provide a strong use case (e.g., rebinding during a period of ownership).
