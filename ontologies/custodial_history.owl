@@ -57,14 +57,11 @@
     
     <owl:Class rdf:about="http://example.org/CustodialHistory">
         <rdfs:label xml:lang="en">Custodial history</rdfs:label>    
-        <skos:definition xml:lang="en">Entity that aggregates all of the custodial events for an Item.</skos:definition>
+        <skos:definition xml:lang="en">Entity that aggregates all of the custodial events for a resource.</skos:definition>
         <skos:scopeNote>A resource has a single CustodialHistory, which is composed of one or more CustodialEvent resources. The Item is directly linked only to its CustodialHistory.</skos:scopeNote>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
-    
-    
-    <!-- ////////// CustodialEvent Classes ////////// -->
     
     <owl:Class rdf:about="http://example.org/CustodialEvent">
         <rdfs:label xml:lang="en">Custodial event</rdfs:label>    
@@ -76,7 +73,7 @@
     
     <owl:Class rdf:about="http://example.org/Accessioning">
         <rdfs:label xml:lang="en">Accessioning</rdfs:label>    
-        <skos:definition xml:lang="en">The act of adding an Item to the accessions records of a cultural heritage institution.</skos:definition>
+        <skos:definition xml:lang="en">The act of adding an item to the accessions records of a cultural heritage institution.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: AccessionerActivity.</skos:scopeNote>
@@ -86,7 +83,7 @@
     
     <owl:Class rdf:about="http://example.org/Auction">
         <rdfs:label xml:lang="en">Auction</rdfs:label>    
-        <skos:definition xml:lang="en">The sale at auction of an Item.</skos:definition>
+        <skos:definition xml:lang="en">The sale at auction of a resource.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/Sale" />
         <rdfs:subClassOf rdf:resource="http://schema.org/SaleEvent"/>
         <skos:scopeNote>Refers to the transfer of ownership through auction, rather than the auction in which that occurs.</skos:scopeNote> 
@@ -97,7 +94,7 @@
     
     <owl:Class rdf:about="http://example.org/Bequest">
         <rdfs:label xml:lang="en">Bequest</rdfs:label>    
-        <skos:definition xml:lang="en">The transfer of an Item under the terms of a will.</skos:definition>
+        <skos:definition xml:lang="en">The transfer of a resource under the terms of a will.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/Inheritance" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: TestatorActivity, InheritorActivity, WitnessActivity.</skos:scopeNote>
@@ -107,7 +104,7 @@
     
     <owl:Class rdf:about="http://example.org/ClaimOfOwnership">
         <rdfs:label xml:lang="en">Claim of ownership</rdfs:label>    
-        <skos:definition xml:lang="en">A legal claim to the right of possession of an Item.</skos:definition>
+        <skos:definition xml:lang="en">A legal claim to the right of possession of a resource.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/CustodialEvent" />
         <skos:scopeNote>Typical associated Activities: ClaimantActivity, DisputantActivity.</skos:scopeNote>
         <dcterms:issued></dcterms:issued>
@@ -116,7 +113,7 @@
     
     <owl:Class rdf:about="http://example.org/Deaccessioning">
         <rdfs:label xml:lang="en">Deaccessioning</rdfs:label>    
-        <skos:definition xml:lang="en">The removal of an Item from the accessions records of a cultural heritage institution.</skos:definition>        
+        <skos:definition xml:lang="en">The removal of an item from the accessions records of a cultural heritage institution.</skos:definition>        
         <rdfs:subClassOf rdf:resource="http://example.org/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: DeaccessionerActivity.</skos:scopeNote>
@@ -126,7 +123,7 @@
     
     <owl:Class rdf:about="http://example.org/Deposit">
         <rdfs:label xml:lang="en">Deposit</rdfs:label>    
-        <skos:definition xml:lang="en">The placement of an Item in the collections of a cultural heritage institution.</skos:definition>
+        <skos:definition xml:lang="en">The placement of an item in the collections of a cultural heritage institution.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: DepositorActivity.</skos:scopeNote>
@@ -136,7 +133,7 @@
     
     <owl:Class rdf:about="http://example.org/Destruction">
         <rdfs:label xml:lang="en">Destruction</rdfs:label>    
-        <skos:definition xml:lang="en">The permanent ruination of an Item.</skos:definition>
+        <skos:definition xml:lang="en">The permanent ruination of a resource.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: DestructionActivity, OwnerActivity.</skos:scopeNote>
@@ -146,7 +143,7 @@
     
     <owl:Class rdf:about="http://example.org/Discarding">
         <rdfs:label xml:lang="en">Discarding</rdfs:label>    
-        <skos:definition xml:lang="en">The abandonment or disposal of an Item.</skos:definition>
+        <skos:definition xml:lang="en">The abandonment or disposal of a resource.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: DiscarderActivity, OwnerActivity.</skos:scopeNote>
@@ -156,7 +153,7 @@
     
     <owl:Class rdf:about="http://example.org/Donation">
         <rdfs:label xml:lang="en">Donation</rdfs:label>    
-        <skos:definition xml:lang="en">The giving of an Item, typically for charitable purposes and/or to benefit a cause.</skos:definition>
+        <skos:definition xml:lang="en">The giving of a resource, typically for charitable purposes and/or to benefit a cause.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: DonorActivity, RecipientActivity.</skos:scopeNote>
@@ -166,7 +163,7 @@
     
     <owl:Class rdf:about="http://example.org/Inheritance">
         <rdfs:label xml:lang="en">Inheritance</rdfs:label>    
-        <skos:definition xml:lang="en">The transfer of an Item following the death of the previous owner, either by bequest or by the application of law.</skos:definition>
+        <skos:definition xml:lang="en">The transfer of a resource following the death of the previous owner, either by bequest or by the application of law.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: TestatorActivity, InheritorActivity.</skos:scopeNote>
@@ -176,7 +173,7 @@
     
     <owl:Class rdf:about="http://example.org/Loan">
         <rdfs:label xml:lang="en">Loan</rdfs:label>    
-        <skos:definition xml:lang="en">The temporary transfer of an Item.</skos:definition>
+        <skos:definition xml:lang="en">The temporary transfer of a resource.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: LenderActivity, BorrowerActivity.</skos:scopeNote>
@@ -186,7 +183,7 @@
     
     <owl:Class rdf:about="http://example.org/Loss">
         <rdfs:label xml:lang="en">Loss</rdfs:label>    
-        <skos:definition xml:lang="en">The disappearance of an Item under unknown circumstances (e.g., not in the case of theft).</skos:definition>
+        <skos:definition xml:lang="en">The disappearance of a resource under unknown circumstances (e.g., not in the case of theft).</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: LossActivity, OwnerActivity.</skos:scopeNote>
@@ -196,7 +193,7 @@
     
     <owl:Class rdf:about="http://example.org/Offer">
         <rdfs:label xml:lang="en">Offer</rdfs:label>    
-        <skos:definition xml:lang="en">The provision of an Item for purchase or other form of acquisition.</skos:definition>        
+        <skos:definition xml:lang="en">The provision of a resource for purchase or other form of acquisition.</skos:definition>        
         <rdfs:subClassOf rdf:resource="http://example.org/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: OfferActivity, RecipientActivity.</skos:scopeNote>
@@ -206,7 +203,7 @@
     
     <owl:Class rdf:about="http://example.org/Ownership">
         <rdfs:label xml:lang="en">Ownership</rdfs:label>    
-        <skos:definition xml:lang="en">The possession of full and complete right of control over an Item.</skos:definition>        
+        <skos:definition xml:lang="en">The possession of full and complete right of control over a resource.</skos:definition>        
         <rdfs:subClassOf rdf:resource="http://example.org/CustodialEvent" />
         <skos:scopeNote>Typical associated Activities: OwnerActivity.</skos:scopeNote>
         <dcterms:issued></dcterms:issued>
@@ -215,7 +212,7 @@
     
     <owl:Class rdf:about="http://example.org/Recovery">
         <rdfs:label xml:lang="en">Recovery</rdfs:label>    
-        <skos:definition xml:lang="en">The restitution or regaining possession of an Item.</skos:definition>
+        <skos:definition xml:lang="en">The restitution or regaining possession of a resource.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: RecovererActivity.</skos:scopeNote>
@@ -225,7 +222,7 @@
     
     <owl:Class rdf:about="http://example.org/Repatriation">
         <rdfs:label xml:lang="en">Repatriation</rdfs:label>    
-        <skos:definition xml:lang="en">The return of an Item to its country of origin.</skos:definition>
+        <skos:definition xml:lang="en">The return of a resource to its country of origin.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: RepatriatorActivity.</skos:scopeNote>
@@ -235,7 +232,7 @@
     
     <owl:Class rdf:about="http://example.org/Sale">
         <rdfs:label xml:lang="en">Sale</rdfs:label>    
-        <skos:definition xml:lang="en">The exchange of an Item for money or other object of value.</skos:definition>
+        <skos:definition xml:lang="en">The exchange of a resource for money or other object of value.</skos:definition>
         <skos:scopeNote>A CustodialEvent may pertain to only a single Item (an individual CustodialEvent) in which case it is linked directly to the Item’s CustodialHistory, or it may encompass multiple Items (such as an auction lot), in which case the CustodialEvent aggregates multiple individual CustodialEvents. A CustodialEvent may be what is typically conceived of as an “event,” or a “static” event such as ownership. Subclasses of CustodialEvent are accordingly either defined as subclasses of schema:Event or not.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="http://example.org/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/SaleEvent"/>
@@ -246,7 +243,7 @@
     
     <owl:Class rdf:about="http://example.org/Theft">
         <rdfs:label xml:lang="en">Theft</rdfs:label>    
-        <skos:definition xml:lang="en">The removal of an Item from the possession of the rightful owner without the latter’s consent.</skos:definition>
+        <skos:definition xml:lang="en">The removal of a resource from the possession of the rightful owner without the latter’s consent.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <skos:scopeNote>Typical associated Activities: ThiefActivity, OwnerActivity.</skos:scopeNote>
@@ -269,7 +266,7 @@
     
     <owl:Class rdf:about="http://example.org/AccessionerActivity">
         <rdfs:label xml:lang="en">Accessioner</rdfs:label>    
-        <skos:definition xml:lang="en">The act of adding an item to a collection.</skos:definition>
+        <skos:definition xml:lang="en">The act of adding a resource to a collection.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
@@ -285,7 +282,7 @@
     
     <owl:Class rdf:about="http://example.org/BorrowerActivity">
         <rdfs:label xml:lang="en">Borrower</rdfs:label>    
-        <skos:definition xml:lang="en">The act of taking possession, but not ownership, of an Item.</skos:definition>
+        <skos:definition xml:lang="en">The act of taking possession, but not ownership, of a resource.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
@@ -309,7 +306,7 @@
     
     <owl:Class rdf:about="http://example.org/ClaimantActivity">
         <rdfs:label xml:lang="en">Claimant</rdfs:label>    
-        <skos:definition xml:lang="en">The act of declaring ownership of an Item, notably when the claim is not clearly substantiated.</skos:definition>
+        <skos:definition xml:lang="en">The act of declaring ownership of a resource, notably when the claim is not clearly substantiated.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
@@ -325,7 +322,7 @@
     
     <owl:Class rdf:about="http://example.org/DepositorActivity">
         <rdfs:label xml:lang="en">Depositor</rdfs:label>
-        <skos:definition xml:lang="en">The act of placing an item into the custody of another person, family, or organization.</skos:definition>
+        <skos:definition xml:lang="en">The act of placing a resource into the custody of another person, family, or organization.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
@@ -333,7 +330,7 @@
 
     <owl:Class rdf:about="http://example.org/DestructionActivity">
         <rdfs:label xml:lang="en">Destroyer</rdfs:label>    
-        <skos:definition xml:lang="en">The act of permanently destroying an Item.</skos:definition>
+        <skos:definition xml:lang="en">The act of permanently destroying a resource.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
@@ -341,7 +338,7 @@
     
     <owl:Class rdf:about="http://example.org/DiscarderActivity">
         <rdfs:label xml:lang="en">Discarder</rdfs:label>    
-        <skos:definition xml:lang="en">The act of permanently removing an item or part of an item from a collection for disposal.</skos:definition>
+        <skos:definition xml:lang="en">The act of permanently removing a resource or part of a resource from a collection for disposal.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
@@ -359,7 +356,7 @@
         Be sure to use correct namespace in documentation and profiles. 
     <owl:Class rdf:about="http://example.org/DonorActivity">
         <rdfs:label xml:lang="en">Donor</rdfs:label>    
-        <skos:definition xml:lang="en">The activity of donating an item to another owner.</skos:definition>
+        <skos:definition xml:lang="en">The activity of donating a resource to another owner.</skos:definition>
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/dst.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="http://example.org/Activity"/>
@@ -370,7 +367,7 @@
     
     <owl:Class rdf:about="http://example.org/InheritorActivity">
         <rdfs:label xml:lang="en">Inheritor</rdfs:label>    
-        <skos:definition xml:lang="en">The act of taking possession of an Item upon the death of the previous owner, either through bequest or application of law.</skos:definition>
+        <skos:definition xml:lang="en">The act of taking possession of a resource upon the death of the previous owner, either through bequest or application of law.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
@@ -386,7 +383,7 @@
     
     <owl:Class rdf:about="http://example.org/LossActivity">
         <rdfs:label xml:lang="en">Loss</rdfs:label>    
-        <skos:definition xml:lang="en">Responsibility for the disappearance of an Item where the circumstances of the disappearance are unknown.</skos:definition>
+        <skos:definition xml:lang="en">Responsibility for the disappearance of a resource where the circumstances of the disappearance are unknown.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
@@ -394,7 +391,7 @@
     
     <owl:Class rdf:about="http://example.org/OfferActivity">
         <rdfs:label xml:lang="en">Offer</rdfs:label>
-        <skos:definition xml:lang="en">The act of providing an Item for purchase or other form of acquisition. Use for booksellers and sellers of other resources.</skos:definition>
+        <skos:definition xml:lang="en">The act of providing a resource for purchase or other form of acquisition. Use for booksellers and sellers of other resources.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
@@ -402,7 +399,7 @@
     
     <owl:Class rdf:about="http://example.org/OwnerActivity">
         <rdfs:label xml:lang="en">Owner</rdfs:label>
-        <skos:definition xml:lang="en">The legal possession of an Item.</skos:definition>
+        <skos:definition xml:lang="en">The legal possession of a resource.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
@@ -410,7 +407,7 @@
     
     <owl:Class rdf:about="http://example.org/RecipientActivity">
         <rdfs:label xml:lang="en">Recipient</rdfs:label>    
-        <skos:definition xml:lang="en">TThe act of receiving an Item, via bequest, donation, etc.</skos:definition>
+        <skos:definition xml:lang="en">The act of receiving a resource, via bequest, donation, etc.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
@@ -418,7 +415,7 @@
     
     <owl:Class rdf:about="http://example.org/RecovererActivity">
         <rdfs:label xml:lang="en">Recoverer</rdfs:label>    
-        <skos:definition xml:lang="en">The act of re-assuming ownership of an Item following a period of loss, possibly due to theft.</skos:definition>
+        <skos:definition xml:lang="en">The act of re-assuming ownership of a resource following a period of loss, possibly due to theft.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
@@ -426,7 +423,7 @@
     
     <owl:Class rdf:about="http://example.org/RepatriatorActivity">
         <rdfs:label xml:lang="en">Repatriator</rdfs:label>    
-        <skos:definition xml:lang="en">The act of returning an item to its home country.</skos:definition>
+        <skos:definition xml:lang="en">The act of returning a resource to its home country.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
@@ -434,7 +431,7 @@
     
     <owl:Class rdf:about="http://example.org/SellerActivity">
         <rdfs:label xml:lang="en">Seller</rdfs:label>
-        <skos:definition xml:lang="en">The act of exchanging ownership of an Item for money or other object of value.</skos:definition>
+        <skos:definition xml:lang="en">The act of exchanging ownership of a resource for money or other object of value.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/Activity"/>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
@@ -442,7 +439,7 @@
     
     <owl:Class rdf:about="http://example.org/TestatorActivity">
         <rdfs:label xml:lang="en">Testator</rdfs:label>    
-        <skos:definition xml:lang="en">The act of bequeathing an Item in a will.</skos:definition>
+        <skos:definition xml:lang="en">The act of bequeathing a resource in a will.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
@@ -450,7 +447,7 @@
     
     <owl:Class rdf:about="http://example.org/ThiefActivity">
         <rdfs:label xml:lang="en">Thief</rdfs:label>    
-        <skos:definition xml:lang="en">The act of acquiring an Item without the consent of the legal owner.</skos:definition>
+        <skos:definition xml:lang="en">The act of acquiring a resource without the consent of the legal owner.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
@@ -458,7 +455,7 @@
     
     <owl:Class rdf:about="http://example.org/TransfererActivity">
         <rdfs:label xml:lang="en">Transferer</rdfs:label>    
-        <skos:definition xml:lang="en">The act of giving possession of an Item to another party, notably without a defined sale or donation.</skos:definition>
+        <skos:definition xml:lang="en">The act of giving possession of a resource to another party, notably without a defined sale or donation.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://example.org/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
