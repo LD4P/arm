@@ -5,7 +5,7 @@ ArtFrame and RareMat, 2017-08-10
 **Table of Contents**
 - [Overview](#overview)
 - [Summary](#summary)
-- [bibliotek-o Approach to Activities Related to Physical Condition](#biblioteko)
+- [RareMat Approach to Activities Related to Physical Condition](#raremat)
 	- [Involved Classes](#classes)
 	- 	[Involved Properties](#properties)
 - [Diagrams and Sample RDF](#diagrams)
@@ -14,17 +14,17 @@ ArtFrame and RareMat, 2017-08-10
 -----------
 Several LD4P domain-specific ontology extension groups identified the need to describe the physical condition of an item, along with related condition assessment and conservation activities. Extension group members also described the use case of relating a specific condition assessment with the conservator activity that is triggered by the assessment. Further, it should be possible to relate this to a new physical condition that may be the result of the conservation activity. A high level of flexibility should be maintained since a condition assessment may take place without causing a conservator activity or a conservator activity may d take place without a prior formal condition assessment. None of these concepts are currently covered in BIBFRAME.
 
-[*CIDOC CRM*](http://www.cidoc-crm.org/), the [*Web Annotation Model*](https://www.w3.org/TR/annotation-model/) and [*PROV-O*](https://www.w3.org/TR/prov-o/) were consulted for possible re-use. It was determined that the Web Annotation Model would not support the requirements outlined above and the reuse of desired PROV-O properties is limited by domain and range restrictions. CIDOC-CRM does include the needed classes and properties; however, reusing CIDOC would introduce a model that would overlap with the existing [*Activities*](https://wiki.duraspace.org/display/LD4P/bibliotek-o?preview=/79795231/83237322/bibliotek-o_pattern_activities_201612.pdf) model already in use in [*bibliotek-o*](http://bibliotek-o.org/ontology.html), thus complicating querying the data. In addition, bibliotek-o’s Activities model already includes a ConservatorActivity that can be used.
+[*CIDOC CRM*](http://www.cidoc-crm.org/), the [*Web Annotation Model*](https://www.w3.org/TR/annotation-model/) and [*PROV-O*](https://www.w3.org/TR/prov-o/) were consulted for possible re-use. It was determined that the Web Annotation Model would not support the requirements outlined above and the reuse of desired PROV-O properties is limited by domain and range restrictions. CIDOC-CRM does possibly include the needed classes and properties; however future work is to evaluated whether reusing CIDOC would meet the desired semantics.
 
 <a name="summary">Summary of recommendations:</a>
 ---------------------------
--   Use  [**bib:ConservatorActivity**](http://bibliotek-o.org/ontology.html#ConservatorActivity)
+-   Use  [**ex:ConservatorActivity**](http://example.org/ConservatorActivity)
 
 -   Recommend use of [**seq:follows**](http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#follows) and [**seq:precedes**](http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes) predicates and drop [**vivo:rank**](http://www.essepuntato.it/lode/owlapi/http://vivoweb.org/ontology/core#d4e7099).
 
 -   Recommend use of [**frapo:hasOutput**](http://purl.org/cerif/frapo/hasOutput) and [**frapo:isOutputOf**](http://purl.org/cerif/frapo/isOutputOf)
 
--   Remove **"documenting"** from the definition of [**bib:ConservatorActivity**](http://bibliotek-o.org/1.1/ontology/ConservatorActivity)
+-   Remove **"documenting"** from the definition of [**ex:ConservatorActivity**](http://example.org/ConservatorActivity)
 
 -   Define the following new classes:
 > - ex:ConditionAssessmentActivity
@@ -38,22 +38,22 @@ One condition assessment can describe one or more physical conditions as an over
 > - ex:isInputTo/hasInput - domain/range open
 > - ex:describes/describedBy - domain/range open
 
--   New classes and properties should be included in bibliotek-o and not in a domain-extension ontology since at least three domain extensions identified use cases.
+-   New classes and properties should be included in a core ontology and not in separate domain-extension ontologies since at least three domain extensions identified use cases.
 
-<a name="biblioteko">bibliotek-o Approach to Activities Related to Physical Condition</a>
+<a name="raremat">RareMat Approach to Activities Related to Physical Condition</a>
 ----------------------------------------------------------------
 
 <a name="classes">**Involved Classes**</a>
 
-**bib:Activity**
+**ex:Activity**
 > - **Label:** Activity
-> - **IRI:** [http://bibliotek-o.org/ontology/Activity](http://bibliotek-o.org/ontology/Activity)
+> - **IRI:** [http://example.org/Activity](http://example.org/Activity)
 > - **Definition:** An activity or contribution by a single agent that affects or alters the existence or state of a resource.
 
 **ex:ConditionAssessmentActivity** (new)
 > - **Label:** Condition Assessment Activity
 > - **IRI:** tbd
-> - **Has super-class:** bib:Activity
+> - **Has super-class:** ex:Activity
 > - **Definition:** The activity of assessing and documenting the physical condition of an item, including damage, material vulnerabilities, special storage requirements, etc. This activity outputs a ConditionAssessment.
 
 **ex:ConditionAssessment** (new)
@@ -66,9 +66,9 @@ One condition assessment can describe one or more physical conditions as an over
 > - **IRI**: tbd
 > - **Definition:** One specific aspect of the condition of an object or part of an object, including perceptible or measurable characteristics such as physical appearance, level of damage, quality, or completeness.
 
-**bib:ConservatorActivity**
+**ex:ConservatorActivity**
 > - **Label:** Conservator
-> - **IRI:** [http://bibliotek-o.org/ontology/ConservatorActivity](http://bibliotek-o.org/ontology/ConservatorActivity)
+> - **IRI:** [http://example.org/ConservatorActivity](http://example.org/ConservatorActivity)
 > - **Definition:** The activity of preserving or treating printed or manuscript material, works of art, artifacts, or other objects.
 
 **<a name="properties">Involved Properties</a>**
@@ -109,54 +109,55 @@ One condition assessment can describe one or more physical conditions as an over
 > - **Inverse:** ex:isPhysicalConditionOf
 
 **ex:isPhysicalConditionOf** (Object property)
-> - **Label:** has physical condition (new)
+> - **Label:** is physical condition of (new)
 > - **IRI:** tbd
 > - **Definition:** Relates a specific physical condition to an object or part of an object.
 > - **Domain:** ex:PhysicalCondition
 > - **Inverse:** ex:hasPhysicalCondition
 
-**bib:atLocation** (Object property)
-> - **Label:** at location
-> - **IRI:** [http://bibliotek-o.org/ontology/atLocation](http://bibliotek-o.org/ontology/atLocation)
-> - **Definition:** The resource being described is at the specified location.
-> - **Comment:** Used with Unspecified
-> - **Inverse:** bib:locationOf
-> - **Range:** prov:Location
+**bf:place** 
+> - **Label**: Place
+> - **URI**: http://id.loc.gov/ontologies/bibframe/place
+> - **Domain**: unspecified
+> - **Range**: http://id.loc.gov/ontologies/bibframe/Place
+> - **Inverse**: unspecified
+> - **Definition**: Geographic location or place entity associated with a resource or element of description, such as the place associated with the publication, printing, distribution, issue, release or production of a resource, place of an event.
 
-**dcterms:date** (Datatype property)
-> - **Label:** Date
-> - **URI:** [http://purl.org/dc/terms/date](http://purl.org/dc/terms/date)
-> - **Definition:** "A point or period of time associated with an event in the lifecycle of the resource."
-> - **Comment:**"Date may be used to express temporal information at any level of granularity. Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO.8601 [W3CDTF]."
-> - **Range:** rdfs:Literal
+**bf:date** 
+> - **Label**: Date
+> - **URI**: http://id.loc.gov/ontologies/bibframe/date
+> - **Domain**: unspecified 
+> - **Range**: unspecified
+> - **Definition**: Date designation associated with a resource or element of description, such as date of title variation; year a degree was awarded; date associated with the publication, printing, distribution, issue, release or production of a resource. May be date typed.
+> - **Comment**: Date may be used to express temporal information at any level of granularity.
 
-**bib:hasActivity** (Object property)
+**ex:hasActivity** (Object property)
 > - **Label:** has Activity
-> - **IRI:** [http://bibliotek-o.org/ontology/hasActivity](http://bibliotek-o.org/ontology/hasActivity)
+> - **IRI:** [http://example.org/hasActivity](http://example.org/hasActivity)
 > - **Description:** Relates this resource to an activity or contribution by a single agent that affects or alters its existence or state.
-> - **Inverse:** bib:isActivityOf
+> - **Inverse:** ex:isActivityOf
 
-**bib:isActivityOf** (Object property)
+**ex:isActivityOf** (Object property)
 > - **Label:** has Activity
-> - **IRI:** [http://bibliotek-o.org/ontology/isActivityOf](http://bibliotek-o.org/ontology/isActivityOf)
+> - **IRI:** [http://example.org/isActivityOf](http://example.org/isActivityOf)
 > - **Description:** Relates an activity to the affected resource.
-> - **Inverse:** bib:hasActivity
+> - **Inverse:** ex:hasActivity
 
-**bib:isAgentOf** (Object property)
-> - **Label:** Agent for
-> - **IRI:** [http://bibliotek-o.org/ontology/isAgentOf](http://bibliotek-o.org/ontology/isAgentOf)
+**ex:agentOf** (Object property)
+> - **Label:** agent of
+> - **IRI:** [http://example.org/agentOf](http://example.org/agentOf)
 > - **Description:** Relates an agent to the activity it participated in.
-> - **Domain:** bib:Activity
-> - **Range:** bib:Agent
-> - **Inverse:** bib:hasAgent
+> - **Domain:** ex:Activity
+> - **Range:** ex:Agent
+> - **Inverse:** bf:agent
 
-**bib:hasAgent** (Object property)
-> - **Label:** has agent
-> - **IRI:** [http://bibliotek-o.org/ontology/hasAgent](http://bibliotek-o.org/ontology/hasAgent)
-> - **Description:** Relates an activity to its agent.
-> - **Domain:** bib:Activity
-> - **Range:** bib:Agent
-> - **Inverse**: bib:isAgentOf
+**bf:agent** 
+> - **Label**: Associated agent
+> - **URI**: http://id.loc.gov/ontologies/bibframe/agent
+> - **Domain**: unspecified 
+> - **Range**: bf:Agent
+> - **Inverse**: 
+> - **Definition**: Relates an activity to its agent.
 
 **frapo:hasOutput** (Object property)
 > - **Label:** has output
@@ -196,11 +197,11 @@ One condition assessment can describe one or more physical conditions as an over
 ![Physical Condition diagram 1](/modeling_recommendations/modeling_diagrams/physical_condition_1.png)
 ```
 :Item1 a bf:Item ;
-    bib:hasActivity :activity1 ;
+    ex:hasActivity :activity1 ;
     ex:hasPhysicalCondition :physicalCondition1 .
     
 :activity1 a ex:ConditionAssessmentActivity ;
-    bib:isActivity of :item1 ;
+    ex:isActivity of :item1 ;
     frapo:hasOutput :assessment1 .
 
 :asessment1 a ex:ConditionAssessment ;
@@ -217,12 +218,12 @@ One condition assessment can describe one or more physical conditions as an over
 ![Physical Condition diagram 2](/modeling_recommendations/modeling_diagrams/physical_condition_2.png)
 ```
 :Item2 a bf:Item ;
-    bib:hasActivity :activity2 ;
+    ex:hasActivity :activity2 ;
     ex:hasPhysicalCondition :physicalCondition2 .
 
-:activity2 a bib:ConservatorActivity ;
+:activity2 a ex:ConservatorActivity ;
     rdfs:label "preventive conservation" ;
-    bib:isActivity of :item2 ;
+    ex:isActivity of :item2 ;
     frapo:hasOutput :physicalCondition2 .
 
 :physicalCondition2 a ex:PhysicalCondition ;
@@ -235,23 +236,23 @@ One condition assessment can describe one or more physical conditions as an over
 ![Physical Condition diagram 3](/modeling_recommendations/modeling_diagrams/physical_condition_3.png)
 ```
 :Item3 a bf:Item ;
-    bib:hasActivity :activity1 ;
-    bib:hasActivity :activity2 ;
+    ex:hasActivity :activity1 ;
+    ex:hasActivity :activity2 ;
     ex:hasPhysicalCondition :condition1 ;
     ex:hasPhysicalCondition :condition2 .
 
 activity1 a ex:ConditionAssessmentActivity ;
-    bib:isActivityOf :item3 ;
+    ex:isActivityOf :item3 ;
     frapo:hasOutput :assessment1 .
 
 assessment1 a ex:ConditionAssessment ;
-    bib:isOutputOf :activity1 ;
+    ex:isOutputOf :activity1 ;
     ex:describes :condition1 .
 
-activity2 a bib:ConservatorActivity ;
-    bib:isActivityOf :item3 ;
+activity2 a ex:ConservatorActivity ;
+    ex:isActivityOf :item3 ;
     ex:hasInput :condition1 ;
-    bib:hasOutput :condition2 .
+    ex:hasOutput :condition2 .
 
 :condition1 a ex:PhysicalCondition ;
     ex:isPhysicalConditionOf :item3 ;
@@ -262,7 +263,7 @@ activity2 a bib:ConservatorActivity ;
 
 :condition2 a ex:PhysicalCondition ;
     ex:isPhysicalConditionOf :item3 ;
-    bib:isOutputOf :activity2 ;
+    ex:isOutputOf :activity2 ;
     seq:follows :condition1 ;
     rdf:value "Page 10 mended" .
 ```
@@ -271,11 +272,11 @@ activity2 a bib:ConservatorActivity ;
 ![Physical Condition diagram 4](/modeling_recommendations/modeling_diagrams/physical_condition_4.png)
 ```
 :Item4 a bf:Item ;
-    bib:hasActivity :activity1, activity2 ;
+    ex:hasActivity :activity1, activity2 ;
     ex:hasPhysicalCondition :condition1, :condition2, :condition3 .
 
 activity1 a ex:ConditionAssessmentActivity ;
-    bib:isActivityOf :item4 ;
+    ex:isActivityOf :item4 ;
     frapo:hasOutput :assessment1 .
 
 assessment1 a ex:ConditionAssessment ;
@@ -283,14 +284,14 @@ assessment1 a ex:ConditionAssessment ;
     ex:describes :condition1 ;
     ex:describes :condition2 .
 
-:activity2 a bib:ConservatorActivity ;
-    bib:isActivityOf :item4 ;
+:activity2 a ex:ConservatorActivity ;
+    ex:isActivityOf :item4 ;
     ex:hasInput :condition2 ;
     frapo:hasOutput :condition3 .
 
 :condition1 a ex:PhysicalCondition ;
     ex:isPhysicalConditionOf :item4 ;
-    bib:isDescribedBy :assessment1 ;
+    ex:isDescribedBy :assessment1 ;
     rdf:value "Page 5 missing" .
 ```
 --------
@@ -298,17 +299,17 @@ assessment1 a ex:ConditionAssessment ;
 ![Physical Condition diagram 5](/modeling_recommendations/modeling_diagrams/physical_condition_5.png)
 ```
 :Item5 a bf:Item ;
-    bib:hasActivity :activity1, activity2, activity3, activity4 ;
+    ex:hasActivity :activity1, activity2, activity3, activity4 ;
     ex:hasPhysicalCondition :condition1, :condition2, :condition3, :condition4 .
 
 :activity1 a ex:ConditionAssessmentActivity ;
-    bib:isActivityOf :item5 ;
-    dcterms:date "2010-12-01" ;
+    ex:isActivityOf :item5 ;
+    bf:date "2010-12-01" ;
     frapo:hasOutput :assessment1 .
 
 :activity2 a ex:ConditionAssessmentActivity ;
-    bib:isActivityOf :item5 ;
-    dcterms:date "2017-05-31" ;
+    ex:isActivityOf :item5 ;
+    bf:date "2017-05-31" ;
     frapo:hasOutput :assessment2 .
 
 :assessment1 a ex:ConditionAssessment ;
@@ -319,14 +320,14 @@ assessment1 a ex:ConditionAssessment ;
     frapo:isOutputOf :activity2 ;
     ex:describes :condition1 .
 
-:activity3 a bib:ConservatorActivity ;
-    bib:isActivityOf :item5 ;
+:activity3 a ex:ConservatorActivity ;
+    ex:isActivityOf :item5 ;
     ex:hasInput :assessment1 ;
     ex:hasInput :condition1 ;
     frapo:hasOutput :condition2 .
 
-:activity4 a bib:ConservatorActivity ;
-    bib:isActivityOf :item5 ;
+:activity4 a ex:ConservatorActivity ;
+    ex:isActivityOf :item5 ;
     ex:hasInput :assessment2 ;
     ex:hasInput :condition3 ;
     frapo:hasOutput :condition4 .
