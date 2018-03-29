@@ -38,7 +38,7 @@ The VIVO ontology has a class vivo:Award ([*http://vivoweb.org/sites/vivoweb.org
 
 The art specific standards and ontologies that were investigated do not specifically address the issue of awards.
 
-While the awards model was developed specifically to address the descriptive needs of bibliographic items in the art and rare materials domains, we define it as an independent model with the expectation that it could be useful in the description of awards related to a broad range of resources and therefore have defined it as an independent ontology.
+While the awards model was developed specifically to address the descriptive needs of bibliographic items in the art and rare materials domains, we define it as an independent model with the expectation that it could be useful in the description of awards related to a broad range of resources.
 
 
 <a name="bfawards">Awards in BIBFRAME</a>

@@ -23,7 +23,7 @@ In modeling ownership and custodial history, the ArtFrame and Rare Materials Ont
 
 An item's custodial history is complex and provides a rich area for querying. Through the model proposed below, we believe we can both trace individual custodial histories for items in collections while aggregating materials related to the same auction, sale or donation.
 
-While the custodial history model was developed specifically to address the descriptive needs of bibliographic items in the art and rare materials domains, we define it as an independent model with the expectation that it could be useful in the description of the custodial history of a broad range of resources and therefore have defined it as an independent ontology.
+While the custodial history model was developed specifically to address the descriptive needs of bibliographic items in the art and rare materials domains, we define it as an independent model with the expectation that it could be useful in the description of the custodial history of a broad range of resources.
 
 <a name="SummaryoftheModel">Summary of the Model</a>
 =======

@@ -21,6 +21,8 @@ CIDOC-CRM appears to be a somewhat closed ecosystem that diverse schema and onto
 
 Recommendations were tested on sample data pulled from existing descriptions.
 
+While the custodial history model was developed specifically to address the descriptive needs of bibliographic items in the art and rare materials domains, we define it as an independent model with the expectation that it could be useful in the description of a broad range of resources.
+
 Relevant documentation:
 ------------------------
 [*Machine-Actionable Data Elements for Measurements, Extent of the Carrier, Pagination and Foliation, Dimensions, Extent of the Content, and Duration – Discussion Paper*](http://www.rda-jsc.org/sites/all/files/6JSC-ALA-Discussion-5.pdf) (2015)
