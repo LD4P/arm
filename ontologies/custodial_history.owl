@@ -352,8 +352,7 @@
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <!-- Moving to main ontology file, since can be used in other contexts - donating to an exhibition, for example.
-        Be sure to use correct namespace in documentation and profiles. 
+    <!-- Also used in other contexts, such as donors to an exhibition. -->
     <owl:Class rdf:about="http://example.org/DonorActivity">
         <rdfs:label xml:lang="en">Donor</rdfs:label>    
         <skos:definition xml:lang="en">The activity of donating a resource to another owner.</skos:definition>
@@ -363,8 +362,7 @@
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
-    -->
-    
+
     <owl:Class rdf:about="http://example.org/InheritorActivity">
         <rdfs:label xml:lang="en">Inheritor</rdfs:label>    
         <skos:definition xml:lang="en">The act of taking possession of a resource upon the death of the previous owner, either through bequest or application of law.</skos:definition>

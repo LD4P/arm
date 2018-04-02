@@ -222,16 +222,6 @@
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="http://example.org/DonorActivity">
-        <rdfs:label xml:lang="en">Donor</rdfs:label>    
-        <skos:definition xml:lang="en">The activity of donating an item to another owner.</skos:definition>
-        <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
-        <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/dst.</skos:scopeNote>
-        <rdfs:subClassOf rdf:resource="http://example.org/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
     <owl:Class rdf:about="http://example.org/DraftsmanActivity">
         <rdfs:label xml:lang="en">Draftsman</rdfs:label>    
         <skos:definition xml:lang="en">The activity of making detailed plans or drawings for buildings, ships, aircraft, machines, objects, etc.</skos:definition>
