@@ -828,15 +828,14 @@ raremat_shapes_monograph:InstanceForm_bf_bookFormat sh:path bf:bookFormat ;
       sh:nodeKind sh:IRI ;
       sh:order ""^^xsd:decimal .
       
-# ///// PROPERTY SHAPES FOR InstanceAwardReceipt PropertyGroup START HERE. /////////////////////////////////////////////////////////////
+# ///// PROPERTY SHAPES FOR InstanceOfWork PropertyGroup START HERE. /////////////////////////////////////////////////////////////      
 
-raremat_shapes_monograph:InstanceForm_ex_recieved sh:path <http://example.org/received> ;
-sh:class <http://example.org/AwardReceipt> ;
-      sh:group raremat_shapes_monograph:InstanceAwardReceiptPropertyGroup ;
-      sh:name "Instance award receipt" ;
-      sh:nodeKind sh:IRI ;
-      sh:order "0"^^xsd:decimal ;
-      tosh:editWidget swa:NestedObjectEditor .
+raremat_shapes_monograph:InstanceForm_bf_instanceOf sh:path <http://id.loc.gov/ontologies/bibframe/instanceOf> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Text> ;
+      sh:description "Works that this is an instance of" ;
+      sh:name "Instance of (works)" ;
+      sh:group raremat_shapes_monograph:InstanceOfWorkPropertyGroup .
+
 
 # ///// PROPERTY SHAPES FOR InstancetoItemPropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
@@ -845,6 +844,18 @@ raremat_shapes_monograph:InstanceForm_bf_hasItem sh:path <http://id.loc.gov/onto
       sh:description "Items of this instance" ;
       sh:name "Has item" ;
       sh:group raremat_shapes_monograph:InstanceHasItemPropertyGroup .
+      
+
+      
+# ///// PROPERTY SHAPES FOR InstanceAwardReceipt PropertyGroup START HERE. /////////////////////////////////////////////////////////////
+
+raremat_shapes_monograph:InstanceForm_ex_recieved sh:path <http://example.org/received> ;
+      sh:class <http://example.org/AwardReceipt> ;
+      sh:group raremat_shapes_monograph:InstanceAwardReceiptPropertyGroup ;
+      sh:name "Instance award receipt" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "0"^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor .
       
 
 # ///// PROPERTY SHAPES FOR InstanceNotePropertyGroup START HERE. /////////////////////////////////////////////////////////////
@@ -963,6 +974,14 @@ raremat_shapes_monograph:ItemForm_ex_hasMeasurementGroup sh:path <http://example
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
+      
+# ///// PROPERTY SHAPES FOR ItemOfInstance PropertyGroup START HERE. /////////////////////////////////////////////////////////////      
+
+raremat_shapes_monograph:ItemForm_bf_itemOf sh:path <http://id.loc.gov/ontologies/bibframe/itemOf> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Instance> ;
+      sh:description "Instances that this is an item of" ;
+      sh:name "Item of (instances)" ;
+      sh:group raremat_shapes_monograph:ItemOfInstancePropertyGroup .
       
 # ///// PROPERTY SHAPES FOR ItemAwardReceipt PropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
@@ -1338,7 +1357,7 @@ raremat_shapes_monograph:AwardForm
   sh:property raremat_shapes_monograph:AwardForm_rdfs_label .
 .
 
-raremat_shapes_monograph:AwardForm_rdfs_label sh:path rdf:value ;
+raremat_shapes_monograph:AwardForm_rdfs_label sh:path rdf:label ;
       sh:description "Name to refer to the award" ;
       sh:name "Name of award" ;
       sh:nodeKind sh:Literal .
@@ -1740,7 +1759,7 @@ raremat_shapes_monograph:InstancePartsAccompanimentsPropertyGroup
   rdfs:label "Instance Parts and Accompaniments" ;
   sh:order ""^^xsd:decimal .
 
-raremat_shapes_monograph:ItemPaginationFoliationPropertyGroup
+raremat_shapes_monograph:InstancePaginationFoliationPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Instance Pagination and Foliation" ;
   sh:order ""^^xsd:decimal .
@@ -1750,15 +1769,20 @@ raremat_shapes_monograph:InstanceMeasurementGroupPropertyGroup
   rdfs:label "Measurements" ;
   sh:description "To group measurement information for the resource." ;
   sh:order ""^^xsd:decimal .
+  
+raremat_shapes_monograph:InstanceOfWorkPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Instance of Work" ;
+  sh:order ""^^xsd:decimal .
+  
+raremat_shapes_monograph:InstanceHasItemPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Has item" ;
+  sh:order ""^^xsd:decimal .
 
 raremat_shapes_monograph:InstanceAwardReceiptPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Awards received" ;
-  sh:order ""^^xsd:decimal .
-
-raremat_shapes_monograph:InstanceHasItemPropertyGroup
-  rdf:type sh:PropertyGroup ;
-  rdfs:label "Has item" ;
   sh:order ""^^xsd:decimal .
 
 raremat_shapes_monograph:InstanceNotePropertyGroup
@@ -1802,6 +1826,11 @@ raremat_shapes_monograph:ItemMeasurementGroupPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Measurements" ;
   sh:description "To group measurement information for the resource." ;
+  sh:order ""^^xsd:decimal .
+  
+raremat_shapes_monograph:ItemOfInstancePropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Item of" ;
   sh:order ""^^xsd:decimal .
   
 raremat_shapes_monograph:ItemAwardReceiptPropertyGroup
