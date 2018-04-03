@@ -835,6 +835,12 @@ raremat_shapes_monograph:InstanceForm_bf_instanceOf sh:path <http://id.loc.gov/o
       sh:description "Works that this is an instance of" ;
       sh:name "Instance of (works)" ;
       sh:group raremat_shapes_monograph:InstanceOfWorkPropertyGroup .
+      
+raremat_shapes_monograph:InstanceForm_bf_editionStatement sh:path bf:editionStatement ;
+      sh:name "Edition statement or version of the resource" ;
+      sh:description: "Edition or version of the resource and associated statements of responsibility for the edition; usually transcribed." ;
+      sh:nodeKind sh:Literal ;
+      sh:group raremat_shapes_monograph:InstanceOfWorkPropertyGroup .
 
 
 # ///// PROPERTY SHAPES FOR InstancetoItemPropertyGroup START HERE. /////////////////////////////////////////////////////////////
@@ -1022,7 +1028,14 @@ raremat_shapes_monograph:ItemForm_bf_note sh:path <http://id.loc.gov/ontologies/
 # TODO Decide what Identifier Type are applicable for Monographic Items
 
 raremat_shapes_monograph:ItemForm_bf_identifiedBy sh:path <http://id.loc.gov/ontologies/bibframe/identifiedBy> ;
-      sh:class bf:Identifier ;
+      sh:or (
+          [
+            sh:class <http://id.loc.gov/ontologies/bibframe/ShelfMark> ;
+          ]
+          [
+            sh:class <http://example.org/AccessionNumber> ;
+          ]
+        ) ;
       sh:description "Identifiers for Items" ;
       sh:group raremat_shapes_monograph:ItemIdentifierPropertyGroup ;
       sh:name "Item Identifier" ;
