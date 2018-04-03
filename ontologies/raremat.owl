@@ -44,6 +44,15 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
     
+    <owl:Class rdf:about="http://example.org/AccessionNumber">
+        <rdfs:label xml:lang="en">Accession number</rdfs:label>
+        <skos:definition xml:lang="en">Numeric, alphanumeric, or other identifying codes assigned when an art object, book, or other item enters the collection of a museum, library, or other repository. Such codes are unique within the set of codes, and specifically identify the particular item at hand. The numbers may be marked on the objects or not. </skos:definition>        
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+        <skos:editorialNote xml:lang="en">Deprecate this class when it is defined in BIBFRAME.</skos:editorialNote>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+    
     <owl:Class rdf:about="http://example.org/Activity">
         <rdfs:label xml:lang="en">Activity</rdfs:label>    
         <skos:definition xml:lang="en">An activity or contribution by a single agent that affects or alters the existence or state of a resource.</skos:definition>
