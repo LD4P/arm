@@ -2,6 +2,7 @@
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix core: <http://vivoweb.org/ontology/core#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.org/> .
 @prefix gn: <http://www.geonames.org/ontology/> .
 @prefix lingvo: <http://www.lingvoj.org/ontology#> .
 @prefix madsrdf: <http://www.loc.gov/standards/mads/rdf/v1.rdf#> .
@@ -647,13 +648,6 @@ raremat_shapes_monograph:WorkForm_bf_dataSource sh:path <http://id.loc.gov/ontol
       sh:name "Data source" ;
       sh:nodeKind sh:IRI .
       
-raremat_shapes_monograph:WorkForm_bf_dataSource sh:path <http://id.loc.gov/ontologies/bibframe/dataSource> ;
-      sh:class  ;
-      sh:description "Resource that is a data source to which the described resource is related. It may contain information about other files, printed sources, or collection procedures." ;
-      sh:group raremat_shapes_monograph:WorkToWorkPropertyGroup ;
-      sh:name "Style Period" ;
-      sh:nodeKind sh:IRI .
-      
 
 # ///// PROPERTY SHAPES FOR WorkNotePropertyGroup START HERE. /////////////////////////////////////////////////////////////////////////
 
@@ -763,8 +757,6 @@ raremat_shapes_monograph:InstanceForm_raremat_hasActivity sh:path raremat:hasAct
   sh:group raremat_shapes_monograph:InstanceActivityPropertyGroup ;
   tosh:editWidget swa:NestedObjectEditor ;
   sh:class raremat:Activity .
-  
-http://id.loc.gov/ontologies/bibframe/responsibilityStatement
 
 raremat_shapes_monograph:InstanceForm_bf_responsibilityStatement sh:path bf:responsibilityStatement ;
       sh:name "Responsibility statement" ;
@@ -1510,7 +1502,7 @@ raremat_shapes_monograph:InstanceTitleForm_bf_partName sh:path bf:partName ;
       sh:name "Part name" .
       
 raremat_shapes_monograph:InstanceTitleForm_ex_origin sh:path <http://example.org/origin> ;
-      sh:in ( <http://example.org/addedTitlePage> <http://example.org/binder> <http://example.org/caption> <http://example.org/container> <http://example.org/cover> <http://example.org/margin> http://example.org/spine> <http://example.org/supplied> <http://example.org/transcribed> <http://example.org/translated> ) ;
+      sh:in ( <http://example.org/addedTitlePage> <http://example.org/binder> <http://example.org/caption> <http://example.org/container> <http://example.org/cover> <http://example.org/margin> <http://example.org/spine> <http://example.org/supplied> <http://example.org/transcribed> <http://example.org/translated> ) ;
       sh:description "The place from which this title originates, such as spine, cover, container, etc." ;
       sh:order "6"^^xsd:decimal ;
       sh:nodeKind sh:IRI ;
@@ -1610,7 +1602,7 @@ raremat_shapes_monograph:ItemTitleForm_bf_partName sh:path bf:partName ;
       sh:name "Part name" .
       
 raremat_shapes_monograph:ItemTitleForm_ex_origin sh:path <http://example.org/origin> ;
-      sh:in ( <http://example.org/addedTitlePage> <http://example.org/binder> <http://example.org/caption> <http://example.org/container> <http://example.org/cover> <http://example.org/margin> http://example.org/spine> <http://example.org/supplied> <http://example.org/transcribed> <http://example.org/translated> ) ;
+      sh:in ( <http://example.org/addedTitlePage> <http://example.org/binder> <http://example.org/caption> <http://example.org/container> <http://example.org/cover> <http://example.org/margin> <http://example.org/spine> <http://example.org/supplied> <http://example.org/transcribed> <http://example.org/translated> ) ;
       sh:description "The place from which this title originates, such as spine, cover, container, etc." ;
       sh:order "6"^^xsd:decimal ;
       sh:nodeKind sh:IRI ;
