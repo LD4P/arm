@@ -1361,128 +1361,316 @@ raremat_shapes_monograph:WorkTitleForm
   rdfs:subClassOf rdfs:Resource ;
   sh:targetClass <http://id.loc.gov/ontologies/bibframe/Title> ;
   sh:property raremat_shapes_monograph:WorkTitleForm_rdf_type ;
+  sh:property raremat_shapes_monograph:WorkTitleForm_rdf_value ;
+  sh:property raremat_shapes_monograph:WorkTitleForm_bf_mainTitle ;
+  sh:property raremat_shapes_monograph:WorkTitleForm_bf_subtitle ;
+  sh:property raremat_shapes_monograph:WorkTitleForm_bf_partNumber ;
+  sh:property raremat_shapes_monograph:WorkTitleForm_bf_partName ;
+  sh:property raremat_shapes_monograph:WorkTitleForm_ex_origin ;
+  sh:property raremat_shapes_monograph:WorkTitleForm_bf_status ;
+  sh:property raremat_shapes_monograph:WorkTitleForm_ex_titleOf ;
+  sh:property raremat_shapes_monograph:WorkTitleForm_ex_isPreferredTitleOf ;
+  sh:property raremat_shapes_monograph:WorkTitleForm_bf_note ;
   .
   
 raremat_shapes_monograph:WorkTitleForm_rdf_type sh:path rdf:type ;
       sh:description "Type of Title" ;
       sh:maxCount "1" ;
-      sh:nodeKind sh:Literal ;
-      sh:order "1"^^xsd:decimal .[
-      sh:path rdf:type ;
+      sh:order "0"^^xsd:decimal ;
       sh:name "Type of Title" ;
-      sh:in ( <http://id.loc.gov/ontologies/bibframe/Title> <http://id.loc.gov/ontologies/bibframe/ParallelTitle> <http://id.loc.gov/ontologies/bibframe/AbbreviatedTitle> <http://id.loc.gov/ontologies/bibframe/CollectiveTitle> <http://id.loc.gov/ontologies/bibframe/KeyTitle> ) ;
-    ] ;
-  sh:property [
-      sh:path rdf:value ;
-      sh:description "Textual value of the title" ;
-      sh:name "Title value" ;
+      sh:in ( <http://id.loc.gov/ontologies/bibframe/Title> <http://id.loc.gov/ontologies/bibframe/ParallelTitle> <http://id.loc.gov/ontologies/bibframe/AbbreviatedTitle> <http://id.loc.gov/ontologies/bibframe/CollectiveTitle> <http://id.loc.gov/ontologies/bibframe/KeyTitle> ) .
+
+raremat_shapes_monograph:WorkTitleForm_rdf_value sh:path rdf:value ;
+      sh:description "Literal value for the title" ;
+      sh:minCount "1" ;
+      sh:maxCount "1" ;
+      sh:order "1"^^xsd:decimal ;
       sh:nodeKind sh:Literal ;
-    ] ;
-  sh:property [
-      sh:path <http://purl.org/dc/terms/hasPart> ;
-      sh:class bib:TitleElement ;
-      tosh:editWidget swa:NestedObjectEditor ;
-      sh:description "Has title part" ;
-      sh:name "has part" ;
+      sh:name "Title value" .
+      
+raremat_shapes_monograph:WorkTitleForm_bf_mainTitle sh:path bf:mainTitle ;
+      sh:description "Literal value for the main title" ;
+      sh:maxCount "1" ;
+      sh:order "2"^^xsd:decimal ;
+      sh:nodeKind sh:Literal ;
+      sh:name "Main title" .
+      
+raremat_shapes_monograph:WorkTitleForm_bf_subtitle sh:path bf:subtitle ;
+      sh:description "Literal value for the subtitle title" ;
+      sh:maxCount "1" ;
+      sh:order "3"^^xsd:decimal ;
+      sh:nodeKind sh:Literal ;
+      sh:name "Subtitle" .
+      
+raremat_shapes_monograph:WorkTitleForm_bf_partNumber sh:path bf:partNumber ;
+      sh:description "Number of part/section of a work" ;
+      sh:maxCount "1" ;
+      sh:order "4"^^xsd:decimal ;
+      sh:nodeKind sh:Literal ;
+      sh:name "Part number" .
+
+raremat_shapes_monograph:WorkTitleForm_bf_partName sh:path bf:partName ;
+      sh:description "Name of part/section of a work" ;
+      sh:maxCount "1" ;
+      sh:order "5"^^xsd:decimal ;
+      sh:nodeKind sh:Literal ;
+      sh:name "Part name" .
+      
+raremat_shapes_monograph:WorkTitleForm_bf_status sh:path bf:Status ;
+      sh:in ( <http://example.org/datasets/cancelled> <http://example.org/datasets/current> <http://example.org/datasets/deprecated> <http://example.org/datasets/invalid> ) ;
+      sh:description "The place from which this title originates, such as spine, cover, container, etc." ;
+      sh:order "6"^^xsd:decimal ;
       sh:nodeKind sh:IRI ;
-    ] ;
-  sh:property [
-      sh:path <http://example.org/titleOf> ;
+      sh:name "Title origin" .
+      
+raremat_shapes_monograph:WorkTitleForm_ex_titleOf sh:path <http://example.org/titleOf> ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Text> ;
       sh:description "Links this Title to Text Work" ;
+      sh:order "7"^^xsd:decimal ;
       sh:nodeKind sh:IRI ;
-    ] ;
+      sh:name "Title of" .
+
+raremat_shapes_monograph:WorkTitleForm_ex_isPreferredTitleOf sh:path <http://example.org/isPreferredTitleOf> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Text> ;
+      sh:description "Links this preferred title to text work" ;
+      sh:order "8"^^xsd:decimal ;
+      sh:nodeKind sh:IRI ;
+      sh:name "Preferred title of text work (if applicable)" .
     
-.
+raremat_shapes_monograph:WorkTitleForm_bf_note sh:path bf:note ;
+      sh:in ( <http://id.loc.gov/ontologies/bibframe/Note> <http://example.org/DescriptiveNote> <http://example.org/CaptionNote> <http://example.org/InaccuracyNote> ) ;
+      sh:description "Note about this title" ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:nodeKind sh:IRI ;
+      sh:order "9"^^xsd:decimal .
 
-# Do we want to add rdf:value to Title Form Shapes, or concatenate TitleElements through automation?
 
 # /////// Instance Title FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
-bibliotek-o_shapes_audio:InstanceTitleForm
+raremat_shapes_monograph:InstanceTitleForm
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
-  rdfs:label "Instance title form" ;
+  rdfs:label "Title form" ;
   rdfs:subClassOf rdfs:Resource ;
   sh:targetClass <http://id.loc.gov/ontologies/bibframe/Title> ;
-  sh:property [
-      sh:path rdf:type ;
+  sh:property raremat_shapes_monograph:InstanceTitleForm_rdf_type ;
+  sh:property raremat_shapes_monograph:InstanceTitleForm_rdf_value ;
+  sh:property raremat_shapes_monograph:InstanceTitleForm_bf_mainTitle ;
+  sh:property raremat_shapes_monograph:InstanceTitleForm_bf_subtitle ;
+  sh:property raremat_shapes_monograph:InstanceTitleForm_bf_partNumber ;
+  sh:property raremat_shapes_monograph:InstanceTitleForm_bf_partName ;
+  sh:property raremat_shapes_monograph:InstanceTitleForm_ex_origin ;
+  sh:property raremat_shapes_monograph:InstanceTitleForm_bf_status ;
+  sh:property raremat_shapes_monograph:InstanceTitleForm_ex_titleOf ;
+  sh:property raremat_shapes_monograph:InstanceTitleForm_ex_isPreferredTitleOf ;
+  sh:property raremat_shapes_monograph:InstanceTitleForm_bf_note ;
+  .
+  
+raremat_shapes_monograph:InstanceTitleForm_rdf_type sh:path rdf:type ;
+      sh:description "Type of Title" ;
+      sh:maxCount "1" ;
+      sh:order "0"^^xsd:decimal ;
       sh:name "Type of Title" ;
-      sh:in ( <http://bibliotek-o.org/ontology/AbbreviatedTitle> <http://bibliotek-o.org/ontology/ConciseTitle> <http://bibliotek-o.org/ontology/DistinctiveTitle> <http://bibliotek-o.org/ontology/KeyTitle> <http://bibliotek-o.org/ontology/ParallelTitle> ) ;
-    ] ;
-  sh:property [
-      sh:path rdf:value ;
-      sh:description "Textual value of the title" ;
-      sh:name "Title" ;
+      sh:in ( <http://id.loc.gov/ontologies/bibframe/Title> <http://id.loc.gov/ontologies/bibframe/ParallelTitle> <http://id.loc.gov/ontologies/bibframe/AbbreviatedTitle> <http://id.loc.gov/ontologies/bibframe/CollectiveTitle> <http://id.loc.gov/ontologies/bibframe/KeyTitle> ) .
+
+raremat_shapes_monograph:InstanceTitleForm_rdf_value sh:path rdf:value ;
+      sh:description "Literal value for the title" ;
+      sh:minCount "1" ;
+      sh:maxCount "1" ;
+      sh:order "1"^^xsd:decimal ;
       sh:nodeKind sh:Literal ;
-    ] ;
-  sh:property [
-      sh:path <http://bibliotek-o.org/ontology/hasOrigin> ;
-      sh:class <http://bibliotek-o.org/1.1/ontology/Origin> ;
-      sh:description "Describe the origin of the title, for example spine or cover" ;
-      sh:name "Title origin" ;
+      sh:name "Title value" .
+      
+raremat_shapes_monograph:InstanceTitleForm_bf_mainTitle sh:path bf:mainTitle ;
+      sh:description "Literal value for the main title" ;
+      sh:maxCount "1" ;
+      sh:order "2"^^xsd:decimal ;
+      sh:nodeKind sh:Literal ;
+      sh:name "Main title" .
+      
+raremat_shapes_monograph:InstanceTitleForm_bf_subtitle sh:path bf:subtitle ;
+      sh:description "Literal value for the subtitle title" ;
+      sh:maxCount "1" ;
+      sh:order "3"^^xsd:decimal ;
+      sh:nodeKind sh:Literal ;
+      sh:name "Subtitle" .
+      
+raremat_shapes_monograph:InstanceTitleForm_bf_partNumber sh:path bf:partNumber ;
+      sh:description "Number of part/section of a work" ;
+      sh:maxCount "1" ;
+      sh:order "4"^^xsd:decimal ;
+      sh:nodeKind sh:Literal ;
+      sh:name "Part number" .
+
+raremat_shapes_monograph:InstanceTitleForm_bf_partName sh:path bf:partName ;
+      sh:description "Name of part/section of a work" ;
+      sh:maxCount "1" ;
+      sh:order "5"^^xsd:decimal ;
+      sh:nodeKind sh:Literal ;
+      sh:name "Part name" .
+      
+raremat_shapes_monograph:InstanceTitleForm_ex_origin sh:path <http://example.org/origin> ;
+      sh:in ( <http://example.org/addedTitlePage> <http://example.org/binder> <http://example.org/caption> <http://example.org/container> <http://example.org/cover> <http://example.org/margin> http://example.org/spine> <http://example.org/supplied> <http://example.org/transcribed> <http://example.org/translated> ) ;
+      sh:description "The place from which this title originates, such as spine, cover, container, etc." ;
+      sh:order "6"^^xsd:decimal ;
       sh:nodeKind sh:IRI ;
-    ] ;
-  sh:property [
-      sh:path <http://purl.org/dc/terms/hasPart> ;
-      sh:class bib:TitleElement ;
-      tosh:editWidget swa:NestedObjectEditor ;
-      sh:description "Has title part" ;
-      sh:name "has part" ;
+      sh:name "Title origin" .
+      
+raremat_shapes_monograph:InstanceTitleForm_bf_status sh:path bf:Status ;
+      sh:in ( <http://example.org/datasets/cancelled> <http://example.org/datasets/current> <http://example.org/datasets/deprecated> <http://example.org/datasets/invalid> ) ;
+      sh:description "The place from which this title originates, such as spine, cover, container, etc." ;
+      sh:order "7"^^xsd:decimal ;
       sh:nodeKind sh:IRI ;
-    ] ;
-    sh:property [
-      sh:path <http://bibliotek-o.org/ontology/isTitleOf> ;
+      sh:name "Title origin" .
+      
+raremat_shapes_monograph:InstanceTitleForm_ex_titleOf sh:path <http://example.org/titleOf> ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Instance> ;
-      sh:description "Links this Title to an Instance" ;
+      sh:description "Links this title to an instance" ;
+      sh:order "8"^^xsd:decimal ;
       sh:nodeKind sh:IRI ;
-    ] ;
-.
+      sh:name "Title of" .
 
+raremat_shapes_monograph:InstanceTitleForm_ex_isPreferredTitleOf sh:path <http://example.org/isPreferredTitleOf> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Instance> ;
+      sh:description "Links this preferred title to an instance" ;
+      sh:order "9"^^xsd:decimal ;
+      sh:nodeKind sh:IRI ;
+      sh:name "Preferred title of text work (if applicable)" .
+    
+raremat_shapes_monograph:InstanceTitleForm_bf_note sh:path bf:note ;
+      sh:in ( <http://id.loc.gov/ontologies/bibframe/Note> <http://example.org/DescriptiveNote> <http://example.org/CaptionNote> <http://example.org/InaccuracyNote> ) ;
+      sh:description "Note about this title" ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:nodeKind sh:IRI ;
+      sh:order "10"^^xsd:decimal .
+      
+      
+# /////// Item Title FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
-# /////// Instance Title FORM BEGINS HERE ////////////////////////////////////////////////////////////
-
-bibliotek-o_shapes_audio:ItemTitleForm
+raremat_shapes_monograph:ItemTitleForm
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
-  rdfs:label "Item title form" ;
+  rdfs:label "Title form" ;
   rdfs:subClassOf rdfs:Resource ;
   sh:targetClass <http://id.loc.gov/ontologies/bibframe/Title> ;
-  sh:property [
-      sh:path rdf:type ;
+  sh:property raremat_shapes_monograph:ItemTitleForm_rdf_type ;
+  sh:property raremat_shapes_monograph:ItemTitleForm_rdf_value ;
+  sh:property raremat_shapes_monograph:ItemTitleForm_bf_mainTitle ;
+  sh:property raremat_shapes_monograph:ItemTitleForm_bf_subtitle ;
+  sh:property raremat_shapes_monograph:ItemTitleForm_bf_partNumber ;
+  sh:property raremat_shapes_monograph:ItemTitleForm_bf_partName ;
+  sh:property raremat_shapes_monograph:ItemTitleForm_ex_origin ;
+  sh:property raremat_shapes_monograph:ItemTitleForm_bf_status ;
+  sh:property raremat_shapes_monograph:ItemTitleForm_ex_titleOf ;
+  sh:property raremat_shapes_monograph:ItemTitleForm_ex_isPreferredTitleOf ;
+  sh:property raremat_shapes_monograph:ItemTitleForm_bf_note ;
+  .
+  
+raremat_shapes_monograph:ItemTitleForm_rdf_type sh:path rdf:type ;
+      sh:description "Type of Title" ;
+      sh:maxCount "1" ;
+      sh:order "0"^^xsd:decimal ;
       sh:name "Type of Title" ;
-      sh:in ( <http://bibliotek-o.org/ontology/AbbreviatedTitle> <http://bibliotek-o.org/ontology/ConciseTitle> <http://bibliotek-o.org/ontology/DistinctiveTitle> <http://bibliotek-o.org/ontology/KeyTitle> <http://bibliotek-o.org/ontology/ParallelTitle> ) ;
-    ] ;
-  sh:property [
-      sh:path rdf:value ;
-      sh:description "Textual value of the title" ;
-      sh:name "Title" ;
-      sh:nodeKind sh:Literal ;ertyGroup ;
+      sh:in ( <http://id.loc.gov/ontologies/bibframe/Title> <http://id.loc.gov/ontologies/bibframe/ParallelTitle> <http://id.loc.gov/ontologies/bibframe/AbbreviatedTitle> <http://id.loc.gov/ontologies/bibframe/CollectiveTitle> <http://id.loc.gov/ontologies/bibframe/KeyTitle> ) .
+
+raremat_shapes_monograph:ItemTitleForm_rdf_value sh:path rdf:value ;
+      sh:description "Literal value for the title" ;
+      sh:minCount "1" ;
+      sh:maxCount "1" ;
+      sh:order "1"^^xsd:decimal ;
       sh:nodeKind sh:Literal ;
-    ] ;
-  sh:property [
-      sh:path <http://bibliotek-o.org/ontology/hasOrigin> ;
-      sh:class <http://bibliotek-o.org/1.1/ontology/Origin> ;
-      sh:description "Describe the origin of the title, for example spine or cover" ;
-      sh:name "Title origin" ;
+      sh:name "Title value" .
+      
+raremat_shapes_monograph:ItemTitleForm_bf_mainTitle sh:path bf:mainTitle ;
+      sh:description "Literal value for the main title" ;
+      sh:maxCount "1" ;
+      sh:order "2"^^xsd:decimal ;
+      sh:nodeKind sh:Literal ;
+      sh:name "Main title" .
+      
+raremat_shapes_monograph:ItemTitleForm_bf_subtitle sh:path bf:subtitle ;
+      sh:description "Literal value for the subtitle title" ;
+      sh:maxCount "1" ;
+      sh:order "3"^^xsd:decimal ;
+      sh:nodeKind sh:Literal ;
+      sh:name "Subtitle" .
+      
+raremat_shapes_monograph:ItemTitleForm_bf_partNumber sh:path bf:partNumber ;
+      sh:description "Number of part/section of a work" ;
+      sh:maxCount "1" ;
+      sh:order "4"^^xsd:decimal ;
+      sh:nodeKind sh:Literal ;
+      sh:name "Part number" .
+
+raremat_shapes_monograph:ItemTitleForm_bf_partName sh:path bf:partName ;
+      sh:description "Name of part/section of a work" ;
+      sh:maxCount "1" ;
+      sh:order "5"^^xsd:decimal ;
+      sh:nodeKind sh:Literal ;
+      sh:name "Part name" .
+      
+raremat_shapes_monograph:ItemTitleForm_ex_origin sh:path <http://example.org/origin> ;
+      sh:in ( <http://example.org/addedTitlePage> <http://example.org/binder> <http://example.org/caption> <http://example.org/container> <http://example.org/cover> <http://example.org/margin> http://example.org/spine> <http://example.org/supplied> <http://example.org/transcribed> <http://example.org/translated> ) ;
+      sh:description "The place from which this title originates, such as spine, cover, container, etc." ;
+      sh:order "6"^^xsd:decimal ;
       sh:nodeKind sh:IRI ;
-    ] ;
-  sh:property [
-      sh:path <http://purl.org/dc/terms/hasPart> ;
-      sh:class bib:TitleElement ;
-      tosh:editWidget swa:NestedObjectEditor ;
-      sh:description "Has title part" ;
-      sh:name "has part" ;
+      sh:name "Title origin" .
+      
+raremat_shapes_monograph:ItemTitleForm_bf_status sh:path bf:Status ;
+      sh:in ( <http://example.org/datasets/cancelled> <http://example.org/datasets/current> <http://example.org/datasets/deprecated> <http://example.org/datasets/invalid> ) ;
+      sh:description "The place from which this title originates, such as spine, cover, container, etc." ;
+      sh:order "7"^^xsd:decimal ;
       sh:nodeKind sh:IRI ;
-    ] ;
-  sh:property [
-      sh:path <http://bibliotek-o.org/ontology/isTitleOf> ;
+      sh:name "Title origin" .
+      
+raremat_shapes_monograph:ItemTitleForm_ex_titleOf sh:path <http://example.org/titleOf> ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Item> ;
-      sh:description "Links this Title to an Item" ;
+      sh:description "Links this Title to Text Work" ;
+      sh:order "8"^^xsd:decimal ;
       sh:nodeKind sh:IRI ;
-    ] ;
-.
-# TODO a buch of embedded forms, e.g. Titles, Activities, Identifiers
+      sh:name "Title of" .
+
+raremat_shapes_monograph:ItemTitleForm_ex_isPreferredTitleOf sh:path <http://example.org/isPreferredTitleOf> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Item> ;
+      sh:description "Links this preferred title to text work" ;
+      sh:order "9"^^xsd:decimal ;
+      sh:nodeKind sh:IRI ;
+      sh:name "Preferred title of text work (if applicable)" .
+    
+raremat_shapes_monograph:ItemTitleForm_bf_note sh:path bf:note ;
+      sh:in ( <http://id.loc.gov/ontologies/bibframe/Note> <http://example.org/DescriptiveNote> <http://example.org/CaptionNote> <http://example.org/InaccuracyNote> ) ;
+      sh:description "Note about this title" ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:nodeKind sh:IRI ;
+      sh:order "10"^^xsd:decimal .
+
+# TODO a buch of embedded forms, e.g. Activities, Identifiers
+
+# /////// Title Note FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+raremat_shapes_monograph:TitleNoteForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Title form" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass <http://id.loc.gov/ontologies/bibframe/Title> ;
+  sh:property raremat_shapes_monograph:TitleNoteForm_rdf_type ;
+  sh:property raremat_shapes_monograph:TitleNoteForm_rdf_value ;
+  .
+
+raremat_shapes_monograph:TitleNoteForm_rdf_type sh:path rdf:type ;
+      sh:description "Type of Title" ;
+      sh:order "0"^^xsd:decimal ;
+      sh:in ( <http://id.loc.gov/ontologies/bibframe/Note> <http://example.org/DescriptiveNote> <http://example.org/CaptionNote> <http://example.org/InaccuracyNote> ) ;
+      sh:name "Type of Title" .
+
+raremat_shapes_monograph:TitleNoteForm_rdf_value sh:path rdf:value ;
+      sh:description "Literal value for the title" ;
+      sh:minCount "1" ;
+      sh:maxCount "1" ;
+      sh:order "1"^^xsd:decimal ;
+      sh:nodeKind sh:Literal ;
+      sh:name "Title note value" .
 
 
 # ///// PROPERTY GROUP SECTION /////////////////////////////////////////////////////////////
