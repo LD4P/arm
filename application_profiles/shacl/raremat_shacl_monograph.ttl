@@ -39,6 +39,7 @@ raremat_shapes_monograph:WorkForm
   rdfs:label "Monographic Text" ;
   rdfs:subClassOf rdfs:Resource ;
   sh:targetClass bf:Text ;
+  sh:property raremat_shapes_monograph:WorkForm_ex_hasPreferredTitle ;
   sh:property raremat_shapes_monograph:WorkForm_bf_title ;
   sh:property raremat_shapes_monograph:WorkForm_bf_subject ;
   sh:property raremat_shapes_monograph:WorkForm_bf_genreForm ;
@@ -121,17 +122,23 @@ raremat_shapes_monograph:WorkForm
 
 # ///// PROPERTY SHAPES FOR TitlePropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
-
-# TODO Review. The following PropertyShape is subject to change depending on whether we follow BIBFRAME or bibliotek-o/ArtFrame. Going to stop work on this until a decision is made.
-
-raremat_shapes_monograph:WorkForm_bf_title sh:path <http://id.loc.gov/ontologies/bibframe/title> ;
+raremat_shapes_monograph:WorkForm_ex_hasPreferredTitle sh:path <http://example.org/hasPreferredTitle> ;
+  sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
+  tosh:editWidget swa:NestedObjectEditor ;
+  sh:description "Record PreferredTitles here; there can be only one preferred title per language." ;
+  sh:group raremat_shapes_monograph:WorkTitlePropertyGroup ;
+  sh:name "Preferred title" ;
+  sh:nodeKind sh:IRI ;
+  sh:order "0"^^xsd:decimal .
+  
+raremat_shapes_monograph:WorkForm_bf_title sh:path bf:title ;
   sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
   tosh:editWidget swa:NestedObjectEditor ;
   sh:description "Record non-PreferredTitles here. Use Preferred Title to capture a preferred title." ;
   sh:group raremat_shapes_monograph:WorkTitlePropertyGroup ;
   sh:name "Other title" ;
   sh:nodeKind sh:IRI ;
-  sh:order "0"^^xsd:decimal .
+  sh:order "1"^^xsd:decimal .
 
 
 # ///// PROPERTY SHAPES FOR WorkActivityPropertyGroup START HERE. /////////////////////////////////////////////////////////////
@@ -702,6 +709,7 @@ raremat_shapes_monograph:InstanceForm rdf:type rdfs:Class ;
   rdfs:label "Instance of Monographic Text" ;
   rdfs:subClassOf rdfs:Resource ;
   sh:targetClass bf:Instance ;
+  sh:property raremat_shapes_monograph:InstanceForm_ex_hasPreferredTitle ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_title ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_carrier ;
   sh:property raremat_shapes_monograph:InstanceForm_raremat_hasActivity ;
@@ -717,14 +725,23 @@ raremat_shapes_monograph:InstanceForm rdf:type rdfs:Class ;
 
 # TODO Review. The following PropertyShape is subject to change depending on whether we follow BIBFRAME or bibliotek-o/ArtFrame. Going to stop work on this until a decision is made.
 
-raremat_shapes_monograph:InstanceForm_bf_title sh:path <http://id.loc.gov/ontologies/bibframe/title> ;
+raremat_shapes_monograph:InstanceForm_ex_hasPreferredTitle sh:path <http://example.org/hasPreferredTitle> ;
+  sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
+  tosh:editWidget swa:NestedObjectEditor ;
+  sh:description "Record PreferredTitles here; there can be only one preferred title per language." ;
+  sh:group raremat_shapes_monograph:InstanceTitlePropertyGroup ;
+  sh:name "Preferred title" ;
+  sh:nodeKind sh:IRI ;
+  sh:order "0"^^xsd:decimal .
+  
+raremat_shapes_monograph:InstanceForm_bf_title sh:path bf:title ;
   sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
   tosh:editWidget swa:NestedObjectEditor ;
   sh:description "Record non-PreferredTitles here. Use Preferred Title to capture a preferred title." ;
   sh:group raremat_shapes_monograph:InstanceTitlePropertyGroup ;
   sh:name "Other title" ;
   sh:nodeKind sh:IRI ;
-  sh:order "0"^^xsd:decimal .
+  sh:order "1"^^xsd:decimal .
 
 raremat_shapes_monograph:InstanceForm_bf_carrier sh:path <http://id.loc.gov/ontologies/bibframe/carrier> ;
   sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
@@ -882,6 +899,7 @@ raremat_shapes_monograph:ItemForm rdf:type rdfs:Class ;
   rdfs:label "Item of Monographic Text" ;
   rdfs:subClassOf rdfs:Resource ;
   sh:targetClass bf:Item ;
+  sh:property raremat_shapes_monograph:ItemForm_ex_hasPreferredTitle ;
   sh:property raremat_shapes_monograph:ItemForm_bf_title ;
   sh:property raremat_shapes_monograph:ItemForm_raremat_hasActivity ;
   sh:property raremat_shapes_monograph:ItemForm_bf_hasPart ;
@@ -891,15 +909,23 @@ raremat_shapes_monograph:ItemForm rdf:type rdfs:Class ;
   sh:property raremat_shapes_monograph:ItemForm_bf_note ;
   sh:property raremat_shapes_monograph:ItemForm_bf_identifiedBy .
 
-
-raremat_shapes_monograph:ItemForm_bf_title sh:path <http://id.loc.gov/ontologies/bibframe/title> ;
+raremat_shapes_monograph:ItemForm_ex_hasPreferredTitle sh:path <http://example.org/hasPreferredTitle> ;
   sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
   tosh:editWidget swa:NestedObjectEditor ;
-  sh:description "Item Title." ;
+  sh:description "Record PreferredTitles here; there can be only one preferred title per language." ;
   sh:group raremat_shapes_monograph:ItemTitlePropertyGroup ;
-  sh:name "Item title" ;
+  sh:name "Preferred title" ;
   sh:nodeKind sh:IRI ;
   sh:order "0"^^xsd:decimal .
+  
+raremat_shapes_monograph:ItemForm_bf_title sh:path bf:title ;
+  sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
+  tosh:editWidget swa:NestedObjectEditor ;
+  sh:description "Record non-PreferredTitles here. Use Preferred Title to capture a preferred title." ;
+  sh:group raremat_shapes_monograph:ItemTitlePropertyGroup ;
+  sh:name "Other title" ;
+  sh:nodeKind sh:IRI ;
+  sh:order "1"^^xsd:decimal .
 
   
 # TODO Property groups for related things, e.g. bf:itemOf, Boundwiths, Bibliographic citations
@@ -1324,8 +1350,138 @@ raremat_shapes_monograph:AwardForm_rdfs_label sh:path rdf:value ;
       sh:description "Name to refer to the award" ;
       sh:name "Name of award" ;
       sh:nodeKind sh:Literal .
+      
+
+# /////// Work Title FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+raremat_shapes_monograph:WorkTitleForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Title form" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass <http://id.loc.gov/ontologies/bibframe/Title> ;
+  sh:property raremat_shapes_monograph:WorkTitleForm_rdf_type ;
+  .
+  
+raremat_shapes_monograph:WorkTitleForm_rdf_type sh:path rdf:type ;
+      sh:description "Type of Title" ;
+      sh:maxCount "1" ;
+      sh:nodeKind sh:Literal ;
+      sh:order "1"^^xsd:decimal .[
+      sh:path rdf:type ;
+      sh:name "Type of Title" ;
+      sh:in ( <http://id.loc.gov/ontologies/bibframe/Title> <http://id.loc.gov/ontologies/bibframe/ParallelTitle> <http://id.loc.gov/ontologies/bibframe/AbbreviatedTitle> <http://id.loc.gov/ontologies/bibframe/CollectiveTitle> <http://id.loc.gov/ontologies/bibframe/KeyTitle> ) ;
+    ] ;
+  sh:property [
+      sh:path rdf:value ;
+      sh:description "Textual value of the title" ;
+      sh:name "Title value" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      sh:path <http://purl.org/dc/terms/hasPart> ;
+      sh:class bib:TitleElement ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:description "Has title part" ;
+      sh:name "has part" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://example.org/titleOf> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Text> ;
+      sh:description "Links this Title to Text Work" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+    
+.
+
+# Do we want to add rdf:value to Title Form Shapes, or concatenate TitleElements through automation?
+
+# /////// Instance Title FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+bibliotek-o_shapes_audio:InstanceTitleForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Instance title form" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass <http://id.loc.gov/ontologies/bibframe/Title> ;
+  sh:property [
+      sh:path rdf:type ;
+      sh:name "Type of Title" ;
+      sh:in ( <http://bibliotek-o.org/ontology/AbbreviatedTitle> <http://bibliotek-o.org/ontology/ConciseTitle> <http://bibliotek-o.org/ontology/DistinctiveTitle> <http://bibliotek-o.org/ontology/KeyTitle> <http://bibliotek-o.org/ontology/ParallelTitle> ) ;
+    ] ;
+  sh:property [
+      sh:path rdf:value ;
+      sh:description "Textual value of the title" ;
+      sh:name "Title" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      sh:path <http://bibliotek-o.org/ontology/hasOrigin> ;
+      sh:class <http://bibliotek-o.org/1.1/ontology/Origin> ;
+      sh:description "Describe the origin of the title, for example spine or cover" ;
+      sh:name "Title origin" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://purl.org/dc/terms/hasPart> ;
+      sh:class bib:TitleElement ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:description "Has title part" ;
+      sh:name "has part" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+    sh:property [
+      sh:path <http://bibliotek-o.org/ontology/isTitleOf> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Instance> ;
+      sh:description "Links this Title to an Instance" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+.
 
 
+# /////// Instance Title FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+bibliotek-o_shapes_audio:ItemTitleForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Item title form" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass <http://id.loc.gov/ontologies/bibframe/Title> ;
+  sh:property [
+      sh:path rdf:type ;
+      sh:name "Type of Title" ;
+      sh:in ( <http://bibliotek-o.org/ontology/AbbreviatedTitle> <http://bibliotek-o.org/ontology/ConciseTitle> <http://bibliotek-o.org/ontology/DistinctiveTitle> <http://bibliotek-o.org/ontology/KeyTitle> <http://bibliotek-o.org/ontology/ParallelTitle> ) ;
+    ] ;
+  sh:property [
+      sh:path rdf:value ;
+      sh:description "Textual value of the title" ;
+      sh:name "Title" ;
+      sh:nodeKind sh:Literal ;ertyGroup ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      sh:path <http://bibliotek-o.org/ontology/hasOrigin> ;
+      sh:class <http://bibliotek-o.org/1.1/ontology/Origin> ;
+      sh:description "Describe the origin of the title, for example spine or cover" ;
+      sh:name "Title origin" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://purl.org/dc/terms/hasPart> ;
+      sh:class bib:TitleElement ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:description "Has title part" ;
+      sh:name "has part" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path <http://bibliotek-o.org/ontology/isTitleOf> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Item> ;
+      sh:description "Links this Title to an Item" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+.
 # TODO a buch of embedded forms, e.g. Titles, Activities, Identifiers
 
 
