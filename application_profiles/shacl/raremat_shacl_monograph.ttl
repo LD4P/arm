@@ -4,6 +4,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ex: <http://example.org/> .
 @prefix gn: <http://www.geonames.org/ontology/> .
+@prefix gvp: <http://www.geonames.org/ontology/> .
 @prefix lingvo: <http://www.lingvoj.org/ontology#> .
 @prefix madsrdf: <http://www.loc.gov/standards/mads/rdf/v1.rdf#> .
 @prefix measurement: <http://measurement.bibliotek-o.org/> .
@@ -20,8 +21,6 @@
 @prefix tosh: <http://topbraid.org/tosh#> .
 @prefix vivo: <http://vivoweb.org/ontology/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-# WARNING!!!!!!!!!!!!!!! Very drafty version of SHACL for RareMat application profile. A lot of this currently reflects a cut and paste of an audio focused SHACL file. This is unsafe to use as long as this warning is here.
 
 # TODO Review namespaces
 
@@ -714,6 +713,10 @@ raremat_shapes_monograph:InstanceForm rdf:type rdfs:Class ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_accompanies ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_extent ;
   sh:property raremat_shapes_monograph:InstanceForm_ex_hasMeasurementGroup ;
+  sh:property raremat_shapes_monograph:InstanceForm_ex_hasSignatureStatement ;
+  sh:property raremat_shapes_monograph:InstanceForm_ex_hasMaterial ;
+  sh:property raremat_shapes_monograph:InstanceForm_ex_hasBaseMaterial ;
+  sh:property raremat_shapes_monograph:InstanceForm_ex_hasAppliedMaterial ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_note ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_identifiedBy .
 
@@ -796,24 +799,24 @@ raremat_shapes_monograph:InstanceForm_bf_accompanies sh:path <http://id.loc.gov/
       sh:description "Resource that adds to or is issued with the described resource." ;
       sh:name "Accompanies" ;
       sh:group raremat_shapes_monograph:InstancePartsAccompanimentsPropertyGroup .
-      
+ 
+ 
+  
+# ///// PROPERTY SHAPES FOR InstancePhysicalDescriptionPropertyGroup START HERE. /////////////////////////////////////////////////////////////
+    
       
 raremat_shapes_monograph:InstanceForm_bf_extent sh:path bf:extent ;
       sh:name "Instance pagination and foliation" ;
       sh:order "0"^^xsd:decimal ;
       sh:description "Sequential numbering of individual leaves, plates, pages (numbering on both sides), or columns (used as a sequence of numbering) of a resource." ;
       sh:class ex:PaginationFoliation ;
-      sh:group raremat_shapes_monograph:ItemPaginationFoliationPropertyGroup ;
+      sh:group raremat_shapes_monograph:InstancePhysicalDescriptionPropertyGroup ;
       tosh:editWidget swa:NestedObjectEditor .
-
-
-# TODO Physical description property group once decided, measurement property group may be folded into the physical description property group
      
-# ///// PROPERTY SHAPES FOR InstanceMeasurementPropertyGroup START HERE. /////////////////////////////////////////////////////////////
-
+     
 raremat_shapes_monograph:InstanceForm_ex_hasMeasurementGroup sh:path <http://example.org/hasMeasurementGroup> ;
       sh:class <http://example.org/MeasurementGroup> ;
-      sh:group raremat_shapes_monograph:InstanceMeasurementGroupPropertyGroup ;
+      sh:group raremat_shapes_monograph:InstancePhysicalDecriptionPropertyGroup ;
       sh:name "Instance measurement information" ;
       sh:nodeKind sh:IRI ;
       sh:order ""^^xsd:decimal ;
@@ -821,12 +824,52 @@ raremat_shapes_monograph:InstanceForm_ex_hasMeasurementGroup sh:path <http://exa
       
 raremat_shapes_monograph:InstanceForm_bf_bookFormat sh:path bf:bookFormat ;
       sh:class <http://example.org/MeasurementGroup> ;
-      sh:group raremat_shapes_monograph:InstanceMeasurementGroupPropertyGroup ;
+      sh:group raremat_shapes_monograph:InstancePhysicalDescriptionPropertyGroup ;
       sh:description "Result of folding a printed sheet to form a gathering of leaves" ;
       sh:name "Book format" ;
       sh:in ( <http://rdaregistry.info/termList/bookFormat/1001> <http://rdaregistry.info/termList/bookFormat/1002> <http://rdaregistry.info/termList/bookFormat/1003> <http://rdaregistry.info/termList/bookFormat/1004> <http://rdaregistry.info/termList/bookFormat/1005> <http://rdaregistry.info/termList/bookFormat/1006> <http://rdaregistry.info/termList/bookFormat/1007> <http://rdaregistry.info/termList/bookFormat/1008> <http://rdaregistry.info/termList/bookFormat/1009> <http://rdaregistry.info/termList/bookFormat/1010> <http://rdaregistry.info/termList/bookFormat/1011> <http://rdaregistry.info/termList/bookFormat/1012> <http://rdaregistry.info/termList/bookFormat/1013> <http://rdaregistry.info/termList/bookFormat/1014> <http://rdaregistry.info/termList/bookFormat/1015>) ;
       sh:nodeKind sh:IRI ;
       sh:order ""^^xsd:decimal .
+      
+raremat_shapes_monograph:InstanceForm_ex_hasSignatureStatement sh:path ex:hasSignatureStatement ;
+      sh:class <http://example.org/SignatureStatement> ;
+      sh:group raremat_shapes_monograph:InstancePhysicalDescriptionPropertyGroup ;
+      sh:description "A formulaic statement describing the pattern followed in assembling the sheets of the book, as expressed in its signatures. Signatures are letters, numerals, symbols, or a group of such characters printed at the foot of the rectos of the first few leaves of each gathering (quire) to aid the binder in correctly assembling the sections." ;
+      sh:name "Signature statement" ;
+      sh:nodeKind sh:IRI ;
+      sh:order ""^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor .
+      
+      
+raremat_shapes_monograph:InstanceForm_ex_hasMaterial sh:path ex:hasMaterial ;
+      sh:class <http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#E57> ;
+      sh:group raremat_shapes_monograph:InstancePhysicalDescriptionPropertyGroup ;
+      sh:description "Materials that make up this this instance. Materials can also be more granularly associated with each part of the instance, and/or as base or applied material." ;
+      sh:name "Has material" ;
+      sh:nodeKind sh:IRI ;
+      sh:order ""^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor .
+
+
+raremat_shapes_monograph:InstanceForm_ex_hasBaseMaterial sh:path ex:hasBaseMaterial ;
+      sh:class <http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#E57> ;
+      sh:group raremat_shapes_monograph:InstancePhysicalDescriptionPropertyGroup ;
+      sh:description "Base materials for this this instance. Base materials can also be more granularly associated with each part of the instance." ;
+      sh:name "Has base material" ;
+      sh:nodeKind sh:IRI ;
+      sh:order ""^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor .
+  
+  
+raremat_shapes_monograph:InstanceForm_ex_hasAppliedMaterial sh:path ex:hasAppliedMaterial ;
+      sh:class <http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#E57> ;
+      sh:group raremat_shapes_monograph:InstancePhysicalDescriptionPropertyGroup ;
+      sh:description "Applied materials for this this instance. Applied materials can also be more granularly associated with each part of the instance." ;
+      sh:name "Has applied material" ;
+      sh:nodeKind sh:IRI ;
+      sh:order ""^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor .
+
       
 # ///// PROPERTY SHAPES FOR InstanceOfWork PropertyGroup START HERE. /////////////////////////////////////////////////////////////      
 
@@ -914,6 +957,10 @@ raremat_shapes_monograph:ItemForm rdf:type rdfs:Class ;
   sh:property raremat_shapes_monograph:ItemForm_bf_hasPart ;
   sh:property raremat_shapes_monograph:ItemForm_bf_extent ;
   sh:property raremat_shapes_monograph:ItemForm_ex_hasMeasurementGroup ;
+  sh:property raremat_shapes_monograph:ItemForm_ex_hasSignatureStatement ;
+  sh:property raremat_shapes_monograph:ItemForm_ex_hasMaterial ;
+  sh:property raremat_shapes_monograph:ItemForm_ex_hasBaseMaterial ;
+  sh:property raremat_shapes_monograph:ItemForm_ex_hasAppliedMaterial ;
   sh:property raremat_shapes_monograph:ItemForm_ex_recieved ;
   sh:property raremat_shapes_monograph:ItemForm_bf_note ;
   sh:property raremat_shapes_monograph:ItemForm_bf_identifiedBy .
@@ -965,20 +1012,57 @@ raremat_shapes_monograph:ItemForm_bf_extent sh:path bf:extent ;
       sh:order "0"^^xsd:decimal ;
       sh:description "Sequential numbering of individual leaves, plates, pages (numbering on both sides), or columns (used as a sequence of numbering) of a resource." ;
       sh:class ex:PaginationFoliation ;
-      sh:group raremat_shapes_monograph:ItemPaginationFoliationPropertyGroup ;
+      sh:group raremat_shapes_monograph:ItemPhysicalDescriptionPropertyGroup ;
       tosh:editWidget swa:NestedObjectEditor .
   
-# TODO Physical description, Pagination/Foliation, Signature statements, Physical Condition, Activity (with curated list of Item roles for physical condition assessment and conservation), Materials, Bindings, Fonts, handwritings, notation, Markings
-
-
-# ///// PROPERTY SHAPES FOR ItemMeasurementGroup PropertyGroup START HERE. /////////////////////////////////////////////////////////////
+# TODO Physical description, Pagination/Foliation, Signature statements, Physical Condition, Activity (with curated list of Item roles for physical condition assessment and conservation), Materials, Bindings, Fonts, handwritings, notation, Markings  
 
 raremat_shapes_monograph:ItemForm_ex_hasMeasurementGroup sh:path <http://example.org/hasMeasurementGroup> ;
       sh:class <http://example.org/MeasurementGroup> ;
-      sh:group raremat_shapes_monograph:ItemMeasurementGroupPropertyGroup ;
+      sh:group raremat_shapes_monograph:ItemPhysicalDescriptionPropertyGroup ;
       sh:name "Instance measurement information" ;
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor .
+      
+
+      
+raremat_shapes_monograph:ItemForm_ex_hasSignatureStatement sh:path ex:hasSignatureStatement ;
+      sh:class <http://example.org/SignatureStatement> ;
+      sh:group raremat_shapes_monograph:ItemPhysicalDescriptionPropertyGroup ;
+      sh:description "A formulaic statement describing the pattern followed in assembling the sheets of the book, as expressed in its signatures. Signatures are letters, numerals, symbols, or a group of such characters printed at the foot of the rectos of the first few leaves of each gathering (quire) to aid the binder in correctly assembling the sections." ;
+      sh:name "Signature statement" ;
+      sh:nodeKind sh:IRI ;
+      sh:order ""^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor .
+      
+raremat_shapes_monograph:ItemForm_ex_hasMaterial sh:path ex:hasMaterial ;
+      sh:class <http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#E57> ;
+      sh:group raremat_shapes_monograph:ItemPhysicalDescriptionPropertyGroup ;
+      sh:description "Materials that make up this this item. Materials can also be more granularly associated with each part of the item, and/or as base or applied material." ;
+      sh:name "Has material" ;
+      sh:nodeKind sh:IRI ;
+      sh:order ""^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor .
+
+
+raremat_shapes_monograph:ItemForm_ex_hasBaseMaterial sh:path ex:hasBaseMaterial ;
+      sh:class <http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#E57> ;
+      sh:group raremat_shapes_monograph:ItemPhysicalDescriptionPropertyGroup ;
+      sh:description "Base materials for this this instance. Base materials can also be more granularly associated with each part of the item." ;
+      sh:name "Has base material" ;
+      sh:nodeKind sh:IRI ;
+      sh:order ""^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor .
+  
+  
+raremat_shapes_monograph:ItemForm_ex_hasAppliedMaterial sh:path ex:hasAppliedMaterial ;
+      sh:class <http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#E57> ;
+      sh:group raremat_shapes_monograph:ItemPhysicalDescriptionPropertyGroup ;
+      sh:description "Applied materials for this this item. Applied materials can also be more granularly associated with each part of the item." ;
+      sh:name "Has applied material" ;
+      sh:nodeKind sh:IRI ;
+      sh:order ""^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
       
 # ///// PROPERTY SHAPES FOR ItemOfInstance PropertyGroup START HERE. /////////////////////////////////////////////////////////////      
@@ -1695,6 +1779,69 @@ raremat_shapes_monograph:TitleNoteForm_rdf_value sh:path rdf:value ;
       sh:order "1"^^xsd:decimal ;
       sh:nodeKind sh:Literal ;
       sh:name "Title note value" .
+      
+# /////// SignatureStatement FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+raremat_shapes_monograph:SignatureStatementForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Signature statement form" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass <http://example.org/SignatureStatement> ;
+  sh:property raremat_shapes_monograph:SignatureStatementForm_rdf_value ;
+  sh:property raremat_shapes_monograph:SignatureStatementForm_dcterms_description ;
+  .
+
+raremat_shapes_monograph:SignatureStatementForm_rdf_value sh:path rdf:value ;
+      sh:description "Literal value for the signature statement" ;
+      sh:minCount "1" ;
+      sh:maxCount "1" ;
+      sh:order "0"^^xsd:decimal ;
+      sh:nodeKind sh:Literal ;
+      sh:name "Signature statement" .
+      
+raremat_shapes_monograph:SignatureStatementForm_dcterms_description sh:path dcterms:description ;
+      sh:description "Other qualifying information about signature statement" ;
+      sh:minCount "0" ;
+      sh:maxCount "1" ;
+      sh:order "1"^^xsd:decimal ;
+      sh:nodeKind sh:Literal ;
+      sh:name "Description of the signature statement" .
+
+# /////// Material FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+raremat_shapes_monograph:MaterialForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Material form" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass <http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#E57> ;
+  sh:property raremat_shapes_monograph:MaterialForm_crm_P2_has_type ;
+  .
+  
+raremat_shapes_monograph:MaterialForm_crm_P2_has_type sh:path crm:P2_has_type ;
+      sh:order "0"^^xsd:decimal ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:nodeKind sh:IRI ;
+      sh:name "Material type" .
+      
+# The following sh:path crm:P2_has_type/gvp:broaderExtended isn't meant to be a field in the form, but rather state a restriction on the use of crm:P2_has_type to skos:Concepts in AAT's Material Hierarchy. 
+  
+raremat_shapes_monograph:MaterialForm_crm_P2_has_type_gvp_broader_Extended sh:path <crm:P2_has_type/gvp:broaderExtended> ;
+      sh:hasValue <http://vocab.getty.edu/page/aat/300010358> ;
+      sh:description "Values for materials taken from http://vocab.getty.edu/page/aat/300010358 (AAT's materials hierarchy)" ;
+      sh:name "AAT Material Terms" ;
+      skos:editorialNote "Use look up service; AAT materials is too big to load directly into an RDF editor, or list out in the SHACL" .
+      
+      
+# The following sh:path crm:P2_has_type/skos:inScheme isn't meant to be a field in the form, but rather state a restriction on the use of crm:P2_has_type to skos:Concepts in AAT. 
+  
+raremat_shapes_monograph:MaterialForm_crm_P2_has_type_skos_inScheme sh:path <crm:P2_has_type/skos:inScheme> ;
+      sh:hasValue <http://vocab.getty.edu/aat/> ;
+      sh:description "Values for materials taken are to be taken from AAT." ;
+      sh:name "AAT Material Terms" ;
+      skos:editorialNote "Use look up service; AAT materials is too big to load directly into an RDF editor, or list out in the SHACL" .
+      
 
 
 # ///// PROPERTY GROUP SECTION /////////////////////////////////////////////////////////////
