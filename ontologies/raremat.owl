@@ -183,6 +183,14 @@
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
+    <owl:Class rdf:about="http://example.org/ContentsNote">
+        <rdfs:label xml:lang="en">Contents note</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
+        <skos:definition xml:lang="en">A note to provide a main contents of the resource rather than linking to an external table of contents or creating separate part/whole relationships to the entities that comprise the whole. Ideally, part whole relationships would be created instead of the this type of note.</skos:definition>
+        <skos:editorialNote>This note type was created based on http://bibliotek-o.org/1.1/ontology/specifyingContents. Likely belongs in a general bf:Notes extension, but need to add it here for now.</skos:editorialNote>
+        <dcterms:issued>2018-01-29T00:00:00-04:00</dcterms:issued>
+    </owl:Class> 
+    
     <owl:Class rdf:about="http://example.org/CreatorActivity">
         <rdfs:label xml:lang="en">Creator</rdfs:label>    
         <skos:definition xml:lang="en">The activity of creating a resource.</skos:definition>
