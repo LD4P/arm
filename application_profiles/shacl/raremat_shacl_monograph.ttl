@@ -43,9 +43,9 @@ raremat_shapes_monograph:WorkForm
   sh:property raremat_shapes_monograph:WorkForm_bf_title ;
   sh:property raremat_shapes_monograph:WorkForm_bf_subject ;
   sh:property raremat_shapes_monograph:WorkForm_bf_genreForm ;
+  sh:property raremat_shapes_monograph:WorkForm_bf_language ;
   sh:property raremat_shapes_monograph:WorkForm_ex_hasStylePeriod ;
   sh:property raremat_shapes_monograph:WorkForm_bf_hasInstance ;
-  sh:property raremat_shapes_monograph:WorkForm_bf_genreForm_madsrdf_isMemberOfMADSScheme ;
   sh:property raremat_shapes_monograph:WorkForm_raremat_hasActivity ;
   sh:property raremat_shapes_monograph:WorkForm_bf_hasPart ;
   sh:property raremat_shapes_monograph:WorkForm_bf_partOf ;
@@ -212,7 +212,7 @@ raremat_shapes_monograph:WorkForm_bf_genreForm_madsrdf_isMemberOfMADSScheme sh:p
  sh:name "LCGFT Form Genre Terms" ;
  sh:nodeKind sh:IRI ;
  skos:editorialNote "Use look up service; LCGFT is too big to load directly into an RDF editor, and more importantly we don't want to create MADSAuthorities, only link to them." .
-
+ 
 raremat_shapes_monograph:WorkForm_ex_hasStylePeriod sh:path ex:hasStylePeriod ;
   sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
   sh:group raremat_shapes_monograph:WorkSubjectGenreFormPropertyGroup ;
@@ -220,7 +220,14 @@ raremat_shapes_monograph:WorkForm_ex_hasStylePeriod sh:path ex:hasStylePeriod ;
   sh:nodeKind sh:IRI ;
   sh:in ( <http://vocab.getty.edu/aat/300019257> <http://vocab.getty.edu/aat/300019280> <http://vocab.getty.edu/aat/300106711> <http://vocab.getty.edu/aat/300106716> <http://vocab.getty.edu/aat/300106723> <http://vocab.getty.edu/aat/300264736> <http://vocab.getty.edu/aat/300264737> <http://vocab.getty.edu/aat/300266744> <http://vocab.getty.edu/aat/300312378> <http://vocab.getty.edu/aat/300386009> <http://vocab.getty.edu/aat/300391250> <http://vocab.getty.edu/aat/300391448> <http://vocab.getty.edu/aat/300393217> <http://vocab.getty.edu/aat/300404836> <http://vocab.getty.edu/aat/300015647> <http://vocab.getty.edu/aat/300016617> <http://vocab.getty.edu/aat/300018279> <http://vocab.getty.edu/aat/300019255> <http://vocab.getty.edu/aat/300020656> <http://vocab.getty.edu/aat/300021516> <http://vocab.getty.edu/aat/300021854> <http://vocab.getty.edu/aat/300022097> <http://vocab.getty.edu/aat/300266481> <http://vocab.getty.edu/aat/300385955> <http://vocab.getty.edu/aat/300385959> <http://vocab.getty.edu/aat/300386794> <http://vocab.getty.edu/aat/300386974> <http://vocab.getty.edu/aat/300387737> <http://vocab.getty.edu/aat/300056487> <http://vocab.getty.edu/aat/300067402> <http://vocab.getty.edu/aat/300263555> <http://vocab.getty.edu/aat/300310539> <http://vocab.getty.edu/aat/300310540> <http://vocab.getty.edu/aat/300310541> <http://vocab.getty.edu/aat/300310542> <http://vocab.getty.edu/aat/300310543> <http://vocab.getty.edu/aat/300310544> <http://vocab.getty.edu/aat/300310545> <http://vocab.getty.edu/aat/300310546> <http://vocab.getty.edu/aat/300310547> <http://vocab.getty.edu/aat/300311734> <http://vocab.getty.edu/aat/300312275> <http://vocab.getty.edu/aat/300379388> <http://vocab.getty.edu/aat/300391392> <http://vocab.getty.edu/aat/300391437> <http://vocab.getty.edu/aat/300393250> <http://vocab.getty.edu/aat/300055513> <http://vocab.getty.edu/aat/300073708> <http://vocab.getty.edu/aat/300148033> ) ;
   sh:order "2"^^xsd:decimal .
-  
+ 
+raremat_shapes_monograph:WorkForm_bf_language sh:path bf:language ;
+  sh:class <http://www.lingvoj.org/ontology/Lingvo> ;
+  sh:group raremat_shapes_monograph:WorkLanguageFormPropertyGroup ;
+  sh:name "Language" ;
+  sh:nodeKind sh:IRI ;
+  sh:order "0"^^xsd:decimal .
+
   
 # ///// PROPERTY SHAPES FOR WorkToInstancePropertyGroup START HERE. //////////////////////////////////////////////////////////////////////////////
 
@@ -866,6 +873,24 @@ raremat_shapes_monograph:InstanceForm_ex_hasAppliedMaterial sh:path ex:hasApplie
       sh:group raremat_shapes_monograph:InstancePhysicalDescriptionPropertyGroup ;
       sh:description "Applied materials for this this instance. Applied materials can also be more granularly associated with each part of the instance." ;
       sh:name "Has applied material" ;
+      sh:nodeKind sh:IRI ;
+      sh:order ""^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor .
+      
+raremat_shapes_monograph:InstanceForm_ex_writtenIn sh:path ex:writtenIn ;
+      sh:or (
+         
+         [
+           sh:class <http://example.org/Font> ;
+         ]
+         [
+           sh:class <http://example.org/Handwriting> ;
+         ]
+         
+        ) ;
+      sh:group raremat_shapes_monograph:InstancePhysicalDescriptionPropertyGroup ;
+      sh:description "The Font or HandWriting the textual information is displayed in." ;
+      sh:name "Font or HandWriting" ;
       sh:nodeKind sh:IRI ;
       sh:order ""^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
@@ -1842,7 +1867,46 @@ raremat_shapes_monograph:MaterialForm_crm_P2_has_type_skos_inScheme sh:path <crm
       sh:name "AAT Material Terms" ;
       skos:editorialNote "Use look up service; AAT materials is too big to load directly into an RDF editor, or list out in the SHACL" .
       
+# /////// Font FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
+raremat_shapes_monograph:FontForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Font form" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass <http://example.org/Font> ;
+  sh:property raremat_shapes_monograph:FontForm_ex_hasTypeface ;
+  sh:property raremat_shapes_monograph:FontForm_ex_hasMeasurement ;
+  sh:property raremat_shapes_monograph:FontForm_ex_hasStyle ;
+  .
+
+# TODO add individuals of Typeface
+  
+raremat_shapes_monograph:FontForm__ex_hasTypeface sh:path ex:hasTypeface ;
+      sh:order "0"^^xsd:decimal ;
+      sh:class <http://example.org/Typeface> ;
+      sh:nodeKind sh:IRI ;
+      sh:name "Has typeface" ;
+      sh:description "A design or “font family” created by a typographer or type designer. It defines specific stylistic features to determine the type display of a writing system." .
+      
+raremat_shapes_monograph:FontForm__ex_hasMeasurement sh:path ex:hasMeasurement ;
+      sh:order "1"^^xsd:decimal ;
+      sh:class <http://example.org/Measurement> ;
+      sh:nodeKind sh:IRI ;
+      sh:name "Font size" ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:description "Measurement of the font" .
+      
+raremat_shapes_monograph:FontForm__ex_hasStyle sh:path ex:hasStyle ;
+      sh:order "2"^^xsd:decimal ;
+      sh:in ( <http://vocab.getty.edu/aat/300194460> <http://vocab.getty.edu/aat/300202391> ) ;
+      sh:nodeKind sh:IRI ;
+      sh:name "Typeface style" ;
+      sh:description "Styles include bold, italic, etc. A resource may have more than one style; e.g., a font may be both bold and italic, by repeating the style field on a particular font" .
+
+# /////// Handwriting FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+# TODO ^^^^^^^^^^^^^^
 
 # ///// PROPERTY GROUP SECTION /////////////////////////////////////////////////////////////
 
@@ -1868,31 +1932,37 @@ raremat_shapes_monograph:WorkSubjectGenreFormPropertyGroup
   sh:description "To group type, Genre, and Form information for the resource." ;
   sh:order "2"^^xsd:decimal .
   
+raremat_shapes_monograph:WorkLanguageFormPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Language" ;
+  sh:description "To group language information for the resource." ;
+  sh:order "3"^^xsd:decimal .
+  
 raremat_shapes_monograph:WorkToInstancePropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Related Instances" ;
   sh:description "Instances of this work" ;
-  sh:order "3"^^xsd:decimal .
+  sh:order "4"^^xsd:decimal .
   
 raremat_shapes_monograph:WorkToWorkPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Related Works" ;
-  sh:order "4"^^xsd:decimal .
+  sh:order "5"^^xsd:decimal .
 
 raremat_shapes_monograph:WorkNotePropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Item notes" ;
-  sh:order "5"^^xsd:decimal .
+  sh:order "6"^^xsd:decimal .
   
 raremat_shapes_monograph:WorkAwardReceiptPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Awards received" ;
-  sh:order "6"^^xsd:decimal .
+  sh:order "7"^^xsd:decimal .
   
 raremat_shapes_monograph:WorkIdentifierPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Item notes" ;
-  sh:order "7"^^xsd:decimal .
+  sh:order "8"^^xsd:decimal .
 
 
 # ///// INSTANCE PROPERTY GROUPS ///////////////////////////////////////////////////////////
