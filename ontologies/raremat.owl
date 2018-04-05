@@ -535,6 +535,22 @@
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
+    
+    <owl:Class rdf:about="http://example.org/SummaryNote">
+        <rdfs:label xml:lang="en">Summary note</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
+        <skos:definition xml:lang="en">A note providing a summary of the resource.</skos:definition>
+        <skos:editorialNote>This note type was created based on http://bibliotek-o.org/1.1/ontology/summarizing. Likely belongs in a general bf:Notes extension, but need to add it here for now.</skos:editorialNote>
+        <dcterms:issued>2018-01-29T00:00:00-04:00</dcterms:issued>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://example.org/SupplementaryContentNote">
+        <rdfs:label xml:lang="en">Supplementary content note</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
+        <skos:definition xml:lang="en">A note indicating the existence of supplementary content such as bibliographies, discographies, filmographies, and/or other bibliographic references in the described resource or in accompanying material.</skos:definition>
+        <skos:editorialNote>This note type was created based on http://bibliotek-o.org/1.1/ontology/describingSupplementaryContent. Likely belongs in a general bf:Notes extension, but need to add it here for now.</skos:editorialNote>
+        <dcterms:issued>2018-01-29T00:00:00-04:00</dcterms:issued>
+    </owl:Class>
  
     <owl:Class rdf:about="http://example.org/TextBlock">
         <owl:disjointWith rdf:resource="http://example.org/Enclosure"/>
