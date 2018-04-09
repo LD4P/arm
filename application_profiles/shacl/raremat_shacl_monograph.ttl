@@ -46,7 +46,7 @@ raremat_shapes_monograph:WorkForm
   sh:property raremat_shapes_monograph:WorkForm_bf_language ;
   sh:property raremat_shapes_monograph:WorkForm_ex_hasStylePeriod ;
   sh:property raremat_shapes_monograph:WorkForm_bf_hasInstance ;
-  sh:property raremat_shapes_monograph:WorkForm_raremat_hasActivity ;
+  sh:property raremat_shapes_monograph:WorkForm_bf_contribution ;
   sh:property raremat_shapes_monograph:WorkForm_bf_hasPart ;
   sh:property raremat_shapes_monograph:WorkForm_bf_partOf ;
   sh:property raremat_shapes_monograph:WorkForm_bf_hasExpression ;
@@ -145,14 +145,12 @@ raremat_shapes_monograph:WorkForm_bf_title sh:path bf:title ;
 
 # TODO Update list of Activity when there are subclasses.
 
-raremat_shapes_monograph:WorkForm_raremat_hasActivity sh:path raremat:hasActivity ;
+raremat_shapes_monograph:WorkForm_bf_contribution sh:path bf:contribution ;
   sh:name "Agent activity or role" ;
   sh:order "0"^^xsd:decimal ;
   sh:group raremat_shapes_monograph:WorkActivityPropertyGroup ;
   tosh:editWidget swa:NestedObjectEditor ;
-  sh:class raremat:Activity .
-  
-  
+  sh:class bf:Contribution .
   
   
 # ///// PROPERTY SHAPES FOR WorkSubjectGenreFormPropertyGroup START HERE. /////////////////////////////////////////////////////
@@ -711,7 +709,7 @@ raremat_shapes_monograph:InstanceForm rdf:type rdfs:Class ;
   sh:property raremat_shapes_monograph:InstanceForm_ex_hasPreferredTitle ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_title ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_carrier ;
-  sh:property raremat_shapes_monograph:InstanceForm_raremat_hasActivity ;
+  sh:property raremat_shapes_monograph:InstanceForm_bf_provisionActivity ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_responsibilityStatement ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_provisionActivityStatement ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_hasPart ;
@@ -759,13 +757,13 @@ raremat_shapes_monograph:InstanceForm_bf_carrier sh:path <http://id.loc.gov/onto
 
 # TODO Update Activity List when there are subclasses.
 
-raremat_shapes_monograph:InstanceForm_raremat_hasActivity sh:path raremat:hasActivity ;
+raremat_shapes_monograph:InstanceForm_bf_provisionActivity sh:path bf:provisionActivity ;
   sh:name "Publisher, Distributor, etc. activity or role" ;
   sh:description "Think MARC field 260 or 264" ;
   sh:order "0"^^xsd:decimal ;
   sh:group raremat_shapes_monograph:InstanceActivityPropertyGroup ;
   tosh:editWidget swa:NestedObjectEditor ;
-  sh:class raremat:Activity .
+  sh:class bf:ProvisionActivity .
 
 raremat_shapes_monograph:InstanceForm_bf_responsibilityStatement sh:path bf:responsibilityStatement ;
       sh:name "Responsibility statement" ;
@@ -1150,6 +1148,105 @@ raremat_shapes_monograph:ItemForm_bf_identifiedBy sh:path <http://id.loc.gov/ont
       sh:nodeKind sh:IRI .     
 
 
+# /////// Work Contribution FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+raremat_shapes_monograph:MonographicWorkContributionForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Agent Activity" ;
+  sh:targetClass bf:Contribution ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property raremat_shapes_monograph:MonographicWorkContributionForm_bf_role ;
+  sh:property raremat_shapes_monograph:MonographicWorkContributionForm_bf_agent ;
+  sh:property raremat_shapes_monograph:MonographicWorkContributionForm_bf_date ;
+  sh:property raremat_shapes_monograph:MonographicWorkContributionForm_bf_place ;
+  .
+  
+# TODO need MARC Relator URIs, if we keep with bf:Contribution
+
+raremat_shapes_monograph:MonographicWorkContributionForm_bf_role sh:path bf:role ;
+      sh:order "0" ;
+      sh:description "Agent role or activity type" ;
+      sh:name "Agent role" ;
+      sh:in ( <http://bibliotek-o.org/ontology/ComposerActivity> <http://bibliotek-o.org/ontology/ArrangerActivity> <http://bibliotek-o.org/ontology/LibrettistActivity> <http://bibliotek-o.org/ontology/LyricistActivity> <http://bibliotek-o.org/ontology/PerformerActivity> <http://bibliotek-o.org/ontology/ConductorActivity> <http://bibliotek-o.org/ontology/MusicianActivity> <http://bibliotek-o.org/ontology/SingerActivity> <http://bibliotek-o.org/ontology/InstrumentalistActivity> <http://bibliotek-o.org/ontology/NarratorActivity> <http://bibliotek-o.org/ontology/CommentatorActivity> <http://bibliotek-o.org/ontology/ProducerActivity> <http://bibliotek-o.org/ontology/MusicalDirectorActivity> <http://bibliotek-o.org/ontology/SoundDesignerActivity> <http://bibliotek-o.org/ontology/RecordistActivity> <http://bibliotek-o.org/ontology/BroadcasterActivity> ) .
+
+raremat_shapes_monograph:MonographicWorkContributionForm_bf_agent sh:path bf:agent ;
+      sh:order "1" ;
+      sh:maxCount "1" ;
+      sh:class <http://xmlns.com/foaf/0.1/Agent> ;
+      sh:description "Agent" ;
+      sh:name "Agent" ;
+      sh:nodeKind sh:IRI .
+
+
+raremat_shapes_monograph:MonographicWorkContributionForm_bf_date sh:path bf:date;
+      sh:order "2" ;
+      sh:maxCount "1" ;
+      sh:description "Date of the activity. Recommended to use EDTF format" ;
+      sh:name "Date" ;
+      sh:nodeKind sh:Literal .
+      
+raremat_shapes_monograph:MonographicWorkContributionForm_bf_place sh:path bf:place;
+      sh:order "3" ;
+      sh:maxCount "1" ;
+      sh:description "Location of the activity" ;
+      sh:name "Location" ;
+      sh:class gn:Feature ;
+      sh:nodeKind sh:IRI ;
+      bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService .
+      
+# TODO ask LC for an inverse of bf:contribution in order to link from the Contribution back to the work.
+.
+
+# /////// Work Contribution FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+raremat_shapes_monograph:MonographicInstanceProvisionActivityForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Agent Activity" ;
+  sh:targetClass bf:ProvisionActivity ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property raremat_shapes_monograph:MonographicWorkContributionForm_bf_role ;
+  sh:property raremat_shapes_monograph:MonographicWorkContributionForm_bf_agent ;
+  sh:property raremat_shapes_monograph:MonographicWorkContributionForm_bf_date ;
+  sh:property raremat_shapes_monograph:MonographicWorkContributionForm_bf_place ;
+  .
+  
+# TODO need MARC Relator URIs, if we keep with bf:ProvisionActivity
+
+raremat_shapes_monograph:MonographicWorkContributionForm_bf_role sh:path bf:role ;
+      sh:order "0" ;
+      sh:description "Agent role or activity type" ;
+      sh:name "Agent role" ;
+      sh:in ( <http://bibliotek-o.org/ontology/ComposerActivity> <http://bibliotek-o.org/ontology/ArrangerActivity> <http://bibliotek-o.org/ontology/LibrettistActivity> <http://bibliotek-o.org/ontology/LyricistActivity> <http://bibliotek-o.org/ontology/PerformerActivity> <http://bibliotek-o.org/ontology/ConductorActivity> <http://bibliotek-o.org/ontology/MusicianActivity> <http://bibliotek-o.org/ontology/SingerActivity> <http://bibliotek-o.org/ontology/InstrumentalistActivity> <http://bibliotek-o.org/ontology/NarratorActivity> <http://bibliotek-o.org/ontology/CommentatorActivity> <http://bibliotek-o.org/ontology/ProducerActivity> <http://bibliotek-o.org/ontology/MusicalDirectorActivity> <http://bibliotek-o.org/ontology/SoundDesignerActivity> <http://bibliotek-o.org/ontology/RecordistActivity> <http://bibliotek-o.org/ontology/BroadcasterActivity> ) .
+
+raremat_shapes_monograph:MonographicWorkContributionForm_bf_agent sh:path bf:agent ;
+      sh:order "1" ;
+      sh:maxCount "1" ;
+      sh:class <http://xmlns.com/foaf/0.1/Agent> ;
+      sh:description "Agent" ;
+      sh:name "Agent" ;
+      sh:nodeKind sh:IRI .
+
+
+raremat_shapes_monograph:MonographicWorkContributionForm_bf_date sh:path bf:date;
+      sh:order "2" ;
+      sh:maxCount "1" ;
+      sh:description "Date of the activity. Recommended to use EDTF format" ;
+      sh:name "Date" ;
+      sh:nodeKind sh:Literal .
+      
+raremat_shapes_monograph:MonographicWorkContributionForm_bf_place sh:path bf:place;
+      sh:order "3" ;
+      sh:maxCount "1" ;
+      sh:description "Location of the activity" ;
+      sh:name "Location" ;
+      sh:class gn:Feature ;
+      sh:nodeKind sh:IRI ;
+      bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService .
+      
+# TODO ask LC for an inverse of bf:provisionActivity in order to link from the Contribution back to the work.
+.
 
 # /////// MeasurementGroup FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
@@ -1881,14 +1978,14 @@ raremat_shapes_monograph:FontForm
 
 # TODO add individuals of Typeface
   
-raremat_shapes_monograph:FontForm__ex_hasTypeface sh:path ex:hasTypeface ;
+raremat_shapes_monograph:FontForm_ex_hasTypeface sh:path ex:hasTypeface ;
       sh:order "0"^^xsd:decimal ;
       sh:class <http://example.org/Typeface> ;
       sh:nodeKind sh:IRI ;
       sh:name "Has typeface" ;
       sh:description "A design or “font family” created by a typographer or type designer. It defines specific stylistic features to determine the type display of a writing system." .
       
-raremat_shapes_monograph:FontForm__ex_hasMeasurement sh:path ex:hasMeasurement ;
+raremat_shapes_monograph:FontForm_ex_hasMeasurement sh:path ex:hasMeasurement ;
       sh:order "1"^^xsd:decimal ;
       sh:class <http://example.org/Measurement> ;
       sh:nodeKind sh:IRI ;
@@ -1896,7 +1993,7 @@ raremat_shapes_monograph:FontForm__ex_hasMeasurement sh:path ex:hasMeasurement ;
       tosh:editWidget swa:NestedObjectEditor ;
       sh:description "Measurement of the font" .
       
-raremat_shapes_monograph:FontForm__ex_hasStyle sh:path ex:hasStyle ;
+raremat_shapes_monograph:FontForm_ex_hasStyle sh:path ex:hasStyle ;
       sh:order "2"^^xsd:decimal ;
       sh:in ( <http://vocab.getty.edu/aat/300194460> <http://vocab.getty.edu/aat/300202391> ) ;
       sh:nodeKind sh:IRI ;
