@@ -260,7 +260,7 @@ raremat_shapes_monograph:WorkForm_bf_note sh:path <http://id.loc.gov/ontologies/
     
 # ///// PROPERTY SHAPES FOR WorkAwardReceipt PropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
-raremat_shapes_monograph:WorkForm_ex_recieved sh:path <http://example.org/received> ;
+raremat_shapes_monograph:WorkForm_ex_recieved sh:path <http://example.org/receives> ;
 sh:class <http://example.org/AwardReceipt> ;
       sh:group raremat_shapes_monograph:WorkAwardReceiptPropertyGroup ;
       sh:name "Work award receipt" ;
@@ -920,7 +920,7 @@ raremat_shapes_monograph:InstanceForm_bf_hasItem sh:path <http://id.loc.gov/onto
       
 # ///// PROPERTY SHAPES FOR InstanceAwardReceipt PropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
-raremat_shapes_monograph:InstanceForm_ex_recieved sh:path <http://example.org/received> ;
+raremat_shapes_monograph:InstanceForm_ex_recieved sh:path <http://example.org/receives> ;
       sh:class <http://example.org/AwardReceipt> ;
       sh:group raremat_shapes_monograph:InstanceAwardReceiptPropertyGroup ;
       sh:name "Instance award receipt" ;
@@ -1097,7 +1097,7 @@ raremat_shapes_monograph:ItemForm_bf_itemOf sh:path <http://id.loc.gov/ontologie
       
 # ///// PROPERTY SHAPES FOR ItemAwardReceipt PropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
-raremat_shapes_monograph:ItemForm_ex_recieved sh:path <http://example.org/received> ;
+raremat_shapes_monograph:ItemForm_ex_recieved sh:path <http://example.org/receives> ;
 sh:class <http://example.org/AwardReceipt> ;
       sh:group raremat_shapes_monograph:ItemAwardReceiptPropertyGroup ;
       sh:name "Item award receipt" ;
