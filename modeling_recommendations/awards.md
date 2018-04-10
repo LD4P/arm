@@ -126,9 +126,9 @@ Classes
 
 Properties
 ---------
-**received (object property)**
+**receives (object property)**
 > - **Label**: received
-> - **URI**: http://award.example.org/received
+> - **URI**: http://award.example.org/receives
 > - **Definition**: This resource, such as an Agent or Work, is the recipient of the specified AwardReceipt
 > - **Domain**: unspecified
 > - **Inverse**: award:receivedBy
@@ -140,7 +140,7 @@ Properties
 > - **Definition**: This AwardReceipt was received by the specified award recipient (such as an Agent or Work).
 > - **Domain**: award:AwardReceipt
 > - **Range**: unspecified
-> - **Inverse**: award:received
+> - **Inverse**: award:receives
 
 **hasAward (object property)**
 > - **Label**: has award
@@ -205,7 +205,7 @@ bf:awards "Man Booker Prize, 1987, shortlist" .
 > - **586 (awards note): Man Booker Prize, 1987, shortlist -- biblioteko/ArtFrame**
 ```
 :chatterton a bf:Work ;
- award:received :awardReceipt1 .
+ award:receives :awardReceipt1 .
 
 :awardReceipt1 a af:AwardReceipt, af:AwardShortlist ;
  award:hasAward :award1 ;
@@ -225,7 +225,7 @@ bf:awards "George Wittenborn Award, Art Libraries Society of North  America, 199
 > - **586 (awards note): George Wittenborn Award, Art Libraries Society of North  America, 1998 -- biblioteko/ArtFrame**
 ```
 :Ikat a bf:Work ;
- award:received :awardReceipt1 .
+ award:receives :awardReceipt1 .
 
 :awardReceipt1 a award:AwardReceipt, award:AwardWinner  ;
  award:hasAward :award1 ;
@@ -264,7 +264,7 @@ bf:mainTitle "Louis Comfort Tiffany and Laurelton Hall" .
 ```
 :w1 a bf:Work ;
  bf:partOf :w2 ;
- award:received :awardReceipt1 .
+ award:receives :awardReceipt1 .
 
 :awardReceipt1 a award:AwardReceipt, award:AwardWinner ;
  award:hasAward :award2 ;
@@ -291,7 +291,7 @@ bf:award "Winner R. Hoe & Co., Inc. Award - National War Poster Competition."
 > - **Someone talked! (Poster) "Winner R. Hoe & Co., Inc. Award - National War Poster Competition. -- biblioteko/ArtFrame**
 ```
 :SomeoneTalked! a bf:Work ;
- award:received :awardReceipt1 .
+ award:receives :awardReceipt1 .
 
 :awardReceipt1 a award:AwardReceipt, award:AwardWinner ;
  award:hasAward :award1 ;
@@ -304,7 +304,7 @@ bf:award "Winner R. Hoe & Co., Inc. Award - National War Poster Competition."
 > - **Award selector/judge -- biblioteko/ArtFrame**
 ```
 :MurrayHill a bf:Person ;
- award:received :awardReceipt.
+ award:receives :awardReceipt.
 
 :awardReceipt a award:AwardReceipt, a award:AwardWinner ;
  award:isReceiptOf :AnnualContemporaryCrafExhibitionforGlass ;
