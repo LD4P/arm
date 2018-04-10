@@ -127,7 +127,7 @@ Classes
 Properties
 ---------
 **receives (object property)**
-> - **Label**: received
+> - **Label**: receives
 > - **URI**: http://award.example.org/receives
 > - **Definition**: This resource, such as an Agent or Work, is the recipient of the specified AwardReceipt
 > - **Domain**: unspecified
