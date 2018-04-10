@@ -63,7 +63,7 @@ Areas covered by other ontologies:
 Diagram
 -------
 
-![Bound-withs diagram](/modeling_recommendations/modeling_diagrams/boundWiths.png)
+![Bound-withs diagram](/modeling_recommendations/modeling_diagrams/bound_with.png)
 
 Term Specifications
 ----------
@@ -177,6 +177,9 @@ The carrier model proposes linking items directly to their carriers, and derivin
 Areas covered by other ontologies:  
 - BIBFRAME: Item
 - CIDOC-CRM: P2_hasType
+
+Diagram
+-------
 
 ![Carriers diagram](/modeling_recommendations/modeling_diagrams/carrier.png)
 

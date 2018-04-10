@@ -484,7 +484,7 @@ Properties
 
 **Diagram 2. Items in an Exhibition Event**
 
-![Items_in_an_Exhibition_Event_2](/modeling_recommendations/modeling_diagrams/items_exhibitions_events.png)
+![Items_in_an_Exhibition_Event_2](/modeling_recommendations/modeling_diagrams/exhibition_item.png)
 
 ***Notes***
 - While it is the Item which is directly related to the ExhibitionEvent (via the Exhibition node), by following  
@@ -493,7 +493,7 @@ Properties
  
  **Diagram 3. Item Description the the Context of an Exhibition**
  
-![Item_Description_in_the_Context_of_an_Exhibition_3](/modeling_recommendations/modeling_diagrams/Item_description_exhibition.png)
+![Item_Description_in_the_Context_of_an_Exhibition_3](/modeling_recommendations/modeling_diagrams/exhibition_item_description.png)
 
 ***Notes***
 - The Exhibition context node provides for description of the Item in relation to the ExhibitionEvent that do not pertain to the 
@@ -522,7 +522,7 @@ Properties
 
 **Digram 5. Multi-Site Exhibition**
 
-![Multi_Site_Exhibitions_5](/modeling_recommendations/modeling_diagrams/multi_site_exhibitions.png)
+![Multi_Site_Exhibitions_5](/modeling_recommendations/modeling_diagrams/exhibition_multi_site.png)
 
 ***Notes***
 - Each exhibition site has its own location, and may have the same, overlapping, or different start and end dates from other 
@@ -539,7 +539,7 @@ Properties
   
   
 **Diagram 6. Traveling Exhibition**
-![Traveling_Exhibitions_6](/modeling_recommendations/modeling_diagrams/traveling_exhibition.png)
+![Traveling_Exhibitions_6](/modeling_recommendations/modeling_diagrams/exhibition_traveling.png)
 
 ***Notes***
 - There are three differences between the Multi-Site and Traveling ExhibitionEvent:

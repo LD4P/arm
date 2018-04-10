@@ -81,18 +81,18 @@ Style/period/technique/instrument are areas that relate to bindings but are not 
 
 <a name="diagramBasic">Diagram: Basic Binding Model</a>
 ---------------------------
-![basic binding diagram](/modeling_recommendations/modeling_diagrams/bindings_1.png)
+![basic binding diagram](/modeling_recommendations/modeling_diagrams/binding_basic.png)
 
 
 <a name="many">Many-to-Many Item-to-Binding Relationships</a>
 -----------------------
 An item can have its original binding replaced over time by an owner or for preservation/conservation purposes.
 
-![many-to-many item-to-binding diagram](/modeling_recommendations/modeling_diagrams/bindings_2.png)
+![many-to-many item-to-binding diagram](/modeling_recommendations/modeling_diagrams/binding_multiple.png)
 
 The converse is also true, under a variety of circumstances. Treasure bindings, made from jewels and precious metals, such as the binding of the <a href="http://www.themorgan.org/collection/lindau-gospels">Lindau Gospels</a>, could be removed from the original item, sold, and transferred to another book. This may occur with less valuable bindings as well, such as <a href="https://clio.columbia.edu/catalog/6167779">a copy of Reineke Fuchs rebound in a publisher's binding from The Works of Daniel Webster</a>. There are also instances of a binding being reapplied to a contraband or censored text in order to conceal the contents. The term <a href="http://www.ligatus.org.uk/lob/concept/4244">remboîtage</a> has been established for the practice of transferring into a superior binding a text more interesting or valuable than the one for which it was made. 
 
-![item-to-binding inverse diagram](/modeling_recommendations/modeling_diagrams/bindings_3.png)
+![item-to-binding inverse diagram](/modeling_recommendations/modeling_diagrams/binding_to_multiple_items.png)
 
 The relationship between an item and a binding is therefore potentially time-delimited, but our current models do not provide a way to attach dates to the relationship. A context node would be required to represent the relationship with dates and other information attached; this is a significant complication of the model and we leave it for future research to determine whether there are valid use cases for this level of complexity. 
 
@@ -101,7 +101,7 @@ The BinderActivity resource, representing the act of attaching a binding to an i
 <a name="BinderActivity">BinderActivity</a>
 The BinderActivity, defined as “The activity of attaching a Binding a resource,” is an interesting case because it relates to both a Binding and an Instance/Item. Since a Binding can attach to more than one Item during its lifespan, and an Item can have multiple Bindings during its lifespan (see Many-to-Many Item-to-Binding Relationships), the activity must connect to both in order to accurately represent the relationships. 
 
-![binder activity diagram](/modeling_recommendations/modeling_diagrams/bindings_4.png)
+![binder activity diagram](/modeling_recommendations/modeling_diagrams/binder_activity.png)
 
 <a name="terms">Term Specifications</a>
 -----------------

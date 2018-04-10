@@ -27,7 +27,7 @@ subclass AccessionNumber.
 
 bibliotek-o Identifier Model
 --------------------------------
-![Accession Number Diagram](/modeling_recommendations/modeling_diagrams/accession_number_diagram.png)
+![Accession Number Diagram](/modeling_recommendations/modeling_diagrams/accession_number.png)
 ```
 _:item a bf:Item ;
     bf:identifiedBy [

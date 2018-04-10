@@ -110,9 +110,9 @@ The ArtFrame group analyzed a number of content standards used in the library an
 ---------
 
 
-![subject notes](/modeling_recommendations/modeling_diagrams/subject_note.png)
+![subject notes](/modeling_recommendations/modeling_diagrams/note_subject.png)
 **Descriptive note**
-![descriptive notes](/modeling_recommendations/modeling_diagrams/descriptive_note.png)
+![descriptive notes](/modeling_recommendations/modeling_diagrams/note_descriptive.png)
 
 
 <a name="samples">RDF Samples</a>

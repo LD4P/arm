@@ -79,7 +79,7 @@ Irregular pagination: ten pages of text titled Antiquities of Cambodia are print
 
 Diagram
 ----------
-![Pagination and Foliation Diagram](/modeling_recommendations/modeling_diagrams/pagination_foliation_diagram.png)
+![Pagination and Foliation Diagram](/modeling_recommendations/modeling_diagrams/pagination_foliation.png)
 
 Sample RDF
 ----------

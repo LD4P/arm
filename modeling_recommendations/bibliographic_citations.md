@@ -128,13 +128,13 @@ Earlier versions of this recommendation attempted differing levels of integratio
 --------
 
 ### Use case 1: Basic citation.
-![Use Case 1](/modeling_recommendations/modeling_diagrams/citations_useCase_1.png)
+![Use Case 1](/modeling_recommendations/modeling_diagrams/citation_use_case_1.png)
 
 ### Use case 2: Citation located, cataloger adds commentary on citation.
-![Use Case 2](/modeling_recommendations/modeling_diagrams/citations_useCase_2.png)
+![Use Case 2](/modeling_recommendations/modeling_diagrams/citation_use_case_2.png)
 
 ### Use case 3: Negative citation (without comment).
-![Use Case 3](/modeling_recommendations/modeling_diagrams/citations_useCase_3.png)
+![Use Case 3](/modeling_recommendations/modeling_diagrams/citation_use_case_3.png)
 
 ### Use case 4: Negative citation with comment.
-![Use Case 4.1](/modeling_recommendations/modeling_diagrams/citations_useCase_4.png)
+![Use Case 4.1](/modeling_recommendations/modeling_diagrams/citation_use_case_4.png)
