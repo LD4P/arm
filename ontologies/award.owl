@@ -165,13 +165,13 @@
     
 
 
-    <!-- http://example.org/received -->
+    <!-- http://example.org/receives -->
 
-    <owl:ObjectProperty rdf:about="http://example.org/received">
+    <owl:ObjectProperty rdf:about="http://example.org/receives">
         <owl:inverseOf rdf:resource="http://example.org/receivedBy"/>
         <rdfs:range rdf:resource="http://example.org/AwardReceipt"/>
         <skos:definition>This resource, such as an Agent or Work, is the recipient of the specified AwardReceipt.</skos:definition>
-        <rdfs:label>received</rdfs:label>
+        <rdfs:label>receives</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -179,7 +179,7 @@
     <!-- http://example.org/receivedBy -->
 
     <owl:ObjectProperty rdf:about="http://example.org/receivedBy">
-        <owl:inverseOf rdf:resource="http://example.org/received"/>
+        <owl:inverseOf rdf:resource="http://example.org/receives"/>
         <rdfs:domain rdf:resource="http://example.org/AwardReceipt"/>
         <skos:definition>This AwardReceipt was received by the specified award recipient (such as an Agent or Work).</skos:definition>
         <rdfs:label>received by</rdfs:label>
