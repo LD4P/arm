@@ -1,5 +1,6 @@
 Style/Period
-------------
+============
+
 ArtFrame and RareMat, 2018.03.16
 
 Introduction

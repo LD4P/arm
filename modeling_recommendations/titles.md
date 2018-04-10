@@ -267,15 +267,15 @@ resource.
 
 **Note: diagrams need revision due to change of model from title element resources to BIBFRAME title part datatype properties. The [RDF samples below](#rdf) are up-to-date.**
 
-Transcribed title
+### Transcribed title ###
 
 ![TranscribedTitle](/modeling_recommendations/modeling_diagrams/title_transcribed.jpg)
 
-Creator's title
+### Creator's title ###
 
 ![CreatorsTitle_2](/modeling_recommendations/modeling_diagrams/title_creators.jpg)
 
-Translated title
+### Translated title ###
 
 ![translatedTitle](/modeling_recommendations/modeling_diagrams/title_translated.jpg)
 
