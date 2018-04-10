@@ -188,7 +188,7 @@ Models of measurements of a resource, a part of the resource, and the resource i
 
 Diagram 1: Basic measurement model with optional descriptions
 --------------------------
-![Measurement diagram 1](/modeling_recommendations/modeling_diagrams/measurement_1.png)
+![Measurement diagram 1](/modeling_recommendations/modeling_diagrams/measurement_basic.png)
 **Notes**
 
 -   rdfs:label provides a human-readable form of the measurement.
@@ -204,23 +204,23 @@ Whether or not the model is used in this way in our descriptions is an implement
 
 Diagram 2: Single resource with multiple measurement group and descriptions
 -----------------------------------------------------------------------------------
-![Measurement diagram 2](/modeling_recommendations/modeling_diagrams/measurement_2.png)
+![Measurement diagram 2](/modeling_recommendations/modeling_diagrams/measurement_multiple.png)
 
 Diagram 3: Measurements of whole and part: part a resource
 --------------------
-![Measurement diagram 3](/modeling_recommendations/modeling_diagrams/measurement_3.png)
+![Measurement diagram 3](/modeling_recommendations/modeling_diagrams/measurement_whole_part.png)
 **Notes**
 -   For domain extensions: Identify classes for parts of resources like binding, frame, etc. Should there be a superclass?
 
 Diagram 4: Measurements of whole and part with additional physical characteristics
 ---------------
-![Measurement diagram 4](/modeling_recommendations/modeling_diagrams/measurement_4.png)
+![Measurement diagram 4](/modeling_recommendations/modeling_diagrams/measurement_physical_characteristics.png)
 **Notes**
 -   Demonstrates that when a part of a resource, such as a binding or frame, is recognized as a distinct resource, other assertions can be made about it (color, material, etc.).
 
 Diagram 5: Measurements of arrangement: arrangement is a resource
 ------------------
-![Measurement diagram 5](/modeling_recommendations/modeling_diagrams/measurement_5.png)
+![Measurement diagram 5](/modeling_recommendations/modeling_diagrams/measurement_arrangement.png)
 **Notes/TBD**
 
 -   Rationale for a state object is not necessarily that there are other assertions to be made about it, but that a controlled vocabulary of states, rather than literal values, can be used.
@@ -233,7 +233,7 @@ Diagram 5: Measurements of arrangement: arrangement is a resource
 
 Diagram 6: Measurements of arrangements: multiple arrangement resources
 ----------------------
-![Measurement diagram 6](/modeling_recommendations/modeling_diagrams/measurement_6.png)
+![Measurement diagram 6](/modeling_recommendations/modeling_diagrams/measurement_multiple_arrangements.png)
 **Notes/TBD**
 
 -   In this version, two arrangements are expressed as a separate resource, without a default or unspecified arrangement. Choice of model 5 vs 6 would be an implementation decision by the cataloger.
