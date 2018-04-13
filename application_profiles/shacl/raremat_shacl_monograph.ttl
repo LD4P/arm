@@ -4,14 +4,14 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ex: <http://example.org/> .
 @prefix gn: <http://www.geonames.org/ontology/> .
-@prefix gvp: <http://www.geonames.org/ontology/> .
-@prefix lingvo: <http://www.lingvoj.org/ontology#> .
+@prefix gvp: <http://vocab.getty.edu/ontology/> .
 @prefix madsrdf: <http://www.loc.gov/standards/mads/rdf/v1.rdf#> .
 @prefix measurement: <http://measurement.bibliotek-o.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov> .
-@prefix raremat: <http://example.org/> .
-@prefix raremat_shapes_monograph: <http://example.org/shapes/monograph/> .
+@prefix arm: <https://w3id.org/arm/ontologies/core/> .
+@prefix raremat_shapes_monograph: <https://w3id.org/arm/application_profile/shacl/raremat_monograph/> .
+@prefix raremat_shapes_monograph_exhibition: <https://w3id.org/arm/application_profile/shacl/raremat_monograph/exhibition/> . 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
@@ -274,7 +274,7 @@ sh:class <http://example.org/AwardReceipt> ;
 
 raremat_shapes_monograph:WorkForm_bf_identifiedBy sh:path <http://id.loc.gov/ontologies/bibframe/identifiedBy> ;
       sh:class bf:Identifier ;
-      sh:description "Indentifiers for works." ;
+      sh:description "Identifiers for works." ;
       sh:group raremat_shapes_monograph:WorkIdentifierPropertyGroup ;
       sh:name "Work Identifier" ;
       sh:nodeKind sh:IRI .
@@ -985,7 +985,8 @@ raremat_shapes_monograph:ItemForm rdf:type rdfs:Class ;
   sh:property raremat_shapes_monograph:ItemForm_ex_hasAppliedMaterial ;
   sh:property raremat_shapes_monograph:ItemForm_ex_receives ;
   sh:property raremat_shapes_monograph:ItemForm_bf_note ;
-  sh:property raremat_shapes_monograph:ItemForm_bf_identifiedBy .
+  sh:property raremat_shapes_monograph:ItemForm_bf_identifiedBy ;
+  sh:property raremat_shapes_monograph_exhibition:ItemForm_arm_hasExhibition .
 
 raremat_shapes_monograph:ItemForm_ex_hasPreferredTitle sh:path <http://example.org/hasPreferredTitle> ;
   sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
@@ -1012,13 +1013,13 @@ raremat_shapes_monograph:ItemForm_bf_title sh:path bf:title ;
 
 # TODO Update Activity List when there are subclasses, and custodial history is added to the form. 
 
-raremat_shapes_monograph:ItemForm_raremat_hasActivity sh:path raremat:hasActivity ;
+raremat_shapes_monograph:ItemForm_raremat_hasActivity sh:path arm:hasActivity ;
   sh:name "Agent activity and role for the item" ;
   sh:description "Item level agent activities" ;
   sh:order "0"^^xsd:decimal ;
   sh:group raremat_shapes_monograph:ItemActivityPropertyGroup ;
   tosh:editWidget swa:NestedObjectEditor ;
-  sh:class raremat:Activity .
+  sh:class arm:Activity .
   
 # TODO decide what Items can be part of an Item of a Monograph
       
@@ -1467,10 +1468,10 @@ raremat_shapes_monograph:AwardReceiptForm
   rdfs:label "Award receipt" ;
   rdfs:subClassOf rdfs:Resource ;
   sh:targetClass ex:AwardReceipt ;
-  sh:property raremat_shapes_monograph:NoteForm_rdf_type ;
-  sh:property raremat_shapes_monograph:NoteForm_ex_hasAward ;
-  sh:property raremat_shapes_monograph:NoteForm_bf_date ;
-  sh:property raremat_shapes_monograph:NoteForm_ex_hasActivity ; 
+  sh:property raremat_shapes_monograph:AwardReceiptForm_rdf_type ;
+  sh:property raremat_shapes_monograph:AwardReceiptForm_ex_hasAward ;
+  sh:property raremat_shapes_monograph:AwardReceiptForm_bf_date ;
+  sh:property raremat_shapes_monograph:AwardReceiptForm_ex_hasActivity ; 
   .  
 
 raremat_shapes_monograph:AwardReceiptForm_rdf_type sh:path rdf:type ;
@@ -2171,9 +2172,14 @@ raremat_shapes_monograph:ItemNotePropertyGroup
   
 raremat_shapes_monograph:InstanceIdentifierPropertyGroup
 rdf:type sh:PropertyGroup ;
-  rdfs:label "Item indentifiers" ;
+  rdfs:label "Item identifiers" ;
   sh:order ""^^xsd:decimal .
 
+# Putting in a property group file for now
+# raremat_shapes_monograph:ItemHistoryAndProvenancePropertyGroup
+#     a sh:PropertyGroup ;
+#     rdfs:label "Item history and provenance" ;
+#     sh:order ""^^xsd:decimal .
 
 
     

@@ -1,0 +1,36 @@
+@prefix aat: <http://vocab.getty.edu/aat/> .
+@prefix arm: <https://w3id.org/arm/ontologies/core/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix core: <http://vivoweb.org/ontology/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.org/> .
+@prefix gn: <http://www.geonames.org/ontology/> .
+@prefix gvp: <http://www.geonames.org/ontology/> .
+@prefix lingvo: <http://www.lingvoj.org/ontology#> .
+@prefix madsrdf: <http://www.loc.gov/standards/mads/rdf/v1.rdf#> .
+@prefix measurement: <https://w3id.org/arm/ontologies/measurement/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# TODO Review namespaces with Steven
+# Can we use a single namespace for all, but still split into multiple files?
+
+@prefix raremat_shapes_monograph_property_groups: <https://w3id.org/arm/application_profile/shacl/raremat_monograph/> .
+
+#
+# ////////// PROPERTY GROUP DEFINITIONS ////////// #
+#
+    
+raremat_shapes_monograph_property_groups:ItemHistoryAndProvenancePropertyGroup
+    a sh:PropertyGroup ;
+    rdfs:label "Item history and provenance" ;
+    sh:order ""^^xsd:decimal .
