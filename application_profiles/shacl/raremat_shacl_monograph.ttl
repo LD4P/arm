@@ -221,7 +221,7 @@ raremat_shapes_monograph:WorkForm_ex_hasStylePeriod sh:path ex:hasStylePeriod ;
   sh:order "2"^^xsd:decimal .
  
 raremat_shapes_monograph:WorkForm_bf_language sh:path bf:language ;
-  sh:class <http://www.lingvoj.org/ontology/Lingvo> ;
+  sh:class lingvo:Lingvo ;
   sh:group raremat_shapes_monograph:WorkLanguageFormPropertyGroup ;
   sh:name "Language" ;
   sh:nodeKind sh:IRI ;
