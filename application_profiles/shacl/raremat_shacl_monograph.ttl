@@ -710,6 +710,7 @@ raremat_shapes_monograph:InstanceForm rdf:type rdfs:Class ;
   sh:property raremat_shapes_monograph:InstanceForm_ex_hasPreferredTitle ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_title ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_carrier ;
+  sh:property raremat_shapes_monograph:InstanceForm_bf_genreForm ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_provisionActivity ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_responsibilityStatement ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_provisionActivityStatement ;
@@ -753,6 +754,25 @@ raremat_shapes_monograph:InstanceForm_bf_carrier sh:path <http://id.loc.gov/onto
   sh:name "Carrier type" ;
   sh:nodeKind sh:IRI ;
   sh:order "0"^^xsd:decimal .
+  
+raremat_shapes_monograph:InstanceForm_bf_genreForm sh:path bf:genreForm ;
+  sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+  sh:group raremat_shapes_monograph:InstanceGenreFormPropertyGroup ;
+  sh:name "Form Genre" ;
+  sh:nodeKind sh:IRI ;
+  sh:order "0"^^xsd:decimal ;
+  raremat_shapes_monograph:lookup raremat_shapes_monograph:LD4LookupService .
+  
+# The following sh:Property with sh:path bf:genreForm/madsrdf:isMemberOfMADSScheme isn't meant to be a field in the form, but rather state a restriction on the use of bf:genreForm to instances from http://id.loc.gov/authorities/genreForms. 
+  
+raremat_shapes_monograph:InstanceForm_bf_genreForm_madsrdf_isMemberOfMADSScheme sh:path <bf:genreForm/madsrdf:isMemberOfMADSScheme> ;
+ sh:hasValue <http://id.loc.gov/authorities/genreForms> ;
+ sh:description "Values for form genre terms" ;
+ sh:group raremat_shapes_monograph:InstanceGenreFormPropertyGroup ;
+ sh:name "LCGFT Form Genre Terms" ;
+ sh:nodeKind sh:IRI ;
+ skos:editorialNote "Use look up service; LCGFT is too big to load directly into an RDF editor, and more importantly we don't want to create MADSAuthorities, only link to them." .
+ 
 
 # ///// PROPERTY SHAPES FOR InstanceActivityPropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
@@ -977,6 +997,7 @@ raremat_shapes_monograph:ItemForm rdf:type rdfs:Class ;
   sh:property raremat_shapes_monograph:ItemForm_ex_hasPreferredTitle ;
   sh:property raremat_shapes_monograph:ItemForm_bf_title ;
   sh:property raremat_shapes_monograph:ItemForm_raremat_hasActivity ;
+  sh:property raremat_shapes_monograph:ItemForm_bf_genreForm ;
   sh:property raremat_shapes_monograph:ItemForm_bf_hasPart ;
   sh:property raremat_shapes_monograph:ItemForm_bf_extent ;
   sh:property raremat_shapes_monograph:ItemForm_ex_hasMeasurementGroup ;
@@ -1021,6 +1042,24 @@ raremat_shapes_monograph:ItemForm_raremat_hasActivity sh:path arm:hasActivity ;
   sh:group raremat_shapes_monograph:ItemActivityPropertyGroup ;
   tosh:editWidget swa:NestedObjectEditor ;
   sh:class arm:Activity .
+  
+raremat_shapes_monograph:ItemForm_bf_genreForm sh:path bf:genreForm ;
+  sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+  sh:group raremat_shapes_monograph:ItemGenreFormPropertyGroup ;
+  sh:name "Form Genre" ;
+  sh:nodeKind sh:IRI ;
+  sh:order "0"^^xsd:decimal ;
+  raremat_shapes_monograph:lookup raremat_shapes_monograph:LD4LookupService .
+  
+# The following sh:Property with sh:path bf:genreForm/madsrdf:isMemberOfMADSScheme isn't meant to be a field in the form, but rather state a restriction on the use of bf:genreForm to instances from http://id.loc.gov/authorities/genreForms. 
+  
+raremat_shapes_monograph:ItemForm_bf_genreForm_madsrdf_isMemberOfMADSScheme sh:path <bf:genreForm/madsrdf:isMemberOfMADSScheme> ;
+ sh:hasValue <http://id.loc.gov/authorities/genreForms> ;
+ sh:description "Values for form genre terms" ;
+ sh:group raremat_shapes_monograph:ItemGenreFormPropertyGroup ;
+ sh:name "LCGFT Form Genre Terms" ;
+ sh:nodeKind sh:IRI ;
+ skos:editorialNote "Use look up service; LCGFT is too big to load directly into an RDF editor, and more importantly we don't want to create MADSAuthorities, only link to them." .
   
 # TODO decide what Items can be part of an Item of a Monograph
       
