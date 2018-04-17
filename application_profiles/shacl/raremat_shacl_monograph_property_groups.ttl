@@ -29,6 +29,172 @@
 #
 # ////////// PROPERTY GROUP DEFINITIONS ////////// #
 #
+
+# ///// WORK PROPERTY GROUPS ///////////////////////////////////////////////////////////////
+
+raremat_shapes_monograph_property_groups:WorkTitlePropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Titles" ;
+  sh:description "To group title information for the resource." ;
+  sh:order "0"^^xsd:decimal .
+
+raremat_shapes_monograph_property_groups:WorkActivityPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Work Agent and Capture Information" ;
+  sh:description "To group Agent role information for the resource." ;
+  sh:order "1"^^xsd:decimal .
+  
+raremat_shapes_monograph_property_groups:WorkSubjectGenreFormPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Type and Genre" ;
+  sh:description "To group type, Genre, and Form information for the resource." ;
+  sh:order "2"^^xsd:decimal .
+  
+raremat_shapes_monograph_property_groups:WorkLanguageFormPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Language" ;
+  sh:description "To group language information for the resource." ;
+  sh:order "3"^^xsd:decimal .
+  
+raremat_shapes_monograph_property_groups:WorkToInstancePropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Related Instances" ;
+  sh:description "Instances of this work" ;
+  sh:order "4"^^xsd:decimal .
+  
+raremat_shapes_monograph_property_groups:WorkNotePropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Item notes" ;
+  sh:order "5"^^xsd:decimal .
+  
+raremat_shapes_monograph_property_groups:WorkAwardReceiptPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Awards received" ;
+  sh:order "6"^^xsd:decimal .
+  
+raremat_shapes_monograph_property_groups:WorkIdentifierPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Item notes" ;
+  sh:order "7"^^xsd:decimal .
+  
+raremat_shapes_monograph_property_groups:WorkToWorkPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Related Works" ;
+  sh:order "8"^^xsd:decimal .
+
+
+# ///// INSTANCE PROPERTY GROUPS ///////////////////////////////////////////////////////////
+
+raremat_shapes_monograph_property_groups:InstanceTitlePropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Titles" ;
+  sh:description "To group title information for the resource." ;
+  sh:order "0"^^xsd:decimal .
+
+raremat_shapes_monograph_property_groups:InstanceTypePropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Istance Carrier Type" ;
+  sh:order ""^^xsd:decimal .
+  
+raremat_shapes_monograph_property_groups:InstanceActivityPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Instance Agents and Roles" ;
+  sh:description "To group Agent role information for the resource." ;
+  sh:order ""^^xsd:decimal .
+  
+raremat_shapes_monograph_property_groups:InstancePartsAccompanimentsPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Instance Parts and Accompaniments" ;
+  sh:order ""^^xsd:decimal .
+
+raremat_shapes_monograph_property_groups:InstancePaginationFoliationPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Instance Pagination and Foliation" ;
+  sh:order ""^^xsd:decimal .
+
+raremat_shapes_monograph_property_groups:InstanceMeasurementGroupPropertyGroup  
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Measurements" ;
+  sh:description "To group measurement information for the resource." ;
+  sh:order ""^^xsd:decimal .
+  
+raremat_shapes_monograph_property_groups:InstanceOfWorkPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Instance of Work" ;
+  sh:order ""^^xsd:decimal .
+  
+raremat_shapes_monograph_property_groups:InstanceHasItemPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Has item" ;
+  sh:order ""^^xsd:decimal .
+
+raremat_shapes_monograph_property_groups:InstanceAwardReceiptPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Awards received" ;
+  sh:order ""^^xsd:decimal .
+
+raremat_shapes_monograph_property_groups:InstanceNotePropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Item notes" ;
+  sh:order ""^^xsd:decimal .
+  
+raremat_shapes_monograph_property_groups:InstanceIdentifierPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Item identifiers" ;
+  sh:order ""^^xsd:decimal .
+
+
+
+# ///// ITEM PROPERTY GROUPS ///////////////////////////////////////////////////////////////
+
+raremat_shapes_monograph_property_groups:ItemTitlePropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Titles" ;
+  sh:description "To group title information for the resource." ;
+  sh:order "0"^^xsd:decimal .
+  
+raremat_shapes_monograph_property_groups:ItemActivityPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Item Agent and Roles" ;
+  sh:description "To group Agent role information for the resource." ;
+  sh:order ""^^xsd:decimal .
+  
+raremat_shapes_monograph_property_groups:ItemPartsAccompanimentsPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Instance Parts and Accompaniments" ;
+  sh:description "To group parts and accompaniments of an item" ;
+  sh:order ""^^xsd:decimal .
+  
+raremat_shapes_monograph_property_groups:ItemPaginationFoliationPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Item Pagination and Foliation" ;
+  sh:order ""^^xsd:decimal .
+  
+raremat_shapes_monograph_property_groups:ItemMeasurementGroupPropertyGroup  
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Measurements" ;
+  sh:description "To group measurement information for the resource." ;
+  sh:order ""^^xsd:decimal .
+  
+raremat_shapes_monograph_property_groups:ItemOfInstancePropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Item of" ;
+  sh:order ""^^xsd:decimal .
+  
+raremat_shapes_monograph_property_groups:ItemAwardReceiptPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Awards received" ;
+  sh:order ""^^xsd:decimal .
+  
+raremat_shapes_monograph_property_groups:ItemNotePropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Item notes" ;
+  sh:order ""^^xsd:decimal .
+  
+raremat_shapes_monograph_property_groups:InstanceIdentifierPropertyGroup
+rdf:type sh:PropertyGroup ;
+  rdfs:label "Item identifiers" ;
+  sh:order ""^^xsd:decimal .
     
 raremat_shapes_monograph_property_groups:ItemHistoryAndProvenancePropertyGroup
     a sh:PropertyGroup ;
