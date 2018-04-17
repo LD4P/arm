@@ -93,7 +93,13 @@ raremat_shapes_monograph_property_groups:InstanceTitlePropertyGroup
 
 raremat_shapes_monograph_property_groups:InstanceTypePropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Istance Carrier Type" ;
+  rdfs:label "Instance Carrier Type" ;
+  sh:order ""^^xsd:decimal .
+  
+raremat_shapes_monograph:InstanceGenreFormPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Instance Genre" ;
+  sh:description "To group Instance Genres." ;
   sh:order ""^^xsd:decimal .
   
 raremat_shapes_monograph_property_groups:InstanceActivityPropertyGroup
@@ -159,6 +165,12 @@ raremat_shapes_monograph_property_groups:ItemActivityPropertyGroup
   sh:description "To group Agent role information for the resource." ;
   sh:order ""^^xsd:decimal .
   
+raremat_shapes_monograph:ItemGenreFormPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Item genre" ;
+  sh:description "To group Item Genres." ;
+  sh:order ""^^xsd:decimal .
+  
 raremat_shapes_monograph_property_groups:ItemPartsAccompanimentsPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Instance Parts and Accompaniments" ;
@@ -191,7 +203,7 @@ raremat_shapes_monograph_property_groups:ItemNotePropertyGroup
   rdfs:label "Item notes" ;
   sh:order ""^^xsd:decimal .
   
-raremat_shapes_monograph_property_groups:InstanceIdentifierPropertyGroup
+raremat_shapes_monograph_property_groups:ItemIdentifierPropertyGroup
 rdf:type sh:PropertyGroup ;
   rdfs:label "Item identifiers" ;
   sh:order ""^^xsd:decimal .
