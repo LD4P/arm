@@ -1,4 +1,5 @@
 @prefix aat: <http://vocab.getty.edu/aat/> .
+@prefix bibliotek-o_shapes_audio: <http://bibliotek-o.org/shapes/audio/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix core: <http://vivoweb.org/ontology/core#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -2042,6 +2043,10 @@ raremat_shapes_monograph:FontForm_ex_hasStyle sh:path ex:hasStyle ;
       sh:description "Styles include bold, italic, etc. A resource may have more than one style; e.g., a font may be both bold and italic, by repeating the style field on a particular font" .
 
 # /////// Handwriting FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+# TODO ^^^^^^^^^^^^^^
+
+# /////// Font FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
 # TODO ^^^^^^^^^^^^^^
 
