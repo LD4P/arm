@@ -2,6 +2,7 @@
 @prefix bibliotek-o_shapes_audio: <http://bibliotek-o.org/shapes/audio/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix core: <http://vivoweb.org/ontology/core#> .
+@prefix crm: http://www.cidoc-crm.org/cidoc-crm/ .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ex: <http://example.org/> .
 @prefix gn: <http://www.geonames.org/ontology/> .
