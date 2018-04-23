@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF
+    xmlns="https://w3id.org/arm/core/activity/" 
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"  
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    > 
+    
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // ONTOLOGY DECLARATION
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+    <owl:Ontology rdf:about="http://example.org/"> <!-- update domain when known -->
+        <owl:ontologyIRI rdf:resource="http://example.org/"/> <!-- update domain when known -->
+        <owl:versionIRI rdf:resource="http://example.org/"/>   <!-- update domain and version number when known -->
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1</owl:versionInfo>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+        <rdfs:label xml:lang="en">Rare Materials Ontology</rdfs:label>
+        <rdfs:comment xml:lang="en">The Rare Materials Ontology is an extension to the BIBFRAME ontology for modeling rare materials metadata.</rdfs:comment>
+        <vann:preferredNamespacePrefix>rare</vann:preferredNamespacePrefix>
+        <dcterms:title xml:lang="en">Rare Materials Ontology</dcterms:title>
+        <voaf:extends rdf:resource="http://id.loc.gov/ontologies/bibframe/"/>
+        <voaf:specializes rdf:resource="http://id.loc.gov/ontologies/bibframe/"/>
+    </owl:Ontology>
+    
+</rdf:RDF>
