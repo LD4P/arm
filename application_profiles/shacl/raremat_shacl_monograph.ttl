@@ -1477,8 +1477,7 @@ raremat_shapes_monograph:NoteForm
   
 raremat_shapes_monograph:NoteForm_rdf_type sh:path rdf:type ;
       sh:name "Type of Note" ;
-      sh:minCount "1" ;
-      sh:maxCount "1" .     
+      sh:minCount "1" .     
 
 raremat_shapes_monograph:NoteForm_rdf_value sh:path rdf:value ;
       sh:minCount "1" ;
