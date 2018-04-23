@@ -1,5 +1,4 @@
 @prefix aat: <http://vocab.getty.edu/aat/> .
-@prefix bibliotek-o_shapes_audio: <http://bibliotek-o.org/shapes/audio/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix core: <http://vivoweb.org/ontology/core#> .
 @prefix crm: http://www.cidoc-crm.org/cidoc-crm/ .
@@ -1250,7 +1249,7 @@ raremat_shapes_monograph:MonographicWorkActivityForm_bf_place sh:path bf:place;
       sh:name "Location" ;
       sh:class gn:Feature ;
       sh:nodeKind sh:IRI ;
-      bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService .
+      raremat_shapes_monograph:lookup raremat_shapes_monograph:LD4LookupService .
 
 # /////// Instance Activity FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
@@ -1297,7 +1296,7 @@ raremat_shapes_monograph:MonographicInstanceActivityForm_bf_place sh:path bf:pla
       sh:name "Location" ;
       sh:class gn:Feature ;
       sh:nodeKind sh:IRI ;
-      bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService .
+      raremat_shapes_monograph:lookup raremat_shapes_monograph:LD4LookupService .
      
 
 # /////// MeasurementGroup FORM BEGINS HERE ////////////////////////////////////////////////////////////

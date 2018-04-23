@@ -3,7 +3,6 @@
 @prefix aat: <http://vocab.getty.edu/aat/> .
 @prefix arm: <https://w3id.org/arm/ontologies/core/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
-@prefix bibliotek-o_shapes_audio: <http://bibliotek-o.org/shapes/audio/> .
 @prefix core: <http://vivoweb.org/ontology/core#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix gn: <http://www.geonames.org/ontology/> .
@@ -43,9 +42,6 @@
 # QUESTIONS
 #
 # Lookup service
-# - Use raremat_shapes_monograph:lookup raremat_shapes_monograph:LD4LookupService or
-# bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService?
-# Are these the same thing just with different names, one for raremat and one for HipHop?
 # - How to indicate what to look up?
 #
 # Do we specify both targetClass of a form shape and sh:class of 
@@ -336,7 +332,7 @@
             sh:description "" ;      
             sh:group :ExhibitionEventActivityPropertyGroup ; 
             sh:order "0"^^xsd:decimal ; 
-            bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService ;
+            raremat_shapes_monograph:lookup raremat_shapes_monograph:LD4LookupService ;
             tosh:editWidget swa:NestedObjectEditor ;
         ]
     ) .  
@@ -351,7 +347,7 @@
             sh:description "Agent of this activity" ;      
             sh:group :ExhibitionEventActivityPropertyGroup ; 
             sh:order "0"^^xsd:decimal ; 
-            bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService ;
+            raremat_shapes_monograph:lookup raremat_shapes_monograph:LD4LookupService ;
             tosh:editWidget swa:NestedObjectEditor ;
         ]
     ) . 
