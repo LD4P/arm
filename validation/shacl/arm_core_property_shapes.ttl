@@ -1,0 +1,170 @@
+@prefix : <https://w3id.org/arm/validation/shacl/arm_core_property_shapes/> .
+
+@prefix aat: <http://vocab.getty.edu/aat/> .
+@prefix arm: <https://w3id.org/arm/ontologies/core/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix bibliotek-o_shapes_audio: <http://bibliotek-o.org/shapes/audio/> .
+@prefix core: <http://vivoweb.org/ontology/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix edtf: <http://id.loc.gov/datatypes/edtf/> .
+@prefix gn: <http://www.geonames.org/ontology/> .
+@prefix gvp: <http://vocab.getty.edu/ontology#> .
+@prefix lingvo: <http://www.lingvoj.org/ontology#> .
+@prefix madsrdf: <http://www.loc.gov/standards/mads/rdf/v1.rdf#> .
+@prefix measurement: <https://w3id.org/arm/ontologies/measurement/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#
+# ///// ARM CORE PROPERTY SHAPES - MAY BE EXTENDED BY UI SHAPES ///// #
+#
+
+# 
+# TODO 
+#
+# - If this file grows too large, break up in some way - 
+# maybe by ontology namespace - i.e., BF properties, ARM properties, etc.?
+# - Should dates be typed edtf:EDTF, or is it just recommended?
+#
+# Questions on lookup service
+# - Use raremat_shapes_monograph:lookup raremat_shapes_monograph:LD4LookupService or
+# bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService?
+# Are these the same thing just with different names, one for raremat and one for HipHop?
+# - How to indicate what to look up?
+#
+#
+
+:arm_atLocation
+    a sh:PropertyShape ;
+    sh:path arm:atLocation ;
+    sh:nodeKind sh:IRI ;
+    sh:class gn:Feature ;
+    # Would need custom validation for the :lookup predicate
+    # TODO How do we indicate what to look up? In this case it's LC subject authorities
+    bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService ;
+    .
+    
+:arm_covers
+    a sh:PropertyShape ;
+    sh:path arm:covers ;
+    sh:nodeKind sh:IRI ;
+    # Would need custom validation for the :lookup predicate
+    # TODO How do we indicate what to look up? In this case it's LC subject authorities
+    bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService ;
+    .
+    
+:arm_endDate 
+    a sh:PropertyShape ;
+    sh:path arm:endDate ;
+    sh:nodeKind sh:Literal ; 
+    # sh:datatype edtf:EDTF ; 
+    sh:maxCount 1 ;
+    .
+    
+:arm_hasActivity 
+    a sh:PropertyShape ;
+    sh:path arm:hasActivity ;
+    sh:nodeKind sh:IRI ; 
+    sh:class arm:Activity ;
+    .
+
+:arm_hasArrangement 
+    a sh:PropertyShape ;
+    sh:path arm:hasArrangement ;
+    sh:nodeKind sh:IRI ; 
+    sh:class arm:Arrangement ;
+    .
+    
+:arm_startDate 
+    a sh:PropertyShape ;
+    sh:path arm:startDate ;
+    sh:nodeKind sh:Literal ;
+    # sh:datatype edtf:EDTF ; 
+    sh:maxCount 1 ;
+    .
+
+:bf_agent
+    a sh:PropertyShape ;
+    sh:path bf:agent ;
+    sh:class bf:Agent ;
+    sh:nodeKind sh:IRI ;
+    # An Activity always has a unique agent. But might we use bf:agent with 
+    # other subject types, where it wouldn't be unique?
+    # sh:maxCount 1 ;
+    # Would need custom validation
+    # TODO How do we indicate what to look up? In this case it's LC subject authorities
+    bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService ;
+    .
+    
+:bf_date
+    a sh:PropertyShape ;
+    sh:path bf:date ;
+    sh:nodeKind sh:Literal ;
+    # sh:datatype edtf:EDTF ;
+    .
+    
+:bf_identifiedBy
+    a sh:PropertyShape ;
+    sh:path bf:identifiedBy ;
+    sh:nodeKind sh:IRI ;
+    sh:class bf:Identifier ;
+    .
+       
+:bf_note
+    a sh:PropertyShape ;
+    sh:path bf:note ;
+    # Possible note types depend on the form context; omit here
+    sh:nodeKind sh:IRI ;
+    .
+    
+:bf_subject
+    a sh:PropertyShape ;
+    sh:path bf:subject ;
+    sh:nodeKind sh:IRI ;
+    # Would need custom validation for the :lookup predicate
+    # TODO How do we indicate what to look up? In this case it's LC subject authorities
+    bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService ;
+    .
+       
+:bf_title 
+    a sh:PropertyShape ;
+    sh:path bf:title ;
+    sh:nodeKind sh:IRI ; 
+    sh:class bf:Title ;
+    . 
+    
+:dcterms_hasPart
+    a sh:PropertyShape ;
+    sh:path dcterms:hasPart ;
+    # Not required by the predicate (which is an RDF property) but this is how our models use it.
+    sh:nodeKind sh:IRI ;
+    .
+    
+:dcterms_isPartOf
+    a sh:PropertyShape ;
+    sh:path dcterms:isPartOf ;
+    # Not required by the predicate (which is an RDF property), but this is how our models use it.
+    sh:nodeKind sh:IRI ;
+    .
+    
+:rdf_type
+    a sh:PropertyShape ;
+    sh:path rdf:type ;
+    sh:nodeKind sh:IRI ;
+    .
+    
+:rdf_value
+    a sh:PropertyShape ;
+    sh:path rdf:value ;
+    # Not required by the predicate, but this is how our models use it.
+    sh:nodeKind sh:IRI ;
+    .
