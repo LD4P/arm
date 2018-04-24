@@ -149,6 +149,12 @@ raremat_shapes_monograph:InstanceGenreFormPropertyGroup
 
 # ///// ITEM PROPERTY GROUPS ///////////////////////////////////////////////////////////////
 
+ItemTypePropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Item type" ;
+  sh:description "To group Item type information for the resource." ;
+  sh:order "0"^^xsd:decimal .
+  
 :ItemTitlePropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Titles" ;
