@@ -2084,7 +2084,7 @@ raremat_shapes_monograph:FontForm_arm_hasStyle sh:path arm:hasStyle ;
 
 # TODO ^^^^^^^^^^^^^^
 
-# ///// PROPERTY GROUPS ARE NOW IN https://github.com/LD4P/ArtFrame-RareMat/blob/develop/application_profiles/shacl/raremat_shacl_monograph_property_groups.ttl /////////////////////////////////////////////////////////////
+# ///// PROPERTY GROUPS ARE NOW IN https://github.com/LD4P/arm/blob/develop/application_profiles/raremat_monograph/shacl/raremat_shacl_monograph_property_groups.ttl /////////////////////////////////////////////////////////////
 
 
     
