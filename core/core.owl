@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- TODO Add/remove namespaces as relevant -->
 <rdf:RDF 
     xmlns="https://w3id.org/arm/core/0.1/ontology/"
-    xmlns:arm="https://w3id.org/arm/core/0.1/ontology/"
     xmlns:dcterms="http://purl.org/dc/terms/"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
@@ -21,7 +19,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
     
-    <owl:Ontology rdf:about="https://w3id.org/arm/core/ontology/"> 
+    <owl:Ontology rdf:about="https://w3id.org/arm/core/ontology/0.1/"> 
         <owl:ontologyIRI rdf:resource="https://w3id.org/arm/core/ontology/"/> 
         <owl:versionIRI rdf:resource="https://w3id.org/arm/core/0.1/ontology/"/>   
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1</owl:versionInfo>
