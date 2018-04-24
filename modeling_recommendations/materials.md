@@ -115,6 +115,7 @@ Properties
 > - **URI**: TBD
 > - **Definition**: Relates a resource to a physical or chemical substance that it consists of or is constructed from, either in whole or in part. 
 > - **Example**: Linen rag or wood pulp for paper, leather or cloth for a binding, bronze or glass for a sculpture, etc.
+> - **Scope note**: Distinct from ex:hasSource, which specifies an external organization or scheme from which the resource was obtained.
 > - **Domain**: unspecified
 > - **Range**: unspecified
 > - **Inverse**: isMaterialOf
@@ -124,6 +125,7 @@ Properties
 > - **URI**: TBD
 > - **Definition**: Relates a physical or chemical substance to an object that consists of or is constructed from it, either in whole or in part.
 > - **Example**: Linen rag or wood pulp for paper, leather or cloth for a binding, bronze or glass for a sculpture, etc.
+> - **Scope note**: Distinct from ex:isSourceOf, which describes an external organization or scheme from which the object resource was obtained.
 > - **Domain**: unspecified
 > - **Range**: unspecified
 > - **Inverse**: hasMaterial

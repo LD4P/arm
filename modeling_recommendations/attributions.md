@@ -24,7 +24,7 @@ by the Library of Congress have not yet addressed this concept.
 ---------------------------
 
 This model proposes a new object property (ex:hasAttribution) and a class (ex:Attribution). Necessary information such as dates of 
-the attribution; agent responsible for making the attribution and/or the source on which this attribution is based can associated 
+the attribution, agent responsible for making the attribution, and/or the source on which this attribution is based can be associated 
 directly with this Attribution node. Complex information that cannot easily be expressed in structured form should be recorded in 
 a bf:Note.
 
@@ -34,8 +34,9 @@ a bf:Note.
 **ex:Attribution**
 > - **Label:** Attribution
 > - **IRI:** TBD
-> - **Definition:** The activity of ascribing a work to a particular agent or agents. This attribution may change over time 
-                    based on new evidence.
+> - **Definition:** The ascribing of an activity to a particular agent or agents. This attribution may change over time based on new evidence.  
+> - **Scope note:** The Attribution is directly related to an Activity, and carries additional data about the agent, source, date, etc. of the attribution.
+> - **Example:** The activity of creating an artwork is ascribed to a particular artist.
 
 **ex:Activity**
 > - **Label:** Activity
@@ -70,14 +71,14 @@ may be used as provided by the ontology.
 **ex:hasAttribution (object property)**
 > - **Label:** has attribution
 > - **IRI:** TBD
-> - **Definition:** The attribution of an activity of ascribing a work to a particular agent or agents.
+> - **Definition:** Used to attribute an Activity, such as ArtistActivity, to a particular agent or agents: relates the Activity (or other resource) to an Attribution resource, which carries information about the agent, source, date, etc. of the attribution.
 > - **Range:* ex:Attribution
 > - **Inverse:** ex:isAttributionOf
 
 **ex:isAttributionOf (object property)**
 > - **Label:** is attribution of
 > - **IRI:** TBD
-> - **Definition:** Links the attribution to the activity of ascribing a work to a particular agent or agents.
+> - **Definition:** Used to attribute an Activity, such as ArtistActivity, to a particular agent or agents: relates an Attribution resource to the Activity (or other resource), where the Attribution carries information about the agent, source, date, etc. of the attribution. 
 > - **Domain:* ex:Attribution
 > - **Inverse:** ex:hasAttribution
 
