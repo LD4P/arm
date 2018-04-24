@@ -20,7 +20,7 @@
 @prefix vivo: <http://vivoweb.org/ontology/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix : <https://w3id.org/arm/application_profile/raremat_monograph/shacl/raremat_shacl_monograph/> .
+@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_shacl_monograph/> .
 
 #
 # ////////// PROPERTY GROUP DEFINITIONS ////////// #
