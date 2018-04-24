@@ -1,9 +1,8 @@
-@prefix : <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_exhibition_shapes/> .
+@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/> .
 
 @prefix aat: <http://vocab.getty.edu/aat/> .
 @prefix arm: <https://w3id.org/arm/ontologies/core/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
-@prefix core: <http://vivoweb.org/ontology/core#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix gn: <http://www.geonames.org/ontology/> .
 @prefix gvp: <http://vocab.getty.edu/ontology#> .
@@ -12,7 +11,6 @@
 @prefix measurement: <https://w3id.org/arm/ontologies/measurement/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov> .
-@prefix raremat_monograph_node_shapes: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_base_shapes/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
@@ -23,9 +21,9 @@
 @prefix vivo: <http://vivoweb.org/ontology/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix raremat_monograph_base_shapes: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_base_shapes/> .
+@prefix raremat_monograph_base: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_base/> .
 @prefix arm_core_property_shapes: <https://w3id.org/arm/validation/shacl/arm_core_property_shapes/> .
-@prefix raremat_shapes_monograph: <https://w3id.org/arm/application_profiles/shacl/raremat_shacl_monograph/> .
+@prefix raremat_shacl_monograph: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_shacl_monograph/> .
 
 #
 # TODO
@@ -44,7 +42,7 @@
 # Lookup service
 # - How to indicate what to look up?
 # TODO Specify lookup sources via restriction PropertyShapes: see for example
-# raremat_shapes_monograph:MaterialForm_crm_P2_has_type_gvp_broader_Extended 
+# raremat_shacl_monograph:MaterialForm_crm_P2_has_type_gvp_broader_Extended 
 #
 
 
@@ -57,7 +55,7 @@
     # NON-VALIDATING   
     sh:name "Exhibition" ; 
     sh:description "An exhibition this item was displayed in." ;  
-    sh:group raremat_shapes_monograph:ItemHistoryAndProvenancePropertyGroup ;     
+    sh:group raremat_shacl_monograph:ItemHistoryAndProvenancePropertyGroup ;     
     sh:order "0"^^xsd:decimal ;   
     tosh:editWidget swa:NestedObjectEditor .
     
@@ -95,6 +93,8 @@
             sh:group :ExhibitionEventLocationPropertyGroup ; 
             sh:order "0"^^xsd:decimal ; 
             tosh:editWidget swa:NestedObjectEditor ;
+            # TODO How do we indicate what to look up? In this case it's LC subject authorities
+            raremat_shacl_monograph:lookup raremat_shacl_monograph:LD4LookupService ;
         ]
     ) .
     
@@ -123,6 +123,8 @@
             sh:group :ExhibitionEventLocationPropertyGroup ; 
             sh:order "0"^^xsd:decimal ; 
             tosh:editWidget swa:NestedObjectEditor ;
+            # TODO How do we indicate what to look up? In this case it's LC subject authorities
+            raremat_shacl_monograph:lookup raremat_shacl_monograph:LD4LookupService ;
         ]
     ) .
     
@@ -167,7 +169,6 @@
     ) .
      
      
-     ** REMOVE??  
 :ExhibitionEventForm_bf_note
     a sh:PropertyShape ;
     sh:and (
@@ -175,7 +176,7 @@
         [   
             sh:class [
                 sh:in ( arm:DescriptiveNote arm:SummaryNote bf:Note )
-            ]      
+            ] ;     
             # NON-VALIDATING
             sh:name "Exhibition note" ; 
             sh:description "Additional textual notes about this exhibition." ;   
@@ -185,7 +186,6 @@
         ]
     ) .
     
-    ** REMOVE??
 :ExhibitionEventForm_bf_subject
     a sh:PropertyShape ;
     sh:and (
@@ -197,10 +197,11 @@
             sh:group :ExhibitionEventSubjectAndCoveragePropertyGroup ;   
             sh:order "0"^^xsd:decimal ;   
             tosh:editWidget swa:NestedObjectEditor ;
+            # TODO How do we indicate what to look up? In this case it's LC subject authorities
+            raremat_shacl_monograph:lookup raremat_shacl_monograph:LD4LookupService ;
         ]
     ) .
  
-  ** REMOVE??
 :ExhibitionEventForm_bf_title
     sh:and (
         arm_core_property_shapes:bf_title 
@@ -235,16 +236,16 @@
 
 :ExhibitionEventNoteForm 
     sh:and (
-        raremat_monograph_base_shapes:NoteForm 
+        raremat_monograph_base:NoteForm 
         [
             sh:property :ExhibitionEventNoteForm_rdf_type ;
-        ] ;
+        ] 
     ) ;
     .
 
 # If we don't need to specify the note types here, but only in 
 # :ExhibitionEventNoteForm, then we can use a generalized 
-# raremat_monograph_base_shapes:NoteForm_rdf_type. Check whether we need to
+# raremat_monograph_base:NoteForm_rdf_type. Check whether we need to
 # indicate this in both places.
 :ExhibitionEventNoteForm_rdf_type
     sh:and (
@@ -260,7 +261,7 @@
                 ) ;
             ] ;   
             sh:minCount 1 ;
-            sh:maxCount 1 .
+            sh:maxCount 1 ;
             # NON-VALIDATING
             sh:name "Type of note" ;                
         ]
@@ -325,8 +326,8 @@
             sh:group :ExhibitionEventActivityPropertyGroup ; 
             sh:order "0"^^xsd:decimal ;
             # TODO Specify lookup sources via restriction PropertyShapes: see for example
-            # raremat_shapes_monograph:MaterialForm_crm_P2_has_type_gvp_broader_Extended 
-            raremat_shapes_monograph:lookup raremat_shapes_monograph:LD4LookupService ;
+            # raremat_shacl_monograph:MaterialForm_crm_P2_has_type_gvp_broader_Extended 
+            raremat_shacl_monograph:lookup raremat_shacl_monograph:LD4LookupService ;
             tosh:editWidget swa:NestedObjectEditor ;
         ]
     ) .  
@@ -342,8 +343,8 @@
             sh:group :ExhibitionEventActivityPropertyGroup ; 
             sh:order "0"^^xsd:decimal ; 
             # TODO Specify lookup sources via restriction PropertyShapes: see for example
-            # raremat_shapes_monograph:MaterialForm_crm_P2_has_type_gvp_broader_Extended 
-            raremat_shapes_monograph:lookup raremat_shapes_monograph:LD4LookupService ;
+            # raremat_shacl_monograph:MaterialForm_crm_P2_has_type_gvp_broader_Extended 
+            raremat_shacl_monograph:lookup raremat_shacl_monograph:LD4LookupService ;
             tosh:editWidget swa:NestedObjectEditor ;
         ]
     ) . 
@@ -366,7 +367,7 @@
         [   
             sh:class [
                 sh:in ( arm:DescriptiveNote bf:Note )
-            ]      
+            ] ;     
             # NON-VALIDATING
             sh:name "Note on the activity" ; 
             sh:description "Additional textual note about this activity." ;   
