@@ -722,8 +722,8 @@ raremat_shapes_monograph:InstanceForm rdf:type rdfs:Class ;
   sh:property raremat_shapes_monograph:InstanceForm_measurement_hasMeasurementGroup ;
   sh:property raremat_shapes_monograph:InstanceForm_measurement_hasSignatureStatement ;
   sh:property raremat_shapes_monograph:InstanceForm_measurement_hasMaterial ;
-  sh:property raremat_shapes_monograph:InstanceForm_arm_hasBaseMaterial ;
-  sh:property raremat_shapes_monograph:InstanceForm_arm_hasAppliedMaterial ;
+  sh:property raremat_shapes_monograph:ItemForm_rdau_P60596 ;
+  sh:property raremat_shapes_monograph:ItemForm_rdau_P60159 ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_note ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_identifiedBy .
 
@@ -877,7 +877,7 @@ raremat_shapes_monograph:InstanceForm_arm_hasMaterial sh:path arm:hasMaterial ;
       tosh:editWidget swa:NestedObjectEditor .
 
 
-raremat_shapes_monograph:InstanceForm_arm_hasBaseMaterial sh:path arm:hasBaseMaterial ;
+raremat_shapes_monograph:ItemForm__rdau_P60596 sh:path rdau:P60596 ;
       sh:class <http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#E57> ;
       sh:group raremat_shapes_monograph:InstancePhysicalDescriptionPropertyGroup ;
       sh:description "Base materials for this this instance. Base materials can also be more granularly associated with each part of the instance." ;
@@ -886,8 +886,7 @@ raremat_shapes_monograph:InstanceForm_arm_hasBaseMaterial sh:path arm:hasBaseMat
       sh:order ""^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
   
-  
-raremat_shapes_monograph:InstanceForm_arm_hasAppliedMaterial sh:path arm:hasAppliedMaterial ;
+raremat_shapes_monograph:ItemForm_rdau_P60159 sh:path rdau:P60159 ;
       sh:class <http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#E57> ;
       sh:group raremat_shapes_monograph:InstancePhysicalDescriptionPropertyGroup ;
       sh:description "Applied materials for this this instance. Applied materials can also be more granularly associated with each part of the instance." ;
