@@ -85,7 +85,9 @@
     
     <owl:Class rdf:about="http://example.org/Attribution">
         <rdfs:label xml:lang="en">Attribution</rdfs:label>    
-        <skos:definition xml:lang="en">The activity of ascribing a work to a particular agent or agents. This attribution may change over time based on new evidence.</skos:definition>
+        <skos:definition xml:lang="en">The ascribing of an activity to a particular agent or agents. This attribution may change over time based on new evidence.</skos:definition>
+        <skos:scopeNote xml:lang="en">The Attribution is directly related to an Activity, and carries additional data about the agent, source, date, etc. of the attribution.</skos:scopeNote>
+        <skos:example xml:lang="en">The activity of creating an artwork is ascribed to a particular artist.</skos:example>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -700,7 +702,7 @@
     
     <owl:ObjectProperty rdf:about="http://example.org/hasAttribution">
         <rdfs:label xml:lang="en">has attribution</rdfs:label>
-        <skos:definition xml:lang="en">The attribution of an activity of ascribing a work to a particular agent or agents.</skos:definition>
+        <skos:definition xml:lang="en">Used to attribute an Activity, such as ArtistActivity, to a particular agent or agents: relates the Activity (or other resource) to an Attribution resource, which carries information about the agent, source, date, etc. of the attribution.</skos:definition>
         <rdfs:range rdf:resource="http://example.org/Attribution"/> 
         <owl:inverseOf rdf:resource="http://example.org/isAttributionOf"/>
         <dcterms:issued></dcterms:issued>
@@ -740,6 +742,16 @@
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>  
+
+    <owl:ObjectProperty rdf:about="http://example.org/hasMaterial">
+        <rdfs:label xml:lang="en">has material</rdfs:label>    
+        <skos:definition xml:lang="en">Relates a resource to a physical or chemical substance that it consists of or is constructed from, either in whole or in part.</skos:definition>
+        <skos:scopeNote xml:lang="en">Distinct from ex:hasSource, which specifies an external organization or scheme from which the resource was obtained.</skos:scopeNote>
+        <skos:example xml:lang="en">Linen rag or wood pulp for paper, leather or cloth for a binding, bronze or glass for a sculpture, etc.</skos:example>
+        <owl:inverseOf rdf:resource="http://example.org/isMaterialOf"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
     
     <owl:ObjectProperty rdf:about="http://example.org/hasOrigin">
         <rdfs:label xml:lang="en">has origin</rdfs:label>    
@@ -832,10 +844,10 @@
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty> 
-    
+        
     <owl:ObjectProperty rdf:about="http://example.org/isAttributionOf">
         <rdfs:label xml:lang="en">is attribution of</rdfs:label>
-        <skos:definition xml:lang="en">Links the attribution to the activity of ascribing a work to a particular agent or agents.</skos:definition>
+        <skos:definition xml:lang="en">Used to attribute an Activity, such as ArtistActivity, to a particular agent or agents: relates an Attribution resource to the Activity (or other resource), where the Attribution carries information about the agent, source, date, etc. of the attribution.</skos:definition>
         <rdfs:domain rdf:resource="http://example.org/Attribution"/> 
         <owl:inverseOf rdf:resource="http://example.org/hasAttribution"/>
         <dcterms:issued></dcterms:issued>
@@ -891,7 +903,17 @@
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:ObjectProperty>
- 
+
+    <owl:ObjectProperty rdf:about="http://example.org/isMaterialOf">
+        <rdfs:label xml:lang="en">has material</rdfs:label>    
+        <skos:definition xml:lang="en">Relates a physical or chemical substance to an object that consists of or is constructed from it, either in whole or in part.</skos:definition>
+        <skos:scopeNote xml:lang="en">Distinct from ex:isSourceOf, which describes an external organization or scheme from which the object resource was obtained.</skos:scopeNote>
+        <skos:example xml:lang="en">Linen rag or wood pulp for paper, leather or cloth for a binding, bronze or glass for a sculpture, etc.</skos:example>
+        <owl:inverseOf rdf:resource="http://example.org/hasMaterial"/>
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:ObjectProperty>
+    
     <owl:ObjectProperty rdf:about="http://example.org/isOnCarrier">
         <rdfs:label xml:lang="en">is on carrier</rdfs:label>
         <skos:definition xml:lang="en">The resource being described is on or contained in a particular physical form, such as a volume, a sheet of paper, or a computer disk.</skos:definition>
