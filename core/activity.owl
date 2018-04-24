@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <rdf:RDF
-    xmlns="https://w3id.org/arm/core/activity/" 
+    xmlns="https://w3id.org/arm/core/activity/0.1/" 
     xmlns:dcterms="http://purl.org/dc/terms/"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
@@ -19,18 +19,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
     
-    <owl:Ontology rdf:about="http://example.org/"> <!-- update domain when known -->
-        <owl:ontologyIRI rdf:resource="http://example.org/"/> <!-- update domain when known -->
-        <owl:versionIRI rdf:resource="http://example.org/"/>   <!-- update domain and version number when known -->
+    <owl:Ontology rdf:about="https://w3id.org/arm/core/activity/0.1/">
+        <owl:ontologyIRI rdf:resource="https://w3id.org/arm/core/activity/"/> 
+        <owl:versionIRI rdf:resource="https://w3id.org/arm/core/activity/0.1/"/>   
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1</owl:versionInfo>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
-        <rdfs:label xml:lang="en">Rare Materials Ontology</rdfs:label>
-        <rdfs:comment xml:lang="en">The Rare Materials Ontology is an extension to the BIBFRAME ontology for modeling rare materials metadata.</rdfs:comment>
-        <vann:preferredNamespacePrefix>rare</vann:preferredNamespacePrefix>
-        <dcterms:title xml:lang="en">Rare Materials Ontology</dcterms:title>
-        <voaf:extends rdf:resource="http://id.loc.gov/ontologies/bibframe/"/>
-        <voaf:specializes rdf:resource="http://id.loc.gov/ontologies/bibframe/"/>
+        <rdfs:label xml:lang="en">Activity classes for the Art and Rare Materials Ontology</rdfs:label>
+        <skos:definition xml:lang="en">The Art and Rare Materials Ontology provides specialized modeling of bibliographic metadata in the art and rare materials domains. It is an extension to the BIBFRAME ontology for general bibliographic description.</skos:definition>
+        <vann:preferredNamespacePrefix>armact</vann:preferredNamespacePrefix>
+        <dcterms:title xml:lang="en">Activity classes for the Art and Rare Materials Ontology</dcterms:title>
     </owl:Ontology>
     
 </rdf:RDF>

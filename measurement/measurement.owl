@@ -26,7 +26,7 @@
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
         <rdfs:label xml:lang="en">Measurement Ontology</rdfs:label>
-        <rdfs:comment xml:lang="en">The Measurement Ontology provides terms to model physical, digital, or other types of measurements. Appropriate vocabularies may be selected by the implementer for units, dimensions, arrangements, and resources measured.</rdfs:comment>
+        <skos:definition xml:lang="en">The Measurement Ontology provides terms to model physical, digital, or other types of measurements. Appropriate vocabularies may be selected by the implementer for units, dimensions, arrangements, and resources measured.</skos:definition>
         <vann:preferredNamespacePrefix>meas</vann:preferredNamespacePrefix>
         <dcterms:title xml:lang="en">Measurement Ontology</dcterms:title>
     </owl:Ontology>

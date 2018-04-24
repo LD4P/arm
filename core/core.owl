@@ -26,7 +26,7 @@
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
         <rdfs:label xml:lang="en">Art and Rare Materials Ontology</rdfs:label>
-        <rdfs:comment xml:lang="en">The Art and Rare Materials Ontology provides specialized modeling of bibliographic metadata in the art and rare materials domains. It is an extension to the BIBFRAME ontology for general bibliographic description.</rdfs:comment>
+        <skos:definition xml:lang="en">The Art and Rare Materials Ontology provides specialized modeling of bibliographic metadata in the art and rare materials domains. It is an extension to the BIBFRAME ontology for general bibliographic description.</skos:definition>
         <vann:preferredNamespacePrefix>arm</vann:preferredNamespacePrefix>
         <dcterms:title xml:lang="en">Art and Rare Materials Ontology</dcterms:title>
         <voaf:extends rdf:resource="http://id.loc.gov/ontologies/bibframe/"/>

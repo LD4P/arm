@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- 
-    PLEASE NOTE:  THIS IS A WORKING DRAFT ONTOLOGY AND STILL UNDER DEVELOPMENT; this file may change frequently and significantly as development continues.
-    https://w3id.org/arm/custodial_history/ontology/0.1/ is a placeholder namespace for the Custodial History Ontology until a permanent host and namespace are identified.
--->
-
 <rdf:RDF   
     xmlns="https://w3id.org/arm/custodial_history/ontology/0.1/"
     xmlns:dcterms="http://purl.org/dc/terms/"
@@ -32,9 +27,8 @@
         <dcterms:modified></dcterms:modified>
         <rdfs:label xml:lang="en">Custodial History Ontology</rdfs:label>
         <dcterms:title xml:lang="en">Custodial History Ontology</dcterms:title>
-        <rdfs:comment xml:lang="en">The Custodial History Ontology models the custodial history of bibliographic items, including events, such as transfer of ownership, and time periods, such as ownership.</rdfs:comment>
+        <skos:definition xml:lang="en">The Custodial History Ontology models the custodial history of resources, including events, such as transfer of ownership, and time periods, such as ownership. While developed for use in the bibliographic domain, it can be used in other descriptive contexts as well.</skos:definition>
         <vann:preferredNamespacePrefix>cust</vann:preferredNamespacePrefix>
-        <voaf:specializes rdf:resource="http://schema.org/"/>
     </owl:Ontology>
     
     

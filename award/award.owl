@@ -28,7 +28,6 @@
         <skos:definition xml:lang="en">The Award Ontology models awards and their recipients.</skos:definition>
         <vann:preferredNamespacePrefix>award</vann:preferredNamespacePrefix>
         <dcterms:title xml:lang="en">Award Ontology</dcterms:title>
-        <voaf:specializes rdf:resource="https://w3id.org/arm/core/activity/0.1/"/>
     </owl:Ontology>
 
 
