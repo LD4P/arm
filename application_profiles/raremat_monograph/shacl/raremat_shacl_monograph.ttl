@@ -1,5 +1,5 @@
 @prefix aat: <http://vocab.getty.edu/aat/> .
-@prefix arm: <https://w3id.org/arm/ontologies/core/> .
+@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
 @prefix award: <https://w3id.org/arm/ontologies/award/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix core: <http://vivoweb.org/ontology/core#> .
@@ -899,10 +899,10 @@ raremat_shapes_monograph:InstanceForm_arm_writtenIn sh:path arm:writtenIn ;
       sh:or (
          
          [
-           sh:class <https://w3id.org/arm/ontologies/core/Font> ;
+           sh:class <https://w3id.org/arm/core/ontology/0.1/Font> ;
          ]
          [
-           sh:class <https://w3id.org/arm/ontologies/core/Handwriting> ;
+           sh:class <https://w3id.org/arm/core/ontology/0.1/Handwriting> ;
          ]
          
         ) ;
@@ -942,7 +942,7 @@ raremat_shapes_monograph:InstanceForm_bf_hasItem sh:path <http://id.loc.gov/onto
 # ///// PROPERTY SHAPES FOR InstanceAwardReceipt PropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
 raremat_shapes_monograph:InstanceForm_arm_receives sh:path arm:receives ;
-      sh:class <https://w3id.org/arm/ontologies/core/award/AwardReceipt> ;
+      sh:class <https://w3id.org/arm/core/ontology/0.1/award/AwardReceipt> ;
       sh:group raremat_shapes_monograph:InstanceAwardReceiptPropertyGroup ;
       sh:name "Instance award receipt" ;
       sh:nodeKind sh:IRI ;
@@ -963,10 +963,10 @@ raremat_shapes_monograph:InstanceForm_bf_note sh:path <http://id.loc.gov/ontolog
            sh:class <http://id.loc.gov/ontologies/bibframe/Note> ;
          ]
          [
-           sh:class <https://w3id.org/arm/ontologies/core/DescriptiveNote> ;
+           sh:class <https://w3id.org/arm/core/ontology/0.1/DescriptiveNote> ;
          ]
          [
-           sh:class <https://w3id.org/arm/ontologies/core/LimitationNote>
+           sh:class <https://w3id.org/arm/core/ontology/0.1/LimitationNote>
          ]
          
         ) ;
@@ -1087,7 +1087,7 @@ raremat_shapes_monograph:ItemForm_arm_isOnCarrier sh:path arm:isOnCarrier ;
       tosh:editWidget swa:NestedObjectEditor .
 
 raremat_shapes_monograph:ItemForm_measurement_hasMeasurementGroup sh:path measurement:hasMeasurementGroup ;
-      sh:class <https://w3id.org/arm/ontologies/core/maesurement/MeasurementGroup> ;
+      sh:class <https://w3id.org/arm/core/ontology/0.1/maesurement/MeasurementGroup> ;
       sh:group raremat_shapes_monograph:ItemPhysicalDescriptionPropertyGroup ;
       sh:name "Instance measurement information" ;
       sh:nodeKind sh:IRI ;
@@ -1106,7 +1106,7 @@ raremat_shapes_monograph:ItemForm_bf_extent sh:path bf:extent ;
 
       
 raremat_shapes_monograph:ItemForm_arm_hasSignatureStatement sh:path arm:hasSignatureStatement ;
-      sh:class <https://w3id.org/arm/ontologies/core/SignatureStatement> ;
+      sh:class <https://w3id.org/arm/core/ontology/0.1/SignatureStatement> ;
       sh:group raremat_shapes_monograph:ItemPhysicalDescriptionPropertyGroup ;
       sh:description "A formulaic statement describing the pattern followed in assembling the sheets of the book, as expressed in its signatures. Signatures are letters, numerals, symbols, or a group of such characters printed at the foot of the rectos of the first few leaves of each gathering (quire) to aid the binder in correctly assembling the sections." ;
       sh:name "Signature statement" ;
@@ -1175,10 +1175,10 @@ raremat_shapes_monograph:ItemForm_bf_note sh:path <http://id.loc.gov/ontologies/
            sh:class <http://id.loc.gov/ontologies/bibframe/Note> ;
          ]
          [
-           sh:class <https://w3id.org/arm/ontologies/core/DescriptiveNote> ;
+           sh:class <https://w3id.org/arm/core/ontology/0.1/DescriptiveNote> ;
          ]
          [
-           sh:class <https://w3id.org/arm/ontologies/core/LimitationNote>
+           sh:class <https://w3id.org/arm/core/ontology/0.1/LimitationNote>
          ]
          
         ) ;
@@ -1195,7 +1195,7 @@ raremat_shapes_monograph:ItemForm_bf_identifiedBy sh:path <http://id.loc.gov/ont
             sh:class <http://id.loc.gov/ontologies/bibframe/ShelfMark> ;
           ]
           [
-            sh:class <https://w3id.org/arm/ontologies/core/AccessionNumber> ;
+            sh:class <https://w3id.org/arm/core/ontology/0.1/AccessionNumber> ;
           ]
         ) ;
       sh:description "Identifiers for Items" ;
@@ -1717,7 +1717,7 @@ raremat_shapes_monograph:WorkTitleForm_arm_isPreferredTitleOf sh:path arm:isPref
       sh:name "Preferred title of text work (if applicable)" .
     
 raremat_shapes_monograph:WorkTitleForm_bf_note sh:path bf:note ;
-      sh:in ( <http://id.loc.gov/ontologies/bibframe/Note> <https://w3id.org/arm/ontologies/core/DescriptiveNote> <https://w3id.org/arm/ontologies/core/CaptionNote> <https://w3id.org/arm/ontologies/core/InaccuracyNote> ) ;
+      sh:in ( <http://id.loc.gov/ontologies/bibframe/Note> <https://w3id.org/arm/core/ontology/0.1/DescriptiveNote> <https://w3id.org/arm/core/ontology/0.1/CaptionNote> <https://w3id.org/arm/core/ontology/0.1/InaccuracyNote> ) ;
       sh:description "Note about this title" ;
       tosh:editWidget swa:NestedObjectEditor ;
       sh:nodeKind sh:IRI ;
@@ -1817,7 +1817,7 @@ raremat_shapes_monograph:InstanceTitleForm_arm_isPreferredTitleOf sh:path arm:is
       sh:name "Preferred title of text work (if applicable)" .
     
 raremat_shapes_monograph:InstanceTitleForm_bf_note sh:path bf:note ;
-      sh:in ( <http://id.loc.gov/ontologies/bibframe/Note> <https://w3id.org/arm/ontologies/core/DescriptiveNote> <https://w3id.org/arm/ontologies/core/CaptionNote> <https://w3id.org/arm/ontologies/core/InaccuracyNote> ) ;
+      sh:in ( <http://id.loc.gov/ontologies/bibframe/Note> <https://w3id.org/arm/core/ontology/0.1/DescriptiveNote> <https://w3id.org/arm/core/ontology/0.1/CaptionNote> <https://w3id.org/arm/core/ontology/0.1/InaccuracyNote> ) ;
       sh:description "Note about this title" ;
       tosh:editWidget swa:NestedObjectEditor ;
       sh:nodeKind sh:IRI ;
@@ -1917,7 +1917,7 @@ raremat_shapes_monograph:ItemTitleForm_arm_isPreferredTitleOf sh:path arm:isPref
       sh:name "Preferred title of text work (if applicable)" .
     
 raremat_shapes_monograph:ItemTitleForm_bf_note sh:path bf:note ;
-      sh:in ( <http://id.loc.gov/ontologies/bibframe/Note> <https://w3id.org/arm/ontologies/core/DescriptiveNote> <https://w3id.org/arm/ontologies/core/CaptionNote> <https://w3id.org/arm/ontologies/core/InaccuracyNote> ) ;
+      sh:in ( <http://id.loc.gov/ontologies/bibframe/Note> <https://w3id.org/arm/core/ontology/0.1/DescriptiveNote> <https://w3id.org/arm/core/ontology/0.1/CaptionNote> <https://w3id.org/arm/core/ontology/0.1/InaccuracyNote> ) ;
       sh:description "Note about this title" ;
       tosh:editWidget swa:NestedObjectEditor ;
       sh:nodeKind sh:IRI ;
@@ -1940,7 +1940,7 @@ raremat_shapes_monograph:TitleNoteForm
 raremat_shapes_monograph:TitleNoteForm_rdf_type sh:path rdf:type ;
       sh:description "Type of Title" ;
       sh:order "0"^^xsd:decimal ;
-      sh:in ( <http://id.loc.gov/ontologies/bibframe/Note> <https://w3id.org/arm/ontologies/core/DescriptiveNote> <https://w3id.org/arm/ontologies/core/CaptionNote> <https://w3id.org/arm/ontologies/core/InaccuracyNote> ) ;
+      sh:in ( <http://id.loc.gov/ontologies/bibframe/Note> <https://w3id.org/arm/core/ontology/0.1/DescriptiveNote> <https://w3id.org/arm/core/ontology/0.1/CaptionNote> <https://w3id.org/arm/core/ontology/0.1/InaccuracyNote> ) ;
       sh:name "Type of Title" .
 
 raremat_shapes_monograph:TitleNoteForm_rdf_value sh:path rdf:value ;
