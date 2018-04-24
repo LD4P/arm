@@ -1000,6 +1000,8 @@ raremat_shapes_monograph:ItemForm rdf:type rdfs:Class ;
   sh:property raremat_shapes_monograph:ItemForm_raremat_hasActivity ;
   sh:property raremat_shapes_monograph:ItemForm_bf_genreForm ;
   sh:property raremat_shapes_monograph:ItemForm_bf_hasPart ;
+  sh:property raremat_shapes_monograph:ItemForm_bf_partOf ;
+  sh:property raremat_shapes_monograph:ItemForm_arm_isOnCarrier ;
   sh:property raremat_shapes_monograph:ItemForm_bf_extent ;
   sh:property raremat_shapes_monograph:ItemForm_ex_hasMeasurementGroup ;
   sh:property raremat_shapes_monograph:ItemForm_ex_hasSignatureStatement ;
@@ -1950,6 +1952,31 @@ raremat_shapes_monograph:TitleNoteForm_rdf_value sh:path rdf:value ;
       sh:order "1"^^xsd:decimal ;
       sh:nodeKind sh:Literal ;
       sh:name "Title note value" .
+
+# /////// Carrier FORM BEGINS HERE ////////////////////////////////////////////////////////////     
+
+raremat_shapes_monograph:CarrierForm
+  rdf:type sh:NodeShape ;
+  sh:targetObjectsOf arm:isOnCarrier ;
+  rdfs:label "Carrier form" ;
+  sh:property raremat_shapes_monograph:CarrierForm_crm_P2_has_type ;
+  sh:property raremat_shapes_monograph:CarrierForm_arm_carries ;
+  .
+  
+raremat_shapes_monograph:CarrierForm_crm_P2_has_type sh:path crm:P2_has_type ;
+      sh:order "0"^^xsd:decimal ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:nodeKind sh:IRI ;
+      sh:name "Carrier type" ;
+  .
+  
+raremat_shapes_monograph:CarrierForm_arm_carries sh:path arm:carries ;
+      sh:order "1"^^xsd:decimal ;
+      sh:class bf:Item ;
+      sh:nodeKind sh:IRI ;
+      sh:name "Carries" ;
+      sh:description "Items on this carrier" ;
+  .
       
 # /////// SignatureStatement FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
