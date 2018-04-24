@@ -126,6 +126,7 @@
     </owl:Class>
     
     <owl:Class rdf:about="http://example.org/BoundCollection">
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
         <rdfs:label xml:lang="en">Bound collection</rdfs:label>
         <skos:definition xml:lang="en">An artificial gathering of two or more items physically into or on a single carrier, whether bound, affixed, or otherwise brought together into a single bound unit, and lacking a collective title. Includes only collections gathered subsequent to publication, rather than issued or reissued together by the publisher.</skos:definition>
         <dcterms:issued></dcterms:issued>
