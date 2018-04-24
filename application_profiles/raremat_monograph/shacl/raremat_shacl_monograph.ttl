@@ -1012,6 +1012,12 @@ raremat_shapes_monograph:ItemForm rdf:type rdfs:Class ;
   sh:property raremat_shapes_monograph:ItemForm_bf_identifiedBy ;
   sh:property raremat_shapes_monograph_exhibition:ItemForm_arm_hasExhibition .
 
+raremat_shapes_monograph:ItemForm_rdf_type sh:path rdf:type ;
+      sh:order "0"^^xsd:decimal ;
+      sh:in ( <http://id.loc.gov/ontologies/bibframe/Item> <https://w3id.org/arm/core/ontology/0.1/BoundCollection> ) ;
+      sh:group raremat_shapes_monograph:ItemTypePropertyGroup ;
+      sh:name "Type of Item" .
+
 raremat_shapes_monograph:ItemForm_arm_hasPreferredTitle sh:path arm:hasPreferredTitle ;
   sh:class <http://id.loc.gov/ontologies/bibframe/Title> ;
   tosh:editWidget swa:NestedObjectEditor ;
@@ -1082,7 +1088,7 @@ raremat_shapes_monograph:ItemForm_bf_partOf sh:path bf:partOf ;
 raremat_shapes_monograph:ItemForm_arm_isOnCarrier sh:path arm:isOnCarrier ;
       sh:name "Is on a carrier" ;
       sh:order "2"^^xsd:decimal ;
-      sh:description "The item being described is on a particular carrier (likely with other items)." ;
+      sh:description "The item being described is on a particular carrier (possibly on a carrier with other items)." ;
       sh:group raremat_shapes_monograph:ItemPartsAccompanimentsPropertyGroup ;
       tosh:editWidget swa:NestedObjectEditor .
 
