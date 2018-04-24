@@ -1,14 +1,13 @@
 @prefix aat: <http://vocab.getty.edu/aat/> .
-@prefix arm: <https://w3id.org/arm/ontologies/core/> .
+@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix core: <http://vivoweb.org/ontology/core#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix ex: <http://example.org/> .
 @prefix gn: <http://www.geonames.org/ontology/> .
 @prefix gvp: <http://www.geonames.org/ontology/> .
 @prefix lingvo: <http://www.lingvoj.org/ontology#> .
 @prefix madsrdf: <http://www.loc.gov/standards/mads/rdf/v1.rdf#> .
-@prefix measurement: <https://w3id.org/arm/ontologies/measurement/> .
+@prefix measurement: <https://w3id.org/arm/measurement/ontology/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -21,7 +20,7 @@
 @prefix vivo: <http://vivoweb.org/ontology/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix : <https://w3id.org/arm/application_profile/shacl/raremat_monograph/> .
+@prefix : <https://w3id.org/arm/application_profile/raremat_monograph/shacl/raremat_shacl_monograph/> .
 
 #
 # ////////// PROPERTY GROUP DEFINITIONS ////////// #
