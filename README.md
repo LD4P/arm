@@ -54,11 +54,13 @@ Versioning
 -----------
 
 To support modularity, each ontology and vocabulary is versioned independently. SHACL validation and application profiles reference specific 
-versions of these, but are not themselves versioned via namespace but rather via GitHub.
+versions of these, but are not themselves versioned via namespace or version number but rather via GitHub.
 
-The following protocols are used to version and record changes to the ontology.
-  
+
 ### Ontology versioning
+
+The following protocols are used to version the ontologies. 
+
 * The use of OWL versioning predicates follows the [OWL 2 specification](https://www.w3.org/TR/owl2-syntax/#Ontology_IRI_and_Version_IRI).
 * `owl:ontologyIRI` identifies the unversioned ontology namespace; e.g., `https://w3id.org/arm/core/ontology/`.
 * `owl:versionIRI` identifies a particular version of the ontology; e.g., `https://w3id.org/arm/core/ontology/0.1/`. 
@@ -78,7 +80,7 @@ The following protocols are used to version and record changes to the ontology.
 **[MODEL B:]**
 
     * `MAJOR`: a sufficiently large set of sufficiently significant and non-backward-compatible changes so as to represent a new major version 
-    <span style="color:red">THIS IS SUBJECTIVE - CAN WE COME UP WITH A RIGOROUS DEFINITION?</span>
+    **[THIS IS SUBJECTIVE - CAN WE COME UP WITH A RIGOROUS DEFINITION?]**
     * `MINOR`: non-backward-compatible semantic modifications
     * `PATCH`: backward-compatible semantic modifications as well as non-semantic modifications, such as fixing typos or adding rdfs:labels in other languages
     
@@ -91,6 +93,7 @@ The following protocols are used to version and record changes to the ontology.
 * `owl:versionInfo` provides a label containing the version number, formatted as "Version n.n.n"; e.g., "Version 1.1.0". This version number is also used to tag the repository, in this case `v1.1.0`. 
 * `owl:priorVersion` provides the URI of the previous MAJOR.MINOR version of the ontology, if any.
 * `owl:backwardCompatibleWith` or `owl:incompatibleWith` may also be used to reference previous MAJOR.MINOR versions of the ontology, where applicable.
+
 
 ### Issuance and modification datetimes
 * `dcterms:issued` is used on each ontology term, and on the ontology as a whole, to indicate datetime of first issuance.
@@ -106,3 +109,8 @@ The following protocols are used to version and record changes to the ontology.
 * A `skos:changeNote` could be applied to the ontology itself to record major, broad, or high-level changes affecting multiple terms.
 * Changes are also recorded in change logs for each ontology, vocabulary, and application profile. 
 
+### Vocabulary versioning
+
+Several of the predicates used in the ontology versioning protocol are of type `owl:OntologyProperty` and thus cannot be used with our vocabularies, which are typed `void:Dataset` rather than
+`owl:Ontology`.  Vocabularies are versioned by including version number in the URI (e.g., https://w3id.org/arm/core/vocabularies/typeface/0.1/) , using the same schema outlined for ontologies; defining `owl:versionInfo` on the Dataset; 
+and following the protocols described above for use of timestamps and change descriptions. 
