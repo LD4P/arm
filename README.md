@@ -35,8 +35,8 @@ according to this model.
 The Art and Rare Materials ontologies are a product of the Mellon Foundation-funded Linked Data for Production (LD4P) project, 2016-2018. 
 See the [LD4P public wiki](https://wiki.duraspace.org/pages/viewpage.action?pageId=74515029) for more information about this project. 
 
-Adoption and use of these ontologies will be determined by RBMS-BSC and ARLIS <span style="color:red">MELANIE: NOT SURE IF ARLIS SHOULD BE MENTIONED HERE, and if so whether
-it should also be mentioned in the first paragraph, and full name given, as for RBMS.</span> following initial development and assessment.
+Adoption and use of these ontologies will be determined by RBMS-BSC and ARLIS **[MELANIE: NOT SURE IF ARLIS SHOULD BE MENTIONED HERE, and if so whether
+it should also be mentioned in the first paragraph, and full name given, as for RBMS]** following initial development and assessment.
 
 News
 -------------
@@ -67,15 +67,15 @@ The following protocols are used to version and record changes to the ontology.
 * By importing or referencing terms from a particular `owl:versionIRI`, users are insulated from non-backward-compatible changes in newer published versions until they decide to upgrade.
 * Version numbering convention (`MAJOR.MINOR.PATCH`):
 
-<span color="red">TWO MODELS - which one do we prefer?</span>
+**[JAK/SF/MW/SW: TWO MODELS - which one do we prefer?]**
 
-<span style="color:red">MODEL A: (bibliotek-o)</span>
+**[MODEL A: (bibliotek-o)]**
 
     * `MAJOR`: non-backward-compatible modifications
     * `MINOR`: backward-compatible semantic modifications
     * `PATCH`: non-semantic modifications, such as fixing typos or adding rdfs:labels in other languages
     
-<span style="color:red">MODEL B:</span>
+**[MODEL B:]**
 
     * `MAJOR`: a sufficiently large set of sufficiently significant and non-backward-compatible changes so as to represent a new major version 
     <span style="color:red">THIS IS SUBJECTIVE - CAN WE COME UP WITH A RIGOROUS DEFINITION?</span>
@@ -84,7 +84,7 @@ The following protocols are used to version and record changes to the ontology.
     
 * The `owl:versionIRI` is updated for `MAJOR` and `MINOR` versions, but not `PATCH` versions. It thus includes only the `MAJOR` and `MINOR` version numbers.
 
-<span style="color:red">NB: The following applies to MODEL A. If we use MODEL B, we would deprecate in the patch and remove in the next minor or major version</span>
+**[NB: The following applies to MODEL A. If we use MODEL B, we would deprecate in the patch and remove in the next minor or major version.]**
 
 * To avoid an unnecessary proliferation of `MAJOR` versions, `owl:deprecated` is applied to terms slated for removal. A term deprecated in a `MINOR` version will be removed in the next `MAJOR` version. 
 
