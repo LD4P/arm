@@ -20,7 +20,7 @@
         <rdfs:label xml:lang="en">RareMat Typeface Vocabulary</rdfs:label>
         <dcterms:title xml:lang="en">RareMat Typeface Vocabulary</dcterms:title>
         <rdfs:comment xml:lang="en">The RareMat Typeface Vocabulary is a controlled vocabulary to express the design or “font family” created by a typographer or type designer. Terms represent specific stylistic features to determine the type display of a writing system.</rdfs:comment>
-        <vann:preferredNamespacePrefix>arr</vann:preferredNamespacePrefix>
+        <vann:preferredNamespacePrefix>typeface</vann:preferredNamespacePrefix>
         <void:vocabulary rdf:resource="https://w3id.org/arm/core/ontology/0.1/"/>
     </void:Dataset>    
     
