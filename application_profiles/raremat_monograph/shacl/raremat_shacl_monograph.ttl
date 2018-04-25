@@ -1717,7 +1717,7 @@ raremat_shapes_monograph:WorkTitleForm_arm_hasSource sh:path arm:hasSource ;
          ]
          
         ) ;
-      sh:nodeKind sh:Literal .
+      sh:nodeKind sh:IRI .
       
 raremat_shapes_monograph:WorkTitleForm_bf_status sh:path bf:Status ;
       sh:in ( <https://w3id.org/arm/datasets/status/cancelled> <https://w3id.org/arm/datasets/status/current> <https://w3id.org/arm/datasets/status/deprecated> <https://w3id.org/arm/datasets/status/invalid> ) ;
@@ -1763,7 +1763,7 @@ raremat_shapes_monograph:InstanceTitleForm
   sh:property raremat_shapes_monograph:InstanceTitleForm_bf_partNumber ;
   sh:property raremat_shapes_monograph:InstanceTitleForm_bf_partName ;
   sh:property raremat_shapes_monograph:InstanceTitleForm_arm_origin ;
-  
+  sh:property raremat_shapes_monograph:InstanceTitleForm_arm_hasSource ;
   sh:property raremat_shapes_monograph:InstanceTitleForm_bf_status ;
   sh:property raremat_shapes_monograph:InstanceTitleForm_arm_titleOf ;
   sh:property raremat_shapes_monograph:InstanceTitleForm_arm_isPreferredTitleOf ;
@@ -1837,7 +1837,7 @@ raremat_shapes_monograph:InstanceTitleForm_arm_hasSource sh:path arm:hasSource ;
          ]
          
         ) ;
-      sh:nodeKind sh:Literal .
+      sh:nodeKind sh:IRI .
       
 raremat_shapes_monograph:InstanceTitleForm_bf_status sh:path bf:Status ;
       sh:in ( <https://w3id.org/arm/datasets/status/cancelled> <https://w3id.org/arm/datasets/status/current> <https://w3id.org/arm/datasets/status/deprecated> <https://w3id.org/arm/datasets/status/invalid> ) ;
@@ -1883,6 +1883,7 @@ raremat_shapes_monograph:ItemTitleForm
   sh:property raremat_shapes_monograph:ItemTitleForm_bf_partNumber ;
   sh:property raremat_shapes_monograph:ItemTitleForm_bf_partName ;
   sh:property raremat_shapes_monograph:ItemTitleForm_arm_origin ;
+  sh:property raremat_shapes_monograph:ItemTitleForm_arm_hasSource ;
   sh:property raremat_shapes_monograph:ItemTitleForm_bf_status ;
   sh:property raremat_shapes_monograph:ItemTitleForm_arm_titleOf ;
   sh:property raremat_shapes_monograph:ItemTitleForm_arm_isPreferredTitleOf ;
@@ -1939,24 +1940,43 @@ raremat_shapes_monograph:ItemTitleForm_arm_origin sh:path arm:origin ;
       sh:nodeKind sh:IRI ;
       sh:name "Title origin" .
       
+raremat_shapes_monograph:ItemTitleForm_arm_hasSource sh:path arm:hasSource ;
+      sh:name "Title source" ;
+      sh:description "Source of the title. The source may be an agent, work, or instance" ;
+      sh:order "7"^^xsd:decimal ;
+      sh:or (
+         
+         [
+           sh:class bf:Work ;
+         ]
+         [
+           sh:class bf:Instance ;
+         ]
+         [
+           sh:class bf:Agent ;
+         ]
+         
+        ) ;
+      sh:nodeKind sh:IRI .
+      
 raremat_shapes_monograph:ItemTitleForm_bf_status sh:path bf:Status ;
       sh:in ( <https://w3id.org/arm/datasets/status/cancelled> <https://w3id.org/arm/datasets/status/current> <https://w3id.org/arm/datasets/status/deprecated> <https://w3id.org/arm/datasets/status/invalid> ) ;
       sh:description "The place from which this title originates, such as spine, cover, container, etc." ;
-      sh:order "7"^^xsd:decimal ;
+      sh:order "8"^^xsd:decimal ;
       sh:nodeKind sh:IRI ;
       sh:name "Title origin" .
       
 raremat_shapes_monograph:ItemTitleForm_arm_titleOf sh:path arm:titleOf ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Item> ;
       sh:description "Links this Title to Text Work" ;
-      sh:order "8"^^xsd:decimal ;
+      sh:order "9"^^xsd:decimal ;
       sh:nodeKind sh:IRI ;
       sh:name "Title of" .
 
 raremat_shapes_monograph:ItemTitleForm_arm_isPreferredTitleOf sh:path arm:isPreferredTitleOf ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Item> ;
       sh:description "Links this preferred title to text work" ;
-      sh:order "9"^^xsd:decimal ;
+      sh:order "10"^^xsd:decimal ;
       sh:nodeKind sh:IRI ;
       sh:name "Preferred title of text work (if applicable)" .
     
@@ -1965,7 +1985,7 @@ raremat_shapes_monograph:ItemTitleForm_bf_note sh:path bf:note ;
       sh:description "Note about this title" ;
       tosh:editWidget swa:NestedObjectEditor ;
       sh:nodeKind sh:IRI ;
-      sh:order "10"^^xsd:decimal .
+      sh:order "11"^^xsd:decimal .
 
 # TODO a buch of embedded forms, e.g. Activities, Identifiers
 
@@ -2121,9 +2141,6 @@ raremat_shapes_monograph:FontForm_arm_hasStyle sh:path arm:hasStyle ;
 
 # /////// Handwriting FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
-# TODO ^^^^^^^^^^^^^^
-
-# /////// Font FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
 # TODO ^^^^^^^^^^^^^^
 
