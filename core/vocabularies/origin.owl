@@ -21,7 +21,7 @@
         <rdfs:label xml:lang="en">RareMat Origin Vocabulary</rdfs:label>
         <dcterms:title xml:lang="en">RareMat Origin Vocabulary</dcterms:title>
         <rdfs:comment xml:lang="en">The RareMat Origin Vocabulary is a controlled vocabulary to express the origin of data, such as a title originating from the spine of a volume.</rdfs:comment>
-        <vann:preferredNamespacePrefix>arr</vann:preferredNamespacePrefix>
+        <vann:preferredNamespacePrefix>origin</vann:preferredNamespacePrefix>
         <void:vocabulary rdf:resource="http://id.loc.gov/ontologies/bibframe"/>
     </void:Dataset>    
 

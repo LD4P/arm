@@ -21,7 +21,7 @@
         <rdfs:label xml:lang="en">RareMat Status Vocabulary</rdfs:label>
         <dcterms:title xml:lang="en">RareMat Status Vocabulary</dcterms:title>
         <rdfs:comment xml:lang="en">The RareMat Status Vocabulary is a controlled vocabulary to express the status of data, such as an identifier.</rdfs:comment>
-        <vann:preferredNamespacePrefix>arr</vann:preferredNamespacePrefix>
+        <vann:preferredNamespacePrefix>status</vann:preferredNamespacePrefix>
         <void:vocabulary rdf:resource="http://id.loc.gov/ontologies/bibframe"/>
     </void:Dataset>    
 
