@@ -81,7 +81,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/custodial_history/ontology/0.1/Sale" />
         <rdfs:subClassOf rdf:resource="http://schema.org/SaleEvent"/>
         <skos:scopeNote>Refers to the transfer of ownership through auction, rather than the auction in which that occurs.</skos:scopeNote> 
-        <skos:scopeNote>Typical associated Activities: BuyerActivity, SellerActivity, BrokerActivity.</skos:scopeNote>
+        <skos:scopeNote>Typical associated Activities: BuyerActivity, SellerActivity, DealerActivity.</skos:scopeNote>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -230,7 +230,7 @@
         <skos:scopeNote>A CustodialEvent may pertain to only a single Item (an individual CustodialEvent) in which case it is linked directly to the Item’s CustodialHistory, or it may encompass multiple Items (such as an auction lot), in which case the CustodialEvent aggregates multiple individual CustodialEvents. A CustodialEvent may be what is typically conceived of as an “event,” or a “static” event such as ownership. Subclasses of CustodialEvent are accordingly either defined as subclasses of schema:Event or not.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/custodial_history/ontology/0.1/CustodialEvent" />
         <rdfs:subClassOf rdf:resource="http://schema.org/SaleEvent"/>
-        <skos:scopeNote>Typical associated Activities: BuyerActivity, SellerActivity, BrokerActivity.</skos:scopeNote>
+        <skos:scopeNote>Typical associated Activities: BuyerActivity, SellerActivity, DealerActivity.</skos:scopeNote>
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
     </owl:Class>
@@ -282,14 +282,6 @@
         <dcterms:modified></dcterms:modified>
     </owl:Class>
     
-    <owl:Class rdf:about="https://w3id.org/arm/custodial_history/ontology/0.1/BrokerActivity">
-        <rdfs:label xml:lang="en">Broker</rdfs:label>    
-        <skos:definition xml:lang="en">The act of negotiating or arranging for a transaction.</skos:definition>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arm/custodial_history/ontology/0.1/Activity" />
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
-    </owl:Class>
-    
     <owl:Class rdf:about="https://w3id.org/arm/custodial_history/ontology/0.1/BuyerActivity">
         <rdfs:label xml:lang="en">Buyer</rdfs:label>    
         <skos:definition xml:lang="en">The act of purchasing a resource.</skos:definition>
@@ -301,6 +293,14 @@
     <owl:Class rdf:about="https://w3id.org/arm/custodial_history/ontology/0.1/ClaimantActivity">
         <rdfs:label xml:lang="en">Claimant</rdfs:label>    
         <skos:definition xml:lang="en">The act of declaring ownership of a resource, notably when the claim is not clearly substantiated.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arm/custodial_history/ontology/0.1/Activity" />
+        <dcterms:issued></dcterms:issued>
+        <dcterms:modified></dcterms:modified>
+    </owl:Class>
+
+    <owl:Class rdf:about="https://w3id.org/arm/custodial_history/ontology/0.1/DealerActivity">
+        <rdfs:label xml:lang="en">Dealer</rdfs:label>    
+        <skos:definition xml:lang="en">The act of negotiating or arranging for a transaction.</skos:definition>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/custodial_history/ontology/0.1/Activity" />
         <dcterms:issued></dcterms:issued>
         <dcterms:modified></dcterms:modified>
