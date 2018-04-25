@@ -2114,12 +2114,10 @@ raremat_shapes_monograph:FontForm
   sh:property raremat_shapes_monograph:FontForm_measurement_hasMeasurement ;
   sh:property raremat_shapes_monograph:FontForm_arm_hasStyle ;
   .
-
-# TODO add individuals of Typeface
   
 raremat_shapes_monograph:FontForm_arm_hasTypeface sh:path arm:hasTypeface ;
       sh:order "0"^^xsd:decimal ;
-      sh:class arm:Typeface> ;
+      sh:in ( aat:300200661 <https://w3id.org/arm/datasets/typeface/gothic-antique> <https://w3id.org/arm/datasets/typeface/rotunda> <https://w3id.org/arm/datasets/typeface/textura> aat:300200001 aat:300194460 aat:300255252 aat:300211132 aat:300211185 aat:300211196 aat:300216317 aat:300195881 aat:300211202 aat:300211172 aat:300202354 aat:300211038 aat:300202391 aat:300211014 aat:300211017 aat:300215373 aat:300195655 aat:300195865 ) ;
       sh:nodeKind sh:IRI ;
       sh:name "Has typeface" ;
       sh:description "A design or “font family” created by a typographer or type designer. It defines specific stylistic features to determine the type display of a writing system." .
@@ -2141,8 +2139,29 @@ raremat_shapes_monograph:FontForm_arm_hasStyle sh:path arm:hasStyle ;
 
 # /////// Handwriting FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
+raremat_shapes_monograph:HandwritingForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Handwriting form" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:targetClass arm:Handwriting ;
+  sh:property raremat_shapes_monograph:HandwritingForm_arm_hasHandwritingType ;
+  sh:property raremat_shapes_monograph::HandwritingForm_dcterms_description ;
+  .
 
-# TODO ^^^^^^^^^^^^^^
+raremat_shapes_monograph:HandwritingForm_arm_hasHandwritingType sh:path arm:hasHandwritingType ;
+      sh:order "0"^^xsd:decimal ;
+# TODO Add individuals to extend this list when feedback is provided by Catalogers
+      sh:in ( aat:300194411 aat:300195207 aat:300375118 aat:300195226 aat:300210195 aat:300210180 aat:300202638 aat:300194430 aat:300210204 aat:300210206 aat:300210205 aat:300210136 aat:300210143 aat:300210146 aat:300194451 aat:300210049 aat:300210050 aat:300210051 aat:300194448 aat:300379143 aat:300209776 aat:300209772 aat:300196122 aat:300198409 aat:300194424 aat:300209780 aat:300200668 aat:300210288 aat:300200828 aat:300194782 ) ;
+      sh:nodeKind sh:IRI ;
+      sh:name "Has handwriting type" ;
+      sh:description "The type of writing hand used by this example of handwriting" .
+      
+raremat_shapes_monograph::HandwritingForm_dcterms_description sh:path dcterms:description ;
+      sh:description "Record any qualifying information about the handwriting found in the resource" ;
+      sh:name "Qualifying information about the handwriting" ;
+      sh:nodeKind sh:Literal ;
+      sh:order "1"^^xsd:decimal .
 
 # ///// PROPERTY GROUPS ARE NOW IN https://github.com/LD4P/arm/blob/develop/application_profiles/raremat_monograph/shacl/raremat_shacl_monograph_property_groups.ttl /////////////////////////////////////////////////////////////
 
