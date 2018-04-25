@@ -16,8 +16,8 @@
     
     <void:Dataset rdf:about="https://w3id.org/arm/core/vocabularies/status/0.1/">
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1</owl:versionInfo>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
         <rdfs:label xml:lang="en">RareMat Status Vocabulary</rdfs:label>
         <dcterms:title xml:lang="en">RareMat Status Vocabulary</dcterms:title>
         <skos:definition xml:lang="en">The RareMat Status Vocabulary is a controlled vocabulary to express the status of data, such as an invalid identifier.</skos:definition>
@@ -29,32 +29,32 @@
     <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
     <rdfs:label xml:lang="en">cancelled</rdfs:label>
     <skos:definition xml:lang="en">Applies to an identifier or other resource that has been cancelled.</skos:definition>
-    <dcterms:issued></dcterms:issued>
-    <dcterms:modified></dcterms:modified>
+    <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+    <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/status/0.1/current">
     <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
     <rdfs:label xml:lang="en">current</rdfs:label>
     <skos:definition xml:lang="en">Applies to an identifier or other resource that is currently valid.</skos:definition>
-    <dcterms:issued></dcterms:issued>
-    <dcterms:modified></dcterms:modified>
+    <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+    <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/status/0.1/deprecated">
     <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
     <rdfs:label xml:lang="en">deprecated</rdfs:label>
     <skos:definition xml:lang="en">Applies to an identifier or other resource that has been deprecated.</skos:definition>
-    <dcterms:issued></dcterms:issued>
-    <dcterms:modified></dcterms:modified>
+    <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+    <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/status/0.1/invalid">
     <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
     <rdfs:label xml:lang="en">invalid</rdfs:label>
     <skos:definition xml:lang="en">Applies to an identifier or other resource that is invalid.</skos:definition>
-    <dcterms:issued></dcterms:issued>
-    <dcterms:modified></dcterms:modified>
+    <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+    <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 </owl:NamedIndividual>
     
 </rdf:RDF>

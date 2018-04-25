@@ -22,8 +22,8 @@
         <owl:ontologyIRI rdf:resource="https://w3id.org/arm/award/ontology/"/>
         <owl:versionIRI rdf:resource="https://w3id.org/arm/award/ontology/0.1/"/>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1</owl:versionInfo>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
         <rdfs:label xml:lang="en">Award Ontology</rdfs:label>
         <skos:definition xml:lang="en">The Award Ontology models awards and their recipients.</skos:definition>
         <vann:preferredNamespacePrefix>award</vann:preferredNamespacePrefix>

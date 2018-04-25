@@ -15,8 +15,8 @@
     
     <void:Dataset rdf:about="https://w3id.org/arm/core/vocabularies/typeface/0.1/">
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1</owl:versionInfo>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
         <rdfs:label xml:lang="en">Art and Rare Materials Typeface Vocabulary</rdfs:label>
         <dcterms:title xml:lang="en">Art and Rare Materials Typeface Vocabulary</dcterms:title>
         <skos:definition xml:lang="en">The Art and Rare Materials Typeface Vocabulary is a controlled vocabulary to express the design or “font family” created by a typographer or type designer. Terms represent specific stylistic features to determine the type display of a writing system.</skos:definition>
@@ -28,24 +28,24 @@
         <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/Typeface"/>
         <rdfs:label xml:lang="en">gothic-antique</rdfs:label>
         <skos:definition xml:lang="en">Subgroup of black letter typefaces which are a mix of black letter and roman; rounder and less angular than black letter, and most vertical strokes lack "feet" or ending strokes.</skos:definition>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:NamedIndividual>
     
     <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/typeface/0.1/rotunda">
         <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/Typeface"/>
         <rdfs:label xml:lang="en">rotunda</rdfs:label>
         <skos:definition xml:lang="en">Subgroup of black letter typefaces; basically the Southern European black letter.</skos:definition>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:NamedIndividual>
     
     <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/typeface/0.1/textura">
         <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/Typeface"/>
         <rdfs:label xml:lang="en">textura</rdfs:label>
         <skos:definition xml:lang="en">Subgroup of black letter typefaces which are squarely drawn and almost completely lacking curves.</skos:definition>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:NamedIndividual>
     
 </rdf:RDF>

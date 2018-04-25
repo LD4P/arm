@@ -23,8 +23,8 @@
         <owl:ontologyIRI rdf:resource="https://w3id.org/arm/measurement/ontology/"/> 
         <owl:versionIRI rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/"/>   
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1</owl:versionInfo>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
         <rdfs:label xml:lang="en">Measurement Ontology</rdfs:label>
         <skos:definition xml:lang="en">The Measurement Ontology provides terms to model physical, digital, or other types of measurements. Appropriate vocabularies may be selected by the implementer for units, dimensions, arrangements, and resources measured.</skos:definition>
         <vann:preferredNamespacePrefix>meas</vann:preferredNamespacePrefix>
@@ -46,6 +46,8 @@
             including value, units, and the dimension measured. For example, a book may have a
             height (aspect) of 10 (value) centimeters (units). Each such measurement is attached to
             a MeasurementGroup.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/measurement/ontology/0.1/MeasurementGroup">
@@ -56,6 +58,8 @@
             MeasurementGroup; the binding may have measurements specified independently, which would
             constitute another MeasurementGroup. A MeasurementGroup has one or more specific
             Measurements attached to it.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
 
@@ -73,6 +77,8 @@
             measurement.</skos:definition>
         <rdfs:range rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/Measurement"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/isMeasurementOf"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arm/measurement/ontology/0.1/hasMeasurementGroup">
@@ -81,6 +87,8 @@
             indicating that the measurement group applies to the resource.</skos:definition>
         <rdfs:range rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/MeasurementGroup"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/isMeasurementGroupOf"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:ObjectProperty>
     
     <owl:ObjectProperty rdf:about="https://w3id.org/arm/measurement/ontology/0.1/hasUnit">
@@ -88,6 +96,8 @@
         <skos:definition xml:lang="en">Relationship between the measurement and the unit used to
             express the measurement.</skos:definition>
         <owl:inverseOf rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/isUnitOf"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:ObjectProperty>
     
     <owl:ObjectProperty rdf:about="https://w3id.org/arm/measurement/ontology/0.1/isMeasurementOf">
@@ -96,6 +106,8 @@
             resource.</skos:definition>
         <rdfs:domain rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/Measurement"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/hasMeasurement"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arm/measurement/ontology/0.1/isMeasurementGroupOf">
@@ -104,6 +116,8 @@
             indicating that the measurement group applies to the resource.</skos:definition>
         <rdfs:domain rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/MeasurementGroup"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/hasMeasurementGroup"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:ObjectProperty>
     
     <owl:ObjectProperty rdf:about="https://w3id.org/arm/measurement/ontology/0.1/isUnitOf">
@@ -111,6 +125,8 @@
         <skos:definition xml:lang="en">Relationship between the unit and the measurement used to
             express the measurement.</skos:definition>
         <owl:inverseOf rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/hasUnit"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:ObjectProperty>
     
     <owl:ObjectProperty rdf:about="https://w3id.org/arm/measurement/ontology/0.1/measuredBy">
@@ -121,6 +137,8 @@
             Measurement.</skos:definition>
         <rdfs:range rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/Measurement"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/measures"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/arm/measurement/ontology/0.1/measures">
@@ -131,6 +149,8 @@
             resource.</skos:definition>
         <rdfs:domain rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/Measurement"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/measuredBy"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:ObjectProperty>
 
 

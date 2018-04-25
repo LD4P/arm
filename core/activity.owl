@@ -23,8 +23,8 @@
         <owl:ontologyIRI rdf:resource="https://w3id.org/arm/core/activity/"/> 
         <owl:versionIRI rdf:resource="https://w3id.org/arm/core/activity/0.1/"/>   
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1</owl:versionInfo>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
         <rdfs:label xml:lang="en">Activity classes for the Art and Rare Materials Ontology</rdfs:label>
         <skos:definition xml:lang="en">The Art and Rare Materials Ontology provides specialized modeling of bibliographic metadata in the art and rare materials domains. It is an extension to the BIBFRAME ontology for general bibliographic description.</skos:definition>
         <vann:preferredNamespacePrefix>armact</vann:preferredNamespacePrefix>
@@ -43,8 +43,8 @@
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/Activity">
         <rdfs:label xml:lang="en">Activity</rdfs:label>    
         <skos:definition xml:lang="en">An activity or contribution by a single agent that affects or alters the existence or state of a resource.</skos:definition>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <!-- 
@@ -61,8 +61,8 @@
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/rcp.</skos:scopeNote>
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/AppellantActivity">
@@ -71,8 +71,8 @@
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/apl.</skos:scopeNote>
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/AppelleeActivity">
@@ -81,8 +81,8 @@
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/apl.</skos:scopeNote>
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/ArchitectActivity">
@@ -91,8 +91,8 @@
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/arc.</skos:scopeNote>
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/ArrangerActivity">
@@ -101,8 +101,8 @@
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/arr.</skos:scopeNote>
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/ArtCopyistActivity">
@@ -111,8 +111,8 @@
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/acp.</skos:scopeNote>
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/ArtistActivity">
@@ -122,8 +122,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/art.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/AssigneeActivity">
@@ -132,8 +132,8 @@
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/asg.</skos:scopeNote>
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/AttributionActivity">
@@ -142,8 +142,8 @@
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/att.</skos:scopeNote>
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/AuthorActivity">
@@ -152,8 +152,8 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/aut.</skos:scopeNote>
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/BinderActivity">
@@ -171,8 +171,8 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/ctg.</skos:scopeNote>
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/ChoreographerActivity">
@@ -181,8 +181,8 @@
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/chr.</skos:scopeNote>
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/CollectorActivity">
@@ -191,8 +191,8 @@
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/col.</skos:scopeNote>
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/CollotyperActivity">
@@ -201,8 +201,8 @@
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/clt.</skos:scopeNote>
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/ColoristActivity">
@@ -211,8 +211,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/clr.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/CompilerActivity">
@@ -221,16 +221,16 @@
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/com.</skos:scopeNote>
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/ConditionAssessmentActivity">
         <rdfs:label xml:lang="en">Condition assessment activity</rdfs:label>
         <skos:definition xml:lang="en">The activity of assessing and documenting the physical condition of an item, including damage, material vulnerabilities, special storage requirements, etc. This activity outputs a ConditionAssessment.</skos:definition>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/ConservatorActivity">
@@ -239,8 +239,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/con.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/ContributorActivity">
@@ -249,8 +249,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/ctb.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/CopyrightHolderActivity">
@@ -259,8 +259,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/cph.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/CorrespondentActivity">
@@ -269,8 +269,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/crp.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/CreatorActivity">
@@ -279,8 +279,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/cre.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/CuratorActivity">
@@ -289,8 +289,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/cur.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/DedicateeActivity">
@@ -299,8 +299,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/dte.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/DedicatorActivity">
@@ -309,8 +309,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/dto.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/DesignerActivity">
@@ -319,8 +319,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/dsr.</skos:scopeNote>     
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/DirectorActivity">
@@ -329,8 +329,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/drt.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/DistributorActivity">
@@ -339,8 +339,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/dst.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/DraftsmanActivity">
@@ -349,8 +349,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/drm.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/EditorActivity">
@@ -359,8 +359,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/edt.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/EngraverActivity">
@@ -369,8 +369,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/egr.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/EtcherActivity">
@@ -379,8 +379,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/etr.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/FacsimilistActivity">
@@ -389,8 +389,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/fac.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/ForgerActivity">
@@ -399,8 +399,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/fac.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/HonoreeActivity">
@@ -409,8 +409,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/etr.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/IlluminatorActivity">
@@ -419,8 +419,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/ilu.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/IllustratorActivity">
@@ -429,8 +429,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/ill.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/InscriberActivity">
@@ -439,8 +439,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/ins.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/InventorActivity">
@@ -449,8 +449,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/inv.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/LicenseeActivity">
@@ -459,8 +459,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/lse.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/LicensorActivity">
@@ -469,8 +469,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/lso.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/LithographerActivity">
@@ -479,8 +479,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/ltg.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
    
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/LyricistActivity">
@@ -489,8 +489,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/lyr.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/ManufacturerActivity">
@@ -499,8 +499,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/mfr.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/MarblerActivity">
@@ -509,8 +509,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/mrb.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/ModeratorActivity">
@@ -519,8 +519,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/mod.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/OrganizerActivity">
@@ -529,8 +529,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/orm.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/PapermakerActivity">
@@ -539,8 +539,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/ppm.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/PatronActivity">
@@ -549,8 +549,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/pat.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/PhotographerActivity">
@@ -559,8 +559,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/pht.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/PlatemakerActivity">
@@ -569,8 +569,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/plt.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/PrinterActivity">
@@ -579,8 +579,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/prt.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/PrintmakerActivity">
@@ -589,16 +589,16 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/prm.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/ProducerActivity">
         <rdfs:label xml:lang="en">Producer</rdfs:label>    
         <skos:definition xml:lang="en">The activity of producing a resource.</skos:definition>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/ProviderActivity">
@@ -607,8 +607,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/prv.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/PublisherActivity">
@@ -617,8 +617,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/pbl.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/RepositoryActivity">
@@ -627,8 +627,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/rps.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
 
@@ -638,8 +638,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/scr.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/SculptorActivity">
@@ -648,8 +648,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/scl.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/SignerActivity">
@@ -658,8 +658,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/sgn.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/SponsorActivity">
@@ -668,8 +668,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/spn.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/StereotyperActivity">
@@ -678,8 +678,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/str.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/TranscriberActivity">
@@ -688,8 +688,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/ths.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/TranslatorActivity">
@@ -698,8 +698,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/trl.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
 
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/TypographerActivity">
@@ -708,8 +708,8 @@
         <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
         <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/tyg.</skos:scopeNote>
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued></dcterms:issued>
-        <dcterms:modified></dcterms:modified>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
     
 </rdf:RDF>
