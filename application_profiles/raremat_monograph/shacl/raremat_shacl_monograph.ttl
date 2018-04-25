@@ -257,7 +257,6 @@ raremat_shapes_monograph:WorkForm_bf_note sh:path <http://id.loc.gov/ontologies/
          ]
          
         ) ;
-    ] ;
     .
     
 # ///// PROPERTY SHAPES FOR WorkAwardReceipt PropertyGroup START HERE. /////////////////////////////////////////////////////////////
@@ -1651,7 +1650,7 @@ raremat_shapes_monograph:WorkTitleForm
   sh:property raremat_shapes_monograph:WorkTitleForm_bf_subtitle ;
   sh:property raremat_shapes_monograph:WorkTitleForm_bf_partNumber ;
   sh:property raremat_shapes_monograph:WorkTitleForm_bf_partName ;
-  sh:property raremat_shapes_monograph:WorkTitleForm_arm_origin ;
+  sh:property raremat_shapes_monograph:WorkTitleForm_arm_hasSource ;
   sh:property raremat_shapes_monograph:WorkTitleForm_bf_status ;
   sh:property raremat_shapes_monograph:WorkTitleForm_arm_titleOf ;
   sh:property raremat_shapes_monograph:WorkTitleForm_arm_isPreferredTitleOf ;
@@ -1701,24 +1700,43 @@ raremat_shapes_monograph:WorkTitleForm_bf_partName sh:path bf:partName ;
       sh:nodeKind sh:Literal ;
       sh:name "Part name" .
       
+raremat_shapes_monograph:WorkTitleForm_arm_hasSource sh:path arm:hasSource ;
+      sh:name "Title source" ;
+      sh:description "Source of the title. The source may be an agent, work, or instance" ;
+      sh:order "6"^^xsd:decimal ;
+      sh:or (
+         
+         [
+           sh:class bf:Work ;
+         ]
+         [
+           sh:class bf:Instance ;
+         ]
+         [
+           sh:class bf:Agent ;
+         ]
+         
+        ) ;
+      sh:nodeKind sh:Literal .
+      
 raremat_shapes_monograph:WorkTitleForm_bf_status sh:path bf:Status ;
       sh:in ( <https://w3id.org/arm/datasets/status/cancelled> <https://w3id.org/arm/datasets/status/current> <https://w3id.org/arm/datasets/status/deprecated> <https://w3id.org/arm/datasets/status/invalid> ) ;
       sh:description "The place from which this title originates, such as spine, cover, container, etc." ;
-      sh:order "6"^^xsd:decimal ;
+      sh:order "7"^^xsd:decimal ;
       sh:nodeKind sh:IRI ;
       sh:name "Title origin" .
       
 raremat_shapes_monograph:WorkTitleForm_arm_titleOf sh:path arm:titleOf ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Text> ;
       sh:description "Links this Title to Text Work" ;
-      sh:order "7"^^xsd:decimal ;
+      sh:order "8"^^xsd:decimal ;
       sh:nodeKind sh:IRI ;
       sh:name "Title of" .
 
 raremat_shapes_monograph:WorkTitleForm_arm_isPreferredTitleOf sh:path arm:isPreferredTitleOf ;
       sh:class <http://id.loc.gov/ontologies/bibframe/Text> ;
       sh:description "Links this preferred title to text work" ;
-      sh:order "8"^^xsd:decimal ;
+      sh:order "9"^^xsd:decimal ;
       sh:nodeKind sh:IRI ;
       sh:name "Preferred title of text work (if applicable)" .
     
@@ -1727,7 +1745,7 @@ raremat_shapes_monograph:WorkTitleForm_bf_note sh:path bf:note ;
       sh:description "Note about this title" ;
       tosh:editWidget swa:NestedObjectEditor ;
       sh:nodeKind sh:IRI ;
-      sh:order "9"^^xsd:decimal .
+      sh:order "10"^^xsd:decimal .
 
 
 # /////// Instance Title FORM BEGINS HERE ////////////////////////////////////////////////////////////
@@ -1745,6 +1763,7 @@ raremat_shapes_monograph:InstanceTitleForm
   sh:property raremat_shapes_monograph:InstanceTitleForm_bf_partNumber ;
   sh:property raremat_shapes_monograph:InstanceTitleForm_bf_partName ;
   sh:property raremat_shapes_monograph:InstanceTitleForm_arm_origin ;
+  
   sh:property raremat_shapes_monograph:InstanceTitleForm_bf_status ;
   sh:property raremat_shapes_monograph:InstanceTitleForm_arm_titleOf ;
   sh:property raremat_shapes_monograph:InstanceTitleForm_arm_isPreferredTitleOf ;
@@ -1800,6 +1819,25 @@ raremat_shapes_monograph:InstanceTitleForm_arm_origin sh:path arm:origin ;
       sh:order "6"^^xsd:decimal ;
       sh:nodeKind sh:IRI ;
       sh:name "Title origin" .
+      
+raremat_shapes_monograph:InstanceTitleForm_arm_hasSource sh:path arm:hasSource ;
+      sh:name "Title source" ;
+      sh:description "Source of the title. The source may be an agent, work, or instance" ;
+      sh:order "6"^^xsd:decimal ;
+      sh:or (
+         
+         [
+           sh:class bf:Work ;
+         ]
+         [
+           sh:class bf:Instance ;
+         ]
+         [
+           sh:class bf:Agent ;
+         ]
+         
+        ) ;
+      sh:nodeKind sh:Literal .
       
 raremat_shapes_monograph:InstanceTitleForm_bf_status sh:path bf:Status ;
       sh:in ( <https://w3id.org/arm/datasets/status/cancelled> <https://w3id.org/arm/datasets/status/current> <https://w3id.org/arm/datasets/status/deprecated> <https://w3id.org/arm/datasets/status/invalid> ) ;
