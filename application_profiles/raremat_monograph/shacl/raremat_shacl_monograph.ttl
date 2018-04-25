@@ -9,7 +9,7 @@
 @prefix gvp: <http://vocab.getty.edu/ontology#> .
 @prefix lingvo: <http://www.lingvoj.org/ontology#> .
 @prefix madsrdf: <http://www.loc.gov/standards/mads/rdf/v1.rdf#> .
-@prefix measurement: <https://w3id.org/arm/ontologies/measurement/> .
+@prefix measure: <https://w3id.org/arm/ontologies/measurement/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov> .
 @prefix raremat_shapes_monograph: <https://w3id.org/arm/application_profile/shacl/raremat_monograph/> .
@@ -718,9 +718,9 @@ raremat_shapes_monograph:InstanceForm rdf:type rdfs:Class ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_accompaniedBy ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_accompanies ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_extent ;
-  sh:property raremat_shapes_monograph:InstanceForm_measurement_hasMeasurementGroup ;
-  sh:property raremat_shapes_monograph:InstanceForm_measurement_hasSignatureStatement ;
-  sh:property raremat_shapes_monograph:InstanceForm_measurement_hasMaterial ;
+  sh:property raremat_shapes_monograph:InstanceForm_measure_hasMeasurementGroup ;
+  sh:property raremat_shapes_monograph:InstanceForm_measure_hasSignatureStatement ;
+  sh:property raremat_shapes_monograph:InstanceForm_measure_hasMaterial ;
   sh:property raremat_shapes_monograph:ItemForm_rdau_P60596 ;
   sh:property raremat_shapes_monograph:ItemForm_rdau_P60159 ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_note ;
@@ -839,8 +839,8 @@ raremat_shapes_monograph:InstanceForm_bf_extent sh:path bf:extent ;
       tosh:editWidget swa:NestedObjectEditor .
      
      
-raremat_shapes_monograph:InstanceForm_measurement_hasMeasurementGroup sh:path measurement:hasMeasurementGroup ;
-      sh:class measurement:MeasurementGroup ;
+raremat_shapes_monograph:InstanceForm_measure_hasMeasurementGroup sh:path measure:hasMeasurementGroup ;
+      sh:class measure:MeasurementGroup ;
       sh:group raremat_shapes_monograph:InstancePhysicalDecriptionPropertyGroup ;
       sh:name "Instance measurement information" ;
       sh:nodeKind sh:IRI ;
@@ -848,7 +848,7 @@ raremat_shapes_monograph:InstanceForm_measurement_hasMeasurementGroup sh:path me
       tosh:editWidget swa:NestedObjectEditor .
       
 raremat_shapes_monograph:InstanceForm_bf_bookFormat sh:path bf:bookFormat ;
-      sh:class measurement:MeasurementGroup ;
+      sh:class measure:MeasurementGroup ;
       sh:group raremat_shapes_monograph:InstancePhysicalDescriptionPropertyGroup ;
       sh:description "Result of folding a printed sheet to form a gathering of leaves" ;
       sh:name "Book format" ;
@@ -1001,7 +1001,7 @@ raremat_shapes_monograph:ItemForm rdf:type rdfs:Class ;
   sh:property raremat_shapes_monograph:ItemForm_bf_partOf ;
   sh:property raremat_shapes_monograph:ItemForm_arm_isOnCarrier ;
   sh:property raremat_shapes_monograph:ItemForm_bf_extent ;
-  sh:property raremat_shapes_monograph:ItemForm_measurement_hasMeasurementGroup ;
+  sh:property raremat_shapes_monograph:ItemForm_measure_hasMeasurementGroup ;
   sh:property raremat_shapes_monograph:ItemForm_arm_hasSignatureStatement ;
   sh:property raremat_shapes_monograph:ItemForm_arm_hasMaterial ;
   sh:property raremat_shapes_monograph:ItemForm_arm_hasBaseMaterial ;
@@ -1091,7 +1091,7 @@ raremat_shapes_monograph:ItemForm_arm_isOnCarrier sh:path arm:isOnCarrier ;
       sh:group raremat_shapes_monograph:ItemPartsAccompanimentsPropertyGroup ;
       tosh:editWidget swa:NestedObjectEditor .
 
-raremat_shapes_monograph:ItemForm_measurement_hasMeasurementGroup sh:path measurement:hasMeasurementGroup ;
+raremat_shapes_monograph:ItemForm_measure_hasMeasurementGroup sh:path measure:hasMeasurementGroup ;
       sh:class <https://w3id.org/arm/core/ontology/0.1/maesurement/MeasurementGroup> ;
       sh:group raremat_shapes_monograph:ItemPhysicalDescriptionPropertyGroup ;
       sh:name "Instance measurement information" ;
@@ -1316,7 +1316,7 @@ raremat_shapes_monograph:MeasurementGroupForm
   sh:targetClass <http://measurement.bibliotek-o.org/MeasurementGroup> ;
   rdfs:subClassOf rdfs:Resource ;
   sh:property raremat_shapes_monograph:MeasurementGroupForm_dcterms_description ;
-  sh:property raremat_shapes_monograph:MeasurementGroupForm_measurement_hasMeasurement .
+  sh:property raremat_shapes_monograph:MeasurementGroupForm_measure_hasMeasurement .
   
   
 raremat_shapes_monograph::MeasurementGroupForm_dcterms_description sh:path dcterms:description ;
@@ -1325,7 +1325,7 @@ raremat_shapes_monograph::MeasurementGroupForm_dcterms_description sh:path dcter
       sh:nodeKind sh:Literal ;
       sh:order "0"^^xsd:decimal .
     
-raremat_shapes_monograph:MeasurementGroupForm_measurement_hasMeasurement
+raremat_shapes_monograph:MeasurementGroupForm_measure_hasMeasurement
       sh:path <http://measurement.bibliotek-o.org/hasMeasurement> ;
       sh:class <http://measurement.bibliotek-o.org/Measurement> ;
       sh:description "The measurement of a single aspect of a resource, including value, units, and the dimension measured. For example, a book may have a height (aspect) of 10 (value) centimeters (units). Each such measurement is attached to a MeasurementGroup." ;
@@ -1355,7 +1355,7 @@ raremat_shapes_monograph:MeasurementForm_rdf_value sh:path rdf:value ;
       sh:nodeKind sh:Literal ;
       sh:order "0"^^xsd:decimal .
     
-raremat_shapes_monograph:MeasurementForm_measurement_hasUnit sh:path <http://measurement.bibliotek-o.org/hasUnit> ;
+raremat_shapes_monograph:MeasurementForm_measure_hasUnit sh:path <http://measurement.bibliotek-o.org/hasUnit> ;
       sh:description "Unit used to express the measurement" ;
       sh:name "Unit" ;
       sh:nodeKind sh:IRI ;
@@ -1402,7 +1402,7 @@ raremat_shapes_monograph:MeasurementForm_measurement_hasUnit sh:path <http://mea
 
 # For dimension types, such as height, width, weight, etc. use AAT, Art & Architecture Thesaurus.
 
-raremat_shapes_monograph:MeasurementForm_measurement_measures sh:path <http://measurement.bibliotek-o.org/measures> ;
+raremat_shapes_monograph:MeasurementForm_measure_measures sh:path <http://measurement.bibliotek-o.org/measures> ;
       sh:description "Dimension or other aspect of a resource that is measured by this Measurement. For example, a Measurement may specify the length, height, weight, file size, etc. of a resource." ;
       sh:name "Dimension or other aspect" ;
       sh:nodeKind sh:IRI ;
@@ -2111,7 +2111,7 @@ raremat_shapes_monograph:FontForm
   rdfs:subClassOf rdfs:Resource ;
   sh:targetClass arm:Font ;
   sh:property raremat_shapes_monograph:FontForm_arm_hasTypeface ;
-  sh:property raremat_shapes_monograph:FontForm_measurement_hasMeasurement ;
+  sh:property raremat_shapes_monograph:FontForm_measure_hasMeasurement ;
   sh:property raremat_shapes_monograph:FontForm_arm_hasStyle ;
   .
   
@@ -2122,9 +2122,9 @@ raremat_shapes_monograph:FontForm_arm_hasTypeface sh:path arm:hasTypeface ;
       sh:name "Has typeface" ;
       sh:description "A design or “font family” created by a typographer or type designer. It defines specific stylistic features to determine the type display of a writing system." .
       
-raremat_shapes_monograph:FontForm_measurement_hasMeasurement sh:path measurement:hasMeasurement ;
+raremat_shapes_monograph:FontForm_measure_hasMeasurement sh:path measure:hasMeasurement ;
       sh:order "1"^^xsd:decimal ;
-      sh:class measurement:Measurement ;
+      sh:class measure:Measurement ;
       sh:nodeKind sh:IRI ;
       sh:name "Font size" ;
       tosh:editWidget swa:NestedObjectEditor ;
