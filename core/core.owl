@@ -482,15 +482,6 @@
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:ObjectProperty>
     
-    <owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/0.1/hasActivity">
-        <rdfs:label xml:lang="en">has activity</rdfs:label>
-        <skos:definition xml:lang="en">Relates this resource to an activity or contribution by a single agent that affects or alters its existence or state.</skos:definition>
-        <rdfs:range rdf:resource="https://w3id.org/arm/core/ontology/0.1/Activity"/> 
-        <owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/0.1/isActivityOf"/>
-        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-    </owl:ObjectProperty>
-    
     <owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/0.1/hasArrangement">
         <rdfs:label xml:lang="en">has arrangement</rdfs:label>
         <skos:definition xml:lang="en">Relates an object or collection of objects to information about its organization or arrangement.</skos:definition>
@@ -618,16 +609,7 @@
         <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:ObjectProperty>
-    
-    <owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/0.1/isActivityOf">
-        <rdfs:label xml:lang="en">is activity of</rdfs:label>
-        <skos:definition xml:lang="en">Relates an activity to the affected resource.</skos:definition>
-        <rdfs:range rdf:resource="https://w3id.org/arm/core/ontology/0.1/Activity"/> 
-        <owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/0.1/hasActivity"/>
-        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-    </owl:ObjectProperty>
-    
+      
     <owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/0.1/isAppliedMaterialOf">
         <rdfs:label xml:lang="en">is applied material of</rdfs:label>
         <skos:definition xml:lang="en">Relates a material to the resource it was applied to.</skos:definition>

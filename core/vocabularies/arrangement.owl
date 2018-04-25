@@ -21,7 +21,7 @@
         <dcterms:title xml:lang="en">Art and Rare Materials Arrangement Vocabulary</dcterms:title>
         <skos:definition xml:lang="en">The Art and RareMat Arrangement Vocabulary is a controlled vocabulary to express the physical arrangment or configuration of objects described in rare materials metadata. Arrangements may apply to individual objects or collections of objects.</skos:definition>
         <skos:editorialNote xml:lang="en">The elements of this vocabulary are typed https://w3id.org/arm/core/ontology/0.1/Arrangement rather than http://id.loc.gov/ontologies/bibframe/Arrangement because at the time of publication BIBFRAME Arrangement is used only with collections of objects and not individual objects. Should this definition change in future versions of BIBFRAME, the entities defined here will be retyped.</skos:editorialNote>
-        <vann:preferredNamespacePrefix>arr</vann:preferredNamespacePrefix>
+        <vann:preferredNamespacePrefix>arrangement</vann:preferredNamespacePrefix>
         <void:vocabulary rdf:resource="https://w3id.org/arm/core/ontology/0.1/"/>
     </void:Dataset>    
     

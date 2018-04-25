@@ -27,7 +27,7 @@
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
         <rdfs:label xml:lang="en">Activity classes for the Art and Rare Materials Ontology</rdfs:label>
         <skos:definition xml:lang="en">The Art and Rare Materials Ontology provides specialized modeling of bibliographic metadata in the art and rare materials domains. It is an extension to the BIBFRAME ontology for general bibliographic description.</skos:definition>
-        <vann:preferredNamespacePrefix>armact</vann:preferredNamespacePrefix>
+        <vann:preferredNamespacePrefix>activity</vann:preferredNamespacePrefix>
         <dcterms:title xml:lang="en">Activity classes for the Art and Rare Materials Ontology</dcterms:title>
     </owl:Ontology>
     
@@ -711,5 +711,31 @@
         <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // OBJECT PROPERTIES
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+    <owl:ObjectProperty rdf:about="https://w3id.org/arm/core/activity/0.1/hasActivity">
+        <rdfs:label xml:lang="en">has activity</rdfs:label>
+        <skos:definition xml:lang="en">Relates this resource to an activity or contribution by a single agent that affects or alters its existence or state.</skos:definition>
+        <rdfs:range rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/> 
+        <owl:inverseOf rdf:resource="https://w3id.org/arm/core/activity/0.1/isActivityOf"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="https://w3id.org/arm/core/activity/0.1/isActivityOf">
+        <rdfs:label xml:lang="en">is activity of</rdfs:label>
+        <skos:definition xml:lang="en">Relates an activity to the affected resource.</skos:definition>
+        <rdfs:range rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/> 
+        <owl:inverseOf rdf:resource="https://w3id.org/arm/core/activity/0.1/hasActivity"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
     
 </rdf:RDF>
