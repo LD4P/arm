@@ -2151,8 +2151,7 @@ raremat_shapes_monograph:HandwritingForm
 
 raremat_shapes_monograph:HandwritingForm_arm_hasHandwritingType sh:path arm:hasHandwritingType ;
       sh:order "0"^^xsd:decimal ;
-# TODO Add individuals to extend this list when feedback is provided by Catalogers
-      sh:in ( aat:300194411 aat:300195207 aat:300375118 aat:300195226 aat:300210195 aat:300210180 aat:300202638 aat:300194430 aat:300210204 aat:300210206 aat:300210205 aat:300210136 aat:300210143 aat:300210146 aat:300194451 aat:300210049 aat:300210050 aat:300210051 aat:300194448 aat:300379143 aat:300209776 aat:300209772 aat:300196122 aat:300198409 aat:300194424 aat:300209780 aat:300200668 aat:300210288 aat:300200828 aat:300194782 ) ;
+      sh:in ( aat:300194411 aat:300195207 aat:300375118 aat:300195226 aat:300210195 aat:300210180 aat:300202638 aat:300194430 aat:300210204 aat:300210206 aat:300210205 aat:300210136 aat:300210143 aat:300210146 aat:300194451 aat:300210049 aat:300210050 aat:300210051 aat:300194448 aat:300379143 aat:300209776 aat:300209772 aat:300196122 aat:300198409 aat:300194424 aat:300209780 aat:300200668 aat:300210288 aat:300200828 <http://dbpedia.org/resource/Court_hand> <http://dbpedia.org/resource/Secretary_hand> <https://w3id.org/arm/datasets/handwriting_type/mixed_hand> aat:300194782 <https://w3id.org/arm/datasets/handwriting_type/other_hand> ) ;
       sh:nodeKind sh:IRI ;
       sh:name "Has handwriting type" ;
       sh:description "The type of writing hand used by this example of handwriting" .
