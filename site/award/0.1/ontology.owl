@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+     xmlns="https://w3id.org/arm/award/ontology/0.1/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:voaf="http://purl.org/vocommons/voaf#"
+    >
+  
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // ONTOLOGY DECLARATION
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+    <owl:Ontology rdf:about="https://w3id.org/arm/award/ontology/">
+        <owl:ontologyIRI rdf:resource="https://w3id.org/arm/award/ontology/"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/arm/award/ontology/0.1/"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1.0</owl:versionInfo>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+        <rdfs:label xml:lang="en">Award Ontology</rdfs:label>
+        <skos:definition xml:lang="en">The Award Ontology models awards and their recipients.</skos:definition>
+        <vann:preferredNamespacePrefix>award</vann:preferredNamespacePrefix>
+        <dcterms:title xml:lang="en">Award Ontology</dcterms:title>
+    </owl:Ontology>
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // CLASSES
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+    
+    <!-- https://w3id.org/arm/award/ontology/0.1/AwardCitation -->
+    
+    <owl:Class rdf:about="https://w3id.org/arm/award/ontology/0.1/AwardCitation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arm/award/ontology/0.1/AwardReceipt"/>
+        <skos:definition>The specific nature of the award receipt is citation.</skos:definition>
+        <rdfs:label>Award citation</rdfs:label>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    
+    
+    
+    <!-- https://w3id.org/arm/award/ontology/0.1/AwardGranterActivity -->
+    
+    <owl:Class rdf:about="https://w3id.org/arm/award/ontology/0.1/AwardGranterActivity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arm/award/ontology/0.1/Activity"/>
+        <skos:definition>The activity of granting an award.</skos:definition>
+        <skos:scopeNote>This class is not derived from a MARC relator.</skos:scopeNote>
+        <rdfs:label>Award granter</rdfs:label>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    
+    
+    
+    <!-- https://w3id.org/arm/award/ontology/0.1/AwardHonoraryMention -->
+    
+    <owl:Class rdf:about="https://w3id.org/arm/award/ontology/0.1/AwardHonoraryMention">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arm/award/ontology/0.1/AwardReceipt"/>
+        <skos:definition>The specific nature of the award receipt is honorary mention.</skos:definition>
+        <rdfs:label>Award honorary mention</rdfs:label>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    
+    
+    
+    <!-- https://w3id.org/arm/award/ontology/0.1/AwardLonglist -->
+    
+    <owl:Class rdf:about="https://w3id.org/arm/award/ontology/0.1/AwardLonglist">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arm/award/ontology/0.1/AwardReceipt"/>
+        <skos:definition>The specific nature of the award receipt is longlist.</skos:definition>
+        <rdfs:label>Award longlist</rdfs:label>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    
+    
+    
+    <!-- https://w3id.org/arm/award/ontology/0.1/AwardNominee -->
+    
+    <owl:Class rdf:about="https://w3id.org/arm/award/ontology/0.1/AwardNominee">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arm/award/ontology/0.1/AwardReceipt"/>
+        <skos:definition>The specific nature of the award receipt is nominee.</skos:definition>
+        <rdfs:label>Award nominee</rdfs:label>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    
+    
+    
+    <!-- https://w3id.org/arm/award/ontology/0.1/AwardReceipt -->
+    
+    <owl:Class rdf:about="https://w3id.org/arm/award/ontology/0.1/AwardReceipt">
+        <skos:definition>The bestowal of an award, honor, or distinction to an Agent or Work. The award bestowed should be represented with the Award class. The AwardReceipt is a context node between the award and the recipient which may contain further information, such as date.</skos:definition>
+        <rdfs:label>Award receipt</rdfs:label>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    
+    
+    <!-- https://w3id.org/arm/award/ontology/0.1/AwardSelectorActivity -->
+    
+    <owl:Class rdf:about="https://w3id.org/arm/award/ontology/0.1/AwardSelectorActivity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arm/award/ontology/0.1/Activity"/>
+        <skos:definition>The activity of nominating or judging a resource in relation to an award, honor, etc.</skos:definition>
+        <skos:scopeNote>This class is not derived from a MARC relator.</skos:scopeNote>
+        <rdfs:label>Award selector</rdfs:label>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    
+    
+    <!-- https://w3id.org/arm/award/ontology/0.1/AwardShortlist -->
+    
+    <owl:Class rdf:about="https://w3id.org/arm/award/ontology/0.1/AwardShortlist">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arm/award/ontology/0.1/AwardReceipt"/>
+        <skos:definition>The specific nature of the award receipt is award shortlist.</skos:definition>
+        <rdfs:label>Award shortlist</rdfs:label>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    
+    
+    
+    <!-- https://w3id.org/arm/award/ontology/0.1/AwardWinner -->
+    
+    <owl:Class rdf:about="https://w3id.org/arm/award/ontology/0.1/AwardWinner">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/arm/award/ontology/0.1/AwardReceipt"/>
+        <skos:definition>The specific nature of the award receipt is award winner.</skos:definition>
+        <rdfs:label>Award winner</rdfs:label>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    
+    
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // OBJECT PROPERTIES
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- https://w3id.org/arm/award/ontology/0.1/hasAward -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arm/award/ontology/0.1/hasAward">
+        <rdfs:domain rdf:resource="https://w3id.org/arm/award/ontology/0.1/AwardReceipt"/>
+        <rdfs:range rdf:resource="http://vivoweb.org/ontology/core#Award"/>
+        <skos:definition>This resource is a receipt of the specified award or honor.</skos:definition>
+        <rdfs:label>has award</rdfs:label>
+        <owl:inverseOf rdf:resource="https://w3id.org/arm/award/ontology/0.1/isAwardOf"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arm/award/ontology/0.1/isAwardOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arm/award/ontology/0.1/isAwardOf">
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Award"/>
+        <rdfs:range rdf:resource="https://w3id.org/arm/award/ontology/0.1/AwardReceipt"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arm/award/ontology/0.1/hasAward"/>
+        <skos:definition>Links a specified award or honor to its receipt.</skos:definition>
+        <rdfs:label>is award of</rdfs:label>
+        <owl:inverseOf rdf:resource="https://w3id.org/arm/award/ontology/0.1/hasAward"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arm/award/ontology/0.1/receives -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arm/award/ontology/0.1/receives">
+        <rdfs:range rdf:resource="https://w3id.org/arm/award/ontology/0.1/AwardReceipt"/>
+        <skos:definition>This resource, such as an Agent or Work, is the recipient of the specified AwardReceipt.</skos:definition>
+        <rdfs:label>receives</rdfs:label>
+        <owl:inverseOf rdf:resource="https://w3id.org/arm/award/ontology/0.1/receivedBy"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/arm/award/ontology/0.1/receivedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arm/award/ontology/0.1/receivedBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/arm/award/ontology/0.1/receives"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arm/award/ontology/0.1/AwardReceipt"/>
+        <skos:definition>This AwardReceipt was received by the specified award recipient (such as an Agent or Work).</skos:definition>
+        <rdfs:label>received by</rdfs:label>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
+
+</rdf:RDF>
+
