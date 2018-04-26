@@ -24,7 +24,7 @@
         <void:vocabulary rdf:resource="https://w3id.org/arm/core/ontology/0.1/"/>
     </void:Dataset>    
     
-    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/handwriting_type/0.1/mixed_hand">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/handwriting_type/0.1/mixedHand">
         <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/HandwritingType"/>
         <rdfs:label xml:lang="en">mixed hand</rdfs:label>
         <skos:definition xml:lang="en">Handwriting made up of a mixture of characteristics from different scripts and styles.</skos:definition>
@@ -32,7 +32,7 @@
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:NamedIndividual>
     
-    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/handwriting_type/0.1/other_hand">
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/handwriting_type/0.1/otherHand">
         <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/HandwritingType"/>
         <rdfs:label xml:lang="en">other hand</rdfs:label>
         <skos:definition xml:lang="en">Used to record a handwriting style different from the options currently available in the RareMat Handwriting Type Vocabulary or Getty AAT.</skos:definition>
