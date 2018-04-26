@@ -129,6 +129,12 @@ raremat_shapes_monograph:InstanceGenreFormPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Has item" ;
   sh:order "0"^^xsd:decimal .
+  
+:InstanceBibliographicCitationPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Bibliographic Citations for the Instance" ;
+  sh:description "To group bibliographic citations of the instance." ;
+  sh:order "0"^^xsd:decimal .
 
 :InstanceAwardReceiptPropertyGroup
   rdf:type sh:PropertyGroup ;
@@ -193,6 +199,12 @@ raremat_shapes_monograph:ItemGenreFormPropertyGroup
 :ItemOfInstancePropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Item of" ;
+  sh:order "0"^^xsd:decimal .
+  
+:ItemBibliographicCitationPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Bibliographic Citations for the Item" ;
+  sh:description "To group bibliographic citations for the item." ;
   sh:order "0"^^xsd:decimal .
   
 :ItemAwardReceiptPropertyGroup
