@@ -45,16 +45,20 @@ News
 Structure and Content of the Repository
 --------------
 
-The core ontology and the three modularized ontologies (award, custodial_history, and measurement) are each housed in their own top-level directory, which contains the OWL ontology files, 
-associated original vocabularies, human-readable documentation, and SHACL validation profiles (in progress). 
+The core ontology and the three modularized ontologies (award, custodial_history, and measurement) are each housed in a top-level directory, which contains the OWL ontology files, 
+associated original vocabularies, human-readable documentation, and any SHACL validation profiles. 
+
+Note on core OWL files: The core ontology has been split into two OWL files, `core.owl` and `activity.owl`, because the issue of whether to adopt the BIBFRAME Contribution model
+or the [bibliotek-o](http://bibliotek-o.org) Activity model is still unresolved. As a temporary accommodation, the Activity model is used but the relevant terms are stored in a separate OWL file
+so they can be easily separated from the rest of the core model. 
 
 * [`modeling_recommendations/`](modeling_recommendations/): Modeling recommendations
 
 * [`core/`](core/): Core art and rare materials ontologies and vocabularies 
   * [`core.owl`](core/core.owl): Primary ontology file
-  * [`activity.owl`](core/activity.owl): Secondary ontology file containing definitions of Activity classes
+  * [`activity.owl`](core/activity.owl): Secondary ontology file containing definitions of Activity classes and related predicates
   * [`vocabularies/`](core/vocabularies): Core controlled vocabularies
-  * [`documentation`](core/documentation/): Human-readable documentation
+  * [`documentation/`](core/documentation/): Human-readable documentation
   * [`validation/`](core/validation/): SHACL validation files for the core ontology
 
 * [`award/`](award/): Award ontology 
@@ -77,7 +81,7 @@ associated original vocabularies, human-readable documentation, and SHACL valida
 * [`doc/`](doc/): Informational documents
 
 
-Versioning
+Versioning and Change Management
 -----------
 
 To support modularity, each ontology and vocabulary is versioned independently. SHACL validation and application profiles reference specific 
