@@ -48,9 +48,9 @@ Structure and Content of the Repository
 The core ontology and the three modularized ontologies (award, custodial_history, and measurement) are each housed in a top-level directory, which contains the OWL ontology files, 
 associated original vocabularies, human-readable documentation, and any SHACL validation profiles. 
 
-Note on core OWL files: The core ontology has been split into two OWL files, `core.owl` and `activity.owl`, because the issue of whether to adopt the BIBFRAME Contribution model
-or the [bibliotek-o](http://bibliotek-o.org) Activity model is still unresolved. As a temporary accommodation, the Activity model is used but the relevant terms are stored in a separate OWL file
-so they can be easily separated from the rest of the core model. 
+_Note on core OWL files: The core ontology has been split into two OWL files, `core.owl` and `activity.owl`, because the issue of whether to adopt the BIBFRAME Contribution model
+or the [bibliotek-o](http://bibliotek-o.org) Activity model is still unresolved. As a temporary accommodation, the Activity model is used, but the relevant terms are stored in a separate OWL file
+for easy separation._ 
 
 * [`modeling_recommendations/`](modeling_recommendations/): Modeling recommendations
 
