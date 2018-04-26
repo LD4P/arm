@@ -727,8 +727,8 @@ raremat_shapes_monograph:InstanceForm rdf:type rdfs:Class ;
   sh:property raremat_shapes_monograph:InstanceForm_arm_writtenIn ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_instanceOf ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_editionStatement ;
-  sh:property raremat_shapes_monograph:InstanceForm_arm_hasCitation ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_hasItem ;
+  sh:property raremat_shapes_monograph:InstanceForm_arm_hasCitation ;
   sh:property raremat_shapes_monograph:InstanceForm_arm_receives ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_note ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_identifiedBy .
@@ -934,6 +934,14 @@ raremat_shapes_monograph:InstanceForm_bf_editionStatement sh:path bf:editionStat
       sh:nodeKind sh:Literal ;
       sh:group raremat_shapes_monograph:InstanceOfWorkPropertyGroup .
 
+# ///// PROPERTY SHAPES FOR InstancetoItemPropertyGroup START HERE. /////////////////////////////////////////////////////////////
+
+raremat_shapes_monograph:InstanceForm_bf_hasItem sh:path <http://id.loc.gov/ontologies/bibframe/hasItem> ;
+      sh:class <http://id.loc.gov/ontologies/bibframe/Item> ;
+      sh:description "Items of this instance" ;
+      sh:name "Has item" ;
+      sh:group raremat_shapes_monograph:InstanceHasItemPropertyGroup .
+      
 # ///// PROPERTY SHAPES FOR InstanceBibliographicCitationPropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
 raremat_shapes_monograph:InstanceForm_arm_hasCitation sh:path arm:hasCitation ;
@@ -944,16 +952,6 @@ raremat_shapes_monograph:InstanceForm_arm_hasCitation sh:path arm:hasCitation ;
   sh:name "Bibliographic citation" ;
   sh:nodeKind sh:IRI ;
   sh:order "0"^^xsd:decimal .
-
-# ///// PROPERTY SHAPES FOR InstancetoItemPropertyGroup START HERE. /////////////////////////////////////////////////////////////
-
-raremat_shapes_monograph:InstanceForm_bf_hasItem sh:path <http://id.loc.gov/ontologies/bibframe/hasItem> ;
-      sh:class <http://id.loc.gov/ontologies/bibframe/Item> ;
-      sh:description "Items of this instance" ;
-      sh:name "Has item" ;
-      sh:group raremat_shapes_monograph:InstanceHasItemPropertyGroup .
-      
-
       
 # ///// PROPERTY SHAPES FOR InstanceAwardReceipt PropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
@@ -1023,6 +1021,8 @@ raremat_shapes_monograph:ItemForm rdf:type rdfs:Class ;
   sh:property raremat_shapes_monograph:ItemForm_arm_hasMaterial ;
   sh:property raremat_shapes_monograph:ItemForm_arm_hasBaseMaterial ;
   sh:property raremat_shapes_monograph:ItemForm_arm_hasAppliedMaterial ;
+  sh:property raremat_shapes_monograph:ItemForm_bf_itemOf ;
+  sh:property raremat_shapes_monograph:ItemForm_arm_hasCitation ;
   sh:property raremat_shapes_monograph:ItemForm_arm_receives ;
   sh:property raremat_shapes_monograph:ItemForm_bf_note ;
   sh:property raremat_shapes_monograph:ItemForm_bf_identifiedBy ;
@@ -1172,6 +1172,18 @@ raremat_shapes_monograph:ItemForm_bf_itemOf sh:path <http://id.loc.gov/ontologie
       sh:description "Instances that this is an item of" ;
       sh:name "Item of (instances)" ;
       sh:group raremat_shapes_monograph:ItemOfInstancePropertyGroup .
+      
+# ///// PROPERTY SHAPES FOR ItemBibliographicCitationPropertyGroup START HERE. /////////////////////////////////////////////////////////////
+
+raremat_shapes_monograph:ItemForm_arm_hasCitation sh:path arm:hasCitation ;
+  sh:class arm:Citation ;
+  tosh:editWidget swa:NestedObjectEditor ;
+  sh:description "A single citation within a bibliographic source." ;
+  sh:group raremat_shapes_monograph:ItemBibliographicCitationPropertyGroup ;
+  sh:name "Bibliographic citation" ;
+  sh:nodeKind sh:IRI ;
+  sh:order "0"^^xsd:decimal .
+
       
 # ///// PROPERTY SHAPES FOR ItemAwardReceipt PropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
