@@ -73,4 +73,9 @@ The HTML and accompanying files should also remain in `/award/documentation/lode
 
 ## Commit, push, and merge
 
+* If you did not already delete temporary files in the preceding steps, delete them before committing to git:
+
+`$ cd /award/documentation/lode`
+`$ rm temp.html award.owl`
+
 * Commit and push all files to GitHub. Merge to master for publication.

@@ -17,7 +17,8 @@ ontology: e.g., http://bibliotek-o.org/1.2/ontology for version 1.2.x.
 After running this script, change the href on the "Ontology Source" link
 to http://biblioteko-org/ontology.owl.
 
-Simeon Warner - 2016-01-22
+Created: Simeon Warner - 2016-01-22
+Modified: Rebecca Younes - 2018-04-22
 """
 
 import re
