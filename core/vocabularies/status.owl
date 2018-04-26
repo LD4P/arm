@@ -25,36 +25,36 @@
         <void:vocabulary rdf:resource="http://id.loc.gov/ontologies/bibframe/"/>
     </void:Dataset>    
 
-<owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/status/0.1/cancelled">
-    <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
-    <rdfs:label xml:lang="en">cancelled</rdfs:label>
-    <skos:definition xml:lang="en">Applies to an identifier or other resource that has been cancelled.</skos:definition>
-    <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-    <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-</owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/status/0.1/cancelled">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
+        <rdfs:label xml:lang="en">cancelled</rdfs:label>
+        <skos:definition xml:lang="en">Applies to an identifier or other resource that has been cancelled.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/status/0.1/current">
-    <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
-    <rdfs:label xml:lang="en">current</rdfs:label>
-    <skos:definition xml:lang="en">Applies to an identifier or other resource that is currently valid.</skos:definition>
-    <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-    <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-</owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/status/0.1/current">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
+        <rdfs:label xml:lang="en">current</rdfs:label>
+        <skos:definition xml:lang="en">Applies to an identifier or other resource that is currently valid.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/status/0.1/deprecated">
-    <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
-    <rdfs:label xml:lang="en">deprecated</rdfs:label>
-    <skos:definition xml:lang="en">Applies to an identifier or other resource that has been deprecated.</skos:definition>
-    <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-    <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/status/0.1/invalid">
-    <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
-    <rdfs:label xml:lang="en">invalid</rdfs:label>
-    <skos:definition xml:lang="en">Applies to an identifier or other resource that is invalid.</skos:definition>
-    <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-    <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-</owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/status/0.1/deprecated">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
+        <rdfs:label xml:lang="en">deprecated</rdfs:label>
+        <skos:definition xml:lang="en">Applies to an identifier or other resource that has been deprecated.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/status/0.1/invalid">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
+        <rdfs:label xml:lang="en">invalid</rdfs:label>
+        <skos:definition xml:lang="en">Applies to an identifier or other resource that is invalid.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
     
 </rdf:RDF>
