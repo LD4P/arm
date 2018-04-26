@@ -22,8 +22,8 @@ Simeon Warner - 2016-01-22
 
 import re
 
-html = open('bibliotek-o.html','r').read()
-prefix = 'http://bibliotek-o.org/1.1/ontology/'
+html = open('temp.html','r').read()
+prefix = 'https://w3id.org/arm/award/ontology/0.1/'
 
 ## Pass 1 - find anchors to change
 terms = {}
