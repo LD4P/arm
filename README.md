@@ -18,8 +18,8 @@ ontology into three modularized ontologies for description of awards, custodial 
 
 In addition to the ontologies, the group has generated several other outputs:
 - A set of controlled vocabularies for arrangement of physical objects (e.g., rolled and unrolled), origin (e.g., of titles), status (e.g., of identifiers), 
-and typefaces.
-- Detailed recommendations for every aspect of the modeling. These include use cases; model overviews with motivation and rationale
+typefaces, and handwriting types.
+- Detailed documentation of every aspect of the modeling. These include use cases; model overviews, with motivation and rationale
 in reference to the use cases and legacy data; diagrams; RDF samples; term specifications; recommendations for future modifications to BIBFRAME, where applicable; 
 and lists of related topics out of scope of the current project but of interest for future research.
 - Application profiles, formalized in SHACL and accompanied by external ontologies and vocabularies, to support form and display interfaces 
@@ -42,12 +42,39 @@ News
 
 * **2018-04-27** Release of Version 0.1.0 of all ontologies and vocabularies.
 
-Structure of the Repository
+Structure and Content of the Repository
 --------------
 
 The core ontology and the three modularized ontologies (award, custodial_history, and measurement) are each housed in their own top-level directory, which contains the OWL ontology files, 
-associated original vocabularies, human-readable documentation, and SHACL validation profiles (in progress). Also at the top level of the directory tree
-are the modeling recommendations and the SHACL application profiles. 
+associated original vocabularies, human-readable documentation, and SHACL validation profiles (in progress). 
+
+* [`modeling_recommendations/`](modeling_recommendations/): Modeling recommendations
+
+* [`core/`](core/): Core art and rare materials ontologies and vocabularies 
+  * [`core.owl`](core/core.owl): Primary ontology file
+  * [`activity.owl`](core/activity.owl): Secondary ontology file containing definitions of Activity classes
+  * [`vocabularies/`](core/vocabularies): Core controlled vocabularies
+  * [`documentation`](core/documentation/): Human-readable documentation
+  * [`validation/`](core/validation/): SHACL validation files for the core ontology
+
+* [`award/`](award/): Award ontology 
+  * [`award.owl`](award/award.owl): Ontology file
+  * [`documentation/`](award/documentation): Human-readable documentation
+  
+* [`custodial_history/`](custodial_history/): Custodial history ontology 
+  * [`custodial_history.owl`](custodial_history/custodial_history.owl): Ontology file
+  * [`documentation/`](custodial_history/documentation): Human-readable documentation
+  
+* [`measurement/`](measurement/): Measurement ontology 
+  * [`measurement.owl`](measurement/measurement.owl): Ontology file
+  * [`documentation/`](measurement/documentation): Human-readable documentation
+  
+* [`application_profiles/`](application_profiles/): Application profiles 
+  * [`art/shacl`](application_profiles/art/shacl/): SHACL application profiles for artworks
+  * [`raremat_monograph/shacl/`](application_profiles/raremat_monograph/shacl/): SHACL application profiles for rare materials monographs
+  * [`sources/`](application_profiles/sources/): Source ontologies and vocabularies for the application profiles  
+  
+* [`doc/`](doc/): Informational documents
 
 
 Versioning
