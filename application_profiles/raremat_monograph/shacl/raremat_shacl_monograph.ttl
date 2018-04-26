@@ -719,10 +719,17 @@ raremat_shapes_monograph:InstanceForm rdf:type rdfs:Class ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_accompanies ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_extent ;
   sh:property raremat_shapes_monograph:InstanceForm_measure_hasMeasurementGroup ;
+  sh:property raremat_shapes_monograph:InstanceForm_bf_bookFormat ;
   sh:property raremat_shapes_monograph:InstanceForm_measure_hasSignatureStatement ;
   sh:property raremat_shapes_monograph:InstanceForm_measure_hasMaterial ;
-  sh:property raremat_shapes_monograph:ItemForm_rdau_P60596 ;
-  sh:property raremat_shapes_monograph:ItemForm_rdau_P60159 ;
+  sh:property raremat_shapes_monograph:InstanceForm_rdau_P60596 ;
+  sh:property raremat_shapes_monograph:InstanceForm_rdau_P60159 ;
+  sh:property raremat_shapes_monograph:InstanceForm_arm_writtenIn ;
+  sh:property raremat_shapes_monograph:InstanceForm_bf_instanceOf ;
+  sh:property raremat_shapes_monograph:InstanceForm_bf_editionStatement ;
+  sh:property raremat_shapes_monograph:InstanceForm_arm_hasCitation ;
+  sh:property raremat_shapes_monograph:InstanceForm_bf_hasItem ;
+  sh:property raremat_shapes_monograph:InstanceForm_arm_receives ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_note ;
   sh:property raremat_shapes_monograph:InstanceForm_bf_identifiedBy .
 
@@ -876,7 +883,7 @@ raremat_shapes_monograph:InstanceForm_arm_hasMaterial sh:path arm:hasMaterial ;
       tosh:editWidget swa:NestedObjectEditor .
 
 
-raremat_shapes_monograph:ItemForm__rdau_P60596 sh:path rdau:P60596 ;
+raremat_shapes_monograph:InstanceForm__rdau_P60596 sh:path rdau:P60596 ;
       sh:class <http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#E57> ;
       sh:group raremat_shapes_monograph:InstancePhysicalDescriptionPropertyGroup ;
       sh:description "Base materials for this this instance. Base materials can also be more granularly associated with each part of the instance." ;
@@ -885,7 +892,7 @@ raremat_shapes_monograph:ItemForm__rdau_P60596 sh:path rdau:P60596 ;
       sh:order ""^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
   
-raremat_shapes_monograph:ItemForm_rdau_P60159 sh:path rdau:P60159 ;
+raremat_shapes_monograph:InstanceForm_rdau_P60159 sh:path rdau:P60159 ;
       sh:class <http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#E57> ;
       sh:group raremat_shapes_monograph:InstancePhysicalDescriptionPropertyGroup ;
       sh:description "Applied materials for this this instance. Applied materials can also be more granularly associated with each part of the instance." ;
@@ -927,6 +934,16 @@ raremat_shapes_monograph:InstanceForm_bf_editionStatement sh:path bf:editionStat
       sh:nodeKind sh:Literal ;
       sh:group raremat_shapes_monograph:InstanceOfWorkPropertyGroup .
 
+# ///// PROPERTY SHAPES FOR InstanceBibliographicCitationPropertyGroup START HERE. /////////////////////////////////////////////////////////////
+
+raremat_shapes_monograph:InstanceForm_arm_hasCitation sh:path arm:hasCitation ;
+  sh:class arm:Citation ;
+  tosh:editWidget swa:NestedObjectEditor ;
+  sh:description "A single citation within a bibliographic source." ;
+  sh:group raremat_shapes_monograph:InstanceBibliographicCitationPropertyGroup ;
+  sh:name "Bibliographic citation" ;
+  sh:nodeKind sh:IRI ;
+  sh:order "0"^^xsd:decimal .
 
 # ///// PROPERTY SHAPES FOR InstancetoItemPropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
@@ -1745,6 +1762,7 @@ raremat_shapes_monograph:WorkTitleForm_bf_note sh:path bf:note ;
       sh:description "Note about this title" ;
       tosh:editWidget swa:NestedObjectEditor ;
       sh:nodeKind sh:IRI ;
+      sh:name "Note" ;
       sh:order "10"^^xsd:decimal .
 
 
@@ -2014,6 +2032,120 @@ raremat_shapes_monograph:TitleNoteForm_rdf_value sh:path rdf:value ;
       sh:order "1"^^xsd:decimal ;
       sh:nodeKind sh:Literal ;
       sh:name "Title note value" .
+      
+
+# /////// Bibliographic Citation FORM BEGINS HERE ////////////////////////////////////////////////////////////  
+
+raremat_shapes_monograph:BibliographicCitationForm
+  rdf:type sh:NodeShape ;
+  sh:targetClass arm:Citation ;
+  rdfs:label "Bibliographic Citation Form" ;
+  sh:property raremat_shapes_monograph:BibliographicCitationForm_arm_hasSource ;
+  sh:property raremat_shapes_monograph:BibliographicCitationForm_bf_note ;
+  .  
+
+raremat_shapes_monograph:BibliographicCitationForm_arm_hasSource sh:path arm:hasSource ;
+      sh:class arm:Entry ;
+      sh:description "Note about this title" ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:nodeKind sh:IRI ;
+      sh:order "0"^^xsd:decimal .
+      
+raremat_shapes_monograph:BibliographicCitationForm_bf_note sh:path bf:note ;
+      sh:class bf:Note ;
+      sh:name "Bibliographic citation note" ;
+      sh:description "Note about this bibliographic citation. Use the value 'not found' to assert a negative citation if a resource was consulted and no citation for the item was found." ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:nodeKind sh:IRI ;
+      sh:order "1"^^xsd:decimal .
+
+# /////// Bibliographic Citation Entry FORM BEGINS HERE ////////////////////////////////////////////////////////////  
+
+raremat_shapes_monograph:BibliographicCitationEntryForm
+  rdf:type sh:NodeShape ;
+  sh:targetClass arm:Entry ;
+  rdfs:label "Bibliographic Citation Entry Form" ;
+  sh:property raremat_shapes_monograph:BibliographicCitationForm_bf_place ;
+  sh:property raremat_shapes_monograph:BibliographicCitationForm_rdf_value ;
+  .  
+raremat_shapes_monograph:BibliographicCitationForm_rdf_value sh:path rdf:value ;
+      sh:name "Citation value" ;
+      sh:description "The value of the citation." ;
+      sh:nodeKind sh:Literal ;
+      sh:order "0"^^xsd:decimal .
+
+raremat_shapes_monograph:BibliographicCitationForm_bf_place sh:path bf:place ;
+      sh:or (
+         [
+           sh:class arm:Page ;
+         ]
+         [
+           sh:class arm:Volume ;
+         ]
+         [
+           sh:class bf:Text ;
+         ]
+        ) ;
+      sh:name "Entry source"
+      sh:description "Location where the citation entry was found" ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:nodeKind sh:IRI ;
+      sh:order "1"^^xsd:decimal .
+      
+# /////// Page FORM BEGINS HERE ////////////////////////////////////////////////////////////  
+
+raremat_shapes_monograph:PageForm
+  rdf:type sh:NodeShape ;
+  sh:targetClass arm:Page ;
+  rdfs:label "Page Form" ;
+  sh:property raremat_shapes_monograph:PageForm_bf_partOf ;
+  sh:property raremat_shapes_monograph:PageForm_rdf_value ;
+  .  
+
+raremat_shapes_monograph:PageForm_rdf_value sh:path rdf:value ;
+      sh:name "Page number" ;
+      sh:description "Alphanumeric value for the page." ;
+      sh:nodeKind sh:Literal ;
+      sh:order "0"^^xsd:decimal .
+      
+raremat_shapes_monograph:PageForm_bf_partOf sh:path bf:partOf ;
+      sh:or (
+         [
+           sh:class arm:Volume ;
+         ]
+         [
+           sh:class bf:Text ;
+         ]
+        ) ;
+      sh:name "Part of"
+      sh:description "The larger context for the page" ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:nodeKind sh:IRI ;
+      sh:order "1"^^xsd:decimal .
+
+# /////// Volume FORM BEGINS HERE ////////////////////////////////////////////////////////////  
+
+raremat_shapes_monograph:VolumeForm
+  rdf:type sh:NodeShape ;
+  sh:targetClass arm:Volume ;
+  rdfs:label "Volume Form" ;
+  sh:property raremat_shapes_monograph:VolumeForm_bf_partOf ;
+  sh:property raremat_shapes_monograph:VolumeForm_rdf_value ;
+  .  
+
+raremat_shapes_monograph:VolumeForm_rdf_value sh:path rdf:value ;
+      sh:name "Page number" ;
+      sh:description "Alphanumeric value for the page." ;
+      sh:nodeKind sh:Literal ;
+      sh:order "0"^^xsd:decimal .
+      
+raremat_shapes_monograph:VolumeForm_bf_partOf sh:path bf:partOf ;
+      sh:class bf:Text ;
+      sh:name "Part of"
+      sh:description "The larger context for the volume" ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:nodeKind sh:IRI ;
+      sh:order "1"^^xsd:decimal .
 
 # /////// Carrier FORM BEGINS HERE ////////////////////////////////////////////////////////////     
 
