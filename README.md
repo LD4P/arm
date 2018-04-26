@@ -24,12 +24,11 @@ in reference to the use cases and legacy data; diagrams; RDF samples; term speci
 and lists of related topics out of scope of the current project but of interest for future research.
 - Application profiles, formalized in SHACL and accompanied by external ontologies and vocabularies, to support form and display interfaces 
 in [VitroLib](https://github.com/ld4l-labs/vitrolib), an RDF cataloging tool under development in the associated 
-[Linked Data for Libraries Labs](https://wiki.duraspace.org/pages/viewpage.action?pageId=77447730) project to support experimental
-RDF cataloging based on these ontologies. Two application profiles are under development, one for art and one for rare monographs; these may be merged
+[Linked Data for Libraries Labs](https://wiki.duraspace.org/pages/viewpage.action?pageId=77447730) project. Two application profiles are under development, one for art and one for rare monographs; these may be merged
 when complete if there proves to be enough overlap for that to be feasible and productive.
 - Experimental: SHACL validation profiles stored with the associated ontologies, which can be used as a basis for application profiles but whose primary
-purpose is to define expected implementation of the ontologies independent of any application. Some current proof-of-concept application profiles are built on the validation
-SHACL in this way, but when complete we will evaluate the feasibility and usefulness of refactoring all the application profiles
+purpose is to define expected implementation of the ontologies independent of any application. Some proof-of-concept application profiles are built on the validation
+SHACL in this way; when the profiles are complete we will evaluate the feasibility and usefulness of refactoring all the application profiles
 according to this model.
 
 The Art and Rare Materials ontologies are a product of the Mellon Foundation-funded Linked Data for Production (LD4P) project, 2016-2018. 
@@ -41,14 +40,15 @@ it should also be mentioned in the first paragraph, and full name given, as for 
 News
 -------------
 
-* **2018-04-27** Release of Version 0.1 of all ontologies and vocabularies.
+* **2018-04-27** Release of Version 0.1.0 of all ontologies and vocabularies.
 
 Structure of the Repository
 --------------
 
-The core ontology and the three modularized ontologies are each housed in their own top-level directory, which contains the OWL ontology files, 
-associated vocabularies, human-readable documentation, and SHACL validation profiles (in progress). Also at the top level of the directory tree
+The core ontology and the three modularized ontologies (award, custodial_history, and measurement) are each housed in their own top-level directory, which contains the OWL ontology files, 
+associated original vocabularies, human-readable documentation, and SHACL validation profiles (in progress). Also at the top level of the directory tree
 are the modeling recommendations and the SHACL application profiles. 
+
 
 Versioning
 -----------
