@@ -13,7 +13,7 @@
     
     <!-- DATASET DECLARATION -->
     
-    <void:Dataset rdf:about="https://w3id.org/arm/core/vocabularies/handwriting_type/0.1/">
+    <void:Dataset rdf:about="https://w3id.org/arm/core/vocabularies/handwriting_type/">
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1</owl:versionInfo>
         <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>

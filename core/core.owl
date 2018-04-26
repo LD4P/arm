@@ -19,7 +19,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
     
-    <owl:Ontology rdf:about="https://w3id.org/arm/core/ontology/0.1/"> 
+    <owl:Ontology rdf:about="https://w3id.org/arm/core/ontology/"> 
         <owl:ontologyIRI rdf:resource="https://w3id.org/arm/core/ontology/"/> 
         <owl:versionIRI rdf:resource="https://w3id.org/arm/core/ontology/0.1/"/>   
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1.0</owl:versionInfo>
@@ -732,18 +732,24 @@
         <skos:definition xml:lang="en">Relates this resource to a resource of which it is the source.</skos:definition>
         <skos:scopeNote xml:lang="en">Has general applicability to many types of sources and resources.</skos:scopeNote>        
         <owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/0.1/hasSource"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:ObjectProperty>
     
     <owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/0.1/markedBy">
         <rdfs:label xml:lang="en">marked by</rdfs:label>
         <skos:definition xml:lang="en">A resource’s relationship to a Marking it bears.</skos:definition>      
-        <rdf:domain rdf:resource="https://w3id.org/arm/core/ontology/0.1/Marking"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arm/core/ontology/0.1/Marking"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:ObjectProperty>
     
     <owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/0.1/marks">
         <rdfs:label xml:lang="en">marks</rdfs:label>
         <skos:definition xml:lang="en">A Marking’s relationship to the resource it is on or in.</skos:definition>      
-        <rdf:domain rdf:resource="https://w3id.org/arm/core/ontology/0.1/Marking"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arm/core/ontology/0.1/Marking"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:ObjectProperty>
     
     <owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/0.1/subjectOf">
