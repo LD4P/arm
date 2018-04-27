@@ -185,6 +185,12 @@ raremat_monograph_property_groups:ItemPartsAccompanimentsPropertyGroup
   sh:description "To group parts and accompaniments of an item" ;
   sh:order "0"^^xsd:decimal .
   
+raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Item Physical Description" ;
+  sh:description "To group item physical description information" ;
+  sh:order "0"^^xsd:decimal .
+  
 raremat_monograph_property_groups:ItemPaginationFoliationPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Item Pagination and Foliation" ;
