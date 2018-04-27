@@ -916,7 +916,6 @@ raremat_monograph_form:InstanceForm_arm_writtenIn sh:path arm:writtenIn ;
       sh:nodeKind sh:IRI ;
       sh:order ""^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
-
       
 # ///// PROPERTY SHAPES FOR InstanceOfWork PropertyGroup START HERE. /////////////////////////////////////////////////////////////      
 
@@ -1018,6 +1017,8 @@ raremat_monograph_form:ItemForm
   sh:property raremat_monograph_form:ItemForm_arm_hasMaterial ;
   sh:property raremat_monograph_form:ItemForm_rdau_P60596 ;
   sh:property raremat_monograph_form:ItemForm_rdau_P60159 ;
+  sh:property raremat_monograph_form:ItemForm_arm_writtenIn ;
+  sh:property raremat_monograph_form:ItemForm_arm_markedBy ;
   sh:property raremat_monograph_form:ItemForm_bf_itemOf ;
   sh:property raremat_monograph_form:ItemForm_arm_hasCitation ;
   sh:property raremat_monograph_form:ItemForm_award_receives ;
@@ -1161,6 +1162,66 @@ raremat_monograph_form:ItemForm_rdau_P60159 sh:path rdau:P60159 ;
       sh:nodeKind sh:IRI ;
       sh:order ""^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
+      
+raremat_monograph_form:InstanceForm_rdau_P60159 sh:path rdau:P60159 ;
+      sh:class <http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#E57> ;
+      sh:group raremat_monograph_property_groups:InstancePhysicalDescriptionPropertyGroup ;
+      sh:description "Applied materials for this this instance. Applied materials can also be more granularly associated with each part of the instance." ;
+      sh:name "Has applied material" ;
+      sh:nodeKind sh:IRI ;
+      sh:order ""^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor .
+      
+raremat_monograph_form:ItemForm_arm_writtenIn sh:path arm:writtenIn ;
+      sh:or (
+         
+         [
+           sh:class arm:Font ;
+         ]
+         [
+           sh:class arm:Handwriting ;
+         ]
+         
+        ) ;
+      sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;
+      sh:description "The Font or HandWriting the textual information is displayed in." ;
+      sh:name "Font or HandWriting" ;
+      sh:nodeKind sh:IRI ;
+      sh:order ""^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor .
+      
+raremat_monograph_form:ItemForm_arm_markedBy sh:path arm:markedBy ;
+      sh:or (
+         
+         [
+           sh:class arm:Marking ;
+         ]
+         [
+           sh:class arm:Autograph ;
+         ]
+         [
+           sh:class arm:BindersTicket ;
+         ]
+         [
+           sh:class arm:Label ;
+         ]
+         [
+           sh:class arm:Seal ;
+         ]
+         [
+           sh:class arm:Stamp ;
+         ]
+         [
+           sh:class arm:Watermark ;
+         ]
+        ) ;
+      sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;
+      sh:description "Markings applied to objects during or after creation, conveying information such as the object's origin or maker, its authenticity, or a change in its official status." ;
+      sh:name "Markings" ;
+      sh:nodeKind sh:IRI ;
+      sh:order ""^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor .
+      
       
 # ///// PROPERTY SHAPES FOR ItemOfInstance PropertyGroup START HERE. /////////////////////////////////////////////////////////////      
 
