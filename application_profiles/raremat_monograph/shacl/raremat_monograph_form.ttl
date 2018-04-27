@@ -2303,7 +2303,7 @@ raremat_monograph_form::HandwritingForm_dcterms_description sh:path dcterms:desc
       sh:nodeKind sh:Literal ;
       sh:order "1"^^xsd:decimal .
 
-# ///// PROPERTY GROUPS ARE NOW IN https://github.com/LD4P/arm/blob/develop/application_profiles/raremat_monograph/shacl/raremat_shacl_monograph_property_groups.ttl /////////////////////////////////////////////////////////////
+# ///// PROPERTY GROUPS ARE NOW IN https://github.com/LD4P/arm/blob/develop/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups.ttl /////////////////////////////////////////////////////////////
 
 
     
