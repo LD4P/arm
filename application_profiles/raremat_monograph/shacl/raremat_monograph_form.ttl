@@ -5,6 +5,7 @@
 @prefix core: <http://vivoweb.org/ontology/core#> .
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix raremat_shapes_monograph_exhibition: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/> .
 @prefix gn: <http://www.geonames.org/ontology/> .
 @prefix gvp: <http://vocab.getty.edu/ontology#> .
 @prefix lingvo: <http://www.lingvoj.org/ontology#> .
@@ -15,6 +16,7 @@
 @prefix raremat_monograph_form: <https://w3id.org/arm/application_profile/shacl/raremat_monograph_form/> .
 @prefix raremat_monograph_exhibition: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/> .
 @prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profile/shacl/raremat_monograph_property_groups/> .
+@prefix rdau: <http://rdaregistry.info/Elements/u/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
@@ -934,7 +936,7 @@ raremat_monograph_form:InstanceForm_bf_editionStatement sh:path bf:editionStatem
 
 # ///// PROPERTY SHAPES FOR InstancetoItemPropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
-raremat_monograph_form:InstanceForm_bf_hasItem sh:path bf:hasItem> ;
+raremat_monograph_form:InstanceForm_bf_hasItem sh:path bf:hasItem ;
       sh:class bf:Item ;
       sh:description "Items of this instance" ;
       sh:name "Has item" ;
@@ -1106,7 +1108,7 @@ raremat_monograph_form:ItemForm_arm_isOnCarrier sh:path arm:isOnCarrier ;
       tosh:editWidget swa:NestedObjectEditor .
 
 raremat_monograph_form:ItemForm_measure_hasMeasurementGroup sh:path measure:hasMeasurementGroup ;
-      sh:class measure:MeasurementGroup> ;
+      sh:class measure:MeasurementGroup ;
       sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;
       sh:name "Instance measurement information" ;
       sh:nodeKind sh:IRI ;
@@ -1213,7 +1215,6 @@ raremat_monograph_form:ItemForm_bf_note sh:path bf:note ;
          ]
          
         ) ;
-    ] ;
     .
 
 # ///// PROPERTY SHAPES FOR ItemIdentifier PropertyGroup START HERE. /////////////////////////////////////////////////////////////
@@ -1632,7 +1633,7 @@ raremat_monograph_form:AwardForm
   rdf:type sh:NodeShape ;
   rdfs:label "Award" ;
   sh:targetClass vivo:Award ;
-  sh:property raremat_monograph_form:AwardForm_rdfs_label .
+  sh:property raremat_monograph_form:AwardForm_rdfs_label ;
 .
 
 raremat_monograph_form:AwardForm_rdfs_label sh:path rdf:label ;
@@ -2066,7 +2067,7 @@ raremat_monograph_form:BibliographicCitationForm_bf_place sh:path bf:place ;
            sh:class bf:Text ;
          ]
         ) ;
-      sh:name "Entry source"
+      sh:name "Entry source" ;
       sh:description "Location where the citation entry was found" ;
       tosh:editWidget swa:NestedObjectEditor ;
       sh:nodeKind sh:IRI ;
@@ -2097,7 +2098,7 @@ raremat_monograph_form:PageForm_bf_partOf sh:path bf:partOf ;
            sh:class bf:Text ;
          ]
         ) ;
-      sh:name "Part of"
+      sh:name "Part of" ;
       sh:description "The larger context for the page" ;
       tosh:editWidget swa:NestedObjectEditor ;
       sh:nodeKind sh:IRI ;
@@ -2121,7 +2122,7 @@ raremat_monograph_form:VolumeForm_rdf_value sh:path rdf:value ;
       
 raremat_monograph_form:VolumeForm_bf_partOf sh:path bf:partOf ;
       sh:class bf:Text ;
-      sh:name "Part of"
+      sh:name "Part of" ;
       sh:description "The larger context for the volume" ;
       tosh:editWidget swa:NestedObjectEditor ;
       sh:nodeKind sh:IRI ;
