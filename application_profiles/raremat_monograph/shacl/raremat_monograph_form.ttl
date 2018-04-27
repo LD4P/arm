@@ -117,7 +117,7 @@ raremat_monograph_form:WorkForm
   sh:property raremat_monograph_form:WorkForm_rdau_P60832 ;
   sh:property raremat_monograph_form:WorkForm_rdau_P60833 ;
   sh:property raremat_monograph_form:WorkForm_bf_dataSource ;
-  sh:property raremat_monograph_form:WorkForm_arm_receives ;
+  sh:property raremat_monograph_form:WorkForm_award_receives ;
   sh:property raremat_monograph_form:WorkForm_bf_note ;
   sh:property raremat_monograph_form:WorkForm_bf_identifiedBy .
 
@@ -262,7 +262,7 @@ raremat_monograph_form:WorkForm_bf_note sh:path bf:note ;
     
 # ///// PROPERTY SHAPES FOR WorkAwardReceipt PropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
-raremat_monograph_form:WorkForm_arm_receives sh:path award:receives ;
+raremat_monograph_form:WorkForm_award_receives sh:path award:receives ;
 sh:class award:AwardReceipt ;
       sh:group raremat_monograph_property_groups:WorkAwardReceiptPropertyGroup ;
       sh:name "Work award receipt" ;
@@ -730,7 +730,7 @@ raremat_monograph_form:InstanceForm rdf:type rdfs:Class ;
   sh:property raremat_monograph_form:InstanceForm_bf_editionStatement ;
   sh:property raremat_monograph_form:InstanceForm_bf_hasItem ;
   sh:property raremat_monograph_form:InstanceForm_arm_hasCitation ;
-  sh:property raremat_monograph_form:InstanceForm_arm_receives ;
+  sh:property raremat_monograph_form:InstanceForm_award_receives ;
   sh:property raremat_monograph_form:InstanceForm_bf_note ;
   sh:property raremat_monograph_form:InstanceForm_bf_identifiedBy .
 
@@ -956,7 +956,7 @@ raremat_monograph_form:InstanceForm_arm_hasCitation sh:path arm:hasCitation ;
       
 # ///// PROPERTY SHAPES FOR InstanceAwardReceipt PropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
-raremat_monograph_form:InstanceForm_arm_receives sh:path arm:receives ;
+raremat_monograph_form:InstanceForm_award_receives sh:path award:receives ;
       sh:class arm:award/AwardReceipt> ;
       sh:group raremat_monograph_property_groups:InstanceAwardReceiptPropertyGroup ;
       sh:name "Instance award receipt" ;
@@ -1020,11 +1020,11 @@ raremat_monograph_form:ItemForm rdf:type rdfs:Class ;
   sh:property raremat_monograph_form:ItemForm_measure_hasMeasurementGroup ;
   sh:property raremat_monograph_form:ItemForm_arm_hasSignatureStatement ;
   sh:property raremat_monograph_form:ItemForm_arm_hasMaterial ;
-  sh:property raremat_monograph_form:ItemForm_arm_hasBaseMaterial ;
-  sh:property raremat_monograph_form:ItemForm_arm_hasAppliedMaterial ;
+  sh:property raremat_monograph_form:ItemForm_rdau_P60596 ;
+  sh:property raremat_monograph_form:ItemForm_rdau_P60159 ;
   sh:property raremat_monograph_form:ItemForm_bf_itemOf ;
   sh:property raremat_monograph_form:ItemForm_arm_hasCitation ;
-  sh:property raremat_monograph_form:ItemForm_arm_receives ;
+  sh:property raremat_monograph_form:ItemForm_award_receives ;
   sh:property raremat_monograph_form:ItemForm_bf_note ;
   sh:property raremat_monograph_form:ItemForm_bf_identifiedBy ;
   sh:property raremat_shapes_monograph_exhibition:ItemForm_arm_hasExhibition .
@@ -1147,7 +1147,7 @@ raremat_monograph_form:ItemForm_arm_hasMaterial sh:path arm:hasMaterial ;
       tosh:editWidget swa:NestedObjectEditor .
 
 
-raremat_monograph_form:ItemForm_arm_hasBaseMaterial sh:path arm:hasBaseMaterial ;
+raremat_monograph_form:ItemForm_rdau_P60596 sh:path rdau:P60596 ;
       sh:class <http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#E57> ;
       sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;
       sh:description "Base materials for this this instance. Base materials can also be more granularly associated with each part of the item." ;
@@ -1157,7 +1157,7 @@ raremat_monograph_form:ItemForm_arm_hasBaseMaterial sh:path arm:hasBaseMaterial 
       tosh:editWidget swa:NestedObjectEditor .
   
   
-raremat_monograph_form:ItemForm_arm_hasAppliedMaterial sh:path arm:hasAppliedMaterial ;
+raremat_monograph_form:ItemForm_rdau_P60159 sh:path rdau:P60159 ;
       sh:class <http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#E57> ;
       sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;
       sh:description "Applied materials for this this item. Applied materials can also be more granularly associated with each part of the item." ;
@@ -1188,7 +1188,7 @@ raremat_monograph_form:ItemForm_arm_hasCitation sh:path arm:hasCitation ;
       
 # ///// PROPERTY SHAPES FOR ItemAwardReceipt PropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
-raremat_monograph_form:ItemForm_arm_receives sh:path award:receives ;
+raremat_monograph_form:ItemForm_award_receives sh:path award:receives ;
 sh:class award:AwardReceipt ;
       sh:group raremat_monograph_property_groups:ItemAwardReceiptPropertyGroup ;
       sh:name "Item award receipt" ;
@@ -1549,7 +1549,7 @@ raremat_monograph_form:AwardReceiptForm
   rdfs:subClassOf rdfs:Resource ;
   sh:targetClass award:AwardReceipt ;
   sh:property raremat_monograph_form:AwardReceiptForm_rdf_type ;
-  sh:property raremat_monograph_form:AwardReceiptForm_arm_hasAward ;
+  sh:property raremat_monograph_form:AwardReceiptForm_award_hasAward ;
   sh:property raremat_monograph_form:AwardReceiptForm_bf_date ;
   sh:property raremat_monograph_form:AwardReceiptForm_arm_hasActivity ; 
   .  
@@ -1581,7 +1581,7 @@ raremat_monograph_form:AwardReceiptForm_rdf_type sh:path rdf:type ;
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal .
       
-raremat_monograph_form:AwardReceiptForm_arm_hasAward sh:path award:hasAward ;
+raremat_monograph_form:AwardReceiptForm_award_hasAward sh:path award:hasAward ;
       sh:description "The related award being received" ;
       sh:class vivo:Award ;
       sh:name "Has award" ;
@@ -1840,7 +1840,7 @@ raremat_monograph_form:InstanceTitleForm_bf_partName sh:path bf:partName ;
       sh:nodeKind sh:Literal ;
       sh:name "Part name" .
       
-raremat_monograph_form:InstanceTitleForm_arm_origin sh:path arm:origin ;
+raremat_monograph_form:InstanceTitleForm_arm_origin sh:path arm:hasOrigin ;
       sh:in ( <https://w3id.org/arm/datasets/origin/addedTitlePage> <https://w3id.org/arm/datasets/origin/binder> <https://w3id.org/arm/datasets/origin/caption> <https://w3id.org/arm/datasets/origin/container> <https://w3id.org/arm/datasets/origin/cover> <https://w3id.org/arm/datasets/origin/margin> <https://w3id.org/arm/datasets/origin/spine> <https://w3id.org/arm/datasets/origin/supplied> <https://w3id.org/arm/datasets/origin/transcribed> <https://w3id.org/arm/datasets/origin/translated> ) ;
       sh:description "The place from which this title originates, such as spine, cover, container, etc." ;
       sh:order "6"^^xsd:decimal ;
@@ -1960,7 +1960,7 @@ raremat_monograph_form:ItemTitleForm_bf_partName sh:path bf:partName ;
       sh:nodeKind sh:Literal ;
       sh:name "Part name" .
       
-raremat_monograph_form:ItemTitleForm_arm_origin sh:path arm:origin ;
+raremat_monograph_form:ItemTitleForm_arm_origin sh:path arm:hasOrigin ;
       sh:in ( <https://w3id.org/arm/datasets/origin/addedTitlePage> <https://w3id.org/arm/datasets/origin/binder> <https://w3id.org/arm/datasets/origin/caption> <https://w3id.org/arm/datasets/origin/container> <https://w3id.org/arm/datasets/origin/cover> <https://w3id.org/arm/datasets/origin/margin> <https://w3id.org/arm/datasets/origin/spine> <https://w3id.org/arm/datasets/origin/supplied> <https://w3id.org/arm/datasets/origin/transcribed> <https://w3id.org/arm/datasets/origin/translated> ) ;
       sh:description "The place from which this title originates, such as spine, cover, container, etc." ;
       sh:order "6"^^xsd:decimal ;
