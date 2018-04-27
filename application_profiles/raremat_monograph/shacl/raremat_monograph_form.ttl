@@ -152,7 +152,26 @@ raremat_monograph_form:WorkForm_activity_hasActivity sh:path activity:hasActivit
   sh:order "0"^^xsd:decimal ;
   sh:group raremat_monograph_property_groups:WorkActivityPropertyGroup ;
   tosh:editWidget swa:NestedObjectEditor ;
-  sh:class ( activity:AuthorActivity activity:IllustratorActivity activity:EditorActivity activity:EditorActivity activity:TranslatorActivity activity:Activity ) .
+  sh:or ( 
+          [
+            sh:class activity:AuthorActivity ;
+          ]
+          [
+            sh:class activity:IllustratorActivity ;
+          ]
+          [
+            sh:class activity:EditorActivity ;
+          ]
+          [
+            sh:class activity:EditorActivity ;
+          ]
+          [
+            sh:class activity:TranslatorActivity ;
+            ]
+          [
+            sh:class activity:Activity 
+          ]  
+         ) .
   
   
 # ///// PROPERTY SHAPES FOR WorkSubjectGenreFormPropertyGroup START HERE. /////////////////////////////////////////////////////
@@ -302,14 +321,14 @@ raremat_monograph_form:WorkForm_bf_partOf sh:path bf:partOf ;
 raremat_monograph_form:WorkForm_bf_hasExpression sh:path bf:hasExpression ;
       sh:class bf:Work ;
       sh:description "Work that is an expression of a described Work. For use to relate Works under FRBR/RDA rules." ;
-      sh:group raremat_monograph_property_groups::WorkToWorkPropertyGroup ;
+      sh:group raremat_monograph_property_groups:WorkToWorkPropertyGroup ;
       sh:name "Has expression" .
 
 raremat_monograph_form:WorkForm_bf_referencedBy sh:path bf:referencedBy ;
       sh:class bf:Work ;
       sh:description "Resource that references the described resource." ;
       sh:name "Referenced by" ;
-      sh:group raremat_monograph_property_groups::WorkToWorkPropertyGroup .
+      sh:group raremat_monograph_property_groups:WorkToWorkPropertyGroup .
     
 raremat_monograph_form:WorkForm_bf_references sh:path bf:references ;
       sh:class bf:Work ;
@@ -724,6 +743,7 @@ raremat_monograph_form:InstanceForm
   sh:property raremat_monograph_form:InstanceForm_rdau_P60596 ;
   sh:property raremat_monograph_form:InstanceForm_rdau_P60159 ;
   sh:property raremat_monograph_form:InstanceForm_arm_writtenIn ;
+  sh:property raremat_monograph_form:InstanceForm_arm_markedBy ;
   sh:property raremat_monograph_form:InstanceForm_bf_instanceOf ;
   sh:property raremat_monograph_form:InstanceForm_bf_editionStatement ;
   sh:property raremat_monograph_form:InstanceForm_bf_hasItem ;
@@ -732,7 +752,6 @@ raremat_monograph_form:InstanceForm
   sh:property raremat_monograph_form:InstanceForm_bf_note ;
   sh:property raremat_monograph_form:InstanceForm_bf_identifiedBy .
 
-# TODO Review. The following PropertyShape is subject to change depending on whether we follow BIBFRAME or bibliotek-o/ArtFrame. Going to stop work on this until a decision is made.
 
 raremat_monograph_form:InstanceForm_arm_hasPreferredTitle sh:path arm:hasPreferredTitle ;
   sh:class bf:Title ;
@@ -789,7 +808,29 @@ raremat_monograph_form:InstanceForm_activity_hasActivity sh:path activity:hasAct
   sh:order "0"^^xsd:decimal ;
   sh:group raremat_monograph_property_groups:InstanceActivityPropertyGroup ;
   tosh:editWidget swa:NestedObjectEditor ;
-  sh:class ( activity:PublisherActivity activity:DistributorActivity activity:PrinterActivity activity:DesignerActivity activity:ManufacturerActivity activity:BinderActivity activity:Activity ).
+  sh:or ( 
+          [
+            sh:class activity:PublisherActivity  ;
+          ]
+          [
+            sh:class activity:DistributorActivity ;
+          ]
+          [
+            sh:class activity:PrinterActivity ;
+          ]
+          [
+            sh:class activity:DesignerActivity ;
+          ]
+          [
+            sh:class activity:ManufacturerActivity ;
+          ]
+          [
+            sh:class activity:BinderActivity ;
+          ]
+          [
+            sh:class activity:Activity 
+          ]  
+         ) .
 
 raremat_monograph_form:InstanceForm_bf_responsibilityStatement sh:path bf:responsibilityStatement ;
       sh:name "Responsibility statement" ;
@@ -913,6 +954,38 @@ raremat_monograph_form:InstanceForm_arm_writtenIn sh:path arm:writtenIn ;
       sh:group raremat_monograph_property_groups:InstancePhysicalDescriptionPropertyGroup ;
       sh:description "The Font or HandWriting the textual information is displayed in." ;
       sh:name "Font or HandWriting" ;
+      sh:nodeKind sh:IRI ;
+      sh:order ""^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor .
+      
+raremat_monograph_form:InstanceForm_arm_markedBy sh:path arm:markedBy ;
+      sh:or (
+         
+         [
+           sh:class arm:Marking ;
+         ]
+         [
+           sh:class arm:Autograph ;
+         ]
+         [
+           sh:class arm:BindersTicket ;
+         ]
+         [
+           sh:class arm:Label ;
+         ]
+         [
+           sh:class arm:Seal ;
+         ]
+         [
+           sh:class arm:Stamp ;
+         ]
+         [
+           sh:class arm:Watermark ;
+         ]
+        ) ;
+      sh:group raremat_monograph_property_groups:InstancePhysicalDescriptionPropertyGroup ;
+      sh:description "Markings applied to objects during or after creation, conveying information such as the object's origin or maker, its authenticity, or a change in its official status." ;
+      sh:name "Markings" ;
       sh:nodeKind sh:IRI ;
       sh:order ""^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
@@ -1122,7 +1195,7 @@ raremat_monograph_form:ItemForm_bf_extent sh:path bf:extent ;
       sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;
       tosh:editWidget swa:NestedObjectEditor .
   
-# TODO Physical description, Physical Condition, Activity (with curated list of Item roles for physical condition assessment and conservation), Materials, Bindings, Fonts, handwritings, notation, Markings  
+# TODO Physical description, Physical Condition, Activity (with curated list of Item roles for physical condition assessment and conservation), Bindings 
 
       
 raremat_monograph_form:ItemForm_arm_hasSignatureStatement sh:path arm:hasSignatureStatement ;
@@ -1306,15 +1379,13 @@ raremat_monograph_form:MonographicWorkActivityForm
   sh:property raremat_monograph_form:MonographicWorkActivityForm_bf_date ;
   sh:property raremat_monograph_form:MonographicWorkActivityForm_bf_place ;
   .
-  
-# TODO Add Monographic specific Activities
 
 raremat_monograph_form:MonographicWorkActivityForm_rdf_type sh:path rdf:type ;
       sh:order "0" ;
       sh:description "Agent role or activity type" ;
       sh:name "Agent role" ;
-      sh:in ( <http://bibliotek-o.org/ontology/ComposerActivity> <http://bibliotek-o.org/ontology/ArrangerActivity> <http://bibliotek-o.org/ontology/LibrettistActivity> <http://bibliotek-o.org/ontology/LyricistActivity> <http://bibliotek-o.org/ontology/PerformerActivity> <http://bibliotek-o.org/ontology/ConductorActivity> <http://bibliotek-o.org/ontology/MusicianActivity> <http://bibliotek-o.org/ontology/SingerActivity> <http://bibliotek-o.org/ontology/InstrumentalistActivity> <http://bibliotek-o.org/ontology/NarratorActivity> <http://bibliotek-o.org/ontology/CommentatorActivity> <http://bibliotek-o.org/ontology/ProducerActivity> <http://bibliotek-o.org/ontology/MusicalDirectorActivity> <http://bibliotek-o.org/ontology/SoundDesignerActivity> <http://bibliotek-o.org/ontology/RecordistActivity> <http://bibliotek-o.org/ontology/BroadcasterActivity> ) .
-
+      sh:in ( activity:AuthorActivity activity:IllustratorActivity activity:EditorActivity activity:EditorActivity activity:TranslatorActivity activity:Activity ) .
+  
 raremat_monograph_form:MonographicWorkActivityForm_bf_agent sh:path bf:agent ;
       sh:order "1" ;
       sh:maxCount "1" ;
@@ -1358,8 +1429,8 @@ raremat_monograph_form:MonographicInstanceActivityForm_rdf_type sh:path rdf:type
       sh:order "0" ;
       sh:description "Agent role or activity type" ;
       sh:name "Agent role" ;
-      sh:in ( <http://bibliotek-o.org/ontology/ComposerActivity> <http://bibliotek-o.org/ontology/ArrangerActivity> <http://bibliotek-o.org/ontology/LibrettistActivity> <http://bibliotek-o.org/ontology/LyricistActivity> <http://bibliotek-o.org/ontology/PerformerActivity> <http://bibliotek-o.org/ontology/ConductorActivity> <http://bibliotek-o.org/ontology/MusicianActivity> <http://bibliotek-o.org/ontology/SingerActivity> <http://bibliotek-o.org/ontology/InstrumentalistActivity> <http://bibliotek-o.org/ontology/NarratorActivity> <http://bibliotek-o.org/ontology/CommentatorActivity> <http://bibliotek-o.org/ontology/ProducerActivity> <http://bibliotek-o.org/ontology/MusicalDirectorActivity> <http://bibliotek-o.org/ontology/SoundDesignerActivity> <http://bibliotek-o.org/ontology/RecordistActivity> <http://bibliotek-o.org/ontology/BroadcasterActivity> ) .
-
+      sh:in ( activity:PublisherActivity activity:DistributorActivity activity:PrinterActivity activity:DesignerActivity activity:ManufacturerActivity activity:BinderActivity activity:Activity ) .
+      
 raremat_monograph_form:MonographicInstanceActivityForm_bf_agent sh:path bf:agent ;
       sh:order "1" ;
       sh:maxCount "1" ;
@@ -1397,7 +1468,7 @@ raremat_monograph_form:MeasurementGroupForm
   sh:property raremat_monograph_form:MeasurementGroupForm_measure_hasMeasurement .
   
   
-raremat_monograph_form::MeasurementGroupForm_dcterms_description sh:path dcterms:description ;
+raremat_monograph_form:MeasurementGroupForm_dcterms_description sh:path dcterms:description ;
       sh:description "Record any qualifying information about the measurement, e.g. 'approximate', 'or smaller', 'in container', 'with handle' " ;
       sh:name "Qualifying information about the measurement" ;
       sh:nodeKind sh:Literal ;
@@ -2310,7 +2381,7 @@ raremat_monograph_form:HandwritingForm
   rdfs:label "Handwriting form" ;
   sh:targetClass arm:Handwriting ;
   sh:property raremat_monograph_form:HandwritingForm_arm_hasHandwritingType ;
-  sh:property raremat_monograph_form::HandwritingForm_dcterms_description ;
+  sh:property raremat_monograph_form:HandwritingForm_dcterms_description ;
   .
 
 raremat_monograph_form:HandwritingForm_arm_hasHandwritingType sh:path arm:hasHandwritingType ;
@@ -2320,11 +2391,85 @@ raremat_monograph_form:HandwritingForm_arm_hasHandwritingType sh:path arm:hasHan
       sh:name "Has handwriting type" ;
       sh:description "The type of writing hand used by this example of handwriting" .
       
-raremat_monograph_form::HandwritingForm_dcterms_description sh:path dcterms:description ;
+raremat_monograph_form:HandwritingForm_dcterms_description sh:path dcterms:description ;
       sh:description "Record any qualifying information about the handwriting found in the resource" ;
       sh:name "Qualifying information about the handwriting" ;
       sh:nodeKind sh:Literal ;
       sh:order "1"^^xsd:decimal .
+
+# /////// Marking FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+raremat_monograph_form:MarkingForm
+  rdf:type sh:NodeShape ;
+  rdfs:label "Marking form" ;
+  sh:targetClass arm:Marking ;
+  sh:property raremat_monograph_form:MarkingForm_rdf_type ;
+  sh:property raremat_monograph_form:MarkingForm_rdf_value ;
+  sh:property raremat_monograph_form:MarkingForm_activity_hasActivity ;
+  .
+  
+raremat_monograph_form:MarkingForm_rdf_type sh:path rdf:type ;
+      sh:order "0" ;
+      sh:description "Marking type" ;
+      sh:name "Agent role" ;
+      sh:in ( arm:Marking arm:Autograph arm:BindersTicket arm:Label arm:Seal arm:Stamp arm:Watermark ) .
+      
+raremat_monograph_form:MarkingForm_rdf_value sh:path rdf:value ;
+      sh:description "Alpha-numeric value of the marking." ;
+      sh:name "Numeric value" ;
+      sh:nodeKind sh:Literal ;
+      sh:order "1"^^xsd:decimal .
+      
+sh:property raremat_monograph_form:MarkingForm_arm_hasActivity
+  sh:name "Marking Agent" ;
+  sh:order "2"^^xsd:decimal ;
+  tosh:editWidget swa:NestedObjectEditor ;
+  sh:class activity:CreatorActivity .
+
+# /////// Marking Activity FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+raremat_monograph_form:MarkingActivityForm
+  rdf:type sh:NodeShape ;
+  rdfs:label "Marking Creator" ;
+  sh:targetClass activity:CreatorActivity ;
+  sh:property raremat_monograph_form:MarkingActivityForm_bf_agent ;
+  sh:property raremat_monograph_form:MarkingActivityForm_bf_date ;
+  sh:property raremat_monograph_form:MarkingActivityForm_bf_place ;
+  sh:property raremat_monograph_form:MarkingActivityForm_activity_isActivityOf ;
+  .
+
+raremat_monograph_form:MarkingActivityForm_bf_agent sh:path bf:agent ;
+      sh:order "0" ;
+      sh:maxCount "1" ;
+      sh:class bf:Agent ;
+      sh:description "Agent" ;
+      sh:name "Agent" ;
+      sh:nodeKind sh:IRI .
+
+raremat_monograph_form:MarkingActivityForm_bf_date sh:path bf:date;
+      sh:order "1" ;
+      sh:maxCount "1" ;
+      sh:description "Date of the activity. Recommended to use EDTF format" ;
+      sh:name "Date" ;
+      sh:nodeKind sh:Literal .
+      
+raremat_monograph_form:MarkingActivityForm_arm_atLocation sh:path arm:atLocation ;
+      sh:order "2" ;
+      sh:maxCount "1" ;
+      sh:description "Location of the activity" ;
+      sh:name "Location" ;
+      sh:class gn:Feature ;
+      sh:nodeKind sh:IRI ;
+      raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService .
+      
+raremat_monograph_form:MarkingActivityForm_activity_isActivityOf sh:path activity:isActivityOf
+      sh:order "3" ;
+      sh:maxCount "1" ;
+      sh:description "Related Marking" ;
+      sh:name "Location" ;
+      sh:class arm:Marking ;
+      sh:nodeKind sh:IRI .
+
 
 # ///// PROPERTY GROUPS ARE NOW IN https://github.com/LD4P/arm/blob/develop/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups.ttl /////////////////////////////////////////////////////////////
 
