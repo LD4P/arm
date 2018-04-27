@@ -147,14 +147,12 @@ raremat_monograph_form:WorkForm_bf_title sh:path bf:title ;
 
 # ///// PROPERTY SHAPES FOR WorkActivityPropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
-# TODO Update list of Activity when there are subclasses.
-
 raremat_monograph_form:WorkForm_activity_hasActivity sh:path activity:hasActivity ;
   sh:name "Agent activity or role" ;
   sh:order "0"^^xsd:decimal ;
   sh:group raremat_monograph_property_groups:WorkActivityPropertyGroup ;
   tosh:editWidget swa:NestedObjectEditor ;
-  sh:class activity:Activity .
+  sh:class ( activity:AuthorActivity activity:IllustratorActivity activity:EditorActivity activity:EditorActivity activity:TranslatorActivity activity:Activity ) .
   
   
 # ///// PROPERTY SHAPES FOR WorkSubjectGenreFormPropertyGroup START HERE. /////////////////////////////////////////////////////
@@ -784,7 +782,6 @@ raremat_monograph_form:InstanceForm_bf_genreForm_madsrdf_isMemberOfMADSScheme sh
 
 # ///// PROPERTY SHAPES FOR InstanceActivityPropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
-# TODO Update Activity List when there are subclasses.
 
 raremat_monograph_form:InstanceForm_activity_hasActivity sh:path activity:hasActivity ;
   sh:name "Publisher, Distributor, etc. activity or role" ;
@@ -792,7 +789,7 @@ raremat_monograph_form:InstanceForm_activity_hasActivity sh:path activity:hasAct
   sh:order "0"^^xsd:decimal ;
   sh:group raremat_monograph_property_groups:InstanceActivityPropertyGroup ;
   tosh:editWidget swa:NestedObjectEditor ;
-  sh:class activity:Activity .
+  sh:class ( activity:PublisherActivity activity:DistributorActivity activity:PrinterActivity activity:DesignerActivity activity:ManufacturerActivity activity:BinderActivity activity:Activity ).
 
 raremat_monograph_form:InstanceForm_bf_responsibilityStatement sh:path bf:responsibilityStatement ;
       sh:name "Responsibility statement" ;
