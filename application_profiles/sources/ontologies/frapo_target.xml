@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    >
+    <rdf:Description rdf:about="http://purl.org/cerif/frapo/hasOutput">
+        <owl:inverseOf rdf:resource="http://purl.org/cerif/frapo/isOutputOf"/>
+        <rdfs:comment xml:lang="en">An object property linking an activity such as a project or endeavour to something that is created or produced as a result of that activity.  Examples include a building created as a result of a building project, and a journal article published to describe the results of a research investigation.  </rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <dc:description xml:lang="en">Domain and range constraints have been removed from this object property to permit it to be used in unforeseen ways.</dc:description>
+        <rdfs:label xml:lang="en">has output</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://purl.org/cerif/frapo/isOutputOf">
+        <rdfs:comment xml:lang="en">An object property linking something that is created or produced to the activity that created or produced it.</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <dc:description xml:lang="en">Domain and range constraints have been removed from this object property to permit it to be used in unforeseen ways.</dc:description>
+        <rdfs:label xml:lang="en">is output of</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://purl.org/cerif/frapo/awards">
+        <rdfs:comment xml:lang="en">An object property linking an agent to something the agent awards, for example linking a funding agency to a grant, a university to a degree, or an organization to a prize.</rdfs:comment>
+        <owl:inverseOf rdf:resource="http://purl.org/cerif/frapo/isAwardedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:label xml:lang="en">awards</rdfs:label>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://purl.org/cerif/frapo/isAwardedBy">
+        <rdfs:comment xml:lang="en">An object property linking something awarded to the agent making the award, for example linking a grant to a funding agency, a degree to a university, or a prize to the awarding organization.</rdfs:comment>
+        <dc:description xml:lang="en">Domain constraints have been removed from this object property to permit it to be used in unforeseen ways.</dc:description><rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="en">is awarded by</rdfs:label></rdf:Description>
+    
+</rdf:RDF>

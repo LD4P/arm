@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF  
+    xmlns="https://w3id.org/arm/core/vocabularies/handwriting_type/0.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"  
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:void="http://rdfs.org/ns/void#"
+    > 
+    
+    <!-- DATASET DECLARATION -->
+    
+    <void:Dataset rdf:about="https://w3id.org/arm/core/vocabularies/handwriting_type/">
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1</owl:versionInfo>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+        <rdfs:label xml:lang="en">Art and Rare Materials Handwriting Type Vocabulary</rdfs:label>
+        <dcterms:title xml:lang="en">Art and Rare Materials Handwriting Type Vocabulary</dcterms:title>
+        <rdfs:comment xml:lang="en">The Art and Rare Materials Handwriting Type Vocabulary is a controlled vocabulary to express the type of handwriting used in a resource.</rdfs:comment>
+        <vann:preferredNamespacePrefix>handwriting_type</vann:preferredNamespacePrefix>
+        <void:vocabulary rdf:resource="https://w3id.org/arm/core/ontology/0.1/"/>
+    </void:Dataset>    
+    
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/handwriting_type/0.1/mixedHand">
+        <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/HandwritingType"/>
+        <rdfs:label xml:lang="en">mixed hand</rdfs:label>
+        <skos:definition xml:lang="en">Handwriting made up of a mixture of characteristics from different scripts and styles.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/handwriting_type/0.1/otherHand">
+        <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/HandwritingType"/>
+        <rdfs:label xml:lang="en">other hand</rdfs:label>
+        <skos:definition xml:lang="en">Used to record a handwriting style different from the options currently available in the RareMat Handwriting Type Vocabulary or Getty AAT.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Secretary_hand"/>
+    </owl:NamedIndividual>
+   
+</rdf:RDF>

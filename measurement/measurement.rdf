@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF xmlns="https://w3id.org/arm/measurement/ontology/0.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/" 
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1#" 
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:voaf="http://purl.org/vocommons/voaf#">
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // ONTOLOGY DECLARATION
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+    <owl:Ontology rdf:about="https://w3id.org/arm/measurement/ontology/"> 
+        <owl:ontologyIRI rdf:resource="https://w3id.org/arm/measurement/ontology/"/> 
+        <owl:versionIRI rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/"/>   
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1.0</owl:versionInfo>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+        <rdfs:label xml:lang="en">Measurement Ontology</rdfs:label>
+        <skos:definition xml:lang="en">The Measurement Ontology provides terms to model physical, digital, or other types of measurements. Appropriate vocabularies may be selected by the implementer for units, dimensions, arrangements, and resources measured.</skos:definition>
+        <vann:preferredNamespacePrefix>measure</vann:preferredNamespacePrefix>
+        <dcterms:title xml:lang="en">Measurement Ontology</dcterms:title>
+    </owl:Ontology>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // CLASSES
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+    <owl:Class rdf:about="https://w3id.org/arm/measurement/ontology/0.1/Measurement">
+        <rdfs:label>Measurement</rdfs:label>
+        <skos:definition xml:lang="en-us">The measurement of a single aspect of a resource,
+            including value, units, and the dimension measured. For example, a book may have a
+            height (aspect) of 10 (value) centimeters (units). Each such measurement is attached to
+            a MeasurementGroup.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+
+    <owl:Class rdf:about="https://w3id.org/arm/measurement/ontology/0.1/MeasurementGroup">
+        <rdfs:label>Measurement Group</rdfs:label>
+        <skos:definition xml:lang="en-us">A set of measurements pertaining to a specific resource,
+            part of a resource, or resource in a particular arrangement. For example, a book may
+            have a specified height, width, length, and/or weight, which are all attached to a
+            MeasurementGroup; the binding may have measurements specified independently, which would
+            constitute another MeasurementGroup. A MeasurementGroup has one or more specific
+            Measurements attached to it.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // OBJECT PROPERTIES
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+    <owl:ObjectProperty rdf:about="https://w3id.org/arm/measurement/ontology/0.1/hasMeasurement">
+        <rdfs:label xml:lang="en">has measurement</rdfs:label>
+        <skos:definition xml:lang="en">The relationship of a reasourse to a
+            measurement.</skos:definition>
+        <rdfs:range rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/Measurement"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/isMeasurementOf"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arm/measurement/ontology/0.1/hasMeasurementGroup">
+        <rdfs:label xml:lang="en">has measurement group</rdfs:label>
+        <skos:definition xml:lang="en">The relationship of a resource to a measurement group,
+            indicating that the measurement group applies to the resource.</skos:definition>
+        <rdfs:range rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/MeasurementGroup"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/isMeasurementGroupOf"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="https://w3id.org/arm/measurement/ontology/0.1/hasUnit">
+        <rdfs:label xml:lang="en">has unit</rdfs:label>
+        <skos:definition xml:lang="en">Relationship between the measurement and the unit used to
+            express the measurement.</skos:definition>
+        <owl:inverseOf rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/isUnitOf"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="https://w3id.org/arm/measurement/ontology/0.1/isMeasurementOf">
+        <rdfs:label xml:lang="en">is measurement of</rdfs:label>
+        <skos:definition xml:lang="en">The relationship of a measurement to a
+            resource.</skos:definition>
+        <rdfs:domain rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/Measurement"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/hasMeasurement"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arm/measurement/ontology/0.1/isMeasurementGroupOf">
+        <rdfs:label xml:lang="en">is measurement group of</rdfs:label>
+        <skos:definition xml:lang="en">The relationship of a measurement group to a resource,
+            indicating that the measurement group applies to the resource.</skos:definition>
+        <rdfs:domain rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/MeasurementGroup"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/hasMeasurementGroup"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="https://w3id.org/arm/measurement/ontology/0.1/isUnitOf">
+        <rdfs:label xml:lang="en">is unit of</rdfs:label>
+        <skos:definition xml:lang="en">Relationship between the unit and the measurement used to
+            express the measurement.</skos:definition>
+        <owl:inverseOf rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/hasUnit"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="https://w3id.org/arm/measurement/ontology/0.1/measuredBy">
+        <rdfs:label xml:lang="en">measured by</rdfs:label>
+        <skos:definition xml:lang="en">The relationship between a dimension or other aspect of a
+            resource and the Measurement that measures it. For example, the length, height, weight,
+            file size, etc. of a resource may be the aspect that is measured by a particular
+            Measurement.</skos:definition>
+        <rdfs:range rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/Measurement"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/measures"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/arm/measurement/ontology/0.1/measures">
+        <rdfs:label xml:lang="en">measures</rdfs:label>
+        <skos:definition xml:lang="en">The relationship between a Measurement and the dimension or
+            other aspect of a resource that is measured by this Measurement. For example, a
+            Measurement may specify the length, height, weight, file size, etc. of a
+            resource.</skos:definition>
+        <rdfs:domain rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/Measurement"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arm/measurement/ontology/0.1/measuredBy"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
+
+
+</rdf:RDF>

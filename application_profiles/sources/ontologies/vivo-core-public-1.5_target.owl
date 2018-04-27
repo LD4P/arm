@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY c4o "http://purl.org/spar/c4o/" >
+    <!ENTITY dcterms "http://purl.org/dc/terms/" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY fabio "http://purl.org/spar/fabio/" >
+    <!ENTITY bibo "http://purl.org/ontology/bibo/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY ero "http://purl.obolibrary.org/obo/" >
+    <!ENTITY skos "http://www.w3.org/2008/05/skos#" >
+    <!ENTITY dcelem "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY vivo "http://vivoweb.org/ontology/core#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2 "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY event "http://purl.org/NET/c4dm/event.owl#" >
+    <!ENTITY afn "http://jena.hpl.hp.com/ARQ/function#" >
+    <!ENTITY skco "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY geo "http://aims.fao.org/aos/geopolitical.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY swvs "http://www.w3.org/2003/06/sw-vocab-status/ns#" >
+    <!ENTITY vitro "http://vitro.mannlib.cornell.edu/ns/vitro/0.7#" >
+    <!ENTITY pvs "http://vivoweb.org/ontology/provenance-support#" >
+    <!ENTITY scires "http://vivoweb.org/ontology/scientific-research#" >
+    <!ENTITY vitro-public "http://vitro.mannlib.cornell.edu/ns/vitro/public#" >
+    <!ENTITY scirr "http://vivoweb.org/ontology/scientific-research-resource#" >
+]>
+
+
+<rdf:RDF xmlns="http://vivoweb.org/ontology/core#"
+     xml:base="http://vivoweb.org/ontology/core"
+     xmlns:afn="http://jena.hpl.hp.com/ARQ/function#"
+     xmlns:scires="http://vivoweb.org/ontology/scientific-research#"
+     xmlns:scirr="http://vivoweb.org/ontology/scientific-research-resource#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:owl2="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#"
+     xmlns:event="http://purl.org/NET/c4dm/event.owl#"
+     xmlns:swvs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:c4o="http://purl.org/spar/c4o/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:dcelem="http://purl.org/dc/elements/1.1/"
+     xmlns:vivo="http://vivoweb.org/ontology/core#"
+     xmlns:geo="http://aims.fao.org/aos/geopolitical.owl#"
+     xmlns:pvs="http://vivoweb.org/ontology/provenance-support#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:fabio="http://purl.org/spar/fabio/"
+     xmlns:skco="http://www.w3.org/2004/02/skos/core#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:vitro-public="http://vitro.mannlib.cornell.edu/ns/vitro/public#"
+     xmlns:skos="http://www.w3.org/2008/05/skos#"
+     xmlns:ero="http://purl.obolibrary.org/obo/">
+    <owl:Ontology rdf:about="http://vivoweb.org/ontology/core">
+        <rdfs:label xml:lang="en-us">VIVO core</rdfs:label>
+        <owl:imports rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/0.7"/>
+        <owl:imports rdf:resource="http://vivoweb.org/ontology/core/dateTimeValuePrecision.owl"/>
+        <owl:imports rdf:resource="http://vivoweb.org/ontology/core/documentStatus.owl"/>
+        <owl:imports rdf:resource="http://vivoweb.org/ontology/core/geopolitical.tbox.ver1.1-11-18-11.owl"/>
+        <owl:imports rdf:resource="http://vivoweb.org/ontology/core/vivo-bibo-public-1.5.owl"/>
+        <owl:imports rdf:resource="http://vivoweb.org/ontology/core/vivo-c4o-public-1.5.owl"/>
+        <owl:imports rdf:resource="http://vivoweb.org/ontology/core/vivo-dcelements-public-1.5.owl"/>
+        <owl:imports rdf:resource="http://vivoweb.org/ontology/core/vivo-dcterms-public-1.5.owl"/>
+        <owl:imports rdf:resource="http://vivoweb.org/ontology/core/vivo-event-public-1.5.owl"/>
+        <owl:imports rdf:resource="http://vivoweb.org/ontology/core/vivo-fabio-public-1.5.owl"/>
+        <owl:imports rdf:resource="http://vivoweb.org/ontology/core/vivo-foaf-public-1.5.owl"/>
+        <owl:imports rdf:resource="http://vivoweb.org/ontology/core/vivo-pws-public-1.5.owl"/>
+        <owl:imports rdf:resource="http://vivoweb.org/ontology/core/vivo-skos-public-1.5.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#Award -->
+
+    <owl:Class rdf:about="&vivo;Award">
+        <rdfs:label xml:lang="en-us">Award or Honor</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vivo;awardConferredBy"/>
+                <owl:allValuesFrom rdf:resource="&foaf;Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&vivo;description"/>
+                <owl:allValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <vitro:descriptionAnnot rdf:datatype="&xsd;string">An Award or Honor</vitro:descriptionAnnot>
+        <vitro:shortDef rdf:datatype="&xsd;string">An Award or Honor</vitro:shortDef>
+        <vitro:exampleAnnot rdf:datatype="&xsd;string">Wiley Prize in Biomedical Sciences</vitro:exampleAnnot>
+    </owl:Class>
+    
+
+
+</rdf:RDF>
+

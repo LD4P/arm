@@ -1,0 +1,21 @@
+<rdf:RDF xml:base="http://id.loc.gov/ontologies/bibframe/" 
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+    xmlns:bf="http://id.loc.gov/ontologies/bibframe/" 
+    xmlns:owl="http://www.w3.org/2002/07/owl#" 
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#" 
+    xmlns:dcterms="http://purl.org/dc/terms/">
+    
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-03-15T16:23:59.852-04:00</owl:versionInfo>
+        <rdfs:label>BIBFRAME vocabulary</rdfs:label>
+        <dcterms:modified>2017-03-15T16:23:59.852-04:00</dcterms:modified>
+    </owl:Ontology>
+
+    <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Item">
+        <rdfs:label>Item</rdfs:label>
+        <skos:definition>Single example of an Instance.</skos:definition>
+        <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+    </owl:Class>
+    
+</rdf:RDF>

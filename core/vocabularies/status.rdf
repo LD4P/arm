@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF  
+    xmlns="https://w3id.org/arm/core/vocabularies/status/0.1/"
+    xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"  
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:void="http://rdfs.org/ns/void#"
+    > 
+    
+    <!-- DATASET DECLARATION -->
+    
+    <void:Dataset rdf:about="https://w3id.org/arm/core/vocabularies/status/">
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1.0</owl:versionInfo>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+        <rdfs:label xml:lang="en">RareMat Status Vocabulary</rdfs:label>
+        <dcterms:title xml:lang="en">RareMat Status Vocabulary</dcterms:title>
+        <skos:definition xml:lang="en">The RareMat Status Vocabulary is a controlled vocabulary to express the status of data, such as an invalid identifier.</skos:definition>
+        <vann:preferredNamespacePrefix>status</vann:preferredNamespacePrefix>
+        <void:vocabulary rdf:resource="http://id.loc.gov/ontologies/bibframe/"/>
+    </void:Dataset>    
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/status/0.1/cancelled">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
+        <rdfs:label xml:lang="en">cancelled</rdfs:label>
+        <skos:definition xml:lang="en">Applies to an identifier or other resource that has been cancelled.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/status/0.1/current">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
+        <rdfs:label xml:lang="en">current</rdfs:label>
+        <skos:definition xml:lang="en">Applies to an identifier or other resource that is currently valid.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/status/0.1/deprecated">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
+        <rdfs:label xml:lang="en">deprecated</rdfs:label>
+        <skos:definition xml:lang="en">Applies to an identifier or other resource that has been deprecated.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/status/0.1/invalid">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Status"/>
+        <rdfs:label xml:lang="en">invalid</rdfs:label>
+        <skos:definition xml:lang="en">Applies to an identifier or other resource that is invalid.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+</rdf:RDF>

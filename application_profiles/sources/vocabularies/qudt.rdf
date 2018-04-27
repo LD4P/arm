@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+
+<rdf:RDF
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:qudt-dimension="http://qudt.org/vocab/dimension#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:voag="http://voag.linkedmodel.org/schema/voag#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:qudt="http://qudt.org/schema/qudt#"
+    xmlns:qudt-quantity="http://qudt.org/vocab/quantity#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:qudt-1.1="http://qudt.org/1.1/schema/qudt#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
+    xmlns:qudt-unit-1.1="http://qudt.org/1.1/vocab/unit#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:unit="http://qudt.org/vocab/unit#"
+    xml:base="http://qudt.org/1.1/vocab/unit" 
+    >
+  
+  <rdf:Description rdf:about="http://qudt.org/vocab/unit#Centimeter">
+    <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cm</qudt:symbol>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#DerivedUnit"/>
+    <qudt:uneceCommonCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CMT</qudt:uneceCommonCode>
+    <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</qudt:code>
+    <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.01</qudt:conversionMultiplier>
+    <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cm</qudt:abbreviation>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#LengthUnit"/>
+    <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Centimetre"/>
+    <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+    <qudt:literal rdf:datatype="http://www.w3.org/2001/XMLSchema#string">centimeter</qudt:literal>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Centimeter</rdfs:label>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://qudt.org/vocab/unit#Foot">
+    <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Foot_%28length%29"/>
+    <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ft</qudt:symbol>
+    <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+    <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.3048</qudt:conversionMultiplier>
+    <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0625</qudt:code>
+    <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ft</qudt:abbreviation>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foot</rdfs:label>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#LengthUnit"/>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#NotUsedWithSIUnit"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://qudt.org/vocab/unit#Gram">
+    <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Gram"/>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#MassUnit"/>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#SIUnit"/>
+    <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0970</qudt:code>
+    <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">g</qudt:abbreviation>
+    <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.001</qudt:conversionMultiplier>
+    <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">g</qudt:symbol>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gram</rdfs:label>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#DerivedUnit"/>
+    <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://qudt.org/vocab/unit#Inch">
+    <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Inch"/>
+    <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in</qudt:symbol>
+    <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+    <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0254</qudt:conversionMultiplier>
+    <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0860</qudt:code>
+    <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in</qudt:abbreviation>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inch</rdfs:label>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#NotUsedWithSIUnit"/>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#LengthUnit"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://qudt.org/vocab/unit#Kilogram">
+    <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Kilogram"/>
+    <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kg</qudt:symbol>
+    <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+    <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1</qudt:conversionMultiplier>
+    <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0971</qudt:code>
+    <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kg</qudt:abbreviation>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kilogram</rdfs:label>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#MassUnit"/>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#SIBaseUnit"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://qudt.org/vocab/unit#Kilometer">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kilometer </rdfs:label>
+    <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Kilometre"/>
+    <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1091</qudt:code>
+    <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+    <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">km</qudt:abbreviation>
+    <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">km</qudt:symbol>
+    <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1000</qudt:conversionMultiplier>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#SIUnit"/>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#DerivedUnit"/>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#LengthUnit"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://qudt.org/vocab/unit#Meter">
+    <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m</qudt:symbol>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meter</rdfs:label>
+    <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Metre"/>
+    <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1</qudt:conversionMultiplier>
+    <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1090</qudt:code>
+    <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+    <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m</qudt:abbreviation>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#SIBaseUnit"/>
+    <qudt:uneceCommonCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MTR</qudt:uneceCommonCode>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#LengthUnit"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://qudt.org/vocab/unit#MileUSStatute">
+    <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mi</qudt:symbol>
+    <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+    <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1609.347</qudt:conversionMultiplier>
+    <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1160</qudt:code>
+    <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">miUS</qudt:abbreviation>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mile US Statute</rdfs:label>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#NotUsedWithSIUnit"/>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#LengthUnit"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://qudt.org/vocab/unit#Millimeter">
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#DerivedUnit"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Millimeter</rdfs:label>
+    <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1093</qudt:code>
+    <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</qudt:symbol>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#LengthUnit"/>
+    <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+    <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.001</qudt:conversionMultiplier>
+    <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m^-3</qudt:abbreviation>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#SIUnit"/>
+    <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Millimetre"/>
+  </rdf:Description>
+  
+   <rdf:Description rdf:about="http://qudt.org/vocab/unit#MetricTon">
+    <skos:exactMatch rdf:resource="http://dbpedia.org/resource/Tonne"/>
+    <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mT</qudt:symbol>
+    <qudt:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Also called tonne</qudt:description>
+    <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+    <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1000</qudt:conversionMultiplier>
+    <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1115</qudt:code>
+    <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mT</qudt:abbreviation>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metric Ton</rdfs:label>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#MassUnit"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://qudt.org/vocab/unit#OunceMass">
+    <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ozm</qudt:symbol>
+    <qudt:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ounce of mass is 1/16th of a pound of mass, based on the international standard definition of the pound as exactly 0.45359237 kg.</qudt:description>
+    <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+    <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.028349523125</qudt:conversionMultiplier>
+    <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1275</qudt:code>
+    <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ozm</qudt:abbreviation>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ounce Mass</rdfs:label>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#NotUsedWithSIUnit"/>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#MassUnit"/>
+  </rdf:Description>
+  
+    <rdf:Description rdf:about="http://qudt.org/vocab/unit#PoundMass">
+    <qudt:symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lbm</qudt:symbol>
+    <qudt:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pound of mass, based on the international standard definition of the pound as exactly 0.45359237 kg.</qudt:description>
+    <qudt:conversionOffset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</qudt:conversionOffset>
+    <qudt:conversionMultiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.45359237</qudt:conversionMultiplier>
+    <qudt:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1400</qudt:code>
+    <qudt:abbreviation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lbm</qudt:abbreviation>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pound Mass</rdfs:label>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#MassUnit"/>
+    <rdf:type rdf:resource="http://qudt.org/schema/qudt#NotUsedWithSIUnit"/>
+  </rdf:Description>
+  
+</rdf:RDF>
+  

@@ -3,11 +3,11 @@ Fonts, Handwriting Types, and Notations
 RareMat, 2017.11.03
 
 Overview
-==============
+------------
 In rare material cataloging the capture of information about writing systems, font, and handwriting types is critical for describing important traits of resources in library and archive collections. BIBFRAME (BF) provides a foundation for rare material descriptive needs in these areas; the following recommendations for changes and extensions to BIBFRAME are meant to better provision for rare material cataloging.
 
-Summary of recommendations:
-==============
+Summary of recommendations
+------------
 - Define classes Font, Typeface, FontStyle, and HandwritingType
 - Define predicates writtenIn, hasTypeface, hasStyle, and hasHandwritingType
 - Eliminate class bf:FontSize and predicate bf:fontSize.
@@ -18,8 +18,8 @@ Summary of recommendations:
 - Define a set of named individuals to represent handwriting types, or use an external controlled vocabulary if one is suitable. Note: Getty AAT has a portion of their thesaurus devoted to scripts by form. This is not a closed set, since new typefaces can be created or discovered.
 
 Relevant BF terms
-----------
-**Classes**
+------------
+### Classes
 
 **bf:Notation**
 > - **rdfs:label**: Notation
@@ -51,7 +51,7 @@ notation.
 > - **rdfs:label**: Font size
 > - **Skos:definition**: Size of the type used to represent the characters and symbols in a resource.
 
-**Predicates**
+### Predicates
 
 **bf:fontSize**
 > - **rdfs:label**: Font size
@@ -66,17 +66,17 @@ notation.
 > - **Used with**: Work or Instance
 
 Discussion
-======
+------------
 
-**Fonts**
+### Fonts
 
 BF is right to separate font from the other types of “notation,” since font refers to the style in which symbols are printed rather than to the symbol systems themselves. However, typeface is semantically related more to font size than to these symbol systems. Further, it is hard to understand why BF models only font size and not the other properties of a font - typeface and style.
 
-Conventional definitions from the publishing world
+**Conventional definitions from the publishing world:**
 > - A typeface is a family of fonts (very often by the same designer). Within a typeface there will be fonts of varying weights or other variations. E.g., light, bold, semi-bold, condensed, italic, etc. Each such variation is a different font. nerdplusart.com/type-terminology-smackdown/
 > - A font is the digital representation of a typeface. It is a collection of all the characters of a typeface in one size (12pt/1in) and one style (bold/italic). For example, Arial in 12pt size is a font, Arial in 18pt size is a font, and Arial bold in 24pt is also a font. Adobe's type glossary lists a font as “one weight, width, and style of a typeface.” http://smad.jmu.edu/shen/webtype/facefontfamily.html
 
-**Handwriting Types**
+### Handwriting Types
 
 bf:Script is about the symbol system, but there is no way in BF to note a type of writing hand for handwritten manuscripts and other textual materials, e.g. English secretary hand, or Carolingian script.
 
@@ -84,21 +84,21 @@ http://rbms.info/files/dcrm/dcrmmss/DCRMMSS.pdf
 Descriptive Cataloging of Rare Materials (Manuscripts) instructs to capture information about the handwriting type if considered important for describing the resource. Using the term Script, this information is described as, “A type of writing hand; not the same as a writing system or a handwriting style (such as cursive or block letters). Gothic, Secretary, Carolingian minuscule, and Sütterlin are examples of scripts. See also Writing system.”
 
 Proposal
-===========
+------------
 
-Font
-==========
+### Font
+
 Following the usage described above, we propose a Font class to describe all font properties of a resource (or part of a resource), including typeface (e.g., Courier, Arial), size, and style (e.g., bold, italics). We propose a class Typeface with named individuals from a typeface vocabulary, and a class FontStyle with named individuals from a controlled font style vocabulary. We propose using the Measurement model to describe size as detailed below. 
 
 We propose predicate :writtenIn to relate a bibliographic resource (most likely Instance or Item) to a Font, and predicates hasTypeface, hasStyle to relate a Font instance to its Typeface and FontStyle. Predicates from the Measurement model would be used to model font size.
 
-Diagram
----------
+#### Diagram
+
 Note that different multiple sample namespaces are shown; some may end up being the same. 
 ![Font Diagram](/modeling_recommendations/modeling_diagrams/font.png)
 
-RDF Sample
----------
+#### RDF Sample
+
 
 ```
 :it a :bf:Item ;
@@ -115,7 +115,7 @@ RDF Sample
   rdf:value “11” .
 
 
-# Named individuals defined in the ontology or other controlled vocabulary
+#### Named individuals defined in the ontology or other controlled vocabulary
 
 :courier a owl:NamedIndividual, ex:Typeface .
 :bold a owl:NamedIndividual, ex:Style .
@@ -123,20 +123,20 @@ RDF Sample
 ```
 
 
-Handwriting Type
-==============
+### Handwriting Type
+
 Because BF seems to currently conceive of instances of bf:Script as reuseable objects outside of a specific work’s use of a bf:Script, the current proposal does not recommend linking handwriting type information directly off from instances of bf:Script as if the individual of bf:Script was a particular use of a script. 
 
 An easier addition to the BF model would be to have a property like :hasHandwritingType directly off the bf:Instance or bf:Item and follow a very similar pattern as the Font pattern described above. The shortcoming of this is that there would be no obvious way of linking the :HandwritingType to the bf:Script, but currently cataloging practice does not aspire to this level of specificity and could be defined as future work if use cases called for it.
 
 We propose reusing the writtenIn predicate to relate a bibliographic resource (most likely Instance or Item) to a particular example of Handwriting. We also recommend the predicate hasHandwritingType to relate a Handwriting instance to its HandwritingType, and dcterms:description to further describe the particular Handwriting and use of a HandwritingType. Note that writtenIn is reused from the Font pattern above. Predicates from the Measurement model could also be used to model handwriting size if deemed important to capture.
 
-Diagram
----------
+#### Diagram
+
 ![Handwriting Type Diagram](/modeling_recommendations/modeling_diagrams/handwriting.png)
 
-RDF Sample
----------
+#### RDF Sample
+
 ```
 :it a :bf:Item ;
   ex:hasNotation :latin ;
@@ -150,8 +150,11 @@ RDF Sample
 :cursive a owl:NamedIndividual, :Style .
 ```
 
-Classes
+Term Definitions
 ---------
+
+### Classes
+
 **Font**
 > - **rdfs:label**: Font
 > - **Skos:definition**: A font is the digital representation of a typeface. It is a collection of all the characters of a typeface in one size (12pt/1in) and one style (bold/italic). For example, Arial in 12pt size is a font, Arial in 18pt size is a font, and Arial bold in 24pt is also a font.
@@ -179,8 +182,8 @@ Classes
 > - **Superclass**:
 
 
-Predicates
----------
+### Predicates
+
 **writtenIn**
 > - **rdfs:label**: written in
 > - **Skos:definition**: The relationship between a resource containing text and the Font or HandWriting the textual information is displayed in.
@@ -206,7 +209,7 @@ Predicates
 > - **skos:editorialNote**: Use on a :Handwriting
 
 Areas for future research - beyond present scope
-=================
+-------------------
 - Consider the relationship between Writing Systems (bf:Scripts), styles of writing (:Fonts and :HandWritingTypes) and Languages. 
 - If the use case arises for the need to know which fonts and handwriting types were used with which bf:Scripts, consider modeling that would reflect these relationships in a particular case.
 - Ask community for better label/naming for :writtenIn.

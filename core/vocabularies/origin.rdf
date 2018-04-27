@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF  
+    xmlns="https://w3id.org/arm/core/vocabularies/origin/0.1/"
+    xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"  
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:void="http://rdfs.org/ns/void#"
+    > 
+    
+    <!-- DATASET DECLARATION -->
+    
+    <void:Dataset rdf:about="https://w3id.org/arm/core/vocabularies/origin/">
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1.0</owl:versionInfo>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+        <rdfs:label xml:lang="en">Art and Rare Materials Origin Vocabulary</rdfs:label>
+        <dcterms:title xml:lang="en">Art and RareMat Origin Vocabulary</dcterms:title>
+        <skos:definition xml:lang="en">The Art and RareMat Origin Vocabulary is a controlled vocabulary to express the origin of data, such as a title originating from the spine of a volume. Origins in this sense are distinct from sources, which refer to other resources, such as a title issued by an organization.</skos:definition>
+        <vann:preferredNamespacePrefix>origin</vann:preferredNamespacePrefix>
+        <void:vocabulary rdf:resource="https://w3id.org/arm/core/ontology/0.1/"/>
+    </void:Dataset>    
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/origin/0.1/addedTitlePage">
+        <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/Origin"/>
+        <rdfs:label xml:lang="en">added title page</rdfs:label>
+        <skos:definition xml:lang="en">Applies to a title appearing on a title page that has not been chosen as the chief source.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/origin/0.1/binder">
+        <rdfs:label xml:lang="en">binder</rdfs:label>
+        <skos:definition xml:lang="en">Applies to a resource (e.g., a title) derived from a binding that is not that of the publisher.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/origin/0.1/caption">
+        <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/Origin"/>
+        <rdfs:label xml:lang="en">caption</rdfs:label>
+        <skos:definition xml:lang="en">Applies to a resource (e.g., a title) given at the beginning of the first page of the text.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/origin/0.1/container">
+        <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/Origin"/>
+        <rdfs:label xml:lang="en">container</rdfs:label>
+        <skos:definition xml:lang="en">Applies to a resource (e.g., a title) on the resource's container.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/origin/0.1/cover">
+        <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/Origin"/>
+        <rdfs:label xml:lang="en">cover</rdfs:label>
+        <skos:definition xml:lang="en">Applies to a resource (e.g., a title) printed on the cover of a resource as issued.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/origin/0.1/margin">
+        <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/Origin"/>
+        <rdfs:label xml:lang="en">margin</rdfs:label>
+        <skos:definition xml:lang="en">Applies to a resource printed on the top or bottom margin of each page of a publication (e.g., a running title).</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/origin/0.1/spine">
+        <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/Origin"/>
+        <rdfs:label xml:lang="en">spine</rdfs:label>
+        <skos:definition xml:lang="en">Applies to a resource found on the spine of a publication (e.g., a publisher's title).</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/origin/0.1/supplied">
+        <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/Origin"/>
+        <rdfs:label xml:lang="en">supplied</rdfs:label>
+        <skos:definition xml:lang="en">Supplied value, not directly transcribed from the resource itself.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/origin/0.1/transcribed">
+        <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/Origin"/>
+        <rdfs:label xml:lang="en">transcribed</rdfs:label>
+        <skos:definition xml:lang="en">Value transcribed directly from the resource.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/origin/0.1/translated">
+        <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/Origin"/>
+        <rdfs:label xml:lang="en">translated</rdfs:label>
+        <skos:definition xml:lang="en">Value translated from another language, not transcribed from the resource itself.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:NamedIndividual>
+</rdf:RDF>

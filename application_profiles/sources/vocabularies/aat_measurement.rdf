@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:aat="http://vocab.getty.edu/aat/"
+	xmlns:aat_contrib="http://vocab.getty.edu/aat/contrib/"
+	xmlns:aat_rel="http://vocab.getty.edu/aat/rel/"
+	xmlns:aat_rev="http://vocab.getty.edu/aat/rev/"
+	xmlns:aat_scopeNote="http://vocab.getty.edu/aat/scopeNote/"
+	xmlns:aat_source="http://vocab.getty.edu/aat/source/"
+	xmlns:aat_source_rev="http://vocab.getty.edu/aat/source/rev/"
+	xmlns:aat_term="http://vocab.getty.edu/aat/term/"
+	xmlns:adms="http://www.w3.org/ns/adms#"
+	xmlns:bibo="http://purl.org/ontology/bibo/"
+	xmlns:bio="http://purl.org/vocab/bio/0.1/"
+	xmlns:cc="http://creativecommons.org/ns#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dcat="http://www.w3.org/ns/dcat#"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:dctype="http://purl.org/dc/dcmitype/"
+	xmlns:fmt="http://www.w3.org/ns/formats/"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:freq="http://purl.org/cld/freq/"
+	xmlns:gvp="http://vocab.getty.edu/ontology#"
+	xmlns:gvp_lang="http://vocab.getty.edu/language/"
+	xmlns:iso="http://purl.org/iso25964/skos-thes#"
+	xmlns:luc="http://www.ontotext.com/owlim/lucene#"
+	xmlns:ontogeo="http://www.ontotext.com/owlim/geo#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:prov="http://www.w3.org/ns/prov#"
+	xmlns:ptop="http://www.ontotext.com/proton/protontop#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:rr="http://www.w3.org/ns/r2rml#"
+	xmlns:rrx="http://purl.org/r2rml-ext/"
+	xmlns:schema="http://schema.org/"
+	xmlns:sd="http://www.w3.org/ns/sparql-service-description#"
+	xmlns:sesame="http://www.openrdf.org/schema/sesame#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#"
+	xmlns:tgn="http://vocab.getty.edu/tgn/"
+	xmlns:tgn_contrib="http://vocab.getty.edu/tgn/contrib/"
+	xmlns:tgn_rel="http://vocab.getty.edu/tgn/rel/"
+	xmlns:tgn_rev="http://vocab.getty.edu/tgn/rev/"
+	xmlns:tgn_scopeNote="http://vocab.getty.edu/tgn/scopeNote/"
+	xmlns:tgn_source="http://vocab.getty.edu/tgn/source/"
+	xmlns:tgn_source_rev="http://vocab.getty.edu/tgn/source/rev/"
+	xmlns:tgn_term="http://vocab.getty.edu/tgn/term/"
+	xmlns:ulan="http://vocab.getty.edu/ulan/"
+	xmlns:ulan_bio="http://vocab.getty.edu/ulan/bio/"
+	xmlns:ulan_contrib="http://vocab.getty.edu/ulan/contrib/"
+	xmlns:ulan_event="http://vocab.getty.edu/ulan/event/"
+	xmlns:ulan_rel="http://vocab.getty.edu/ulan/rel/"
+	xmlns:ulan_rev="http://vocab.getty.edu/ulan/rev/"
+	xmlns:ulan_scopeNote="http://vocab.getty.edu/ulan/scopeNote/"
+	xmlns:ulan_source="http://vocab.getty.edu/ulan/source/"
+	xmlns:ulan_source_rev="http://vocab.getty.edu/ulan/source/rev/"
+	xmlns:ulan_term="http://vocab.getty.edu/ulan/term/"
+	xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
+	xmlns:vann="http://purl.org/vocab/vann/"
+	xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+	xmlns:vdpp="http://data.lirmm.fr/ontologies/vdpp#"
+	xmlns:voaf="http://purl.org/vocommons/voaf#"
+	xmlns:voag="http://voag.linkedmodel.org/voag#"
+	xmlns:void="http://rdfs.org/ns/void#"
+	xmlns:wdrs="http://www.w3.org/2007/05/powder-s#"
+	xmlns:wgs="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	xmlns:wv="http://vocab.org/waiver/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+<gvp:Subject rdf:about="http://vocab.getty.edu/aat/300055621">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<rdf:type rdf:resource="http://vocab.getty.edu/ontology#Concept"/>
+	<rdfs:label xml:lang="en">area (measurement)</rdfs:label>
+	<rdfs:seeAlso rdf:resource="http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300055621"/>
+	<skos:prefLabel xml:lang="en">area (measurement)</skos:prefLabel>
+	<skos:altLabel xml:lang="en">areas (measurements)</skos:altLabel>
+	<skos:broader rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+	<skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+	<skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300226816"/>
+	<skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+</gvp:Subject>
+<gvp:Subject rdf:about="http://vocab.getty.edu/aat/300055623">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Concept"/>
+        <rdfs:label xml:lang="en">circumference</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300055623"/>
+        <skos:prefLabel xml:lang="en">circumference</skos:prefLabel>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+        <skos:broader rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300226816"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+</gvp:Subject>
+    <gvp:Subject rdf:about="http://vocab.getty.edu/aat/300055624">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Concept"/>
+        <rdfs:label xml:lang="nl">diameter</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300055624"/>
+        <skos:prefLabel xml:lang="en">diameter</skos:prefLabel>
+        <skos:broader rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300226816"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+    </gvp:Subject>
+    <gvp:Subject rdf:about="http://vocab.getty.edu/aat/300055644">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Concept"/>
+        <rdfs:label xml:lang="en">height</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300055644"/>
+        <skos:prefLabel xml:lang="en">height</skos:prefLabel>
+        <skos:broader rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300226816"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+    </gvp:Subject>
+    <gvp:Subject rdf:about="http://vocab.getty.edu/aat/300055645">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Concept"/>
+        <rdfs:label xml:lang="en">length</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300055645"/>      
+        <skos:prefLabel xml:lang="en">length</skos:prefLabel>
+        <skos:broader rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+        <skos:related rdf:resource="http://vocab.getty.edu/aat/300055647"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300226816"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+    </gvp:Subject>
+    <gvp:Subject rdf:about="http://vocab.getty.edu/aat/300055646">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Concept"/>
+        <rdfs:label xml:lang="en">thickness</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300055646"/>
+        <skos:prefLabel xml:lang="en">thickness</skos:prefLabel>
+        <skos:broader rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+        <skos:related rdf:resource="http://vocab.getty.edu/aat/300072633"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300226816"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+    </gvp:Subject>
+    <gvp:Subject rdf:about="http://vocab.getty.edu/aat/300055647">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<rdf:type rdf:resource="http://vocab.getty.edu/ontology#Concept"/>
+	<rdfs:label xml:lang="en">width</rdfs:label>
+	<rdfs:seeAlso rdf:resource="http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300055647"/>
+	<skos:prefLabel xml:lang="en">width</skos:prefLabel>
+	<skos:broader rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+	<skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+	<skos:related rdf:resource="http://vocab.getty.edu/aat/300404164"/>
+	<skos:related rdf:resource="http://vocab.getty.edu/aat/300055645"/>
+	<skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300226816"/>
+	<skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+</gvp:Subject>
+    <gvp:Subject rdf:about="http://vocab.getty.edu/aat/300055649">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Concept"/>
+        <rdfs:label xml:lang="en">volume (quantity or mass)</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300055649"/>
+        <skos:broader rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300226816"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+    </gvp:Subject>
+    <gvp:Subject rdf:about="http://vocab.getty.edu/aat/300056240">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Concept"/>
+        <rdfs:label xml:lang="en">weight (heaviness attribute)</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300056240"/>
+        <skos:prefLabel xml:lang="en">weight (heaviness attribute)</skos:prefLabel>
+        <skos:broader rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300226816"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+        <skos:narrower rdf:resource="http://vocab.getty.edu/aat/300149676"/>
+        <skos:narrower rdf:resource="http://vocab.getty.edu/aat/300150562"/>
+        <skos:narrower rdf:resource="http://vocab.getty.edu/aat/300220067"/>
+    </gvp:Subject>
+    <gvp:Subject rdf:about="http://vocab.getty.edu/aat/300072633">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Concept"/>
+        <rdfs:label xml:lang="en">depth (size/dimension)</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300072633"/>
+        <skos:prefLabel xml:lang="en">depth (size/dimension)</skos:prefLabel>
+        <skos:altLabel xml:lang="en">deep (size/dimension)</skos:altLabel>
+        <skos:broader rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300226816"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+    </gvp:Subject>
+    <gvp:Subject rdf:about="http://vocab.getty.edu/aat/300312044">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Concept"/>
+        <rdfs:label xml:lang="en">footprint (area)</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300312044"/>
+        <skos:altLabel xml:lang="en">footprints (area)</skos:altLabel>
+        <skos:broader rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300226816"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+    </gvp:Subject>
+    <gvp:Subject rdf:about="http://vocab.getty.edu/aat/300404162">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Concept"/>
+        <rdfs:label xml:lang="en">sizes (numbered magnitude)</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300404162"/>
+        <skos:prefLabel xml:lang="en">sizes (numbered magnitude)</skos:prefLabel>
+        <skos:altLabel xml:lang="en">size (numbered magnitude)</skos:altLabel>
+        <skos:broader rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300226816"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+    </gvp:Subject>
+    <gvp:Subject rdf:about="http://vocab.getty.edu/aat/300404164">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Concept"/>
+        <rdfs:label xml:lang="en">breadth</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300404164"/>
+        <skos:prefLabel xml:lang="en">breadth</skos:prefLabel>
+        <skos:broader rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+        <skos:related rdf:resource="http://vocab.getty.edu/aat/300055647"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300226816"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+    </gvp:Subject>
+    <gvp:Subject rdf:about="http://vocab.getty.edu/aat/300404403">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Concept"/>
+        <rdfs:label xml:lang="en">footage</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300404403"/>
+        <skos:prefLabel xml:lang="en">footage</skos:prefLabel>
+        <skos:broader rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300226816"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+    </gvp:Subject>
+    <gvp:Subject rdf:about="http://vocab.getty.edu/aat/300404430">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Concept"/>
+        <rdfs:label xml:lang="en">capacity (size measurement)</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300404430"/>
+        <skos:prefLabel xml:lang="en">capacity (size measurement)</skos:prefLabel>
+        <skos:broader rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300226816"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+    </gvp:Subject>
+    <gvp:Subject rdf:about="http://vocab.getty.edu/aat/300404431">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Concept"/>
+        <rdfs:label xml:lang="en">base (relationship indicator)</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300404431"/>
+        <gvp:broader rdf:resource="http://vocab.getty.edu/aat/300226820"/>
+        <skos:prefLabel xml:lang="en">base (relationship indicator)</skos:prefLabel>
+        <skos:broader rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+        <skos:related rdf:resource="http://vocab.getty.edu/aat/300404432"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300226816"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+    </gvp:Subject>
+    <gvp:Subject rdf:about="http://vocab.getty.edu/aat/300404432">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Concept"/>
+        <rdfs:label xml:lang="en">target (relationship indicator)</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300404432"/>
+        <skos:prefLabel xml:lang="en">target (relationship indicator)</skos:prefLabel>
+        <skos:broader rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+        <skos:related rdf:resource="http://vocab.getty.edu/aat/300404431"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300226816"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+    </gvp:Subject>
+    <gvp:Subject rdf:about="http://vocab.getty.edu/aat/300404433">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Concept"/>
+        <rdfs:label xml:lang="en">count (sum total)</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300404433"/>
+        <skos:prefLabel xml:lang="en">count (sum total)</skos:prefLabel>
+        <skos:broader rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300226816"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+    </gvp:Subject>
+    <gvp:Subject rdf:about="http://vocab.getty.edu/aat/300404437">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://vocab.getty.edu/ontology#Concept"/>
+        <rdfs:label xml:lang="en">interval (measurement indicator)</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300404437"/>
+        <skos:prefLabel xml:lang="en">interval (measurement indicator)</skos:prefLabel>
+        <skos:altLabel xml:lang="en">intervals (measurement indicator)</skos:altLabel>
+        <skos:broader rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+        <skos:inScheme rdf:resource="http://vocab.getty.edu/aat/"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300226816"/>
+        <skos:broaderTransitive rdf:resource="http://vocab.getty.edu/aat/300266035"/>
+    </gvp:Subject>
+</rdf:RDF>
+

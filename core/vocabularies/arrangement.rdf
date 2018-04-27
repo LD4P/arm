@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF  
+    xmlns="https://w3id.org/arm/core/vocabularies/arrangement/0.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"  
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:void="http://rdfs.org/ns/void#"
+    > 
+    
+    <!-- DATASET DECLARATION -->
+    
+    <void:Dataset rdf:about="https://w3id.org/arm/core/vocabularies/arrangement/">
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1.0</owl:versionInfo>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+        <rdfs:label xml:lang="en">Art and Rare Materials Arrangement Vocabulary</rdfs:label>
+        <dcterms:title xml:lang="en">Art and Rare Materials Arrangement Vocabulary</dcterms:title>
+        <skos:definition xml:lang="en">The Art and RareMat Arrangement Vocabulary is a controlled vocabulary to express the physical arrangment or configuration of objects described in rare materials metadata. Arrangements may apply to individual objects or collections of objects.</skos:definition>
+        <skos:editorialNote xml:lang="en">The elements of this vocabulary are typed https://w3id.org/arm/core/ontology/0.1/Arrangement rather than http://id.loc.gov/ontologies/bibframe/Arrangement because at the time of publication BIBFRAME Arrangement is used only with collections of objects and not individual objects. Should this definition change in future versions of BIBFRAME, the entities defined here will be retyped.</skos:editorialNote>
+        <vann:preferredNamespacePrefix>arrangement</vann:preferredNamespacePrefix>
+        <void:vocabulary rdf:resource="https://w3id.org/arm/core/ontology/0.1/"/>
+    </void:Dataset>    
+    
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/arrangement/0.1/closed">
+        <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/Arrangement"/>
+        <rdfs:label>closed</rdfs:label>
+        <skos:definition>The condition of being closed, such as a book. Particular measurements and other descriptions may pertain to the object in this arrangement.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>               
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/arrangement/0.1/opened">
+        <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/Arrangement"/>
+        <rdfs:label>opened</rdfs:label>
+        <skos:definition>The condition of being opened, such as a book. Particular measurements and other descriptions may pertain to the object in this arrangement.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>        
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/arrangement/0.1/folded">
+        <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/Arrangement"/>
+        <rdfs:label>folded</rdfs:label>
+        <skos:definition>The condition of being folded, such as a parchment. Particular measurements and other descriptions may pertain to the object in this arrangement.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>        
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/arrangement/0.1/unfolded">
+        <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/Arrangement"/>
+        <rdfs:label>infolded</rdfs:label>
+        <skos:definition>The condition of being unfolded, such as a parchment. Particular measurements and other descriptions may pertain to the object in this arrangement.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>        
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/arrangement/0.1/rolled">
+        <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/Arrangement"/>
+        <rdfs:label>rolled</rdfs:label>
+        <skos:definition>The condition of being rolled, such as a scroll. Particular measurements and other descriptions may pertain to the object in this arrangement.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>        
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/arrangement/0.1/unrolled">
+        <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/Arrangement"/>
+        <rdfs:label>unrolled</rdfs:label>
+        <skos:definition>The condition of being unrolled, such as a scroll. Particular measurements and other descriptions may pertain to the object in this arrangement.</skos:definition>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>       
+    </owl:NamedIndividual>
+    
+</rdf:RDF>
