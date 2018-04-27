@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Fix up anchors in the bibliotek-o LODE ontology document so that terms resolve.
+"""Fix up anchors in the LODE ontology document so that terms resolve.
 
 The output of LODE is an HTML document with meaningless anchors which
 means that we can't readily make the ontology URIs nicely resolve the
@@ -12,10 +12,10 @@ places within the ontology, the rewrite of anchors takes the first occurrence
 in the HTML as the anchor to change.
 
 Before running the script, change the prefix value to the versionIRI of the
-ontology: e.g., http://bibliotek-o.org/1.2/ontology for version 1.2.x.
+ontology: e.g., https://w3id.org/arm/core/ontology/0.1/ for version 0.1.x.
 
 After running this script, change the href on the "Ontology Source" link
-to http://biblioteko-org/ontology.owl.
+to the prefix value.
 
 Created: Simeon Warner - 2016-01-22
 Modified: Rebecca Younes - 2018-04-22
@@ -24,7 +24,7 @@ Modified: Rebecca Younes - 2018-04-22
 import re
 
 html = open('temp.html','r').read()
-prefix = 'https://w3id.org/arm/award/ontology/0.1/'
+prefix = 'https://w3id.org/arm/core/ontology/0.1/'
 
 ## Pass 1 - find anchors to change
 terms = {}
@@ -50,4 +50,4 @@ for term, anchor in terms.items():
     html = re.sub(' id="'+anchor+'"',' id="'+term+'"',html)
     html = re.sub(' href="#'+anchor+'"',' href="#'+term+'"',html)
 
-open('ontology.html','w').write(html)
+open('core.html','w').write(html)
