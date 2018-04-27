@@ -1,41 +1,24 @@
-Art and Rare Materials Ontologies
+Art and Rare Materials BIBFRAME Ontology Extension
 ==========================
 
 Introduction
 ------------
 
-The ontologies housed in this repository have been developed as extensions of the [BIBFRAME ontology](http://id.loc.gov/ontologies/bibframe/) 
-for generalized bibliographic description to provide specialized modeling in the art and rare materials domains. These were originally conceived of as
-two separate projects: Columbia University led the art ontology project to describe both two-and three-dimensional artworks, while the rare materials 
-project, led by Cornell University in conjunction with the ACRL Rare Books and Manuscript Section's Bibliographic Standards Committee (RBMS-BSC), was
-intended to provide modeling for the complexity of rare materials, particularly item-level description not addressed in BIBFRAME. 
+The ontologies housed in this repository have been developed as extensions of the [BIBFRAME ontology](http://id.loc.gov/ontologies/bibframe/) for generalized bibliographic description to provide specialized modeling in the art and rare materials domains. These were originally conceived of as two separate projects: Columbia University led [ArtFrame](https://wiki.duraspace.org/display/LD4P/ArtFrame) in collaboration with the Art Libraries Society of North America's [Cataloging Advisory Committee](https://www.arlisna.org/organization/committees/76-cataloging-advisory-committee) (ARLIS CAC), an ontology extension for the description of two-and three-dimensional artworks. Meanwhile, Cornell University led the [Rare Materials Ontology Extension](https://wiki.duraspace.org/display/LD4P/Rare+Materials+Ontology+Extension) (RareMat) in collaboration with the ACRL Rare Books and Manuscript Section's [Bibliographic Standards Committee](http://rbms.info/committees/bibliographic_standards/) (RBMS-BSC); RareMat was intended to provide modeling for the complexity of rare materials, particularly item-level description not addressed in BIBFRAME. 
 
-As work proceeded, it became apparent that most of the modeling needs of the two groups overlapped: physical description, physical condition and conservation,
-custodial history, measurements, awards and exhibitions, and so on. It was thus decided to merge the projects and jointly develop a single set of models. 
-At the same time, some of the models being developed were seen to be separable from the core models and amenable to independent implementation, and by users outside the 
-bibliographic domain who would not be interested in the bibliocentric parts of the modeling. These models have been pulled out of the core
-ontology into three modularized ontologies for description of awards, custodial history, and measurements.
+As work proceeded, it became apparent that many of the modeling needs of the two groups overlapped: physical description, physical condition and conservation, custodial history, measurements, awards and exhibitions, and so on. It was thus decided to merge the projects and jointly develop a single set of models. 
 
-In addition to the ontologies, the group has generated several other outputs:
-- A set of controlled vocabularies for arrangement of physical objects (e.g., rolled and unrolled), origin (e.g., of titles), status (e.g., of identifiers), 
-typefaces, and handwriting types.
-- Detailed documentation of every aspect of the modeling. These include use cases; model overviews, with motivation and rationale
-in reference to the use cases and legacy data; diagrams; RDF samples; term specifications; recommendations for future modifications to BIBFRAME, where applicable; 
-and lists of related topics out of scope of the current project but of interest for future research.
-- Application profiles, formalized in SHACL and accompanied by external ontologies and vocabularies, to support form and display interfaces 
-in [VitroLib](https://github.com/ld4l-labs/vitrolib), an RDF cataloging tool under development in the associated 
-[Linked Data for Libraries Labs](https://wiki.duraspace.org/pages/viewpage.action?pageId=77447730) project. Two application profiles are under development, one for art and one for rare monographs; these may be merged
-when complete if there proves to be enough overlap for that to be feasible and productive.
-- Experimental: SHACL validation profiles stored with the associated ontologies, which can be used as a basis for application profiles but whose primary
-purpose is to define expected implementation of the ontologies independent of any application. Some proof-of-concept application profiles are built on the validation
-SHACL in this way; when the profiles are complete we will evaluate the feasibility and usefulness of refactoring all the application profiles
-according to this model.
+Meanwhile, select models were considered separable from the core models, amenable to independent implementation by users within and outside the bibliographic domain. These models have been pulled out of the core ontology into three modularized ontologies: awards, custodial history, and measurements.
 
-The Art and Rare Materials ontologies are a product of the Mellon Foundation-funded Linked Data for Production (LD4P) project, 2016-2018. 
-See the [LD4P public wiki](https://wiki.duraspace.org/pages/viewpage.action?pageId=74515029) for more information about this project. 
+In addition to ontologies, the group has generated several other outputs:
+- A set of controlled vocabularies for arrangement of physical objects (e.g., rolled and unrolled), origin (e.g., of titles), status (e.g., of identifiers), typefaces, and handwriting types.
+- Detailed documentation of each model. These include use cases; model overviews, with motivation and rationale in reference to the use cases and legacy data; diagrams; RDF samples; term specifications; recommendations for future modifications to BIBFRAME, where applicable; and lists of related topics out-of-scope of the current project but of interest for future research.
+- Application profiles, formalized in SHACL and accompanied by external ontologies and vocabularies, to support form and display interfaces in [VitroLib](https://github.com/ld4l-labs/vitrolib), an RDF cataloging tool under development in the associated [Linked Data for Libraries Labs](https://wiki.duraspace.org/pages/viewpage.action?pageId=77447730) project. Two application profiles are under development: art and rare monographs.
+- Experimental: SHACL validation profiles stored with the associated ontologies, which can be used as a basis for application profiles but whose primary purpose is to define expected implementation of the ontologies independent of any application. Some proof-of-concept application profiles are built on the validation SHACL in this way; when the profiles are complete we will evaluate the feasibility and usefulness of refactoring all the application profiles according to this model.
 
-Adoption and use of these ontologies will be determined by RBMS-BSC and ARLIS **[MELANIE: NOT SURE IF ARLIS SHOULD BE MENTIONED HERE, and if so whether
-it should also be mentioned in the first paragraph, and full name given, as for RBMS]** following initial development and assessment.
+The Art and Rare Materials BIBFRAME Ontology Extension is a product of the Andrew W. Mellon Foundation funded Linked Data for Production (LD4P) project, 2016-2018. See the [LD4P public wiki](https://wiki.duraspace.org/pages/viewpage.action?pageId=74515029) for more information about this project. 
+
+Adoption and use of these ontologies will be determined by RBMS-BSC and ARLIS CAC following initial development and assessment.
 
 News
 -------------

@@ -1,6 +1,7 @@
 @prefix aat: <http://vocab.getty.edu/aat/> .
 @prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
 @prefix award: <https://w3id.org/arm/award/ontology/0.1/> .
+@prefix activity: <https://w3id.org/arm/core/activity/0.1/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix core: <http://vivoweb.org/ontology/core#> .
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
@@ -49,7 +50,7 @@ raremat_monograph_form:WorkForm
   sh:property raremat_monograph_form:WorkForm_bf_language ;
   sh:property raremat_monograph_form:WorkForm_arm_hasStylePeriod ;
   sh:property raremat_monograph_form:WorkForm_bf_hasInstance ;
-  sh:property raremat_monograph_form:WorkForm_arm_hasActivity ;
+  sh:property raremat_monograph_form:WorkForm_activity_hasActivity ;
   sh:property raremat_monograph_form:WorkForm_bf_hasPart ;
   sh:property raremat_monograph_form:WorkForm_bf_partOf ;
   sh:property raremat_monograph_form:WorkForm_bf_hasExpression ;
@@ -146,14 +147,12 @@ raremat_monograph_form:WorkForm_bf_title sh:path bf:title ;
 
 # ///// PROPERTY SHAPES FOR WorkActivityPropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
-# TODO Update list of Activity when there are subclasses.
-
-raremat_monograph_form:WorkForm_arm_hasActivity sh:path arm:hasActivity ;
+raremat_monograph_form:WorkForm_activity_hasActivity sh:path activity:hasActivity ;
   sh:name "Agent activity or role" ;
   sh:order "0"^^xsd:decimal ;
   sh:group raremat_monograph_property_groups:WorkActivityPropertyGroup ;
   tosh:editWidget swa:NestedObjectEditor ;
-  sh:class arm:Activity .
+  sh:class ( activity:AuthorActivity activity:IllustratorActivity activity:EditorActivity activity:EditorActivity activity:TranslatorActivity activity:Activity ) .
   
   
 # ///// PROPERTY SHAPES FOR WorkSubjectGenreFormPropertyGroup START HERE. /////////////////////////////////////////////////////
@@ -711,7 +710,7 @@ raremat_monograph_form:InstanceForm
   sh:property raremat_monograph_form:InstanceForm_bf_title ;
   sh:property raremat_monograph_form:InstanceForm_bf_carrier ;
   sh:property raremat_monograph_form:InstanceForm_bf_genreForm ;
-  sh:property raremat_monograph_form:InstanceForm_arm_hasActivity ;
+  sh:property raremat_monograph_form:InstanceForm_activity_hasActivity ;
   sh:property raremat_monograph_form:InstanceForm_bf_responsibilityStatement ;
   sh:property raremat_monograph_form:InstanceForm_bf_provisionActivityStatement ;
   sh:property raremat_monograph_form:InstanceForm_bf_hasPart ;
@@ -783,15 +782,14 @@ raremat_monograph_form:InstanceForm_bf_genreForm_madsrdf_isMemberOfMADSScheme sh
 
 # ///// PROPERTY SHAPES FOR InstanceActivityPropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
-# TODO Update Activity List when there are subclasses.
 
-raremat_monograph_form:InstanceForm_arm_hasActivity sh:path arm:hasActivity ;
+raremat_monograph_form:InstanceForm_activity_hasActivity sh:path activity:hasActivity ;
   sh:name "Publisher, Distributor, etc. activity or role" ;
   sh:description "Think MARC field 260 or 264" ;
   sh:order "0"^^xsd:decimal ;
   sh:group raremat_monograph_property_groups:InstanceActivityPropertyGroup ;
   tosh:editWidget swa:NestedObjectEditor ;
-  sh:class arm:Activity .
+  sh:class ( activity:PublisherActivity activity:DistributorActivity activity:PrinterActivity activity:DesignerActivity activity:ManufacturerActivity activity:BinderActivity activity:Activity ).
 
 raremat_monograph_form:InstanceForm_bf_responsibilityStatement sh:path bf:responsibilityStatement ;
       sh:name "Responsibility statement" ;
@@ -1009,7 +1007,7 @@ raremat_monograph_form:ItemForm
   sh:targetClass bf:Item ;
   sh:property raremat_monograph_form:ItemForm_arm_hasPreferredTitle ;
   sh:property raremat_monograph_form:ItemForm_bf_title ;
-  sh:property raremat_monograph_form:ItemForm_raremat_hasActivity ;
+  sh:property raremat_monograph_form:ItemForm_activity_hasActivity ;
   sh:property raremat_monograph_form:ItemForm_bf_genreForm ;
   sh:property raremat_monograph_form:ItemForm_bf_hasPart ;
   sh:property raremat_monograph_form:ItemForm_bf_partOf ;
@@ -1058,13 +1056,13 @@ raremat_monograph_form:ItemForm_bf_title sh:path bf:title ;
 
 # TODO Update Activity List when there are subclasses, and custodial history is added to the form. 
 
-raremat_monograph_form:ItemForm_raremat_hasActivity sh:path arm:hasActivity ;
+raremat_monograph_form:ItemForm_activity_hasActivity sh:path activity:hasActivity ;
   sh:name "Agent activity and role for the item" ;
   sh:description "Item level agent activities" ;
   sh:order "0"^^xsd:decimal ;
   sh:group raremat_monograph_property_groups:ItemActivityPropertyGroup ;
   tosh:editWidget swa:NestedObjectEditor ;
-  sh:class arm:Activity .
+  sh:class activity:Activity .
   
 raremat_monograph_form:ItemForm_bf_genreForm sh:path bf:genreForm ;
   sh:class skos:Concept ;
@@ -1241,7 +1239,7 @@ raremat_monograph_form:ItemForm_bf_identifiedBy sh:path bf:identifiedBy ;
 raremat_monograph_form:MonographicWorkActivityForm
   rdf:type sh:NodeShape ;
   rdfs:label "Agent Activity" ;
-  sh:targetClass arm:Activity ;
+  sh:targetClass activity:Activity ;
   sh:property raremat_monograph_form:MonographicWorkActivityForm_rdf_type ;
   sh:property raremat_monograph_form:MonographicWorkActivityForm_bf_agent ;
   sh:property raremat_monograph_form:MonographicWorkActivityForm_bf_date ;
@@ -1272,7 +1270,7 @@ raremat_monograph_form:MonographicWorkActivityForm_bf_date sh:path bf:date;
       sh:name "Date" ;
       sh:nodeKind sh:Literal .
       
-raremat_monograph_form:MonographicWorkActivityForm_bf_place sh:path bf:place;
+raremat_monograph_form:MonographicWorkActivityForm_arm_atLocation sh:path arm:atLocation ;
       sh:order "3" ;
       sh:maxCount "1" ;
       sh:description "Location of the activity" ;
@@ -1286,7 +1284,7 @@ raremat_monograph_form:MonographicWorkActivityForm_bf_place sh:path bf:place;
 raremat_monograph_form:MonographicInstanceActivityForm
   rdf:type sh:NodeShape ;
   rdfs:label "Agent Activity" ;
-  sh:targetClass arm:Activity ;
+  sh:targetClass activity:Activity ;
   sh:property raremat_monograph_form:MonographicInstanceActivityForm_rdf_type ;
   sh:property raremat_monograph_form:MonographicInstanceActivityForm_bf_agent ;
   sh:property raremat_monograph_form:MonographicInstanceActivityForm_bf_date ;
@@ -1317,7 +1315,7 @@ raremat_monograph_form:MonographicInstanceActivityForm_bf_date sh:path bf:date;
       sh:name "Date" ;
       sh:nodeKind sh:Literal .
       
-raremat_monograph_form:MonographicInstanceActivityForm_bf_place sh:path bf:place;
+raremat_monograph_form:MonographicInstanceActivityForm_arm_atLocation sh:path arm:atLocation ;
       sh:order "3" ;
       sh:maxCount "1" ;
       sh:description "Location of the activity" ;
@@ -1535,7 +1533,7 @@ raremat_monograph_form:AwardReceiptForm
   sh:property raremat_monograph_form:AwardReceiptForm_rdf_type ;
   sh:property raremat_monograph_form:AwardReceiptForm_award_hasAward ;
   sh:property raremat_monograph_form:AwardReceiptForm_bf_date ;
-  sh:property raremat_monograph_form:AwardReceiptForm_arm_hasActivity ; 
+  sh:property raremat_monograph_form:AwardReceiptForm_activity_hasActivity ; 
   .  
 
 raremat_monograph_form:AwardReceiptForm_rdf_type sh:path rdf:type ;
@@ -1580,7 +1578,7 @@ raremat_monograph_form:AwardReceiptForm_bf_date sh:path bf:date ;
       sh:nodeKind sh:Literal ;
       sh:order "2"^^xsd:decimal .
       
-raremat_monograph_form:AwardReceiptForm_arm_hasActivity sh:path arm:hasActivity ;
+raremat_monograph_form:AwardReceiptForm_activity_hasActivity sh:path activity:hasActivity ;
       sh:description "Agent activities related to the Award Receipt" ;
       sh:name "Award receipt agent activity" ;
       sh:nodeKind sh:IRI ;
@@ -2055,7 +2053,7 @@ raremat_monograph_form:BibliographicCitationForm_rdf_value sh:path rdf:value ;
       sh:nodeKind sh:Literal ;
       sh:order "0"^^xsd:decimal .
 
-raremat_monograph_form:BibliographicCitationForm_bf_place sh:path bf:place ;
+raremat_monograph_form:BibliographicCitationForm_arm_atLocation sh:path arm:atLocation ;
       sh:or (
          [
            sh:class arm:Page ;
