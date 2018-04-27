@@ -1,0 +1,45 @@
+@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_binding/> .
+
+@prefix aat: <http://vocab.getty.edu/aat/> .
+@prefix arm: <https://w3id.org/arm/ontologies/core/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix gn: <http://www.geonames.org/ontology/> .
+@prefix gvp: <http://vocab.getty.edu/ontology#> .
+@prefix lingvo: <http://www.lingvoj.org/ontology#> .
+@prefix madsrdf: <http://www.loc.gov/standards/mads/rdf/v1.rdf#> .
+@prefix measurement: <https://w3id.org/arm/ontologies/measurement/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix raremat_monograph_base: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_base/> .
+@prefix arm_core_property_shapes: <https://w3id.org/arm/validation/shacl/arm_core_property_shapes/> .
+@prefix raremat_shacl_monograph: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_shacl_monograph/> .
+
+# Links Item to Exhibition and ExhibitionEvent
+:ItemForm_dcterms_hasPart_enclosure
+    sh:and (
+        arm_core_property_shapes:dcterms_hasPart
+        [
+            sh:class arm:Enclosure
+            # NON-VALIDATING   
+            sh:name "Enclosure" ; 
+            sh:description "A resource that encloses this item, such as a binding, dust jacket, frame, mount, etc." ;  
+            sh:group raremat_shacl_monograph:ItemHistoryAndProvenancePropertyGroup ;     
+            sh:order "0"^^xsd:decimal ;   
+            tosh:editWidget swa:NestedObjectEditor .       
+        
+        ]
+    ) ;
+    .
+ 
+# TODO - add list of types for enclosure (sh:in)
