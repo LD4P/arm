@@ -39,7 +39,6 @@
 raremat_monograph_form:WorkForm
   rdf:type sh:NodeShape ;
   rdfs:label "Monographic Text" ;
-  rdfs:subClassOf rdfs:Resource ;
   sh:targetClass bf:Text ;
   sh:property raremat_monograph_form:WorkForm_arm_hasPreferredTitle ;
   sh:property raremat_monograph_form:WorkForm_bf_title ;
@@ -705,7 +704,6 @@ raremat_monograph_form:WorkForm_bf_dataSource sh:path bf:dataSource ;
 raremat_monograph_form:InstanceForm
   rdf:type sh:NodeShape ;
   rdfs:label "Instance of Monographic Text" ;
-  rdfs:subClassOf rdfs:Resource ;
   sh:targetClass bf:Instance ;
   sh:property raremat_monograph_form:InstanceForm_arm_hasPreferredTitle ;
   sh:property raremat_monograph_form:InstanceForm_bf_title ;
@@ -1006,7 +1004,6 @@ raremat_monograph_form:InstanceForm_bf_identifiedBy sh:path bf:identifiedBy ;
 raremat_monograph_form:ItemForm
   rdf:type sh:NodeShape ;
   rdfs:label "Item of Monographic Text" ;
-  rdfs:subClassOf rdfs:Resource ;
   sh:targetClass bf:Item ;
   sh:property raremat_monograph_form:ItemForm_arm_hasPreferredTitle ;
   sh:property raremat_monograph_form:ItemForm_bf_title ;
@@ -1244,7 +1241,6 @@ raremat_monograph_form:MonographicWorkActivityForm
   rdf:type sh:NodeShape ;
   rdfs:label "Agent Activity" ;
   sh:targetClass arm:Activity ;
-  rdfs:subClassOf rdfs:Resource ;
   sh:property raremat_monograph_form:MonographicWorkActivityForm_rdf_type ;
   sh:property raremat_monograph_form:MonographicWorkActivityForm_bf_agent ;
   sh:property raremat_monograph_form:MonographicWorkActivityForm_bf_date ;
@@ -1290,7 +1286,6 @@ raremat_monograph_form:MonographicInstanceActivityForm
   rdf:type sh:NodeShape ;
   rdfs:label "Agent Activity" ;
   sh:targetClass arm:Activity ;
-  rdfs:subClassOf rdfs:Resource ;
   sh:property raremat_monograph_form:MonographicInstanceActivityForm_rdf_type ;
   sh:property raremat_monograph_form:MonographicInstanceActivityForm_bf_agent ;
   sh:property raremat_monograph_form:MonographicInstanceActivityForm_bf_date ;
@@ -1338,7 +1333,6 @@ raremat_monograph_form:MeasurementGroupForm
   rdfs:label "Measurement Group Form" ;
   sh:description "A group of measurements, e.g. length, width, height measuring the size of a resource would be one measurement group" ;
   sh:targetClass measure:MeasurementGroup ;
-  rdfs:subClassOf rdfs:Resource ;
   sh:property raremat_monograph_form:MeasurementGroupForm_dcterms_description ;
   sh:property raremat_monograph_form:MeasurementGroupForm_measure_hasMeasurement .
   
@@ -1366,7 +1360,6 @@ raremat_monograph_form:MeasurementForm
   rdf:type sh:NodeShape ;
   rdfs:label "Measurement form" ;
   sh:targetClass measure:Measurement ;
-  rdfs:subClassOf rdfs:Resource ;
   sh:property raremat_monograph_form:MeasurementForm_rdf_value .
   
     
@@ -1494,7 +1487,7 @@ raremat_monograph_form:MeasurementForm_measure_measures sh:path measure:measures
 raremat_monograph_form:NoteForm
   rdf:type sh:NodeShape ;
   rdfs:label "Note form" ;
-  rdfs:subClassOf rdfs:Resource ;
+
   sh:targetClass bf:Note ;
   sh:property raremat_monograph_form:NoteForm_rdf_type ;
   sh:property raremat_monograph_form:NoteForm_rdf_value ;
@@ -1517,7 +1510,6 @@ raremat_monograph_form:NoteForm_rdf_value sh:path rdf:value ;
 raremat_monograph_form:PaginationFoliationForm
   rdf:type sh:NodeShape ;
   rdfs:label "Pagination and foliation form" ;
-  rdfs:subClassOf rdfs:Resource ;
   sh:targetClass arm:PaginationFoliation ;
   sh:property raremat_monograph_form:NoteForm_rdf_value ;
   sh:property raremat_monograph_form:NoteForm_dcterms_description ;
@@ -1538,7 +1530,6 @@ raremat_monograph_form:NoteForm_dcterms_description sh:path dcterms:description 
 raremat_monograph_form:AwardReceiptForm
   rdf:type sh:NodeShape ;
   rdfs:label "Award receipt" ;
-  rdfs:subClassOf rdfs:Resource ;
   sh:targetClass award:AwardReceipt ;
   sh:property raremat_monograph_form:AwardReceiptForm_rdf_type ;
   sh:property raremat_monograph_form:AwardReceiptForm_award_hasAward ;
@@ -1610,7 +1601,6 @@ raremat_monograph_form:AwardReceiptForm_arm_hasActivity sh:path arm:hasActivity 
 raremat_monograph_form:AwardReceiptActivityForm
   rdf:type sh:NodeShape ;
   rdfs:label "Award receipt agent activity" ;
-  rdfs:subClassOf rdfs:Resource ;
   sh:or (
           [
             sh:targetClass award:AwardSelectorActivity ;
@@ -1641,7 +1631,6 @@ raremat_monograph_form:AwardReceiptActivityForm_bf_date sh:path bf:date ;
 raremat_monograph_form:AwardForm
   rdf:type sh:NodeShape ;
   rdfs:label "Award" ;
-  rdfs:subClassOf rdfs:Resource ;
   sh:targetClass vivo:Award ;
   sh:property raremat_monograph_form:AwardForm_rdfs_label .
 .
@@ -1657,7 +1646,6 @@ raremat_monograph_form:AwardForm_rdfs_label sh:path rdf:label ;
 raremat_monograph_form:WorkTitleForm
   rdf:type sh:NodeShape ;
   rdfs:label "Title form" ;
-  rdfs:subClassOf rdfs:Resource ;
   sh:targetClass bf:Title ;
   sh:property raremat_monograph_form:WorkTitleForm_rdf_type ;
   sh:property raremat_monograph_form:WorkTitleForm_rdf_value ;
@@ -1769,7 +1757,6 @@ raremat_monograph_form:WorkTitleForm_bf_note sh:path bf:note ;
 raremat_monograph_form:InstanceTitleForm
   rdf:type sh:NodeShape ;
   rdfs:label "Title form" ;
-  rdfs:subClassOf rdfs:Resource ;
   sh:targetClass bf:Title ;
   sh:property raremat_monograph_form:InstanceTitleForm_rdf_type ;
   sh:property raremat_monograph_form:InstanceTitleForm_rdf_value ;
@@ -1888,7 +1875,6 @@ raremat_monograph_form:InstanceTitleForm_bf_note sh:path bf:note ;
 raremat_monograph_form:ItemTitleForm
   rdf:type sh:NodeShape ;
   rdfs:label "Title form" ;
-  rdfs:subClassOf rdfs:Resource ;
   sh:targetClass bf:Title ;
   sh:property raremat_monograph_form:ItemTitleForm_rdf_type ;
   sh:property raremat_monograph_form:ItemTitleForm_rdf_value ;
@@ -2008,7 +1994,6 @@ raremat_monograph_form:ItemTitleForm_bf_note sh:path bf:note ;
 raremat_monograph_form:TitleNoteForm
   rdf:type sh:NodeShape ;
   rdfs:label "Title form" ;
-  rdfs:subClassOf rdfs:Resource ;
   sh:targetClass bf:Title ;
   sh:property raremat_monograph_form:TitleNoteForm_rdf_type ;
   sh:property raremat_monograph_form:TitleNoteForm_rdf_value ;
@@ -2172,7 +2157,6 @@ raremat_monograph_form:CarrierForm_arm_carries sh:path arm:carries ;
 raremat_monograph_form:SignatureStatementForm
   rdf:type sh:NodeShape ;
   rdfs:label "Signature statement form" ;
-  rdfs:subClassOf rdfs:Resource ;
   sh:targetClass arm:SignatureStatement ;
   sh:property raremat_monograph_form:SignatureStatementForm_rdf_value ;
   sh:property raremat_monograph_form:SignatureStatementForm_dcterms_description ;
@@ -2199,7 +2183,6 @@ raremat_monograph_form:SignatureStatementForm_dcterms_description sh:path dcterm
 raremat_monograph_form:MaterialForm
   rdf:type sh:NodeShape ;
   rdfs:label "Material form" ;
-  rdfs:subClassOf rdfs:Resource ;
   sh:targetClass <http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#E57> ;
   sh:property raremat_monograph_form:MaterialForm_crm_P2_has_type ;
   .
@@ -2232,7 +2215,6 @@ raremat_monograph_form:MaterialForm_crm_P2_has_type_skos_inScheme sh:path <crm:P
 raremat_monograph_form:FontForm
   rdf:type sh:NodeShape ;
   rdfs:label "Font form" ;
-  rdfs:subClassOf rdfs:Resource ;
   sh:targetClass arm:Font ;
   sh:property raremat_monograph_form:FontForm_arm_hasTypeface ;
   sh:property raremat_monograph_form:FontForm_measure_hasMeasurement ;
@@ -2266,7 +2248,6 @@ raremat_monograph_form:FontForm_arm_hasStyle sh:path arm:hasStyle ;
 raremat_monograph_form:HandwritingForm
   rdf:type sh:NodeShape ;
   rdfs:label "Handwriting form" ;
-  rdfs:subClassOf rdfs:Resource ;
   sh:targetClass arm:Handwriting ;
   sh:property raremat_monograph_form:HandwritingForm_arm_hasHandwritingType ;
   sh:property raremat_monograph_form::HandwritingForm_dcterms_description ;
