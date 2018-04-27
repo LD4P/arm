@@ -1,29 +1,30 @@
 #!/usr/bin/env python
-"""Fix up anchors in the bibliotek-o LODE ontology document so that terms resolve.
+"""Fix up anchors in the LODE vocabulary document so that terms resolve.
 
 The output of LODE is an HTML document with meaningless anchors which
-means that we can't readily make the ontology URIs nicely resolve the
+means that we can't readily make the vocabulary URIs nicely resolve the
 the appropriate definitions. This script goes through the HTML looking
-for terms in the ontology and rewriting anchors to be the local part of
+for terms in the vocabulary and rewriting anchors to be the local part of
 the URI.
 
-Note that if there are cases where one ontology term is described in multiple 
-places within the ontology, the rewrite of anchors takes the first occurrence
+Note that if there are cases where one vocabulary term is described in multiple 
+places within the vocabulary, the rewrite of anchors takes the first occurrence
 in the HTML as the anchor to change.
 
 Before running the script, change the prefix value to the versionIRI of the
-ontology: e.g., http://bibliotek-o.org/1.2/ontology for version 1.2.x.
+vocabulary: e.g., https://w3id.org/arm/core/vocabulary/arrangement/0.1/ for version 0.1.x.
 
 After running this script, change the href on the "Ontology Source" link
-to http://biblioteko-org/ontology.owl.
+to the prefix value, and change the link text to "Vocabulary source" .
 
-Simeon Warner - 2016-01-22
+Created: Simeon Warner - 2016-01-22
+Modified: Rebecca Younes - 2018-04-22
 """
 
 import re
 
-html = open('bibliotek-o.html','r').read()
-prefix = 'http://bibliotek-o.org/1.1/ontology/'
+html = open('temp.html','r').read()
+prefix = 'https://w3id.org/arm/core/vocabulary/arrangement/0.1/'
 
 ## Pass 1 - find anchors to change
 terms = {}
@@ -49,4 +50,4 @@ for term, anchor in terms.items():
     html = re.sub(' id="'+anchor+'"',' id="'+term+'"',html)
     html = re.sub(' href="#'+anchor+'"',' href="#'+term+'"',html)
 
-open('ontology.html','w').write(html)
+open('arrangement.html','w').write(html)
