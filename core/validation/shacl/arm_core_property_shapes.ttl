@@ -102,7 +102,7 @@
 :bf_note
     a sh:PropertyShape ;
     sh:path bf:note ;
-    # Possible note types depend on the form context; omit here
+    # Possible note types depend on the form context, so omit here. 
     sh:nodeKind sh:IRI ;
     .
     
@@ -125,7 +125,27 @@
     # Not required by the predicate (which is an RDF property) but this is how our models use it.
     sh:nodeKind sh:IRI ;
     .
-    
+
+# dcterms:hasPart shape for object type arm:Enclosure  
+:dcterms_hasPart_arm_Enclosure
+    sh:and (
+        :dcterms_hasPart   
+        [
+            # This assumes the object type is the same in all contexts. May need to modify.
+            sh:class [
+                sh:in (
+                    arm:Enclosure
+                    arm:Binding
+                    arm:DustJacket
+                    arm:SlipCase
+                    arm:WrapAroundBand
+                    arm:Wrapper         
+                )
+            ]
+        ]
+    )
+    .
+        
 :dcterms_isPartOf
     a sh:PropertyShape ;
     sh:path dcterms:isPartOf ;

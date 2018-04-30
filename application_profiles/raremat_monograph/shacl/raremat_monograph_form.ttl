@@ -6,7 +6,6 @@
 @prefix core: <http://vivoweb.org/ontology/core#> .
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix raremat_shapes_monograph_exhibition: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/> .
 @prefix gn: <http://www.geonames.org/ontology/> .
 @prefix gvp: <http://vocab.getty.edu/ontology#> .
 @prefix lingvo: <http://www.lingvoj.org/ontology#> .
@@ -14,8 +13,9 @@
 @prefix measure: <https://w3id.org/arm/measurement/ontology/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov> .
-@prefix raremat_monograph_form: <https://w3id.org/arm/application_profile/shacl/raremat_monograph_form/> .
+@prefix raremat_monograph_base: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_base/> .
 @prefix raremat_monograph_exhibition: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/> .
+@prefix raremat_monograph_form: <https://w3id.org/arm/application_profile/shacl/raremat_monograph_form/> .
 @prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profile/shacl/raremat_monograph_property_groups/> .
 @prefix rdau: <http://rdaregistry.info/Elements/u/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -792,7 +792,9 @@ raremat_monograph_form:InstanceForm
   sh:property raremat_monograph_form:InstanceForm_arm_hasCitation ;
   sh:property raremat_monograph_form:InstanceForm_award_receives ;
   sh:property raremat_monograph_form:InstanceForm_bf_note ;
-  sh:property raremat_monograph_form:InstanceForm_bf_identifiedBy .
+  sh:property raremat_monograph_form:InstanceForm_bf_identifiedBy ;
+  sh:property raremat_monograph_base:Form_dcterms_hasPart_arm_Enclosure ;
+  .
 
 
 raremat_monograph_form:InstanceForm_arm_hasPreferredTitle sh:path arm:hasPreferredTitle ;
@@ -1139,7 +1141,9 @@ raremat_monograph_form:ItemForm
   sh:property raremat_monograph_form:ItemForm_award_receives ;
   sh:property raremat_monograph_form:ItemForm_bf_note ;
   sh:property raremat_monograph_form:ItemForm_bf_identifiedBy ;
-  sh:property raremat_shapes_monograph_exhibition:ItemForm_arm_hasExhibition .
+  # sh:property raremat_shapes_monograph_exhibition:ItemForm_arm_hasExhibition ;
+  sh:property raremat_monograph_base:Form_dcterms_hasPart_arm_Enclosure ;
+  . 
 
 raremat_monograph_form:ItemForm_rdf_type sh:path rdf:type ;
       sh:order "0"^^xsd:decimal ;
@@ -2451,14 +2455,14 @@ raremat_monograph_form:MarkingForm
   .
   
 raremat_monograph_form:MarkingForm_rdf_type sh:path rdf:type ;
-      sh:order "0" ;
+      sh:order "0"^^xsd:decimal ;
       sh:description "Marking type" ;
-      sh:name "Agent role" ;
+      sh:name "Marking type" ;
       sh:in ( arm:Marking arm:Autograph arm:BindersTicket arm:Label arm:Seal arm:Stamp arm:Watermark ) .
       
 raremat_monograph_form:MarkingForm_rdf_value sh:path rdf:value ;
       sh:description "Alpha-numeric value of the marking." ;
-      sh:name "Numeric value" ;
+      sh:name "Alpha-numeric value" ;
       sh:nodeKind sh:Literal ;
       sh:order "1"^^xsd:decimal .
       

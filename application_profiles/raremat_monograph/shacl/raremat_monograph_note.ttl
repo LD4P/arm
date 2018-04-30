@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_base/> .
+@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_note/> .
 
 @prefix aat: <http://vocab.getty.edu/aat/> .
 @prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
@@ -22,17 +22,12 @@
 @prefix arm_core_property_shapes: <https://w3id.org/arm/validation/shacl/arm_core_property_shapes/> .
 
 #
-# ///// GENERAL RAREMAT MONOGRAPH UI SHAPES - MAY BE EXTENDED BY OTHER RAREMAT MONOGRAPH UI SHAPES ///// #
-#
-
-#
-# NOTE FORM
-#
-# TODO This is very similar to raremat_shapes_monograph:NoteForm and its
+# TODO This is very similar to raremat_monograph_form:NoteForm and its
 # properties, with some differences. If differences can be resolved, use 
 # that instead.
 #
-
+# Also likely extensible to other application profiles.
+#
 
 :NoteForm
     a sh:NodeShape ;
@@ -53,4 +48,3 @@
         ]
     ) ; 
     . 
-   

@@ -1,0 +1,115 @@
+@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_marking/> .
+
+@prefix aat: <http://vocab.getty.edu/aat/> .
+@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix gn: <http://www.geonames.org/ontology/> .
+@prefix gvp: <http://www.geonames.org/ontology/> .
+@prefix lingvo: <http://www.lingvoj.org/ontology#> .
+@prefix madsrdf: <http://www.loc.gov/standards/mads/rdf/v1.rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix arm_core_property_shapes: <https://w3id.org/arm/validation/shacl/arm_core_property_shapes/> .
+
+#
+# TODO Taken from raremat_monograph_form but extended to all subject types;
+# currently used in raremat_monograph_enclosure.
+#
+
+:MarkingForm
+    rdf:type sh:NodeShape ;
+    rdfs:label "Marking form" ;
+    sh:targetClass arm:Marking ;
+    sh:property :MarkingForm_rdf_type ;
+    sh:property :MarkingForm_rdf_value ;
+    # sh:property :NoteForm ;
+    sh:property :MarkingForm_activity_hasActivity ;
+  .
+  
+:MarkingForm_rdf_type 
+    sh:and (
+        arm_core_property_shapes:rdf_type
+        [
+            sh:in ( arm:Marking arm:Autograph arm:BindersTicket arm:Label arm:Seal arm:Stamp arm:Watermark ) ;
+            # NON-VALIDATING
+            sh:name "Marking type" ;
+            sh:description "Marking type" ;
+            sh:order "0"^^xsd:decimal ;
+        ]
+    );
+    .
+
+      
+:MarkingForm_rdf_value 
+    sh:and (
+        arm_core_property_shapes:rdf_value
+        [
+            # NON-VALIDATING
+            sh:name "Textual value of the marking" ;
+            sh:description "Textual value" ;
+            sh:order "0"^^xsd:decimal ;
+        ]
+    );
+    .
+      
+sh:property raremat_monograph_form:MarkingForm_arm_hasActivity
+  sh:name "Marking Agent" ;
+  sh:order "2"^^xsd:decimal ;
+  tosh:editWidget swa:NestedObjectEditor ;
+  sh:class activity:CreatorActivity .
+
+# /////// Marking Activity FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+raremat_monograph_form:MarkingActivityForm
+  rdf:type sh:NodeShape ;
+  rdfs:label "Marking Creator" ;
+  sh:targetClass activity:CreatorActivity ;
+  sh:property raremat_monograph_form:MarkingActivityForm_bf_agent ;
+  sh:property raremat_monograph_form:MarkingActivityForm_bf_date ;
+  sh:property raremat_monograph_form:MarkingActivityForm_bf_place ;
+  sh:property raremat_monograph_form:MarkingActivityForm_activity_isActivityOf ;
+  .
+
+raremat_monograph_form:MarkingActivityForm_bf_agent sh:path bf:agent ;
+      sh:order "0" ;
+      sh:maxCount "1" ;
+      sh:class bf:Agent ;
+      sh:description "Agent" ;
+      sh:name "Agent" ;
+      sh:nodeKind sh:IRI .
+
+raremat_monograph_form:MarkingActivityForm_bf_date sh:path bf:date;
+      sh:order "1" ;
+      sh:maxCount "1" ;
+      sh:description "Date of the activity. Recommended to use EDTF format" ;
+      sh:name "Date" ;
+      sh:nodeKind sh:Literal .
+      
+raremat_monograph_form:MarkingActivityForm_arm_atLocation sh:path arm:atLocation ;
+      sh:order "2" ;
+      sh:maxCount "1" ;
+      sh:description "Location of the activity" ;
+      sh:name "Location" ;
+      sh:class gn:Feature ;
+      sh:nodeKind sh:IRI ;
+      raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService .
+      
+raremat_monograph_form:MarkingActivityForm_activity_isActivityOf sh:path activity:isActivityOf
+      sh:order "3" ;
+      sh:maxCount "1" ;
+      sh:description "Related Marking" ;
+      sh:name "Location" ;
+      sh:class arm:Marking ;
+      sh:nodeKind sh:IRI .
+
+   

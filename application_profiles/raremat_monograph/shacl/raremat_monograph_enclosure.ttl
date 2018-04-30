@@ -22,24 +22,29 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 @prefix raremat_monograph_base: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_base/> .
-@prefix arm_core_property_shapes: <https://w3id.org/arm/validation/shacl/arm_core_property_shapes/> .
-@prefix raremat_shacl_monograph: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_shacl_monograph/> .
+@prefix arm_core_property_shapes: <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
+@prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/> .
 
-# Links Item to Exhibition and ExhibitionEvent
-:ItemForm_dcterms_hasPart_enclosure
+
+# Links Item or Instance to Enclosure
+:Form_dcterms_hasPart_arm_Enclosure
     sh:and (
-        arm_core_property_shapes:dcterms_hasPart
+        arm_core_property_shapes:dcterms_hasPart_arm_Enclosure
         [
-            sh:class arm:Enclosure
+            sh:class arm:Enclosure ;
             # NON-VALIDATING   
             sh:name "Enclosure" ; 
-            sh:description "A resource that encloses this item, such as a binding, dust jacket, frame, mount, etc." ;  
-            sh:group raremat_shacl_monograph:ItemHistoryAndProvenancePropertyGroup ;     
+            sh:description "A resource that encloses this resource, such as a binding, dust jacket, slip case, wrap around band, or wrapper on a book." ;  
+            sh:group raremat_monograph_form:ItemHistoryAndProvenancePropertyGroup ;     
             sh:order "0"^^xsd:decimal ;   
-            tosh:editWidget swa:NestedObjectEditor .       
-        
+            tosh:editWidget swa:NestedObjectEditor ;             
         ]
     ) ;
     .
  
-# TODO - add list of types for enclosure (sh:in)
+# TODO
+# Enclosure properties: arm:markedBy, arm:hasActivity, crm:P2_has_type, arm:hasMaterial, bf:note, dcterms:hasPart
+# In raremat_monograph_base, define general ActivityForm, MarkingForm, MaterialForm, NoteForm (done)
+# Inverse properties for editing on enclosure page
+
+# :EnclosureForm

@@ -22,8 +22,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 @prefix raremat_monograph_base: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_base/> .
-@prefix arm_core_property_shapes: <https://w3id.org/arm/validation/shacl/arm_core_property_shapes/> .
-@prefix raremat_shacl_monograph: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_shacl_monograph/> .
+@prefix arm_core_property_shapes: <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
+@prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/> .
 
 #
 # TODO
@@ -42,7 +42,7 @@
 # Lookup service
 # - How to indicate what to look up?
 # TODO Specify lookup sources via restriction PropertyShapes: see for example
-# raremat_shacl_monograph:MaterialForm_crm_P2_has_type_gvp_broader_Extended 
+# raremat_monograph_form:MaterialForm_crm_P2_has_type_gvp_broader_Extended 
 #
 
 
@@ -55,7 +55,7 @@
     # NON-VALIDATING   
     sh:name "Exhibition" ; 
     sh:description "An exhibition this item was displayed in." ;  
-    sh:group raremat_shacl_monograph:ItemHistoryAndProvenancePropertyGroup ;     
+    sh:group raremat_monograph_form:ItemHistoryAndProvenancePropertyGroup ;     
     sh:order "0"^^xsd:decimal ;   
     tosh:editWidget swa:NestedObjectEditor .
     
@@ -94,7 +94,7 @@
             sh:order "0"^^xsd:decimal ; 
             tosh:editWidget swa:NestedObjectEditor ;
             # TODO How do we indicate what to look up? In this case it's LC subject authorities
-            raremat_shacl_monograph:lookup raremat_shacl_monograph:LD4LookupService ;
+            raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
         ]
     ) .
     
@@ -124,7 +124,7 @@
             sh:order "0"^^xsd:decimal ; 
             tosh:editWidget swa:NestedObjectEditor ;
             # TODO How do we indicate what to look up? In this case it's LC subject authorities
-            raremat_shacl_monograph:lookup raremat_shacl_monograph:LD4LookupService ;
+            raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
         ]
     ) .
     
@@ -198,7 +198,7 @@
             sh:order "0"^^xsd:decimal ;   
             tosh:editWidget swa:NestedObjectEditor ;
             # TODO How do we indicate what to look up? In this case it's LC subject authorities
-            raremat_shacl_monograph:lookup raremat_shacl_monograph:LD4LookupService ;
+            raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
         ]
     ) .
  
@@ -326,8 +326,8 @@
             sh:group :ExhibitionEventActivityPropertyGroup ; 
             sh:order "0"^^xsd:decimal ;
             # TODO Specify lookup sources via restriction PropertyShapes: see for example
-            # raremat_shacl_monograph:MaterialForm_crm_P2_has_type_gvp_broader_Extended 
-            raremat_shacl_monograph:lookup raremat_shacl_monograph:LD4LookupService ;
+            # raremat_monograph_form:MaterialForm_crm_P2_has_type_gvp_broader_Extended 
+            raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
             tosh:editWidget swa:NestedObjectEditor ;
         ]
     ) .  
@@ -343,8 +343,8 @@
             sh:group :ExhibitionEventActivityPropertyGroup ; 
             sh:order "0"^^xsd:decimal ; 
             # TODO Specify lookup sources via restriction PropertyShapes: see for example
-            # raremat_shacl_monograph:MaterialForm_crm_P2_has_type_gvp_broader_Extended 
-            raremat_shacl_monograph:lookup raremat_shacl_monograph:LD4LookupService ;
+            # raremat_monograph_form:MaterialForm_crm_P2_has_type_gvp_broader_Extended 
+            raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
             tosh:editWidget swa:NestedObjectEditor ;
         ]
     ) . 
