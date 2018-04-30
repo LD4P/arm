@@ -85,7 +85,13 @@ raremat_monograph_form:WorkForm
   sh:property raremat_monograph_form:WorkForm_rdau_P60248 ;
   sh:property raremat_monograph_form:WorkForm_rdau_P60250 ;
   sh:property raremat_monograph_form:WorkForm_rdau_P60260 ;
+  sh:property raremat_monograph_form:WorkForm_rdau_P60120 ;
+  sh:property raremat_monograph_form:WorkForm_rdau_P60204 ;
+  sh:property raremat_monograph_form:WorkForm_rdau_P60211 ;
+  sh:property raremat_monograph_form:WorkForm_rdau_P60212 ;
+  sh:property raremat_monograph_form:WorkForm_rdau_P60215 ;
   sh:property raremat_monograph_form:WorkForm_rdau_P60275 ;
+  sh:property raremat_monograph_form:WorkForm_rdau_P60261 ;
   sh:property raremat_monograph_form:WorkForm_rdau_P60276 ;
   sh:property raremat_monograph_form:WorkForm_rdau_P60277 ;
   sh:property raremat_monograph_form:WorkForm_rdau_P60278 ;
@@ -517,10 +523,46 @@ raremat_monograph_form:WorkForm_rdau_P60260 sh:path <http://rdaregistry.info/Ele
       sh:name "Is adapted as" ;
       sh:nodeKind sh:IRI .
       
+raremat_monograph_form:WorkForm_rdau_P60120 sh:path <http://rdaregistry.info/Elements/u/P60120> ;
+      sh:class bf:Work ;
+      sh:group raremat_monograph_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "Is remade as" ;
+      sh:nodeKind sh:IRI .
+      
+raremat_monograph_form:WorkForm_rdau_P60204 sh:path <http://rdaregistry.info/Elements/u/P60204> ;
+      sh:class bf:Work ;
+      sh:group raremat_monograph_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "Is augmented by" ;
+      sh:nodeKind sh:IRI .
+      
+raremat_monograph_form:WorkForm_rdau_P60211 sh:path <http://rdaregistry.info/Elements/u/P60211> ;
+      sh:class bf:Work ;
+      sh:group raremat_monograph_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "Is reviewed in" ;
+      sh:nodeKind sh:IRI .
+      
+raremat_monograph_form:WorkForm_rdau_P60212 sh:path <http://rdaregistry.info/Elements/u/P60212> ;
+      sh:class bf:Work ;
+      sh:group raremat_monograph_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "Is critiqued in" ;
+      sh:nodeKind sh:IRI .
+      
+raremat_monograph_form:WorkForm_rdau_P60215 sh:path <http://rdaregistry.info/Elements/u/P60215> ;
+      sh:class bf:Work ;
+      sh:group raremat_monograph_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "Is described in" ;
+      sh:nodeKind sh:IRI .
+      
 raremat_monograph_form:WorkForm_rdau_P60275 sh:path <http://rdaregistry.info/Elements/u/P60275> ;
       sh:class bf:Work ;
       sh:group raremat_monograph_property_groups:WorkToWorkPropertyGroup ;
       sh:name "Is abridged as" ;
+      sh:nodeKind sh:IRI .
+      
+raremat_monograph_form:WorkForm_rdau_P60261 sh:path <http://rdaregistry.info/Elements/u/P60261> ;
+      sh:class bf:Work ;
+      sh:group raremat_monograph_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "Is preceded by" ;
       sh:nodeKind sh:IRI .
       
 raremat_monograph_form:WorkForm_rdau_P60276 sh:path <http://rdaregistry.info/Elements/u/P60276> ;
@@ -528,7 +570,7 @@ raremat_monograph_form:WorkForm_rdau_P60276 sh:path <http://rdaregistry.info/Ele
       sh:group raremat_monograph_property_groups:WorkToWorkPropertyGroup ;
       sh:name "Is continuation in part of" ;
       sh:nodeKind sh:IRI .
-      
+           
 raremat_monograph_form:WorkForm_rdau_P60277 sh:path <http://rdaregistry.info/Elements/u/P60277> ;
       sh:class bf:Work ;
       sh:group raremat_monograph_property_groups:WorkToWorkPropertyGroup ;
