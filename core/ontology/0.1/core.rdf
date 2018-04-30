@@ -218,7 +218,7 @@
     <owl:Class rdf:about="https://w3id.org/arm/core/ontology/0.1/InaccuracyNote">
         <rdfs:label xml:lang="en">Inaccuracy note</rdfs:label>
         <skos:definition xml:lang="en">A note explaining an unintentional or intentional inaccuracy, misspelling, or misprint relating to a specific resource.</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/note"/>
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
         <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
