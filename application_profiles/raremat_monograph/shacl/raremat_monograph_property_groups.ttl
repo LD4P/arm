@@ -20,7 +20,7 @@
 @prefix vivo: <http://vivoweb.org/ontology/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profile/shacl/raremat_monograph_property_groups/> . .
+@prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profile/shacl/raremat_monograph_property_groups/> . 
 
 #
 # ////////// PROPERTY GROUP DEFINITIONS ////////// #
@@ -112,6 +112,11 @@ raremat_monograph_property_groups:InstancePartsAccompanimentsPropertyGroup
 raremat_monograph_property_groups:InstancePaginationFoliationPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Instance Pagination and Foliation" ;
+  sh:order "0"^^xsd:decimal .
+  
+raremat_monograph_property_groups:InstancePhysicalDescriptionPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Instance physical description" ;
   sh:order "0"^^xsd:decimal .
 
 raremat_monograph_property_groups:InstanceMeasurementGroupPropertyGroup  
@@ -231,4 +236,26 @@ rdf:type sh:PropertyGroup ;
 raremat_monograph_property_groups:ItemHistoryAndProvenancePropertyGroup
     a sh:PropertyGroup ;
     rdfs:label "Item history and provenance" ;
+    sh:order "0"^^xsd:decimal .
+
+######## EXPERIMENTAL - combine property groups for multiple types ########
+
+#
+# This approach enables sharing PropertyShapes across entity types, since
+# the PropertyShapes specify the property group. If this can't work because
+# the label, order, etc. must be different depending on subject type, then 
+# we will need distinct property groups with and-ed PropertyShapes to add
+# the property group for the composite PropertyShape.
+
+# Physical description for any subject type (property display depends on
+# entity type)
+raremat_monograph_property_groups:PhysicalDescriptionPropertyGroup
+    a sh:PropertyGroup ;
+    rdfs:label "Physical description" ;
+    sh:order "0"^^xsd:decimal .
+    
+# Activity for any subject type (property display depends on entity type)
+raremat_monograph_property_groups:ActivityPropertyGroup
+    a sh:PropertyGroup ;
+    rdfs:label "Agent" ;
     sh:order "0"^^xsd:decimal .
