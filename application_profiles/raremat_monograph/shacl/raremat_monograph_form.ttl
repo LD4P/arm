@@ -1003,8 +1003,7 @@ raremat_monograph_form:InstanceForm_arm_writtenIn sh:path arm:writtenIn ;
       tosh:editWidget swa:NestedObjectEditor .
       
 raremat_monograph_form:InstanceForm_arm_markedBy sh:path arm:markedBy ;
-      sh:or (
-         
+      sh:or (        
          [
            sh:class arm:Marking ;
          ]
@@ -2454,19 +2453,22 @@ raremat_monograph_form:MarkingForm
   sh:property raremat_monograph_form:MarkingForm_activity_hasActivity ;
   .
   
-raremat_monograph_form:MarkingForm_rdf_type sh:path rdf:type ;
-      sh:order "0"^^xsd:decimal ;
-      sh:description "Marking type" ;
-      sh:name "Marking type" ;
-      sh:in ( arm:Marking arm:Autograph arm:BindersTicket arm:Label arm:Seal arm:Stamp arm:Watermark ) .
+raremat_monograph_form:MarkingForm_rdf_type 
+  sh:path rdf:type ;
+  sh:order "0"^^xsd:decimal ;
+  sh:description "Marking type" ;
+  sh:name "Marking type" ;
+  sh:in ( arm:Marking arm:Autograph arm:BindersTicket arm:Inscription arm:Label arm:Seal arm:Stamp arm:Watermark ) .
       
-raremat_monograph_form:MarkingForm_rdf_value sh:path rdf:value ;
-      sh:description "Alpha-numeric value of the marking." ;
-      sh:name "Alpha-numeric value" ;
-      sh:nodeKind sh:Literal ;
-      sh:order "1"^^xsd:decimal .
+raremat_monograph_form:MarkingForm_rdf_value 
+  sh:path rdf:value ;
+  sh:description "Alpha-numeric value of the marking." ;
+  sh:name "Alpha-numeric value" ;
+  sh:nodeKind sh:Literal ;
+  sh:order "1"^^xsd:decimal .
       
-sh:property raremat_monograph_form:MarkingForm_arm_hasActivity
+raremat_monograph_form:MarkingForm_arm_hasActivity
+  sh:property arm:hasActivity ;
   sh:name "Marking Agent" ;
   sh:order "2"^^xsd:decimal ;
   tosh:editWidget swa:NestedObjectEditor ;
