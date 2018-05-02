@@ -1,29 +1,27 @@
-@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_binding/> .
-
-@prefix aat: <http://vocab.getty.edu/aat/> .
-@prefix arm: <https://w3id.org/arm/ontologies/core/> .
+@prefix activity: <https://w3id.org/arm/core/activity/0.1/> .
+@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix gn: <http://www.geonames.org/ontology/> .
-@prefix gvp: <http://vocab.getty.edu/ontology#> .
-@prefix lingvo: <http://www.lingvoj.org/ontology#> .
-@prefix madsrdf: <http://www.loc.gov/standards/mads/rdf/v1.rdf#> .
-@prefix measurement: <https://w3id.org/arm/ontologies/measurement/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix prov: <http://www.w3.org/ns/prov> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <http://schema.org/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix swa: <http://topbraid.org/swa#> .
 @prefix tosh: <http://topbraid.org/tosh#> .
-@prefix vivo: <http://vivoweb.org/ontology/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix raremat_monograph_base: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_base/> .
+@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_binding/> .
 @prefix arm_core_property_shapes: <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
+
+# TODO Resolve this namespace with that defined in the file.
 @prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/> .
+
+@prefix raremat_monograph_marking: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_marking/> .
+@prefix raremat_monograph_note: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_note/> .
+
+# TODO Resolve this namespace with that defined in the file.. 
+@prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/> . 
 
 
 # Links Item or Instance to Enclosure
@@ -35,7 +33,7 @@
             # NON-VALIDATING   
             sh:name "Enclosure" ; 
             sh:description "A resource that encloses this resource, such as a binding, dust jacket, slip case, wrap around band, or wrapper on a book." ;  
-            sh:group raremat_monograph_form:ItemHistoryAndProvenancePropertyGroup ;     
+            sh:group raremat_monograph_property_groups:PhysicalDescriptionPropertyGroup ;   
             sh:order "0"^^xsd:decimal ;   
             tosh:editWidget swa:NestedObjectEditor ;             
         ]
@@ -44,7 +42,18 @@
  
 # TODO
 # Enclosure properties: arm:markedBy, arm:hasActivity, crm:P2_has_type, arm:hasMaterial, bf:note, dcterms:hasPart
-# In raremat_monograph_base, define general ActivityForm, MarkingForm, MaterialForm, NoteForm (done)
+# Define general ActivityForm, MarkingForm, MaterialForm, NoteForm (done)
 # Inverse properties for editing on enclosure page
 
-# :EnclosureForm
+# BUT this doesn't work because there are two separate property groups for item and instance, e.g., 
+# ItemPhysicalDescriptionPropertyGroup and InstancePhysicalDescriptionPropertyGroup
+# TODO Will need to differentiate item and instance in order to make use of the way raremat_monograph_form 
+# assigns property groups, etc.
+
+:EnclosureForm
+    a sh:NodeShape ;
+    rdfs:label "Enclosure" ;
+    sh:targetClass arm:Enclosure ;
+    sh:property
+        raremat_monograph_form:arm ;
+    .

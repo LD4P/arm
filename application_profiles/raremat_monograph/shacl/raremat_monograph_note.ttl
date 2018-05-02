@@ -1,40 +1,83 @@
-@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_note/> .
-
-@prefix aat: <http://vocab.getty.edu/aat/> .
+@prefix activity: <https://w3id.org/arm/core/activity/0.1/> .
 @prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix gn: <http://www.geonames.org/ontology/> .
-@prefix gvp: <http://www.geonames.org/ontology/> .
-@prefix lingvo: <http://www.lingvoj.org/ontology#> .
-@prefix madsrdf: <http://www.loc.gov/standards/mads/rdf/v1.rdf#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix prov: <http://www.w3.org/ns/prov> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <http://schema.org/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix swa: <http://topbraid.org/swa#> .
 @prefix tosh: <http://topbraid.org/tosh#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_note/> .
 @prefix arm_core_property_shapes: <https://w3id.org/arm/validation/shacl/arm_core_property_shapes/> .
 
 #
 # TODO This is very similar to raremat_monograph_form:NoteForm and its
-# properties, with some differences. If differences can be resolved, use 
-# that instead.
+# properties, with some differences. Try to resolve differences and combine. 
 #
 # Also likely extensible to other application profiles.
 #
 
-:NoteForm
+:NoteForm_all_types
     a sh:NodeShape ;
     rdfs:label "Note form" ;
     sh:targetClass bf:Note ;
-    sh:property :NoteForm_rdf_value ;
+    sh:property 
+        :NoteForm_rdf_value ,
+        :NoteForm_rdf_type_all ;
     .  
+
+# Use when form should offer all note types
+:NoteForm_rdf_type_all 
+    sh:and (
+        arm_core_property_shapes:rdf_type
+        [
+            sh:in (
+                arm:CaptionNote
+                arm:ContentsNote
+                arm:DescriptiveNote
+                arm:InaccuracyNote
+                arm:LimitationNote
+                arm:RelatedMaterialNote
+                arm:SubjectNote
+                arm:SummaryNote
+                arm:SupplementaryContentNote   
+                bf:Note
+            );
+            # NON-VALIDATING
+            sh:name "Note type" ;
+            sh:description "Type of note." ;
+        
+        ]   
+    ) ;
+    .
+  
+# Use when subject of note should specify particular note types; the 
+# invoking form will specify note type options.   
+:NoteForm_rdf_type_specific 
+    sh:and (
+        arm_core_property_shapes:rdf_type
+        [
+            # NON-VALIDATING
+            sh:name "Note type" ;
+            sh:description "Type of note." ;
+        
+        ]   
+    ) ;
+    .
+    
+:NoteForm_specific_types
+    a sh:NodeShape ;
+    rdfs:label "Note form" ;
+    sh:targetClass bf:Note ;
+    sh:property 
+        :NoteForm_rdf_value ,
+        :NoteForm_rdf_type_specific ;
+    .
+    
 
 :NoteForm_rdf_value 
     sh:and (

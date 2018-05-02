@@ -1,24 +1,17 @@
-@prefix : <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
-
-@prefix aat: <http://vocab.getty.edu/aat/> .
+@prefix activity: <https://w3id.org/arm/core/activity/0.1/> .
 @prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix edtf: <http://id.loc.gov/datatypes/edtf/> .
-@prefix gn: <http://www.geonames.org/ontology/> .
-@prefix gvp: <http://vocab.getty.edu/ontology#> .
-@prefix lingvo: <http://www.lingvoj.org/ontology#> .
-@prefix madsrdf: <http://www.loc.gov/standards/mads/rdf/v1.rdf#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix prov: <http://www.w3.org/ns/prov> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <http://schema.org/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix swa: <http://topbraid.org/swa#> .
 @prefix tosh: <http://topbraid.org/tosh#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix : <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
 
 #
 # ///// ARM CORE PROPERTY SHAPES - MAY BE EXTENDED BY UI SHAPES ///// #
@@ -32,11 +25,23 @@
 # - Should dates be typed edtf:EDTF, or is it just recommended?
 #
 
+:activity_hasActivity 
+    a sh:PropertyShape ;
+    sh:path arm:hasActivity ;
+    sh:nodeKind sh:IRI ; 
+    sh:class arm:Activity ;
+    .
+
+:activity_isActivityOf 
+    a sh:PropertyShape ;
+    sh:path activity:isActivityOf ;
+    sh:nodeKind sh:IRI ; 
+    .   
+    
 :arm_atLocation
     a sh:PropertyShape ;
     sh:path arm:atLocation ;
     sh:nodeKind sh:IRI ;
-    sh:class gn:Feature ;
     .
     
 :arm_covers
@@ -52,13 +57,6 @@
     # sh:datatype edtf:EDTF ; 
     sh:maxCount 1 ;
     .
-    
-:arm_hasActivity 
-    a sh:PropertyShape ;
-    sh:path arm:hasActivity ;
-    sh:nodeKind sh:IRI ; 
-    sh:class arm:Activity ;
-    .
 
 :arm_hasArrangement 
     a sh:PropertyShape ;
@@ -66,7 +64,25 @@
     sh:nodeKind sh:IRI ; 
     sh:class arm:Arrangement ;
     .
-    
+      
+:arm_markedBy 
+    a sh:PropertyShape ;
+    sh:path arm:markedBy ;
+    sh:nodeKind sh:IRI ; 
+    # Assumes the object type options are the same in all contexts. 
+    # Remove if the assumption proves false.
+    sh:class [
+        sh:in (
+            arm:Enclosure
+            arm:Binding
+            arm:DustJacket
+            arm:SlipCase
+            arm:WrapAroundBand
+            arm:Wrapper         
+        )
+    ]
+    .
+        
 :arm_startDate 
     a sh:PropertyShape ;
     sh:path arm:startDate ;
@@ -89,6 +105,7 @@
     a sh:PropertyShape ;
     sh:path bf:date ;
     sh:nodeKind sh:Literal ;
+    # Recommended but not required
     # sh:datatype edtf:EDTF ;
     .
     
@@ -102,8 +119,8 @@
 :bf_note
     a sh:PropertyShape ;
     sh:path bf:note ;
-    # Possible note types depend on the form context, so omit here. 
     sh:nodeKind sh:IRI ;
+    # sh:class determined by note context, so omit here  
     .
     
 :bf_subject
@@ -131,7 +148,8 @@
     sh:and (
         :dcterms_hasPart   
         [
-            # This assumes the object type is the same in all contexts. May need to modify.
+            # Assumes the object type options are the same in all contexts. 
+            # Remove if the assumption proves false.
             sh:class [
                 sh:in (
                     arm:Enclosure

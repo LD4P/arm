@@ -1,0 +1,80 @@
+@prefix activity: <https://w3id.org/arm/core/activity/0.1/> .
+@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix gn: <http://www.geonames.org/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_activity/> .
+@prefix arm_core_property_shapes: <https://w3id.org/arm/validation/shacl/arm_core_property_shapes/> .
+
+# TODO Resolve these namespaces with those defined in the respective files.
+@prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_form> . 
+@prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/> . 
+
+:ActivityForm
+    a sh:NodeShape ;
+    rdfs:label "Related Agent and Role" ;
+    sh:property
+        # How would this work in a nested form without creating a recursive
+        # loop?
+        # :ActivityForm_activity_isActivityOf ,
+        :ActivityForm_bf_agent ,
+        :ActivityForm_bf_date ,
+        :ActivityForm_arm_atLocation ;   
+    .
+
+:ActivityForm_bf_agent 
+    sh:and (
+        arm_core_property_shapes:bf_agent
+        [
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ; 
+            sh:class bf:Agent ;
+            # NON-VALIDATING
+            sh:name "Agent" ;
+            sh:description "Agent" ;
+            sh:order "0"^^xsd:decimal ;
+            # Currently we don't have a general ActivityPropertyGroup, but
+            # only per-type groups (WorkActivityPropertyGroup, etc.). Check
+            # on possibility of combining the groups regardless of subject
+            # type. Otherwise, create another PropertyShape that ands this
+            # one and adds the specific property group.
+            # sh:group raremat_monograph_property_groups:ActivityPropertyGroup ;           
+        ]
+    ) ;
+    .
+
+:ActivityForm_bf_date 
+    sh:and (
+        arm_core_property_shapes:bf_date
+        [
+            sh:maxCount 1 ;
+            # NON-VALIDATING
+            sh:name "Date" ;
+            sh:description "Date of the activity. Recommended to use EDTF format" ;
+            sh:order "0"^^xsd:decimal ;
+        ]
+    ) ;
+    .
+      
+:ActivityForm_arm_atLocation 
+    sh:and (
+        arm_core_property_shapes:arm_atLocation 
+        [
+            sh:class gn:Feature ;
+            # NON-VALIDATING
+            sh:name "Location" ;
+            sh:description "Location of the activity" ;
+            raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
+        ]
+    ) ;
+    .
+      

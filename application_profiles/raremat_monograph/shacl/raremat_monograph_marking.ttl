@@ -1,0 +1,130 @@
+@prefix activity: <https://w3id.org/arm/core/activity/0.1/> .
+@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_marking/> .
+@prefix arm_core_property_shapes: <https://w3id.org/arm/validation/shacl/arm_core_property_shapes/> .
+@prefix raremat_monograph_activity: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_activity/> .
+
+# TODO Resolve this namespace with that defined in the file.
+@prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/> . 
+
+#
+# IMPORTANT: This PropertyShape can only be used if we can define a single
+# PhysicalDescriptionPropertyGroup applying to both Instances and Items
+# (see issue #65). Otherwise, the property groups are distinct for the
+# two types. 
+#
+:arm_markedBy
+    sh:and (
+        arm_core_property_shapes:arm_markedBy 
+        [
+            sh:class [
+                sh:in ( 
+                    arm:Marking 
+                    arm:Autograph 
+                    arm:BindersTicket 
+                    arm:Label 
+                    arm:Seal 
+                    arm:Stamp 
+                    arm:Watermark
+                )
+            ] ;
+            # NON-VALIDATING
+            sh:name "Markings" ;
+            sh:group raremat_monograph_property_groups:PhysicalDescriptionPropertyGroup ;
+            sh:description "Markings applied to objects during or after creation, conveying information such as the object's origin or maker, its authenticity, or a change in its official status." ;
+            sh:order "0"^^xsd:decimal ;
+            tosh:editWidget swa:NestedObjectEditor ;
+        ]
+    ) ;
+    .
+    
+:MarkingForm
+    rdf:type sh:NodeShape ;
+    rdfs:label "Marking form" ;
+    sh:targetClass arm:Marking ;
+    sh:property 
+        :MarkingForm_activity_hasActivity ,
+        :MarkingForm_bf_note ,
+        :MarkingForm_rdf_type ,
+        :MarkingForm_rdf_value ;
+    .
+
+:MarkingForm_activity_hasActivity
+    sh:and (
+        arm_core_property_shapes:activity_hasActivity
+        [
+            sh:class activity:CreatorActivity ;
+            # NON-VALIDATING
+            sh:name "Marking agent" ;
+            sh:order "0"^^xsd:decimal ;
+            tosh:editWidget swa:NestedObjectEditor ;
+        ]
+    );
+    .
+    
+:MarkingForm_bf_note
+    sh:and (
+        arm_core_property_shapes:bf_note 
+        [   
+            sh:class [
+                sh:in ( 
+                    arm:DescriptiveNote 
+                    arm:SummaryNote 
+                    bf:Note 
+                )
+            ] ;     
+            # NON-VALIDATING
+            sh:name "Marking note" ; 
+            sh:description "Additional textual notes about this marking." ;     
+            sh:order "0"^^xsd:decimal ;   
+            tosh:editWidget swa:NestedObjectEditor ;
+        ]
+    ) ;
+    .
+      
+:MarkingForm_rdf_type 
+    sh:and (
+        arm_core_property_shapes:rdf_type
+        [
+            sh:in ( 
+                arm:Marking 
+                arm:Autograph 
+                arm:BindersTicket 
+                arm:Inscription
+                arm:Label 
+                arm:Seal 
+                arm:Stamp 
+                arm:Watermark 
+            ) ;
+            # NON-VALIDATING
+            sh:name "Marking type" ;
+            sh:description "Marking type" ;
+            sh:order "0"^^xsd:decimal ;
+        ]
+    );
+    .
+    
+:MarkingForm_rdf_value 
+    sh:and (
+        arm_core_property_shapes:rdf_value
+        [
+            # NON-VALIDATING
+            sh:name "Textual value of the marking" ;
+            sh:description "Textual value" ;
+            sh:order "0"^^xsd:decimal ;
+        ]
+    );
+    .
+
+   
