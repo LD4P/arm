@@ -16,22 +16,25 @@
 
 #
 # TODO This is very similar to raremat_monograph_form:NoteForm and its
-# properties, with some differences. Try to resolve differences and combine. 
+# properties, with some differences. Resolve differences and combine. 
 #
 # Also likely extensible to other application profiles.
 #
 
-:NoteForm_all_types
+:NoteForm
     a sh:NodeShape ;
     rdfs:label "Note form" ;
     sh:targetClass bf:Note ;
     sh:property 
-        :NoteForm_rdf_value ,
-        :NoteForm_rdf_type_all ;
+        # Possible note types depend on the context, so include it in the
+        # sub-shapes
+        # :NoteForm_rdf_type ,
+        :NoteForm_rdf_value ;
     .  
 
-# Use when form should offer all note types
-:NoteForm_rdf_type_all 
+# Use this PropertyShape to include ALL note types. In contexts where only
+# some types are applicable, use a shape defining a subset of note types.
+:NoteForm_rdf_type 
     sh:and (
         arm_core_property_shapes:rdf_type
         [
@@ -49,35 +52,10 @@
             );
             # NON-VALIDATING
             sh:name "Note type" ;
-            sh:description "Type of note." ;
-        
+            sh:description "Type of note." ;        
         ]   
     ) ;
     .
-  
-# Use when subject of note should specify particular note types; the 
-# invoking form will specify note type options.   
-:NoteForm_rdf_type_specific 
-    sh:and (
-        arm_core_property_shapes:rdf_type
-        [
-            # NON-VALIDATING
-            sh:name "Note type" ;
-            sh:description "Type of note." ;
-        
-        ]   
-    ) ;
-    .
-    
-:NoteForm_specific_types
-    a sh:NodeShape ;
-    rdfs:label "Note form" ;
-    sh:targetClass bf:Note ;
-    sh:property 
-        :NoteForm_rdf_value ,
-        :NoteForm_rdf_type_specific ;
-    .
-    
 
 :NoteForm_rdf_value 
     sh:and (

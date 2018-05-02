@@ -22,13 +22,19 @@
 :ActivityForm
     a sh:NodeShape ;
     rdfs:label "Related Agent and Role" ;
+    sh:targetClass activity:Activity ;
     sh:property
         # How would this work in a nested form without creating a recursive
         # loop?
         # :ActivityForm_activity_isActivityOf ,
         :ActivityForm_bf_agent ,
         :ActivityForm_bf_date ,
-        :ActivityForm_arm_atLocation ;   
+        :ActivityForm_arm_atLocation ;
+        # Type is determined by the sub-shape, since the type options
+        # depend on the resource related to the activity
+        # TODO Type options should be part of the validation shapes, not
+        # the form shapes, and the latter should inherit from the former.
+        # :ActivityForm_rdf_type ;   
     .
 
 :ActivityForm_bf_agent 

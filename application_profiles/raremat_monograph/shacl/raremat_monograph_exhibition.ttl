@@ -163,10 +163,7 @@
     a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:bf_note 
-        [   
-            sh:class [
-                sh:in ( arm:DescriptiveNote arm:SummaryNote bf:Note )
-            ] ;     
+        [      
             # NON-VALIDATING
             sh:name "Exhibition note" ; 
             sh:description "Additional textual notes about this exhibition." ;   
@@ -176,7 +173,9 @@
         ]
     ) ;
     .
-    
+
+# TODO Define an ExhibitionEventNoteForm providing a PropertyShape for
+# rdf:type with appropriate note type choices.    
 :ExhibitionEventForm_bf_subject
     a sh:PropertyShape ;
     sh:and (

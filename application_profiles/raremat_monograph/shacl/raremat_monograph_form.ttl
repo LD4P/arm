@@ -13,7 +13,7 @@
 @prefix measure: <https://w3id.org/arm/measurement/ontology/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov> .
-@prefix raremat_monograph_base: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_base/> .
+@prefix raremat_monograph_enclosure: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_enclosure/> .
 @prefix raremat_monograph_exhibition: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/> .
 @prefix raremat_monograph_form: <https://w3id.org/arm/application_profile/shacl/raremat_monograph_form/> .
 @prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profile/shacl/raremat_monograph_property_groups/> .
@@ -793,7 +793,7 @@ raremat_monograph_form:InstanceForm
   sh:property raremat_monograph_form:InstanceForm_award_receives ;
   sh:property raremat_monograph_form:InstanceForm_bf_note ;
   sh:property raremat_monograph_form:InstanceForm_bf_identifiedBy ;
-  sh:property raremat_monograph_base:Form_dcterms_hasPart_arm_Enclosure ;
+  sh:property raremat_monograph_enclosure:RareMatForm_dcterms_hasPart_arm_Enclosure ;
   .
 
 
@@ -1141,7 +1141,7 @@ raremat_monograph_form:ItemForm
   sh:property raremat_monograph_form:ItemForm_bf_note ;
   sh:property raremat_monograph_form:ItemForm_bf_identifiedBy ;
   # sh:property raremat_shapes_monograph_exhibition:ItemForm_arm_hasExhibition ;
-  sh:property raremat_monograph_base:Form_dcterms_hasPart_arm_Enclosure ;
+  sh:property raremat_monograph_enclosure:RareMatForm_dcterms_hasPart_arm_Enclosure ;
   . 
 
 raremat_monograph_form:ItemForm_rdf_type sh:path rdf:type ;

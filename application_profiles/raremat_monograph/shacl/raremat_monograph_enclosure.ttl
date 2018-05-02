@@ -11,49 +11,140 @@
 @prefix tosh: <http://topbraid.org/tosh#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_binding/> .
+@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_enclosure/> .
 @prefix arm_core_property_shapes: <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
 
-# TODO Resolve this namespace with that defined in the file.
+# TODO Resolve this namespace with the one defined in the file.
 @prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/> .
 
+@prefix raremat_monograph_activity: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_activity/> .
 @prefix raremat_monograph_marking: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_marking/> .
 @prefix raremat_monograph_note: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_note/> .
 
-# TODO Resolve this namespace with that defined in the file.. 
+# TODO Resolve this namespace with the one defined in the file. 
 @prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/> . 
 
 
-# Links Item or Instance to Enclosure
-:Form_dcterms_hasPart_arm_Enclosure
+# Links resource (generally Instance or Item) to Enclosure 
+:RareMatForm_dcterms_hasPart_arm_Enclosure
     sh:and (
-        arm_core_property_shapes:dcterms_hasPart_arm_Enclosure
+        arm_core_property_shapes:dcterms_hasPart
         [
             sh:class arm:Enclosure ;
             # NON-VALIDATING   
             sh:name "Enclosure" ; 
             sh:description "A resource that encloses this resource, such as a binding, dust jacket, slip case, wrap around band, or wrapper on a book." ;  
+            # TODO Depends on using a general PhysicalDescriptionPropertyGroup.
+            # If not, remove here and conjoin this with the property group definition,
+            # one for instance and one for item.
             sh:group raremat_monograph_property_groups:PhysicalDescriptionPropertyGroup ;   
             sh:order "0"^^xsd:decimal ;   
             tosh:editWidget swa:NestedObjectEditor ;             
         ]
     ) ;
     .
- 
-# TODO
-# Enclosure properties: arm:markedBy, arm:hasActivity, crm:P2_has_type, arm:hasMaterial, bf:note, dcterms:hasPart
-# Define general ActivityForm, MarkingForm, MaterialForm, NoteForm (done)
-# Inverse properties for editing on enclosure page
-
-# BUT this doesn't work because there are two separate property groups for item and instance, e.g., 
-# ItemPhysicalDescriptionPropertyGroup and InstancePhysicalDescriptionPropertyGroup
-# TODO Will need to differentiate item and instance in order to make use of the way raremat_monograph_form 
-# assigns property groups, etc.
 
 :EnclosureForm
     a sh:NodeShape ;
     rdfs:label "Enclosure" ;
     sh:targetClass arm:Enclosure ;
     sh:property
-        raremat_monograph_form:arm ;
+        :EnclosureForm_activity_hasActivity ,    
+        :EnclosureForm_arm_hasMaterial ,  
+        # Uses general MarkingForm, no special constraints needed
+        raremat_monograph_marking:arm_markedBy ,
+        :EnclosureForm_bf_note ,   
+        :EnclosureForm_crm_P2_has_type ,   
+        :EnclosureForm_dcterms_hasPart ; 
     .
+    
+##### ENCLOSURE ACTIVITY #####
+
+:EnclosureForm_activity_hasActivity
+    sh:and (
+        arm_core_property_shapes:activity_hasActivity 
+        [
+            # NON-VALIDATING
+            sh:name "Agent" ;
+            sh:description "Agent related to the Enclosure: binder, designer, creator, etc." ;
+            sh:group raremat_monograph_property_groups:ActivityPropertyGroup ;
+            sh:order "0"^^xsd:decimal ;
+            tosh:editWidget swa:NestedObjectEditor ;       
+        ]
+    ) ;
+    .
+    
+:EnclosureActivityForm
+    sh:and (
+        raremat_monograph_activity:ActivityForm
+        [
+            sh:property :EnclosureActivityForm_rdf_type ;
+        
+        ]
+    ) ;     
+    .
+ 
+:EnclosureActivityForm_rdf_type 
+    sh:and (
+        arm_core_property_shapes:rdf_type 
+        [
+            sh:in (
+                arm:BinderActivity
+                arm:CreatorActivity
+                arm:DesignerActivity
+            ) ;       
+        ]
+    ) ;
+    .  
+    
+    
+#:EnclosureForm_arm_hasMaterial
+
+##### ENCLOSURE NOTE #####
+
+:EnclosureForm_bf_note
+    sh:and (
+        arm_core_property_shapes:bf_note 
+        [       
+            # NON-VALIDATING
+            sh:name "Enclosure note" ; 
+            sh:description "Additional textual notes about this enclosure." ;     
+            sh:order "0"^^xsd:decimal ;   
+            tosh:editWidget swa:NestedObjectEditor ;
+        ]
+    ) ;
+    .
+
+:EnclosureNoteForm
+    sh:and (
+        raremat_monograph_note:NoteForm
+        [
+            sh:property :EnclosureNoteForm_rdf_type ;
+        
+        ]
+    ) ;     
+    .
+ 
+:EnclosureNoteForm_rdf_type 
+    sh:and (
+        arm_core_property_shapes:rdf_type 
+        [
+            sh:in (
+                arm:DescriptiveNote
+                bf:Note
+            ) ;       
+        ]
+    ) ;
+    . 
+    
+#:EnclosureForm_crm_P2_has_type # + vocab 
+
+#:EnclosureForm_dcterms_has_part # + vocab
+
+
+
+
+
+    
+  
+    

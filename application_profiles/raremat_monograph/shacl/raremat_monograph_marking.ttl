@@ -14,6 +14,7 @@
 @prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_marking/> .
 @prefix arm_core_property_shapes: <https://w3id.org/arm/validation/shacl/arm_core_property_shapes/> .
 @prefix raremat_monograph_activity: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_activity/> .
+@prefix raremat_monograph_note: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_note/> .
 
 # TODO Resolve this namespace with that defined in the file.
 @prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/> . 
@@ -22,23 +23,15 @@
 # IMPORTANT: This PropertyShape can only be used if we can define a single
 # PhysicalDescriptionPropertyGroup applying to both Instances and Items
 # (see issue #65). Otherwise, the property groups are distinct for the
-# two types. 
+# two types, but we can use sh:and with this as a common base shapes.
 #
+
+# Links a resource to a Marking
 :arm_markedBy
     sh:and (
         arm_core_property_shapes:arm_markedBy 
         [
-            sh:class [
-                sh:in ( 
-                    arm:Marking 
-                    arm:Autograph 
-                    arm:BindersTicket 
-                    arm:Label 
-                    arm:Seal 
-                    arm:Stamp 
-                    arm:Watermark
-                )
-            ] ;
+            sh:class arm:Marking ;
             # NON-VALIDATING
             sh:name "Markings" ;
             sh:group raremat_monograph_property_groups:PhysicalDescriptionPropertyGroup ;
@@ -59,40 +52,7 @@
         :MarkingForm_rdf_type ,
         :MarkingForm_rdf_value ;
     .
-
-:MarkingForm_activity_hasActivity
-    sh:and (
-        arm_core_property_shapes:activity_hasActivity
-        [
-            sh:class activity:CreatorActivity ;
-            # NON-VALIDATING
-            sh:name "Marking agent" ;
-            sh:order "0"^^xsd:decimal ;
-            tosh:editWidget swa:NestedObjectEditor ;
-        ]
-    );
-    .
-    
-:MarkingForm_bf_note
-    sh:and (
-        arm_core_property_shapes:bf_note 
-        [   
-            sh:class [
-                sh:in ( 
-                    arm:DescriptiveNote 
-                    arm:SummaryNote 
-                    bf:Note 
-                )
-            ] ;     
-            # NON-VALIDATING
-            sh:name "Marking note" ; 
-            sh:description "Additional textual notes about this marking." ;     
-            sh:order "0"^^xsd:decimal ;   
-            tosh:editWidget swa:NestedObjectEditor ;
-        ]
-    ) ;
-    .
-      
+     
 :MarkingForm_rdf_type 
     sh:and (
         arm_core_property_shapes:rdf_type
@@ -127,4 +87,72 @@
     );
     .
 
+##### MARKING ACTIVITY #####
+
+:MarkingForm_activity_hasActivity
+    sh:and (
+        arm_core_property_shapes:activity_hasActivity
+        [
+            sh:class activity:Activity ;
+            # NON-VALIDATING
+            sh:name "Marking creator" ;
+            sh:order "0"^^xsd:decimal ;
+            tosh:editWidget swa:NestedObjectEditor ;
+        ]
+    );
+    .
+        
+:MarkingActivityForm 
+    sh:and (
+        raremat_monograph_activity:ActivityForm
+        [
+            sh:property :MarkingActivityForm_rdf_type ;
+        ]
+    ) ;
+    .
+    
+:MarkingActivityForm_rdf_type 
+    sh:and (
+        arm_core_property_shapes:rdf_type
+        [
+            sh:hasValue arm:CreatorActivity ;
+        ]
+    ) ;
+    .
+    
+##### MARKING NOTE #####
+
+:MarkingForm_bf_note
+    sh:and (
+        arm_core_property_shapes:bf_note 
+        [   
+            sh:class bf:Note ;    
+            # NON-VALIDATING
+            sh:name "Marking note" ; 
+            sh:description "Additional textual notes about this marking." ;     
+            sh:order "0"^^xsd:decimal ;   
+            tosh:editWidget swa:NestedObjectEditor ;
+        ]
+    ) ;
+    . 
    
+:MarkingNoteForm 
+    sh:and (
+        raremat_monograph_note:NoteForm 
+        [
+            sh:property :MarkingNote_rdf_type ;
+        ]
+    );
+    .
+
+:MarkingNoteForm_rdf_type 
+    sh:and (
+        arm_core_property_shapes:rdf_type
+        [
+            sh:in (
+                arm:DescriptiveNote
+                bf:Note
+            ) ;
+        ]
+    ) ;
+    .

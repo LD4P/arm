@@ -64,23 +64,18 @@
     sh:nodeKind sh:IRI ; 
     sh:class arm:Arrangement ;
     .
+    
+:arm_hasMaterial 
+    a sh:PropertyShape ;
+    sh:path arm:hasMaterial ;
+    sh:nodeKind sh:IRI ; 
+    .
       
 :arm_markedBy 
     a sh:PropertyShape ;
     sh:path arm:markedBy ;
     sh:nodeKind sh:IRI ; 
-    # Assumes the object type options are the same in all contexts. 
-    # Remove if the assumption proves false.
-    sh:class [
-        sh:in (
-            arm:Enclosure
-            arm:Binding
-            arm:DustJacket
-            arm:SlipCase
-            arm:WrapAroundBand
-            arm:Wrapper         
-        )
-    ]
+    sh:class arm:Enclosure ;
     .
         
 :arm_startDate 
@@ -120,7 +115,7 @@
     a sh:PropertyShape ;
     sh:path bf:note ;
     sh:nodeKind sh:IRI ;
-    # sh:class determined by note context, so omit here  
+    sh:class bf:Note ;  
     .
     
 :bf_subject
@@ -141,27 +136,6 @@
     sh:path dcterms:hasPart ;
     # Not required by the predicate (which is an RDF property) but this is how our models use it.
     sh:nodeKind sh:IRI ;
-    .
-
-# dcterms:hasPart shape for object type arm:Enclosure  
-:dcterms_hasPart_arm_Enclosure
-    sh:and (
-        :dcterms_hasPart   
-        [
-            # Assumes the object type options are the same in all contexts. 
-            # Remove if the assumption proves false.
-            sh:class [
-                sh:in (
-                    arm:Enclosure
-                    arm:Binding
-                    arm:DustJacket
-                    arm:SlipCase
-                    arm:WrapAroundBand
-                    arm:Wrapper         
-                )
-            ]
-        ]
-    )
     .
         
 :dcterms_isPartOf
