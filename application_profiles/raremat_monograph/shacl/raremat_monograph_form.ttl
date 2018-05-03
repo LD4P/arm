@@ -228,9 +228,10 @@ raremat_monograph_form:WorkForm_bf_genreForm sh:path bf:genreForm ;
   sh:order "1"^^xsd:decimal ;
   raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService .
   
-# The following sh:Property with sh:path bf:genreForm/madsrdf:isMemberOfMADSScheme isn't meant to be a field in the form, but rather state a restriction on the use of bf:genreForm to instances from http://id.loc.gov/authorities/genreForms. 
+# The following sh:Property with ( sh:path bf:genreForm madsrdf:isMemberOfMADSScheme ) isn't meant to be a field in the form, but rather state a restriction on the use of bf:genreForm to instances from http://id.loc.gov/authorities/genreForms. 
   
-raremat_monograph_form:WorkForm_bf_genreForm_madsrdf_isMemberOfMADSScheme sh:path <bf:genreForm/madsrdf:isMemberOfMADSScheme> ;
+raremat_monograph_form:WorkForm_bf_genreForm_madsrdf_isMemberOfMADSScheme 
+ sh:path ( bf:genreForm madsrdf:isMemberOfMADSScheme ) ;
  sh:hasValue <http://id.loc.gov/authorities/genreForms> ;
  sh:description "Values for form genre terms" ;
  sh:group raremat_monograph_property_groups:WorkSubjectGenreFormPropertyGroup ;
@@ -343,7 +344,8 @@ raremat_monograph_form:WorkForm_bf_references sh:path bf:references ;
       sh:group raremat_monograph_property_groups:WorkToWorkPropertyGroup ;
       sh:nodeKind sh:IRI .
     
-raremat_monograph_form:WorkForm_rdau_P60088 sh:path <http://rdaregistry.info/Elements/u/P60088> ;
+raremat_monograph_form:WorkForm_rdau_P60088 
+      sh:path <http://rdaregistry.info/Elements/u/P60088> ;
       sh:class bf:Work ;
       sh:group raremat_monograph_property_groups:WorkToWorkPropertyGroup ;
       sh:name "Is dramatized as" ;
@@ -832,9 +834,10 @@ raremat_monograph_form:InstanceForm_bf_genreForm sh:path bf:genreForm ;
   sh:order "0"^^xsd:decimal ;
   raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService .
   
-# The following sh:Property with sh:path bf:genreForm/madsrdf:isMemberOfMADSScheme isn't meant to be a field in the form, but rather state a restriction on the use of bf:genreForm to instances from http://id.loc.gov/authorities/genreForms. 
+# The following sh:Property with ( sh:path bf:genreForm madsrdf:isMemberOfMADSScheme ) isn't meant to be a field in the form, but rather state a restriction on the use of bf:genreForm to instances from http://id.loc.gov/authorities/genreForms. 
   
-raremat_monograph_form:InstanceForm_bf_genreForm_madsrdf_isMemberOfMADSScheme sh:path <bf:genreForm/madsrdf:isMemberOfMADSScheme> ;
+raremat_monograph_form:InstanceForm_bf_genreForm_madsrdf_isMemberOfMADSScheme 
+ sh:path ( bf:genreForm madsrdf:isMemberOfMADSScheme ) ;
  sh:hasValue <http://id.loc.gov/authorities/genreForms> ;
  sh:description "Values for form genre terms" ;
  sh:group raremat_monograph_property_groups:InstanceGenreFormPropertyGroup ;
@@ -1191,9 +1194,10 @@ raremat_monograph_form:ItemForm_bf_genreForm sh:path bf:genreForm ;
   sh:order "0"^^xsd:decimal ;
   raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService .
   
-# The following sh:Property with sh:path bf:genreForm/madsrdf:isMemberOfMADSScheme isn't meant to be a field in the form, but rather state a restriction on the use of bf:genreForm to instances from http://id.loc.gov/authorities/genreForms. 
+# The following sh:Property with ( sh:path bf:genreForm madsrdf:isMemberOfMADSScheme ) isn't meant to be a field in the form, but rather state a restriction on the use of bf:genreForm to instances from http://id.loc.gov/authorities/genreForms. 
   
-raremat_monograph_form:ItemForm_bf_genreForm_madsrdf_isMemberOfMADSScheme sh:path <bf:genreForm/madsrdf:isMemberOfMADSScheme> ;
+raremat_monograph_form:ItemForm_bf_genreForm_madsrdf_isMemberOfMADSScheme 
+ sh:path ( bf:genreForm madsrdf:isMemberOfMADSScheme ) ;
  sh:hasValue <http://id.loc.gov/authorities/genreForms> ;
  sh:description "Values for form genre terms" ;
  sh:group raremat_monograph_property_groups:ItemGenreFormPropertyGroup ;
@@ -2369,22 +2373,24 @@ raremat_monograph_form:MaterialForm_crm_P2_has_type sh:path crm:P2_has_type ;
       sh:nodeKind sh:IRI ;
       sh:name "Material type" .
       
-# The following sh:path crm:P2_has_type/gvp:broaderExtended isn't meant to be a field in the form, but rather state a restriction on the use of crm:P2_has_type to skos:Concepts in AAT's Material Hierarchy. 
+# The following sh:path ( crm:P2_has_type gvp:broaderExtended ) isn't meant to be a field in the form, but rather state a restriction on the use of crm:P2_has_type to skos:Concepts in AAT's Material Hierarchy. 
   
-raremat_monograph_form:MaterialForm_crm_P2_has_type_gvp_broader_Extended sh:path <crm:P2_has_type/gvp:broaderExtended> ;
-      sh:hasValue <http://vocab.getty.edu/page/aat/300010358> ;
-      sh:description "Values for materials taken from http://vocab.getty.edu/page/aat/300010358 (AAT's materials hierarchy)" ;
-      sh:name "AAT Material Terms" ;
-      skos:editorialNote "Use look up service; AAT materials is too big to load directly into an RDF editor, or list out in the SHACL" .
+raremat_monograph_form:MaterialForm_crm_P2_has_type_gvp_broaderExtended 
+    sh:path ( crm:P2_has_type gvp:broaderExtended ) ;
+    sh:hasValue <http://vocab.getty.edu/page/aat/300010358> ;
+    sh:description "Values for materials taken from http://vocab.getty.edu/page/aat/300010358 (AAT's materials hierarchy)" ;
+    sh:name "AAT Material Terms" ;
+    skos:editorialNote "Use look up service; AAT materials is too big to load directly into an RDF editor, or list out in the SHACL" .
       
       
-# The following sh:path crm:P2_has_type/skos:inScheme isn't meant to be a field in the form, but rather state a restriction on the use of crm:P2_has_type to skos:Concepts in AAT. 
+# The following sh:path ( crm:P2_has_type skos:inScheme) isn't meant to be a field in the form, but rather state a restriction on the use of crm:P2_has_type to skos:Concepts in AAT. 
   
-raremat_monograph_form:MaterialForm_crm_P2_has_type_skos_inScheme sh:path <crm:P2_has_type/skos:inScheme> ;
-      sh:hasValue <http://vocab.getty.edu/aat/> ;
-      sh:description "Values for materials taken are to be taken from AAT." ;
-      sh:name "AAT Material Terms" ;
-      skos:editorialNote "Use look up service; AAT materials is too big to load directly into an RDF editor, or list out in the SHACL" .
+raremat_monograph_form:MaterialForm_crm_P2_has_type_skos_inScheme 
+      sh:path ( crm:P2_has_type skos:inScheme ) ;
+    sh:hasValue <http://vocab.getty.edu/aat/> ;
+    sh:description "Values for materials taken are to be taken from AAT." ;
+    sh:name "AAT Material Terms" ;
+    skos:editorialNote "Use look up service; AAT materials is too big to load directly into an RDF editor, or list out in the SHACL" .
       
 # /////// Font FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
