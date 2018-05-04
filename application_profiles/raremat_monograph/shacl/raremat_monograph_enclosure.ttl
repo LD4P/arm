@@ -226,10 +226,7 @@
         # Uses general MarkingForm, no special constraints needed
         raremat_monograph_marking:arm_markedBy ,
         :EnclosureForm_bf_note ,   
-        # TODO Omit for now: RBMS Binding type vocabulary needs to be
-        # rendered as RDF. Could use Ligatus Language of Bindings 
-        # (http://www.ligatus.org.uk/lob/hierarchy) but not sure which facet
-        # to use. Need cataloger input. 
+        # TODO Add RBMS terms converted to RDF
         # :BindingForm_crm_P2_has_type ,   
         :BindingForm_dcterms_hasPart ; 
     .

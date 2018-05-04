@@ -10,8 +10,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix swa: <http://topbraid.org/swa#> .
-@prefix tosh: <http://topbraid.org/tosh#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 @prefix : <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
@@ -78,7 +76,13 @@
     sh:nodeKind sh:IRI ; 
     sh:class crm:E57 ;
     .
-          
+
+:arm_isAgentOf
+    a sh:PropertyShape ;
+    sh:path arm:isAgentOf ;
+    sh:nodeKind sh:IRI ;
+    .
+              
 :arm_markedBy 
     a sh:PropertyShape ;
     sh:path arm:markedBy ;
@@ -148,20 +152,22 @@
 # Restriction on the use of crm:P2_has_type to skos:Concepts in AAT's Material Hierarchy. 
 :crm_P2_has_type_gvp_broaderExtended 
     sh:path ( crm:P2_has_type gvp:broaderExtended ) ;
-    sh:hasValue aat:300010358> ;
+    sh:hasValue aat:300010358 ;
     # NON-VALIDATING
     sh:name "AAT Material Terms" ;
     sh:description "Values for materials taken from http://vocab.getty.edu/page/aat/300010358 (AAT's materials hierarchy)" ;
-    skos:editorialNote "Use lookup service; AAT materials is too big to load directly into an RDF editor, or list out in the SHACL" .
+    skos:editorialNote "Use lookup service; AAT materials is too big to load directly into an RDF editor, or list out in the SHACL" ;
+    .
            
-# The following sh:path crm:P2_has_type/skos:inScheme isn't meant to be a field in the form, but rather state a restriction on the use of crm:P2_has_type to skos:Concepts in AAT.   
+# The following sh:path ( crm:P2_has_type skos:inScheme ) isn't meant to be a field in the form, but rather state a restriction on the use of crm:P2_has_type to skos:Concepts in AAT.   
 :crm_P2_has_type_skos_inScheme 
-    sh:path ( crm:P2_has_type skos:inScheme )
+    sh:path ( crm:P2_has_type skos:inScheme ) ;
     sh:hasValue <http://vocab.getty.edu/aat/> ;
     # NON-VALIDATING
     rdfs:label "AAT Material Terms" ;
-    rdfs:comment Values for materials taken are to be taken from AAT." ;
-    skos:editorialNote "Use lookup service; AAT materials is too big to load directly into an RDF editor, or list out in the SHACL" .
+    rdfs:comment "Values for materials taken are to be taken from AAT." ;
+    skos:editorialNote "Use lookup service; AAT materials is too big to load directly into an RDF editor, or list out in the SHACL" ;
+    .
         
 :dcterms_hasPart
     a sh:PropertyShape ;
@@ -181,6 +187,7 @@
     a sh:PropertyShape ;
     sh:path rdf:type ;
     sh:nodeKind sh:IRI ;
+    sh:targetClass owl:Class ;
     .
     
 :rdf_value

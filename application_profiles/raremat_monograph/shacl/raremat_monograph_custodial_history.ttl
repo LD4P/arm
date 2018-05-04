@@ -1,0 +1,145 @@
+@prefix activity: <https://w3id.org/arm/core/activity/0.1/> .
+@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> .
+@prefix crm: <http://www.cidoc-crm.org/Property/P2-has-type/Version-6.2/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_custodial_history/> .
+@prefix arm_core_property_shapes: <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
+@prefix custodial_history_property_shapes: <https://w3id.org/arm/custodial_history/validation/shacl/custodial_history_property_shapes/> .
+
+# TODO Resolve this namespace with the one defined in the file.
+@prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/> .
+
+@prefix raremat_monograph_activity: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_activity/> .
+@prefix raremat_monograph_note: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_note/> .
+@prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/> . 
+
+# TODO Not sure if we want the form to link the Item to a CustodialHistory,
+# and then add the CustodialEvents, or whether we should just add the
+# CustodialEvents and link to the CustodialHistory behind the scenes. In
+# fact, a CustodialHistory resource could be created for the Item when the
+# Item is created. It depends on what makes sense to the catalogers.
+:ItemForm_ch_hasCustodialHistory 
+    sh:and (
+        custodial_history_property_shapes:ch_hasCustodialHistory
+        [
+            # NON-VALIDATING
+            sh:name "Custodial history" ;
+            sh:description "Custodial history encompasses all the custodial events related to this item." ;
+            sh:group raremat_monograph_property_groups:ItemHistoryAndProvenancePropertyGroup ;
+            sh:order "0"^^xsd:decimal ;   
+            tosh:editWidget swa:NestedObjectEditor ;                  
+        ]
+    ) ;
+    .
+
+:CustodialHistoryForm
+    a sh:NodeShape ;
+    rdfs:label "Custodial history" ;
+    sh:targetClass ch:CustodialHistory ;
+    sh:property
+        :CustodialHistoryForm_dcterms_hasPart ;
+    .
+    
+:CustodialHistoryForm_dcterms_hasPart 
+    sh:and (
+        custodial_history_property_shapes:dcterms_hasPart 
+        [
+            sh:class ch:CustodialEvent ;
+            # NON-VALIDATING
+            sh:name "Custodial event" ;
+            sh:description "Custodial event that is part of this item's custodial history" ;
+            # TODO Do we need to repeat this here?
+            sh:group raremat_monograph_property_groups:ItemHistoryAndProvenance ;
+            sh:order "0"^^xsd:decimal ;
+            tosh:editWidget swa:NestedObjectEditor ;          
+        ]    
+    ) ;
+    .
+    
+##### CUSTODIAL EVENT #####
+
+:CustodialEventForm 
+    a sh:NodeShape ;
+    rdfs:label "Custodial event" ;
+    sh:targetClass ch:CustodialEvent ;
+    sh:property
+        :CustodialEventForm_activity_hasActivity ,
+        :CustodialEventForm_arm_accessionedBy ,
+        :CustodialEventForm_arm_atLocation ,
+        :CustodialEventForm_bf_date , # DONE
+        # Aggregate event of which this event is a part
+        :CustodialEventForm_dcterms_isPartOf ,
+        :CustodialEventForm_rdf_type , # DONE
+        :CustodialEventForm_schema_priceSpecification ,
+        :CustodialEventForm_seq_directlyFollows ,
+        :CustodialEventForm_seq_directlyPrecedes ,       
+        :CustodialEventForm_seq_follows ,
+        :CustodialEventForm_seq_precedes ;
+    .
+
+#
+# NOTES
+# AccessionNumber - choose from existing attached to this item, or create new
+#
+# precedes/follows: choose from another custodial event for this item
+# could allow creation of new, but then we can end up in a recursive loop.
+# Assume this has to be done by creating a new custodial event and then 
+# adding precedes/follows to it.
+#
+# isPartOf - choose from existing events already in the system, attached
+# to another custodial event which is attached to a different item. In
+# order to prevent a recursive loop, do only from custodial event page.
+#
+# bf:date - do we need a specific form, or just general bf:date form? Ditto
+# arm:atLocation.
+
+   
+##### CUSTODIAL EVENT ACTIVITY #####
+
+# Possible activities depend on event type - how do we do that?
+
+
+##### CUSTODIAL EVENT DATE #####
+
+:CustodialEvent_bf_date 
+    sh:and (
+        custodial_history_property_shapes:bf_date
+        [
+            sh:maxCount 1 ;
+            # NON-VALIDATING
+            sh:name "Date" ;
+            sh:description "Date of the custodial event. Recommended to use EDTF format" ;
+            sh:order "0"^^xsd:decimal ;
+        ]
+    ) ;
+    .
+
+##### CUSTODIAL EVENT TYPE #####
+
+# TODO Add non-validating assertions to rdf_type_ch_CustodialEvent
+
+:CustodialEventForm_rdf_type
+    sh:and (
+        custodial_history_property_shapes:ch_CustodialEvent_rdf_type
+        [
+            # NON-VALIDATING
+            sh:name "Event type" ;
+            # TODO Do we need to repeat this here?
+            sh:group raremat_monograph_property_groups:ItemHistoryAndProvenance ;
+            sh:order "0"^^xsd:decimal ;
+        ]
+    ) ;
+    .
