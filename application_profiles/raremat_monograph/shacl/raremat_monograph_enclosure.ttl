@@ -1,6 +1,8 @@
+@prefix aat: <http://vocab.getty.edu/aat/> .
 @prefix activity: <https://w3id.org/arm/core/activity/0.1/> .
 @prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix crm: <http://www.cidoc-crm.org/Property/P2-has-type/Version-6.2/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -11,6 +13,12 @@
 @prefix tosh: <http://topbraid.org/tosh#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+#
+# TODO Bindings have some specialized vocabularies for materials (Ligatus 
+# Language of Bindings - materials), parts (Getty AAT binding components).
+# Should we have a separate form for Bindings as opposed to Enclosures?
+
+
 @prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_enclosure/> .
 @prefix arm_core_property_shapes: <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
 
@@ -19,6 +27,7 @@
 
 @prefix raremat_monograph_activity: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_activity/> .
 @prefix raremat_monograph_marking: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_marking/> .
+@prefix raremat_monograph_material: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_material/> .
 @prefix raremat_monograph_note: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_note/> .
 
 # TODO Resolve this namespace with the one defined in the file. 
@@ -32,8 +41,12 @@
         [
             sh:class arm:Enclosure ;
             # NON-VALIDATING   
-            sh:name "Enclosure" ; 
-            sh:description "A resource that encloses this resource, such as a binding, dust jacket, slip case, wrap around band, or wrapper on a book." ;  
+            # NB Binding has some fields that don't apply to all Enclosures,
+            # so adding a Binding-specific form and making this for non-
+            # Binding Enclosures.
+            # sh:name "Enclosure" ; 
+            sh:name "Other enclosure" ;
+            sh:description "A resource that encloses this resource, such as a dust jacket, slip case, wrap around band, or wrapper on a book. For bindings, select the binding option." ;  
             # TODO Depends on using a general PhysicalDescriptionPropertyGroup.
             # If not, remove here and conjoin this with the property group definition,
             # one for instance and one for item.
@@ -49,13 +62,12 @@
     rdfs:label "Enclosure" ;
     sh:targetClass arm:Enclosure ;
     sh:property
-        :EnclosureForm_activity_hasActivity ,    
-        :EnclosureForm_arm_hasMaterial ,  
+        :EnclosureForm_activity_hasActivity ,
+        raremat_monograph_material:arm_hasMaterial ,  
         # Uses general MarkingForm, no special constraints needed
         raremat_monograph_marking:arm_markedBy ,
         :EnclosureForm_bf_note ,   
-        :EnclosureForm_crm_P2_has_type ,   
-        :EnclosureForm_dcterms_hasPart ; 
+        :EnclosureForm_rdf_type ;
     .
     
 ##### ENCLOSURE ACTIVITY #####
@@ -78,8 +90,7 @@
     sh:and (
         raremat_monograph_activity:ActivityForm
         [
-            sh:property :EnclosureActivityForm_rdf_type ;
-        
+            sh:property :EnclosureActivityForm_rdf_type ;        
         ]
     ) ;     
     .
@@ -89,16 +100,24 @@
         arm_core_property_shapes:rdf_type 
         [
             sh:in (
+                # TODO Check this list with catalogers
+                # BinderActivity attaches to both Item and Binding, but
+                # we will ignore that for now and attach only to the
+                # Binding.
                 arm:BinderActivity
                 arm:CreatorActivity
                 arm:DesignerActivity
+                arm:EngraverActivity
+                arm:MarblerActivity
+                arm:PapermakerActivity               
             ) ;       
+            # NON-VALIDATING
+            sh:name "Activity type" ;    
+            sh:order "0"^^xsd:decimal ;  
         ]
     ) ;
     .  
-    
-    
-#:EnclosureForm_arm_hasMaterial
+
 
 ##### ENCLOSURE NOTE #####
 
@@ -119,8 +138,7 @@
     sh:and (
         raremat_monograph_note:NoteForm
         [
-            sh:property :EnclosureNoteForm_rdf_type ;
-        
+            sh:property :EnclosureNoteForm_rdf_type ;        
         ]
     ) ;     
     .
@@ -132,19 +150,142 @@
             sh:in (
                 arm:DescriptiveNote
                 bf:Note
-            ) ;       
+            ) ;
+            # NON-VALIDATING
+            sh:name "Note type" ;    
+            sh:order "0"^^xsd:decimal ;       
         ]
     ) ;
     . 
+
+##### ENCLOSURE TYPE #####
+
+:EnclosureForm_crm_P2_has_type # + vocab 
+    sh:and (
+        arm_core_property_shapes:crm_P2_has_type
+        [
+            # NON-VALIDATING
+            sh:name "Specific enclosure type, such as boards, " ;
+            sh:order "0"^^xsd:decimal ;   
+        ]
+    ) ;
+    .
+
+:EnclosureForm_rdf_type 
+    sh:and (
+        arm_core_property_shapes:rdf_type
+        [
+            sh:in (
+                # Removing here since created separate Binding form shape
+                # arm:Binding
+                arm:DustJacket
+                arm:SlipCase
+                arm:WrapAroundBand
+                arm:Wrapper
+                arm:Enclosure
+            ) ;
+            # NON-VALIDATING
+            sh:name "General type of enclosure" ;
+        ]
+    ) ;
+    .
+
+##### BINDING COMPONENT #####
+
+# See questions on this approach - GitHub issue #70
+
+##### BINDING-SPECIFIC SHAPES #####
+
+# Links resource (generally Instance or Item) to Binding 
+:RareMatForm_dcterms_hasPart_arm_Binding
+    sh:and (
+        arm_core_property_shapes:dcterms_hasPart
+        [
+            sh:class arm:Binding ;
+            # NON-VALIDATING   
+            sh:name "Binding" ;  
+            sh:description "A binding attached to this resource." ;
+            # TODO Depends on using a general PhysicalDescriptionPropertyGroup.
+            # If not, remove here and conjoin this with the property group definition,
+            # one for instance and one for item.
+            sh:group raremat_monograph_property_groups:PhysicalDescriptionPropertyGroup ;   
+            sh:order "0"^^xsd:decimal ;   
+            tosh:editWidget swa:NestedObjectEditor ;             
+        ]
+    ) ;
+    .
     
-#:EnclosureForm_crm_P2_has_type # + vocab 
+:BindingForm
+    a sh:NodeShape ;
+    rdfs:label "Binding" ;
+    sh:targetClass arm:Binding ;
+    sh:property
+        :EnclosureForm_activity_hasActivity ,
+        # TODO Or should we create a Binding-specific shape for arm:hasMaterial
+        # that specifies only, e.g., Ligatus Language of Bindings materials, 
+        # rather than all Getty AAT materials?
+        raremat_monograph_material:arm_hasMaterial ,  
+        # Uses general MarkingForm, no special constraints needed
+        raremat_monograph_marking:arm_markedBy ,
+        :EnclosureForm_bf_note ,   
+        # TODO Omit for now: RBMS Binding type vocabulary needs to be
+        # rendered as RDF. Could use Ligatus Language of Bindings 
+        # (http://www.ligatus.org.uk/lob/hierarchy) but not sure which facet
+        # to use. Need cataloger input. 
+        # :BindingForm_crm_P2_has_type ,   
+        :BindingForm_dcterms_hasPart ; 
+    .
 
-#:EnclosureForm_dcterms_has_part # + vocab
-
-
-
-
-
-    
-  
+:BindingForm_dcterms_hasPart 
+    sh:and (
+        arm_core_property_shapes:dcterms_hasPart
+        [
+            # Should apply only to arm:Binding, not other enclosure subtypes.
+            # Does this achieve that?
+            sh:class arm:Binding ;
+            sh:in (
+                # Getty AAT binding components: http://vocab.getty.edu/page/aat/300194225
+                aat:300261522
+                aat:300253047
+                aat:300261776
+                aat:300312358
+                aat:300202819
+                aat:300263630
+                aat:300253051
+                aat:300253057
+                aat:300263628
+                aat:300195163
+                aat:300263627
+                aat:300195149
+                aat:300209357
+                aat:300083023
+                aat:300263593
+                aat:300263626
+                aat:300195150
+                aat:300263618
+                aat:300248893
+                aat:300195163
+                aat:300261765
+                aat:300263629
+                aat:300261769
+                aat:300410465
+                aat:300263625
+                aat:300252986
+                aat:300261564
+                aat:300208775
+                aat:300263631
+                aat:300253125
+                aat:300253099
+                aat:300253096
+                aat:300261780
+                aat:300263632
+                aat:300253949       
+            ) ;
+            # NON-VALIDATING
+            sh:name "Binding component" ;
+            sh:description "Part of the binding, such as binding boards." ;
+            sh:order "0"^^xsd:decimal ;   
+        ]
+    ) ;
+    . 
     
