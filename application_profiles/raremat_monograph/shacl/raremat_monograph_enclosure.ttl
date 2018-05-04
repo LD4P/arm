@@ -1,45 +1,289 @@
-@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_binding/> .
-
 @prefix aat: <http://vocab.getty.edu/aat/> .
-@prefix arm: <https://w3id.org/arm/ontologies/core/> .
+@prefix activity: <https://w3id.org/arm/core/activity/0.1/> .
+@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix crm: <http://www.cidoc-crm.org/Property/P2-has-type/Version-6.2/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix gn: <http://www.geonames.org/ontology/> .
-@prefix gvp: <http://vocab.getty.edu/ontology#> .
-@prefix lingvo: <http://www.lingvoj.org/ontology#> .
-@prefix madsrdf: <http://www.loc.gov/standards/mads/rdf/v1.rdf#> .
-@prefix measurement: <https://w3id.org/arm/ontologies/measurement/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix prov: <http://www.w3.org/ns/prov> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <http://schema.org/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix swa: <http://topbraid.org/swa#> .
 @prefix tosh: <http://topbraid.org/tosh#> .
-@prefix vivo: <http://vivoweb.org/ontology/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix raremat_monograph_base: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_base/> .
-@prefix arm_core_property_shapes: <https://w3id.org/arm/validation/shacl/arm_core_property_shapes/> .
-@prefix raremat_shacl_monograph: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_shacl_monograph/> .
+#
+# TODO Bindings have some specialized vocabularies for materials (Ligatus 
+# Language of Bindings - materials), parts (Getty AAT binding components).
+# Should we have a separate form for Bindings as opposed to Enclosures?
 
-# Links Item to Exhibition and ExhibitionEvent
-:ItemForm_dcterms_hasPart_enclosure
+
+@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_enclosure/> .
+@prefix arm_core_property_shapes: <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
+
+# TODO Resolve this namespace with the one defined in the file.
+@prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/> .
+
+@prefix raremat_monograph_activity: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_activity/> .
+@prefix raremat_monograph_marking: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_marking/> .
+@prefix raremat_monograph_material: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_material/> .
+@prefix raremat_monograph_note: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_note/> .
+@prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/> . 
+
+
+# Links resource (generally Instance or Item) to Enclosure 
+:RareMatForm_dcterms_hasPart_arm_Enclosure
     sh:and (
         arm_core_property_shapes:dcterms_hasPart
         [
-            sh:class arm:Enclosure
+            sh:class arm:Enclosure ;
             # NON-VALIDATING   
-            sh:name "Enclosure" ; 
-            sh:description "A resource that encloses this item, such as a binding, dust jacket, frame, mount, etc." ;  
-            sh:group raremat_shacl_monograph:ItemHistoryAndProvenancePropertyGroup ;     
+            # NB Binding has some fields that don't apply to all Enclosures,
+            # so adding a Binding-specific form and making this for non-
+            # Binding Enclosures.
+            # sh:name "Enclosure" ; 
+            sh:name "Other enclosure" ;
+            sh:description "A resource that encloses this resource, such as a dust jacket, slip case, wrap around band, or wrapper on a book. For bindings, select the binding option." ;  
+            # TODO Depends on using a general PhysicalDescriptionPropertyGroup.
+            # If not, remove here and conjoin this with the property group definition,
+            # one for instance and one for item.
+            sh:group raremat_monograph_property_groups:PhysicalDescriptionPropertyGroup ;   
             sh:order "0"^^xsd:decimal ;   
-            tosh:editWidget swa:NestedObjectEditor .       
-        
+            tosh:editWidget swa:NestedObjectEditor ;             
         ]
     ) ;
     .
+
+:EnclosureForm
+    a sh:NodeShape ;
+    rdfs:label "Enclosure" ;
+    sh:targetClass arm:Enclosure ;
+    sh:property
+        :EnclosureForm_activity_hasActivity ,
+        raremat_monograph_material:arm_hasMaterial ,  
+        # Uses general MarkingForm, no special constraints needed
+        raremat_monograph_marking:arm_markedBy ,
+        :EnclosureForm_bf_note ,   
+        :EnclosureForm_rdf_type ;
+    .
+    
+##### ENCLOSURE ACTIVITY #####
+
+:EnclosureForm_activity_hasActivity
+    sh:and (
+        arm_core_property_shapes:activity_hasActivity 
+        [
+            # NON-VALIDATING
+            sh:name "Agent" ;
+            sh:description "Agent related to the Enclosure: binder, designer, creator, etc." ;
+            sh:group raremat_monograph_property_groups:ActivityPropertyGroup ;
+            sh:order "0"^^xsd:decimal ;
+            tosh:editWidget swa:NestedObjectEditor ;       
+        ]
+    ) ;
+    .
+    
+:EnclosureActivityForm
+    sh:and (
+        raremat_monograph_activity:ActivityForm
+        [
+            sh:property :EnclosureActivityForm_rdf_type ;        
+        ]
+    ) ;     
+    .
  
-# TODO - add list of types for enclosure (sh:in)
+:EnclosureActivityForm_rdf_type 
+    sh:and (
+        arm_core_property_shapes:rdf_type 
+        [
+            sh:in (
+                # TODO Check this list with catalogers
+                # BinderActivity attaches to both Item and Binding, but
+                # we will ignore that for now and attach only to the
+                # Binding.
+                arm:BinderActivity
+                arm:CreatorActivity
+                arm:DesignerActivity
+                arm:EngraverActivity
+                arm:MarblerActivity
+                arm:PapermakerActivity               
+            ) ;       
+            # NON-VALIDATING
+            sh:name "Activity type" ;    
+            sh:order "0"^^xsd:decimal ;  
+        ]
+    ) ;
+    .  
+
+
+##### ENCLOSURE NOTE #####
+
+:EnclosureForm_bf_note
+    sh:and (
+        arm_core_property_shapes:bf_note 
+        [       
+            # NON-VALIDATING
+            sh:name "Enclosure note" ; 
+            sh:description "Additional textual notes about this enclosure." ;     
+            sh:order "0"^^xsd:decimal ;   
+            tosh:editWidget swa:NestedObjectEditor ;
+        ]
+    ) ;
+    .
+
+:EnclosureNoteForm
+    sh:and (
+        raremat_monograph_note:NoteForm
+        [
+            sh:property :EnclosureNoteForm_rdf_type ;        
+        ]
+    ) ;     
+    .
+ 
+:EnclosureNoteForm_rdf_type 
+    sh:and (
+        arm_core_property_shapes:rdf_type 
+        [
+            sh:in (
+                arm:DescriptiveNote
+                bf:Note
+            ) ;
+            # NON-VALIDATING
+            sh:name "Note type" ;    
+            sh:order "0"^^xsd:decimal ;       
+        ]
+    ) ;
+    . 
+
+##### ENCLOSURE TYPE #####
+
+:EnclosureForm_crm_P2_has_type # + vocab 
+    sh:and (
+        arm_core_property_shapes:crm_P2_has_type
+        [
+            # NON-VALIDATING
+            sh:name "Specific enclosure type, such as boards, " ;
+            sh:order "0"^^xsd:decimal ;   
+        ]
+    ) ;
+    .
+
+:EnclosureForm_rdf_type 
+    sh:and (
+        arm_core_property_shapes:rdf_type
+        [
+            sh:in (
+                # Removing here since created separate Binding form shape
+                # arm:Binding
+                arm:DustJacket
+                arm:SlipCase
+                arm:WrapAroundBand
+                arm:Wrapper
+                arm:Enclosure
+            ) ;
+            # NON-VALIDATING
+            sh:name "General type of enclosure" ;
+        ]
+    ) ;
+    .
+
+##### BINDING COMPONENT #####
+
+# See questions on this approach - GitHub issue #70
+
+##### BINDING-SPECIFIC SHAPES #####
+
+# Links resource (generally Instance or Item) to Binding 
+:RareMatForm_dcterms_hasPart_arm_Binding
+    sh:and (
+        arm_core_property_shapes:dcterms_hasPart
+        [
+            sh:class arm:Binding ;
+            # NON-VALIDATING   
+            sh:name "Binding" ;  
+            sh:description "A binding attached to this resource." ;
+            # TODO Depends on using a general PhysicalDescriptionPropertyGroup.
+            # If not, remove here and conjoin this with the property group definition,
+            # one for instance and one for item.
+            sh:group raremat_monograph_property_groups:PhysicalDescriptionPropertyGroup ;   
+            sh:order "0"^^xsd:decimal ;   
+            tosh:editWidget swa:NestedObjectEditor ;             
+        ]
+    ) ;
+    .
+    
+:BindingForm
+    a sh:NodeShape ;
+    rdfs:label "Binding" ;
+    sh:targetClass arm:Binding ;
+    sh:property
+        :EnclosureForm_activity_hasActivity ,
+        # TODO Or should we create a Binding-specific shape for arm:hasMaterial
+        # that specifies only, e.g., Ligatus Language of Bindings materials, 
+        # rather than all Getty AAT materials?
+        raremat_monograph_material:arm_hasMaterial ,  
+        # Uses general MarkingForm, no special constraints needed
+        raremat_monograph_marking:arm_markedBy ,
+        :EnclosureForm_bf_note ,   
+        # TODO Omit for now: RBMS Binding type vocabulary needs to be
+        # rendered as RDF. Could use Ligatus Language of Bindings 
+        # (http://www.ligatus.org.uk/lob/hierarchy) but not sure which facet
+        # to use. Need cataloger input. 
+        # :BindingForm_crm_P2_has_type ,   
+        :BindingForm_dcterms_hasPart ; 
+    .
+
+:BindingForm_dcterms_hasPart 
+    sh:and (
+        arm_core_property_shapes:dcterms_hasPart
+        [
+            # Should apply only to arm:Binding, not other enclosure subtypes.
+            # Does this achieve that?
+            sh:class arm:Binding ;
+            sh:in (
+                # Getty AAT binding components: http://vocab.getty.edu/page/aat/300194225
+                aat:300261522
+                aat:300253047
+                aat:300261776
+                aat:300312358
+                aat:300202819
+                aat:300263630
+                aat:300253051
+                aat:300253057
+                aat:300263628
+                aat:300195163
+                aat:300263627
+                aat:300195149
+                aat:300209357
+                aat:300083023
+                aat:300263593
+                aat:300263626
+                aat:300195150
+                aat:300263618
+                aat:300248893
+                aat:300195163
+                aat:300261765
+                aat:300263629
+                aat:300261769
+                aat:300410465
+                aat:300263625
+                aat:300252986
+                aat:300261564
+                aat:300208775
+                aat:300263631
+                aat:300253125
+                aat:300253099
+                aat:300253096
+                aat:300261780
+                aat:300263632
+                aat:300253949       
+            ) ;
+            # NON-VALIDATING
+            sh:name "Binding component" ;
+            sh:description "Part of the binding, such as binding boards." ;
+            sh:order "0"^^xsd:decimal ;   
+        ]
+    ) ;
+    . 
+    

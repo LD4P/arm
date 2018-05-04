@@ -1,42 +1,54 @@
-@prefix : <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
-
 @prefix aat: <http://vocab.getty.edu/aat/> .
+@prefix activity: <https://w3id.org/arm/core/activity/0.1/> .
 @prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix crm: <http://www.cidoc-crm.org/Property/P2-has-type/Version-6.2/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix edtf: <http://id.loc.gov/datatypes/edtf/> .
-@prefix gn: <http://www.geonames.org/ontology/> .
 @prefix gvp: <http://vocab.getty.edu/ontology#> .
-@prefix lingvo: <http://www.lingvoj.org/ontology#> .
-@prefix madsrdf: <http://www.loc.gov/standards/mads/rdf/v1.rdf#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix prov: <http://www.w3.org/ns/prov> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <http://schema.org/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix swa: <http://topbraid.org/swa#> .
 @prefix tosh: <http://topbraid.org/tosh#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+@prefix : <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
+
 #
 # ///// ARM CORE PROPERTY SHAPES - MAY BE EXTENDED BY UI SHAPES ///// #
 #
 
 # 
-# TODO 
+# TODO/TO CONSIDER
 #
-# - If this file grows too large, break up in some way - 
+# If this file grows too large, break up in some way - 
 # maybe by ontology namespace - i.e., BF properties, ARM properties, etc.?
-# - Should dates be typed edtf:EDTF, or is it just recommended?
+#
+# Not requiring edtf:EDTF typing of dates - indicate on forms that it is
+# recommended.
+#
+# These are only preliminary validation shapes. Add more constraints later.
 #
 
+:activity_hasActivity 
+    a sh:PropertyShape ;
+    sh:path arm:hasActivity ;
+    sh:nodeKind sh:IRI ; 
+    sh:class arm:Activity ;
+    .
+
+:activity_isActivityOf 
+    a sh:PropertyShape ;
+    sh:path activity:isActivityOf ;
+    sh:nodeKind sh:IRI ; 
+    .   
+    
 :arm_atLocation
     a sh:PropertyShape ;
     sh:path arm:atLocation ;
     sh:nodeKind sh:IRI ;
-    sh:class gn:Feature ;
     .
     
 :arm_covers
@@ -52,13 +64,6 @@
     # sh:datatype edtf:EDTF ; 
     sh:maxCount 1 ;
     .
-    
-:arm_hasActivity 
-    a sh:PropertyShape ;
-    sh:path arm:hasActivity ;
-    sh:nodeKind sh:IRI ; 
-    sh:class arm:Activity ;
-    .
 
 :arm_hasArrangement 
     a sh:PropertyShape ;
@@ -67,6 +72,20 @@
     sh:class arm:Arrangement ;
     .
     
+:arm_hasMaterial 
+    a sh:PropertyShape ;
+    sh:path arm:hasMaterial ;
+    sh:nodeKind sh:IRI ; 
+    sh:class crm:E57 ;
+    .
+          
+:arm_markedBy 
+    a sh:PropertyShape ;
+    sh:path arm:markedBy ;
+    sh:nodeKind sh:IRI ; 
+    sh:class arm:Enclosure ;
+    .
+        
 :arm_startDate 
     a sh:PropertyShape ;
     sh:path arm:startDate ;
@@ -89,6 +108,7 @@
     a sh:PropertyShape ;
     sh:path bf:date ;
     sh:nodeKind sh:Literal ;
+    # Recommended but not required
     # sh:datatype edtf:EDTF ;
     .
     
@@ -102,8 +122,8 @@
 :bf_note
     a sh:PropertyShape ;
     sh:path bf:note ;
-    # Possible note types depend on the form context; omit here
     sh:nodeKind sh:IRI ;
+    sh:class bf:Note ;  
     .
     
 :bf_subject
@@ -118,14 +138,38 @@
     sh:nodeKind sh:IRI ; 
     sh:class bf:Title ;
     . 
-    
+
+:crm_P2_has_type
+    a sh:PropertyShape ;
+    sh:nodeKind sh:IRI ;
+    sh:class skos:Concept ;
+    .
+        
+# Restriction on the use of crm:P2_has_type to skos:Concepts in AAT's Material Hierarchy. 
+:crm_P2_has_type_gvp_broaderExtended 
+    sh:path ( crm:P2_has_type gvp:broaderExtended ) ;
+    sh:hasValue aat:300010358> ;
+    # NON-VALIDATING
+    sh:name "AAT Material Terms" ;
+    sh:description "Values for materials taken from http://vocab.getty.edu/page/aat/300010358 (AAT's materials hierarchy)" ;
+    skos:editorialNote "Use lookup service; AAT materials is too big to load directly into an RDF editor, or list out in the SHACL" .
+           
+# The following sh:path crm:P2_has_type/skos:inScheme isn't meant to be a field in the form, but rather state a restriction on the use of crm:P2_has_type to skos:Concepts in AAT.   
+:crm_P2_has_type_skos_inScheme 
+    sh:path ( crm:P2_has_type skos:inScheme )
+    sh:hasValue <http://vocab.getty.edu/aat/> ;
+    # NON-VALIDATING
+    rdfs:label "AAT Material Terms" ;
+    rdfs:comment Values for materials taken are to be taken from AAT." ;
+    skos:editorialNote "Use lookup service; AAT materials is too big to load directly into an RDF editor, or list out in the SHACL" .
+        
 :dcterms_hasPart
     a sh:PropertyShape ;
     sh:path dcterms:hasPart ;
     # Not required by the predicate (which is an RDF property) but this is how our models use it.
     sh:nodeKind sh:IRI ;
     .
-    
+        
 :dcterms_isPartOf
     a sh:PropertyShape ;
     sh:path dcterms:isPartOf ;
