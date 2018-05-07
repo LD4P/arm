@@ -262,6 +262,15 @@
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class> 
     
+    <owl:Class rdf:about="https://w3id.org/arm/core/ontology/0.1/OclcNumber">
+        <rdfs:label xml:lang="en">OCLC number</rdfs:label>
+        <skos:definition xml:lang="en">Alphanumeric code assigned by OCLC to a resource. </skos:definition>        
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+        <skos:editorialNote xml:lang="en">Deprecate this class if defined in BIBFRAME.</skos:editorialNote>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    
     <owl:Class rdf:about="https://w3id.org/arm/core/ontology/0.1/Page">
         <rdfs:label xml:lang="en">Page</rdfs:label>
         <skos:definition xml:lang="en">A single page within a resource.</skos:definition>
