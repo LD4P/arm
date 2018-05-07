@@ -14,7 +14,7 @@
 @prefix measure: <https://w3id.org/arm/measurement/ontology/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov> .
-@prefix artframe_shapes_art: <https://w3id.org/arm/application_profile/shacl/art/> .
+@prefix artframe_art_form: <https://w3id.org/arm/application_profile/artframe_art_form/> .
 @prefix raremat_shapes_monograph_exhibition: <https://w3id.org/arm/application_profile/shacl/raremat_monograph/exhibition/> . 
 @prefix rdau: <http://rdaregistry.info/Elements/u/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -31,14 +31,14 @@
 
 # WARNING!!!!!!!!!!!!!!! Very drafty version of SHACL for ARtFrame application profile. A lot of this currently reflects a cut and paste of an RareMat SHACL file. This is unsafe to use as long as this warning is here.
 
-<https://w3id.org/arm/application_profile/shacl/art/>
+<https://w3id.org/arm/application_profile/artframe_art_form/>
   rdf:type owl:Ontology .
 
 
 # /////// WORK FORM BEGINS HERE ///////////////////////////////
 
 
-artframe_shapes_art:WorkForm
+artframe_art_form:WorkForm
   rdf:type sh:NodeShape ;
   rdfs:label "Art Object" ;
   sh:or (
@@ -52,42 +52,42 @@ artframe_shapes_art:WorkForm
             sh:targetClass bf:Text ;
            ]
         ) ;
-  sh:property artframe_shapes_art:WorkForm_arm_hasPreferredTitle ;
-  sh:property artframe_shapes_art:WorkForm_bf_title ;
-  sh:property artframe_shapes_art:WorkForm_bf_subject ;
-  sh:property artframe_shapes_art:WorkForm_bf_genreForm ;
-  sh:property artframe_shapes_art:WorkForm_bf_eventContent ;
-  sh:property artframe_shapes_art:WorkForm_bf_language ;
-  sh:property artframe_shapes_art:WorkForm_arm_hasStylePeriod ;
-  sh:property artframe_shapes_art:WorkForm_bf_hasInstance ;
-  sh:property artframe_shapes_art:WorkForm_activity_hasActivity ;
-  sh:property artframe_shapes_art:WorkForm_bf_hasPart ;
-  sh:property artframe_shapes_art:WorkForm_bf_partOf ;
-  sh:property artframe_shapes_art:WorkForm_bf_hasExpression ;
-  sh:property artframe_shapes_art:WorkForm_bf_references ;
-  sh:property artframe_shapes_art:WorkForm_rdau_P60250 ;
-  sh:property artframe_shapes_art:WorkForm_rdau_P60260 ;
-  sh:property artframe_shapes_art:WorkForm_rdau_P60833 ;
-  sh:property artframe_shapes_art:WorkForm_rdau_P60214 ;
-  sh:property artframe_shapes_art:WorkForm_rdau_P60246 ;
-  sh:property artframe_shapes_art:WorkForm_rdau_P60305 ;
-  sh:property artframe_shapes_art:WorkForm_rdau_P60241 ;
-  sh:property artframe_shapes_art:WorkForm_rdau_P60311 ;
-  sh:property artframe_shapes_art:WorkForm_rdau_P60312 ;
-  sh:property artframe_shapes_art:WorkForm_arm_cites ;
-  sh:property artframe_shapes_art:WorkForm_arm_citedBy ;
-  sh:property artframe_shapes_art:WorkForm_bf_accompanies ;
-  sh:property artframe_shapes_art:WorkForm_bf_accompaniedBy ;
-  sh:property artframe_shapes_art:WorkForm_bf_content ;
-  sh:property artframe_shapes_art:WorkForm_ex_receives ;
-  sh:property artframe_shapes_art:WorkForm_bf_note ;
-  sh:property artframe_shapes_art:WorkForm_bf_relatedTo ;
-  sh:property artframe_shapes_art:WorkForm_bf_version ;
-  sh:property artframe_shapes_art:WorkForm_bf_identifiedBy ;
-  sh:property artframe_shapes_art:WorkForm_bf_version ;
-  sh:property artframe_shapes_art:WorkForm_bf_date ;
-  sh:property artframe_shapes_art:WorkForm_bf_originDate ;
-  sh:property artframe_shapes_art:WorkForm_bf_copyrightDate .
+  sh:property artframe_art_form:WorkForm_arm_hasPreferredTitle ;
+  sh:property artframe_art_form:WorkForm_bf_title ;
+  sh:property artframe_art_form:WorkForm_bf_subject ;
+  sh:property artframe_art_form:WorkForm_bf_genreForm ;
+  sh:property artframe_art_form:WorkForm_bf_eventContent ;
+  sh:property artframe_art_form:WorkForm_bf_language ;
+  sh:property artframe_art_form:WorkForm_arm_hasStylePeriod ;
+  sh:property artframe_art_form:WorkForm_bf_hasInstance ;
+  sh:property artframe_art_form:WorkForm_activity_hasActivity ;
+  sh:property artframe_art_form:WorkForm_bf_hasPart ;
+  sh:property artframe_art_form:WorkForm_bf_partOf ;
+  sh:property artframe_art_form:WorkForm_bf_hasExpression ;
+  sh:property artframe_art_form:WorkForm_bf_references ;
+  sh:property artframe_art_form:WorkForm_rdau_P60250 ;
+  sh:property artframe_art_form:WorkForm_rdau_P60260 ;
+  sh:property artframe_art_form:WorkForm_rdau_P60833 ;
+  sh:property artframe_art_form:WorkForm_rdau_P60214 ;
+  sh:property artframe_art_form:WorkForm_rdau_P60246 ;
+  sh:property artframe_art_form:WorkForm_rdau_P60305 ;
+  sh:property artframe_art_form:WorkForm_rdau_P60241 ;
+  sh:property artframe_art_form:WorkForm_rdau_P60311 ;
+  sh:property artframe_art_form:WorkForm_rdau_P60312 ;
+  sh:property artframe_art_form:WorkForm_arm_cites ;
+  sh:property artframe_art_form:WorkForm_arm_citedBy ;
+  sh:property artframe_art_form:WorkForm_bf_accompanies ;
+  sh:property artframe_art_form:WorkForm_bf_accompaniedBy ;
+  sh:property artframe_art_form:WorkForm_bf_content ;
+  sh:property artframe_art_form:WorkForm_ex_receives ;
+  sh:property artframe_art_form:WorkForm_bf_note ;
+  sh:property artframe_art_form:WorkForm_bf_relatedTo ;
+  sh:property artframe_art_form:WorkForm_bf_version ;
+  sh:property artframe_art_form:WorkForm_bf_identifiedBy ;
+  sh:property artframe_art_form:WorkForm_bf_version ;
+  sh:property artframe_art_form:WorkForm_bf_date ;
+  sh:property artframe_art_form:WorkForm_bf_originDate ;
+  sh:property artframe_art_form:WorkForm_bf_copyrightDate .
 
 # TODO ensure that workform list is complete
 
@@ -95,20 +95,20 @@ artframe_shapes_art:WorkForm
 
 # ///// PROPERTY SHAPES FOR WorkTitlePropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
-artframe_shapes_art:WorkForm_arm_hasPreferredTitle sh:path arm:hasPreferredTitle ;
+artframe_art_form:WorkForm_arm_hasPreferredTitle sh:path arm:hasPreferredTitle ;
   sh:class bf:Title ;
   tosh:editWidget swa:NestedObjectEditor ;
   sh:description "Record PreferredTitles here; there can be only one preferred title per language." ;
-  sh:group artframe_shapes_art:WorkTitlePropertyGroup ;
+  sh:group artframe_art_property_groups:WorkTitlePropertyGroup ;
   sh:name "Preferred title" ;
   sh:nodeKind sh:IRI ;
   sh:order "0"^^xsd:decimal .
   
-artframe_shapes_art:WorkForm_bf_title sh:path bf:title ;
+artframe_art_form:WorkForm_bf_title sh:path bf:title ;
   sh:class bf:Title ;
   tosh:editWidget swa:NestedObjectEditor ;
   sh:description "Record non-PreferredTitles here. Use Preferred Title to capture a preferred title." ;
-  sh:group artframe_shapes_art:WorkTitlePropertyGroup ;
+  sh:group artframe_art_property_groups:WorkTitlePropertyGroup ;
   sh:name "Other title" ;
   sh:nodeKind sh:IRI ;
   sh:order "1"^^xsd:decimal .
@@ -116,31 +116,31 @@ artframe_shapes_art:WorkForm_bf_title sh:path bf:title ;
 
 # ///// PROPERTY SHAPES FOR WorkActivityPropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
-artframe_shapes_art:WorkForm_activity_hasActivity sh:path activity:hasActivity ;
+artframe_art_form:WorkForm_activity_hasActivity sh:path activity:hasActivity ;
   sh:name "Agent activity or role" ;
   sh:order "0"^^xsd:decimal ;
-  sh:group artframe_shapes_art:WorkActivityPropertyGroup ;
+  sh:group artframe_art_property_groups:WorkActivityPropertyGroup ;
   tosh:editWidget swa:NestedObjectEditor ; 
   sh:class ( activity:AuthorActivity activity:CreatorActivity activity:ArchitectActivity activity:ArtistActivity activity:DesignerActivity activity:DraftsmanActivity activity:PhotographerActivity activity:SculptorActivity ) .
   
 # ///// PROPERTY SHAPES FOR WorkCopyrightPropertyGroup START HERE. /////////////////////////////////////////////////////////////
   
- artframe_shapes_art:WorkForm_bf_copyrightDate sh:path bf:copyrightDate ;
+ artframe_art_form:WorkForm_bf_copyrightDate sh:path bf:copyrightDate ;
   sh:name "Copyright date" ;
   sh:order "0"^^xsd:decimal ;
-  sh:group artframe_shapes_art:OriginPropertyGroup ;
+  sh:group artframe_art_property_groups:WorkCopyrightPropertyGroup ;
   sh:nodeKind sh:Literal .
    
 # ///// PROPERTY SHAPES FOR WorkSubjectGenreFormPropertyGroup START HERE. /////////////////////////////////////////////////////
 
 
 
-artframe_shapes_art:WorkForm_bf_subject sh:path bf:subject ;
-      sh:group artframe_shapes_art:WorkSubjectGenreFormPropertyGroup ;
+artframe_art_form:WorkForm_bf_subject sh:path bf:subject ;
+      sh:group artframe_art_property_groups:WorkSubjectGenreFormPropertyGroup ;
       sh:name "Subject" ;
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
-      artframe_shapes_art:lookup artframe_shapes_art:LD4LookupService ;
+      artframe_art_form:lookup artframe_art_form:LD4LookupService ;
       sh:or (
           [
             sh:class bf:Work ;
@@ -171,19 +171,19 @@ artframe_shapes_art:WorkForm_bf_subject sh:path bf:subject ;
           ]
         ) .
 
-artframe_shapes_art:WorkForm_bf_genreForm sh:path bf:genreForm ;
+artframe_art_form:WorkForm_bf_genreForm sh:path bf:genreForm ;
   sh:class skos:Concept ;
-  sh:group artframe_shapes_art:WorkSubjectGenreFormPropertyGroup ;
+  sh:group artframe_art_property_groups:WorkSubjectGenreFormPropertyGroup ;
   sh:name "Form Genre" ;
   sh:nodeKind sh:IRI ;
   sh:order "1"^^xsd:decimal ;
-  artframe_shapes_art:lookup artframe_shapes_art:LD4LookupService .
+  artframe_art_form:lookup artframe_art_form:LD4LookupService .
   
 # The following sh:Property with sh:path bf:genreForm/madsrdf:isMemberOfMADSScheme isn't meant to be a field in the form, but rather state a restriction on the use of bf:genreForm to instances from http://id.loc.gov/authorities/genreForms. 
   
-artframe_shapes_art:WorkForm_bf_genreForm sh:path <bf:genreForm/skos:inScheme> ;
+artframe_art_form:WorkForm_bf_genreForm sh:path <bf:genreForm/skos:inScheme> ;
  sh:description "Values for form genre terms" ;
- sh:group artframe_shapes_art:WorkSubjectGenreFormPropertyGroup ;
+ sh:group artframe_art_property_groups:WorkSubjectGenreFormPropertyGroup ;
  sh:name "Form Genre Terms" ;
  sh:nodeKind sh:IRI ;
  sh:or (
@@ -195,21 +195,21 @@ artframe_shapes_art:WorkForm_bf_genreForm sh:path <bf:genreForm/skos:inScheme> ;
  ]) ;
  skos:editorialNote "Use look up service; LCGFT is too big to load directly into an RDF editor, and more importantly we don't want to create MADSAuthorities, only link to them." .
  
-artframe_shapes_art:WorkForm_arm_hasStylePeriod sh:path arm:hasStylePeriod ;
+artframe_art_form:WorkForm_arm_hasStylePeriod sh:path arm:hasStylePeriod ;
   sh:class skos:Concept ;
-  sh:group artframe_shapes_art:WorkSubjectGenreFormPropertyGroup ;
+  sh:group artframe_art_property_groups:WorkSubjectGenreFormPropertyGroup ;
   sh:name "Style Period" ;
   sh:nodeKind sh:IRI ;
   sh:in ( <http://vocab.getty.edu/aat/300019257> <http://vocab.getty.edu/aat/300019280> <http://vocab.getty.edu/aat/300106711> <http://vocab.getty.edu/aat/300106716> <http://vocab.getty.edu/aat/300106723> <http://vocab.getty.edu/aat/300264736> <http://vocab.getty.edu/aat/300264737> <http://vocab.getty.edu/aat/300266744> <http://vocab.getty.edu/aat/300312378> <http://vocab.getty.edu/aat/300386009> <http://vocab.getty.edu/aat/300391250> <http://vocab.getty.edu/aat/300391448> <http://vocab.getty.edu/aat/300393217> <http://vocab.getty.edu/aat/300404836> <http://vocab.getty.edu/aat/300015647> <http://vocab.getty.edu/aat/300016617> <http://vocab.getty.edu/aat/300018279> <http://vocab.getty.edu/aat/300019255> <http://vocab.getty.edu/aat/300020656> <http://vocab.getty.edu/aat/300021516> <http://vocab.getty.edu/aat/300021854> <http://vocab.getty.edu/aat/300022097> <http://vocab.getty.edu/aat/300266481> <http://vocab.getty.edu/aat/300385955> <http://vocab.getty.edu/aat/300385959> <http://vocab.getty.edu/aat/300386794> <http://vocab.getty.edu/aat/300386974> <http://vocab.getty.edu/aat/300387737> <http://vocab.getty.edu/aat/300056487> <http://vocab.getty.edu/aat/300067402> <http://vocab.getty.edu/aat/300263555> <http://vocab.getty.edu/aat/300310539> <http://vocab.getty.edu/aat/300310540> <http://vocab.getty.edu/aat/300310541> <http://vocab.getty.edu/aat/300310542> <http://vocab.getty.edu/aat/300310543> <http://vocab.getty.edu/aat/300310544> <http://vocab.getty.edu/aat/300310545> <http://vocab.getty.edu/aat/300310546> <http://vocab.getty.edu/aat/300310547> <http://vocab.getty.edu/aat/300311734> <http://vocab.getty.edu/aat/300312275> <http://vocab.getty.edu/aat/300379388> <http://vocab.getty.edu/aat/300391392> <http://vocab.getty.edu/aat/300391437> <http://vocab.getty.edu/aat/300393250> <http://vocab.getty.edu/aat/300055513> <http://vocab.getty.edu/aat/300073708> <http://vocab.getty.edu/aat/300148033> ) ;
   sh:order "2"^^xsd:decimal .
  
-artframe_shapes_art:WorkForm_bf_eventContent sh:path bf:eventContent ;
+artframe_art_form:WorkForm_bf_eventContent sh:path bf:eventContent ;
   sh:class skos:Concept ;
-  sh:group artframe_shapes_art:WorkSubjectGenreFormPropertyGroup ;
+  sh:group artframe_art_property_groups:WorkSubjectGenreFormPropertyGroup ;
   sh:name "Event content" ;
   sh:nodeKind sh:IRI ;
   sh:order "3" ^^xsd:decimal ;
-    artframe_shapes_art:lookup artframe_shapes_art:LD4LookupService ;
+    artframe_art_form:lookup artframe_art_form:LD4LookupService ;
       sh:or (
           [
             sh:class bf:Agent ;
@@ -219,26 +219,26 @@ artframe_shapes_art:WorkForm_bf_eventContent sh:path bf:eventContent ;
           ]
         ) .
 
-artframe_shapes_art:WorkForm_bf_classification sh:path bf:classification ;
+artframe_art_form:WorkForm_bf_classification sh:path bf:classification ;
   sh:class bf:Classification ;
-  sh:group artframe_shapes_art:WorkSubjectGenreFormPropertyGroup ;
+  sh:group artframe_art_property_groups:WorkSubjectGenreFormPropertyGroup ;
   sh:name "Classification" ;
   sh:nodeKind sh:IRI ;
   sh:order "4" ^^xsd:decimal .
   
-artframe_shapes_art:WorkForm_bf_language sh:path bf:language ;
+artframe_art_form:WorkForm_bf_language sh:path bf:language ;
   sh:class lingvo:Lingvo ;
-  sh:group artframe_shapes_art:WorkLanguageFormPropertyGroup ;
+  sh:group artframe_art_property_groups:WorkLanguageFormPropertyGroup ;
   sh:name "Language" ;
   sh:nodeKind sh:IRI ;
   sh:order "0"^^xsd:decimal .
 
-artframe_shapes_art:WorkForm_bf_content sh:path bf:content ;
-      sh:group artframe_shapes_art:WorkSubjectGenreFormPropertyGroup ;
+artframe_art_form:WorkForm_bf_content sh:path bf:content ;
+      sh:group artframe_art_property_groups:WorkSubjectGenreFormPropertyGroup ;
       sh:name "Content type" ;
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
-      artframe_shapes_art:lookup artframe_shapes_art:LD4LookupService ;
+      artframe_art_form:lookup artframe_art_form:LD4LookupService ;
       sh:or (
           [
             sh:hasValue <http://rdaregistry.info/termList/RDAContentType/1014> ;
@@ -254,30 +254,30 @@ artframe_shapes_art:WorkForm_bf_content sh:path bf:content ;
   
 # ///// PROPERTY SHAPES FOR WorkToInstancePropertyGroup START HERE. //////////////////////////////////////////////////////////////////////////////
 
-artframe_shapes_art:WorkForm_bf_hasInstance sh:path bf:hasInstance ;
+artframe_art_form:WorkForm_bf_hasInstance sh:path bf:hasInstance ;
       sh:name "Physical Instance or Manifestation" ;
       sh:nodeKind sh:IRI ;
-      sh:group artframe_shapes_art:WorkToInstancePropertyGroup ;
+      sh:group artframe_art_property_groups:WorkToInstancePropertyGroup ;
       tosh:editWidget swa:NestedObjectEditor ;
       sh:class bf:Instance .
       
 # ///// PROPERTY SHAPES FOR WorkNotePropertyGroup START HERE. /////////////////////////////////////////////////////////////////////////
 
-artframe_shapes_art:WorkForm_bf_note sh:path bf:note ;
+artframe_art_form:WorkForm_bf_note sh:path bf:note ;
       sh:description "Work related notes for when more granualar information isn't captured." ;
       sh:name "Work notes" ;
       tosh:editWidget swa:NestedObjectEditor ;
-      sh:group artframe_shapes_art:WorkNotePropertyGroup ;
+      sh:group artframe_art_property_groups:WorkNotePropertyGroup ;
       sh:or (
          
          [
-           sh:class <http://id.loc.gov/ontologies/bibframe/Note> ;
+           sh:class bf:Note ;
          ]
          [
-           sh:class <http://example.org/DescriptiveNote> ;
+           sh:class arm:DescriptiveNote ;
          ]
          [
-           sh:class <http://example.org/SubjectNote> ;
+           sh:class arm:SubjectNote ;
          ]
          
         ) ;
@@ -286,9 +286,9 @@ artframe_shapes_art:WorkForm_bf_note sh:path bf:note ;
     
 # ///// PROPERTY SHAPES FOR WorkAwardReceipt PropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
-artframe_shapes_art:WorkForm_award_receives sh:path award:receives ;
+artframe_art_form:WorkForm_award_receives sh:path award:receives ;
 sh:class award:AwardReceipt ;
-      sh:group artframe_shapes_art:WorkAwardReceiptPropertyGroup ;
+      sh:group artframe_art_property_groups:WorkAwardReceiptPropertyGroup ;
       sh:name "Work award receipt" ;
       sh:nodeKind sh:IRI ;
       sh:order "0"^^xsd:decimal ;
@@ -297,10 +297,10 @@ sh:class award:AwardReceipt ;
 # ///// PROPERTY SHAPES FOR WorkIdentifierPropertyGroup START HERE. /////////////////////////////////////////////////////////////////////////
 
 
-artframe_shapes_art:WorkForm_bf_identifiedBy sh:path bf:identifiedBy ;
+artframe_art_form:WorkForm_bf_identifiedBy sh:path bf:identifiedBy ;
       sh:class bf:Identifier ;
       sh:description "Identifiers for works." ;
-      sh:group artframe_shapes_art:WorkIdentifierPropertyGroup ;
+      sh:group artframe_art_property_groups:WorkIdentifierPropertyGroup ;
       sh:name "Work Identifier" ;
       sh:nodeKind sh:IRI .
       
@@ -310,126 +310,126 @@ artframe_shapes_art:WorkForm_bf_identifiedBy sh:path bf:identifiedBy ;
 
 # TODO decide what types of parts bf:Works can have, e.g. bf:StillImage
 
-artframe_shapes_art:WorkForm_bf_hasPart sh:path bf:hasPart ;
+artframe_art_form:WorkForm_bf_hasPart sh:path bf:hasPart ;
       sh:class bf:Work ;
-      sh:group artframe_shapes_art:WorkToWorkPropertyGroup ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "Contents or part of the art work" .    
 
 # TODO decide what types of bf:Works a bf:Text, bf:StillImage or bf:Object can be a part of, e.g. another bf:Text
 
-artframe_shapes_art:WorkForm_bf_partOf sh:path bf:partOf ;
+artframe_art_form:WorkForm_bf_partOf sh:path bf:partOf ;
       sh:class bf:Work ;
-      sh:group artframe_shapes_art:WorkToWorkPropertyGroup ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "Is part or contents of the art work" .
 
-artframe_shapes_art:WorkForm_bf_hasExpression sh:path bf:hasExpression ;
+artframe_art_form:WorkForm_bf_hasExpression sh:path bf:hasExpression ;
       sh:class bf:Work ;
       sh:description "Work that is an expression of a described Work. For use to relate Works under FRBR/RDA rules." ;
-      sh:group artframe_shapes_art::WorkToWorkPropertyGroup ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "Has expression" .
 
-artframe_shapes_art:WorkForm_bf_referencedBy sh:path bf:referencedBy ;
+artframe_art_form:WorkForm_bf_referencedBy sh:path bf:referencedBy ;
       sh:class bf:Work ;
       sh:description "Resource that references the described resource." ;
       sh:name "Referenced by" ;
-      sh:group artframe_shapes_art::WorkToWorkPropertyGroup .
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup .
     
-artframe_shapes_art:WorkForm_bf_references sh:path bf:references ;
+artframe_art_form:WorkForm_bf_references sh:path bf:references ;
       sh:class bf:Work ;
       sh:description "Resource that is referenced by the described resource." ;
       sh:name "References" ;
-      sh:group artframe_shapes_art:WorkToWorkPropertyGroup ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:nodeKind sh:IRI .
     
-artframe_shapes_art:WorkForm_rdau_P60250 sh:path <http://rdaregistry.info/Elements/u/P60250> ;
+artframe_art_form:WorkForm_rdau_P60250 sh:path <http://rdaregistry.info/Elements/u/P60250> ;
       sh:class bf:Work ;
-      sh:group artframe_shapes_art:WorkToWorkPropertyGroup ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "is derivative" ;
       sh:nodeKind sh:IRI .
       
-artframe_shapes_art:WorkForm_rdau_P60260 sh:path <http://rdaregistry.info/Elements/u/P60260> ;
+artframe_art_form:WorkForm_rdau_P60260 sh:path <http://rdaregistry.info/Elements/u/P60260> ;
       sh:class bf:Work ;
-      sh:group artframe_shapes_art:WorkToWorkPropertyGroup ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "is adapted as" ;
       sh:nodeKind sh:IRI .
       
-artframe_shapes_art:WorkForm_rdau_P60833 sh:path <http://rdaregistry.info/Elements/u/P60833> ;
+artframe_art_form:WorkForm_rdau_P60833 sh:path <http://rdaregistry.info/Elements/u/P60833> ;
       sh:class bf:Work ;
-      sh:group artframe_shapes_art:WorkToWorkPropertyGroup ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "is inspiration for" ;
       sh:nodeKind sh:IRI .
       
-artframe_shapes_art:WorkForm_rdau_P60214 sh:path <http://rdaregistry.info/Elements/u/P60214> ;
+artframe_art_form:WorkForm_rdau_P60214 sh:path <http://rdaregistry.info/Elements/u/P60214> ;
       sh:class bf:Work ;
-      sh:group artframe_shapes_art:WorkToWorkPropertyGroup ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "is imitated as" ;
       sh:nodeKind sh:IRI .
       
-artframe_shapes_art:WorkForm_rdau_P60246 sh:path <http://rdaregistry.info/Elements/u/P60246> ;
+artframe_art_form:WorkForm_rdau_P60246 sh:path <http://rdaregistry.info/Elements/u/P60246> ;
       sh:class bf:Work ;
-      sh:group artframe_shapes_art:WorkToWorkPropertyGroup ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "is parodied as" ;
       sh:nodeKind sh:IRI .
       
-artframe_shapes_art:WorkForm_rdau_P60305 sh:path <http://rdaregistry.info/Elements/u/P60305> ;
+artframe_art_form:WorkForm_rdau_P60305 sh:path <http://rdaregistry.info/Elements/u/P60305> ;
       sh:class bf:Work ;
-      sh:group artframe_shapes_art:WorkToWorkPropertyGroup ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "is based on" ;
       sh:nodeKind sh:IRI .
       
-artframe_shapes_art:WorkForm_rdau_P60241 sh:path <http://rdaregistry.info/Elements/u/P60241> ;
+artframe_art_form:WorkForm_rdau_P60241 sh:path <http://rdaregistry.info/Elements/u/P60241> ;
       sh:class bf:Work ;
-      sh:group artframe_shapes_art:WorkToWorkPropertyGroup ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "is adaptation of" ;
       sh:nodeKind sh:IRI .
       
-artframe_shapes_art:WorkForm_rdau_P60311 sh:path <http://rdaregistry.info/Elements/u/P60311> ;
+artframe_art_form:WorkForm_rdau_P60311 sh:path <http://rdaregistry.info/Elements/u/P60311> ;
       sh:class bf:Work ;
-      sh:group artframe_shapes_art:WorkToWorkPropertyGroup ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "is imitation of" ;
       sh:nodeKind sh:IRI .
       
-artframe_shapes_art:WorkForm_rdau_P60312 sh:path <http://rdaregistry.info/Elements/u/P60312> ;
+artframe_art_form:WorkForm_rdau_P60312 sh:path <http://rdaregistry.info/Elements/u/P60312> ;
       sh:class bf:Work ;
-      sh:group artframe_shapes_art:WorkToWorkPropertyGroup ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "is parody of" ;
       sh:nodeKind sh:IRI .
       
     
-artframe_shapes_art:WorkForm_bf_accompaniedBy sh:path bf:accompaniedBy ;
+artframe_art_form:WorkForm_bf_accompaniedBy sh:path bf:accompaniedBy ;
       sh:class bf:Work ;
       sh:description "Resource that accompanies the described resource." ;
-      sh:group artframe_shapes_art:WorkToWorkPropertyGroup ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "AccompaniesBy" ;
       sh:nodeKind sh:IRI .
 
-artframe_shapes_art:WorkForm_bf_accompanies sh:path bf:accompanies ;
+artframe_art_form:WorkForm_bf_accompanies sh:path bf:accompanies ;
       sh:class bf:Work ;
       sh:description "Resource that adds to or is issued with the described resource." ;
-      sh:group artframe_shapes_art:WorkToWorkPropertyGroup ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "Accompanies" ;
       sh:nodeKind sh:IRI .
       
-artframe_shapes_art:WorkForm_bf_version sh:path bf:version ;
+artframe_art_form:WorkForm_bf_version sh:path bf:version ;
       sh:class bf:Work ;
       sh:description "Term or terms that identify works such as arranged for music, vulgate for religious work, etc." ;
-      sh:group artframe_shapes_art:WorkToWorkPropertyGroup ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "Version" ;
       sh:nodeKind sh:IRI .
       
-artframe_shapes_art:WorkForm_arm_cites sh:path arm:cites ;
+artframe_art_form:WorkForm_arm_cites sh:path arm:cites ;
       sh:class bf:Work ;
       sh:description "Visual citation : an artistic process/practice where a creator reproduces the totality or a
       section of a (well-known) work of art to incorporate it a new visual creation." ;
-      sh:group artframe_shapes_art:WorkToWorkPropertyGroup ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "Cites" ;
       sh:nodeKind sh:IRI .
       
-artframe_shapes_art:WorkForm_arm_citedBy sh:path arm:citedBy ;
+artframe_art_form:WorkForm_arm_citedBy sh:path arm:citedBy ;
       sh:class bf:Work ;
       sh:description "Visual citation : an artistic process/practice where a creator reproduces the totality or a
       section of a (well-known) work of art to incorporate it a new visual creation." ;
-      sh:group artframe_shapes_art:WorkToWorkPropertyGroup ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "Cited by" ;
       sh:nodeKind sh:IRI .     
       
@@ -437,91 +437,92 @@ artframe_shapes_art:WorkForm_arm_citedBy sh:path arm:citedBy ;
 
 
 
-artframe_shapes_art:InstanceForm rdf:type rdfs:Class ;
+artframe_art_form:InstanceForm rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Instance of Art Work" ;
   rdfs:subClassOf rdfs:Resource ;
   sh:targetClass bf:Instance ;
-  sh:property artframe_shapes_art:InstanceForm_arm_hasPreferredTitle ;
-  sh:property artframe_shapes_art:InstanceForm_bf_title ;
-  sh:property artframe_shapes_art:InstanceForm_bf_carrier ;
-  sh:property artframe_shapes_art:InstanceForm_bf_genreForm ;
-  sh:property artframe_shapes_art:InstanceForm_arm_hasStylePeriod ;
-  sh:property artframe_shapes_art:InstanceForm_arm_hasActivity ;
-  sh:property artframe_shapes_art:InstanceForm_bf_responsibilityStatement ;
-  sh:property artframe_shapes_art:InstanceForm_bf_hasPart ;
-  sh:property artframe_shapes_art:InstanceForm_bf_accompaniedBy ;
-  sh:property artframe_shapes_art:InstanceForm_bf_accompanies ;
-  sh:property artframe_shapes_art:InstanceForm_bf_extent ;
-  sh:property artframe_shapes_art:InstanceForm_meas_hasMeasurementGroup ;
-  sh:property artframe_shapes_art:InstanceForm_arm_hasSignatureStatement ;
-  sh:property artframe_shapes_art:InstanceForm_arm_hasMaterial ;
-  sh:property raremat_shapes_monograph:ItemForm_rdau_P60596 ;
-  ssh:property raremat_shapes_monograph:ItemForm_rdau_P60159 ;
+  sh:property artframe_art_form:InstanceForm_arm_hasPreferredTitle ;
+  sh:property artframe_art_form:InstanceForm_bf_title ;
+  sh:property artframe_art_form:InstanceForm_bf_carrier ;
+  sh:property artframe_art_form:InstanceForm_bf_genreForm ;
+  sh:property artframe_art_form:InstanceForm_arm_hasStylePeriod ;
+  sh:property artframe_art_form:InstanceForm_arm_hasActivity ;
+  sh:property artframe_art_form:InstanceForm_bf_responsibilityStatement ;
+  sh:property artframe_art_form:InstanceForm_bf_hasPart ;
+  sh:property artframe_art_form:InstanceForm_bf_accompaniedBy ;
+  sh:property artframe_art_form:InstanceForm_bf_accompanies ;
+  sh:property artframe_art_form:InstanceForm_bf_extent ;
+  sh:property artframe_art_form:InstanceForm_meas_hasMeasurementGroup ;
+  sh:property artframe_art_form:InstanceForm_arm_hasSignatureStatement ;
+  sh:property artframe_art_form:InstanceForm_arm_hasMaterial ;
+  sh:property raremat_monograph_form:ItemForm_rdau_P60596 ;
+  ssh:property raremat_monograph_form:ItemForm_rdau_P60159 ;
   sh:property raremat_monograph_form:InstanceForm_bf_instanceOf ;
   sh:property raremat_monograph_form:InstanceForm_bf_editionStatement ;
   sh:property raremat_monograph_form:InstanceForm_bf_hasItem ;
-  sh:property artframe_shapes_art:InstanceForm_bf_note ;
-  sh:property artframe_shapes_art:InstanceForm_bf_identifiedBy ;
-  sh:property artframe_shapes_art:InstanceForm_bf_scale ;
-  sh:property artframe_shapes_art:InstanceForm_arm_hasCitation .
+  sh:property artframe_art_form:InstanceForm_bf_note ;
+  sh:property artframe_art_form:InstanceForm_bf_identifiedBy ;
+  sh:property artframe_art_form:InstanceForm_bf_scale ;
+  sh:property artframe_art_form:InstanceForm_arm_hasCitation .
 
 # TODO Review. The following PropertyShape is subject to change depending on whether we follow BIBFRAME or bibliotek-o/ArtFrame. Going to stop work on this until a decision is made.
 
-artframe_shapes_art:InstanceForm_arm_hasPreferredTitle sh:path arm:hasPreferredTitle ;
+artframe_art_form:InstanceForm_arm_hasPreferredTitle sh:path arm:hasPreferredTitle ;
   sh:class bf:Title ;
   tosh:editWidget swa:NestedObjectEditor ;
   sh:description "Record PreferredTitles here; there can be only one preferred title per language." ;
-  sh:group artframe_shapes_art:InstanceTitlePropertyGroup ;
+  sh:group artframe_art_property_groups:InstanceTitlePropertyGroup ;
   sh:name "Preferred title" ;
   sh:nodeKind sh:IRI ;
   sh:order "0"^^xsd:decimal .
   
-artframe_shapes_art:InstanceForm_bf_title sh:path bf:title ;
+artframe_art_form:InstanceForm_bf_title sh:path bf:title ;
   sh:class bf:Title ;
   tosh:editWidget swa:NestedObjectEditor ;
   sh:description "Record non-PreferredTitles here. Use Preferred Title to capture a preferred title." ;
-  sh:group artframe_shapes_art:InstanceTitlePropertyGroup ;
+  sh:group artframe_art_property_groups:InstanceTitlePropertyGroup ;
   sh:name "Other title" ;
   sh:nodeKind sh:IRI ;
   sh:order "1"^^xsd:decimal .
 
-artframe_shapes_art:InstanceForm_bf_carrier sh:path bf:carrier ;
+artframe_art_form:InstanceForm_bf_carrier sh:path bf:carrier ;
   sh:class skos:Concept ;
   sh:in ( <http://rdaregistry.info/termList/RDACarrierType/1049> <http://rdaregistry.info/termList/RDACarrierType/1059> <http://rdaregistry.info/termList/RDACarrierType/1045> <http://rdaregistry.info/termList/RDACarrierType/1040> <http://rdaregistry.info/termList/RDACarrierType/1018> <http://rdaregistry.info/termList/RDACarrierType/1047> <http://rdaregistry.info/termList/RDACarrierType/1048> ;
-  sh:group artframe_shapes_art:InstanceTypePropertyGroup ;
+  sh:group artframe_art_property_groups:InstanceTypePropertyGroup ;
   sh:name "Carrier type" ;
   sh:nodeKind sh:IRI ;
   sh:order "0"^^xsd:decimal .
   
-artframe_shapes_art:InstanceForm_bf_media sh:path bf:media ;
+artframe_art_form:InstanceForm_bf_media sh:path bf:media ;
   sh:class skos:Concept ;
   sh:in ( <http://rdaregistry.info/termList/RDAMediaType/1003> <http://rdaregistry.info/termList/RDAMediaType/1007> <http://rdaregistry.info/termList/RDAMediaType/1004> <http://rdaregistry.info/termList/RDAMediaType/1005> <http://rdaregistry.info/termList/RDAMediaType/1006> ) ;
   sh:name "Media type" ;
+  sh:group artframe_art_property_groups:InstanceTypePropertyGroup ;
   sh:nodeKind sh:IRI ;
   sh:order "1"^^xsd:decimal .
   
-artframe_shapes_art:InstanceForm_bf_genreForm sh:path bf:genreForm ;
+artframe_art_form:InstanceForm_bf_genreForm sh:path bf:genreForm ;
   sh:class skos:Concept ;
-  sh:group artframe_shapes_art:InstanceGenreFormPropertyGroup ;
+  sh:group artframe_art_property_groups:InstanceGenreFormPropertyGroup ;
   sh:name "Form Genre" ;
   sh:nodeKind sh:IRI ;
   sh:order "0"^^xsd:decimal ;
-  artframe_shapes_art:lookup artframe_shapes_art:LD4LookupService .
+  artframe_art_form:lookup artframe_art_form:LD4LookupService .
   
 # The following sh:Property with sh:path bf:genreForm/madsrdf:isMemberOfMADSScheme isn't meant to be a field in the form, but rather state a restriction on the use of bf:genreForm to instances from http://id.loc.gov/authorities/genreForms. 
   
-artframe_shapes_art:InstanceForm_bf_genreForm_madsrdf_isMemberOfMADSScheme sh:path <bf:genreForm/madsrdf:isMemberOfMADSScheme> ;
+artframe_art_form:InstanceForm_bf_genreForm_madsrdf_isMemberOfMADSScheme sh:path <bf:genreForm/madsrdf:isMemberOfMADSScheme> ;
  sh:hasValue <http://id.loc.gov/authorities/genreForms> ;
  sh:description "Values for form genre terms" ;
- sh:group artframe_shapes_art:InstanceGenreFormPropertyGroup ;
+ sh:group artframe_art_property_groups:InstanceGenreFormPropertyGroup ;
  sh:name "LCGFT Form Genre Terms" ;
  sh:nodeKind sh:IRI ;
  skos:editorialNote "Use look up service; LCGFT is too big to load directly into an RDF editor, and more importantly we don't want to create MADSAuthorities, only link to them." .
  
- artframe_shapes_art:InstanceForm_arm_hasStylePeriod sh:path arm:hasStylePeriod ;
+ artframe_art_form:InstanceForm_arm_hasStylePeriod sh:path arm:hasStylePeriod ;
   sh:class skos:Concept ;
-  sh:group artframe_shapes_art:InstanceGenreFormPropertyGroup ;
+  sh:group artframe_art_property_groups:InstanceGenreFormPropertyGroup ;
   sh:name "Style Period" ;
   sh:nodeKind sh:IRI ;
   sh:in ( <http://vocab.getty.edu/aat/300019257> <http://vocab.getty.edu/aat/300019280> <http://vocab.getty.edu/aat/300106711> <http://vocab.getty.edu/aat/300106716> <http://vocab.getty.edu/aat/300106723> <http://vocab.getty.edu/aat/300264736> <http://vocab.getty.edu/aat/300264737> <http://vocab.getty.edu/aat/300266744> <http://vocab.getty.edu/aat/300312378> <http://vocab.getty.edu/aat/300386009> <http://vocab.getty.edu/aat/300391250> <http://vocab.getty.edu/aat/300391448> <http://vocab.getty.edu/aat/300393217> <http://vocab.getty.edu/aat/300404836> <http://vocab.getty.edu/aat/300015647> <http://vocab.getty.edu/aat/300016617> <http://vocab.getty.edu/aat/300018279> <http://vocab.getty.edu/aat/300019255> <http://vocab.getty.edu/aat/300020656> <http://vocab.getty.edu/aat/300021516> <http://vocab.getty.edu/aat/300021854> <http://vocab.getty.edu/aat/300022097> <http://vocab.getty.edu/aat/300266481> <http://vocab.getty.edu/aat/300385955> <http://vocab.getty.edu/aat/300385959> <http://vocab.getty.edu/aat/300386794> <http://vocab.getty.edu/aat/300386974> <http://vocab.getty.edu/aat/300387737> <http://vocab.getty.edu/aat/300056487> <http://vocab.getty.edu/aat/300067402> <http://vocab.getty.edu/aat/300263555> <http://vocab.getty.edu/aat/300310539> <http://vocab.getty.edu/aat/300310540> <http://vocab.getty.edu/aat/300310541> <http://vocab.getty.edu/aat/300310542> <http://vocab.getty.edu/aat/300310543> <http://vocab.getty.edu/aat/300310544> <http://vocab.getty.edu/aat/300310545> <http://vocab.getty.edu/aat/300310546> <http://vocab.getty.edu/aat/300310547> <http://vocab.getty.edu/aat/300311734> <http://vocab.getty.edu/aat/300312275> <http://vocab.getty.edu/aat/300379388> <http://vocab.getty.edu/aat/300391392> <http://vocab.getty.edu/aat/300391437> <http://vocab.getty.edu/aat/300393250> <http://vocab.getty.edu/aat/300055513> <http://vocab.getty.edu/aat/300073708> <http://vocab.getty.edu/aat/300148033> ) ;
@@ -531,100 +532,100 @@ artframe_shapes_art:InstanceForm_bf_genreForm_madsrdf_isMemberOfMADSScheme sh:pa
 
 # TODO Update Activity List when there are subclasses.
 
-artframe_shapes_art:InstanceForm_activity_hasActivity sh:path activity:hasActivity ;
+artframe_art_form:InstanceForm_activity_hasActivity sh:path activity:hasActivity ;
   sh:name "Instance level activity or role" ;
   sh:description "Includes MARC field 260 or 264" ;
   sh:order "0"^^xsd:decimal ;
-  sh:group artframe_shapes_art:InstanceActivityPropertyGroup ;
+  sh:group artframe_art_property_groups:InstanceActivityPropertyGroup ;
   tosh:editWidget swa:NestedObjectEditor ;
   sh:class (activity:ArtCopyistActivity activity:CollectorActivity activity:EngraverActivity activity:EtcherActivity activity:FacsimilistActivity activity:LithographerActivity activity:PrintmakerActivity activity:PrinterActivity activity:ManufacturerActivity activity:PublisherActivity activity:ProducerActivity activity:PapermakerActivity activity:StereotyperActivity ).
 
-artframe_shapes_art:InstanceForm_bf_responsibilityStatement sh:path bf:responsibilityStatement ;
+artframe_art_form:InstanceForm_bf_responsibilityStatement sh:path bf:responsibilityStatement ;
       sh:name "Responsibility statement" ;
       sh:order "1"^^xsd:decimal ;
       sh:description "Statement relating to contributors of a resource; usually transcribed." ;
       sh:nodeKind sh:Literal ;
-      sh:group artframe_shapes_art:InstanceActivityPropertyGroup .
+      sh:group artframe_art_property_groups:InstanceActivityPropertyGroup .
       
 
       
 # TODO decide what carrier types can be part of an Instance of an art work
       
-artframe_shapes_art:InstanceForm_bf_hasPart sh:path bf:hasPart ;
+artframe_art_form:InstanceForm_bf_hasPart sh:path bf:hasPart ;
       sh:name "Instance part" ;
       sh:order "0"^^xsd:decimal ;
       sh:description "Part of the instance being described." ;
       sh:class bf:Instance ;
-      sh:group artframe_shapes_art:InstancePartsAccompanimentsPropertyGroup .
+      sh:group artframe_art_property_groups:InstancePartsAccompanimentsPropertyGroup .
      
-artframe_shapes_art:InstanceForm_bf_accompaniedBy sh:path bf:accompaniedBy ;
+artframe_art_form:InstanceForm_bf_accompaniedBy sh:path bf:accompaniedBy ;
       sh:class bf:Instance ;
       sh:description "Resource that accompanies the described resource." ;
       sh:name "Accompanied by" ;
-      sh:group artframe_shapes_art:InstancePartsAccompanimentsPropertyGroup .
+      sh:group artframe_art_property_groups:InstancePartsAccompanimentsPropertyGroup .
 
 # TODO decide what carrier types can accompany an Instance of an art work
       
-artframe_shapes_art:InstanceForm_bf_accompanies sh:path bf:accompanies ;
+artframe_art_form:InstanceForm_bf_accompanies sh:path bf:accompanies ;
       sh:class bf:Instance ;
       sh:description "Resource that adds to or is issued with the described resource." ;
       sh:name "Accompanies" ;
-      sh:group artframe_shapes_art:InstancePartsAccompanimentsPropertyGroup .
+      sh:group artframe_art_property_groups:InstancePartsAccompanimentsPropertyGroup .
  
-artframe_shapes_art:InstanceForm_bf_references sh:path bf:references ;
+artframe_art_form:InstanceForm_bf_references sh:path bf:references ;
       sh:class bf:Instance ;
       sh:description "Resource that is referenced by the described resource." ;
       sh:name "References" ;
-      sh:group artframe_shapes_art:InstancePartsAccompanimentsPropertyGroup .
+      sh:group artframe_art_property_groups:InstancePartsAccompanimentsPropertyGroup .
       
-artframe_shapes_art:InstanceForm_bf_referencedBy sh:path bf:referencedBy ;
+artframe_art_form:InstanceForm_bf_referencedBy sh:path bf:referencedBy ;
       sh:class bf:Instance ;
       sh:description "Resource that references the described resource," ;
       sh:name "Referenced by" ;
-      sh:group artframe_shapes_art:InstancePartsAccompanimentsPropertyGroup .
+      sh:group artframe_art_property_groups:InstancePartsAccompanimentsPropertyGroup .
 
 # TODO Add additional RDA Instance relationships
   
 # ///// PROPERTY SHAPES FOR InstancePhysicalDescriptionPropertyGroup START HERE. /////////////////////////////////////////////////////////////
     
       
-artframe_shapes_art:InstanceForm_bf_extent sh:path bf:extent ;
+artframe_art_form:InstanceForm_bf_extent sh:path bf:extent ;
       sh:name "Instance pagination and foliation" ;
       sh:order "0"^^xsd:decimal ;
       sh:description "Sequential numbering of individual leaves, plates, pages (numbering on both sides), or columns (used as a sequence of numbering) of a resource." ;
       sh:class arm:PaginationFoliation ;
-      sh:group artframe_shapes_art:InstancePhysicalDescriptionPropertyGroup ;
+      sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup ;
       tosh:editWidget swa:NestedObjectEditor .
 
 #TODO: Check if we are using bf or rda property for colorcontent
      
-artframe_shapes_art:InstanceForm_bf_colorContent sh:path bf:colorContent ;
+artframe_art_form:InstanceForm_bf_colorContent sh:path bf:colorContent ;
       sh:name "Color content" ;
       sh:order "1"^^xsd:decimal ;
       sh:description "Color characteristics, e.g., black and white, multicolored." ;
       sh:class bf:ColorContent ;
-      sh:group artframe_shapes_art:InstancePhysicalDescriptionPropertyGroup ;
+      sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup ;
       tosh:editWidget swa:NestedObjectEditor .
       
-artframe_shapes_art:InstanceForm_bf_soundContent sh:path bf:soundContent ;
+artframe_art_form:InstanceForm_bf_soundContent sh:path bf:soundContent ;
       sh:name "Sound content" ;
       sh:order "2"^^xsd:decimal ;
       sh:description "Indication of whether the production of sound is an integral part of the resource." ;
       sh:class bf:SoundContent ;
-      sh:group artframe_shapes_art:InstancePhysicalDescriptionPropertyGroup ;
+      sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup ;
       tosh:editWidget swa:NestedObjectEditor .
           
-artframe_shapes_art:InstanceForm_measure_hasMeasurementGroup sh:path measure:hasMeasurementGroup ;
+artframe_art_form:InstanceForm_measure_hasMeasurementGroup sh:path measure:hasMeasurementGroup ;
       sh:class meas:MeasurementGroup ;
-      sh:group artframe_shapes_art:InstancePhysicalDecriptionPropertyGroup ;
+      sh:group artframe_art_property_groups:InstancePhysicalDecriptionPropertyGroup ;
       sh:name "Instance measurement information" ;
       sh:nodeKind sh:IRI ;
       sh:order "3"^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
       
-artframe_shapes_art:InstanceForm_arm_hasSignatureStatement sh:path arm:hasSignatureStatement ;
+artframe_art_form:InstanceForm_arm_hasSignatureStatement sh:path arm:hasSignatureStatement ;
       sh:class arm:SignatureStatement ;
-      sh:group artframe_shapes_art:InstancePhysicalDescriptionPropertyGroup ;
+      sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup ;
       sh:description "A formulaic statement describing the pattern followed in assembling the sheets of the book, as expressed in its signatures. Signatures are letters, numerals, symbols, or a group of such characters printed at the foot of the rectos of the first few leaves of each gathering (quire) to aid the binder in correctly assembling the sections." ;
       sh:name "Signature statement" ;
       sh:nodeKind sh:IRI ;
@@ -632,9 +633,9 @@ artframe_shapes_art:InstanceForm_arm_hasSignatureStatement sh:path arm:hasSignat
       tosh:editWidget swa:NestedObjectEditor .
       
       
-artframe_shapes_art:InstanceForm_arm_hasMaterial sh:path arm:hasMaterial ;
+artframe_art_form:InstanceForm_arm_hasMaterial sh:path arm:hasMaterial ;
       sh:class <http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#E57> ;
-      sh:group artframe_shapes_art:InstancePhysicalDescriptionPropertyGroup ;
+      sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup ;
       sh:description "Materials that make up this this instance. Materials can also be more granularly associated with each part of the instance, and/or as base or applied material." ;
       sh:name "Has material" ;
       sh:nodeKind sh:IRI ;
@@ -642,9 +643,9 @@ artframe_shapes_art:InstanceForm_arm_hasMaterial sh:path arm:hasMaterial ;
       tosh:editWidget swa:NestedObjectEditor .
 
 
-artframe_shapes_art:InstanceForm__rdau_P60596 sh:path rdau:P60596 ;
+artframe_art_form:InstanceForm__rdau_P60596 sh:path rdau:P60596 ;
       sh:class <http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#E57> ;
-      sh:group artframe_shapes_art:InstancePhysicalDescriptionPropertyGroup ;
+      sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup ;
       sh:description "Base materials for this instance. Base materials can also be more granularly associated with each part of the instance." ;
       sh:name "Has base material" ;
       sh:nodeKind sh:IRI ;
@@ -652,54 +653,54 @@ artframe_shapes_art:InstanceForm__rdau_P60596 sh:path rdau:P60596 ;
       tosh:editWidget swa:NestedObjectEditor .
   
   
-artframe_shapes_art:InstanceForm_rdau_P60159 sh:path rdau:P60159 ;
+artframe_art_form:InstanceForm_rdau_P60159 sh:path rdau:P60159 ;
       sh:class <http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#E57> ;
-      sh:group artframe_shapes_art:InstancePhysicalDescriptionPropertyGroup ;
+      sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup ;
       sh:description "Applied materials for this instance. Applied materials can also be more granularly associated with each part of the instance." ;
       sh:name "Has applied material" ;
       sh:nodeKind sh:IRI ;
       sh:order "7"^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
       
-artframe_shapes_art:InstanceForm_bf_scale sh:path bf:scale ;
+artframe_art_form:InstanceForm_bf_scale sh:path bf:scale ;
   sh:class bf:Scale ;
   sh:description "Ratio of the dimensions of a form contained or embodied in a resource to the dimensions of the entity it represents, e.g., for images or cartographic resources." ;
-  sh:group artframe_shapes_art:WorkScaleFormPropertyGroup ;
+  sh:group artframe_art_property_groups:WorkScaleFormPropertyGroup ;
   sh:name "Scale" ;
   sh:nodeKind sh:IRI ;
   sh:order "0"^^xsd:decimal .   
       
 # ///// PROPERTY SHAPES FOR InstanceOfWork PropertyGroup START HERE. /////////////////////////////////////////////////////////////      
 
-artframe_shapes_art:InstanceForm_bf_instanceOf sh:path bf:instanceOf ;
+artframe_art_form:InstanceForm_bf_instanceOf sh:path bf:instanceOf ;
       sh:class bf:Work ;
       sh:description "Works that this is an instance of" ;
       sh:name "Instance of (work)" ;
-      sh:group artframe_shapes_art:InstanceOfWorkPropertyGroup .
+      sh:group artframe_art_property_groups:InstanceOfWorkPropertyGroup .
       
-artframe_shapes_art:InstanceForm_bf_editionStatement sh:path bf:editionStatement ;
+artframe_art_form:InstanceForm_bf_editionStatement sh:path bf:editionStatement ;
       sh:name "Edition statement or version of the resource" ;
       sh:description: "Edition or version of the resource and associated statements of responsibility for the edition; usually transcribed." ;
       sh:nodeKind sh:Literal ;
-      sh:group artframe_shapes_art:InstanceOfWorkPropertyGroup .
+      sh:group artframe_art_property_groups:InstanceOfWorkPropertyGroup .
 
 
 # ///// PROPERTY SHAPES FOR InstancetoItemPropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
-artframe_shapes_art:InstanceForm_bf_hasItem sh:path bf:hasItem ;
+artframe_art_form:InstanceForm_bf_hasItem sh:path bf:hasItem ;
       sh:class bf:Item ;
       sh:description "Items of this instance" ;
       sh:name "Has item" ;
-      sh:group artframe_shapes_art:InstanceHasItemPropertyGroup .
+      sh:group artframe_art_property_groups:InstanceHasItemPropertyGroup .
       
 
 # ///// PROPERTY SHAPES FOR InstanceNotePropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
-artframe_shapes_art:InstanceForm_bf_note sh:path <http://id.loc.gov/ontologies/bibframe/note> ;
+artframe_art_form:InstanceForm_bf_note sh:path bf:note ;
       sh:description "Instance related notes for when more granualar information isn't captured." ;
       sh:name "Instance notes" ;
       tosh:editWidget swa:NestedObjectEditor ;
-      sh:group artframe_shapes_art:InstanceNotePropertyGroup ;
+      sh:group artframe_art_property_groups:InstanceNotePropertyGroup ;
       sh:or (
          
          [
@@ -728,11 +729,11 @@ artframe_shapes_art:InstanceForm_bf_note sh:path <http://id.loc.gov/ontologies/b
     .
 # ///// PROPERTY SHAPES FOR InstanceBibliographicCitationPropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
-rtframe_shapes_art:InstanceForm__arm_hasCitation sh:path arm:hasCitation ;
+artframe_art_form:InstanceForm__arm_hasCitation sh:path arm:hasCitation ;
   sh:class arm:Citation ;
   tosh:editWidget swa:NestedObjectEditor ;
   sh:description "A single citation within a bibliographic source." ;
-  sh:group artframe_shapes_art:InstanceBibliographicCitationPropertyGroup ;
+  sh:group artframe_art_property_groups:InstanceBibliographicCitationPropertyGroup ;
   sh:name "Bibliographic citation" ;
   sh:nodeKind sh:IRI ;
 sh:order "0"^^xsd:decimal .
@@ -741,10 +742,10 @@ sh:order "0"^^xsd:decimal .
 
 # TODO Decide what Identifier Type are applicable for Instances
 
-artframe_shapes_art:InstanceForm_bf_identifiedBy sh:path bf:identifiedBy ;
+artframe_art_form:InstanceForm_bf_identifiedBy sh:path bf:identifiedBy ;
       sh:class bf:Identifier ;
       sh:description "Identifiers for Instances" ;
-      sh:group artframe_shapes_art:InstanceIdentifierPropertyGroup ;
+      sh:group artframe_art_property_groups:InstanceIdentifierPropertyGroup ;
       sh:name "Instance Identifier" ;
       sh:nodeKind sh:IRI .         
           
@@ -753,28 +754,28 @@ artframe_shapes_art:InstanceForm_bf_identifiedBy sh:path bf:identifiedBy ;
 
 
 
-artframe_shapes_art:ItemForm rdf:type rdfs:Class ;
+artframe_art_form:ItemForm rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Item of Art Work" ;
   rdfs:subClassOf rdfs:Resource ;
   sh:targetClass bf:Item ;
-  sh:property artframe_shapes_art:ItemForm_arm_hasPreferredTitle ;
-  sh:property artframe_shapes_art:ItemForm_bf_title ;
-  sh:property artframe_shapes_art:ItemForm_activity_hasActivity ;
-  sh:property artframe_shapes_art:ItemForm_bf_genreForm ;
-  sh:property artframe_shapes_art:ItemForm_bf_hasPart ;
-  sh:property artframe_shapes_art:ItemForm_bf__partOf ;
-  sh:property artframe_shapes_art:ItemForm_arm_isOnCarrier ;
-  sh:property artframe_shapes_art:ItemForm_bf_extent ;
-  sh:property artframe_shapes_art:ItemForm_measure_hasMeasurementGroup ;
-  sh:property artframe_shapes_art:ItemForm_arm_hasSignatureStatement ;
-  sh:property artframe_shapes_art:ItemForm_arm_hasMaterial ;
-  sh:property artframe_shapes_art:ItemForm_arm_hasBaseMaterial ;
-  sh:property artframe_shapes_art:ItemForm_arm_hasAppliedMaterial ;
-  sh:property artframe_shapes_art:ItemForm_bf_itemOf ;
-  sh:property artframe_shapes_art:ItemForm_bf_note ;
-  sh:property artframe_shapes_art:ItemForm_bf_identifiedBy ;
-  sh:property artframe_shapes_art_exhibition:ItemForm_arm_hasExhibition .
+  sh:property artframe_art_form:ItemForm_arm_hasPreferredTitle ;
+  sh:property artframe_art_form:ItemForm_bf_title ;
+  sh:property artframe_art_form:ItemForm_activity_hasActivity ;
+  sh:property artframe_art_form:ItemForm_bf_genreForm ;
+  sh:property artframe_art_form:ItemForm_bf_hasPart ;
+  sh:property artframe_art_form:ItemForm_bf__partOf ;
+  sh:property artframe_art_form:ItemForm_arm_isOnCarrier ;
+  sh:property artframe_art_form:ItemForm_bf_extent ;
+  sh:property artframe_art_form:ItemForm_measure_hasMeasurementGroup ;
+  sh:property artframe_art_form:ItemForm_arm_hasSignatureStatement ;
+  sh:property artframe_art_form:ItemForm_arm_hasMaterial ;
+  sh:property artframe_art_form:ItemForm_arm_hasBaseMaterial ;
+  sh:property artframe_art_form:ItemForm_arm_hasAppliedMaterial ;
+  sh:property artframe_art_form:ItemForm_bf_itemOf ;
+  sh:property artframe_art_form:ItemForm_bf_note ;
+  sh:property artframe_art_form:ItemForm_bf_identifiedBy ;
+  sh:property artframe_art_formt_exhibition:ItemForm_arm_hasExhibition .
 
 # ///// PROPERTY SHAPES FOR ItemOfInstance PropertyGroup START HERE. /////////////////////////////////////////////////////////////      
 
@@ -782,7 +783,7 @@ artframe_shapes_art:ItemForm__bf_itemOf sh:path bf:itemOf ;
       sh:class bf:Instance ;
       sh:description "Instances that this is an item of" ;
       sh:name "Item of (instances)" ;
-sh:group artframe_shapes_art:ItemOfInstancePropertyGroup .
+sh:group artframe_art_property_groups:ItemOfInstancePropertyGroup .
 
 # ///// PROPERTY SHAPES FOR Item TITLE PropertyGroup START HERE. /////////////////////////////////////////////////////////////     
 
@@ -790,7 +791,7 @@ artframe_shapes_art:ItemForm_arm_hasPreferredTitle sh:path arm:hasPreferredTitle
   sh:class bf:Title ;
   tosh:editWidget swa:NestedObjectEditor ;
   sh:description "Record PreferredTitles here; there can be only one preferred title per language." ;
-  sh:group artframe_shapes_art:ItemTitlePropertyGroup ;
+  sh:group artframe_art_property_groups:ItemTitlePropertyGroup ;
   sh:name "Preferred title" ;
   sh:nodeKind sh:IRI ;
   sh:order "0"^^xsd:decimal .
@@ -799,7 +800,7 @@ artframe_shapes_art:ItemForm_bf_title sh:path bf:title ;
   sh:class bf:Title ;
   tosh:editWidget swa:NestedObjectEditor ;
   sh:description "Record non-PreferredTitles here. Use Preferred Title to capture a preferred title." ;
-  sh:group artframe_shapes_art:ItemTitlePropertyGroup ;
+  sh:group artframe_art_property_groups:ItemTitlePropertyGroup ;
   sh:name "Other title" ;
   sh:nodeKind sh:IRI ;
   sh:order "1"^^xsd:decimal .
@@ -815,7 +816,7 @@ artframe_shapes_art:ItemForm_arm_hasActivity sh:path arm:hasActivity ;
   sh:name "Agent activity and role for the item" ;
   sh:description "Item level agent activities" ;
   sh:order "0"^^xsd:decimal ;
-  sh:group artframe_shapes_art:ItemActivityPropertyGroup ;
+  sh:group artframe_art_property_groups:ItemActivityPropertyGroup ;
   tosh:editWidget swa:NestedObjectEditor ;
   sh:class ( activity:PapermakerActivity activity:StereotyperActivity ).
   
@@ -823,7 +824,7 @@ artframe_shapes_art:ItemForm_arm_hasActivity sh:path arm:hasActivity ;
   
 artframe_shapes_art:ItemForm_bf_genreForm sh:path bf:genreForm ;
   sh:class skos:Concept ;
-  sh:group artframe_shapes_art:ItemGenreFormPropertyGroup ;
+  sh:group artframe_art_property_groups:ItemGenreFormPropertyGroup ;
   sh:name "Form Genre" ;
   sh:nodeKind sh:IRI ;
   sh:order "0"^^xsd:decimal ;
@@ -831,7 +832,7 @@ artframe_shapes_art:ItemForm_bf_genreForm sh:path bf:genreForm ;
   
 artframe_shapes_art:ItemForm_bf_genreForm_madsrdf_isMemberOfMADSScheme sh:path <bf:genreForm/skos:inScheme> ;
  sh:description "Values for form genre terms" ;
- sh:group artframe_shapes_art:WorkSubjectGenreFormPropertyGroup ;
+ sh:group artframe_art_property_groups:WorkSubjectGenreFormPropertyGroup ;
  sh:name "Form Genre Terms" ;
  sh:nodeKind sh:IRI ;
  sh:or (
@@ -845,7 +846,7 @@ artframe_shapes_art:ItemForm_bf_genreForm_madsrdf_isMemberOfMADSScheme sh:path <
  
 artframe_shapes_art:WorkForm_arm_hasStylePeriod sh:path arm:hasStylePeriod ;
   sh:class skos:Concept ;
-  sh:group artframe_shapes_art:InstanceGenreFormPropertyGroup ;
+  sh:group artframe_art_property_groups:InstanceGenreFormPropertyGroup ;
   sh:name "Style Period" ;
   sh:nodeKind sh:IRI ;
   sh:in ( <http://vocab.getty.edu/aat/300019257> <http://vocab.getty.edu/aat/300019280> <http://vocab.getty.edu/aat/300106711> <http://vocab.getty.edu/aat/300106716> <http://vocab.getty.edu/aat/300106723> <http://vocab.getty.edu/aat/300264736> <http://vocab.getty.edu/aat/300264737> <http://vocab.getty.edu/aat/300266744> <http://vocab.getty.edu/aat/300312378> <http://vocab.getty.edu/aat/300386009> <http://vocab.getty.edu/aat/300391250> <http://vocab.getty.edu/aat/300391448> <http://vocab.getty.edu/aat/300393217> <http://vocab.getty.edu/aat/300404836> <http://vocab.getty.edu/aat/300015647> <http://vocab.getty.edu/aat/300016617> <http://vocab.getty.edu/aat/300018279> <http://vocab.getty.edu/aat/300019255> <http://vocab.getty.edu/aat/300020656> <http://vocab.getty.edu/aat/300021516> <http://vocab.getty.edu/aat/300021854> <http://vocab.getty.edu/aat/300022097> <http://vocab.getty.edu/aat/300266481> <http://vocab.getty.edu/aat/300385955> <http://vocab.getty.edu/aat/300385959> <http://vocab.getty.edu/aat/300386794> <http://vocab.getty.edu/aat/300386974> <http://vocab.getty.edu/aat/300387737> <http://vocab.getty.edu/aat/300056487> <http://vocab.getty.edu/aat/300067402> <http://vocab.getty.edu/aat/300263555> <http://vocab.getty.edu/aat/300310539> <http://vocab.getty.edu/aat/300310540> <http://vocab.getty.edu/aat/300310541> <http://vocab.getty.edu/aat/300310542> <http://vocab.getty.edu/aat/300310543> <http://vocab.getty.edu/aat/300310544> <http://vocab.getty.edu/aat/300310545> <http://vocab.getty.edu/aat/300310546> <http://vocab.getty.edu/aat/300310547> <http://vocab.getty.edu/aat/300311734> <http://vocab.getty.edu/aat/300312275> <http://vocab.getty.edu/aat/300379388> <http://vocab.getty.edu/aat/300391392> <http://vocab.getty.edu/aat/300391437> <http://vocab.getty.edu/aat/300393250> <http://vocab.getty.edu/aat/300055513> <http://vocab.getty.edu/aat/300073708> <http://vocab.getty.edu/aat/300148033> ) ;
@@ -858,20 +859,20 @@ artframe_shapes_art:ItemForm_bf_hasPart sh:path bf:hasPart ;
       sh:order "0"^^xsd:decimal ;
       sh:description "Part of the item being described." ;
       sh:class bf:Item ;
-      sh:group artframe_shapes_art:ItemPartsAccompanimentsPropertyGroup .
+      sh:group artframe_art_property_groups:ItemPartsAccompanimentsPropertyGroup .
 
 artframe_shapes_art:ItemForm_bf_partOf sh:path bf:partOf ;
       sh:name "Part of item" ;
       sh:order "1"^^xsd:decimal ;
       sh:description "The item being described is part of another item." ;
       sh:class bf:Item ;
-      sh:group artframe_shapes_art:ItemPartsAccompanimentsPropertyGroup .
+      sh:group artframe_art_property_groups:ItemPartsAccompanimentsPropertyGroup .
       
 artframe_shapes_art:ItemForm_arm_isOnCarrier sh:path arm:isOnCarrier ;
       sh:name "Is on a carrier" ;
       sh:order "2"^^xsd:decimal ;
       sh:description "The item being described is on a particular carrier (possibly on a carrier with other items)." ;
-      sh:group artframe_shapes_art:ItemPartsAccompanimentsPropertyGroup ;
+      sh:group artframe_art_property_groups:ItemPartsAccompanimentsPropertyGroup ;
       tosh:editWidget swa:NestedObjectEditor .
 
       
@@ -880,7 +881,7 @@ artframe_shapes_art:ItemForm_bf_extent sh:path bf:extent ;
       sh:order "0"^^xsd:decimal ;
       sh:description "Sequential numbering of individual leaves, plates, pages (numbering on both sides), or columns (used as a sequence of numbering) of a resource." ;
       sh:class arm:PaginationFoliation ;
-      sh:group artframe_shapes_art:ItemPhysicalDescriptionPropertyGroup ;
+      sh:group artframe_art_property_groups:ItemPhysicalDescriptionPropertyGroup ;
       tosh:editWidget swa:NestedObjectEditor .
   
 #TODO: Check if we are using bf or rda property for colorcontent
@@ -890,12 +891,12 @@ artframe_shapes_art:ItemForm_bf_colorContent sh:path bf:colorContent ;
       sh:order "1"^^xsd:decimal ;
       sh:description "Color characteristics, e.g., black and white, multicolored." ;
       sh:class bf:ColorContent ;
-      sh:group artframe_shapes_art:ItemPhysicalDescriptionPropertyGroup ;
+      sh:group artframe_art_property_groups:ItemPhysicalDescriptionPropertyGroup ;
       tosh:editWidget swa:NestedObjectEditor .
       
 artframe_shapes_art:ItemForm_measure_hasMeasurementGroup sh:path measure:hasMeasurementGroup ;
       sh:class arm:MeasurementGroup ;
-      sh:group artframe_shapes_art:ItemPhysicalDescriptionPropertyGroup ;
+      sh:group artframe_art_property_groups:ItemPhysicalDescriptionPropertyGroup ;
       sh:name "Item measurement information" ;
       sh:nodeKind sh:IRI ;
       sh:order "2"^^xsd:decimal ;
@@ -903,7 +904,7 @@ artframe_shapes_art:ItemForm_measure_hasMeasurementGroup sh:path measure:hasMeas
       
 artframe_shapes_art:ItemForm_arm_hasMaterial sh:path arm:hasMaterial ;
       sh:class <http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#E57> ;
-      sh:group artframe_shapes_art:ItemPhysicalDescriptionPropertyGroup ;
+      sh:group artframe_art_property_groups:ItemPhysicalDescriptionPropertyGroup ;
       sh:description "Materials that make up this this item. Materials can also be more granularly associated with each part of the item, and/or as base or applied material." ;
       sh:name "Has material" ;
       sh:nodeKind sh:IRI ;
@@ -913,7 +914,7 @@ artframe_shapes_art:ItemForm_arm_hasMaterial sh:path arm:hasMaterial ;
 
 artframe_shapes_art:ItemForm_arm_hasBaseMaterial sh:path arm:hasBaseMaterial ;
       sh:class <http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#E57> ;
-      sh:group artframe_shapes_art:ItemPhysicalDescriptionPropertyGroup ;
+      sh:group artframe_art_property_groups:ItemPhysicalDescriptionPropertyGroup ;
       sh:description "Base materials for this this instance. Base materials can also be more granularly associated with each part of the item." ;
       sh:name "Has base material" ;
       sh:nodeKind sh:IRI ;
@@ -923,7 +924,7 @@ artframe_shapes_art:ItemForm_arm_hasBaseMaterial sh:path arm:hasBaseMaterial ;
   
 artframe_shapes_art:ItemForm_arm_hasAppliedMaterial sh:path arm:hasAppliedMaterial ;
       sh:class <http://www.cidoc-crm.org/html/5.0.4/cidoc-crm.html#E57> ;
-      sh:group artframe_shapes_art:ItemPhysicalDescriptionPropertyGroup ;
+      sh:group artframe_art_property_groups:ItemPhysicalDescriptionPropertyGroup ;
       sh:description "Applied materials for this this item. Applied materials can also be more granularly associated with each part of the item." ;
       sh:name "Has applied material" ;
       sh:nodeKind sh:IRI ;
@@ -937,7 +938,7 @@ artframe_shapes_art:ItemForm_bf_note sh:path bf:note ;
       sh:description "Item related notes for when more granualar information isn't captured." ;
       sh:name "Item notes" ;
       tosh:editWidget swa:NestedObjectEditor ;
-      sh:group artframe_shapes_art:ItemNotePropertyGroup ;
+      sh:group artframe_art_property_groups:ItemNotePropertyGroup ;
       sh:or (
          
          [
@@ -958,7 +959,7 @@ artframe_shapes_art:ItemForm_arm_hasCitation sh:path arm:hasCitation ;
   sh:class arm:Citation ;
   tosh:editWidget swa:NestedObjectEditor ;
   sh:description "A single citation within a bibliographic source." ;
-  sh:group artframe_shapes_art:ItemBibliographicCitationPropertyGroup ;
+  sh:group artframe_art_property_groups:ItemBibliographicCitationPropertyGroup ;
   sh:name "Bibliographic citation" ;
   sh:nodeKind sh:IRI ;
 sh:order "0"^^xsd:decimal . 
@@ -975,7 +976,7 @@ artframe_shapes_art:ItemForm_bf_identifiedBy sh:path <http://id.loc.gov/ontologi
           ]
         ) ;
       sh:description "Identifiers for Items" ;
-      sh:group artframe_shapes_art:ItemIdentifierPropertyGroup ;
+      sh:group artframe_art_property_groups:ItemIdentifierPropertyGroup ;
       sh:name "Item Identifier" ;
       sh:nodeKind sh:IRI .     
 
@@ -1537,17 +1538,17 @@ artframe_shapes_art:InstanceTitleForm
   rdfs:label "Title form" ;
   rdfs:subClassOf rdfs:Resource ;
   sh:targetClass <http://id.loc.gov/ontologies/bibframe/Title> ;
-  sh:property artframe_shapes_art:InstanceTitleForm_rdf_type ;
-  sh:property artframe_shapes_art:InstanceTitleForm_rdf_value ;
-  sh:property artframe_shapes_art:InstanceTitleForm_bf_mainTitle ;
-  sh:property artframe_shapes_art:InstanceTitleForm_bf_subtitle ;
-  sh:property artframe_shapes_art:InstanceTitleForm_bf_partNumber ;
-  sh:property artframe_shapes_art:InstanceTitleForm_bf_partName ;
-  sh:property artframe_shapes_art:InstanceTitleForm_ex_origin ;
-  sh:property artframe_shapes_art:InstanceTitleForm_bf_status ;
-  sh:property artframe_shapes_art:InstanceTitleForm_ex_titleOf ;
-  sh:property artframe_shapes_art:InstanceTitleForm_ex_isPreferredTitleOf ;
-  sh:property artframe_shapes_art:InstanceTitleForm_bf_note ;
+  sh:property artframe_art_form:InstanceTitleForm_rdf_type ;
+  sh:property artframe_art_form:InstanceTitleForm_rdf_value ;
+  sh:property artframe_art_form:InstanceTitleForm_bf_mainTitle ;
+  sh:property artframe_art_form:InstanceTitleForm_bf_subtitle ;
+  sh:property artframe_art_form:InstanceTitleForm_bf_partNumber ;
+  sh:property artframe_art_form:InstanceTitleForm_bf_partName ;
+  sh:property artframe_art_form:InstanceTitleForm_ex_origin ;
+  sh:property artframe_art_form:InstanceTitleForm_bf_status ;
+  sh:property artframe_art_form:InstanceTitleForm_ex_titleOf ;
+  sh:property artframe_art_form:InstanceTitleForm_ex_isPreferredTitleOf ;
+  sh:property artframe_art_form:InstanceTitleForm_bf_note ;
   .
   
 artframe_shapes_art:InstanceTitleForm_rdf_type sh:path rdf:type ;
