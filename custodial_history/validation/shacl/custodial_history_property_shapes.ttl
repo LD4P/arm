@@ -125,7 +125,13 @@
     a sh:PropertyShape ;
     sh:path rdf:type ;
     sh:nodeKind sh:IRI ;
-    sh:targetClass owl:Class ;
+    .
+    
+:rdf_value
+    a sh:PropertyShape ;
+    sh:path rdf:value ;
+    # Not required by the predicate, but this is how our models use it.
+    sh:nodeKind sh:IRI ;
     .
     
 :ch_CustodialEvent_rdf_type 

@@ -4,6 +4,7 @@
 @prefix ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> .
 @prefix crm: <http://www.cidoc-crm.org/Property/P2-has-type/Version-6.2/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix gn: <http://www.geonames.org/ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -76,18 +77,18 @@
     rdfs:label "Custodial event" ;
     sh:targetClass ch:CustodialEvent ;
     sh:property
-        :CustodialEventForm_activity_hasActivity ,
-        :CustodialEventForm_arm_accessionedBy ,
-        :CustodialEventForm_arm_atLocation ,
-        :CustodialEventForm_bf_date , # DONE
+        :CustodialEventForm_activity_hasActivity , # TODO
+        :CustodialEventForm_arm_accessionedBy , 
+        :CustodialEventForm_arm_atLocation , 
+        :CustodialEventForm_bf_date , 
         # Aggregate event of which this event is a part
-        :CustodialEventForm_dcterms_isPartOf ,
-        :CustodialEventForm_rdf_type , # DONE
+        :CustodialEventForm_dcterms_isPartOf , # TODO
+        :CustodialEventForm_rdf_type , 
         :CustodialEventForm_schema_priceSpecification ,
-        :CustodialEventForm_seq_directlyFollows ,
-        :CustodialEventForm_seq_directlyPrecedes ,       
-        :CustodialEventForm_seq_follows ,
-        :CustodialEventForm_seq_precedes ;
+        :CustodialEventForm_seq_directlyFollows , # TODO
+        :CustodialEventForm_seq_directlyPrecedes ,   # TODO     
+        :CustodialEventForm_seq_follows , # TODO
+        :CustodialEventForm_seq_precedes ; # TODO
     .
 
 #
@@ -110,6 +111,58 @@
 ##### CUSTODIAL EVENT ACTIVITY #####
 
 # Possible activities depend on event type - how do we do that?
+
+
+##### CUSTODIAL EVENT ACCESSION NUMBER #####
+
+# NB Also attach the accession number to the Item using bf:identifiedBy. If the number is already
+# attached to the Item, don't create a new Identifier resource.
+# TODO Limit to certain classes of custodial events. 
+
+:CustodialEvent_arm_accessionedBy 
+    sh:and (
+        custodial_history_property_shapes:ch_accessionedBy
+        [
+            # TODO Is this correct? Could there be AccessionNumbers with 
+            # different statuses (current, invalid, etc.)?
+            sh:maxCount 1 ;
+            # NON-VALIDATING
+            sh:name "Accession number" ;
+            sh:description "Accession number of the item associated with the event." ;
+            # Probably just one identifier, so don't need property group? 
+            # But see note above on sh:maxCount.
+            # sh:group raremat_monograph_property_groups:IdentifierPropertyGroup ;
+            sh:order "0"^^xsd:decimal ;
+        ]
+    ) ;
+    .
+    
+:AccessionNumberForm 
+    a sh:NodeShape ;
+    rdfs:label "Accession number" ;
+    sh:targetClass ch:AccessionNumber ;
+    sh:property custodial_history_property_shapes:rdf_value ;
+    .    
+    
+
+##### CUSTODIAL EVENT LOCATION #####
+
+:CustodialEvent_arm_atLocation 
+    sh:and (
+        custodial_history_property_shapes:arm_atLocation
+        [
+            sh:maxCount 1 ;
+            # NON-VALIDATING
+            sh:name "Location" ;
+            sh:description "Location of the event" ;
+            sh:group raremat_monograph_property_groups:LocationPropertyGroup ;
+            sh:order "0"^^xsd:decimal ;
+            sh:nodeKind sh:IRI ;
+            sh:class gn:Feature ;     
+            raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
+        ]
+    ) ;
+    .
 
 
 ##### CUSTODIAL EVENT DATE #####

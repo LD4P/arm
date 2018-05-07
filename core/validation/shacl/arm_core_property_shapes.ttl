@@ -187,7 +187,6 @@
     a sh:PropertyShape ;
     sh:path rdf:type ;
     sh:nodeKind sh:IRI ;
-    sh:targetClass owl:Class ;
     .
     
 :rdf_value

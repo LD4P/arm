@@ -28,7 +28,7 @@
         <rdfs:label xml:lang="en">Custodial History Ontology</rdfs:label>
         <dcterms:title xml:lang="en">Custodial History Ontology</dcterms:title>
         <skos:definition xml:lang="en">The Custodial History Ontology models the custodial history of resources, including events, such as transfer of ownership, and time periods, such as ownership. While developed for use in the bibliographic domain, it can be used in other descriptive contexts as well.</skos:definition>
-        <vann:preferredNamespacePrefix>cho</vann:preferredNamespacePrefix>
+        <vann:preferredNamespacePrefix>ch</vann:preferredNamespacePrefix>
     </owl:Ontology>
     
     
