@@ -123,24 +123,11 @@ artframe_shapes_art:WorkForm_activity_hasActivity sh:path activity:hasActivity ;
   tosh:editWidget swa:NestedObjectEditor ; 
   sh:class ( activity:AuthorActivity activity:CreatorActivity activity:ArchitectActivity activity:ArtistActivity activity:DesignerActivity activity:DraftsmanActivity activity:PhotographerActivity activity:SculptorActivity ) .
   
-# ///// PROPERTY SHAPES FOR WorkOriginPropertyGroup START HERE. /////////////////////////////////////////////////////////////
-
-  
-  artframe_shapes_art:WorkForm_bf_date sh:path bf:date ;
-  sh:name "Date associated with the work" ;
-  sh:order "1"^^xsd:decimal ;
-  sh:group artframe_shapes_art:OriginPropertyGroup ;
-  sh:nodeKind sh:Literal .
-  
-  artframe_shapes_art:WorkForm_bf_originDate sh:path bf:originDate ;
-  sh:name "Work Creation Date" ;
-  sh:order "2"^^xsd:decimal ;
-  sh:group artframe_shapes_art:OriginPropertyGroup ;
-  sh:nodeKind sh:Literal .
+# ///// PROPERTY SHAPES FOR WorkCopyrightPropertyGroup START HERE. /////////////////////////////////////////////////////////////
   
  artframe_shapes_art:WorkForm_bf_copyrightDate sh:path bf:copyrightDate ;
   sh:name "Copyright date" ;
-  sh:order "3"^^xsd:decimal ;
+  sh:order "0"^^xsd:decimal ;
   sh:group artframe_shapes_art:OriginPropertyGroup ;
   sh:nodeKind sh:Literal .
    
@@ -1862,7 +1849,7 @@ artframe_shapes_art:FontForm_arm_hasTypeface sh:path arm:hasTypeface ;
       sh:class <http://example.org/Typeface> ;
       sh:nodeKind sh:IRI ;
       sh:name "Has typeface" ;
-      sh:description "A design or “font family” created by a typographer or type designer. It defines specific stylistic features to determine the type display of a writing system." .
+      sh:description "A design or Â“font familyÂ” created by a typographer or type designer. It defines specific stylistic features to determine the type display of a writing system." .
       
 artframe_shapes_art:FontForm_measure_hasMeasurement sh:path measure:hasMeasurement ;
       sh:order "1"^^xsd:decimal ;
