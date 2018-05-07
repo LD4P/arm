@@ -1143,6 +1143,7 @@ raremat_monograph_form:ItemForm
   sh:property raremat_monograph_form:ItemForm_bf_extent ;
   sh:property raremat_monograph_form:ItemForm_measure_hasMeasurementGroup ;
   sh:property raremat_monograph_form:ItemForm_arm_hasSignatureStatement ;
+  sh:property raremat_monograph_form:ItemForm_arm_hasPhysicalCondition_rdf_value ;
   sh:property raremat_monograph_form:ItemForm_arm_hasMaterial ;
   sh:property raremat_monograph_form:ItemForm_rdau_P60596 ;
   sh:property raremat_monograph_form:ItemForm_rdau_P60159 ;
@@ -1265,6 +1266,15 @@ raremat_monograph_form:ItemForm_arm_hasSignatureStatement sh:path arm:hasSignatu
       sh:nodeKind sh:IRI ;
       sh:order ""^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
+      
+raremat_monograph_form:ItemForm_arm_hasPhysicalCondition_rdf_value
+      sh:path ( arm:hasPhysicalCondition rdf:value ) ;
+      # The bf:PhysicalCondition will only have a rdf:value off from it for now. No need to create a separate form in the SHACL until a full implementation of the PhysicalCondition model is desired.
+      sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;
+      sh:description "Description of characteristics such as physical appearance, level of damage, quality, or completeness" ;
+      sh:name "Physical condition" ;
+      sh:nodeKind sh:Literal ;
+      sh:order ""^^xsd:decimal .
       
 raremat_monograph_form:ItemForm_arm_hasMaterial sh:path arm:hasMaterial ;
       sh:class crm:E57 ;
