@@ -797,7 +797,7 @@ raremat_monograph_form:InstanceForm
   sh:property raremat_monograph_form:InstanceForm_award_receives ;
   sh:property raremat_monograph_form:InstanceForm_bf_note ;
   sh:property raremat_monograph_form:InstanceForm_bf_identifiedBy ;
-  sh:property raremat_monograph_enclosure:RareMatForm_dcterms_hasPart_arm_Enclosure ;
+  sh:property raremat_monograph_enclosure:RareMatForm_bf_hasPart_arm_Enclosure ;
   .
 
 
@@ -1158,7 +1158,7 @@ raremat_monograph_form:ItemForm
   # sh:property raremat_shapes_monograph_exhibition:ItemForm_arm_hasExhibition ;
   # Same PropertyShape for both Item and Instance (and any resource parts we
   # would want to add it to in the future), so giving it a generic name.
-  sh:property raremat_monograph_enclosure:RareMatForm_dcterms_hasPart_arm_Enclosure ;
+  sh:property raremat_monograph_enclosure:RareMatForm_bf_hasPart_arm_Enclosure ;
   sh:property raremat_monograph_custodial_history:ItemForm_arm_hasCustodialHistory ;
   . 
 

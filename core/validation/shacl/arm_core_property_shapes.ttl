@@ -3,7 +3,6 @@
 @prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix crm: <http://www.cidoc-crm.org/Property/P2-has-type/Version-6.2/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix gvp: <http://vocab.getty.edu/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -116,6 +115,12 @@
     # sh:datatype edtf:EDTF ;
     .
     
+ :bf_hasPart
+    a sh:PropertyShape ;
+    sh:path bf:hasPart;
+    sh:nodeKind sh:IRI ;
+    .
+    
 :bf_identifiedBy
     a sh:PropertyShape ;
     sh:path bf:identifiedBy ;
@@ -129,7 +134,13 @@
     sh:nodeKind sh:IRI ;
     sh:class bf:Note ;  
     .
-    
+
+:bf_partOf
+    a sh:PropertyShape ;
+    sh:path dcterms:partOf ;
+    sh:nodeKind sh:IRI ;
+    .
+        
 :bf_subject
     a sh:PropertyShape ;
     sh:path bf:subject ;
@@ -168,21 +179,7 @@
     rdfs:comment "Values for materials taken are to be taken from AAT." ;
     skos:editorialNote "Use lookup service; AAT materials is too big to load directly into an RDF editor, or list out in the SHACL" ;
     .
-        
-:dcterms_hasPart
-    a sh:PropertyShape ;
-    sh:path dcterms:hasPart ;
-    # Not required by the predicate (which is an RDF property) but this is how our models use it.
-    sh:nodeKind sh:IRI ;
-    .
-        
-:dcterms_isPartOf
-    a sh:PropertyShape ;
-    sh:path dcterms:isPartOf ;
-    # Not required by the predicate (which is an RDF property), but this is how our models use it.
-    sh:nodeKind sh:IRI ;
-    .
-    
+           
 :rdf_type
     a sh:PropertyShape ;
     sh:path rdf:type ;

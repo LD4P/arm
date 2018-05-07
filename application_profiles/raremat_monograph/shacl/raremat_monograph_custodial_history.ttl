@@ -51,12 +51,12 @@
     rdfs:label "Custodial history" ;
     sh:targetClass ch:CustodialHistory ;
     sh:property
-        :CustodialHistoryForm_dcterms_hasPart ;
+        :CustodialHistoryForm_bf_hasPart ;
     .
     
-:CustodialHistoryForm_dcterms_hasPart 
+:CustodialHistoryForm_bf_hasPart 
     sh:and (
-        custodial_history_property_shapes:dcterms_hasPart 
+        custodial_history_property_shapes:bf_hasPart 
         [
             sh:class ch:CustodialEvent ;
             # NON-VALIDATING
@@ -82,7 +82,7 @@
         :CustodialEventForm_arm_atLocation , 
         :CustodialEventForm_bf_date , 
         # Aggregate event of which this event is a part
-        :CustodialEventForm_dcterms_isPartOf , # TODO
+        :CustodialEventForm_bf_partOf , # TODO
         :CustodialEventForm_rdf_type , 
         :CustodialEventForm_schema_priceSpecification ,
         :CustodialEventForm_seq_directlyFollows , # TODO
