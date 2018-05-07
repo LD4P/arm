@@ -519,14 +519,14 @@ Properties
 > - **Label**: accessions
 > - **URI**: http://example.org/accessions
 > - **Domain**: ex:AccessionNumber
-> - **Range**: unspecified
+> - **Range**: ex:CustodialEvent
 > - **Definition**: 
 > - **Inverse**: ex:accessionedBy
 
 **ex:accessionedBy**
 > - **Label**: accessionedBy
 > - **URI**: http://example.org/accessionedBy
-> - **Domain**: unspecified
+> - **Domain**: CustodialEvent
 > - **Range**: ex:AccessionNumber
 > - **Definition**: 
 > - **Inverse**: ex:accessions
