@@ -188,9 +188,6 @@
     ) ;
     .
 
-##### BINDING COMPONENT #####
-
-# See questions on this approach - GitHub issue #70
 
 ##### BINDING-SPECIFIC SHAPES #####
 
@@ -231,12 +228,12 @@
         :BindingForm_bf_hasPart ; 
     .
 
+##### BINDING COMPONENT #####
+
 :BindingForm_bf_hasPart 
     sh:and (
         arm_core_property_shapes:bf_hasPart
         [
-            # Should apply only to arm:Binding, not other enclosure subtypes.
-            # Does this achieve that?
             sh:class arm:Binding ;
             sh:in (
                 # Getty AAT binding components: http://vocab.getty.edu/page/aat/300194225
@@ -278,7 +275,7 @@
             ) ;
             # NON-VALIDATING
             sh:name "Binding component" ;
-            sh:description "Part of the binding, such as binding boards." ;
+            sh:description "Part of the binding, such as binding board, headband, bead, finishing hardware, etc." ;
             sh:order "0"^^xsd:decimal ;   
         ]
     ) ;
