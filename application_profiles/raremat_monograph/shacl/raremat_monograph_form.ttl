@@ -1302,7 +1302,7 @@ raremat_monograph_form:InstanceForm_arm_hasCitation
 raremat_monograph_form:InstanceForm_award_receives 
       a sh:PropertyShape ;
       sh:path award:receives ;
-      sh:class arm:award/AwardReceipt> ;
+      sh:class award:AwardReceipt> ;
       sh:group raremat_monograph_property_groups:InstanceAwardReceiptPropertyGroup ;
       sh:name "Instance award receipt" ;
       sh:nodeKind sh:IRI ;
