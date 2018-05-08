@@ -19,19 +19,20 @@
 @prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_custodial_history/> .
 @prefix arm_core_property_shapes: <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
 @prefix custodial_history_property_shapes: <https://w3id.org/arm/custodial_history/validation/shacl/custodial_history_property_shapes/> .
+@prefix raremat_monograph_activity: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_activity/> .
+@prefix raremat_monograph_identifier: <https://w3id.org/arm/application_profiles/raremat_monograph/schacl/raremat_monograph/identifier/> .
 
 # TODO Resolve this namespace with the one defined in the file.
 @prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/> .
 
-@prefix raremat_monograph_activity: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_activity/> .
 @prefix raremat_monograph_note: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_note/> .
 @prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/> . 
 
-# TODO Not sure if we want the form to link the Item to a CustodialHistory,
-# and then add the CustodialEvents, or whether we should just add the
-# CustodialEvents and link to the CustodialHistory behind the scenes. In
-# fact, a CustodialHistory resource could be created for the Item when the
-# Item is created. It depends on what makes sense to the catalogers.
+# TODO Catalogers prefer not to have to create a CustodialHistory resource
+# while editing, so it should be created behind the scenes. In fact, a 
+# CustodialHistory resource could be created for the Item when the Item is 
+# created. Instead of following PropertyShape, define shape with 
+# sh:path ( ch:hasCustodialHistory bf:hasPart ).
 :ItemForm_ch_hasCustodialHistory 
     sh:and (
         custodial_history_property_shapes:ch_hasCustodialHistory
@@ -82,56 +83,39 @@
         :CustodialEventForm_arm_atLocation , 
         :CustodialEventForm_bf_date , 
         # Aggregate event of which this event is a part
-        :CustodialEventForm_bf_partOf , # TODO
+        :CustodialEventForm_bf_partOf_ch_CustodialEvent , # TODO
+        # Won't need this if it happens behind the scenes.
+        # :CustodialEventForm_bf_partOf_ch_CustodialHistory , 
         :CustodialEventForm_rdf_type , 
-        :CustodialEventForm_schema_priceSpecification ,
-        :CustodialEventForm_seq_directlyFollows , # TODO
-        :CustodialEventForm_seq_directlyPrecedes ,   # TODO     
-        :CustodialEventForm_seq_follows , # TODO
-        :CustodialEventForm_seq_precedes ; # TODO
+        :CustodialEventForm_schema_priceSpecification , # TODO
+        :CustodialEventForm_seq_directlyFollows , 
+        :CustodialEventForm_seq_directlyPrecedes ,        
+        :CustodialEventForm_seq_follows , 
+        :CustodialEventForm_seq_precedes ; 
     .
-
-#
-# NOTES
-# AccessionNumber - choose from existing attached to this item, or create new
-#
-# precedes/follows: choose from another custodial event for this item
-# could allow creation of new, but then we can end up in a recursive loop.
-# Assume this has to be done by creating a new custodial event and then 
-# adding precedes/follows to it.
-#
-# isPartOf - choose from existing events already in the system, attached
-# to another custodial event which is attached to a different item. In
-# order to prevent a recursive loop, do only from custodial event page.
-#
-# bf:date - do we need a specific form, or just general bf:date form? Ditto
-# arm:atLocation.
-
-   
+ 
 ##### CUSTODIAL EVENT ACTIVITY #####
 
-# Possible activities depend on event type - how do we do that?
+# Possible activities depend on event type - omit for now, as it probably
+# requires a form for each event type.
 
 
 ##### CUSTODIAL EVENT ACCESSION NUMBER #####
 
-# NB Also attach the accession number to the Item using bf:identifiedBy. If the number is already
-# attached to the Item, don't create a new Identifier resource.
+# NB Also attach the accession number to the Item using bf:identifiedBy. If
+# the number is already attached to the Item, use that identifier rather 
+# than creating a new one.
+
 # TODO Limit to certain classes of custodial events. 
 
 :CustodialEvent_arm_accessionedBy 
     sh:and (
         custodial_history_property_shapes:ch_accessionedBy
         [
-            # TODO Is this correct? Could there be AccessionNumbers with 
-            # different statuses (current, invalid, etc.)?
-            sh:maxCount 1 ;
             # NON-VALIDATING
             sh:name "Accession number" ;
             sh:description "Accession number of the item associated with the event." ;
-            # Probably just one identifier, so don't need property group? 
-            # But see note above on sh:maxCount.
-            # sh:group raremat_monograph_property_groups:IdentifierPropertyGroup ;
+            sh:group raremat_monograph_property_groups:IdentifierPropertyGroup ;
             sh:order "0"^^xsd:decimal ;
         ]
     ) ;
@@ -140,10 +124,12 @@
 :AccessionNumberForm 
     a sh:NodeShape ;
     rdfs:label "Accession number" ;
-    sh:targetClass ch:AccessionNumber ;
-    sh:property custodial_history_property_shapes:rdf_value ;
+    sh:targetClass arm:AccessionNumber ;
+    sh:property 
+        raremat_monograph_identifier:rdf_value ,
+        raremat_monograph_identifier:bf_status ;
     .    
-    
+
 
 ##### CUSTODIAL EVENT LOCATION #####
 
@@ -158,6 +144,7 @@
             sh:group raremat_monograph_property_groups:LocationPropertyGroup ;
             sh:order "0"^^xsd:decimal ;
             sh:nodeKind sh:IRI ;
+            # TODO May need to fix based on email thread
             sh:class gn:Feature ;     
             raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
         ]
@@ -180,18 +167,95 @@
     ) ;
     .
 
-##### CUSTODIAL EVENT TYPE #####
 
-# TODO Add non-validating assertions to rdf_type_ch_CustodialEvent
+##### CUSTODIAL EVENT PART OF AGGREGATE CUSTODIAL EVENT #####
+
+# isPartOf - choose from existing events already in the system, attached
+# to another custodial event which is attached to a different item. In
+# order to prevent a recursive loop, do only from custodial event page.
+
+# :CustodialEventForm_bf_isPartOf_ch_CustodialEvent 
+
+
+
+##### CUSTODIAL EVENT TYPE #####
 
 :CustodialEventForm_rdf_type
     sh:and (
         custodial_history_property_shapes:ch_CustodialEvent_rdf_type
         [
             # NON-VALIDATING
-            sh:name "Event type" ;
+            sh:name "Custodial event type" ;
             # TODO Do we need to repeat this here?
             sh:group raremat_monograph_property_groups:ItemHistoryAndProvenance ;
+            sh:order "0"^^xsd:decimal ;
+        ]
+    ) ;
+    .
+
+##### CUSTODIAL EVENT PRICE #####
+
+# Applies to both item-specific and aggregate CustodialEvents.
+
+# Use literals for now; save ISO 4217 for future work
+ 
+##### CUSTODIAL EVENT PRECEDENCE RELATIONSHIPS #####
+
+# Ideally, when creating a CustodialEvent, user would have the option of 
+# using a precedence predicate and either linking to an existing 
+# CustodialEvent belonging to that Item, or creating a new one that gets
+# linked to the Item. Not sure how much of this is do-able, and we would 
+# have to have some limit the depth, as well as prevent recursive loops. For 
+# now, we should probably only make precedes/follows links available from 
+# the event page.
+
+:CustodialEventForm_seq_directlyFollows
+    sh:and (
+        custodial_history_property_shapes:seq_directlyFollows
+        [
+            sh:class ch:CustodialEvent ;
+            # NON-VALIDATING
+            sh:name "Directly follows" ;
+            sh:description "The current custodial event directly follows the designated custodial event." ;
+            sh:order "0"^^xsd:decimal ;
+        ]
+    ) ;
+    .
+    
+:CustodialEventForm_seq_directlyPrecedes
+    sh:and (
+        custodial_history_property_shapes:seq_directlyPrecedes
+        [
+            sh:class ch:CustodialEvent ;
+            # NON-VALIDATING
+            sh:name "Directly precedes" ;
+            sh:description "The current custodial event directly precedes the designated custodial event." ;
+            sh:order "0"^^xsd:decimal ;
+        ]
+    ) ;
+    .
+    
+:CustodialEventForm_seq_follows
+    sh:and (
+        custodial_history_property_shapes:seq_follows
+        [
+            sh:class ch:CustodialEvent ;
+            # NON-VALIDATING
+            sh:name "Follows" ;
+            sh:description "The current custodial event directly or indirectly follows the designated custodial event." ;
+            sh:order "0"^^xsd:decimal ;
+        ]
+    ) ;
+    .
+    
+:CustodialEventForm_seq_precedes
+    sh:and (
+        custodial_history_property_shapes:seq_precedes
+        [
+            sh:class ch:CustodialEvent ;
+            # NON-VALIDATING
+            sh:name "Precedes" ;
+            sh:description "The current custodial event directly or indirectly precedes the designated custodial event." ;
             sh:order "0"^^xsd:decimal ;
         ]
     ) ;

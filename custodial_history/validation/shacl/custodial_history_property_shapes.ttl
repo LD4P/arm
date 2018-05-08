@@ -84,17 +84,40 @@
     sh:nodeKind sh:IRI ; 
     . 
     
+:bf_hasPart_ch_CustodialEvent 
+    a sh:PropertyShape ;
+    sh:path bf:hasPart ;
+    sh:nodeKind sh:IRI ; 
+    sh:class ch:CustodialEvent ;
+    .  
+      
 :bf_partOf 
     a sh:PropertyShape ;
     sh:path bf:partOf ;
     sh:nodeKind sh:IRI ; 
     . 
-    
+
+:bf_partOf_ch_CustodialEvent 
+    a sh:PropertyShape ;
+    sh:path bf:partOf ;
+    sh:nodeKind sh:IRI ; 
+    sh:class ch:CustodialEvent ;
+    . 
+
+:bf_status 
+    a sh:PropertyShape ;
+    sh:path bf:status ;
+    sh:nodeKind sh:IRI ;
+    # Range specified in ontology; in theory shouldn't need to specify here,
+    # since validation *should* factor in ontology axioms.
+    sh:class bf:Status ;
+    . 
+            
 :ch_accessionedBy 
     a sh:PropertyShape ;
     sh:path ch:accessionedBy ;
     sh:nodeKind sh:IRI ; 
-    sh:class ch:AccessionNumber ;
+    sh:class arm:AccessionNumber ;
     .
 
 :ch_accessions 
@@ -104,35 +127,7 @@
     # NB Don't include sh:class bf:Item, since the ontology and validation
     # shapes can be used outside the bibliographic context.
     .
-       
-:ch_hasCustodialHistory 
-    a sh:PropertyShape ;
-    sh:path ch:hasCustodialHistory ;
-    sh:nodeKind sh:IRI ; 
-    sh:class ch:CustodialHistory ;
-    .
-    
-:ch_isCustodialHistoryOf 
-    a sh:PropertyShape ;
-    sh:path ch:isCustodialHistoryOf ;
-    sh:nodeKind sh:IRI ; 
-    # NB Don't include sh:class bf:Item, since the ontology and validation
-    # shapes can be used outside the bibliographic context.
-    .
-    
-:rdf_type
-    a sh:PropertyShape ;
-    sh:path rdf:type ;
-    sh:nodeKind sh:IRI ;
-    .
-    
-:rdf_value
-    a sh:PropertyShape ;
-    sh:path rdf:value ;
-    # Not required by the predicate, but this is how our models use it.
-    sh:nodeKind sh:IRI ;
-    .
-    
+
 :ch_CustodialEvent_rdf_type 
     sh:and (
         :rdf_type
@@ -164,7 +159,35 @@
         ]    
     ) ;
     .
+           
+:ch_hasCustodialHistory 
+    a sh:PropertyShape ;
+    sh:path ch:hasCustodialHistory ;
+    sh:nodeKind sh:IRI ; 
+    sh:class ch:CustodialHistory ;
+    sh:maxCount 1 ;
+    .
     
+:ch_isCustodialHistoryOf 
+    a sh:PropertyShape ;
+    sh:path ch:isCustodialHistoryOf ;
+    sh:nodeKind sh:IRI ; 
+    # NB Don't include sh:class bf:Item, since the ontology and validation
+    # shapes can be used outside the bibliographic context.
+    sh:maxCount 1 ;
+    .
+    
+:rdf_type
+    a sh:PropertyShape ;
+    sh:path rdf:type ;
+    sh:nodeKind sh:IRI ;
+    .
+    
+:rdf_value
+    a sh:PropertyShape ;
+    sh:path rdf:value ;
+    .
+   
 :schema_price
     a sh:PropertyShape ;
     sh:path schema:price ;
@@ -174,7 +197,9 @@
 :schema_priceCurrency
     a sh:PropertyShape ;
     sh:path schema:priceCurrency ;
-    sh:nodeKind sh:Literal ;
+    sh:nodeKind sh:IRI ;
+    # Do not require an ISO 4217 currency unit, because there are also
+    # currencies without such codes, or with unofficial codes.
     .
 
 :schema_priceSpecification
@@ -187,12 +212,14 @@
     a sh:PropertyShape ;
     sh:path seq:directlyFollows ;
     sh:nodeKind sh:IRI ;
+    sh:maxCount 1 ;
     .
     
 :seq_directlyPrecedes
     a sh:PropertyShape ;
     sh:path seq:directlyPrecedes ;
     sh:nodeKind sh:IRI ;
+    sh:maxCount 1 ;
     .
     
 :seq_follows

@@ -75,6 +75,7 @@
     sh:and (
         arm_core_property_shapes:arm_atLocation 
         [
+            # TODO May need to fix based on email thread
             sh:class gn:Feature ;
             # NON-VALIDATING
             sh:name "Location" ;
