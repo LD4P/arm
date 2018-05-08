@@ -3028,7 +3028,119 @@ raremat_monograph_form:MarkingActivityForm_activity_isActivityOf
       sh:name "Location" ;
       sh:class arm:Marking ;
       sh:nodeKind sh:IRI .
+      
+# /////// Work Identifier FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
+raremat_monograph_form:WorkIdentifierForm
+  rdf:type sh:NodeShape ;
+  rdfs:label "Work Identifier" ;
+  sh:targetClass bf:Identifier ;
+  sh:property raremat_monograph_form:WorkIdentifierForm_rdf_type ;
+  sh:property raremat_monograph_form:WorkIdentifierForm_rdf_value ;
+  .
+
+raremat_monograph_form:WorkIdentifierForm_rdf_type 
+      a sh:PropertyShape ;
+      sh:path rdf:type ;
+      sh:name "Type of Identifier" ;
+      sh:in ( bf:Identifier bf:Iswc bf:Istc bf:DissertationIdentifier ) ;
+      sh:minCount "1" .     
+
+raremat_monograph_form:WorkIdentifierForm_rdf_value 
+      a sh:PropertyShape ;
+      sh:path rdf:value ;
+      sh:minCount "1" ;
+      sh:maxCount "1" ;
+      sh:description "String value for the identifier" ;
+      sh:name "Identifier value" ;
+      sh:nodeKind sh:Literal .
+
+
+# The following PropertyShape is not a field in the Work Identifier form. It simply binds this Identifier form to bf:Texts
+
+raremat_monograph_form:WorkIdentifierForm_bf_identifies
+      a sh:PropertyShape ;
+      sh:path bf:identifies ;
+      sh:minCount "1" ;
+      sh:maxCount "1" ;
+      sh:description "The work this identifier identifies" ;
+      sh:name "Work identified" ;
+      sh:class bf:Text .
+      
+# /////// Instance Identifier FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+raremat_monograph_form:InstanceIdentifierForm
+  rdf:type sh:NodeShape ;
+  rdfs:label "Instance Identifier" ;
+  sh:targetClass bf:Identifier ;
+  sh:property raremat_monograph_form:InstanceIdentifierForm_rdf_type ;
+  sh:property raremat_monograph_form:InstanceIdentifierForm_rdf_value ;
+  .
+
+raremat_monograph_form:InstanceIdentifierForm_rdf_type 
+      a sh:PropertyShape ;
+      sh:path rdf:type ;
+      sh:in ( bf:Identifier bf:Isbn bf:Coden bf:CopyrightNumber bf:Fingerprint bf:Ismn bf:Iso bf:Istc bf:Lccn bf:Local bf:Nbn arm:OclcNumber bf:PublisherNumber bf:ReportNumber bf:Strn ) ;
+      sh:name "Type of Identifier" ;
+      sh:minCount "1" .     
+
+raremat_monograph_form:InstanceIdentifierForm_rdf_value 
+      a sh:PropertyShape ;
+      sh:path rdf:value ;
+      sh:minCount "1" ;
+      sh:maxCount "1" ;
+      sh:description "String value for the identifier" ;
+      sh:name "Identifier value" ;
+      sh:nodeKind sh:Literal .
+
+
+# The following PropertyShape is not a field in the Instance Identifier form. It simply binds this Identifier form to bf:Instance
+
+raremat_monograph_form:InstanceIdentifierForm_bf_identifies
+      a sh:PropertyShape ;
+      sh:path bf:identifies ;
+      sh:minCount "1" ;
+      sh:maxCount "1" ;
+      sh:description "The instance this identifier identifies" ;
+      sh:name "Instance identified" ;
+      sh:class bf:Instance .
+      
+# /////// Item Identifier FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+raremat_monograph_form:ItemIdentifierForm
+  rdf:type sh:NodeShape ;
+  rdfs:label "Item Identifier" ;
+  sh:targetClass bf:Identifier ;
+  sh:property raremat_monograph_form:ItemIdentifierForm_rdf_type ;
+  sh:property raremat_monograph_form:ItemIdentifierForm_rdf_value ;
+  .
+
+raremat_monograph_form:ItemIdentifierForm_rdf_type 
+      a sh:PropertyShape ;
+      sh:path rdf:type ;sh:name "Type of Identifier" ;
+      sh:in ( bf:Identifier bf:ShelfMark arm:AccessionNumber bf:Barcode bf:Local ) ;
+      sh:minCount "1" .
+
+raremat_monograph_form:ItemIdentifierForm_rdf_value 
+      a sh:PropertyShape ;
+      sh:path rdf:value ;
+      sh:minCount "1" ;
+      sh:maxCount "1" ;
+      sh:description "String value for the identifier" ;
+      sh:name "Identifier value" ;
+      sh:nodeKind sh:Literal .
+
+
+# The following PropertyShape is not a field in the Item Identifier form. It simply binds this Identifier form to bf:Item
+
+raremat_monograph_form:ItemIdentifierForm_bf_identifies
+      a sh:PropertyShape ;
+      sh:path bf:identifies ;
+      sh:minCount "1" ;
+      sh:maxCount "1" ;
+      sh:description "The item this identifier identifies" ;
+      sh:name "Item identified" ;
+      sh:class bf:Item .
 
 # ///// PROPERTY GROUPS ARE NOW IN https://github.com/LD4P/arm/blob/develop/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups.ttl /////////////////////////////////////////////////////////////
 
