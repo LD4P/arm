@@ -15,8 +15,8 @@
 @prefix prov: <http://www.w3.org/ns/prov> .
 @prefix raremat_monograph_enclosure: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_enclosure/> .
 @prefix raremat_monograph_exhibition: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/> .
-@prefix raremat_monograph_form: <https://w3id.org/arm/application_profile/shacl/raremat_monograph_form/> .
-@prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/> .
+@prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/> .
+@prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/> .
 @prefix rdau: <http://rdaregistry.info/Elements/u/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -30,9 +30,9 @@
 
 # TODO Review namespaces
 
-# TODO annotation properties and imports for <https://w3id.org/arm/application_profile/shacl/raremat_monograph_form/>
+# TODO annotation properties and imports for <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/ >
 
-<https://w3id.org/arm/application_profile/shacl/raremat_monograph_form/>
+<https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/ >
   rdf:type owl:Ontology .
 
 
