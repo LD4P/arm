@@ -1711,8 +1711,8 @@ raremat_monograph_form:PaginationFoliationForm
   rdf:type sh:NodeShape ;
   rdfs:label "Pagination and foliation form" ;
   sh:targetClass arm:PaginationFoliation ;
-  sh:property raremat_monograph_form:NoteForm_rdf_value ;
-  sh:property raremat_monograph_form:NoteForm_dcterms_description ;
+  sh:property raremat_monograph_form:PaginationFoliationForm_rdf_value ;
+  sh:property raremat_monograph_form:PaginationFoliationForm_dcterms_description ;
   .  
 
 raremat_monograph_form:PaginationFoliationForm_rdf_value sh:path rdf:value ;
@@ -1720,7 +1720,7 @@ raremat_monograph_form:PaginationFoliationForm_rdf_value sh:path rdf:value ;
       sh:name "Pagination and foliation" ;
       sh:nodeKind sh:Literal .    
 
-raremat_monograph_form:NoteForm_dcterms_description sh:path dcterms:description ;
+raremat_monograph_form:PaginationFoliationForm_dcterms_description sh:path dcterms:description ;
       sh:description "Description of the pagination and/or foliation, including errors." ;
       sh:name "Description of pagination and foliation" ;
       sh:nodeKind sh:Literal .
@@ -1944,7 +1944,21 @@ raremat_monograph_form:WorkTitleForm_arm_isPreferredTitleOf sh:path arm:isPrefer
       sh:name "Preferred title of text work (if applicable)" .
     
 raremat_monograph_form:WorkTitleForm_bf_note sh:path bf:note ;
-      sh:in ( bf:Note arm:DescriptiveNote arm:CaptainNote arm:InaccuracyNote ) ;
+      sh:or ( 
+         
+         [
+           sh:class bf:Note ;
+         ]
+         [
+           sh:class arm:DescriptiveNote ;
+         ]
+         [
+           sh:class arm:CaptainNote ;
+         ]   
+         [ 
+           arm:InaccuracyNote
+         ]
+          ) ;
       sh:description "Note about this title" ;
       tosh:editWidget swa:NestedObjectEditor ;
       sh:nodeKind sh:IRI ;
@@ -2063,7 +2077,23 @@ raremat_monograph_form:InstanceTitleForm_arm_isPreferredTitleOf sh:path arm:isPr
       sh:name "Preferred title of text work (if applicable)" .
     
 raremat_monograph_form:InstanceTitleForm_bf_note sh:path bf:note ;
-      sh:in ( bf:Note arm:DescriptiveNote arm:CaptainNote arm:InaccuracyNote ) ;
+      sh:name "Note" ;
+      sh:or ( 
+         
+         [
+           sh:class bf:Note ;
+         ]
+         [
+           sh:class arm:DescriptiveNote ;
+         ]
+         [
+           sh:class arm:CaptainNote ;
+         ]   
+         [ 
+           arm:InaccuracyNote
+         ]
+         
+          ) ;
       sh:description "Note about this title" ;
       tosh:editWidget swa:NestedObjectEditor ;
       sh:nodeKind sh:IRI ;
@@ -2181,7 +2211,23 @@ raremat_monograph_form:ItemTitleForm_arm_isPreferredTitleOf sh:path arm:isPrefer
       sh:name "Preferred title of text work (if applicable)" .
     
 raremat_monograph_form:ItemTitleForm_bf_note sh:path bf:note ;
-      sh:in ( bf:Note arm:DescriptiveNote arm:CaptainNote arm:InaccuracyNote ) ;
+      sh:name "Note" ;
+      sh:or ( 
+         
+         [
+           sh:class bf:Note ;
+         ]
+         [
+           sh:class arm:DescriptiveNote ;
+         ]
+         [
+           sh:class arm:CaptainNote ;
+         ]   
+         [ 
+           arm:InaccuracyNote
+         ]
+         
+          ) ;
       sh:description "Note about this title" ;
       tosh:editWidget swa:NestedObjectEditor ;
       sh:nodeKind sh:IRI ;
