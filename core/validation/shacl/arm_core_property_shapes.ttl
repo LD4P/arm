@@ -3,7 +3,6 @@
 @prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix crm: <http://www.cidoc-crm.org/Property/P2-has-type/Version-6.2/> .
-@prefix gvp: <http://vocab.getty.edu/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -140,7 +139,17 @@
     sh:path dcterms:partOf ;
     sh:nodeKind sh:IRI ;
     .
-        
+
+:bf_status 
+    a sh:PropertyShape ;
+    sh:path bf:status ;
+    sh:nodeKind sh:IRI ;
+    # Range specified in ontology; in theory shouldn't need to specify here,
+    # since validation *should* factor in ontology axioms.
+    sh:class bf:Status ;
+
+    . 
+            
 :bf_subject
     a sh:PropertyShape ;
     sh:path bf:subject ;
@@ -158,26 +167,6 @@
     a sh:PropertyShape ;
     sh:nodeKind sh:IRI ;
     sh:class skos:Concept ;
-    .
-        
-# Restriction on the use of crm:P2_has_type to skos:Concepts in AAT's Material Hierarchy. 
-:crm_P2_has_type_gvp_broaderExtended 
-    sh:path ( crm:P2_has_type gvp:broaderExtended ) ;
-    sh:hasValue aat:300010358 ;
-    # NON-VALIDATING
-    sh:name "AAT Material Terms" ;
-    sh:description "Values for materials taken from http://vocab.getty.edu/page/aat/300010358 (AAT's materials hierarchy)" ;
-    skos:editorialNote "Use lookup service; AAT materials is too big to load directly into an RDF editor, or list out in the SHACL" ;
-    .
-           
-# The following sh:path ( crm:P2_has_type skos:inScheme ) isn't meant to be a field in the form, but rather state a restriction on the use of crm:P2_has_type to skos:Concepts in AAT.   
-:crm_P2_has_type_skos_inScheme 
-    sh:path ( crm:P2_has_type skos:inScheme ) ;
-    sh:hasValue <http://vocab.getty.edu/aat/> ;
-    # NON-VALIDATING
-    rdfs:label "AAT Material Terms" ;
-    rdfs:comment "Values for materials taken are to be taken from AAT." ;
-    skos:editorialNote "Use lookup service; AAT materials is too big to load directly into an RDF editor, or list out in the SHACL" ;
     .
            
 :rdf_type
