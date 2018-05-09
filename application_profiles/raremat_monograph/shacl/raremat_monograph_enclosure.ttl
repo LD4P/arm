@@ -33,7 +33,7 @@
 
 
 # Links resource (generally Instance or Item) to Enclosure 
-:RareMatForm_bf_hasPart_arm_Enclosure
+:bf_hasPart_arm_Enclosure
     sh:and (
         arm_core_property_shapes:bf_hasPart
         [
@@ -192,7 +192,7 @@
 ##### BINDING-SPECIFIC SHAPES #####
 
 # Links resource (generally Instance or Item) to Binding 
-:RareMatForm_bf_hasPart_arm_Binding
+:bf_hasPart_arm_Binding
     sh:and (
         arm_core_property_shapes:bf_hasPart
         [
