@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description stylesheet="../../xsl/rbmsvocabs.xsl"
+  xmlns:arm="https://w3id.org/arm/core/vocabularies/binding_type/0.1#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:x="http://www.jenitennison.com/xslt/xspec">
+
+  <!--
+    Test suite for the rbmsvocab.xsl stylesheet, which converts the RBMS Vocab XML export format to RDF/XML.
+    created: 2018-05-08
+    @author: timathom
+  -->
+
+  <!-- Current base URI -->
+  <x:param name="base-uri"
+    >https://w3id.org/arm/core/vocabularies/binding_type/0.1</x:param>
+
+  <!-- id.loc.gov for RBMS -->
+  <x:param name="rbms">http://id.loc.gov/rwo/agents/n78097904</x:param>
+
+  <x:scenario label="When processing a concept in the thesaurus">
+    <x:context href="fixtures/rbmsvocabs.xml" select="/*/CONCEPT[1]"/>
+    <x:expect label="It should output an rdf:Description with a URI">
+      <rdf:Description rdf:about="{concat($base-uri, '/rbbin5')}">...</rdf:Description>
+    </x:expect>
+  </x:scenario>
+
+  <x:scenario label="When processing a UF reference">
+    <x:context href="fixtures/rbmsvocabs.xml" select="/*/CONCEPT[1]/UF"/>
+    <x:expect label="It should output a skos:altLabel">
+      <skos:altLabel xml:lang="en">Perfect bindings</skos:altLabel>
+    </x:expect>
+  </x:scenario>
+
+  <x:scenario label="When processing a CM element">
+    <x:context href="fixtures/rbmsvocabs.xml" select="/*/CONCEPT[7]/CM"/>
+    <x:expect label="It should output a skos:note">
+      <skos:note xml:lang="en">&quot;Cuir-ciselé or cut leather is a self-explanatory decorative technique: the leather is given patterns inscribed by a knife or other sharp tool.&quot;--Needham</skos:note>
+    </x:expect>
+  </x:scenario>
+
+  <x:scenario label="When processing an SN element">
+    <x:context href="fixtures/rbmsvocabs.xml" select="/*/CONCEPT[3]/SN"/>
+    <x:expect label="It should output a skos:scopeNote">
+      <skos:scopeNote xml:lang="en">Gathering term; do not use; index under a narrower term.</skos:scopeNote>
+    </x:expect>
+  </x:scenario>
+
+  <x:scenario label="When processing an HN element">
+    <x:context href="fixtures/rbmsvocabs.xml" select="/*/CONCEPT[6]/HN"/>
+    <x:expect label="It should output a skos:historyNote">
+      <skos:historyNote xml:lang="en">Changed 6/2016. Formerly, &quot;Binding labels&quot; may have been indexed as &quot;Labels.&quot;</skos:historyNote>
+    </x:expect>
+  </x:scenario>
+
+  <x:scenario label="When processing an STA element">
+    <x:context href="fixtures/rbmsvocabs.xml" select="/*/CONCEPT[1]/STA"/>
+    <x:expect label="It should output a skos:editorialNote">
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+    </x:expect>
+  </x:scenario>
+
+  <x:scenario
+    label="When processing a BT, NT, or RT element, corresponding SKOS elements should be returned">
+    <x:scenario label="When called with BT">
+      <x:call function="arm:broader-narrower">
+        <x:param href="fixtures/rbmsvocabs.xml" name="node"
+          select="/*/CONCEPT[3]"/>
+        <x:param name="name" select="'BT'"/>
+      </x:call>
+      <x:expect label="skos:broader should be returned">
+        <skos:broader rdf:resource="{concat($base-uri, '/rbbin7')}"/>
+      </x:expect>
+    </x:scenario>
+    <x:scenario label="When called with NT">
+      <x:call function="arm:broader-narrower">
+        <x:param href="fixtures/rbmsvocabs.xml" name="node"
+          select="/*/CONCEPT[4]"/>
+        <x:param name="name" select="'NT'"/>
+      </x:call>
+      <x:expect label="skos:narrower should be returned">
+        <skos:narrower rdf:resource="{concat($base-uri, '/rbbin8')}"/>
+      </x:expect>
+    </x:scenario>
+    <x:scenario label="When called with RT">
+      <x:call function="arm:broader-narrower">
+        <x:param href="fixtures/rbmsvocabs.xml" name="node"
+          select="/*/CONCEPT[5]"/>
+        <x:param name="name" select="'RT'"/>
+      </x:call>
+      <x:expect label="skos:related should be returned">
+        <skos:related rdf:resource="{concat($base-uri, '/rbbin9')}"/>
+      </x:expect>
+    </x:scenario>
+  </x:scenario>
+
+  <x:scenario label="When processing INP | APP | UPD | NVD">
+    <x:context href="fixtures/rbmsvocabs.xml"
+      select="/*/CONCEPT[1]/(INP | APP | UPD | NVD)"/>
+    <x:expect
+      label="A sequence of skos:changeNote[rdf:parseType='Resource'] elements should be returned">
+      <skos:changeNote rdf:parseType="Resource">
+        <rdf:value>INP</rdf:value>
+        <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+        <dcterms:date>2005-06-16</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+        <rdf:value>APP</rdf:value>
+        <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+        <dcterms:date>2005-06-16</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+        <rdf:value>UPD</rdf:value>
+        <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+        <dcterms:date>2006-07-19</dcterms:date>
+      </skos:changeNote>
+    </x:expect>
+  </x:scenario>
+
+</x:description>
