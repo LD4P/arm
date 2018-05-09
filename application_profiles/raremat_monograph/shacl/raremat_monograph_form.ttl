@@ -15,7 +15,6 @@
 @prefix prov: <http://www.w3.org/ns/prov> .
 @prefix raremat_monograph_custodial_history: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_custodial_history/> .
 @prefix raremat_monograph_enclosure: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_enclosure/> .
-@prefix raremat_monograph_exhibition: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/> .
 @prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/> .
 @prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/> .
 @prefix rdau: <http://rdaregistry.info/Elements/u/> .
@@ -948,6 +947,7 @@ raremat_monograph_form:InstanceForm
   sh:property raremat_monograph_form:InstanceForm_bf_responsibilityStatement ;
   sh:property raremat_monograph_form:InstanceForm_bf_provisionActivityStatement ;
   sh:property raremat_monograph_form:InstanceForm_bf_hasPart ;
+  sh:property raremat_monograph_enclosure:bf_hasPart_arm_Enclosure ;
   sh:property raremat_monograph_form:InstanceForm_bf_accompaniedBy ;
   sh:property raremat_monograph_form:InstanceForm_bf_accompanies ;
   sh:property raremat_monograph_form:InstanceForm_bf_extent ;
@@ -1363,6 +1363,7 @@ raremat_monograph_form:ItemForm
   sh:property raremat_monograph_form:ItemForm_activity_hasActivity ;
   sh:property raremat_monograph_form:ItemForm_bf_genreForm ;
   sh:property raremat_monograph_form:ItemForm_bf_hasPart ;
+  sh:property raremat_monograph_enclosure:bf_hasPart_arm_Enclosure ;
   sh:property raremat_monograph_form:ItemForm_bf_partOf ;
   sh:property raremat_monograph_form:ItemForm_arm_isOnCarrier ;
   sh:property raremat_monograph_form:ItemForm_bf_extent ;
@@ -2874,10 +2875,7 @@ raremat_monograph_form:MaterialForm_crm_P2_has_type_gvp_broaderExtended
 # The following sh:path ( crm:P2_has_type skos:inScheme) isn't meant to be a field in the form, but rather state a restriction on the use of crm:P2_has_type to skos:Concepts in AAT. 
   
 raremat_monograph_form:MaterialForm_crm_P2_has_type_skos_inScheme 
-<<<<<<< HEAD
-=======
     a sh:PropertyShape ;
->>>>>>> develop
     sh:path ( crm:P2_has_type skos:inScheme ) ;
     sh:hasValue <http://vocab.getty.edu/aat/> ;
     sh:description "Values for materials taken are to be taken from AAT." ;
