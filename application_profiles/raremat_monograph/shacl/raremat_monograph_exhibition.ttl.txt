@@ -62,8 +62,8 @@
         :ExhibitionEventForm_bf_note ,          # DONE??
         :ExhibitionEventForm_bf_subject ,      # TODO specify the embedded form? or not, since just a lookup
         :ExhibitionEventForm_bf_title ,        # TODO specify the embedded form
-        :ExhibitionEventForm_dcterms_hasPart ,  # TODO specify the embedded form
-        :ExhibitionEventForm_dcterms_isPartOf ;
+        :ExhibitionEventForm_bf_hasPart ,  # TODO specify the embedded form
+        :ExhibitionEventForm_bf_partOf ;
     .
     
 :ExhibitionEventForm_arm_atLocation
@@ -208,9 +208,9 @@
     ) ;
     . 
     
-:ExhibitionEventForm_dcterms_hasPart
+:ExhibitionEventForm_bf_hasPart
     sh:and (
-        arm_core_property_shapes:dcterms_hasPart 
+        arm_core_property_shapes:bf_hasPart 
         [
             sh:class schema:ExhibitionEvent ;
             # NON-VALIDATING

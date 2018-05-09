@@ -13,6 +13,7 @@
 @prefix measure: <https://w3id.org/arm/measurement/ontology/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov> .
+@prefix raremat_monograph_custodial_history: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_custodial_history/> .
 @prefix raremat_monograph_enclosure: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_enclosure/> .
 @prefix raremat_monograph_exhibition: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/> .
 @prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/> .
@@ -966,7 +967,7 @@ raremat_monograph_form:InstanceForm
   sh:property raremat_monograph_form:InstanceForm_award_receives ;
   sh:property raremat_monograph_form:InstanceForm_bf_note ;
   sh:property raremat_monograph_form:InstanceForm_bf_identifiedBy ;
-  sh:property raremat_monograph_enclosure:RareMatForm_dcterms_hasPart_arm_Enclosure ;
+  sh:property raremat_monograph_enclosure:bf_hasPart_arm_Enclosure ;
   .
 
 
@@ -1379,7 +1380,10 @@ raremat_monograph_form:ItemForm
   sh:property raremat_monograph_form:ItemForm_bf_note ;
   sh:property raremat_monograph_form:ItemForm_bf_identifiedBy ;
   # sh:property raremat_shapes_monograph_exhibition:ItemForm_arm_hasExhibition ;
-  sh:property raremat_monograph_enclosure:RareMatForm_dcterms_hasPart_arm_Enclosure ;
+  # Same PropertyShape for both Item and Instance (and any resource parts we
+  # would want to add it to in the future), so giving it a generic name.
+  sh:property raremat_monograph_enclosure:bf_hasPart_arm_Enclosure ;
+  sh:property raremat_monograph_custodial_history:ItemForm_arm_hasCustodialHistory ;
   . 
 
 raremat_monograph_form:ItemForm_rdf_type 
@@ -2861,7 +2865,7 @@ raremat_monograph_form:MaterialForm_crm_P2_has_type
 raremat_monograph_form:MaterialForm_crm_P2_has_type_gvp_broaderExtended 
     a sh:PropertyShape ;
     sh:path ( crm:P2_has_type gvp:broaderExtended ) ;
-    sh:hasValue <http://vocab.getty.edu/page/aat/300010358> ;
+    sh:hasValue aat:300010358 ;
     sh:description "Values for materials taken from http://vocab.getty.edu/page/aat/300010358 (AAT's materials hierarchy)" ;
     sh:name "AAT Material Terms" ;
     skos:editorialNote "Use look up service; AAT materials is too big to load directly into an RDF editor, or list out in the SHACL" .
@@ -2870,7 +2874,10 @@ raremat_monograph_form:MaterialForm_crm_P2_has_type_gvp_broaderExtended
 # The following sh:path ( crm:P2_has_type skos:inScheme) isn't meant to be a field in the form, but rather state a restriction on the use of crm:P2_has_type to skos:Concepts in AAT. 
   
 raremat_monograph_form:MaterialForm_crm_P2_has_type_skos_inScheme 
+<<<<<<< HEAD
+=======
     a sh:PropertyShape ;
+>>>>>>> develop
     sh:path ( crm:P2_has_type skos:inScheme ) ;
     sh:hasValue <http://vocab.getty.edu/aat/> ;
     sh:description "Values for materials taken are to be taken from AAT." ;

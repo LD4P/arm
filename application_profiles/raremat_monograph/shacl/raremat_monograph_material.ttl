@@ -3,6 +3,7 @@
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix crm: <http://www.cidoc-crm.org/Property/P2-has-type/Version-6.2/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix gvp: <http://vocab.getty.edu/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -19,7 +20,7 @@
 # TODO In combination with PropertyShapes in arm_core_property_shapes, same 
 # as raremat_monograph_form:MaterialForm. Combine.
 #
-# TODO Ignoring arm:hasAppliedMaterial and arm:hasBaseMaterial for now
+# NOTE: Ignoring arm:hasAppliedMaterial and arm:hasBaseMaterial for now.
 #
 
 # Links a resource to its material
@@ -43,14 +44,39 @@
     sh:property 
         :MaterialForm_crm_P2_has_type ;
     .
-        
-:MaterialForm_crm_P2_has_type 
+       
+:MaterialForm_crm_P2_has_type
     sh:and (
         arm_core_property_shapes:crm_P2_has_type
         [
             # NON-VALIDATING
             sh:name "Material type" ;
-            sh:order "0"^^xsd:decimal ;        
+            sh:order "0"^^xsd:decimal ;          
         ]
-    );
+    ) ;
+    .      
+      
+# The following sh:path ( crm:P2_has_type gvp:broaderExtended ) isn't meant 
+# to be a field in the form, but rather state a restriction on the use of 
+# crm:P2_has_type to skos:Concepts in AAT's Material Hierarchy. 
+:MaterialForm_crm_P2_has_type_gvp_broaderExtended 
+    sh:path ( crm:P2_has_type gvp:broaderExtended ) ;
+    sh:hasValue aat:300010358 ;
+    # NON-VALIDATING
+    sh:name "AAT Material Terms" ;
+    sh:description "Values for materials taken from http://vocab.getty.edu/page/aat/300010358 (AAT's materials hierarchy)" ;
+    skos:editorialNote "Use lookup service; AAT materials is too big to load directly into an RDF editor, or list out in the SHACL" ;
     .
+           
+# The following sh:path ( crm:P2_has_type skos:inScheme ) isn't meant to be 
+# a field in the form, but rather state a restriction on the use of 
+# crm:P2_has_type to skos:Concepts in AAT.   
+:MaterialForm_crm_P2_has_type_skos_inScheme 
+    sh:path ( crm:P2_has_type skos:inScheme ) ;
+    sh:hasValue <http://vocab.getty.edu/aat/> ;
+    # NON-VALIDATING
+    rdfs:label "AAT Material Terms" ;
+    rdfs:comment "Values for materials taken are to be taken from AAT." ;
+    skos:editorialNote "Use lookup service; AAT materials is too big to load directly into an RDF editor, or list out in the SHACL" ;
+    .
+        

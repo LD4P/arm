@@ -14,14 +14,12 @@
 
 @prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_activity/> .
 @prefix arm_core_property_shapes: <https://w3id.org/arm/validation/shacl/arm_core_property_shapes/> .
-
-# TODO Resolve these namespaces with those defined in the respective files.
 @prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_form> . 
 @prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/> . 
 
 :ActivityForm
     a sh:NodeShape ;
-    rdfs:label "Related Agent and Role" ;
+    rdfs:label "Related agent and role" ;
     sh:targetClass activity:Activity ;
     sh:property
         # How would this work in a nested form without creating a recursive
@@ -32,8 +30,6 @@
         :ActivityForm_arm_atLocation ;
         # Type is determined by the sub-shape, since the type options
         # depend on the resource related to the activity
-        # TODO Type options should be part of the validation shapes, not
-        # the form shapes, and the latter should inherit from the former.
         # :ActivityForm_rdf_type ;   
     .
 
@@ -75,6 +71,7 @@
     sh:and (
         arm_core_property_shapes:arm_atLocation 
         [
+            # TODO May need to fix based on email thread
             sh:class gn:Feature ;
             # NON-VALIDATING
             sh:name "Location" ;

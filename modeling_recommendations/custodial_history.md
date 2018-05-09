@@ -134,6 +134,9 @@ This sample describes a scenario in which one item has been sold twice, with an 
 
 :price1 a schema:PriceSpecification ;
     schema:price “10” ;
+    # Note: The Schema definition of priceCurrency specifies the object as
+    # a 3-letter ISO 4217 format - i.e., a literal rather than a URI. This
+    # is left as [an area for future research](#AreasForFutureResearch).
     schema:priceCurrency <iso-4217-code> .  
 ```
 
@@ -688,3 +691,4 @@ Properties
   - What are the pros and cons of including non-custodial and custodial events in the same timeline? 
   - Could provide another argument for allowing Activities to attach directly to the History, rather than requiring an intervening custodial or other event; otherwise, one would need to define events for all the activities in the physical condition model (and perhaps other models): condition assessment activity, conservator activity, etc. Or, as above, do away with the history aggregator node altogether and attach individual events and activities directly to the item. The history would then be reconstructed from the various events and activities rather than provided as a unit in a container node.
   - Would require confronting the issue of overlapping and concurrent events, since conservation activities provide a strong use case (e.g., rebinding during a period of ownership).
+- schema:priceSpecification takes a literal value in 3-letter ISO 4217 format as its object; whereas we would like to use URIs if possible. Determine whether an RDF vocabulary for currencies exists, and consider whether it is appropriate to use as object of schema:priceSpecification.

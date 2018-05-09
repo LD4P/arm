@@ -1,0 +1,274 @@
+@prefix activity: <https://w3id.org/arm/core/activity/0.1/> .
+@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> .
+@prefix crm: <http://www.cidoc-crm.org/Property/P2-has-type/Version-6.2/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix : <https://w3id.org/arm/custodial_history/validation/shacl/custodial_history_property_shapes/> .
+
+#
+# ///// CUSTODIAL HISTORY VALIDATION PROPERTY SHAPES - MAY BE EXTENDED BY UI SHAPES ///// #
+#
+#
+# Not requiring edtf:EDTF typing of dates - indicate on forms that it is
+# recommended.
+#
+# TODO Do we really want to specify sh:nodeKind sh:IRI? We should probably
+# leave the option open to sh:BlankNodeOrIRI. Then we can't specify it 
+# here because the form shapes can't override it to specify sh:IRI. From the
+# SHACL doc: "A shape has at most one value for sh:nodeKind."
+#
+# These are only preliminary validation shapes. Add more constraints later.
+#
+
+:activity_hasActivity 
+    a sh:PropertyShape ;
+    sh:path arm:hasActivity ;
+    sh:nodeKind sh:IRI ; 
+    sh:class arm:Activity ;
+    .
+
+:activity_isActivityOf 
+    a sh:PropertyShape ;
+    sh:path activity:isActivityOf ;
+    sh:nodeKind sh:IRI ; 
+    . 
+
+:arm_atLocation
+    a sh:PropertyShape ;
+    sh:path arm:atLocation ;
+    sh:nodeKind sh:IRI ;
+    .
+
+:arm_isAgentOf
+    a sh:PropertyShape ;
+    sh:path arm:isAgentOf ;
+    sh:nodeKind sh:IRI ;
+    .
+        
+:arm_isLocationOf
+    a sh:PropertyShape ;
+    sh:path arm:isLocationOf ;
+    sh:nodeKind sh:IRI ;
+    .
+
+:bf_agent
+    a sh:PropertyShape ;
+    sh:path bf:agent ;
+    sh:class bf:Agent ;
+    sh:nodeKind sh:IRI ;
+    # An Activity always has a unique agent. But might we use bf:agent with 
+    # other subject types, where it wouldn't be unique?
+    # sh:maxCount 1 ;
+    .
+    
+:bf_date
+    a sh:PropertyShape ;
+    sh:path bf:date ;
+    sh:nodeKind sh:Literal ;
+    # Recommended but not required
+    # sh:datatype edtf:EDTF ;
+    .
+       
+:bf_hasPart 
+    a sh:PropertyShape ;
+    sh:path bf:hasPart ;
+    sh:nodeKind sh:IRI ; 
+    . 
+    
+:bf_hasPart_ch_CustodialEvent 
+    a sh:PropertyShape ;
+    sh:path bf:hasPart ;
+    sh:nodeKind sh:IRI ; 
+    sh:class ch:CustodialEvent ;
+    .  
+      
+:bf_partOf 
+    a sh:PropertyShape ;
+    sh:path bf:partOf ;
+    sh:nodeKind sh:IRI ; 
+    . 
+
+:bf_partOf_ch_CustodialEvent 
+    sh:and (
+        :bf_partOf
+        [
+            sh:class ch:CustodialEvent ;
+            sh:maxCount 1 ;
+        ] 
+    ) ;
+    . 
+
+:bf_status 
+    a sh:PropertyShape ;
+    sh:path bf:status ;
+    sh:nodeKind sh:IRI ;
+    # Range specified in ontology; in theory shouldn't need to specify here,
+    # since validation *should* factor in ontology axioms.
+    sh:class bf:Status ;
+    . 
+            
+:ch_accessionedBy 
+    a sh:PropertyShape ;
+    sh:path ch:accessionedBy ;
+    sh:nodeKind sh:IRI ; 
+    sh:class arm:AccessionNumber ;
+    .
+
+:ch_accessions 
+    a sh:PropertyShape ;
+    sh:path ch:accessions ;
+    sh:nodeKind sh:IRI ; 
+    # NB Don't include sh:class bf:Item, since the ontology and validation
+    # shapes can be used outside the bibliographic context.
+    .
+
+:ch_CustodialEvent_rdf_type 
+    sh:and (
+        :rdf_type
+        [
+            sh:in (
+                ch:Accessioning
+                ch:Auction
+                ch:Bequest
+                ch:ClaimOfOwnership
+                ch:Deaccessioning
+                ch:Deposit
+                ch:Destruction
+                ch:Discarding
+                ch:Donation
+                ch:Inheritance
+                ch:Loan
+                ch:Loss
+                ch:Offer
+                ch:Ownership
+                ch:Recovery
+                ch:Repatriation
+                ch:Sale
+                ch:Theft
+                ch:Transfer
+                ch:CustodialEvent 
+            ) ;
+        ]
+    ) ;
+    .
+      
+
+:ch_CustodialEventActivity_rdf_type 
+    sh:and (
+        :rdf_type
+        [
+            sh:in (
+                ch:Accessioning
+                ch:Auction
+                ch:Bequest
+                ch:ClaimOfOwnership
+                ch:Deaccessioning
+                ch:Deposit
+                ch:Destruction
+                ch:Discarding
+                ch:Donation
+                ch:Inheritance
+                ch:Loan
+                ch:Loss
+                ch:Offer
+                ch:Ownership
+                ch:Recovery
+                ch:Repatriation
+                ch:Sale
+                ch:Theft
+                ch:Transfer
+                ch:CustodialEvent 
+            ) ;                         
+        ]    
+    ) ;
+    .
+           
+:ch_hasCustodialHistory 
+    a sh:PropertyShape ;
+    sh:path ch:hasCustodialHistory ;
+    sh:nodeKind sh:IRI ; 
+    sh:class ch:CustodialHistory ;
+    sh:maxCount 1 ;
+    .
+    
+:ch_isCustodialHistoryOf 
+    a sh:PropertyShape ;
+    sh:path ch:isCustodialHistoryOf ;
+    sh:nodeKind sh:IRI ; 
+    # NB Don't include sh:class bf:Item, since the ontology and validation
+    # shapes can be used outside the bibliographic context.
+    sh:maxCount 1 ;
+    .
+    
+:rdf_type
+    a sh:PropertyShape ;
+    sh:path rdf:type ;
+    sh:nodeKind sh:IRI ;
+    .
+    
+:rdf_value
+    a sh:PropertyShape ;
+    sh:path rdf:value ;
+    # Do not specify sh:nodeKind; leave for implementations to define 
+    # according to context.
+    .
+   
+:schema_price
+    a sh:PropertyShape ;
+    sh:path schema:price ;
+    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:decimal ;
+    .
+    
+:schema_priceCurrency
+    a sh:PropertyShape ;
+    sh:path schema:priceCurrency ;
+    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:string ;
+    # Schema defines the value as "The currency (in 3-letter ISO 4217 format) of the price" ;    
+    sh:pattern "^[A-Z]{3}$" ;
+    .
+
+:schema_priceSpecification
+    a sh:PropertyShape ;
+    sh:path schema:priceSpecification ;
+    sh:nodeKind sh:IRI ;
+    sh:class schema:PriceSpecification ;
+    .
+
+:seq_directlyFollows
+    a sh:PropertyShape ;
+    sh:path seq:directlyFollows ;
+    sh:nodeKind sh:IRI ;
+    sh:maxCount 1 ;
+    .
+    
+:seq_directlyPrecedes
+    a sh:PropertyShape ;
+    sh:path seq:directlyPrecedes ;
+    sh:nodeKind sh:IRI ;
+    sh:maxCount 1 ;
+    .
+    
+:seq_follows
+    a sh:PropertyShape ;
+    sh:path seq:follows ;
+    sh:nodeKind sh:IRI ;
+    .
+    
+:seq_precedes
+    a sh:PropertyShape ;
+    sh:path seq:precede ;
+    sh:nodeKind sh:IRI ;
+    .
+
+    

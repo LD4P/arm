@@ -21,11 +21,8 @@
 
 @prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_enclosure/> .
 @prefix arm_core_property_shapes: <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
-
-# TODO Resolve this namespace with the one defined in the file.
-@prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/> .
-
 @prefix raremat_monograph_activity: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_activity/> .
+@prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/> .
 @prefix raremat_monograph_marking: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_marking/> .
 @prefix raremat_monograph_material: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_material/> .
 @prefix raremat_monograph_note: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_note/> .
@@ -33,9 +30,9 @@
 
 
 # Links resource (generally Instance or Item) to Enclosure 
-:RareMatForm_dcterms_hasPart_arm_Enclosure
+:bf_hasPart_arm_Enclosure
     sh:and (
-        arm_core_property_shapes:dcterms_hasPart
+        arm_core_property_shapes:bf_hasPart
         [
             sh:class arm:Enclosure ;
             # NON-VALIDATING   
@@ -188,16 +185,13 @@
     ) ;
     .
 
-##### BINDING COMPONENT #####
-
-# See questions on this approach - GitHub issue #70
 
 ##### BINDING-SPECIFIC SHAPES #####
 
 # Links resource (generally Instance or Item) to Binding 
-:RareMatForm_dcterms_hasPart_arm_Binding
+:bf_hasPart_arm_Binding
     sh:and (
-        arm_core_property_shapes:dcterms_hasPart
+        arm_core_property_shapes:bf_hasPart
         [
             sh:class arm:Binding ;
             # NON-VALIDATING   
@@ -226,21 +220,17 @@
         # Uses general MarkingForm, no special constraints needed
         raremat_monograph_marking:arm_markedBy ,
         :EnclosureForm_bf_note ,   
-        # TODO Omit for now: RBMS Binding type vocabulary needs to be
-        # rendered as RDF. Could use Ligatus Language of Bindings 
-        # (http://www.ligatus.org.uk/lob/hierarchy) but not sure which facet
-        # to use. Need cataloger input. 
+        # TODO Add RBMS terms converted to RDF
         # :BindingForm_crm_P2_has_type ,   
-        :BindingForm_dcterms_hasPart ; 
+        :BindingForm_bf_hasPart ; 
     .
 
-:BindingForm_dcterms_hasPart 
+##### BINDING COMPONENT #####
+
+:BindingForm_bf_hasPart 
     sh:and (
-        arm_core_property_shapes:dcterms_hasPart
+        arm_core_property_shapes:bf_hasPart
         [
-            # Should apply only to arm:Binding, not other enclosure subtypes.
-            # Does this achieve that?
-            sh:class arm:Binding ;
             sh:in (
                 # Getty AAT binding components: http://vocab.getty.edu/page/aat/300194225
                 aat:300261522
@@ -281,7 +271,7 @@
             ) ;
             # NON-VALIDATING
             sh:name "Binding component" ;
-            sh:description "Part of the binding, such as binding boards." ;
+            sh:description "Part of the binding, such as binding board, headband, bead, finishing hardware, etc." ;
             sh:order "0"^^xsd:decimal ;   
         ]
     ) ;

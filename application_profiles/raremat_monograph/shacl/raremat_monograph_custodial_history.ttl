@@ -1,0 +1,283 @@
+@prefix activity: <https://w3id.org/arm/core/activity/0.1/> .
+@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> .
+@prefix crm: <http://www.cidoc-crm.org/Property/P2-has-type/Version-6.2/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix gn: <http://www.geonames.org/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_custodial_history/> .
+@prefix arm_core_property_shapes: <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
+@prefix custodial_history_property_shapes: <https://w3id.org/arm/custodial_history/validation/shacl/custodial_history_property_shapes/> .
+@prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/> .
+@prefix raremat_monograph_activity: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_activity/> .
+@prefix raremat_monograph_identifier: <https://w3id.org/arm/application_profiles/raremat_monograph/schacl/raremat_monograph/identifier/> .
+@prefix raremat_monograph_note: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_note/> .
+@prefix raremat_monograph_price_specification: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_price_specification/> .
+@prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/> . 
+
+# TODO Catalogers prefer not to have to create a CustodialHistory resource
+# while editing, so it should be created behind the scenes. In fact, a 
+# CustodialHistory resource could be created for the Item when the Item is 
+# created. Instead of following PropertyShape, define shape with 
+# sh:path ( ch:hasCustodialHistory bf:hasPart ).
+:ItemForm_ch_hasCustodialHistory 
+    sh:and (
+        custodial_history_property_shapes:ch_hasCustodialHistory
+        [
+            # NON-VALIDATING
+            sh:name "Custodial history" ;
+            sh:description "Custodial history encompasses all the custodial events related to this item." ;
+            sh:group raremat_monograph_property_groups:ItemHistoryAndProvenancePropertyGroup ;
+            sh:order "0"^^xsd:decimal ;   
+            tosh:editWidget swa:NestedObjectEditor ;                  
+        ]
+    ) ;
+    .
+
+:CustodialHistoryForm
+    a sh:NodeShape ;
+    rdfs:label "Custodial history" ;
+    sh:targetClass ch:CustodialHistory ;
+    sh:property
+        :CustodialHistoryForm_bf_hasPart ;
+    .
+    
+:CustodialHistoryForm_bf_hasPart 
+    sh:and (
+        custodial_history_property_shapes:bf_hasPart 
+        [
+            sh:class ch:CustodialEvent ;
+            # NON-VALIDATING
+            sh:name "Custodial event" ;
+            sh:description "Custodial event that is part of this item's custodial history" ;
+            # TODO Do we need to repeat this here?
+            sh:group raremat_monograph_property_groups:ItemHistoryAndProvenance ;
+            sh:order "0"^^xsd:decimal ;
+            tosh:editWidget swa:NestedObjectEditor ;          
+        ]    
+    ) ;
+    .
+    
+##### CUSTODIAL EVENT #####
+
+:CustodialEventForm 
+    a sh:NodeShape ;
+    rdfs:label "Custodial event" ;
+    sh:targetClass ch:CustodialEvent ;
+    sh:property
+        custodial_history_property_shapes:activity_hasActivity , 
+        :CustodialEventForm_arm_accessionedBy , 
+        :CustodialEventForm_arm_atLocation , 
+        :CustodialEventForm_bf_date , 
+        # Aggregate event of which this event is a part
+        :CustodialEventForm_bf_partOf_ch_CustodialEvent ,
+        # Won't need this if it happens behind the scenes.
+        # :CustodialEventForm_bf_partOf_ch_CustodialHistory , 
+        :CustodialEventForm_rdf_type , 
+        raremat_monograph_price_specification:schema_priceSpecification , 
+        :CustodialEventForm_seq_directlyFollows , 
+        :CustodialEventForm_seq_directlyPrecedes ,        
+        :CustodialEventForm_seq_follows , 
+        :CustodialEventForm_seq_precedes ; 
+    .
+ 
+ 
+##### CUSTODIAL EVENT ACTIVITY #####
+
+# Possible activities depend on event type - omit for now, as it probably
+# requires a form for each event type.
+
+:CustodialEventActivityForm
+    sh:and (
+        raremat_monograph_activity:ActivityForm
+        [
+            sh:property :CustodialEventActivityForm_rdf_type ;       
+        ]
+    ) ;
+    .
+
+:CustodialEventActivityForm_rdf_type
+    sh:and (
+        custodial_history_property_shapes::ch_CustodialEventActivity_rdf_type
+        [
+            # NON-VALIDATING
+            sh:name "Role" ;
+            sh:description "The role played by the agent in relation to the custodial event." ;
+            sh:order "0"^^xsd:decimal ;
+        ] 
+    ) ;
+    .    
+
+##### CUSTODIAL EVENT ACCESSION NUMBER #####
+
+# NB Also attach the accession number to the Item using bf:identifiedBy. If
+# the number is already attached to the Item, use that identifier rather 
+# than creating a new one.
+
+# TODO Limit to certain classes of custodial events. 
+
+:CustodialEvent_arm_accessionedBy 
+    sh:and (
+        custodial_history_property_shapes:ch_accessionedBy
+        [
+            # NON-VALIDATING
+            sh:name "Accession number" ;
+            sh:description "Accession number of the item associated with the event." ;
+            sh:group raremat_monograph_property_groups:IdentifierPropertyGroup ;
+            sh:order "0"^^xsd:decimal ;
+        ]
+    ) ;
+    .
+    
+:AccessionNumberForm 
+    a sh:NodeShape ;
+    rdfs:label "Accession number" ;
+    sh:targetClass arm:AccessionNumber ;
+    sh:property 
+        raremat_monograph_identifier:rdf_value ,
+        raremat_monograph_identifier:bf_status ;
+    .    
+
+
+##### CUSTODIAL EVENT LOCATION #####
+
+:CustodialEvent_arm_atLocation 
+    sh:and (
+        custodial_history_property_shapes:arm_atLocation
+        [
+            sh:maxCount 1 ;
+            # NON-VALIDATING
+            sh:name "Location" ;
+            sh:description "Location of the event" ;
+            sh:group raremat_monograph_property_groups:LocationPropertyGroup ;
+            sh:order "0"^^xsd:decimal ;
+            sh:nodeKind sh:IRI ;
+            # TODO May need to fix based on email thread
+            sh:class gn:Feature ;     
+            raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
+        ]
+    ) ;
+    .
+
+
+##### CUSTODIAL EVENT DATE #####
+
+:CustodialEvent_bf_date 
+    sh:and (
+        custodial_history_property_shapes:bf_date
+        [
+            sh:maxCount 1 ;
+            # NON-VALIDATING
+            sh:name "Date" ;
+            sh:description "Date of the custodial event. Recommended to use EDTF format" ;
+            sh:order "0"^^xsd:decimal ;
+        ]
+    ) ;
+    .
+
+
+##### CUSTODIAL EVENT PART OF AGGREGATE CUSTODIAL EVENT #####
+
+# Choose from existing events already in the system, attached
+# to another custodial event which is attached to a different item, or
+# create a new custodial event.
+
+:CustodialEventForm_bf_partOf_ch_CustodialEvent 
+    sh:and (
+        custodial_history_property_shapes:bf_partOf_ch_CustodialEvent
+        [
+            # NON-VALIDATING
+            sh:name "Part of" ;
+            sh:description: "This custodial event is part of a larger custodial event that includes multiple Items" ;
+            sh:order "0"^^xsd:decimal ; 
+        ]    
+    ) ;
+    .   
+
+
+##### CUSTODIAL EVENT TYPE #####
+
+:CustodialEventForm_rdf_type
+    sh:and (
+        custodial_history_property_shapes:ch_CustodialEvent_rdf_type
+        [
+            # NON-VALIDATING
+            sh:name "Custodial event type" ;
+            sh:order "0"^^xsd:decimal ;
+        ]
+    ) ;
+    .
+
+ 
+##### CUSTODIAL EVENT PRECEDENCE RELATIONSHIPS #####
+
+# Ideally, when creating a CustodialEvent, user would have the option of 
+# using a precedence predicate and either linking to an existing 
+# CustodialEvent belonging to that Item, or creating a new one that gets
+# linked to the Item. Not sure how much of this is do-able, and we would 
+# have to have some limit the depth, as well as prevent recursive loops. For 
+# now, we should probably only make precedes/follows links available from 
+# the event page.
+
+:CustodialEventForm_seq_directlyFollows
+    sh:and (
+        custodial_history_property_shapes:seq_directlyFollows
+        [
+            sh:class ch:CustodialEvent ;
+            # NON-VALIDATING
+            sh:name "Directly follows" ;
+            sh:description "The current custodial event directly follows the designated custodial event." ;
+            sh:order "0"^^xsd:decimal ;
+        ]
+    ) ;
+    .
+    
+:CustodialEventForm_seq_directlyPrecedes
+    sh:and (
+        custodial_history_property_shapes:seq_directlyPrecedes
+        [
+            sh:class ch:CustodialEvent ;
+            # NON-VALIDATING
+            sh:name "Directly precedes" ;
+            sh:description "The current custodial event directly precedes the designated custodial event." ;
+            sh:order "0"^^xsd:decimal ;
+        ]
+    ) ;
+    .
+    
+:CustodialEventForm_seq_follows
+    sh:and (
+        custodial_history_property_shapes:seq_follows
+        [
+            sh:class ch:CustodialEvent ;
+            # NON-VALIDATING
+            sh:name "Follows" ;
+            sh:description "The current custodial event directly or indirectly follows the designated custodial event." ;
+            sh:order "0"^^xsd:decimal ;
+        ]
+    ) ;
+    .
+    
+:CustodialEventForm_seq_precedes
+    sh:and (
+        custodial_history_property_shapes:seq_precedes
+        [
+            sh:class ch:CustodialEvent ;
+            # NON-VALIDATING
+            sh:name "Precedes" ;
+            sh:description "The current custodial event directly or indirectly precedes the designated custodial event." ;
+            sh:order "0"^^xsd:decimal ;
+        ]
+    ) ;
+    .
