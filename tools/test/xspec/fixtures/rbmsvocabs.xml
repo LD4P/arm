@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<THESAURUS>
+  <CONCEPT>
+    <DESCRIPTOR>Adhesive bindings</DESCRIPTOR>
+    <SC>rbbin Binding Terms</SC>
+    <UF>Perfect bindings</UF>
+    <BT>Types of binding structure (Gathering term; do not assign)</BT>
+    <NT>Caoutchouc bindings</NT>
+    <RT>Non-adhesive bindings</RT>
+    <STA>Approved</STA>
+    <INP>2005-06-16</INP>
+    <APP>2005-06-16</APP>
+    <UPD>2006-07-19</UPD>
+    <TNR>5</TNR>
+  </CONCEPT>
+  <CONCEPT>
+    <NON-DESCRIPTOR>Perfect bindings</NON-DESCRIPTOR>
+    <SC>rbbin Binding Terms</SC>
+    <USE>Adhesive bindings</USE>
+    <STA>Approved</STA>
+    <INP>2005-06-16</INP>
+    <APP>2005-06-16</APP>
+    <UPD>2006-07-19</UPD>
+    <TNR>6</TNR>
+  </CONCEPT>
+  <CONCEPT>
+    <DESCRIPTOR>Types of binding structure (Gathering term; do not assign)</DESCRIPTOR>
+    <SC>rbbin Binding Terms</SC>
+    <SN>Gathering term; do not use; index under a narrower term.</SN>
+    <NT>Adhesive bindings</NT>
+    <NT>Backless bindings</NT>
+    <NT>Boards</NT>
+    <NT>Case bindings</NT>
+    <NT>Circuit edges</NT>
+    <NT>Dos-à-dos bindings</NT>
+    <NT>Flap bindings</NT>
+    <NT>Girdle books</NT>
+    <NT>Guard books</NT>
+    <NT>Limp bindings</NT>
+    <NT>Mechanical bindings</NT>
+    <NT>Non-adhesive bindings</NT>
+    <NT>Tacketed bindings</NT>
+    <NT>Tucks</NT>
+    <NT>Wrappers</NT>
+    <NT>Yapp style bindings</NT>
+    <STA>Approved</STA>
+    <INP>2005-06-16</INP>
+    <APP>2005-06-16</APP>
+    <UPD>2008-07-11</UPD>
+    <NVD>2000-01-01</NVD>
+    <TNR>7</TNR>
+  </CONCEPT>
+  <CONCEPT>
+    <DESCRIPTOR>Caoutchouc bindings</DESCRIPTOR>
+    <SC>rbbin Binding Terms</SC>
+    <UF>Gutta percha bindings</UF>
+    <BT>Adhesive bindings</BT>
+    <STA>Approved</STA>
+    <INP>2005-06-16</INP>
+    <APP>2005-06-16</APP>
+    <UPD>2006-07-19</UPD>
+    <TNR>8</TNR>
+  </CONCEPT>
+  <CONCEPT>
+    <DESCRIPTOR>Non-adhesive bindings</DESCRIPTOR>
+    <SC>rbbin Binding Terms</SC>
+    <BT>Types of binding structure (Gathering term; do not assign)</BT>
+    <RT>Adhesive bindings</RT>
+    <STA>Approved</STA>
+    <INP>2005-06-16</INP>
+    <APP>2005-06-16</APP>
+    <UPD>2006-07-19</UPD>
+    <TNR>9</TNR>
+  </CONCEPT>
+  <CONCEPT>
+    <DESCRIPTOR>Binding labels</DESCRIPTOR>
+    <SC>rbbin Binding Terms</SC>
+    <HN>Changed 6/2016. Formerly, &quot;Binding labels&quot; may have been indexed as &quot;Labels.&quot;</HN>
+    <UF>Spine labels</UF>
+    <BT>Titling</BT>
+    <NT>Cloth binding labels</NT>
+    <NT>Lettering pieces</NT>
+    <NT>Paper binding labels</NT>
+    <RT>Edge titles</RT>
+    <RT>Tooled lettering</RT>
+    <STA>Approved</STA>
+    <INP>2005-06-16</INP>
+    <APP>2005-06-16</APP>
+    <UPD>2016-06-29</UPD>
+    <NVD>2000-01-01</NVD>
+    <TNR>69</TNR>
+  </CONCEPT>
+  <CONCEPT>
+    <DESCRIPTOR>Cuir-ciselé bindings</DESCRIPTOR>
+    <SC>rbbin Binding Terms</SC>
+    <CM>&quot;Cuir-ciselé or cut leather is a self-explanatory decorative technique: the leather is given patterns inscribed by a knife or other sharp tool.&quot;--Needham</CM>
+    <UF>Cut leather bindings</UF>
+    <UF>Lederschnitt bindings</UF>
+    <BT>Leather bindings</BT>
+    <STA>Approved</STA>
+    <INP>2005-06-16</INP>
+    <APP>2005-06-16</APP>
+    <UPD>2006-07-19</UPD>
+    <TNR>165</TNR>
+  </CONCEPT>
+</THESAURUS>
