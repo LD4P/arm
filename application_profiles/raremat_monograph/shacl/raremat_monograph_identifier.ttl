@@ -34,7 +34,7 @@
            sh:nodeKind sh:Literal ;
            # NON-VALIDATING
            sh:name "Value" ;
-           sh:name "Identifier value." ;
+           sh:description "Identifier value." ;
            sh:order "0"^^xsd:decimal ;        
         ] 
     ) ;

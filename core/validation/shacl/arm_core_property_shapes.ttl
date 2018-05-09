@@ -136,7 +136,7 @@
 
 :bf_partOf
     a sh:PropertyShape ;
-    sh:path dcterms:partOf ;
+    sh:path bf:partOf ;
     sh:nodeKind sh:IRI ;
     .
 
@@ -178,6 +178,6 @@
 :rdf_value
     a sh:PropertyShape ;
     sh:path rdf:value ;
-    # Not required by the predicate, but this is how our models use it.
-    sh:nodeKind sh:IRI ;
+    # Do not specify sh:nodeKind; leave for implementations to define 
+    # according to context.
     .

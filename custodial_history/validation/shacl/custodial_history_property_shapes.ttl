@@ -186,26 +186,31 @@
 :rdf_value
     a sh:PropertyShape ;
     sh:path rdf:value ;
+    # Do not specify sh:nodeKind; leave for implementations to define 
+    # according to context.
     .
    
 :schema_price
     a sh:PropertyShape ;
     sh:path schema:price ;
     sh:nodeKind sh:Literal ;
+    sh:datatype xsd:decimal ;
     .
     
 :schema_priceCurrency
     a sh:PropertyShape ;
     sh:path schema:priceCurrency ;
-    sh:nodeKind sh:IRI ;
-    # Do not require an ISO 4217 currency unit, because there are also
-    # currencies without such codes, or with unofficial codes.
+    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:string ;
+    # Schema defines the value as "The currency (in 3-letter ISO 4217 format) of the price" ;    
+    sh:pattern "^[A-Z]{3}$" ;
     .
 
 :schema_priceSpecification
     a sh:PropertyShape ;
     sh:path schema:priceSpecification ;
     sh:nodeKind sh:IRI ;
+    sh:class schema:PriceSpecification ;
     .
 
 :seq_directlyFollows

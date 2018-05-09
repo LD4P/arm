@@ -26,6 +26,7 @@
 @prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/> .
 
 @prefix raremat_monograph_note: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_note/> .
+@prefix raremat_monograph_price_specification: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_price_specification/> .
 @prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/> . 
 
 # TODO Catalogers prefer not to have to create a CustodialHistory resource
@@ -87,7 +88,7 @@
         # Won't need this if it happens behind the scenes.
         # :CustodialEventForm_bf_partOf_ch_CustodialHistory , 
         :CustodialEventForm_rdf_type , 
-        :CustodialEventForm_schema_priceSpecification , # TODO
+        raremat_monograph_price_specification:schema_priceSpecification , 
         :CustodialEventForm_seq_directlyFollows , 
         :CustodialEventForm_seq_directlyPrecedes ,        
         :CustodialEventForm_seq_follows , 
@@ -193,11 +194,9 @@
     ) ;
     .
 
-##### CUSTODIAL EVENT PRICE #####
 
-# Applies to both item-specific and aggregate CustodialEvents.
 
-# Use literals for now; save ISO 4217 for future work
+
  
 ##### CUSTODIAL EVENT PRECEDENCE RELATIONSHIPS #####
 

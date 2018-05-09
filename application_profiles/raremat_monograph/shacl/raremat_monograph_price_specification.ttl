@@ -1,0 +1,56 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_price_specification/> .
+@prefix custodial_history_property_shapes: <https://w3id.org/arm/custodial_history/validation/shacl/custodial_history_property_shapes/> .
+
+
+:schema_priceSpecification 
+    sh:and (
+        custodial_history_property_shapes:schema_priceSpecification 
+        [
+            # NON-VALIDATING
+            sh:name "Price" ;
+            sh:order "0"^^xsd:decimal ;
+            tosh:editWidget swa:NestedObjectEditor ;         
+        ]   
+    ) ;
+    .
+    
+:PriceSpecification
+    a sh:NodeShape ;
+    rdfs:label "Price specification" ;
+    sh:targetClass schema:PriceSpecification ;
+    sh:property
+        :schema_price ,
+        :schema_priceCurrency ;
+    .
+
+:schema_price
+    sh:and (
+        custodial_history_property_shapes:schema_price 
+        [
+            # NON-VALIDATING
+            sh:name "Amount" ;
+            sh:order "0"^^xsd:decimal ;  
+        ]   
+    ) ;
+    .
+    
+:schema_priceCurrency
+    sh:and (
+        custodial_history_property_shapes:schema_price 
+        [
+            # NON-VALIDATING
+            sh:name "Currency" ;
+            sh:description "Three-digit ISO 4217 currency code." ;
+            sh:order "0"^^xsd:decimal ;  
+        ]   
+    ) ;
+    .
