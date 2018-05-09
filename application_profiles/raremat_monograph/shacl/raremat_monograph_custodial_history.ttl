@@ -19,12 +19,9 @@
 @prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_custodial_history/> .
 @prefix arm_core_property_shapes: <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
 @prefix custodial_history_property_shapes: <https://w3id.org/arm/custodial_history/validation/shacl/custodial_history_property_shapes/> .
+@prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/> .
 @prefix raremat_monograph_activity: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_activity/> .
 @prefix raremat_monograph_identifier: <https://w3id.org/arm/application_profiles/raremat_monograph/schacl/raremat_monograph/identifier/> .
-
-# TODO Resolve this namespace with the one defined in the file.
-@prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/> .
-
 @prefix raremat_monograph_note: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_note/> .
 @prefix raremat_monograph_price_specification: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_price_specification/> .
 @prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/> . 
@@ -79,12 +76,12 @@
     rdfs:label "Custodial event" ;
     sh:targetClass ch:CustodialEvent ;
     sh:property
-        :CustodialEventForm_activity_hasActivity , # TODO
+        custodial_history_property_shapes:activity_hasActivity , 
         :CustodialEventForm_arm_accessionedBy , 
         :CustodialEventForm_arm_atLocation , 
         :CustodialEventForm_bf_date , 
         # Aggregate event of which this event is a part
-        :CustodialEventForm_bf_partOf_ch_CustodialEvent , # TODO
+        :CustodialEventForm_bf_partOf_ch_CustodialEvent ,
         # Won't need this if it happens behind the scenes.
         # :CustodialEventForm_bf_partOf_ch_CustodialHistory , 
         :CustodialEventForm_rdf_type , 
@@ -95,11 +92,32 @@
         :CustodialEventForm_seq_precedes ; 
     .
  
+ 
 ##### CUSTODIAL EVENT ACTIVITY #####
 
 # Possible activities depend on event type - omit for now, as it probably
 # requires a form for each event type.
 
+:CustodialEventActivityForm
+    sh:and (
+        raremat_monograph_activity:ActivityForm
+        [
+            sh:property :CustodialEventActivityForm_rdf_type ;       
+        ]
+    ) ;
+    .
+
+:CustodialEventActivityForm_rdf_type
+    sh:and (
+        custodial_history_property_shapes::ch_CustodialEventActivity_rdf_type
+        [
+            # NON-VALIDATING
+            sh:name "Role" ;
+            sh:description "The role played by the agent in relation to the custodial event." ;
+            sh:order "0"^^xsd:decimal ;
+        ] 
+    ) ;
+    .    
 
 ##### CUSTODIAL EVENT ACCESSION NUMBER #####
 
@@ -171,12 +189,21 @@
 
 ##### CUSTODIAL EVENT PART OF AGGREGATE CUSTODIAL EVENT #####
 
-# isPartOf - choose from existing events already in the system, attached
-# to another custodial event which is attached to a different item. In
-# order to prevent a recursive loop, do only from custodial event page.
+# Choose from existing events already in the system, attached
+# to another custodial event which is attached to a different item, or
+# create a new custodial event.
 
-# :CustodialEventForm_bf_isPartOf_ch_CustodialEvent 
-
+:CustodialEventForm_bf_partOf_ch_CustodialEvent 
+    sh:and (
+        custodial_history_property_shapes:bf_partOf_ch_CustodialEvent
+        [
+            # NON-VALIDATING
+            sh:name "Part of" ;
+            sh:description: "This custodial event is part of a larger custodial event that includes multiple Items" ;
+            sh:order "0"^^xsd:decimal ; 
+        ]    
+    ) ;
+    .   
 
 
 ##### CUSTODIAL EVENT TYPE #####
@@ -187,15 +214,10 @@
         [
             # NON-VALIDATING
             sh:name "Custodial event type" ;
-            # TODO Do we need to repeat this here?
-            sh:group raremat_monograph_property_groups:ItemHistoryAndProvenance ;
             sh:order "0"^^xsd:decimal ;
         ]
     ) ;
     .
-
-
-
 
  
 ##### CUSTODIAL EVENT PRECEDENCE RELATIONSHIPS #####

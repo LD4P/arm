@@ -98,10 +98,13 @@
     . 
 
 :bf_partOf_ch_CustodialEvent 
-    a sh:PropertyShape ;
-    sh:path bf:partOf ;
-    sh:nodeKind sh:IRI ; 
-    sh:class ch:CustodialEvent ;
+    sh:and (
+        :bf_partOf
+        [
+            sh:class ch:CustodialEvent ;
+            sh:maxCount 1 ;
+        ] 
+    ) ;
     . 
 
 :bf_status 
@@ -132,30 +135,59 @@
     sh:and (
         :rdf_type
         [
-            sh:targetClass [
-                sh:in (
-                    ch:Accessioning
-                    ch:Auction
-                    ch:Bequest
-                    ch:ClaimOfOwnership
-                    ch:Deaccessioning
-                    ch:Deposit
-                    ch:Destruction
-                    ch:Discarding
-                    ch:Donation
-                    ch:Inheritance
-                    ch:Loan
-                    ch:Loss
-                    ch:Offer
-                    ch:Ownership
-                    ch:Recovery
-                    ch:Repatriation
-                    ch:Sale
-                    ch:Theft
-                    ch:Transfer
-                    ch:CustodialEvent 
-                ) ;
-            ]                           
+            sh:in (
+                ch:Accessioning
+                ch:Auction
+                ch:Bequest
+                ch:ClaimOfOwnership
+                ch:Deaccessioning
+                ch:Deposit
+                ch:Destruction
+                ch:Discarding
+                ch:Donation
+                ch:Inheritance
+                ch:Loan
+                ch:Loss
+                ch:Offer
+                ch:Ownership
+                ch:Recovery
+                ch:Repatriation
+                ch:Sale
+                ch:Theft
+                ch:Transfer
+                ch:CustodialEvent 
+            ) ;
+        ]
+    ) ;
+    .
+      
+
+:ch_CustodialEventActivity_rdf_type 
+    sh:and (
+        :rdf_type
+        [
+            sh:in (
+                ch:Accessioning
+                ch:Auction
+                ch:Bequest
+                ch:ClaimOfOwnership
+                ch:Deaccessioning
+                ch:Deposit
+                ch:Destruction
+                ch:Discarding
+                ch:Donation
+                ch:Inheritance
+                ch:Loan
+                ch:Loss
+                ch:Offer
+                ch:Ownership
+                ch:Recovery
+                ch:Repatriation
+                ch:Sale
+                ch:Theft
+                ch:Transfer
+                ch:CustodialEvent 
+            ) ;                         
         ]    
     ) ;
     .

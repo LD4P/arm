@@ -147,7 +147,6 @@
     # Range specified in ontology; in theory shouldn't need to specify here,
     # since validation *should* factor in ontology axioms.
     sh:class bf:Status ;
-
     . 
             
 :bf_subject

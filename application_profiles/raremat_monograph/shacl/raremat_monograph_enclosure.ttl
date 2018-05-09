@@ -21,11 +21,8 @@
 
 @prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_enclosure/> .
 @prefix arm_core_property_shapes: <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
-
-# TODO Resolve this namespace with the one defined in the file.
-@prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/> .
-
 @prefix raremat_monograph_activity: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_activity/> .
+@prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/> .
 @prefix raremat_monograph_marking: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_marking/> .
 @prefix raremat_monograph_material: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_material/> .
 @prefix raremat_monograph_note: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_note/> .
@@ -234,7 +231,6 @@
     sh:and (
         arm_core_property_shapes:bf_hasPart
         [
-            sh:class arm:Binding ;
             sh:in (
                 # Getty AAT binding components: http://vocab.getty.edu/page/aat/300194225
                 aat:300261522
