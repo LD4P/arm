@@ -947,6 +947,7 @@ raremat_monograph_form:InstanceForm
   sh:property raremat_monograph_form:InstanceForm_bf_responsibilityStatement ;
   sh:property raremat_monograph_form:InstanceForm_bf_provisionActivityStatement ;
   sh:property raremat_monograph_form:InstanceForm_bf_hasPart ;
+  sh:property raremat_monograph_enclosure:RareMatForm_dcterms_hasPart_arm_Enclosure ;
   sh:property raremat_monograph_form:InstanceForm_bf_accompaniedBy ;
   sh:property raremat_monograph_form:InstanceForm_bf_accompanies ;
   sh:property raremat_monograph_form:InstanceForm_bf_extent ;
@@ -966,7 +967,6 @@ raremat_monograph_form:InstanceForm
   sh:property raremat_monograph_form:InstanceForm_award_receives ;
   sh:property raremat_monograph_form:InstanceForm_bf_note ;
   sh:property raremat_monograph_form:InstanceForm_bf_identifiedBy ;
-  sh:property raremat_monograph_enclosure:RareMatForm_dcterms_hasPart_arm_Enclosure ;
   .
 
 
@@ -1362,6 +1362,7 @@ raremat_monograph_form:ItemForm
   sh:property raremat_monograph_form:ItemForm_activity_hasActivity ;
   sh:property raremat_monograph_form:ItemForm_bf_genreForm ;
   sh:property raremat_monograph_form:ItemForm_bf_hasPart ;
+  sh:property raremat_monograph_enclosure:RareMatForm_dcterms_hasPart_arm_Enclosure ;
   sh:property raremat_monograph_form:ItemForm_bf_partOf ;
   sh:property raremat_monograph_form:ItemForm_arm_isOnCarrier ;
   sh:property raremat_monograph_form:ItemForm_bf_extent ;
@@ -1375,11 +1376,12 @@ raremat_monograph_form:ItemForm
   sh:property raremat_monograph_form:ItemForm_arm_markedBy ;
   sh:property raremat_monograph_form:ItemForm_bf_itemOf ;
   sh:property raremat_monograph_form:ItemForm_arm_hasCitation ;
+# TODO Add sh:property to Custodial History
+# TODO Add sh:property to Exhibition
   sh:property raremat_monograph_form:ItemForm_award_receives ;
   sh:property raremat_monograph_form:ItemForm_bf_note ;
   sh:property raremat_monograph_form:ItemForm_bf_identifiedBy ;
   # sh:property raremat_shapes_monograph_exhibition:ItemForm_arm_hasExhibition ;
-  sh:property raremat_monograph_enclosure:RareMatForm_dcterms_hasPart_arm_Enclosure ;
   . 
 
 raremat_monograph_form:ItemForm_rdf_type 
