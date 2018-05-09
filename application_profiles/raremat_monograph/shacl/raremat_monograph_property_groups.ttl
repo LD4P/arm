@@ -42,8 +42,8 @@
   
 :WorkSubjectGenreFormPropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Type and Genre" ;
-  sh:description "To group type, Genre, and Form information for the resource." ;
+  rdfs:label "Subject, Genre, and Style" ;
+  sh:description "To group Subject, Genre, and Style information for the resource." ;
   sh:order "2"^^xsd:decimal .
   
 :WorkLanguageFormPropertyGroup
