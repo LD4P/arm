@@ -552,7 +552,8 @@ artframe_art_form:InstanceForm rdf:type rdfs:Class ;
   sh:property artframe_art_form:InstanceForm_arm_hasSignatureStatement ;
   sh:property artframe_art_form:InstanceForm_arm_hasMaterial ;
   sh:property raremat_monograph_form:ItemForm_rdau_P60596 ;
-  ssh:property raremat_monograph_form:ItemForm_rdau_P60159 ;
+  sh:property raremat_monograph_form:ItemForm_rdau_P60159 ;
+  sh:property artframe_art_form:InstanceForm_bf_scale ;
   sh:property raremat_monograph_form:InstanceForm_bf_instanceOf ;
   sh:property raremat_monograph_form:InstanceForm_bf_editionStatement ;
   sh:property raremat_monograph_form:InstanceForm_bf_hasItem ;
@@ -876,7 +877,7 @@ artframe_art_form:InstanceForm_bf_scale
   sh:path bf:scale ;
   sh:class bf:Scale ;
   sh:description "Ratio of the dimensions of a form contained or embodied in a resource to the dimensions of the entity it represents, e.g., for images or cartographic resources." ;
-  sh:group artframe_art_property_groups:WorkScaleFormPropertyGroup ;
+  sh:group artframe_art_property_groups:InstanceScaleFormPropertyGroup ;
   sh:name "Scale" ;
   sh:nodeKind sh:IRI ;
   sh:order "0"^^xsd:decimal .   
