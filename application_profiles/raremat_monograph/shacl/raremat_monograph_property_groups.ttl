@@ -108,47 +108,42 @@
   rdf:type sh:PropertyGroup ;
   rdfs:label "Instance Parts and Accompaniments" ;
   sh:order "4"^^xsd:decimal .
-
-:InstancePaginationFoliationPropertyGroup
-  rdf:type sh:PropertyGroup ;
-  rdfs:label "Instance Pagination and Foliation" ;
-  sh:order "5"^^xsd:decimal .
   
 :InstancePhysicalDescriptionPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Instance physical description" ;
-  sh:order "6"^^xsd:decimal .
+  sh:order "5"^^xsd:decimal .
   
 :InstanceOfWorkPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Instance of Work" ;
-  sh:order "7"^^xsd:decimal .
+  sh:order "6"^^xsd:decimal .
   
 :InstanceHasItemPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Has item" ;
-  sh:order "8"^^xsd:decimal .
+  sh:order "7"^^xsd:decimal .
   
 :InstanceBibliographicCitationPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Bibliographic Citations for the Instance" ;
   sh:description "To group bibliographic citations of the instance." ;
-  sh:order "9"^^xsd:decimal .
+  sh:order "8"^^xsd:decimal .
 
 :InstanceAwardReceiptPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Awards received" ;
-  sh:order "10"^^xsd:decimal .
+  sh:order "9"^^xsd:decimal .
 
 :InstanceNotePropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Item notes" ;
-  sh:order "11"^^xsd:decimal .
+  sh:order "10"^^xsd:decimal .
   
 :InstanceIdentifierPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Item identifiers" ;
-  sh:order "12"^^xsd:decimal .
+  sh:order "11"^^xsd:decimal .
 
 
 
@@ -164,67 +159,59 @@
   rdf:type sh:PropertyGroup ;
   rdfs:label "Titles" ;
   sh:description "To group title information for the resource." ;
-  sh:order "0"^^xsd:decimal .
+  sh:order "1"^^xsd:decimal .
   
 :ItemActivityPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Item Agent and Roles" ;
   sh:description "To group Agent role information for the resource." ;
-  sh:order "0"^^xsd:decimal .
+  sh:order "2"^^xsd:decimal .
   
 :ItemGenreFormPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Item genre" ;
   sh:description "To group Item Genres." ;
-  sh:order "0"^^xsd:decimal .
+  sh:order "3"^^xsd:decimal .
   
 :ItemAccompanimentsPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Instance Parts and Accompaniments" ;
   sh:description "To group parts and accompaniments of an item" ;
-  sh:order "0"^^xsd:decimal .
+  sh:order "4"^^xsd:decimal .
   
 :ItemPhysicalDescriptionPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Item Physical Description" ;
   sh:description "To group item physical description information" ;
-  sh:order "0"^^xsd:decimal .
-  
-:ItemPaginationFoliationPropertyGroup
-  rdf:type sh:PropertyGroup ;
-  rdfs:label "Item Pagination and Foliation" ;
-  sh:order "0"^^xsd:decimal .
+  sh:order "5"^^xsd:decimal .
   
 :ItemOfInstancePropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Item of" ;
-  sh:order "0"^^xsd:decimal .
+  sh:order "6"^^xsd:decimal .
   
 :ItemBibliographicCitationPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Bibliographic Citations for the Item" ;
   sh:description "To group bibliographic citations for the item." ;
-  sh:order "0"^^xsd:decimal .
-  
-:ItemAwardReceiptPropertyGroup
-  rdf:type sh:PropertyGroup ;
-  rdfs:label "Awards received" ;
-  sh:order "0"^^xsd:decimal .
-  
+  sh:order "7"^^xsd:decimal .
+
+:ItemHistoryAndProvenancePropertyGroup
+  a sh:PropertyGroup ;
+  rdfs:label "Item history and provenance" ;
+  sh:order "8"^^xsd:decimal .
+    
 :ItemNotePropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Item notes" ;
-  sh:order "0"^^xsd:decimal .
+  sh:order "9"^^xsd:decimal .
   
 :ItemIdentifierPropertyGroup
 rdf:type sh:PropertyGroup ;
   rdfs:label "Item identifiers" ;
-  sh:order "0"^^xsd:decimal .
+  sh:order "10"^^xsd:decimal .
     
-:ItemHistoryAndProvenancePropertyGroup
-    a sh:PropertyGroup ;
-    rdfs:label "Item history and provenance" ;
-    sh:order "0"^^xsd:decimal .
+
 
 ######## EXPERIMENTAL - combine property groups for multiple types ########
 
