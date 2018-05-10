@@ -1875,8 +1875,6 @@ raremat_monograph_form:ItemForm_bf_note
 
 # ///// PROPERTY SHAPES FOR ItemIdentifier PropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
-# TODO Decide what Identifier Type are applicable for Monographic Items
-
 raremat_monograph_form:ItemForm_bf_identifiedBy 
       a sh:PropertyShape ;
       sh:path bf:identifiedBy ;
@@ -2009,15 +2007,7 @@ raremat_monograph_form:MeasurementGroupForm
   sh:property raremat_monograph_form:MeasurementGroupForm_dcterms_description ;
   sh:property raremat_monograph_form:MeasurementGroupForm_measure_hasMeasurement .
   
-  
-raremat_monograph_form:MeasurementGroupForm_dcterms_description 
-      a sh:PropertyShape ;
-      sh:path dcterms:description ;
-      sh:description "Record any qualifying information about the measurement, e.g. 'approximate', 'or smaller', 'in container', 'with handle' " ;
-      sh:name "Qualifying information about the measurement" ;
-      sh:nodeKind sh:Literal ;
-      sh:order "0"^^xsd:decimal .
-    
+
 raremat_monograph_form:MeasurementGroupForm_measure_hasMeasurement
       a sh:PropertyShape ;
       sh:path measure:hasMeasurement ;
@@ -2025,10 +2015,17 @@ raremat_monograph_form:MeasurementGroupForm_measure_hasMeasurement
       sh:description "The measurement of a single aspect of a resource, including value, units, and the dimension measured. For example, a book may have a height (aspect) of 10 (value) centimeters (units). Each such measurement is attached to a MeasurementGroup." ;
       sh:name "Single measurement" ;
       sh:nodeKind sh:IRI ;
-      sh:order "1"^^xsd:decimal ;
+      sh:order "0"^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
-
-
+      
+raremat_monograph_form:MeasurementGroupForm_dcterms_description 
+      a sh:PropertyShape ;
+      sh:path dcterms:description ;
+      sh:description "Record any qualifying information about the measurement, e.g. 'approximate', 'or smaller', 'in container', 'with handle' " ;
+      sh:name "Qualifying information about the measurement" ;
+      sh:nodeKind sh:Literal ;
+      sh:order "1"^^xsd:decimal .
+      
 
 # /////// Measurement FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
@@ -2093,8 +2090,6 @@ raremat_monograph_form:MeasurementForm_measure_hasUnit
           ]
         ) 
 .
-
-# For dimension types, such as height, width, weight, etc. use AAT, Art & Architecture Thesaurus.
 
 raremat_monograph_form:MeasurementForm_measure_measures 
       a sh:PropertyShape ;
@@ -2179,6 +2174,7 @@ raremat_monograph_form:NoteForm_rdf_type
       a sh:PropertyShape ;
       sh:path rdf:type ;
       sh:name "Type of Note" ;
+      sh:order "0"^^xsd:decimal ;
       sh:minCount "1" .     
 
 raremat_monograph_form:NoteForm_rdf_value 
@@ -2188,6 +2184,7 @@ raremat_monograph_form:NoteForm_rdf_value
       sh:maxCount "1" ;
       sh:description "String value for the note" ;
       sh:name "Note value" ;
+      sh:order "1"^^xsd:decimal ;
       sh:nodeKind sh:Literal .
       
 
@@ -2206,6 +2203,7 @@ raremat_monograph_form:PaginationFoliationForm_rdf_value
       sh:path rdf:value ;
       sh:description "Sequential numbering of individual leaves, plates, pages (numbering on both sides), or columns (used as a sequence of numbering) of a resource." ;
       sh:name "Pagination and foliation" ;
+      sh:order "0"^^xsd:decimal ;
       sh:nodeKind sh:Literal .    
 
 raremat_monograph_form:PaginationFoliationForm_dcterms_description 
@@ -2213,6 +2211,7 @@ raremat_monograph_form:PaginationFoliationForm_dcterms_description
       sh:path dcterms:description ;
       sh:description "Description of the pagination and/or foliation, including errors." ;
       sh:name "Description of pagination and foliation" ;
+      sh:order "1"^^xsd:decimal ;
       sh:nodeKind sh:Literal .
       
 # /////// AwardReceipt FORM BEGINS HERE ////////////////////////////////////////////////////////////
@@ -2232,6 +2231,7 @@ raremat_monograph_form:AwardReceiptForm_rdf_type
       sh:path rdf:type ;
       sh:description "Sequential numbering of individual leaves, plates, pages (numbering on both sides), or columns (used as a sequence of numbering) of a resource." ;
       sh:name "Type of Award Receipt" ;
+      sh:order "0"^^xsd:decimal ;
       sh:or (
           [
             sh:hasValue award:AwardWinner ;
@@ -2279,7 +2279,7 @@ raremat_monograph_form:AwardReceiptForm_activity_hasActivity
       a sh:PropertyShape ;
       sh:path activity:hasActivity ;
       sh:description "Agent activities related to the Award Receipt" ;
-      sh:name "Award receipt agent activity" ;
+      sh:name "Awarded by" ;
       sh:nodeKind sh:IRI ;
       sh:order "3"^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor ;
@@ -2342,6 +2342,7 @@ raremat_monograph_form:AwardForm_rdfs_label
       sh:path rdf:label ;
       sh:description "Name to refer to the award" ;
       sh:name "Name of award" ;
+      sh:order "0"^^xsd:decimal ;
       sh:nodeKind sh:Literal .
       
 
@@ -2581,7 +2582,7 @@ raremat_monograph_form:InstanceTitleForm_arm_hasSource
       sh:path arm:hasSource ;
       sh:name "Title source" ;
       sh:description "Source of the title. The source may be an agent, work, or instance" ;
-      sh:order "6"^^xsd:decimal ;
+      sh:order "7"^^xsd:decimal ;
       sh:or (
          
          [
@@ -2602,7 +2603,7 @@ raremat_monograph_form:InstanceTitleForm_bf_status
       sh:path bf:Status ;
       sh:in ( <https://w3id.org/arm/datasets/status/cancelled> <https://w3id.org/arm/datasets/status/current> <https://w3id.org/arm/datasets/status/deprecated> <https://w3id.org/arm/datasets/status/invalid> ) ;
       sh:description "The place from which this title originates, such as spine, cover, container, etc." ;
-      sh:order "7"^^xsd:decimal ;
+      sh:order "8"^^xsd:decimal ;
       sh:nodeKind sh:IRI ;
       sh:name "Title origin" .
       
@@ -2611,7 +2612,7 @@ raremat_monograph_form:InstanceTitleForm_arm_titleOf
       sh:path arm:titleOf ;
       sh:class bf:Instance ;
       sh:description "Links this title to an instance" ;
-      sh:order "8"^^xsd:decimal ;
+      sh:order "9"^^xsd:decimal ;
       sh:nodeKind sh:IRI ;
       sh:name "Title of" .
 
@@ -2620,7 +2621,7 @@ raremat_monograph_form:InstanceTitleForm_arm_isPreferredTitleOf
       sh:path arm:isPreferredTitleOf ;
       sh:class bf:Instance ;
       sh:description "Links this preferred title to an instance" ;
-      sh:order "9"^^xsd:decimal ;
+      sh:order "10"^^xsd:decimal ;
       sh:nodeKind sh:IRI ;
       sh:name "Preferred title of text work (if applicable)" .
     
@@ -2647,7 +2648,7 @@ raremat_monograph_form:InstanceTitleForm_bf_note
       sh:description "Note about this title" ;
       tosh:editWidget swa:NestedObjectEditor ;
       sh:nodeKind sh:IRI ;
-      sh:order "10"^^xsd:decimal .
+      sh:order "11"^^xsd:decimal .
       
       
 # /////// Item Title FORM BEGINS HERE ////////////////////////////////////////////////////////////
@@ -2830,7 +2831,7 @@ raremat_monograph_form:TitleNoteForm_rdf_type
 raremat_monograph_form:TitleNoteForm_rdf_value
       a sh:PropertyShape ;
       sh:path rdf:value ;
-      sh:description "Literal value for the title" ;
+      sh:description "Literal value for the note" ;
       sh:minCount "1" ;
       sh:maxCount "1" ;
       sh:order "1"^^xsd:decimal ;
@@ -3230,6 +3231,7 @@ raremat_monograph_form:WorkIdentifierForm_rdf_type
       a sh:PropertyShape ;
       sh:path rdf:type ;
       sh:name "Type of Identifier" ;
+      sh:order "0"^^xsd:decimal ;
       sh:in ( bf:Identifier bf:Iswc bf:Istc bf:DissertationIdentifier ) ;
       sh:minCount "1" .     
 
@@ -3240,6 +3242,7 @@ raremat_monograph_form:WorkIdentifierForm_rdf_value
       sh:maxCount "1" ;
       sh:description "String value for the identifier" ;
       sh:name "Identifier value" ;
+      sh:order "1"^^xsd:decimal ;
       sh:nodeKind sh:Literal .
 
 
@@ -3269,6 +3272,7 @@ raremat_monograph_form:InstanceIdentifierForm_rdf_type
       sh:path rdf:type ;
       sh:in ( bf:Identifier bf:Isbn bf:Coden bf:CopyrightNumber bf:Fingerprint bf:Ismn bf:Iso bf:Istc bf:Lccn bf:Local bf:Nbn arm:OclcNumber bf:PublisherNumber bf:ReportNumber bf:Strn ) ;
       sh:name "Type of Identifier" ;
+      sh:order "0"^^xsd:decimal ;
       sh:minCount "1" .     
 
 raremat_monograph_form:InstanceIdentifierForm_rdf_value 
@@ -3278,6 +3282,7 @@ raremat_monograph_form:InstanceIdentifierForm_rdf_value
       sh:maxCount "1" ;
       sh:description "String value for the identifier" ;
       sh:name "Identifier value" ;
+      sh:order "1"^^xsd:decimal ;
       sh:nodeKind sh:Literal .
 
 
@@ -3304,7 +3309,9 @@ raremat_monograph_form:ItemIdentifierForm
 
 raremat_monograph_form:ItemIdentifierForm_rdf_type 
       a sh:PropertyShape ;
-      sh:path rdf:type ;sh:name "Type of Identifier" ;
+      sh:path rdf:type ;
+      sh:name "Type of Identifier" ;
+      sh:order "0"^^xsd:decimal ;
       sh:in ( bf:Identifier bf:ShelfMark arm:AccessionNumber bf:Barcode bf:Local ) ;
       sh:minCount "1" .
 
@@ -3315,6 +3322,7 @@ raremat_monograph_form:ItemIdentifierForm_rdf_value
       sh:maxCount "1" ;
       sh:description "String value for the identifier" ;
       sh:name "Identifier value" ;
+      sh:order "1"^^xsd:decimal ;
       sh:nodeKind sh:Literal .
 
 
