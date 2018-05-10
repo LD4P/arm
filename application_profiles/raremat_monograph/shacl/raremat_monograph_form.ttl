@@ -1465,9 +1465,7 @@ raremat_monograph_form:ItemForm
   sh:property raremat_monograph_form:ItemForm_activity_hasActivity ;
   sh:property raremat_monograph_form:ItemForm_bf_genreForm ;
   sh:property raremat_monograph_form:ItemForm_bf_hasPart ;
-# Same PropertyShape for both Item and Instance (and any resource parts we
-# would want to add it to in the future), so giving it a generic name.
-# TODO check to see if the order would be the same across all resources. If not need separate enclosure property shapes.
+# TODO Order will not be the same across all resources, so we need separate enclosure property shapes.
   sh:property raremat_monograph_enclosure:bf_hasPart_arm_Enclosure ;
   sh:property raremat_monograph_form:ItemForm_bf_partOf ;
   sh:property raremat_monograph_form:ItemForm_arm_isOnCarrier ;
