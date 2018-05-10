@@ -709,7 +709,7 @@ artframe_art_form:InstanceForm_bf_hasPart
       sh:order "0"^^xsd:decimal ;
       sh:description "Part of the instance being described." ;
       sh:class bf:Instance ;
-      sh:group artframe_art_property_groups:InstancePartsAccompanimentsPropertyGroup .
+      sh:group artframe_art_property_groups:InstanceRelationshipsPropertyGroup .
      
 artframe_art_form:InstanceForm_bf_accompaniedBy 
       a sh:PropertyShape ;
@@ -717,7 +717,7 @@ artframe_art_form:InstanceForm_bf_accompaniedBy
       sh:class bf:Instance ;
       sh:description "Resource that accompanies the described resource." ;
       sh:name "Accompanied by" ;
-      sh:group artframe_art_property_groups:InstancePartsAccompanimentsPropertyGroup .
+      sh:group artframe_art_property_groups:InstanceRelationshipsPropertyGroup .
 
 # TODO decide what carrier types can accompany an Instance of an art work
       
@@ -727,7 +727,7 @@ artframe_art_form:InstanceForm_bf_accompanies
       sh:class bf:Instance ;
       sh:description "Resource that adds to or is issued with the described resource." ;
       sh:name "Accompanies" ;
-      sh:group artframe_art_property_groups:InstancePartsAccompanimentsPropertyGroup .
+      sh:group artframe_art_property_groups:InstanceRelationshipsPropertyGroup .
  
 artframe_art_form:InstanceForm_bf_references 
       a sh:PropertyShape ;
@@ -735,7 +735,7 @@ artframe_art_form:InstanceForm_bf_references
       sh:class bf:Instance ;
       sh:description "Resource that is referenced by the described resource." ;
       sh:name "References" ;
-      sh:group artframe_art_property_groups:InstancePartsAccompanimentsPropertyGroup .
+      sh:group artframe_art_property_groups:InstanceRelationshipsPropertyGroup .
       
 artframe_art_form:InstanceForm_bf_referencedBy 
       a sh:PropertyShape ;
@@ -743,7 +743,7 @@ artframe_art_form:InstanceForm_bf_referencedBy
       sh:class bf:Instance ;
       sh:description "Resource that references the described resource," ;
       sh:name "Referenced by" ;
-      sh:group artframe_art_property_groups:InstancePartsAccompanimentsPropertyGroup .
+      sh:group artframe_art_property_groups:InstanceRelationshipsPropertyGroup .
 
 # TODO Add additional RDA Instance relationships
   
