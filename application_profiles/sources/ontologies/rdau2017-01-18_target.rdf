@@ -296,6 +296,41 @@
         <skos:definition xml:lang="da">Relaterer en ressource til en ressource, der indeholder en kort kritik af en beskreven ressource.</skos:definition>
     </rdf:Description>
     
+    <!-- Property: is critiqued in -->
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60212">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+        <reg:name xml:lang="en">critiquedIn</reg:name>
+        <rdfs:label xml:lang="en">is critiqued in</rdfs:label>
+        <skos:definition xml:lang="en">Relates a resource to a resource that contains a critical evaluation of a described resource.</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60215" />
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60292" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20272" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40065" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30257" />
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/critiquedIn.en" />
+        <reg:name xml:lang="da">kritiseretI</reg:name>
+        <rdfs:label xml:lang="da">er kritiseret i</rdfs:label>
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/kritiseretI.da" />
+        <skos:definition xml:lang="da">Relaterer en ressource til en ressource, der indeholder en kritisk vurdering af en beskreven ressource.</skos:definition>
+    </rdf:Description>
+    
+    <!-- Property: is imitated as -->
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60214">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+        <reg:name xml:lang="en">imitatedAs</reg:name>
+        <rdfs:label xml:lang="en">is imitated as</rdfs:label>
+        <skos:definition xml:lang="en">Relates a resource to a resource that copies the style or content of a source resource.</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60250" />
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60311" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60246" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20114" />
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/imitatedAs.en" />
+    </rdf:Description>
+    
     <!-- Property: is described in -->
     <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60215">
         <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
@@ -322,21 +357,6 @@
         <rdfs:label xml:lang="da">er beskrevet i</rdfs:label>
         <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/beskrevetI.da" />
         <skos:definition xml:lang="da">Relaterer en ressource til en ressource, der beskriver en beskreven entitet.</skos:definition>
-    </rdf:Description>
-    
-    <!-- Property: is imitated as -->
-    <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60214">
-        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
-        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
-        <reg:name xml:lang="en">imitatedAs</reg:name>
-        <rdfs:label xml:lang="en">is imitated as</rdfs:label>
-        <skos:definition xml:lang="en">Relates a resource to a resource that copies the style or content of a source resource.</skos:definition>
-        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
-        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60250" />
-        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60311" />
-        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60246" />
-        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20114" />
-        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/imitatedAs.en" />
     </rdf:Description>
     
     <!-- Property: is expanded as -->
