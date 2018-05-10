@@ -2403,7 +2403,7 @@ raremat_monograph_form:WorkTitleForm_bf_note
            sh:class arm:CaptainNote ;
          ]   
          [ 
-           arm:InaccuracyNote
+           sh:class arm:InaccuracyNote ;
          ]
           ) ;
       sh:description "Note about this title" ;
@@ -2561,7 +2561,7 @@ raremat_monograph_form:InstanceTitleForm_bf_note
            sh:class arm:CaptainNote ;
          ]   
          [ 
-           arm:InaccuracyNote
+           sh:class arm:InaccuracyNote ;
          ]
          
           ) ;
@@ -2719,7 +2719,7 @@ raremat_monograph_form:ItemTitleForm_bf_note
            sh:class arm:CaptainNote ;
          ]   
          [ 
-           arm:InaccuracyNote
+           sh:class arm:InaccuracyNote ;
          ]
          
           ) ;
@@ -3079,7 +3079,7 @@ raremat_monograph_form:MarkingForm_rdf_value
   sh:order "1"^^xsd:decimal .
       
 raremat_monograph_form:MarkingForm_arm_hasActivity
-  sh:property arm:hasActivity ;
+  sh:property activity:hasActivity ;
   sh:name "Marking Agent" ;
   sh:order "2"^^xsd:decimal ;
   tosh:editWidget swa:NestedObjectEditor ;
@@ -3129,7 +3129,7 @@ raremat_monograph_form:MarkingActivityForm_arm_atLocation
       
 raremat_monograph_form:MarkingActivityForm_activity_isActivityOf 
       a sh:PropertyShape ;
-      sh:path activity:isActivityOf
+      sh:path activity:isActivityOf ;
       sh:order "3" ;
       sh:maxCount "1" ;
       sh:description "Related Marking" ;
