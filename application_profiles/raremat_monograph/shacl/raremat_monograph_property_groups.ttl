@@ -90,65 +90,65 @@
 :InstanceTypePropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Instance Carrier Type" ;
-  sh:order "0"^^xsd:decimal .
+  sh:order "1"^^xsd:decimal .
   
 :InstanceGenreFormPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Instance Genre" ;
   sh:description "To group Instance Genres." ;
-  sh:order "0"^^xsd:decimal .
+  sh:order "2"^^xsd:decimal .
   
 :InstanceActivityPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Instance Agents and Roles" ;
   sh:description "To group Agent role information for the resource." ;
-  sh:order "0"^^xsd:decimal .
+  sh:order "3"^^xsd:decimal .
   
 :InstanceAccompanimentsPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Instance Parts and Accompaniments" ;
-  sh:order "0"^^xsd:decimal .
+  sh:order "4"^^xsd:decimal .
 
 :InstancePaginationFoliationPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Instance Pagination and Foliation" ;
-  sh:order "0"^^xsd:decimal .
+  sh:order "5"^^xsd:decimal .
   
 :InstancePhysicalDescriptionPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Instance physical description" ;
-  sh:order "0"^^xsd:decimal .
+  sh:order "6"^^xsd:decimal .
   
 :InstanceOfWorkPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Instance of Work" ;
-  sh:order "0"^^xsd:decimal .
+  sh:order "7"^^xsd:decimal .
   
 :InstanceHasItemPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Has item" ;
-  sh:order "0"^^xsd:decimal .
+  sh:order "8"^^xsd:decimal .
   
 :InstanceBibliographicCitationPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Bibliographic Citations for the Instance" ;
   sh:description "To group bibliographic citations of the instance." ;
-  sh:order "0"^^xsd:decimal .
+  sh:order "9"^^xsd:decimal .
 
 :InstanceAwardReceiptPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Awards received" ;
-  sh:order "0"^^xsd:decimal .
+  sh:order "10"^^xsd:decimal .
 
 :InstanceNotePropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Item notes" ;
-  sh:order "0"^^xsd:decimal .
+  sh:order "11"^^xsd:decimal .
   
 :InstanceIdentifierPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Item identifiers" ;
-  sh:order "0"^^xsd:decimal .
+  sh:order "12"^^xsd:decimal .
 
 
 
