@@ -118,12 +118,6 @@
   rdf:type sh:PropertyGroup ;
   rdfs:label "Instance physical description" ;
   sh:order "0"^^xsd:decimal .
-
-:InstanceMeasurementGroupPropertyGroup  
-  rdf:type sh:PropertyGroup ;
-  rdfs:label "Measurements" ;
-  sh:description "To group measurement information for the resource." ;
-  sh:order "0"^^xsd:decimal .
   
 :InstanceOfWorkPropertyGroup
   rdf:type sh:PropertyGroup ;
@@ -199,12 +193,6 @@
 :ItemPaginationFoliationPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Item Pagination and Foliation" ;
-  sh:order "0"^^xsd:decimal .
-  
-:ItemMeasurementGroupPropertyGroup  
-  rdf:type sh:PropertyGroup ;
-  rdfs:label "Measurements" ;
-  sh:description "To group measurement information for the resource." ;
   sh:order "0"^^xsd:decimal .
   
 :ItemOfInstancePropertyGroup
