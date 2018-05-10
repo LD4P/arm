@@ -222,29 +222,30 @@ rdf:type sh:PropertyGroup ;
 # we will need distinct property groups with and-ed PropertyShapes to add
 # the property group for the composite PropertyShape.
     
-# Activity of any resource type (property display depends on entity type)
+# Activity of any resource type 
 :ActivityPropertyGroup
     a sh:PropertyGroup ;
     rdfs:label "Agent" ;
     sh:order "0"^^xsd:decimal ;
     .
 
-# Location of any resource type (property display depends on entity type)
+# Identifier of any resource type 
 :IdentifierPropertyGroup
     a sh:PropertyGroup ;
     rdfs:label "Identifiers" ;
     sh:order "0"^^xsd:decimal ;
     .
         
-# Location of any event type (property display depends on entity type)
+# Location of any resource type 
 :LocationPropertyGroup
     a sh:PropertyGroup ;
     rdfs:label "Location" ;
     sh:order "0"^^xsd:decimal ;
     .
     
-# Physical description for any subject type (property display depends on
-# entity type)
+# Physical description of any resource type. Note that Item and Instance 
+# have distinct physical description property groups due to different 
+# PropertyShape ordering constraints.
 :PhysicalDescriptionPropertyGroup
     a sh:PropertyGroup ;
     rdfs:label "Physical description" ;

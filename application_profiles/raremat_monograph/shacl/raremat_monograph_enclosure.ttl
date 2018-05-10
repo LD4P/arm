@@ -13,12 +13,6 @@
 @prefix tosh: <http://topbraid.org/tosh#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-#
-# TODO Bindings have some specialized vocabularies for materials (Ligatus 
-# Language of Bindings - materials), parts (Getty AAT binding components).
-# Should we have a separate form for Bindings as opposed to Enclosures?
-
-
 @prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_enclosure/> .
 @prefix arm_core_property_shapes: <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
 @prefix raremat_monograph_activity: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_activity/> .
@@ -29,7 +23,9 @@
 @prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/> . 
 
 
-# Links resource (generally Instance or Item) to Enclosure 
+# Generic PropertyShape linking a resource to an Enclosure. Specific
+# constraints are added in InstanceForm:bf_hasPart_arm_Enclosure and 
+# ItemForm:bf_hasPart_arm_Enclosure.
 :bf_hasPart_arm_Enclosure
     sh:and (
         arm_core_property_shapes:bf_hasPart
@@ -37,29 +33,55 @@
             sh:class arm:Enclosure ;
             # NON-VALIDATING   
             # NB Binding has some fields that don't apply to all Enclosures,
-            # so adding a Binding-specific form and making this for non-
-            # Binding Enclosures.
-            # sh:name "Enclosure" ; 
-            sh:name "Other enclosure" ;
-            sh:description "A resource that encloses this resource, such as a dust jacket, slip case, wrap around band, or wrapper on a book. For bindings, select the binding option." ;  
-            # TODO Depends on using a general PhysicalDescriptionPropertyGroup.
-            # If not, remove here and conjoin this with the property group definition,
-            # one for instance and one for item.
-            sh:group raremat_monograph_property_groups:PhysicalDescriptionPropertyGroup ;   
-            sh:order "0"^^xsd:decimal ;   
+            # so defined a Binding-specific form shape below, and using this 
+            # for non-Binding Enclosures, thus use of "Other" in the name.
+            sh:name "Other enclosure" ; 
             tosh:editWidget swa:NestedObjectEditor ;             
         ]
     ) ;
     .
 
+# Links Instance to Enclosure. Note that Instance and Item use different
+# PropertyShapes because they belong to different property groups. The need
+# for different property groups is that properties need to be ordered
+# differently for Instance and Items.
+:InstanceForm_bf_hasPart_arm_Enclosure
+    sh:and (
+        :bf_hasPart_arm_Enclosure
+        [
+            # NON-VALIDATING 
+            sh:group raremat_monograph_property_groups:InstancePhysicalDescriptionPropertyGroup ;   
+            sh:order "0"^^xsd:decimal ;             
+        ]
+    ) ;
+    .
+
+# Links Instance to Enclosure. Note that Instance and Item use different
+# PropertyShapes because they belong to different property groups. The need
+# for different property groups is that properties need to be ordered
+# differently for Instance and Items.
+:ItemForm_bf_hasPart_arm_Enclosure
+    sh:and (
+        :bf_hasPart_arm_Enclosure
+        [          
+            # NON-VALIDATING 
+            sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;   
+            sh:order "0"^^xsd:decimal ;             
+        ]
+    ) ;
+    .
+    
 :EnclosureForm
     a sh:NodeShape ;
     rdfs:label "Enclosure" ;
     sh:targetClass arm:Enclosure ;
     sh:property
         :EnclosureForm_activity_hasActivity ,
+        # Uses general Material form shape, no special constraints needed.
+        # (Though conceivably in the future we would want to identify
+        # materials relevant only to enclosures).
         raremat_monograph_material:arm_hasMaterial ,  
-        # Uses general MarkingForm, no special constraints needed
+        # Uses general Marking form shape, no special constraints needed
         raremat_monograph_marking:arm_markedBy ,
         :EnclosureForm_bf_note ,   
         :EnclosureForm_rdf_type ;
@@ -188,7 +210,8 @@
 
 ##### BINDING-SPECIFIC SHAPES #####
 
-# Links resource (generally Instance or Item) to Binding 
+# Generic PropertyShape linking a resource to an Enclosure. Specific
+# constraints added in InstanceForm:bf_hasPart_arm_Enclosure and 
 :bf_hasPart_arm_Binding
     sh:and (
         arm_core_property_shapes:bf_hasPart
@@ -196,26 +219,40 @@
             sh:class arm:Binding ;
             # NON-VALIDATING   
             sh:name "Binding" ;  
-            sh:description "A binding attached to this resource." ;
-            # TODO Depends on using a general PhysicalDescriptionPropertyGroup.
-            # If not, remove here and conjoin this with the property group definition,
-            # one for instance and one for item.
-            sh:group raremat_monograph_property_groups:PhysicalDescriptionPropertyGroup ;   
-            sh:order "0"^^xsd:decimal ;   
-            tosh:editWidget swa:NestedObjectEditor ;             
+            tosh:editWidget swa:NestedObjectEditor ;           
         ]
     ) ;
     .
     
+:InstanceForm_bf_hasPart_arm_Binding
+    sh:and (
+        :bf_hasPart_arm_Binding
+        [
+            sh:group raremat_monograph_property_groups:InstancePhysicalDescriptionPropertyGroup ;   
+            sh:order "0"^^xsd:decimal ;               
+        ]
+    ) ;
+    .
+    
+:ItemForm_bf_hasPart_arm_Binding
+    sh:and (
+        :bf_hasPart_arm_Binding
+        [
+            sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;   
+            sh:order "0"^^xsd:decimal ;               
+        ]
+    ) ;
+    .
+    
+       
 :BindingForm
     a sh:NodeShape ;
     rdfs:label "Binding" ;
     sh:targetClass arm:Binding ;
     sh:property
         :EnclosureForm_activity_hasActivity ,
-        # TODO Or should we create a Binding-specific shape for arm:hasMaterial
-        # that specifies only, e.g., Ligatus Language of Bindings materials, 
-        # rather than all Getty AAT materials?
+        # TODO Or should we create a Binding-specific shape for 
+        # arm:hasMaterial that specifies the RBMS binding vocab?
         raremat_monograph_material:arm_hasMaterial ,  
         # Uses general MarkingForm, no special constraints needed
         raremat_monograph_marking:arm_markedBy ,
