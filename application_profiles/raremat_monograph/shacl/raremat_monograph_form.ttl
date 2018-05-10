@@ -1512,17 +1512,41 @@ raremat_monograph_form:ItemForm
   rdf:type sh:NodeShape ;
   rdfs:label "Item of Monographic Text" ;
   sh:targetClass bf:Item ;
+  
+# ItemTypePropertyGroup
+
+  sh:property raremat_monograph_form:ItemForm_rdf_type ;
+  
+  
+# ItemTitlePropertyGroup
+
   sh:property raremat_monograph_form:ItemForm_arm_hasPreferredTitle ;
   sh:property raremat_monograph_form:ItemForm_bf_title ;
+  
+  
+# ItemActivityPropertyGroup
+
   sh:property raremat_monograph_form:ItemForm_activity_hasActivity ;
+  
+
+# ItemGenreFormPropertyGroup
+
   sh:property raremat_monograph_form:ItemForm_bf_genreForm ;
+  
+  
+# ItemAccompanimentsPropertyGroup
+
+  sh:property raremat_monograph_form:ItemForm_arm_isOnCarrier ;
+  
+  
+# ItemPhysicalDescriptionPropertyGroup
+
   sh:property raremat_monograph_form:ItemForm_bf_hasPart ;
 # TODO Order will not be the same across all resources, so we need separate enclosure property shapes.
   sh:property raremat_monograph_enclosure:bf_hasPart_arm_Enclosure ;
   sh:property raremat_monograph_form:ItemForm_bf_partOf ;
-  sh:property raremat_monograph_form:ItemForm_arm_isOnCarrier ;
-  sh:property raremat_monograph_form:ItemForm_bf_extent ;
   sh:property raremat_monograph_form:ItemForm_measure_hasMeasurementGroup ;
+  sh:property raremat_monograph_form:ItemForm_bf_extent ;
   sh:property raremat_monograph_form:ItemForm_arm_hasSignatureStatement ;
   sh:property raremat_monograph_form:ItemForm_arm_hasPhysicalCondition_rdf_value ;
   sh:property raremat_monograph_form:ItemForm_arm_hasMaterial ;
@@ -1530,12 +1554,29 @@ raremat_monograph_form:ItemForm
   sh:property raremat_monograph_form:ItemForm_rdau_P60159 ;
   sh:property raremat_monograph_form:ItemForm_arm_writtenIn ;
   sh:property raremat_monograph_form:ItemForm_arm_markedBy ;
+  
+  
+# ItemOfInstancePropertyGroup
+
   sh:property raremat_monograph_form:ItemForm_bf_itemOf ;
+
+# ItemBibliographicCitationPropertyGroup
   sh:property raremat_monograph_form:ItemForm_arm_hasCitation ;
+  
+# ItemHistoryAndProvenancePropertyGroup
+
   sh:property raremat_shapes_monograph_exhibition:ItemForm_arm_hasExhibition ;
   sh:property raremat_monograph_custodial_history:ItemForm_arm_hasCustodialHistory ;
   sh:property raremat_monograph_form:ItemForm_award_receives ;
+
+
+# ItemNotePropertyGroup
+
   sh:property raremat_monograph_form:ItemForm_bf_note ;
+  
+  
+# ItemIdentifierPropertyGroup
+
   sh:property raremat_monograph_form:ItemForm_bf_identifiedBy ;
   . 
 
@@ -1568,11 +1609,6 @@ raremat_monograph_form:ItemForm_bf_title
   sh:name "Other title" ;
   sh:nodeKind sh:IRI ;
   sh:order "1"^^xsd:decimal .
-
-  
-# TODO Property groups for related things, e.g. bf:itemOf, Boundwiths, Bibliographic citations
-
-# TODO History and Provenance Custodial History, Activity (with curated list of custodial-history related roles), Exhibitions, Activities, Awards, Activities
 
 # TODO Update Activity List when there are subclasses, and custodial history is added to the form. 
 
@@ -1612,10 +1648,20 @@ raremat_monograph_form:ItemForm_arm_isOnCarrier
       a sh:PropertyShape ;
       sh:path arm:isOnCarrier ;
       sh:name "Is on a carrier" ;
-      sh:order "2"^^xsd:decimal ;
+      sh:order "0"^^xsd:decimal ;
       sh:description "The item being described is on a particular carrier (possibly on a carrier with other items)." ;
       sh:group raremat_monograph_property_groups:ItemAccompanimentsPropertyGroup ;
       tosh:editWidget swa:NestedObjectEditor .
+      
+# ///// PROPERTY SHAPES FOR ItemOfInstance PropertyGroup START HERE. /////////////////////////////////////////////////////////////      
+
+raremat_monograph_form:ItemForm_bf_itemOf 
+      a sh:PropertyShape ;
+      sh:path bf:itemOf ;
+      sh:class bf:Instance ;
+      sh:description "Instances that this is an item of" ;
+      sh:name "Item of (instances)" ;
+      sh:group raremat_monograph_property_groups:ItemOfInstancePropertyGroup .
 
 raremat_monograph_form:ItemForm_bf_hasPart 
       a sh:PropertyShape ;
@@ -1644,21 +1690,20 @@ raremat_monograph_form:ItemForm_measure_hasMeasurementGroup
       sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;
       sh:name "Instance measurement information" ;
       sh:nodeKind sh:IRI ;
-      sh:order "0"^^xsd:decimal ;
+      sh:order "2"^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
    
 raremat_monograph_form:ItemForm_bf_extent 
       a sh:PropertyShape ;
       sh:path bf:extent ;
       sh:name "Item pagination and foliation" ;
-      sh:order "0"^^xsd:decimal ;
+      sh:order "3"^^xsd:decimal ;
       sh:description "Sequential numbering of individual leaves, plates, pages (numbering on both sides), or columns (used as a sequence of numbering) of a resource." ;
       sh:class arm:PaginationFoliation ;
       sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;
       tosh:editWidget swa:NestedObjectEditor .
   
 # TODO Physical description, Physical Condition, Activity (with curated list of Item roles for physical condition assessment and conservation), Bindings 
-
       
 raremat_monograph_form:ItemForm_arm_hasSignatureStatement 
       a sh:PropertyShape ;
@@ -1668,7 +1713,7 @@ raremat_monograph_form:ItemForm_arm_hasSignatureStatement
       sh:description "A formulaic statement describing the pattern followed in assembling the sheets of the book, as expressed in its signatures. Signatures are letters, numerals, symbols, or a group of such characters printed at the foot of the rectos of the first few leaves of each gathering (quire) to aid the binder in correctly assembling the sections." ;
       sh:name "Signature statement" ;
       sh:nodeKind sh:IRI ;
-      sh:order ""^^xsd:decimal ;
+      sh:order "4"^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
       
 raremat_monograph_form:ItemForm_arm_hasPhysicalCondition_rdf_value
@@ -1679,7 +1724,7 @@ raremat_monograph_form:ItemForm_arm_hasPhysicalCondition_rdf_value
       sh:description "Description of characteristics such as physical appearance, level of damage, quality, or completeness" ;
       sh:name "Physical condition" ;
       sh:nodeKind sh:Literal ;
-      sh:order ""^^xsd:decimal .
+      sh:order "5"^^xsd:decimal .
       
 raremat_monograph_form:ItemForm_arm_hasMaterial 
       a sh:PropertyShape ;
@@ -1689,7 +1734,7 @@ raremat_monograph_form:ItemForm_arm_hasMaterial
       sh:description "Materials that make up this this item. Materials can also be more granularly associated with each part of the item, and/or as base or applied material." ;
       sh:name "Has material" ;
       sh:nodeKind sh:IRI ;
-      sh:order ""^^xsd:decimal ;
+      sh:order "6"^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
 
 
@@ -1701,7 +1746,7 @@ raremat_monograph_form:ItemForm_rdau_P60596
       sh:description "Base materials for this this instance. Base materials can also be more granularly associated with each part of the item." ;
       sh:name "Has base material" ;
       sh:nodeKind sh:IRI ;
-      sh:order ""^^xsd:decimal ;
+      sh:order "7"^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
   
   
@@ -1713,19 +1758,9 @@ raremat_monograph_form:ItemForm_rdau_P60159
       sh:description "Applied materials for this this item. Applied materials can also be more granularly associated with each part of the item." ;
       sh:name "Has applied material" ;
       sh:nodeKind sh:IRI ;
-      sh:order ""^^xsd:decimal ;
+      sh:order "8"^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
       
-raremat_monograph_form:InstanceForm_rdau_P60159 
-      a sh:PropertyShape ;
-      sh:path rdau:P60159 ;
-      sh:class crm:E57 ;
-      sh:group raremat_monograph_property_groups:InstancePhysicalDescriptionPropertyGroup ;
-      sh:description "Applied materials for this this instance. Applied materials can also be more granularly associated with each part of the instance." ;
-      sh:name "Has applied material" ;
-      sh:nodeKind sh:IRI ;
-      sh:order ""^^xsd:decimal ;
-      tosh:editWidget swa:NestedObjectEditor .
       
 raremat_monograph_form:ItemForm_arm_writtenIn 
       a sh:PropertyShape ;
@@ -1744,7 +1779,7 @@ raremat_monograph_form:ItemForm_arm_writtenIn
       sh:description "The Font or HandWriting the textual information is displayed in." ;
       sh:name "Font or HandWriting" ;
       sh:nodeKind sh:IRI ;
-      sh:order ""^^xsd:decimal ;
+      sh:order "9"^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
       
 raremat_monograph_form:ItemForm_arm_markedBy 
@@ -1778,19 +1813,9 @@ raremat_monograph_form:ItemForm_arm_markedBy
       sh:description "Markings applied to objects during or after creation, conveying information such as the object's origin or maker, its authenticity, or a change in its official status." ;
       sh:name "Markings" ;
       sh:nodeKind sh:IRI ;
-      sh:order ""^^xsd:decimal ;
+      sh:order "10"^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
       
-      
-# ///// PROPERTY SHAPES FOR ItemOfInstance PropertyGroup START HERE. /////////////////////////////////////////////////////////////      
-
-raremat_monograph_form:ItemForm_bf_itemOf 
-      a sh:PropertyShape ;
-      sh:path bf:itemOf ;
-      sh:class bf:Instance ;
-      sh:description "Instances that this is an item of" ;
-      sh:name "Item of (instances)" ;
-      sh:group raremat_monograph_property_groups:ItemOfInstancePropertyGroup .
       
 # ///// PROPERTY SHAPES FOR ItemBibliographicCitationPropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
@@ -1806,16 +1831,20 @@ raremat_monograph_form:ItemForm_arm_hasCitation
   sh:order "0"^^xsd:decimal .
 
       
-# ///// PROPERTY SHAPES FOR ItemAwardReceipt PropertyGroup START HERE. /////////////////////////////////////////////////////////////
+# ///// PROPERTY SHAPES FOR ItemPhysicalDescriptionPropertyGroup PropertyGroup START HERE. /////////////////////////////////////////////////////////////
+
+# ItemForm_arm_hasExhibition Property Shape belongs at this point in the form sequence.
+
+# ItemForm_arm_hasCustodialHistory Property Shape belongs at this point in the form sequence.
 
 raremat_monograph_form:ItemForm_award_receives 
       a sh:PropertyShape ;
       sh:path award:receives ;
       sh:class award:AwardReceipt ;
-      sh:group raremat_monograph_property_groups:ItemAwardReceiptPropertyGroup ;
+      sh:group raremat_monograph_property_groups:ItemHistoryAndProvenancePropertyGroup ;
       sh:name "Item award receipt" ;
       sh:nodeKind sh:IRI ;
-      sh:order "0"^^xsd:decimal ;
+      sh:order "2"^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
       
       
@@ -1826,6 +1855,7 @@ raremat_monograph_form:ItemForm_bf_note
       sh:path bf:note ;
       sh:description "Item related notes for when more granualar information isn't captured." ;
       sh:name "Item notes" ;
+      sh:order "0"^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor ;
       sh:group raremat_monograph_property_groups:ItemNotePropertyGroup ;
       sh:or (
