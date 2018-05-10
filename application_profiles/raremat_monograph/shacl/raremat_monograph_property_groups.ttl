@@ -104,7 +104,7 @@
   sh:description "To group Agent role information for the resource." ;
   sh:order "0"^^xsd:decimal .
   
-:InstancePartsAccompanimentsPropertyGroup
+:InstanceAccompanimentsPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Instance Parts and Accompaniments" ;
   sh:order "0"^^xsd:decimal .
@@ -184,7 +184,7 @@
   sh:description "To group Item Genres." ;
   sh:order "0"^^xsd:decimal .
   
-:ItemPartsAccompanimentsPropertyGroup
+:ItemAccompanimentsPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Instance Parts and Accompaniments" ;
   sh:description "To group parts and accompaniments of an item" ;
