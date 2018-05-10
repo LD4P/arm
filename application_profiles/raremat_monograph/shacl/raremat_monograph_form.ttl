@@ -1067,13 +1067,12 @@ raremat_monograph_form:InstanceForm
   
 # InstanceAccompanimentsPropertyGroup
 
-  sh:property raremat_monograph_form:InstanceForm_bf_hasPart ;
-  sh:property raremat_monograph_enclosure:bf_hasPart_arm_Enclosure ;
   sh:property raremat_monograph_form:InstanceForm_bf_accompaniedBy ;
   sh:property raremat_monograph_form:InstanceForm_bf_accompanies ;
   
   
-# 
+# InstancePhysicalDescriptionPropertyGroup
+
   sh:property raremat_monograph_form:InstanceForm_bf_extent ;
   sh:property raremat_monograph_form:InstanceForm_measure_hasMeasurementGroup ;
   sh:property raremat_monograph_form:InstanceForm_bf_bookFormat ;
@@ -1082,14 +1081,38 @@ raremat_monograph_form:InstanceForm
   sh:property raremat_monograph_form:InstanceForm_measure_hasMaterial ;
   sh:property raremat_monograph_form:InstanceForm_rdau_P60596 ;
   sh:property raremat_monograph_form:InstanceForm_rdau_P60159 ;
+  sh:property raremat_monograph_form:InstanceForm_bf_hasPart ;
+  sh:property raremat_monograph_enclosure:bf_hasPart_arm_Enclosure ;
   sh:property raremat_monograph_form:InstanceForm_arm_writtenIn ;
   sh:property raremat_monograph_form:InstanceForm_arm_markedBy ;
+  
+  
+# InstanceOfWorkPropertyGroup
+
   sh:property raremat_monograph_form:InstanceForm_bf_instanceOf ;
   sh:property raremat_monograph_form:InstanceForm_bf_editionStatement ;
+  
+
+# InstanceHasItemPropertyGroup
+
   sh:property raremat_monograph_form:InstanceForm_bf_hasItem ;
+  
+  
+# InstanceBibliographicCitationPropertyGroup
   sh:property raremat_monograph_form:InstanceForm_arm_hasCitation ;
+  
+# InstanceAwardReceiptPropertyGroup
+
   sh:property raremat_monograph_form:InstanceForm_award_receives ;
+  
+
+# InstanceNotePropertyGroup
+
   sh:property raremat_monograph_form:InstanceForm_bf_note ;
+  
+  
+# InstanceIdentifierPropertyGroup
+
   sh:property raremat_monograph_form:InstanceForm_bf_identifiedBy ;
   .
 
@@ -1577,26 +1600,6 @@ raremat_monograph_form:ItemForm_bf_genreForm_madsrdf_isMemberOfMADSScheme
  sh:name "LCGFT Form Genre Terms" ;
  sh:nodeKind sh:IRI ;
  skos:editorialNote "Use look up service; LCGFT is too big to load directly into an RDF editor, and more importantly we don't want to create MADSAuthorities, only link to them." .
-  
-# TODO decide what Items can be part of an Item of a Monograph
-      
-raremat_monograph_form:ItemForm_bf_hasPart 
-      a sh:PropertyShape ;
-      sh:path bf:hasPart ;
-      sh:name "Item part" ;
-      sh:order "0"^^xsd:decimal ;
-      sh:description "Part of the item being described." ;
-      sh:class bf:Item ;
-      sh:group raremat_monograph_property_groups:ItemAccompanimentsPropertyGroup .
-      
-raremat_monograph_form:ItemForm_bf_partOf 
-      a sh:PropertyShape ;
-      sh:path bf:partOf ;
-      sh:name "Part of item" ;
-      sh:order "1"^^xsd:decimal ;
-      sh:description "The item being described is part of another item." ;
-      sh:class bf:Item ;
-      sh:group raremat_monograph_property_groups:ItemAccompanimentsPropertyGroup .
       
 raremat_monograph_form:ItemForm_arm_isOnCarrier 
       a sh:PropertyShape ;
@@ -1607,6 +1610,26 @@ raremat_monograph_form:ItemForm_arm_isOnCarrier
       sh:group raremat_monograph_property_groups:ItemAccompanimentsPropertyGroup ;
       tosh:editWidget swa:NestedObjectEditor .
 
+raremat_monograph_form:ItemForm_bf_hasPart 
+      a sh:PropertyShape ;
+      sh:path bf:hasPart ;
+      sh:name "Item part" ;
+      sh:order "0"^^xsd:decimal ;
+      sh:description "Part of the item being described." ;
+      sh:class bf:Item ;
+      sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup .
+      
+# An Enclosure Property Shape belongs at this point in the form sequence. See :bf_hasPart_arm_Enclosure
+      
+raremat_monograph_form:ItemForm_bf_partOf 
+      a sh:PropertyShape ;
+      sh:path bf:partOf ;
+      sh:name "Part of item" ;
+      sh:order "1"^^xsd:decimal ;
+      sh:description "The item being described is part of another item." ;
+      sh:class bf:Item ;
+      sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup .
+      
 raremat_monograph_form:ItemForm_measure_hasMeasurementGroup 
       a sh:PropertyShape ;
       sh:path measure:hasMeasurementGroup ;
