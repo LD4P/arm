@@ -1042,17 +1042,38 @@ raremat_monograph_form:InstanceForm
   rdf:type sh:NodeShape ;
   rdfs:label "Instance of Monographic Text" ;
   sh:targetClass bf:Instance ;
+  
+# InstanceTitlePropertyGroup
+
   sh:property raremat_monograph_form:InstanceForm_arm_hasPreferredTitle ;
   sh:property raremat_monograph_form:InstanceForm_bf_title ;
+  
+  
+# InstanceTypePropertyGroup
+
   sh:property raremat_monograph_form:InstanceForm_bf_carrier ;
+  
+  
+# InstanceTypePropertyGroup
+  
   sh:property raremat_monograph_form:InstanceForm_bf_genreForm ;
+  
+ 
+# InstanceActivityPropertyGroup
+
   sh:property raremat_monograph_form:InstanceForm_activity_hasActivity ;
   sh:property raremat_monograph_form:InstanceForm_bf_responsibilityStatement ;
   sh:property raremat_monograph_form:InstanceForm_bf_provisionActivityStatement ;
+  
+# InstanceAccompanimentsPropertyGroup
+
   sh:property raremat_monograph_form:InstanceForm_bf_hasPart ;
   sh:property raremat_monograph_enclosure:bf_hasPart_arm_Enclosure ;
   sh:property raremat_monograph_form:InstanceForm_bf_accompaniedBy ;
   sh:property raremat_monograph_form:InstanceForm_bf_accompanies ;
+  
+  
+# 
   sh:property raremat_monograph_form:InstanceForm_bf_extent ;
   sh:property raremat_monograph_form:InstanceForm_measure_hasMeasurementGroup ;
   sh:property raremat_monograph_form:InstanceForm_bf_bookFormat ;
@@ -1181,17 +1202,7 @@ raremat_monograph_form:InstanceForm_bf_provisionActivityStatement
       sh:description "Statement relating to providers of a resource; usually transcribed." ;
       sh:nodeKind sh:Literal ;
       sh:group raremat_monograph_property_groups:InstanceActivityPropertyGroup .
-      
-# TODO decide what carrier types can be part of an Instance of a Monograph
-      
-raremat_monograph_form:InstanceForm_bf_hasPart 
-      a sh:PropertyShape ;
-      sh:path bf:hasPart ;
-      sh:name "Instance part" ;
-      sh:order "0"^^xsd:decimal ;
-      sh:description "Part of the instance being described." ;
-      sh:class bf:Instance ;
-      sh:group raremat_monograph_property_groups:InstancePartsAccompanimentsPropertyGroup .
+
 
 # TODO decide what carrier types can accompany an Instance of a Monograph
      
@@ -1201,7 +1212,7 @@ raremat_monograph_form:InstanceForm_bf_accompaniedBy
       sh:class bf:Instance ;
       sh:description "Resource that accompanies the described resource." ;
       sh:name "Accompanied by" ;
-      sh:group raremat_monograph_property_groups:InstancePartsAccompanimentsPropertyGroup .
+      sh:group raremat_monograph_property_groups:InstanceAccompanimentsPropertyGroup .
 
 # TODO decide what carrier types can accompany an Instance of a Monograph
       
@@ -1211,7 +1222,7 @@ raremat_monograph_form:InstanceForm_bf_accompanies
       sh:class bf:Instance ;
       sh:description "Resource that adds to or is issued with the described resource." ;
       sh:name "Accompanies" ;
-      sh:group raremat_monograph_property_groups:InstancePartsAccompanimentsPropertyGroup .
+      sh:group raremat_monograph_property_groups:InstanceAccompanimentsPropertyGroup .
  
  
   
@@ -1305,6 +1316,17 @@ raremat_monograph_form:InstanceForm_rdau_P60159
       sh:nodeKind sh:IRI ;
       sh:order ""^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
+      
+raremat_monograph_form:InstanceForm_bf_hasPart 
+      a sh:PropertyShape ;
+      sh:path bf:hasPart ;
+      sh:name "Instance part" ;
+      sh:order "0"^^xsd:decimal ;
+      sh:description "Part of the instance being described." ;
+      sh:class bf:Instance ;
+      sh:group raremat_monograph_property_groups:InstancePhysicalDescriptionPropertyGroup .
+      
+# An Enclosure Property Shape belongs at this point in the form sequence. See :bf_hasPart_arm_Enclosure
       
 raremat_monograph_form:InstanceForm_arm_writtenIn 
       a sh:PropertyShape ;
@@ -1565,7 +1587,7 @@ raremat_monograph_form:ItemForm_bf_hasPart
       sh:order "0"^^xsd:decimal ;
       sh:description "Part of the item being described." ;
       sh:class bf:Item ;
-      sh:group raremat_monograph_property_groups:ItemPartsAccompanimentsPropertyGroup .
+      sh:group raremat_monograph_property_groups:ItemAccompanimentsPropertyGroup .
       
 raremat_monograph_form:ItemForm_bf_partOf 
       a sh:PropertyShape ;
@@ -1574,7 +1596,7 @@ raremat_monograph_form:ItemForm_bf_partOf
       sh:order "1"^^xsd:decimal ;
       sh:description "The item being described is part of another item." ;
       sh:class bf:Item ;
-      sh:group raremat_monograph_property_groups:ItemPartsAccompanimentsPropertyGroup .
+      sh:group raremat_monograph_property_groups:ItemAccompanimentsPropertyGroup .
       
 raremat_monograph_form:ItemForm_arm_isOnCarrier 
       a sh:PropertyShape ;
@@ -1582,7 +1604,7 @@ raremat_monograph_form:ItemForm_arm_isOnCarrier
       sh:name "Is on a carrier" ;
       sh:order "2"^^xsd:decimal ;
       sh:description "The item being described is on a particular carrier (possibly on a carrier with other items)." ;
-      sh:group raremat_monograph_property_groups:ItemPartsAccompanimentsPropertyGroup ;
+      sh:group raremat_monograph_property_groups:ItemAccompanimentsPropertyGroup ;
       tosh:editWidget swa:NestedObjectEditor .
 
 raremat_monograph_form:ItemForm_measure_hasMeasurementGroup 
