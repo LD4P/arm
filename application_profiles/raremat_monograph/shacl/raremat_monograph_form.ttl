@@ -1082,7 +1082,8 @@ raremat_monograph_form:InstanceForm
   sh:property raremat_monograph_form:InstanceForm_rdau_P60596 ;
   sh:property raremat_monograph_form:InstanceForm_rdau_P60159 ;
   sh:property raremat_monograph_form:InstanceForm_bf_hasPart ;
-  sh:property raremat_monograph_enclosure:bf_hasPart_arm_Enclosure ;
+  sh:property raremat_monograph_enclosure:InstanceForm_bf_hasPart_arm_Enclosure ;
+  sh:property raremat_monograph_enclosure:InstanceForm_bf_hasPart_arm_Binding ;
   sh:property raremat_monograph_form:InstanceForm_arm_writtenIn ;
   sh:property raremat_monograph_form:InstanceForm_arm_markedBy ;
   
@@ -1542,8 +1543,8 @@ raremat_monograph_form:ItemForm
 # ItemPhysicalDescriptionPropertyGroup
 
   sh:property raremat_monograph_form:ItemForm_bf_hasPart ;
-# TODO Order will not be the same across all resources, so we need separate enclosure property shapes.
-  sh:property raremat_monograph_enclosure:bf_hasPart_arm_Enclosure ;
+  sh:property raremat_monograph_enclosure:ItemForm_bf_hasPart_arm_Enclosure ;
+  sh:property raremat_monograph_enclosure:ItemForm_bf_hasPart_arm_Binding ;
   sh:property raremat_monograph_form:ItemForm_bf_partOf ;
   sh:property raremat_monograph_form:ItemForm_measure_hasMeasurementGroup ;
   sh:property raremat_monograph_form:ItemForm_bf_extent ;
