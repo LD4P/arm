@@ -1310,6 +1310,7 @@ artframe_art_form:ArtWorkActivityForm
   sh:property artframe_shapes_art:ArtWorkActivityForm_bf_agent ;
   sh:property artframe_shapes_art:ArtWorkActivityForm_bf_date ;
   sh:property artframe_shapes_art:ArtWorkActivityForm_arm_atLocation ;
+  sh:property artframe_shapes_art:ArtWorkActivityForm_arm_hasAttribution ;
   .
 
 artframe_art_form:ArtWorkActivityForm_rdf_type 
@@ -1349,7 +1350,18 @@ artframe_art_form:ArtWorkActivityForm_arm_atLocation
       sh:name "Location" ;
       sh:class gn:Feature ;
       sh:nodeKind sh:IRI ;
-      bibliotek-o_shapes_audio:lookup bibliotek-o_shapes_audio:LD4LookupService .
+      artframe_art_form:lookup artframe_art_form:LD4LookupService .
+         
+artframe_art_form:ArtWorkActivityForm_arm_hasAttribution 
+      a sh:PropertyShape ;
+      sh:path arm:hasAttribution ;
+      sh:order "4" ;
+      sh:maxCount "1" ;
+      sh:description "Used to attribute an Activity, such as ArtistActivity, to a particular agent or agents" ;
+      sh:name "Attribution" ;
+      sh:class arm:Attribution ;
+      sh:nodeKind sh:IRI ;
+      artframe_art_form:lookup artframe_art_form:LD4LookupService .
       
 # /////// Instance Activity FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
