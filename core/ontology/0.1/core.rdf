@@ -350,13 +350,6 @@
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>   
     
-    <owl:Class rdf:about="https://w3id.org/arm/core/ontology/0.1/StylePeriod">
-        <rdfs:label xml:lang="en">StylePeriod</rdfs:label>
-        <skos:definition xml:lang="en">A defined style, historical period, group, school, dynasty, movement, nationality, culture, etc. whose characteristics are represented in the work.</skos:definition>        
-        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-    </owl:Class>   
-    
     <owl:Class rdf:about="https://w3id.org/arm/core/ontology/0.1/SubjectNote">
         <rdfs:label xml:lang="en">Subject note</rdfs:label>
         <skos:definition xml:lang="en">Textual information describing the subject or iconographic details of a resource.</skos:definition>

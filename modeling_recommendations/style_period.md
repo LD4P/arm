@@ -70,14 +70,6 @@ The RareMat/ArtFrame Style/Period model is quite simple, involving a class, Styl
 Term Specifications
 ---------------
 
-Classes
-========
-**ex:StylePeriod**
-> - **URI:** TBD
-> - **Label:** Style/Period
-> - **Definition:** A defined style, historical period, group, school, dynasty, movement, nationality, culture, etc. whose characteristics are represented in the work. 
-
-
 Properties
 ==========
 
@@ -88,7 +80,7 @@ Properties
 > - **Domain:** unspecified
 > - **Range:** unspecified
 > - **Inverse:** ex:isStylePeriodOf
-> - **Editorial note:** Range is unspecified to allow values from controlled vocabularies not typed as ex:StylePeriod.
+> - **Editorial note:** Range is unspecified to allow values from various controlled vocabularies.
 
 **ex:isStylePeriodOf** (object property)
 > - **URI:** TBD
@@ -97,9 +89,9 @@ Properties
 > - **Domain:** unspecified
 > - **Range:** unspecified
 > - **Inverse:** ex:hasStylePeriod
-> - **Editorial note:** Domain is unspecified to allow subjects from controlled vocabularies not typed as ex:StylePeriod.
+> - **Editorial note:** Domain is unspecified to allow subjects from various controlled vocabularies.
 
-Note: Range of hasStylePeriod and domain of isStylePeriodOf remain unspecified so that vocabularies can be used without unwanted entailments.
+
 
 Diagram
 -----------
@@ -119,7 +111,6 @@ Sample RDF
 Areas for Future Research
 ---------
 - Alignment with or use of VRA Style/Period or other ontologies.
-- Is it valuable to define the StylePeriod class if these will always be implemented via vocabularies? One would never assert a relationship to a resource of type StylePeriod, without using a particular vocabulary term to specify _which_ style/period. This contrasts with the use of a Binding class to assert that a resource has a Binding, without using a vocabulary term to specify a more specific type of Binding.
 - Modeling of technique and instrumentation. 
 > - In some cases there are relationships between technique and style/period. E.g., <a href="http://vocab.getty.edu/aat/300067450">pointillism</a> from the Processes and Techniques Hierarchy, and <a href="http://vocab.getty.edu/aat/300021505">Neo-Impressionist</a> from the Styles and Periods Hierarchy.  
 > - There are frequently relationships between technique and instrumentation - e.g., dry-point designates both an engraving tool and the intaglio technique that uses this tool. How should these be modeled?
