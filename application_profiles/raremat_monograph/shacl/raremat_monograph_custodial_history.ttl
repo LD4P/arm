@@ -26,48 +26,23 @@
 @prefix raremat_monograph_price_specification: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_price_specification/> .
 @prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/> . 
 
-# TODO Catalogers prefer not to have to create a CustodialHistory resource
-# while editing, so it should be created behind the scenes. In fact, a 
-# CustodialHistory resource could be created for the Item when the Item is 
-# created. Instead of following PropertyShape, define shape with 
-# sh:path ( ch:hasCustodialHistory bf:hasPart ).
-:ItemForm_ch_hasCustodialHistory 
-    sh:and (
-        custodial_history_property_shapes:ch_hasCustodialHistory
-        [
-            # NON-VALIDATING
-            sh:name "Custodial history" ;
-            sh:description "Custodial history encompasses all the custodial events related to this item." ;
-            sh:group raremat_monograph_property_groups:ItemHistoryAndProvenancePropertyGroup ;
-            sh:order "0"^^xsd:decimal ;   
-            tosh:editWidget swa:NestedObjectEditor ;                  
-        ]
-    ) ;
-    .
+# Catalogers prefer not to have to create a CustodialHistory resource
+# in order to add CustodialEvents, so it should be created behind the 
+# scenes without the editor's awareness. The easiest approach is to create
+# the CustodialHistory resource when the Item is created, attaching the 
+# Item to the CustodialHistory via ch:hasCustodialHistory. This obviates
+# the need to check for an existing CustodialHistory resource when adding a
+# CustodialEvent. 
+:ItemForm_ch_hasCustodialHistory_bf_hasPart 
+    sh:path ( ch:hasCustodialHistory bf:hasPart ) ;
+    # NON-VALIDATING
+    sh:name "Custodial event" ;
+    sh:description "A custodial 'event' includes both static and transitional conditions: e.g., a period of ownership and a purchase. It is not restricted by the general notion of 'event.'" ;
+    sh:group raremat_monograph_property_groups:ItemHistoryAndProvenancePropertyGroup ;
+    sh:order "0"^^xsd:decimal ;   
+    tosh:editWidget swa:NestedObjectEditor ;  
+    .    
 
-:CustodialHistoryForm
-    a sh:NodeShape ;
-    rdfs:label "Custodial history" ;
-    sh:targetClass ch:CustodialHistory ;
-    sh:property
-        :CustodialHistoryForm_bf_hasPart ;
-    .
-    
-:CustodialHistoryForm_bf_hasPart 
-    sh:and (
-        custodial_history_property_shapes:bf_hasPart 
-        [
-            sh:class ch:CustodialEvent ;
-            # NON-VALIDATING
-            sh:name "Custodial event" ;
-            sh:description "Custodial event that is part of this item's custodial history" ;
-            # TODO Do we need to repeat this here?
-            sh:group raremat_monograph_property_groups:ItemHistoryAndProvenance ;
-            sh:order "0"^^xsd:decimal ;
-            tosh:editWidget swa:NestedObjectEditor ;          
-        ]    
-    ) ;
-    .
     
 ##### CUSTODIAL EVENT #####
 
@@ -82,8 +57,6 @@
         :CustodialEventForm_bf_date , 
         # Aggregate event of which this event is a part
         :CustodialEventForm_bf_partOf_ch_CustodialEvent ,
-        # Won't need this if it happens behind the scenes.
-        # :CustodialEventForm_bf_partOf_ch_CustodialHistory , 
         :CustodialEventForm_rdf_type , 
         raremat_monograph_price_specification:schema_priceSpecification , 
         :CustodialEventForm_seq_directlyFollows , 
