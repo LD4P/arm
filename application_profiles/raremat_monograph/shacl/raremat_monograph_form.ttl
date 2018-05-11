@@ -1352,9 +1352,9 @@ raremat_monograph_form:InstanceForm_bf_hasPart
       sh:class bf:Instance ;
       sh:group raremat_monograph_property_groups:InstancePhysicalDescriptionPropertyGroup .
 
-# An Binding Property Shape belongs at this point in the form sequence. See :bf_hasPart_arm_Binding
+# An Binding Property Shape belongs at this point in the form sequence. See :InstanceForm_bf_hasPart_arm_Binding
     
-# An Enclosure Property Shape belongs at this point in the form sequence. See :bf_hasPart_arm_Enclosure
+# An Enclosure Property Shape belongs at this point in the form sequence. See :InstanceForm_bf_hasPart_arm_Enclosure
       
 raremat_monograph_form:InstanceForm_arm_writtenIn 
       a sh:PropertyShape ;
@@ -1675,9 +1675,9 @@ raremat_monograph_form:ItemForm_bf_hasPart
       sh:class bf:Item ;
       sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup .
    
-# A Binding Property Shape belongs at this point in the form sequence. See :bf_hasPart_arm_Binding
+# A Binding Property Shape belongs at this point in the form sequence. See :ItemForm_bf_hasPart_arm_Binding
    
-# An Enclosure Property Shape belongs at this point in the form sequence. See :bf_hasPart_arm_Enclosure
+# An Enclosure Property Shape belongs at this point in the form sequence. See :ItemForm_bf_hasPart_arm_Enclosure
       
 raremat_monograph_form:ItemForm_bf_partOf 
       a sh:PropertyShape ;
