@@ -21,6 +21,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix seq: <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix swa: <http://topbraid.org/swa#> .
@@ -1551,7 +1552,7 @@ raremat_monograph_form:ItemForm
   sh:property raremat_monograph_form:ItemForm_measure_hasMeasurementGroup ;
   sh:property raremat_monograph_form:ItemForm_bf_extent ;
   sh:property raremat_monograph_form:ItemForm_arm_hasSignatureStatement ;
-  sh:property raremat_monograph_form:ItemForm_arm_hasPhysicalCondition_rdf_value ;
+  sh:property raremat_monograph_form:ItemForm_arm_hasPhysicalCondition ;
   sh:property raremat_monograph_form:ItemForm_arm_hasMaterial ;
   sh:property raremat_monograph_form:ItemForm_rdau_P60596 ;
   sh:property raremat_monograph_form:ItemForm_rdau_P60159 ;
@@ -1719,15 +1720,16 @@ raremat_monograph_form:ItemForm_arm_hasSignatureStatement
       sh:order "6"^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
       
-raremat_monograph_form:ItemForm_arm_hasPhysicalCondition_rdf_value
+raremat_monograph_form:ItemForm_arm_hasPhysicalCondition
       a sh:PropertyShape ;
-      sh:path ( arm:hasPhysicalCondition rdf:value ) ;
-      # The bf:PhysicalCondition will only have a rdf:value off from it for now. No need to create a separate form in the SHACL until a full implementation of the PhysicalCondition model is desired.
+      sh:path arm:hasPhysicalCondition ;
+      sh:class arm:PhysicalCondition ;
       sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;
       sh:description "Description of characteristics such as physical appearance, level of damage, quality, or completeness" ;
       sh:name "Physical condition" ;
       sh:nodeKind sh:Literal ;
-      sh:order "7"^^xsd:decimal .
+      sh:order "7"^^xsd:decimal ;
+      tosh:editWidget swa:NestedObjectEditor .
       
 raremat_monograph_form:ItemForm_arm_hasMaterial 
       a sh:PropertyShape ;
@@ -3110,41 +3112,41 @@ raremat_monograph_form:FontForm_arm_hasStyle
 # /////// Handwriting FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
 raremat_monograph_form:HandwritingForm
-  rdf:type sh:NodeShape ;
-  rdfs:label "Handwriting form" ;
-  sh:targetClass arm:Handwriting ;
-  sh:property raremat_monograph_form:HandwritingForm_arm_hasHandwritingType ;
-  sh:property raremat_monograph_form:HandwritingForm_dcterms_description ;
+    rdf:type sh:NodeShape ;
+    rdfs:label "Handwriting form" ;
+    sh:targetClass arm:Handwriting ;
+    sh:property raremat_monograph_form:HandwritingForm_arm_hasHandwritingType ;
+    sh:property raremat_monograph_form:HandwritingForm_dcterms_description ;
   .
 
 raremat_monograph_form:HandwritingForm_arm_hasHandwritingType 
-      a sh:PropertyShape ;
-      sh:path arm:hasHandwritingType ;
-      sh:order "0"^^xsd:decimal ;
-      sh:in ( aat:300194411 aat:300195207 aat:300375118 aat:300195226 aat:300210195 aat:300210180 aat:300202638 aat:300194430 aat:300210204 aat:300210206 aat:300210205 aat:300210136 aat:300210143 aat:300210146 aat:300194451 aat:300210049 aat:300210050 aat:300210051 aat:300194448 aat:300379143 aat:300209776 aat:300209772 aat:300196122 aat:300198409 aat:300194424 aat:300209780 aat:300200668 aat:300210288 aat:300200828 <http://dbpedia.org/resource/Court_hand> <http://dbpedia.org/resource/Secretary_hand> <https://w3id.org/arm/datasets/handwriting_type/mixed_hand> aat:300194782 <https://w3id.org/arm/datasets/handwriting_type/other_hand> ) ;
-      sh:nodeKind sh:IRI ;
-      sh:name "Has handwriting type" ;
-      sh:description "The type of writing hand used by this example of handwriting" .
+    a sh:PropertyShape ;
+    sh:path arm:hasHandwritingType ;
+    sh:order "0"^^xsd:decimal ;
+    sh:in ( aat:300194411 aat:300195207 aat:300375118 aat:300195226 aat:300210195 aat:300210180 aat:300202638 aat:300194430 aat:300210204 aat:300210206 aat:300210205 aat:300210136 aat:300210143 aat:300210146 aat:300194451 aat:300210049 aat:300210050 aat:300210051 aat:300194448 aat:300379143 aat:300209776 aat:300209772 aat:300196122 aat:300198409 aat:300194424 aat:300209780 aat:300200668 aat:300210288 aat:300200828 <http://dbpedia.org/resource/Court_hand> <http://dbpedia.org/resource/Secretary_hand> <https://w3id.org/arm/datasets/handwriting_type/mixed_hand> aat:300194782 <https://w3id.org/arm/datasets/handwriting_type/other_hand> ) ;
+    sh:nodeKind sh:IRI ;
+    sh:name "Has handwriting type" ;
+    sh:description "The type of writing hand used by this example of handwriting" .
       
 raremat_monograph_form:HandwritingForm_dcterms_description 
-      a sh:PropertyShape ;
-      sh:path dcterms:description ;
-      sh:description "Record any qualifying information about the handwriting found in the resource" ;
-      sh:name "Qualifying information about the handwriting" ;
-      sh:nodeKind sh:Literal ;
-      sh:order "1"^^xsd:decimal .
+    a sh:PropertyShape ;
+    sh:path dcterms:description ;
+    sh:description "Record any qualifying information about the handwriting found in the resource" ;
+    sh:name "Qualifying information about the handwriting" ;
+    sh:nodeKind sh:Literal ;
+    sh:order "1"^^xsd:decimal .
 
 # /////// Marking FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
 raremat_monograph_form:MarkingForm
-  rdf:type sh:NodeShape ;
-  rdfs:label "Marking form" ;
-  sh:targetClass arm:Marking ;
-  sh:property raremat_monograph_form:MarkingForm_rdf_type ;
-  sh:property raremat_monograph_form:MarkingForm_rdf_value ;
-  sh:property raremat_monograph_form:MarkingForm_activity_hasActivity ;
-  .
-  
+    rdf:type sh:NodeShape ;
+    rdfs:label "Marking form" ;
+    sh:targetClass arm:Marking ;
+    sh:property raremat_monograph_form:MarkingForm_rdf_type ;
+    sh:property raremat_monograph_form:MarkingForm_rdf_value ;
+    sh:property raremat_monograph_form:MarkingForm_activity_hasActivity ;
+    .
+   
 raremat_monograph_form:MarkingForm_rdf_type  
   a sh:PropertyShape ;
   sh:path rdf:type ;
@@ -3219,6 +3221,45 @@ raremat_monograph_form:MarkingActivityForm_activity_isActivityOf
       sh:name "Location" ;
       sh:class arm:Marking ;
       sh:nodeKind sh:IRI .
+      
+# /////// Physical Condition FORM BEGINS HERE ////////////////////////////////////////////////////////////  
+
+raremat_monograph_form:PhysicalConditionForm
+    rdf:type sh:NodeShape ;
+    sh:targetClass arm:PhysicalCondition ;
+    rdfs:label "Page Form" ;
+    sh:property raremat_monograph_form:PhysicalConditionForm_rdf_value ;
+    sh:property raremat_monograph_form:PhysicalConditionForm_seq_precedes ;
+    sh:property raremat_monograph_form:PhysicalConditionForm_seq_follows ;
+    .  
+
+raremat_monograph_form:PhysicalConditionForm_rdf_value
+    a sh:PropertyShape ;
+    sh:path rdf:value ;
+    sh:name "Physical condition" ;
+    sh:description "Description of characteristics such as physical appearance, level of damage, quality, or completeness." ;
+    sh:nodeKind sh:Literal ;
+    sh:order "0"^^xsd:decimal .
+      
+raremat_monograph_form:PhysicalConditionForm_seq_precedes
+      a sh:PropertyShape ; 
+      sh:path seq:precedes ;
+      sh:class arm:PhysicalCondition ;
+      sh:name "Precedes" ;
+      sh:description "Links to a condition that follows the one currently being described" ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:nodeKind sh:IRI ;
+      sh:order "1"^^xsd:decimal .
+      
+raremat_monograph_form:PhysicalConditionForm_seq_follows
+      a sh:PropertyShape ; 
+      sh:path seq:follows ;
+      sh:class arm:PhysicalCondition ;
+      sh:name "Follows" ;
+      sh:description "Links to a condition that precedes the one currently being described" ;
+      tosh:editWidget swa:NestedObjectEditor ;
+      sh:nodeKind sh:IRI ;
+      sh:order "1"^^xsd:decimal .
       
 # /////// Work Identifier FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
