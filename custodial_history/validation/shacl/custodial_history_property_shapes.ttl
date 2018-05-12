@@ -83,12 +83,16 @@
     sh:path bf:hasPart ;
     sh:nodeKind sh:IRI ; 
     . 
-    
+
+# The CustodialHistory has a CustodialEvent, OR the aggregate CustodialEvent 
+# has a CustodialEvent part.
 :bf_hasPart_ch_CustodialEvent 
-    a sh:PropertyShape ;
-    sh:path bf:hasPart ;
-    sh:nodeKind sh:IRI ; 
-    sh:class ch:CustodialEvent ;
+    sh:and (
+        :bf_hasPart 
+        [
+            sh:class ch:CustodialEvent ;       
+        ]
+    ) ;    
     .  
       
 :bf_partOf 
@@ -97,6 +101,7 @@
     sh:nodeKind sh:IRI ; 
     . 
 
+# The CustodialEvent is part of an aggregate CustodialEvent
 :bf_partOf_ch_CustodialEvent 
     sh:and (
         :bf_partOf
@@ -106,6 +111,26 @@
         ] 
     ) ;
     . 
+ 
+# The CustodialEvent is part of the CustodialHistory   
+:bf_partOf_ch_CustodialHistory 
+    sh:and (
+        :bf_partOf
+        [
+            sh:class ch:CustodialHistory ;
+            sh:maxCount 1 ;
+        ] 
+    ) ;
+    . 
+    
+# CustodialEvent to resource via CustodialHistory
+:bf_partOf_ch_isCustodialHistoryOf 
+    sh:path ( bf:partOf ch:isCustodialHistoryOf ) ;
+    sh:nodeKind sh:IRI ;
+    # NB Don't include sh:class bf:Item, since the ontology and validation
+    # shapes can be used outside the bibliographic context.
+    sh:maxCount 1 ;
+    .
 
 :bf_status 
     a sh:PropertyShape ;
@@ -191,7 +216,8 @@
         ]    
     ) ;
     .
-           
+
+# Resource to CustodialHistory           
 :ch_hasCustodialHistory 
     a sh:PropertyShape ;
     sh:path ch:hasCustodialHistory ;
@@ -200,6 +226,15 @@
     sh:maxCount 1 ;
     .
     
+# Resource to CustodialEvent via CustodialHistory
+:ch_hasCustodialHistory_bf_hasPart
+    a sh:PropertyShape ;
+    sh:path ( ch:hasCustodialHistory bf:hasPart ) ;
+    sh:nodeKind sh:IRI ; 
+    sh:class ch:CustodialEvent ;
+    .
+
+# CustodialHistory to resource    
 :ch_isCustodialHistoryOf 
     a sh:PropertyShape ;
     sh:path ch:isCustodialHistoryOf ;
