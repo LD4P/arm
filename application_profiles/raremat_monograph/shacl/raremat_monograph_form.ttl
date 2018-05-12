@@ -1547,6 +1547,7 @@ raremat_monograph_form:ItemForm
     sh:property raremat_monograph_form:ItemForm_rdau_P60159 ;
     sh:property raremat_monograph_form:ItemForm_arm_writtenIn ;
     sh:property raremat_monograph_form:ItemForm_arm_markedBy ;
+    
   
   
 # ItemOfInstancePropertyGroup
@@ -1560,7 +1561,7 @@ raremat_monograph_form:ItemForm
 # ItemHistoryAndProvenancePropertyGroup
 
     sh:property raremat_shapes_monograph_exhibition:ItemForm_arm_hasExhibition ;
-    sh:property raremat_monograph_custodial_history:ItemForm_arm_hasCustodialHistory ;
+    sh:property raremat_monograph_custodial_history:ItemForm_ch_hasCustodialHistory_bf_hasPart ;
     sh:property raremat_monograph_form:ItemForm_award_receives ;
 
 
