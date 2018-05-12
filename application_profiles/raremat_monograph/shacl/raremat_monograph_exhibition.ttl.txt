@@ -13,22 +13,15 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 @prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/> .
-@prefix raremat_monograph_base: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_base/> .
 @prefix arm_core_property_shapes: <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
 @prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/> .
 
+# //////////////////////////////////////////////////////////////////////////
 #
 # IMPORTANT: Preliminary draft - incomplete, and much needs to be redone
-# using generic PropertyShapes and NodeShapes.
+# using generic PropertyShapes and NodeShapes. Also need to fix
 #
-# QUESTIONS
-#
-# Lookup service
-# - How to indicate what to look up?
-# TODO Specify lookup sources via restriction PropertyShapes: see for example
-# raremat_monograph_form:MaterialForm_crm_P2_has_type_gvp_broader_Extended 
-#
-
+# //////////////////////////////////////////////////////////////////////////
 
 # Links Item to Exhibition and ExhibitionEvent
 :ItemForm_arm_hasExhibition 
