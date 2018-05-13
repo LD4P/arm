@@ -44,7 +44,7 @@
       />
     </xsl:param>
     <rdf:Description rdf:about="{$uri}">
-      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept/"/>
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
       <skos:prefLabel xml:lang="en">
         <xsl:value-of select="DESCRIPTOR"/>
       </skos:prefLabel>
