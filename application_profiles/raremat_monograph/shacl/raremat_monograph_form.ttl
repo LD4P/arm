@@ -1299,8 +1299,6 @@ raremat_monograph_form:InstanceForm_bf_provisionActivityStatement
     sh:nodeKind sh:Literal ;
     sh:group raremat_monograph_property_groups:InstanceActivityPropertyGroup .
 
-
-# TODO decide what carrier types can accompany an Instance of a Monograph
      
 raremat_monograph_form:InstanceForm_bf_accompaniedBy 
     a sh:PropertyShape ;
@@ -1340,7 +1338,7 @@ raremat_monograph_form:InstanceForm_measure_hasMeasurementGroup
     a sh:PropertyShape ;
     sh:path measure:hasMeasurementGroup ;
     sh:class measure:MeasurementGroup ;
-    sh:group raremat_monograph_property_groups:InstancePhysicalDecriptionPropertyGroup ;
+    sh:group raremat_monograph_property_groups:InstancePhysicalDescriptionPropertyGroup ;
     sh:name "Instance measurement information" ;
     sh:nodeKind sh:IRI ;
     sh:order "1"^^xsd:decimal ;
