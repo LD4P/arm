@@ -29,8 +29,6 @@
 @prefix vivo: <http://vivoweb.org/ontology/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-# TODO Review namespaces
-
 # TODO annotation properties and imports for <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/ >
 
 <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/ >
@@ -156,8 +154,6 @@ raremat_monograph_form:WorkForm
     sh:property raremat_monograph_form:WorkForm_rdau_P60833 ;
     sh:property raremat_monograph_form:WorkForm_bf_dataSource .
 
-
-
 # ///// PROPERTY SHAPES FOR WorkTitlePropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
 raremat_monograph_form:WorkForm_arm_hasPreferredTitle 
@@ -194,22 +190,43 @@ raremat_monograph_form:WorkForm_activity_hasActivity
     tosh:editWidget swa:NestedObjectEditor ;
     sh:or ( 
         [
-                sh:class activity:AuthorActivity ;
+            sh:class activity:AuthorActivity ;
         ]
         [
-                sh:class activity:IllustratorActivity ;
+            sh:class activity:CreatorActivity ;
         ]
         [
-                sh:class activity:EditorActivity ;
+            sh:class activity:AttributionActivity ;
         ]
         [
-                sh:class activity:EditorActivity ;
+            sh:class activity:CompilerActivity ;
         ]
         [
-                sh:class activity:TranslatorActivity ;
+            sh:class activity:ContributorActivity ;
         ]
         [
-                sh:class activity:Activity 
+            sh:class activity:CopyrightHolderActivity ;
+        ]
+        [
+            sh:class activity:EditorActivity ;
+        ]
+        [
+            sh:class activity:IllustratorActivity ;
+        ]
+        [
+            sh:class activity:ArtistActivity ;
+        ]
+        [
+            sh:class activity:PatronActivity ;
+        ]
+        [
+            sh:class activity:SponsorActivity 
+        ]
+        [
+            sh:class activity:TranslatorActivity ;
+        ]
+        [
+            sh:class activity:Activity ;
         ]
         ) .
   
@@ -1185,25 +1202,82 @@ raremat_monograph_form:InstanceForm_activity_hasActivity
     tosh:editWidget swa:NestedObjectEditor ;
     sh:or ( 
         [
-                sh:class activity:PublisherActivity  ;
+            sh:class activity:ArtistActivity  ;
         ]
         [
-                sh:class activity:DistributorActivity ;
+            sh:class activity:BinderActivity ;
         ]
         [
-                sh:class activity:PrinterActivity ;
+            sh:class activity:ColoristActivity ;
         ]
         [
-                sh:class activity:DesignerActivity ;
+            sh:class activity:ContributorActivity ;
         ]
         [
-                sh:class activity:ManufacturerActivity ;
+            sh:class activity:DedicateeActivity ;
         ]
         [
-                sh:class activity:BinderActivity ;
+            sh:class activity:DedicatorActivity ;
         ]
         [
-                sh:class activity:Activity 
+            sh:class activity:DesignerActivity ;
+        ]  
+        [
+            sh:class activity:DistributorActivity  ;
+        ]
+        [
+            sh:class activity:EditorActivity ;
+        ]
+        [
+            sh:class activity:EngraverActivity ;
+        ]
+        [
+            sh:class activity:EtcherActivity ;
+        ]
+        [
+            sh:class activity:FacsimilistActivity ;
+        ]
+        [
+            sh:class activity:ForgerActivity ;
+        ]
+        [
+            sh:class activity:HonoreeActivity ;
+        ]
+        [
+            sh:class activity:IllustratorActivity ;
+        ]
+        [
+            sh:class activity:ManufacturerActivity ;
+        ]  
+        [
+            sh:class activity:MarblerActivity  ;
+        ]
+        [
+            sh:class activity:PapermakerActivity ;
+        ]
+        [
+            sh:class activity:PlatemakerActivity ;
+        ]
+        [
+            sh:class activity:PrinterActivity ;
+        ]
+        [
+            sh:class activity:ProducerActivity ;
+        ]
+        [
+            sh:class activity:PrividerActivity ;
+        ]
+        [
+            sh:class activity:PublisherActivity ;
+        ]  
+        [
+            sh:class activity:SponsorActivity ;
+        ]
+        [
+            sh:class activity:TypographerActivity ;
+        ]
+        [
+            sh:class activity:Activity 
         ]  
         ) .
 
@@ -1615,7 +1689,80 @@ raremat_monograph_form:ItemForm_activity_hasActivity
     sh:order "0"^^xsd:decimal ;
     sh:group raremat_monograph_property_groups:ItemActivityPropertyGroup ;
     tosh:editWidget swa:NestedObjectEditor ;
-    sh:class activity:Activity .
+    (  
+        [
+            sh:class activity:AddresseeActivity ;
+        ]
+        [
+            sh:class activity:ArtistActivity ;
+        ]
+        [
+            sh:class activity:BinderActivity ;
+        ]
+        [
+            sh:class activity:ColoristActivity ;
+        ]
+        [
+            sh:class activity:ConditionAssessmentActivity ;
+        ]
+        [
+            sh:class activity:ConservatorActivity ;
+        ]
+        [
+            sh:class activity:ContributorActivity ;
+        ]
+        [
+            sh:class activity:CorrespondentActivity ;
+        ]
+        [
+            sh:class activity:DedicateeActivity ;
+        ]
+        [
+            sh:class activity:DedicatorActivity ;
+        ]
+        [
+            sh:class activity:DesignerActivity ;
+        ]
+        [
+            sh:class activity:EditorActivity ;
+        ]
+        [
+            sh:class activity:FacsimilistActivity ;
+        ]
+        [
+            sh:class activity:ForgerActivity ;
+        ]
+        [
+            sh:class activity:HonoreeActivity ;
+        ]
+        [
+            sh:class activity:IlluminatorActivity ;
+        ]
+        [
+            sh:class activity:IllustratorActivity ;
+        ]
+        [
+            sh:class activity:InscriberActivity ;
+        ]
+        [
+            sh:class activity:MarblerActivity ;
+        ]
+        [
+            sh:class activity:PapermakerActivity ;
+        ]
+        [
+            sh:class activity:ScribeActivity ;
+        ]
+        [
+            sh:class activity:SignerActivity ;
+        ]
+        [
+            sh:class activity:SponsorActivity ;
+        ]
+        [
+            sh:class activity:TranscriberActivity ;
+        ] 
+  ) .
   
 raremat_monograph_form:ItemForm_bf_genreForm 
     a sh:PropertyShape ;
@@ -2784,8 +2931,6 @@ raremat_monograph_form:ItemTitleForm_bf_note
     sh:nodeKind sh:IRI ;
     sh:order "11"^^xsd:decimal .
 
-# TODO a buch of embedded forms, e.g. Activities, Identifiers
-
 # /////// Title Note FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
 raremat_monograph_form:TitleNoteForm
@@ -3140,7 +3285,8 @@ raremat_monograph_form:MarkingForm_arm_hasActivity
     sh:name "Marking Agent" ;
     sh:order "2"^^xsd:decimal ;
     tosh:editWidget swa:NestedObjectEditor ;
-    sh:class activity:CreatorActivity .
+    [
+                sh:class activity:CreatorActivity .
 
 # /////// Marking Activity FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
