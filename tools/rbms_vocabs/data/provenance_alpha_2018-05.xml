@@ -1,0 +1,1421 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- ALPHABETICAL --><!DOCTYPE THESAURUS [
+<!ELEMENT THESAURUS (CONCEPT+)>
+<!ELEMENT CONCEPT ( (DESCRIPTOR|NON-DESCRIPTOR),SC*,CM*,HN*,SN*,UF*,USE*,BT*,NT*,RT*,STA*,TYP*,INP*,APP*,UPD*,NVD*,TNR*,FLG*)>
+<!ELEMENT DESCRIPTOR (#PCDATA)>
+<!ELEMENT NON-DESCRIPTOR (#PCDATA)>
+<!ELEMENT SC (#PCDATA)>
+<!ELEMENT CM (#PCDATA)>
+<!ELEMENT HN (#PCDATA)>
+<!ELEMENT SN (#PCDATA)>
+<!ELEMENT UF (#PCDATA)>
+<!ELEMENT USE (#PCDATA)>
+<!ELEMENT BT (#PCDATA)>
+<!ELEMENT NT (#PCDATA)>
+<!ELEMENT RT (#PCDATA)>
+<!ELEMENT STA (#PCDATA)>
+<!ELEMENT TYP (#PCDATA)>
+<!ELEMENT INP (#PCDATA)>
+<!ELEMENT APP (#PCDATA)>
+<!ELEMENT UPD (#PCDATA)>
+<!ELEMENT NVD (#PCDATA)>
+<!ELEMENT TNR (#PCDATA)>
+<!ELEMENT FLG (#PCDATA)>
+]>
+
+<THESAURUS>
+<CONCEPT>
+ <DESCRIPTOR>Accession numbers</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Numbers (Provenance)</BT>
+ <RT>Library copies</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>1</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Annotations</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <SN>Use for remarks, notes, highlighting or commentary (generally in manuscript) on the text or on the history or provenance of the material.</SN>
+ <BT>Markings</BT>
+ <NT>Authors&apos; annotations</NT>
+ <NT>Dates</NT>
+ <NT>Genealogical notes</NT>
+ <NT>Manicules</NT>
+ <NT>Marginalia</NT>
+ <NT>Prices</NT>
+ <NT>Underscoring</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>4</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Armorial bindings</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Bindings</BT>
+ <RT>Armorial stamps</RT>
+ <RT>Devices</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>13</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Armorial bookplates</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <UF>Heraldic bookplates</UF>
+ <BT>Bookplates</BT>
+ <RT>Armorial stamps</RT>
+ <RT>Devices</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>17</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Armorial stamps</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Stamps</BT>
+ <RT>Armorial bindings</RT>
+ <RT>Armorial bookplates</RT>
+ <RT>Devices</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>15</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Association copies</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <SN>Use for evidence of association when a broad scope is desired.  This could include copies of books owned or annotated by the author, someone connected with the author, someone of interest in his own right, or someone particularly associated with the contents or production of the book.  Some institutions may choose to further broaden the scope of this term by including indeterminate evidence of association.</SN>
+ <BT>Classes of owners (Gathering term; do not assign)</BT>
+ <NT>Authors&apos; copies</NT>
+ <NT>Booksellers&apos; copies</NT>
+ <NT>Dedicatees&apos; copies</NT>
+ <NT>Donors&apos; copies</NT>
+ <NT>Illustrators&apos; copies</NT>
+ <NT>Library copies</NT>
+ <NT>Printers&apos; copies</NT>
+ <NT>Publishers&apos; copies</NT>
+ <NT>Translators&apos; copies</NT>
+ <RT>False association copies</RT>
+ <RT>Illegible markings</RT>
+ <RT>Supposed association copies</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-14</UPD>
+ <TNR>21</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Association copies, False</NON-DESCRIPTOR>
+ <USE>False association copies</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>32</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Association copies, Supposed</NON-DESCRIPTOR>
+ <USE>Supposed association copies</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>33</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Auction copies</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <SN>Use for copies known to have been sold at auction.</SN>
+ <BT>Occasions of provenance (Gathering term; do not assign)</BT>
+ <RT>Auction lot numbers</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>34</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Auction lot numbers</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Numbers (Provenance)</BT>
+ <RT>Auction copies</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>35</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Authors&apos; annotations</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Annotations</BT>
+ <RT>Authors&apos; copies</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>6</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Authors&apos; autographs</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Autographs</BT>
+ <RT>Authors&apos; copies</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>36</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Authors&apos; copies</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <SN>Use for copies of an author&apos;s work known or thought to have been part of that author&apos;s personal library or used by that author, not simply presented or inscribed by the author.</SN>
+ <BT>Association copies</BT>
+ <RT>Authors&apos; annotations</RT>
+ <RT>Authors&apos; autographs</RT>
+ <RT>Authors&apos; inscriptions</RT>
+ <RT>Authors&apos; presentation copies</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-14</UPD>
+ <TNR>22</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Authors&apos; inscriptions</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Inscriptions</BT>
+ <NT>Authors&apos; presentation inscriptions</NT>
+ <RT>Authors&apos; copies</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>38</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Authors&apos; presentation copies</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Presentation copies</BT>
+ <RT>Authors&apos; copies</RT>
+ <RT>Authors&apos; presentation inscriptions</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>39</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Authors&apos; presentation inscriptions</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Authors&apos; inscriptions</BT>
+ <BT>Presentation inscriptions</BT>
+ <RT>Authors&apos; presentation copies</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>41</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Autographs</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <UF>Signatures (Names)</UF>
+ <BT>Markings</BT>
+ <NT>Authors&apos; autographs</NT>
+ <RT>Initials combined with printed signatures</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>37</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Award books</NON-DESCRIPTOR>
+ <USE>Prize books</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>46</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Binders&apos; tickets</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Provenance labels</BT>
+ <RT>Bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-15</UPD>
+ <TNR>48</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Bindings</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <SN>Use for bindings with some characteristic that might allow identification of the provenance, whether or not the provenance is actually identified.</SN>
+ <BT>Physical amendments (Gathering term; do not assign)</BT>
+ <NT>Armorial bindings</NT>
+ <NT>Branded bindings</NT>
+ <NT>Dedication bindings</NT>
+ <NT>Monogrammed bindings</NT>
+ <NT>Presentation bindings</NT>
+ <RT>Binders&apos; tickets</RT>
+ <RT>Markings</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-15</UPD>
+ <TNR>14</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Blind stamps</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Stamps</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>54</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Booklabels</NON-DESCRIPTOR>
+ <USE>Bookplates</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>55</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Bookplates</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <UF>Booklabels</UF>
+ <BT>Provenance labels</BT>
+ <NT>Armorial bookplates</NT>
+ <NT>Donors&apos; bookplates</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-15</UPD>
+ <TNR>19</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Booksellers&apos; copies</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <SN>Use for copies owned by booksellers or displaying evidence of second-hand booksales, e.g., dealer&apos;s ms. notes.</SN>
+ <BT>Association copies</BT>
+ <RT>Booksellers&apos; labels</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2016-07-01</UPD>
+ <TNR>23</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Booksellers&apos; labels</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <UF>Stationers&apos; labels</UF>
+ <BT>Provenance labels</BT>
+ <RT>Booksellers&apos; copies</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-15</UPD>
+ <TNR>57</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Branded bindings</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Bindings</BT>
+ <RT>Branded edges</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>50</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Branded edges</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Edge-marks</BT>
+ <RT>Branded bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>59</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Call numbers</NON-DESCRIPTOR>
+ <USE>Shelf marks</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>61</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Cancellation stamps</NON-DESCRIPTOR>
+ <USE>Release stamps</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>63</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Ciphers (Codes)</NON-DESCRIPTOR>
+ <USE>Codes (Provenance)</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>65</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Ciphers (Monograms)</NON-DESCRIPTOR>
+ <USE>Monograms</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>67</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Classes of owners (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Association copies</NT>
+ <NT>False association copies</NT>
+ <NT>Supposed association copies</NT>
+ <STA>Approved</STA>
+ <INP>2005-04-04</INP>
+ <APP>2005-04-04</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>99</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Codes (Provenance)</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <SN>Use for booksellers&apos; or owners&apos; codes, ciphers, price codes, etc.</SN>
+ <UF>Ciphers (Codes)</UF>
+ <BT>Markings</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2016-07-01</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>66</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Dates</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <SN>Use for evidence dating the acquisition or period of ownership.</SN>
+ <BT>Annotations</BT>
+ <NT>Reading dates</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>7</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Dedicatees&apos; copies</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Association copies</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>24</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Dedication bindings</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Bindings</BT>
+ <RT>Presentation bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>51</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Devices</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <SN>Use for evidence of any physical form which uses a family or personal emblem.</SN>
+ <UF>Emblems</UF>
+ <BT>Markings</BT>
+ <RT>Armorial bindings</RT>
+ <RT>Armorial bookplates</RT>
+ <RT>Armorial stamps</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>16</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Donors&apos; bookplates</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Bookplates</BT>
+ <RT>Donors&apos; copies</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>56</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Donors&apos; copies</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <SN>Use for materials actually owned and then donated by an individual or institution.</SN>
+ <BT>Association copies</BT>
+ <RT>Donors&apos; bookplates</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>25</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Duplicate stamps</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Release stamps</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>71</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Edge-marks</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Markings</BT>
+ <NT>Branded edges</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>60</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Emblems</NON-DESCRIPTOR>
+ <USE>Devices</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>70</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Embossed stamps</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Stamps</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>72</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Expurgated books</NON-DESCRIPTOR>
+ <USE>Expurgated copies</USE>
+ <STA>Approved</STA>
+ <INP>2012-06-26</INP>
+ <APP>2012-06-26</APP>
+ <UPD>2012-06-26</UPD>
+ <TNR>107</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Expurgated copies</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <HN>Submitted by John Lancaster, 7/28/2009.</HN>
+ <SN>Use for copies of a work from which objectionable parts have been defaced, obliterated, or removed, usually on moral grounds. This term is copy-specific and applies only to individual copies.</SN>
+ <UF>Expurgated books</UF>
+ <BT>Physical amendments (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2012-06-26</INP>
+ <APP>2012-06-23</APP>
+ <UPD>2012-06-26</UPD>
+ <TNR>106</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Extra-illustrated copies</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <UF>Grangerized copies</UF>
+ <BT>Insertions</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>73</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>False association copies</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <SN>Use for forged, faked or discredited evidence of provenance, usually in conjunction with another term or terms from this list.</SN>
+ <UF>Association copies, False</UF>
+ <BT>Classes of owners (Gathering term; do not assign)</BT>
+ <RT>Association copies</RT>
+ <RT>Supposed association copies</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>29</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Family trees</NON-DESCRIPTOR>
+ <USE>Genealogical notes</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>76</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Fists</NON-DESCRIPTOR>
+ <USE>Manicules</USE>
+ <STA>Approved</STA>
+ <INP>2015-04-21</INP>
+ <APP>2015-04-21</APP>
+ <UPD>2015-04-21</UPD>
+ <TNR>109</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Genealogical notes</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <UF>Family trees</UF>
+ <BT>Annotations</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>9</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Grangerized copies</NON-DESCRIPTOR>
+ <USE>Extra-illustrated copies</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>74</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Hand stamps</NON-DESCRIPTOR>
+ <USE>Stamps</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>80</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Heraldic bookplates</NON-DESCRIPTOR>
+ <USE>Armorial bookplates</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>18</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Illegible markings</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Markings</BT>
+ <RT>Association copies</RT>
+ <RT>Supposed association copies</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>30</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Illustrators&apos; copies</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Association copies</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>26</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Index fingers</NON-DESCRIPTOR>
+ <USE>Manicules</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>77</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Indicators</NON-DESCRIPTOR>
+ <USE>Manicules</USE>
+ <STA>Approved</STA>
+ <INP>2015-04-21</INP>
+ <APP>2015-04-21</APP>
+ <UPD>2015-04-21</UPD>
+ <TNR>110</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Initials</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Markings</BT>
+ <NT>Initials combined with printed signatures</NT>
+ <NT>Stencilled initials</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>81</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Initials combined with printed signatures</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <SN>Use for evidence of provenance consisting of a combination of manuscript initials and printed signature marks, e.g., Thomas Jefferson&apos;s additions of the letter &quot;T&quot; preceding signature mark &quot;I&quot; or &quot;J&quot; following signature mark &quot;T&quot;.</SN>
+ <BT>Initials</BT>
+ <RT>Autographs</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>45</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Ink stamps</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Stamps</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>83</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Inscriptions</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Markings</BT>
+ <NT>Authors&apos; inscriptions</NT>
+ <NT>Presentation inscriptions</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>40</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Insertions</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <SN>Use for any kind of insertion that might allow identification of the provenance, e.g., autograph letter, news clipping, photograph, etc.</SN>
+ <BT>Physical amendments (Gathering term; do not assign)</BT>
+ <NT>Extra-illustrated copies</NT>
+ <NT>Presentation insertions</NT>
+ <RT>Markings</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-15</UPD>
+ <TNR>75</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Library copies</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <SN>Use for copies owned by institutions or formal private libraries as opposed to personal collections.</SN>
+ <BT>Association copies</BT>
+ <NT>Subscription library copies</NT>
+ <RT>Accession numbers</RT>
+ <RT>Shelf marks</RT>
+ <RT>Withdrawn copies</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2008-02-28</UPD>
+ <TNR>3</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Manicules</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <HN>Changed 6/2016. Formerly, &quot;Manicules&quot; may have been indexed as &quot;Fists.&quot;</HN>
+ <SN>Use for drawings of a small hand with one or more pointing fingers, intended to direct attention to a passage of text.</SN>
+ <UF>Fists</UF>
+ <UF>Index fingers</UF>
+ <UF>Indicators</UF>
+ <UF>Note signs</UF>
+ <UF>Pointing fingers</UF>
+ <UF>Pointing hands</UF>
+ <BT>Annotations</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2016-11-29</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>8</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Marginalia</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Annotations</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>10</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Markings</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC><!-- unknown line type [@@@] -->
+
+ <HN>Change to scope note approved, January 24 2009.</HN>
+ <SN>Use for intentional or accidental marks applied manually in or on materials.</SN>
+ <BT>Physical amendments (Gathering term; do not assign)</BT>
+ <NT>Annotations</NT>
+ <NT>Autographs</NT>
+ <NT>Codes (Provenance)</NT>
+ <NT>Devices</NT>
+ <NT>Edge-marks</NT>
+ <NT>Illegible markings</NT>
+ <NT>Initials</NT>
+ <NT>Inscriptions</NT>
+ <NT>Monograms</NT>
+ <NT>Mottoes</NT>
+ <NT>Numbers (Provenance)</NT>
+ <NT>Seals</NT>
+ <NT>Shelf marks</NT>
+ <NT>Stamps</NT>
+ <NT>Stencils</NT>
+ <NT>Watermarks</NT>
+ <RT>Bindings</RT>
+ <RT>Insertions</RT>
+ <RT>Papers</RT>
+ <RT>Provenance labels</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2009-10-16</UPD>
+ <TNR>5</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Monogrammed bindings</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>52</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Monograms</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <UF>Ciphers (Monograms)</UF>
+ <BT>Markings</BT>
+ <NT>Stencilled monograms</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>68</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Mottoes</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Markings</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>86</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Note signs</NON-DESCRIPTOR>
+ <USE>Manicules</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>78</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Numbers (Provenance)</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <SN>Use for marks of provenance which use numerical designations with or without other codes.</SN>
+ <BT>Markings</BT>
+ <NT>Accession numbers</NT>
+ <NT>Auction lot numbers</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2016-07-01</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>2</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Occasions of provenance (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Auction copies</NT>
+ <NT>Presentation copies</NT>
+ <NT>Prize books</NT>
+ <NT>Sammelbands</NT>
+ <NT>Withdrawn copies</NT>
+ <STA>Approved</STA>
+ <INP>2005-04-04</INP>
+ <APP>2005-04-04</APP>
+ <UPD>2009-10-13</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>100</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Papers</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <SN>Use for paper evidence indicating that individual printers, publishers, collectors or owners had their own papers made with identifying fibers or watermarks for their own copies.</SN>
+ <BT>Physical amendments (Gathering term; do not assign)</BT>
+ <NT>Watermarks</NT>
+ <RT>Markings</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-15</UPD>
+ <TNR>90</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Perforation stamps</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Stamps</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>93</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Physical amendments (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Bindings</NT>
+ <NT>Expurgated copies</NT>
+ <NT>Insertions</NT>
+ <NT>Markings</NT>
+ <NT>Papers</NT>
+ <NT>Provenance labels</NT>
+ <STA>Approved</STA>
+ <INP>2005-04-04</INP>
+ <APP>2005-04-04</APP>
+ <UPD>2012-06-26</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>101</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Pointing fingers</NON-DESCRIPTOR>
+ <USE>Manicules</USE>
+ <STA>Approved</STA>
+ <INP>2015-04-21</INP>
+ <APP>2015-04-21</APP>
+ <UPD>2015-04-21</UPD>
+ <TNR>111</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Pointing hands</NON-DESCRIPTOR>
+ <USE>Manicules</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>79</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Presentation bindings</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Bindings</BT>
+ <RT>Dedication bindings</RT>
+ <RT>Presentation inscriptions</RT>
+ <RT>Presentation insertions</RT>
+ <RT>Prize books</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>53</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Presentation copies</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Occasions of provenance (Gathering term; do not assign)</BT>
+ <NT>Authors&apos; presentation copies</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>42</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Presentation inscriptions</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Inscriptions</BT>
+ <NT>Authors&apos; presentation inscriptions</NT>
+ <RT>Presentation bindings</RT>
+ <RT>Presentation insertions</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>43</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Presentation insertions</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Insertions</BT>
+ <NT>Presentation leaves</NT>
+ <RT>Presentation bindings</RT>
+ <RT>Presentation inscriptions</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>84</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Presentation leaves</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Presentation insertions</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>94</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Pressmarks</NON-DESCRIPTOR>
+ <USE>Shelf marks</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>95</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Prices</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <SN>Use for prices in materials indicating purchase cost information by a previous owner or relating to secondary selling, e.g., second-hand dealer prices, auction prices.</SN>
+ <BT>Annotations</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>11</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Printers&apos; copies</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Association copies</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>27</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Prize books</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <UF>Award books</UF>
+ <BT>Occasions of provenance (Gathering term; do not assign)</BT>
+ <RT>Presentation bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>47</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Provenance labels</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <HN>Changed 6/2016. Formerly, &quot;Provenance labels&quot; may have been indexed as &quot;Labels.&quot;</HN>
+ <SN>Use for evidence of provenance applied by adhesion.</SN>
+ <BT>Physical amendments (Gathering term; do not assign)</BT>
+ <NT>Binders&apos; tickets</NT>
+ <NT>Bookplates</NT>
+ <NT>Booksellers&apos; labels</NT>
+ <RT>Markings</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2016-06-29</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>49</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Publishers&apos; copies</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Association copies</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>28</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Reading dates</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Dates</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>69</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Release stamps</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <UF>Cancellation stamps</UF>
+ <UF>Withdrawal stamps</UF>
+ <BT>Stamps</BT>
+ <NT>Duplicate stamps</NT>
+ <RT>Withdrawn copies</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>64</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Rubber stamps</NON-DESCRIPTOR>
+ <USE>Stamps</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>97</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Sammelbände</NON-DESCRIPTOR>
+ <USE>Sammelbands</USE>
+ <STA>Approved</STA>
+ <INP>2009-10-13</INP>
+ <APP>2009-10-13</APP>
+ <UPD>2009-10-13</UPD>
+ <TNR>105</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Sammelbands</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <SN>Use for bound volumes made up of separately produced works bound together for an owner. For volumes made up of previously published pamphlets, reissued, usually with a collective title page, use Nonce collections.</SN>
+ <UF>Sammelbände</UF>
+ <BT>Occasions of provenance (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2009-10-13</INP>
+ <APP>2009-07-11</APP>
+ <UPD>2013-07-01</UPD>
+ <TNR>104</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Seals</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Markings</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>87</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Shelf marks</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <UF>Call numbers</UF>
+ <UF>Pressmarks</UF>
+ <BT>Markings</BT>
+ <RT>Library copies</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>62</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Signatures (Names)</NON-DESCRIPTOR>
+ <USE>Autographs</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2016-07-01</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>44</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Stamps</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <SN>Use for evidence left by any mechanical device used to create a mark of ownership.</SN>
+ <UF>Hand stamps</UF>
+ <UF>Rubber stamps</UF>
+ <BT>Markings</BT>
+ <NT>Armorial stamps</NT>
+ <NT>Blind stamps</NT>
+ <NT>Embossed stamps</NT>
+ <NT>Ink stamps</NT>
+ <NT>Perforation stamps</NT>
+ <NT>Release stamps</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>20</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Stationers&apos; labels</NON-DESCRIPTOR>
+ <USE>Booksellers&apos; labels</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>58</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Stencilled initials</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Initials</BT>
+ <RT>Stencils</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>82</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Stencilled monograms</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Monograms</BT>
+ <RT>Stencils</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>91</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Stencils</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Markings</BT>
+ <RT>Stencilled initials</RT>
+ <RT>Stencilled monograms</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>88</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Subscription library copies</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <HN>Approved 1/2008</HN>
+ <SN>Use for copies owned or formerly owned by subscription libraries.</SN>
+ <BT>Library copies</BT>
+ <STA>Approved</STA>
+ <INP>2008-02-28</INP>
+ <APP>2008-02-28</APP>
+ <UPD>2008-02-28</UPD>
+ <TNR>102</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Supposed association copies</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <UF>Association copies, Supposed</UF>
+ <BT>Classes of owners (Gathering term; do not assign)</BT>
+ <RT>Association copies</RT>
+ <RT>False association copies</RT>
+ <RT>Illegible markings</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>31</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Translators&apos; copies</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <SN>Use for copies of a work owned or used by a translator of that work.</SN>
+ <BT>Association copies</BT>
+ <STA>Approved</STA>
+ <INP>2005-04-01</INP>
+ <APP>2005-04-01</APP>
+ <UPD>2008-06-20</UPD>
+ <TNR>98</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Underlining</NON-DESCRIPTOR>
+ <USE>Underscoring</USE>
+ <STA>Approved</STA>
+ <INP>2008-07-11</INP>
+ <APP>2008-07-11</APP>
+ <UPD>2008-07-11</UPD>
+ <TNR>103</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Underscoring</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <HN>UF added 6/2008.</HN>
+ <UF>Underlining</UF>
+ <BT>Annotations</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2008-07-11</UPD>
+ <TNR>12</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Watermarks</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <BT>Markings</BT>
+ <BT>Papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>89</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Withdrawal stamps</NON-DESCRIPTOR>
+ <USE>Release stamps</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>96</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Withdrawn copies</DESCRIPTOR>
+ <SC>rbprov Provenance Evidence</SC>
+ <SN>Use for evidence indicating institutional withdrawal of materials.</SN>
+ <BT>Occasions of provenance (Gathering term; do not assign)</BT>
+ <RT>Library copies</RT>
+ <RT>Release stamps</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>85</TNR>
+</CONCEPT>
+</THESAURUS>

@@ -1,0 +1,4415 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- ALPHABETICAL --><!DOCTYPE THESAURUS [
+<!ELEMENT THESAURUS (CONCEPT+)>
+<!ELEMENT CONCEPT ( (DESCRIPTOR|NON-DESCRIPTOR),SC*,CM*,HN*,SN*,UF*,USE*,BT*,NT*,RT*,STA*,TYP*,INP*,APP*,UPD*,NVD*,TNR*,FLG*)>
+<!ELEMENT DESCRIPTOR (#PCDATA)>
+<!ELEMENT NON-DESCRIPTOR (#PCDATA)>
+<!ELEMENT SC (#PCDATA)>
+<!ELEMENT CM (#PCDATA)>
+<!ELEMENT HN (#PCDATA)>
+<!ELEMENT SN (#PCDATA)>
+<!ELEMENT UF (#PCDATA)>
+<!ELEMENT USE (#PCDATA)>
+<!ELEMENT BT (#PCDATA)>
+<!ELEMENT NT (#PCDATA)>
+<!ELEMENT RT (#PCDATA)>
+<!ELEMENT STA (#PCDATA)>
+<!ELEMENT TYP (#PCDATA)>
+<!ELEMENT INP (#PCDATA)>
+<!ELEMENT APP (#PCDATA)>
+<!ELEMENT UPD (#PCDATA)>
+<!ELEMENT NVD (#PCDATA)>
+<!ELEMENT TNR (#PCDATA)>
+<!ELEMENT FLG (#PCDATA)>
+]>
+
+<THESAURUS>
+<CONCEPT>
+ <DESCRIPTOR>Abaca fibers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for paper made from abaca (Musa textilis) fibers.</SN>
+ <UF>Manila fibers</UF>
+ <UF>Manila hemp fibers</UF>
+ <BT>Paper fibers</BT>
+ <STA>Approved</STA>
+ <INP>2014-05-16</INP>
+ <APP>2014-05-16</APP>
+ <UPD>2014-05-16</UPD>
+ <TNR>361</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Account book papers</NON-DESCRIPTOR>
+ <USE>Ledger papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>1</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Agate marbled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Strassburg marbled papers</UF>
+ <BT>Marbled papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>3</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Air bells</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for tiny circular thin spots in the paper.</SN>
+ <UF>Bubble marks</UF>
+ <UF>Steam blisters</UF>
+ <BT>Paper defects</BT>
+ <RT>Blisters</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>6</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Alfa fibers</NON-DESCRIPTOR>
+ <USE>Esparto grass fibers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>11</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Alum spots</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for defects of small undissolved alum crystals.</SN>
+ <BT>Spots</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>13</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Antique laid papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Laid papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>15</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Antique marbled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Marbled papers</BT>
+ <NT>Curled antique marbled papers</NT>
+ <NT>Zig-zag antique marbled papers</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>17</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Bag papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>20</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Baggy papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for papers with thicker middles than edges.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>22</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Bales</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for ten reams of paper.</SN>
+ <BT>Paper quantities (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>23</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Bamboo fibers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Paper fibers</BT>
+ <RT>China papers</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>25</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Banknote papers</NON-DESCRIPTOR>
+ <USE>Currency papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>28</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Bark papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>30</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Batik papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Creased papers</UF>
+ <BT>Impregnated papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>31</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Batonne</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for a watermark of widely spaced parallel lines.</SN>
+ <BT>Watermarks</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>34</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Bible papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Cambridge India papers</UF>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>36</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Bill papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>38</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Blackening</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for papers showing burn marks on the surface.</SN>
+ <UF>Burning</UF>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>39</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Bleach scale</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for pearly, light brown, brittle spots in papers.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>41</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Blisters</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for bubble-like raised areas in papers, often but not restricted to coated papers.</SN>
+ <UF>Dandy blisters</UF>
+ <BT>Paper defects</BT>
+ <RT>Air bells</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>10</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Block-printed papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Printed papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>43</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Blotting papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>45</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Blueprint papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>46</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Bond papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>47</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Book papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>48</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Box enamels</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for highly glazed, inexpensive papers, coated on one side only.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <RT>Chromo papers</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>49</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Bright enamels</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for highly polished calendered papers, coated on one side only; usually used for labels.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>51</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Bristle marks</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for indentations in the surface of coated papers in the shape of brush bristles.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>52</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>British marbled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC><!-- unknown line type [@@@] -->
+
+ <SN>Do not use for the Swedish marbled papers sometimes called British marbled papers.</SN>
+ <BT>Marbled papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-12-08</UPD>
+ <TNR>53</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Brocade papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Surface applications of paper</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>54</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Bronze specks</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Specks</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>56</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Brush enamels</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for papers coated on one side, brush polished, with a brilliant surface; usually used for cigar labels and box coverings.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>58</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Brush marks</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for streaks in the surface of coated papers made by brushes which spread on the coating in the papermaking process.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>59</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Brushed papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Surface treated papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>60</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Bubble marks</NON-DESCRIPTOR>
+ <USE>Air bells</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>7</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Burning</NON-DESCRIPTOR>
+ <USE>Blackening</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>40</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Burnished papers</NON-DESCRIPTOR>
+ <USE>Glazed papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>61</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Butter papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>63</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Caffoy</NON-DESCRIPTOR>
+ <USE>Flock papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>64</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Calender cuts</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for small wrinkles in the paper parallel to one of the sides.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>66</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Calender spots</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for small oil spots or indentations in the sheet.</SN>
+ <BT>Spots</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>67</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Calendered papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Surface treated papers</BT>
+ <NT>Super-calendered papers</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>69</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Cambridge India papers</NON-DESCRIPTOR>
+ <USE>Bible papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>37</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cameo</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Watermarks</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>72</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Canvas note papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for papers embossed to imitate canvas.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>73</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Carbolic papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for strong packing papers containing carbolic acid as an insect repellent.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <RT>Impregnated papers</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>74</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Carbon papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>75</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Carbon specks</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Specks</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>76</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cardboard</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>77</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cellophanes</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>78</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Chainlines</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Watermarks</BT>
+ <NT>Turned chainlines</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>79</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Chart papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>81</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cheque papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>82</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>China papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for soft, unsized, very thin papers, generally made in China from bamboo fibers, used for proofing papers for plate printing, for lithographic prints, and for transfer paper.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <RT>Bamboo fibers</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>27</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Chromatic papers</NON-DESCRIPTOR>
+ <USE>Mottled papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>83</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Chromo papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for papers heavily coated, usually on one side only, used in lithography.</SN>
+ <UF>Chromolithograph papers</UF>
+ <BT>Types of paper by uses or names</BT>
+ <RT>Box enamels</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>50</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Chromolithograph papers</NON-DESCRIPTOR>
+ <USE>Chromo papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>85</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cinder specks</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Specks</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>86</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cipher</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Watermarks</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>87</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cloth impression marks</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <HN>Accepted term, 20100115; Candidate term, 200907.</HN>
+ <SN>Use for paper displaying blind impressions made by cloth.</SN>
+ <UF>Impression marks, cloth</UF>
+ <UF>Marks, cloth impression</UF>
+ <BT>Paper features (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2010-01-26</INP>
+ <APP>2010-01-15</APP>
+ <UPD>2012-06-27</UPD>
+ <TNR>354</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cloud papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for papers with cloud-shaped patterns created by uneven dispersion of bleached and colored pulps.</SN>
+ <BT>Impregnated papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>88</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cloudy papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for papers with unevenness in look-through.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>89</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Coated papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Paper surfaces</BT>
+ <NT>Writing tables</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2008-02-28</UPD>
+ <TNR>90</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cobbs</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for good quality endpapers, decorated in various ways, often drab colored and sprinkled.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>92</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cockle</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>93</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cocoa marbled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Marbled papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>94</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Color spots</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Spots</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>95</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Colored papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Decorated papers</BT>
+ <RT>Dyed papers</RT>
+ <RT>Impregnated papers</RT>
+ <RT>Surface applications of paper</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>96</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Computer papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>99</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Contraries</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for any foreign substance in paper, such as sand, feathers, string.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>100</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cornermarks</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Watermarks</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>101</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cotton fibers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Paper fibers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>102</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cotton linters fibers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Linters</UF>
+ <BT>Paper fibers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>103</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Couch marks</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for long thin areas of the paper parallel to one of the sides where the fibers have clumped together thickly, causing adjacent thinner areas in look-through.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>105</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Coucher&apos;s drops</NON-DESCRIPTOR>
+ <USE>Vatman&apos;s tears</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-12-08</UPD>
+ <TNR>106</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Countermarks</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Watermarks</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-12-08</UPD>
+ <TNR>108</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Countersunk</NON-DESCRIPTOR>
+ <USE>Intaglio</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>109</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cover papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>111</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cover stock</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Substance</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>112</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cracking</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for cracks in the surface of coated papers.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>114</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Craters</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for small pits in coated papers.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>115</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Crayon papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for inexpensive heavy drawing papers or cardboards in various colors with a rough surface on one side, glazed on the other.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>116</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Creased papers</NON-DESCRIPTOR>
+ <USE>Batik papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>32</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Crepe papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>117</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Creped papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Surface treated papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>118</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Crocking</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for papers with surface dyes rubbed off.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>119</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Cropped edges</NON-DESCRIPTOR>
+ <USE>Trimmed edges</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>120</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Crush marks</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for areas in paper in which the pulp is pressed so tightly that it produces a mottled or &quot;crowded&quot; appearance in the fibers in look-through.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>122</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Crushed-finish papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for papers decorated on the surface with a variegated coloration or with the creation of a crinkly pattern.</SN>
+ <BT>Mottled papers</BT>
+ <BT>Surface treated papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>123</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Curl</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for papers which curl up when placed on a flat surface.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>124</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Curl marbled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Marbled papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>125</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Curled antique marbled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Antique marbled papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>18</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Currency papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Banknote papers</UF>
+ <BT>Types of paper by uses or names</BT>
+ <RT>Security papers</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>29</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Cut edges</NON-DESCRIPTOR>
+ <USE>Trimmed edges</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>127</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cypress marble papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC><!-- unknown line type [@@@] -->
+
+ <SN>Do not use for the sprinkled papers sometimes called Cypress marbled papers.</SN>
+ <UF>Rock marbled papers</UF>
+ <BT>Marbled papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-12-08</UPD>
+ <TNR>128</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Dandy blisters</NON-DESCRIPTOR>
+ <USE>Blisters</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>42</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Dead spots</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for any dull areas in an otherwise highly glossy surface of a sheet.</SN>
+ <BT>Spots</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>130</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Deckle edges</NON-DESCRIPTOR>
+ <USE>Deckled edges</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>131</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Deckled edges</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Deckle edges</UF>
+ <UF>Feathered edges</UF>
+ <BT>Edge treatments</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>132</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Decorated papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Fancy papers</UF>
+ <BT>Paper features (Gathering term; do not assign)</BT>
+ <NT>Colored papers</NT>
+ <NT>Impregnated papers</NT>
+ <NT>Surface applications of paper</NT>
+ <NT>Surface treated papers</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2012-06-27</UPD>
+ <TNR>97</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Defects of paper</NON-DESCRIPTOR>
+ <USE>Paper defects</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>137</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Developing papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Photographic papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>138</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Diaphanic papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for a lithographed paper applied to windows to imitate stained glass.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <RT>Printed papers</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>140</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Dog-eared papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>141</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Domino papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for wallpapers with small square repeated designs, pictures, or figures, often hand colored.</SN>
+ <BT>Printed papers</BT>
+ <RT>Wallpapers</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>142</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Drag marbled papers</NON-DESCRIPTOR>
+ <USE>Spanish marbled papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>144</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Drag spots</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for irregular streaks or long thin lumpy areas on the paper&apos;s surface.</SN>
+ <BT>Spots</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>146</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Drawing papers</NON-DESCRIPTOR>
+ <USE>Sketching papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>147</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Duplex papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for papers with different colors, textures, or finish on the two sides.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>149</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Duplicating papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>150</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Dusting papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for papers which flake or powder from loose fibers on the surface.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>151</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Dutch marbled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Marbled papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>152</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Dye spots</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Spots</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>153</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Dyed papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Impregnated papers</BT>
+ <RT>Colored papers</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>98</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Edge treatments</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Gathering term, do not use; index under narrower term.</SN>
+ <BT>Paper features (Gathering term; do not assign)</BT>
+ <NT>Deckled edges</NT>
+ <NT>Trimmed edges</NT>
+ <NT>Untrimmed edges</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2012-06-27</UPD>
+ <TNR>134</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Edge watermarks</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Watermarks</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>155</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Embedded papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Impregnated papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>156</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Embossed papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Ripple-finished papers</UF>
+ <BT>Surface treated papers</BT>
+ <NT>Grained papers</NT>
+ <NT>Linen-finished papers</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>157</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Envelope reams</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for papers generally used for envelopes, in lots of 504 sheets.</SN>
+ <BT>Reams</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>161</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Erasable notebooks</NON-DESCRIPTOR>
+ <USE>Writing tables</USE>
+ <STA>Approved</STA>
+ <INP>2008-02-28</INP>
+ <APP>2008-02-28</APP>
+ <UPD>2008-02-28</UPD>
+ <TNR>352</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Erasable tablets</NON-DESCRIPTOR>
+ <USE>Writing tables</USE>
+ <STA>Approved</STA>
+ <INP>2008-02-28</INP>
+ <APP>2008-02-28</APP>
+ <UPD>2008-02-28</UPD>
+ <TNR>353</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Esparto grass fibers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Alfa fibers</UF>
+ <BT>Etching papers</BT>
+ <BT>Paper fibers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>12</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Etching papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <NT>Esparto grass fibers</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>163</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Evened edges</NON-DESCRIPTOR>
+ <USE>Trimmed edges</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>164</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Fancy papers</NON-DESCRIPTOR>
+ <USE>Decorated papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>135</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Feathered edges</NON-DESCRIPTOR>
+ <USE>Deckled edges</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>133</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Feathered papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for papers whose deckled edges are quite large and thin.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>165</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Felt sides</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Paper surfaces</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>166</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Figured marbled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Flowered marble papers</UF>
+ <BT>Marbled papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>167</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Fish eyes</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for small round glazed spots in paper.</SN>
+ <BT>Spots</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>169</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Flax fibers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Paper fibers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>170</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Flock papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Caffoy</UF>
+ <UF>Flocked papers</UF>
+ <BT>Surface applications of paper</BT>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>65</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Flocked papers</NON-DESCRIPTOR>
+ <USE>Flock papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>171</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Flowered marble papers</NON-DESCRIPTOR>
+ <USE>Figured marbled papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>168</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Foil papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Metal coated papers</UF>
+ <BT>Surface applications of paper</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>172</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Folio reams</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for reams &quot;of paper supplied flat,&quot; i.e. unfolded; see Labarre, 109.</SN>
+ <BT>Reams</BT>
+ <RT>Quad reams</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>174</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Foul papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for any paper with dirt specks in it.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>176</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Four veins</NON-DESCRIPTOR>
+ <USE>Italian marbled papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>177</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Foxing</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>179</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>French marble</NON-DESCRIPTOR>
+ <USE>Shell marbled papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>180</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Fur</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for small bits of paper – usually detached from the edges – that have attached to the surface of the sheet.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>182</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Gampi fibers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Paper fibers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>183</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Glassine</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>184</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Glazed papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Burnished papers</UF>
+ <BT>Surface treated papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>62</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Gloster marbled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Marbled papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>185</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Grained papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Embossed papers</BT>
+ <RT>Leatherette</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>159</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Grainy edges</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for edges that are clumpy or rough.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>187</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Grass fibers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Paper fibers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>188</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Grease spots</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Spots</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>189</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Grit</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for scratchy or abrasive substances in papers.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>190</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Grocery papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>191</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Hair vein</NON-DESCRIPTOR>
+ <USE>Italian marbled papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>192</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Haircuts</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for hair-thin cuts in the surface of a sheet where it appears that hairs or long fibers have been pulled out of the surface.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>193</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Half-plate papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for soft-textured papers used for woodcuts.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>194</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Halftone papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>195</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Handmade papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by method of manufacture</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>196</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Hemp fibers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Paper fibers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>198</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Imperfect paper</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for reams &quot;not made up to the full number of a printer&apos;s ream, i.e. 516 sheets&quot;; Labarre, 130.</SN>
+ <BT>Reams</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>199</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Impregnated papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for papers decorated within the fibers.</SN>
+ <BT>Decorated papers</BT>
+ <NT>Batik papers</NT>
+ <NT>Cloud papers</NT>
+ <NT>Dyed papers</NT>
+ <NT>Embedded papers</NT>
+ <NT>Iridescent papers</NT>
+ <RT>Carbolic papers</RT>
+ <RT>Colored papers</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>33</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Impression marks, cloth</NON-DESCRIPTOR>
+ <USE>Cloth impression marks</USE>
+ <STA>Approved</STA>
+ <INP>2010-01-26</INP>
+ <APP>2010-01-26</APP>
+ <UPD>2010-01-26</UPD>
+ <TNR>359</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>India proof papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for straw-colored, soft, absorbent, unsized, very thin papers, usually used for steel plate or wood engraving and pasted onto a heavier stock.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>201</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Inside reams</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for &quot;480 sheets or 20 inside quires of 24 [good] sheets each&quot;; Labarre, 222.</SN>
+ <BT>Reams</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>202</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Intaglio</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Countersunk</UF>
+ <BT>Watermarks</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>110</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Iridescent papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Impregnated papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>200</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Iron specks</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Specks</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>203</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Italian marbled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Four veins</UF>
+ <UF>Hair vein</UF>
+ <BT>Marbled papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>178</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Japan vellum</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for a thick, sturdy, long-fibered, cloudy paper, usually in a cream or natural color.</SN>
+ <UF>Vellum, Japan</UF>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>204</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Japanese copying papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for a thin, strong, durable, long-fibered paper.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>206</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Jute fibers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Paper fibers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>207</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Kozo fibers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Paper fibers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>208</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Kraft papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for a coarse, heavy wood-pulp paper, usually brown, used for bags, wrapping, or envelopes.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>209</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Lace-papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for a white, usually wood-pulp paper, used to make doilies, valentines, or box laces.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>210</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Lace pattern marbled papers</NON-DESCRIPTOR>
+ <USE>Spanish marbled papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-12-08</UPD>
+ <TNR>211</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Laid lines</NON-DESCRIPTOR>
+ <USE>Wire lines</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>212</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Laid papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by fiber patterns</BT>
+ <NT>Antique laid papers</NT>
+ <NT>Modern laid papers</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>16</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Leaf sizes</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC><!-- unknown line type [@@@] -->
+
+ <SN>Always subdivide this term by the dimensions of the leaf in inches, citing height then width. For example: 655 Leaf sizes (Paper) |x 24&quot; by 36&quot;. |2 rbpap; if the leaf has been trimmed, this should be noted in a copy- specific note.</SN>
+ <BT>Paper sizes (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-12-08</UPD>
+ <TNR>216</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Leatherette</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for any paper with a mechanically produced grain which looks like leather, usually used over boards in binding.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <RT>Grained papers</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>186</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Leaves</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>A leaf is one half of a folded sheet; i.e. 2 pages.</SN>
+ <BT>Paper quantities (Gathering term; do not assign)</BT>
+ <RT>Sheets</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>218</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Ledger papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Account book papers</UF>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>2</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Linen-finished papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Embossed papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>160</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Linen fibers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Paper fibers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>220</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Linters</NON-DESCRIPTOR>
+ <USE>Cotton linters fibers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>104</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Lithographed papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for papers decorated with a lithographed design.</SN>
+ <BT>Printed papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>221</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Lithographic papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for papers suitable for lithographic printing.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>222</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Loan papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for very sturdy, high quality, sized, wove papers.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>223</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Localized watermarks</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Watermarks</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>224</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Lumps</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>225</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Machine-made papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by method of manufacture</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>226</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Machine-printed papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Printed papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>227</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Magazine papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>228</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Manifold papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for thin papers used for copies, interleaving with carbon papers, usually for typewriter use.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>229</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Manila fibers</NON-DESCRIPTOR>
+ <USE>Abaca fibers</USE>
+ <STA>Approved</STA>
+ <INP>2014-05-16</INP>
+ <APP>2014-05-16</APP>
+ <UPD>2014-05-16</UPD>
+ <TNR>363</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Manila hemp fibers</NON-DESCRIPTOR>
+ <USE>Abaca fibers</USE>
+ <STA>Approved</STA>
+ <INP>2014-05-16</INP>
+ <APP>2014-05-16</APP>
+ <UPD>2014-05-16</UPD>
+ <TNR>362</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Manilla papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>230</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Marble papers</NON-DESCRIPTOR>
+ <USE>Marbled papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>231</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Marbled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Marble papers</UF>
+ <BT>Surface applications of paper</BT>
+ <NT>Agate marbled papers</NT>
+ <NT>Antique marbled papers</NT>
+ <NT>British marbled papers</NT>
+ <NT>Cocoa marbled papers</NT>
+ <NT>Curl marbled papers</NT>
+ <NT>Cypress marble papers</NT>
+ <NT>Dutch marbled papers</NT>
+ <NT>Figured marbled papers</NT>
+ <NT>Gloster marbled papers</NT>
+ <NT>Italian marbled papers</NT>
+ <NT>Nonpareil marbled papers</NT>
+ <NT>Paste marbled papers</NT>
+ <NT>Scratted marbled papers</NT>
+ <NT>Shell marbled papers</NT>
+ <NT>Spanish marbled papers</NT>
+ <NT>Stormont marbled papers</NT>
+ <NT>Sun marbled papers</NT>
+ <NT>Swedish marbled papers</NT>
+ <NT>Tree marbled papers</NT>
+ <NT>Turkish marbled papers</NT>
+ <NT>West end marbled papers</NT>
+ <NT>Zebra marbled papers</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>5</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Marks, cloth impression</NON-DESCRIPTOR>
+ <USE>Cloth impression marks</USE>
+ <STA>Approved</STA>
+ <INP>2010-01-26</INP>
+ <APP>2010-01-26</APP>
+ <UPD>2010-01-26</UPD>
+ <TNR>360</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Metal coated papers</NON-DESCRIPTOR>
+ <USE>Foil papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>173</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Mica papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for very fancy, usually decorated, coated papers containing ground mica in their sizing; may be dyed, calendered, or embossed, and are often shellacked to be washable; used in greeting cards, fancy box covers, etc.</SN>
+ <BT>Surface treated papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>242</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Mill reams</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for handmade papers to designate &quot;two grades of the same paper ... 18 quires of insides or perfect paper, each quire containing 24 sheets, and two quires of outsides or inferior, broken, or damaged paper, of only 20 sheets each, one on top and one on the bottom, making a total of 472&quot;; Labarre, 222.</SN>
+ <BT>Reams</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>243</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Mitsumata fibers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Paper fibers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>244</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Modern laid papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Laid papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>215</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Mold-made papers</NON-DESCRIPTOR>
+ <USE>Mould-made papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>245</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Mottled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for papers with several colors on the surface or different colored fibers in the same sheet; usually used for boxes.</SN>
+ <UF>Chromatic papers</UF>
+ <BT>Surface applications of paper</BT>
+ <NT>Crushed-finish papers</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>84</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Mould-made papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for &quot;an imitation hand-made paper ... made on a cylinder or cylindrical mould revolving in a vat of pulp,&quot; Labarre, 167.</SN>
+ <UF>Mold-made papers</UF>
+ <BT>Types of paper by method of manufacture</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>246</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Mould sides</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Screen sides</UF>
+ <BT>Paper surfaces</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>247</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Mulberry fibers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Paper-mulberry</UF>
+ <UF>Tapa cloth</UF>
+ <BT>Paper fibers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>249</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Music papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>252</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Newsprint</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>253</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Nonpareil marbled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Marbled papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>232</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Oil spots</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Spots</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>254</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Onionskin</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Substance</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>255</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Opened edges</NON-DESCRIPTOR>
+ <USE>Trimmed edges</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>256</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Paper-mulberry</NON-DESCRIPTOR>
+ <USE>Mulberry fibers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>250</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Paper defects</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for all &quot;below par&quot; qualities of paper emanating from its manufacture, handling, storage, treatment, or materials.</SN>
+ <UF>Defects of paper</UF>
+ <BT>Paper features (Gathering term; do not assign)</BT>
+ <NT>Air bells</NT>
+ <NT>Baggy papers</NT>
+ <NT>Blackening</NT>
+ <NT>Bleach scale</NT>
+ <NT>Blisters</NT>
+ <NT>Bristle marks</NT>
+ <NT>Brush marks</NT>
+ <NT>Calender cuts</NT>
+ <NT>Cloudy papers</NT>
+ <NT>Cockle</NT>
+ <NT>Contraries</NT>
+ <NT>Couch marks</NT>
+ <NT>Cracking</NT>
+ <NT>Craters</NT>
+ <NT>Crocking</NT>
+ <NT>Crush marks</NT>
+ <NT>Curl</NT>
+ <NT>Dog-eared papers</NT>
+ <NT>Dusting papers</NT>
+ <NT>Feathered papers</NT>
+ <NT>Foul papers</NT>
+ <NT>Foxing</NT>
+ <NT>Fur</NT>
+ <NT>Grainy edges</NT>
+ <NT>Grit</NT>
+ <NT>Haircuts</NT>
+ <NT>Lumps</NT>
+ <NT>Phozy</NT>
+ <NT>Pinholes (Paper)</NT>
+ <NT>Plucking</NT>
+ <NT>Retree</NT>
+ <NT>Roping</NT>
+ <NT>Shiners</NT>
+ <NT>Skipped coating</NT>
+ <NT>Slaps</NT>
+ <NT>Slivers</NT>
+ <NT>Snailing</NT>
+ <NT>Specks</NT>
+ <NT>Spongy papers</NT>
+ <NT>Spots</NT>
+ <NT>Vatman&apos;s tears</NT>
+ <NT>Wild papers</NT>
+ <NT>Winder welts</NT>
+ <NT>Woody papers</NT>
+ <NT>Wrinkles</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2012-06-27</UPD>
+ <TNR>9</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Paper evidence</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use, preferably with subdivisions, to identify noteworthy paper features which cannot be otherwise classified using terms on this list.</SN>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>272</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Paper features (Gathering term; do not assign)</DESCRIPTOR>
+ <NT>Cloth impression marks</NT>
+ <NT>Decorated papers</NT>
+ <NT>Edge treatments</NT>
+ <NT>Paper defects</NT>
+ <NT>Substance</NT>
+ <NT>Watermarks</NT>
+ <STA>Approved</STA>
+ <INP>2010-01-26</INP>
+ <APP>2010-01-26</APP>
+ <UPD>2012-06-27</UPD>
+ <TNR>355</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Paper fibers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Pulp</UF>
+ <NT>Abaca fibers</NT>
+ <NT>Bamboo fibers</NT>
+ <NT>Cotton fibers</NT>
+ <NT>Cotton linters fibers</NT>
+ <NT>Esparto grass fibers</NT>
+ <NT>Flax fibers</NT>
+ <NT>Gampi fibers</NT>
+ <NT>Grass fibers</NT>
+ <NT>Hemp fibers</NT>
+ <NT>Jute fibers</NT>
+ <NT>Kozo fibers</NT>
+ <NT>Linen fibers</NT>
+ <NT>Mitsumata fibers</NT>
+ <NT>Mulberry fibers</NT>
+ <NT>Straw fibers</NT>
+ <NT>Woodpulp fibers</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2014-05-16</UPD>
+ <TNR>26</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Paper quantities (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Gathering term, do not use; index under narrower term.</SN>
+ <NT>Bales</NT>
+ <NT>Leaves</NT>
+ <NT>Quires</NT>
+ <NT>Reams</NT>
+ <NT>Sheets</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>24</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Paper sizes (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Gathering term, do not use; index under narrower term.</SN>
+ <NT>Leaf sizes</NT>
+ <NT>Sheet sizes</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>217</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Paper surfaces</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <NT>Coated papers</NT>
+ <NT>Felt sides</NT>
+ <NT>Mould sides</NT>
+ <NT>Uncoated papers</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>91</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Paper weights</NON-DESCRIPTOR>
+ <USE>Substance</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>277</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Papier Ingres</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for a sturdy French mould-made paper for drawing, especially with charcoal or crayon.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>278</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Papier maché</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>279</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Parchment</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for paper manufactured to simulate parchment.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>280</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Parchmoid</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for a greaseproof wrapping paper.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>281</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Paste marbled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Marbled papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>233</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Paste papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Surface applications of paper</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>282</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Pebble finish papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for papers whose surfaces have been embossed with a tiny pattern; often done to halftone engraved papers or shiny cover stock to reduce the shininess and soften the photographic effect.</SN>
+ <BT>Surface treated papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>283</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Perfect reams</NON-DESCRIPTOR>
+ <USE>Printer&apos;s reams</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>284</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Perfumed papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>286</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Pergamyn</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for a glazed greaseproof wrapping paper.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>287</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Photographic papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <NT>Developing papers</NT>
+ <NT>Printing-out papers</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>139</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Phozy</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for a featherweight paper with fibers too loosely pressed, yielding a light, weak sheet easy to tear.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>257</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Pinholes (Paper)</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2016-07-01</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>258</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Plate papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for thick, soft, high-quality (usually linen or cotton) printing papers, especially for use in engraving or wood block printing.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>288</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Plucking</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for spots on coated papers that have been rubbed or pulled off in the paper&apos;s manufacture.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>259</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Porcelain papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for thick transparent paper which looks like celluloid, especially used for greeting cards.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>289</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Printed papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Surface applications of paper</BT>
+ <NT>Block-printed papers</NT>
+ <NT>Domino papers</NT>
+ <NT>Lithographed papers</NT>
+ <NT>Machine-printed papers</NT>
+ <NT>Roller-printed papers</NT>
+ <NT>Silk-screened papers</NT>
+ <RT>Diaphanic papers</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>44</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Printer&apos;s reams</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for &quot;21 1/2 quires of 24 good sheets, i.e. 516 in all&quot;; Labarre, 222.</SN>
+ <UF>Perfect reams</UF>
+ <BT>Reams</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>285</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Printing-out papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Photographic papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>292</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Programme papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for papers primarily used for programs, especially a soft, relatively unsized paper that makes little noise when folded or crinkled.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>293</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Pulp</NON-DESCRIPTOR>
+ <USE>Paper fibers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>273</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Quad reams</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for a fourth of a folio ream, &quot;the result of cutting a flat ream into quarto sheets ... and packing these in 500s&quot;; Labarre, 217.</SN>
+ <BT>Reams</BT>
+ <RT>Folio reams</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>175</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Quadrille</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for &quot;paper ruled or pressed on the surface, or in watermark, with small squares&quot;; Labarre, 217; especially used in philately or drafting.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>294</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Quires</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for 24 sheets.</SN>
+ <BT>Paper quantities (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>295</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Railway buffs</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for cheap buff-colored paper.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>296</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Ream wrappers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>297</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Reams</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Paper quantities (Gathering term; do not assign)</BT>
+ <NT>Envelope reams</NT>
+ <NT>Folio reams</NT>
+ <NT>Imperfect paper</NT>
+ <NT>Inside reams</NT>
+ <NT>Mill reams</NT>
+ <NT>Printer&apos;s reams</NT>
+ <NT>Quad reams</NT>
+ <NT>Standard reams</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>162</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Repped finish papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for papers with a ribbed surface.</SN>
+ <BT>Surface treated papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>299</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Resin specks</NON-DESCRIPTOR>
+ <USE>Rosin specks</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>300</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Retree</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use as a general term to designate any defective hand-made papers.</SN>
+ <UF>Seconds</UF>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>260</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Rice papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for papers &quot;cut from the pith of a small tree&quot; from Formosa; Dictionary of Paper, 372; do not use as a designation for oriental handmade papers.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>303</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Ripple-finished papers</NON-DESCRIPTOR>
+ <USE>Embossed papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>158</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Rock marbled papers</NON-DESCRIPTOR>
+ <USE>Cypress marble papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>129</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Roller-printed papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Printed papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>290</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Roping</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for longitudinal wrinkles in coated paper.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>261</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Rosin specks</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Resin specks</UF>
+ <BT>Specks</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>301</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Rubber specks</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Specks</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>304</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Sawdust spots</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Spots</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>305</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Scratted marbled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Marbled papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>234</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Scratted papers</NON-DESCRIPTOR>
+ <USE>Sprinkled papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>306</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Screen sides</NON-DESCRIPTOR>
+ <USE>Mould sides</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>248</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Seconds</NON-DESCRIPTOR>
+ <USE>Retree</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>302</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Security papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for high-quality papers used for bonds, stocks, or other certificates, often with a distinctive feature in them for safety, to prevent counterfeiting.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <RT>Currency papers</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>126</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Sewing marks</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for small marks visible where watermarks are sewn to the mould.</SN>
+ <BT>Watermarks</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>308</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Shadowmarks</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for a kind of multi-leveled watermark revealing a picture in the paper shaded from light to dark, depending on the varying thicknesses of the sheet within the picture.</SN>
+ <BT>Watermarks</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>309</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Sheet sizes</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for full sheets of paper, such as in broadsides or as sheets in a ream. Always subdivide this term by the the dimensions of the sheet in inches, citing height then width. For example: 655 Sheet sizes (Paper) |x 24&quot; by 36&quot;. |2 rbpap; if the sheet has been trimmed, this should be stated in a copy-specific note.</SN>
+ <BT>Paper sizes (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>275</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Sheets</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Paper quantities (Gathering term; do not assign)</BT>
+ <RT>Leaves</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>219</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Shell marbled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>French marble</UF>
+ <BT>Marbled papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>181</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Shiners</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for tiny, hard, light-reflective particles in the paper; these may fall or be scratched out of the sheet, usually leaving pinholes.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>262</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Silk-screened papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Printed papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>291</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Silver papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for a silver-colored coated paper.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <RT>Surface applications of paper</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>310</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Size specks</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Specks</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>311</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Sized papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by presence or absence of sizing</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>312</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Sketching papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Drawing papers</UF>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>148</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Skipped coating</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for sheets where the coating is lacking in places, having been unevenly applied.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>263</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Slaps</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for ruptured spots at the edges of machine-made papers.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>264</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Slime spots</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for spots in paper caused by a fungus or bacterial growth.</SN>
+ <BT>Spots</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>314</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Slivers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for small splinters of wood in paper.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>265</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Snailing</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for streaks or snake-like marks on the surface of a sheet.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>266</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Spanish marbled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Drag marbled papers</UF>
+ <UF>Lace pattern marbled papers</UF>
+ <BT>Marbled papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-12-08</UPD>
+ <TNR>145</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Spattered papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Surface applications of paper</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>315</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Specks</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Paper defects</BT>
+ <NT>Bronze specks</NT>
+ <NT>Carbon specks</NT>
+ <NT>Cinder specks</NT>
+ <NT>Iron specks</NT>
+ <NT>Rosin specks</NT>
+ <NT>Rubber specks</NT>
+ <NT>Size specks</NT>
+ <NT>Wood specks</NT>
+ <RT>Spots</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>57</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Spongy papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for any paper that is too compressible or ink absorbent for its intended purpose.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>267</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Spots</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Paper defects</BT>
+ <NT>Alum spots</NT>
+ <NT>Calender spots</NT>
+ <NT>Color spots</NT>
+ <NT>Dead spots</NT>
+ <NT>Drag spots</NT>
+ <NT>Dye spots</NT>
+ <NT>Fish eyes</NT>
+ <NT>Grease spots</NT>
+ <NT>Oil spots</NT>
+ <NT>Sawdust spots</NT>
+ <NT>Slime spots</NT>
+ <RT>Specks</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>14</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Spotted papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Surface applications of paper</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>317</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Sprinkled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Scratted papers</UF>
+ <BT>Surface applications of paper</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>307</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Staggered marks</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Watermarks</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>318</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Standard reams</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Used in the United States to designate 500 sheets.</SN>
+ <BT>Reams</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>298</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Steam blisters</NON-DESCRIPTOR>
+ <USE>Air bells</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>8</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Stencil papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>319</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Stencilled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Surface applications of paper</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>320</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Stereotyping papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>321</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Stone marbled papers</NON-DESCRIPTOR>
+ <USE>Turkish marbled papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>322</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Storment marbled papers</NON-DESCRIPTOR>
+ <USE>Stormont marbled papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>323</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Stormont marbled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Storment marbled papers</UF>
+ <BT>Marbled papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>235</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Strassburg marbled papers</NON-DESCRIPTOR>
+ <USE>Agate marbled papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>4</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Straw fibers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <HN>1/00 Add term.</HN>
+ <SN>Use for paper made from straw fibers.</SN>
+ <BT>Paper fibers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>324</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Substance</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Designations of paper weights are generally given in pounds in terms of weight per ream. &quot;The weight of a ream of a particular size and number of sheets is known as the substance number&quot; (Labarre, 297). Subdivide by the weight of the paper in subfield |x. For example: 655 Substance (Paper) |x 24 lbs. |2 rbpap</SN>
+ <UF>Paper weights</UF>
+ <BT>Paper features (Gathering term; do not assign)</BT>
+ <NT>Cover stock</NT>
+ <NT>Onionskin</NT>
+ <NT>Text weight papers</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2012-06-27</UPD>
+ <TNR>113</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Suminagashi</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for papers decorated with wave-like patterns – sometimes sharp or jagged – usually done in watercolors.</SN>
+ <BT>Surface applications of paper</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>326</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Sun marbled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Marbled papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>236</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Super-calendered papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Calendered papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>71</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Surface applications of paper</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Gathering term, do not use; index under narrower term. Refers to all processes which decorate paper solely on the surface; more than one process may be used on a single paper.</SN>
+ <BT>Decorated papers</BT>
+ <NT>Brocade papers</NT>
+ <NT>Flock papers</NT>
+ <NT>Foil papers</NT>
+ <NT>Marbled papers</NT>
+ <NT>Mottled papers</NT>
+ <NT>Paste papers</NT>
+ <NT>Printed papers</NT>
+ <NT>Spattered papers</NT>
+ <NT>Spotted papers</NT>
+ <NT>Sprinkled papers</NT>
+ <NT>Stencilled papers</NT>
+ <NT>Suminagashi</NT>
+ <RT>Colored papers</RT>
+ <RT>Silver papers</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>55</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Surface treated papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Gathering term, do not use; index under narrower term. Use for papers treated with processes which disrupt or enhance the original smoothness of the paper; these treatments can be combined with surface applications.</SN>
+ <BT>Decorated papers</BT>
+ <NT>Brushed papers</NT>
+ <NT>Calendered papers</NT>
+ <NT>Creped papers</NT>
+ <NT>Crushed-finish papers</NT>
+ <NT>Embossed papers</NT>
+ <NT>Glazed papers</NT>
+ <NT>Mica papers</NT>
+ <NT>Pebble finish papers</NT>
+ <NT>Repped finish papers</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>70</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Swedish marbled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC><!-- unknown line type [@@@] -->
+
+ <SN>Do not use for those papers that are designated British marbled papers.</SN>
+ <BT>Marbled papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-12-08</UPD>
+ <TNR>237</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Tapa cloth</NON-DESCRIPTOR>
+ <USE>Mulberry fibers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>251</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Text papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>327</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Text weight papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Substance</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>325</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Three-plane watermarks</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for watermarks &quot;showing three thicknesses in the same sheet of paper&quot;; Labarre, 304.</SN>
+ <BT>Watermarks</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>328</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Tissue papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>329</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Tracing papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>330</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Tranchefile</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for what appears to be an added chainline at the edge of the sheet.</SN>
+ <BT>Watermarks</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>331</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Transfer papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>332</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Tree marbled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Marbled papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>238</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Trimmed edges</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Cropped edges</UF>
+ <UF>Cut edges</UF>
+ <UF>Evened edges</UF>
+ <UF>Opened edges</UF>
+ <BT>Edge treatments</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>121</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Turkish marbled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Stone marbled papers</UF>
+ <BT>Marbled papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>239</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Turned chainlines</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Chainlines</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>80</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Types of paper (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Gathering term, do not use; index under narrower term. The narrower terms are the traditional categories used by papermakers, users, and scholars; these categories are not mutually exclusive.</SN>
+ <NT>Types of paper by fiber patterns</NT>
+ <NT>Types of paper by method of manufacture</NT>
+ <NT>Types of paper by presence or absence of sizing</NT>
+ <NT>Types of paper by uses or names</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>333</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Types of paper by fiber patterns</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Gathering term, do not use; index under narrower term.</SN>
+ <BT>Types of paper (Gathering term; do not assign)</BT>
+ <NT>Laid papers</NT>
+ <NT>Wove papers</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>214</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Types of paper by method of manufacture</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Gathering term, do not use; index under narrower term.</SN>
+ <BT>Types of paper (Gathering term; do not assign)</BT>
+ <NT>Handmade papers</NT>
+ <NT>Machine-made papers</NT>
+ <NT>Mould-made papers</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>197</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Types of paper by presence or absence of sizing</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Gathering term, do not use; index under narrower term.</SN>
+ <BT>Types of paper (Gathering term; do not assign)</BT>
+ <NT>Sized papers</NT>
+ <NT>Unsized papers</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>313</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Types of paper by uses or names</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Gathering term, do not use; index under narrower term. Includes names of specific kinds of papers created for specific uses; often, but not always, the use is suggested by the name of the paper, e.g., Currency papers. Many papers&apos; names are arbitrary; some are related to use, content, inventor, manufacturer, color, size, or other feature. The present thesaurus contains only the more common names and includes no commercial brand names. This category does not include decorated papers, since decorations are features of papers.</SN>
+ <BT>Types of paper (Gathering term; do not assign)</BT>
+ <NT>Bag papers</NT>
+ <NT>Bark papers</NT>
+ <NT>Bible papers</NT>
+ <NT>Bill papers</NT>
+ <NT>Blotting papers</NT>
+ <NT>Blueprint papers</NT>
+ <NT>Bond papers</NT>
+ <NT>Book papers</NT>
+ <NT>Box enamels</NT>
+ <NT>Bright enamels</NT>
+ <NT>Brush enamels</NT>
+ <NT>Butter papers</NT>
+ <NT>Canvas note papers</NT>
+ <NT>Carbolic papers</NT>
+ <NT>Carbon papers</NT>
+ <NT>Cardboard</NT>
+ <NT>Cellophanes</NT>
+ <NT>Chart papers</NT>
+ <NT>Cheque papers</NT>
+ <NT>China papers</NT>
+ <NT>Chromo papers</NT>
+ <NT>Cobbs</NT>
+ <NT>Computer papers</NT>
+ <NT>Cover papers</NT>
+ <NT>Crayon papers</NT>
+ <NT>Crepe papers</NT>
+ <NT>Currency papers</NT>
+ <NT>Diaphanic papers</NT>
+ <NT>Duplex papers</NT>
+ <NT>Duplicating papers</NT>
+ <NT>Etching papers</NT>
+ <NT>Flock papers</NT>
+ <NT>Glassine</NT>
+ <NT>Grocery papers</NT>
+ <NT>Half-plate papers</NT>
+ <NT>Halftone papers</NT>
+ <NT>India proof papers</NT>
+ <NT>Japan vellum</NT>
+ <NT>Japanese copying papers</NT>
+ <NT>Kraft papers</NT>
+ <NT>Lace-papers</NT>
+ <NT>Leatherette</NT>
+ <NT>Ledger papers</NT>
+ <NT>Lithographic papers</NT>
+ <NT>Loan papers</NT>
+ <NT>Magazine papers</NT>
+ <NT>Manifold papers</NT>
+ <NT>Manilla papers</NT>
+ <NT>Music papers</NT>
+ <NT>Newsprint</NT>
+ <NT>Papier Ingres</NT>
+ <NT>Papier maché</NT>
+ <NT>Parchment</NT>
+ <NT>Parchmoid</NT>
+ <NT>Perfumed papers</NT>
+ <NT>Pergamyn</NT>
+ <NT>Photographic papers</NT>
+ <NT>Plate papers</NT>
+ <NT>Porcelain papers</NT>
+ <NT>Programme papers</NT>
+ <NT>Quadrille</NT>
+ <NT>Railway buffs</NT>
+ <NT>Ream wrappers</NT>
+ <NT>Rice papers</NT>
+ <NT>Security papers</NT>
+ <NT>Silver papers</NT>
+ <NT>Sketching papers</NT>
+ <NT>Stencil papers</NT>
+ <NT>Stereotyping papers</NT>
+ <NT>Text papers</NT>
+ <NT>Tissue papers</NT>
+ <NT>Tracing papers</NT>
+ <NT>Transfer papers</NT>
+ <NT>Typewriter papers</NT>
+ <NT>Vellum</NT>
+ <NT>Wallpapers</NT>
+ <NT>Waxed papers</NT>
+ <NT>Wrapping papers</NT>
+ <NT>Writing papers</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>21</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Typewriter papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>336</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Uncoated papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Paper surfaces</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>276</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Uncropped edges</NON-DESCRIPTOR>
+ <USE>Untrimmed edges</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>340</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Uncut edges</NON-DESCRIPTOR>
+ <USE>Untrimmed edges</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>341</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Unopened edges</NON-DESCRIPTOR>
+ <USE>Untrimmed edges</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>342</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Unsized papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Waterleaf</UF>
+ <BT>Types of paper by presence or absence of sizing</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>335</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Untrimmed edges</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for edges of sheets retaining their original deckles.</SN>
+ <UF>Uncropped edges</UF>
+ <UF>Uncut edges</UF>
+ <UF>Unopened edges</UF>
+ <BT>Edge treatments</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>154</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Vatman&apos;s drips</NON-DESCRIPTOR>
+ <USE>Vatman&apos;s tears</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-12-08</UPD>
+ <TNR>344</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Vatman&apos;s drops</NON-DESCRIPTOR>
+ <USE>Vatman&apos;s tears</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-12-08</UPD>
+ <TNR>345</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Vatman&apos;s spots</NON-DESCRIPTOR>
+ <USE>Vatman&apos;s tears</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-12-08</UPD>
+ <TNR>346</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Vatman&apos;s tears</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for small circular thin spots, thicker around the circular edges, where a drop of water has dispersed the fibers in the hand papermaking process.</SN>
+ <UF>Coucher&apos;s drops</UF>
+ <UF>Vatman&apos;s drips</UF>
+ <UF>Vatman&apos;s drops</UF>
+ <UF>Vatman&apos;s spots</UF>
+ <UF>Water spots</UF>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>107</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Vellum</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for papers manufactured to simulate real vellum.</SN>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>348</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Vellum, Japan</NON-DESCRIPTOR>
+ <USE>Japan vellum</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>205</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Wallpapers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <RT>Domino papers</RT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>143</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Water spots</NON-DESCRIPTOR>
+ <USE>Vatman&apos;s tears</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>347</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Waterleaf</NON-DESCRIPTOR>
+ <USE>Unsized papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>343</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Watermarks</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for any pattern in the paper which appears when the paper is held up to the light, and light shines through because the paper is thinner where the pattern is formed. Terms listed here are general designations of types of watermarks, and do not indicate specific shapes or patterns, which can be described in notes in the cataloguing record. Libraries may wish to sub- divide the general term Watermarks by the images they portray. For example: 655 Watermarks (Paper) |x Lion. |2 rbpap</SN>
+ <BT>Paper features (Gathering term; do not assign)</BT>
+ <NT>Batonne</NT>
+ <NT>Cameo</NT>
+ <NT>Chainlines</NT>
+ <NT>Cipher</NT>
+ <NT>Cornermarks</NT>
+ <NT>Countermarks</NT>
+ <NT>Edge watermarks</NT>
+ <NT>Intaglio</NT>
+ <NT>Localized watermarks</NT>
+ <NT>Sewing marks</NT>
+ <NT>Shadowmarks</NT>
+ <NT>Staggered marks</NT>
+ <NT>Three-plane watermarks</NT>
+ <NT>Tranchefile</NT>
+ <NT>Wire lines</NT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2012-06-27</UPD>
+ <TNR>35</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Waxed papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>337</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>West end marbled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Marbled papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>240</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Whatman papers</NON-DESCRIPTOR>
+ <USE>Wove papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>349</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Wild papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for sheets with uneven, random distribution of fibers, yielding a mottled appearance on look-through.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>268</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Winder welts</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for long grain-direction ridges in the surface of the sheet.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>269</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Wire lines</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Laid lines</UF>
+ <UF>Wire marks</UF>
+ <BT>Watermarks</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>213</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Wire marks</NON-DESCRIPTOR>
+ <USE>Wire lines</USE>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-03-01</UPD>
+ <TNR>350</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Wood specks</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Specks</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>316</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Woodpulp fibers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Paper fibers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>274</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Woody papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <SN>Use for translucent, hard, brittle papers.</SN>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>270</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Wove papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <UF>Whatman papers</UF>
+ <BT>Types of paper by fiber patterns</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>334</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Wrapping papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>338</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Wrinkles</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Paper defects</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>271</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Writing papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Types of paper by uses or names</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>339</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Writing tables</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <HN>Approved 1/08</HN>
+ <SN>Use for paper or vellum treated to enable erasure and intended for use with a metal stylus.</SN>
+ <UF>Erasable notebooks</UF>
+ <UF>Erasable tablets</UF>
+ <BT>Coated papers</BT>
+ <STA>Approved</STA>
+ <INP>2008-02-28</INP>
+ <APP>2008-02-28</APP>
+ <UPD>2008-02-28</UPD>
+ <TNR>351</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Zebra marbled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Marbled papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>241</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Zig-zag antique marbled papers</DESCRIPTOR>
+ <SC>rbpap Paper Terms</SC>
+ <BT>Antique marbled papers</BT>
+ <STA>Approved</STA>
+ <INP>2005-03-01</INP>
+ <APP>2005-03-01</APP>
+ <UPD>2005-04-01</UPD>
+ <TNR>19</TNR>
+</CONCEPT>
+</THESAURUS>

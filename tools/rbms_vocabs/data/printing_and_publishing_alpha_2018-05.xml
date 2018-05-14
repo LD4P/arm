@@ -1,0 +1,4052 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- ALPHABETICAL --><!DOCTYPE THESAURUS [
+<!ELEMENT THESAURUS (CONCEPT+)>
+<!ELEMENT CONCEPT ( (DESCRIPTOR|NON-DESCRIPTOR),SC*,CM*,HN*,SN*,UF*,USE*,BT*,NT*,RT*,STA*,TYP*,INP*,APP*,UPD*,NVD*,TNR*,FLG*)>
+<!ELEMENT DESCRIPTOR (#PCDATA)>
+<!ELEMENT NON-DESCRIPTOR (#PCDATA)>
+<!ELEMENT SC (#PCDATA)>
+<!ELEMENT CM (#PCDATA)>
+<!ELEMENT HN (#PCDATA)>
+<!ELEMENT SN (#PCDATA)>
+<!ELEMENT UF (#PCDATA)>
+<!ELEMENT USE (#PCDATA)>
+<!ELEMENT BT (#PCDATA)>
+<!ELEMENT NT (#PCDATA)>
+<!ELEMENT RT (#PCDATA)>
+<!ELEMENT STA (#PCDATA)>
+<!ELEMENT TYP (#PCDATA)>
+<!ELEMENT INP (#PCDATA)>
+<!ELEMENT APP (#PCDATA)>
+<!ELEMENT UPD (#PCDATA)>
+<!ELEMENT NVD (#PCDATA)>
+<!ELEMENT TNR (#PCDATA)>
+<!ELEMENT FLG (#PCDATA)>
+]>
+
+<THESAURUS>
+<CONCEPT>
+ <DESCRIPTOR>[Distribution and sales methods]</DESCRIPTOR>
+ <NT>Parts (Publishing)</NT>
+ <STA>Approved</STA>
+ <INP>2009-10-13</INP>
+ <APP>2009-10-13</APP>
+ <UPD>2009-10-13</UPD>
+ <TNR>320</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>12mo format</NON-DESCRIPTOR>
+ <USE>Duodecimo format</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>7</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>16mo format</NON-DESCRIPTOR>
+ <USE>Sixteenmo format</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>9</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>18mo format</NON-DESCRIPTOR>
+ <USE>Eighteenmo format</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>11</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>24mo format</NON-DESCRIPTOR>
+ <USE>Twenty-fourmo format</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>13</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>2o format</NON-DESCRIPTOR>
+ <USE>Folio format</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>1</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>32mo format</NON-DESCRIPTOR>
+ <USE>Thirty-twomo format</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>15</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>4to format</NON-DESCRIPTOR>
+ <USE>Quarto format</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>3</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>64mo format</NON-DESCRIPTOR>
+ <USE>Sixty-fourmo format</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>17</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>8vo format</NON-DESCRIPTOR>
+ <USE>Octavo format</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>5</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Accidental impressions</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for unintentional impressions made during the printing process.</SN>
+ <BT>Pressman&apos;s work (Gathering term; do not assign)</BT>
+ <NT>Bearer impressions</NT>
+ <NT>Blind impressions</NT>
+ <NT>Furniture impressions</NT>
+ <NT>Offsets</NT>
+ <NT>Slurs</NT>
+ <NT>Space impressions</NT>
+ <NT>Type-body impressions</NT>
+ <STA>Approved</STA>
+ <INP>2005-12-09</INP>
+ <APP>2005-12-09</APP>
+ <UPD>2014-05-16</UPD>
+ <TNR>293</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Accidental type impressions</NON-DESCRIPTOR>
+ <USE>Space impressions</USE>
+ <USE>Type-body impressions</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>19</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Additions and corrections to text (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Cancellation</NT>
+ <NT>Errata lists</NT>
+ <NT>Insertions</NT>
+ <NT>Press corrections</NT>
+ <NT>Proofs</NT>
+ <NT>States</NT>
+ <STA>Approved</STA>
+ <INP>2005-04-04</INP>
+ <APP>2005-04-04</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>277</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Advance copies</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Special use copies (Gathering term; do not assign)</BT>
+ <RT>Dummies</RT>
+ <RT>Gratis copies</RT>
+ <RT>Review copies</RT>
+ <RT>Sample copies</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>22</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Auction prices</NON-DESCRIPTOR>
+ <USE>Second-hand prices</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>27</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Authentication</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Use for the 18th century practice of having an author sign, stamp, or initial the title-page of a book as a protection against counterfeit editions</SN>
+ <UF>Author statement in manuscript</UF>
+ <BT>Fakery, falsification, imitation, and copying (Gathering term; do not assign)</BT>
+ <RT>Copyright notices</RT>
+ <RT>Forgeries</RT>
+ <RT>Piracies</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>29</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Author statement in manuscript</NON-DESCRIPTOR>
+ <USE>Authentication</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>30</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Backing-up</NON-DESCRIPTOR>
+ <USE>Perfecting</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>34</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Bearer impressions</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for accidental impressions of roller or platen bearers</SN>
+ <UF>Impressions, Bearer</UF>
+ <BT>Accidental impressions</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>36</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Bibles, thumb</NON-DESCRIPTOR>
+ <USE>Thumb Bibles</USE>
+ <STA>Approved</STA>
+ <INP>2009-10-13</INP>
+ <APP>2009-10-13</APP>
+ <UPD>2009-10-13</UPD>
+ <TNR>323</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Binding issues</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Issues</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>39</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Blad</NON-DESCRIPTOR>
+ <USE>Sample copies</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>41</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Blind impressions</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC><!-- unknown line type [@@@] -->
+
+ <SN>Use for accidental impressions of uninked bearer type on a blank page or part of a page.</SN>
+ <UF>Impressions, blind</UF>
+ <BT>Accidental impressions</BT>
+ <STA>Approved</STA>
+ <INP>2009-10-12</INP>
+ <APP>2009-01-24</APP>
+ <UPD>2009-10-16</UPD>
+ <TNR>314</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Block books</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <UF>Xylographica</UF>
+ <BT>Special shapes, sizes and kinds of books (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>42</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Blocks, inverted</NON-DESCRIPTOR>
+ <USE>Inverted blocks</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>44</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Blurs</NON-DESCRIPTOR>
+ <USE>Slurs</USE>
+ <STA>Approved</STA>
+ <INP>2005-12-29</INP>
+ <UPD>2005-12-29</UPD>
+ <TNR>298</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Book designers&apos; mock-ups</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Special use copies (Gathering term; do not assign)</BT>
+ <RT>Dummies</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>46</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Book prices</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Use for original price only</SN>
+ <UF>Prices of books</UF>
+ <BT>Prices</BT>
+ <RT>Second-hand prices</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-08</UPD>
+ <TNR>47</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Books, Engraved</NON-DESCRIPTOR>
+ <USE>Engraved books</USE>
+ <STA>Approved</STA>
+ <INP>2008-07-11</INP>
+ <APP>2008-07-11</APP>
+ <UPD>2008-07-11</UPD>
+ <TNR>308</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Broadsheet format</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>Broadside format</UF>
+ <BT>Formats</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>51</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Broadside format</NON-DESCRIPTOR>
+ <USE>Broadsheet format</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>52</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Calendar styles</NON-DESCRIPTOR>
+ <USE>Imprint date styles</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>54</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cancel gatherings</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Use for gatherings with altered text meant to replace text already printed, added to items after printing</SN>
+ <UF>Cancellans gatherings</UF>
+ <BT>Cancellation</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>56</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cancel leaves</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Use for leaves with altered text meant to replace text already printed, added to items after printing</SN>
+ <UF>Cancellans leaves</UF>
+ <BT>Cancellation</BT>
+ <RT>Inserted text leaves</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>59</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cancel slips</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <UF>Label cancels</UF>
+ <UF>Slip cancels</UF>
+ <BT>Cancellation</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>62</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Cancellandum gatherings</NON-DESCRIPTOR>
+ <USE>Cancelled gatherings</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>65</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Cancellandum leaves</NON-DESCRIPTOR>
+ <USE>Cancelled leaves</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>67</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Cancellans gatherings</NON-DESCRIPTOR>
+ <USE>Cancel gatherings</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>57</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Cancellans leaves</NON-DESCRIPTOR>
+ <USE>Cancel leaves</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>60</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cancellation</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <UF>Cancels</UF>
+ <BT>Additions and corrections to text (Gathering term; do not assign)</BT>
+ <BT>Editions, issues and states (Gathering term; do not assign)</BT>
+ <NT>Cancel gatherings</NT>
+ <NT>Cancel leaves</NT>
+ <NT>Cancel slips</NT>
+ <NT>Cancellation marks</NT>
+ <NT>Cancelled gatherings</NT>
+ <NT>Cancelled leaves</NT>
+ <NT>Manuscript corrections</NT>
+ <NT>Stamped corrections</NT>
+ <RT>States</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>58</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cancellation marks</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>Marks, Cancellation</UF>
+ <BT>Cancellation</BT>
+ <NT>Cancellation slits</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>70</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cancellation slits</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>Slits, Cancellation</UF>
+ <BT>Cancellation marks</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>75</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cancelled gatherings</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Use for gatherings meant to be removed but still present</SN>
+ <UF>Cancellandum gatherings</UF>
+ <BT>Cancellation</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>66</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cancelled leaves</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Use for leaves meant to be removed but still present</SN>
+ <UF>Cancellandum leaves</UF>
+ <BT>Cancellation</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>68</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Cancels</NON-DESCRIPTOR>
+ <USE>Cancellation</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>69</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Casting off</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Composition</BT>
+ <NT>Casting off errors</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>77</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Casting off errors</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>Errors, Casting off</UF>
+ <BT>Casting off</BT>
+ <BT>Multiple printers</BT>
+ <NT>Catchword irregularities</NT>
+ <NT>Crowding</NT>
+ <NT>Excess space</NT>
+ <NT>Signing irregularities</NT>
+ <NT>Type-size change</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-14</UPD>
+ <TNR>79</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Catchword irregularities</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>Irregular catchwords</UF>
+ <BT>Casting off errors</BT>
+ <BT>Catchwords</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>81</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Catchword patterns</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Catchwords</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>89</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Catchwords</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Direction lines</BT>
+ <NT>Catchword irregularities</NT>
+ <NT>Catchword patterns</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>88</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Chainlines, turned</NON-DESCRIPTOR>
+ <USE>Turned chainlines</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>91</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Chronograms</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Imprint date styles</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>93</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cloth printings</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Special materials printings</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>94</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Colophons</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Printer identification (Gathering term; do not assign)</BT>
+ <BT>Publisher identification (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>96</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Color printing</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Pressman&apos;s work (Gathering term; do not assign)</BT>
+ <NT>Printing in a single color</NT>
+ <NT>Printing in multiple colors</NT>
+ <RT>Inking</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>97</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Colored paper printings</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Special materials printings</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>101</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Columniation</NON-DESCRIPTOR>
+ <USE>Pagination</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>102</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Columniation errors</NON-DESCRIPTOR>
+ <USE>Pagination errors</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>104</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Composition</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>Setting type</UF>
+ <UF>Typesetting</UF>
+ <BT>Compositor&apos;s work (Gathering term; do not assign)</BT>
+ <BT>Multiple printers</BT>
+ <NT>Casting off</NT>
+ <NT>Composition errors</NT>
+ <NT>Compositor&apos;s copy</NT>
+ <NT>Compositor&apos;s setting preferences</NT>
+ <NT>Direction lines</NT>
+ <NT>Headlines</NT>
+ <NT>Justification</NT>
+ <NT>Page-for-page reprints</NT>
+ <NT>Page make-up</NT>
+ <NT>Pagination</NT>
+ <NT>Re-setting</NT>
+ <NT>Setting order</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-14</UPD>
+ <TNR>78</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Composition errors</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for dittography, omissions of text, misspelling, and any other compositorial errors.</SN>
+ <UF>Errors, Composition</UF>
+ <BT>Composition</BT>
+ <NT>Dittography</NT>
+ <NT>Text omissions</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>111</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Compositor&apos;s copy</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for the manuscript or book from which the type was set</SN>
+ <UF>Printer&apos;s setting copy</UF>
+ <BT>Composition</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-08</UPD>
+ <TNR>112</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Compositor&apos;s setting preferences</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for any evidence of compositorial preference in spelling, capitalization, punctuation, justification, etc.</SN>
+ <UF>Compositor&apos;s style</UF>
+ <BT>Composition</BT>
+ <NT>Compositor&apos;s spelling preferences</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-08</UPD>
+ <TNR>113</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Compositor&apos;s spelling preferences</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for any evidence of compositorial spelling preference</SN>
+ <UF>Spelling preferences</UF>
+ <BT>Compositor&apos;s setting preferences</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>119</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Compositor&apos;s style</NON-DESCRIPTOR>
+ <USE>Compositor&apos;s setting preferences</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>118</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Compositor&apos;s work (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Composition</NT>
+ <NT>Imposition</NT>
+ <STA>Approved</STA>
+ <INP>2005-04-04</INP>
+ <APP>2005-04-04</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>278</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Concealed editions</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <HN>Approved term 6/2007; UF &quot;hidden editions&quot; added 1/08</HN>
+ <SN>Use for closely similar editions, printed from substantially different settings of type, not distinguished as such by the printer and/or publisher.</SN>
+ <UF>Hidden editions</UF>
+ <BT>Editions, issues and states (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2007-06-28</INP>
+ <APP>2007-06-28</APP>
+ <UPD>2008-02-28</UPD>
+ <TNR>299</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Control of printing (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Copyright and licensing</NT>
+ <NT>Taxes and levies</NT>
+ <STA>Approved</STA>
+ <INP>2005-04-04</INP>
+ <APP>2005-04-04</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>279</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Control of publishing</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Copyright and licensing</NT>
+ <NT>Taxes and levies</NT>
+ <STA>Approved</STA>
+ <INP>2005-04-04</INP>
+ <APP>2005-04-04</APP>
+ <UPD>2005-12-14</UPD>
+ <TNR>287</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Copyright and licensing</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <BT>Control of printing (Gathering term; do not assign)</BT>
+ <BT>Control of publishing</BT>
+ <NT>Copyright notices</NT>
+ <NT>Imprimaturs</NT>
+ <NT>Printing privileges</NT>
+ <NT>Statutory copies</NT>
+ <STA>Approved</STA>
+ <INP>2005-04-04</INP>
+ <APP>2005-04-04</APP>
+ <UPD>2005-12-14</UPD>
+ <TNR>280</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Copyright notices</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Copyright and licensing</BT>
+ <RT>Authentication</RT>
+ <RT>Imprimaturs</RT>
+ <RT>Printing privileges</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>31</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Corrected proofs</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Proofs</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>123</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Corrections in press</NON-DESCRIPTOR>
+ <USE>Press corrections</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>125</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Corrections, Manuscript</NON-DESCRIPTOR>
+ <USE>Manuscript corrections</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>127</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Corrections, Stamped</NON-DESCRIPTOR>
+ <USE>Stamped corrections</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>128</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Counterfeits</NON-DESCRIPTOR>
+ <USE>Forgeries</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>129</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Crowding</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Casting off errors</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>82</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Damaged printing plates</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for evidence of printing from plates that are worn or damaged.</SN>
+ <UF>Plate damage</UF>
+ <BT>Evidence</BT>
+ <STA>Approved</STA>
+ <INP>2015-04-21</INP>
+ <APP>2015-04-21</APP>
+ <UPD>2015-04-21</UPD>
+ <TNR>330</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Damaged types</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Evidence</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-14</UPD>
+ <TNR>130</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Dates of imprint</NON-DESCRIPTOR>
+ <USE>Imprint date styles</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>132</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Dates of imprint, False</NON-DESCRIPTOR>
+ <USE>False imprint dates</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>133</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Dating styles</NON-DESCRIPTOR>
+ <USE>Imprint date styles</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>137</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Deposit copies</NON-DESCRIPTOR>
+ <USE>Statutory copies</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>138</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Devices, Printers&apos;</NON-DESCRIPTOR>
+ <USE>Printers&apos; devices</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>140</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Devices, Publishers&apos;</NON-DESCRIPTOR>
+ <USE>Printers&apos; devices</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>142</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Direction lines</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for lines located directly below the text, mostly blank but containing catchwords, signatures, and/or press figures</SN>
+ <BT>Composition</BT>
+ <NT>Catchwords</NT>
+ <NT>Press figures</NT>
+ <NT>Signatures (Binder&apos;s notations)</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-08</UPD>
+ <TNR>90</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Displaced types</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>Loose type</UF>
+ <BT>Locking-up</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>145</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Distribution and sales methods (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Dummies</NT>
+ <NT>Multiple publishers</NT>
+ <NT>Part-issued books in volume form</NT>
+ <NT>Prices</NT>
+ <NT>Privately published books</NT>
+ <NT>Series</NT>
+ <NT>Subscribers&apos; addresses</NT>
+ <NT>Subscription lists</NT>
+ <STA>Approved</STA>
+ <INP>2005-04-04</INP>
+ <APP>2005-04-04</APP>
+ <UPD>2009-10-13</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>288</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Dittography</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for unintentional repetition of one or more letters, words, or lines in type-setting, as &quot;literatature&quot; for literature</SN>
+ <BT>Composition errors</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>115</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Double printing</NON-DESCRIPTOR>
+ <USE>Slurs</USE>
+ <STA>Approved</STA>
+ <INP>2005-12-29</INP>
+ <UPD>2005-12-29</UPD>
+ <TNR>297</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Drawback notices</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Taxes and levies</BT>
+ <RT>Tax stamps</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>147</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Dummies</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Use for models of the type popular in the 19th century for the promotion and solicitation of sales for books, etc.</SN>
+ <UF>Publishers&apos; dummies</UF>
+ <UF>Salesmen&apos;s dummies</UF>
+ <BT>Distribution and sales methods (Gathering term; do not assign)</BT>
+ <BT>Special use copies (Gathering term; do not assign)</BT>
+ <RT>Advance copies</RT>
+ <RT>Book designers&apos; mock-ups</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>23</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Duodecimo format</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>12mo format</UF>
+ <UF>Twelvemo format</UF>
+ <BT>Formats</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>8</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Editions, issues and states (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Cancellation</NT>
+ <NT>Concealed editions</NT>
+ <NT>Errata lists</NT>
+ <NT>Insertions</NT>
+ <NT>Issues</NT>
+ <NT>Limitation statements</NT>
+ <NT>Multiple publishers</NT>
+ <NT>Piracies</NT>
+ <NT>Privately published books</NT>
+ <NT>States</NT>
+ <STA>Approved</STA>
+ <INP>2005-04-04</INP>
+ <APP>2005-04-04</APP>
+ <UPD>2009-10-16</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>289</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Eighteenmo format</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>18mo format</UF>
+ <UF>Octodecimo format</UF>
+ <BT>Formats</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>12</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Engraved books</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <HN>Approved 6/2008</HN>
+ <SN>Use for books in which the text has been printed entirely or chiefly from intaglio plates. Do not use for books consisting entirely or chiefly of maps, music, or illustrative material.</SN>
+ <UF>Books, Engraved</UF>
+ <BT>Special shapes, sizes and kinds of books (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2008-07-11</INP>
+ <APP>2008-07-11</APP>
+ <UPD>2008-07-11</UPD>
+ <TNR>307</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Errata lists</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Additions and corrections to text (Gathering term; do not assign)</BT>
+ <BT>Editions, issues and states (Gathering term; do not assign)</BT>
+ <NT>Integral errata lists</NT>
+ <NT>Separate errata lists</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>153</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Errata lists, Integral</NON-DESCRIPTOR>
+ <USE>Integral errata lists</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>156</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Errata lists, Separate</NON-DESCRIPTOR>
+ <USE>Separate errata lists</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>157</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Errata slips</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Separate errata lists</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>158</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Errors, Casting off</NON-DESCRIPTOR>
+ <USE>Casting off errors</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>80</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Errors, Columniation</NON-DESCRIPTOR>
+ <USE>Pagination errors</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>159</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Errors, Composition</NON-DESCRIPTOR>
+ <USE>Composition errors</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>160</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Errors, Foliation</NON-DESCRIPTOR>
+ <USE>Pagination errors</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>161</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Errors, Imposition</NON-DESCRIPTOR>
+ <USE>Imposition errors</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>162</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Errors, Page make-up</NON-DESCRIPTOR>
+ <USE>Page make-up errors</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>164</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Errors, Pagination</NON-DESCRIPTOR>
+ <USE>Pagination errors</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>166</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Errors, Perfecting</NON-DESCRIPTOR>
+ <USE>Perfecting errors</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>167</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Errors, Registration</NON-DESCRIPTOR>
+ <USE>Register errors</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-07</UPD>
+ <TNR>169</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Evidence</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Gathering term; do not use; index under a narroewer term.</SN>
+ <BT>Printing order</BT>
+ <BT>Setting order</BT>
+ <NT>Damaged printing plates</NT>
+ <NT>Damaged types</NT>
+ <STA>Approved</STA>
+ <INP>2005-12-14</INP>
+ <APP>2005-12-14</APP>
+ <UPD>2015-04-21</UPD>
+ <TNR>295</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Excess space</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Casting off errors</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>83</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Facsimiles</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Fakery, falsification, imitation, and copying (Gathering term; do not assign)</BT>
+ <NT>Pen facsimiles</NT>
+ <NT>Photographic facsimiles</NT>
+ <NT>Type facsimiles</NT>
+ <RT>Fakes</RT>
+ <RT>False imprints</RT>
+ <RT>Forgeries</RT>
+ <RT>Page-for-page reprints</RT>
+ <RT>Period printings</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>170</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Fakery, falsification, imitation, and copying (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Authentication</NT>
+ <NT>Facsimiles</NT>
+ <NT>Fakes</NT>
+ <NT>False imprint dates</NT>
+ <NT>False imprints</NT>
+ <NT>Fictitious imprints</NT>
+ <NT>Forgeries</NT>
+ <NT>Made-up copies</NT>
+ <NT>Page-for-page reprints</NT>
+ <NT>Period printings</NT>
+ <NT>Piracies</NT>
+ <STA>Approved</STA>
+ <INP>2005-04-04</INP>
+ <APP>2005-04-04</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>283</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Fakes</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Fakery, falsification, imitation, and copying (Gathering term; do not assign)</BT>
+ <RT>Facsimiles</RT>
+ <RT>False imprint dates</RT>
+ <RT>False imprints</RT>
+ <RT>Forgeries</RT>
+ <RT>Made-up copies</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>174</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>False imprint dates</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <UF>Dates of imprint, False</UF>
+ <UF>Imprint dates, False</UF>
+ <BT>Fakery, falsification, imitation, and copying (Gathering term; do not assign)</BT>
+ <BT>Imprint dates (Gathering term; do not assign)</BT>
+ <RT>Fakes</RT>
+ <RT>False imprints</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>134</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>False imprints</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <UF>Imprints, False</UF>
+ <BT>Fakery, falsification, imitation, and copying (Gathering term; do not assign)</BT>
+ <RT>Facsimiles</RT>
+ <RT>Fakes</RT>
+ <RT>False imprint dates</RT>
+ <RT>Fictitious imprints</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>175</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Fascicles</NON-DESCRIPTOR>
+ <USE>Parts (Publishing)</USE>
+ <STA>Approved</STA>
+ <INP>2009-10-13</INP>
+ <APP>2009-10-13</APP>
+ <UPD>2009-10-13</UPD>
+ <TNR>322</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Fictitious imprints</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <UF>Imprints, Fictitious</UF>
+ <BT>Fakery, falsification, imitation, and copying (Gathering term; do not assign)</BT>
+ <RT>False imprints</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>181</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Fine paper printings</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Use for items identified as produced on fine paper, often in limited editions</SN>
+ <BT>Special materials printings</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>183</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Foliation</NON-DESCRIPTOR>
+ <USE>Pagination</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>184</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Foliation errors</NON-DESCRIPTOR>
+ <USE>Pagination errors</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>185</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Folio format</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>2o format</UF>
+ <BT>Formats</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>2</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Forgeries</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <UF>Counterfeits</UF>
+ <BT>Fakery, falsification, imitation, and copying (Gathering term; do not assign)</BT>
+ <RT>Authentication</RT>
+ <RT>Facsimiles</RT>
+ <RT>Fakes</RT>
+ <RT>Piracies</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>32</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Formats</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for imposition formats only including formats not found as narrower terms in this thesaurus</SN>
+ <BT>Imposition</BT>
+ <NT>Broadsheet format</NT>
+ <NT>Duodecimo format</NT>
+ <NT>Eighteenmo format</NT>
+ <NT>Folio format</NT>
+ <NT>Octavo format</NT>
+ <NT>Quarto format</NT>
+ <NT>Sixteenmo format</NT>
+ <NT>Sixty-fourmo format</NT>
+ <NT>Thirty-twomo format</NT>
+ <NT>Twenty-fourmo format</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>53</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Furniture impressions</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for accidental impressions of furniture</SN>
+ <UF>Impressions, Furniture</UF>
+ <BT>Accidental impressions</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>187</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Galley proofs</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Proofs</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>189</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Gold printing</NON-DESCRIPTOR>
+ <USE>Printing in gold</USE>
+ <STA>Approved</STA>
+ <INP>2008-03-18</INP>
+ <APP>2008-03-18</APP>
+ <UPD>2008-03-18</UPD>
+ <TNR>306</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Gratis copies</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Special use copies (Gathering term; do not assign)</BT>
+ <RT>Advance copies</RT>
+ <RT>Review copies</RT>
+ <RT>Sample copies</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>24</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Guard sheets, Printed</NON-DESCRIPTOR>
+ <USE>Printed guard sheets</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>190</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Half-sheet imposition</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>Work and turn</UF>
+ <BT>Imposition</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>192</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Handmade paper printings</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Special materials printings</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>194</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Headline irregularities</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>Running title irregularities</UF>
+ <BT>Headline patterns</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>195</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Headline patterns</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>Running title patterns</UF>
+ <BT>Headlines</BT>
+ <NT>Headline irregularities</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>197</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Headlines</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>Running titles</UF>
+ <BT>Composition</BT>
+ <BT>Skeletons</BT>
+ <NT>Headline patterns</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>199</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Hidden editions</NON-DESCRIPTOR>
+ <USE>Concealed editions</USE>
+ <STA>Approved</STA>
+ <INP>2008-02-28</INP>
+ <APP>2008-02-28</APP>
+ <UPD>2008-02-28</UPD>
+ <TNR>301</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Imposition</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Compositor&apos;s work (Gathering term; do not assign)</BT>
+ <NT>Formats</NT>
+ <NT>Half-sheet imposition</NT>
+ <NT>Imposition errors</NT>
+ <NT>Paper evidence</NT>
+ <NT>Re-imposition</NT>
+ <NT>Skeletons</NT>
+ <NT>Two-set printing</NT>
+ <NT>Wraparound gatherings</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>186</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Imposition errors</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>Errors, Imposition</UF>
+ <BT>Imposition</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>163</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Impressions, Bearer</NON-DESCRIPTOR>
+ <USE>Bearer impressions</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>37</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Impressions, blind</NON-DESCRIPTOR>
+ <USE>Blind impressions</USE>
+ <STA>Approved</STA>
+ <INP>2009-10-12</INP>
+ <APP>2009-10-12</APP>
+ <UPD>2009-10-12</UPD>
+ <TNR>315</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Impressions, Furniture</NON-DESCRIPTOR>
+ <USE>Furniture impressions</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>188</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Impressions, Space</NON-DESCRIPTOR>
+ <USE>Space impressions</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>204</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Impressions, Type-body</NON-DESCRIPTOR>
+ <USE>Type-body impressions</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>205</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Imprimaturs</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <UF>Imprimum potest</UF>
+ <UF>Licenses</UF>
+ <UF>Nihil obstat</UF>
+ <BT>Copyright and licensing</BT>
+ <RT>Copyright notices</RT>
+ <RT>Printing privileges</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>121</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Imprimum potest</NON-DESCRIPTOR>
+ <USE>Imprimaturs</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>206</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Imprint date styles</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <UF>Calendar styles</UF>
+ <UF>Dates of imprint</UF>
+ <UF>Dating styles</UF>
+ <BT>Imprint dates (Gathering term; do not assign)</BT>
+ <NT>Chronograms</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>55</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Imprint dates (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>False imprint dates</NT>
+ <NT>Imprint date styles</NT>
+ <STA>Approved</STA>
+ <INP>2005-04-04</INP>
+ <APP>2005-04-04</APP>
+ <UPD>2016-07-01</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>282</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Imprint dates, False</NON-DESCRIPTOR>
+ <USE>False imprint dates</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>179</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Imprints, False</NON-DESCRIPTOR>
+ <USE>False imprints</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>180</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Imprints, Fictitious</NON-DESCRIPTOR>
+ <USE>Fictitious imprints</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>182</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>In-house manuscript corrections</NON-DESCRIPTOR>
+ <USE>Manuscript corrections</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>209</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>In-press corrections</NON-DESCRIPTOR>
+ <USE>Press corrections</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>233</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Inking</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Pressman&apos;s work (Gathering term; do not assign)</BT>
+ <NT>Re-inking</NT>
+ <RT>Color printing</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>100</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Inserted text leaves</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Use for leaves of text inserted within or between uncancelled gatherings</SN>
+ <BT>Insertions</BT>
+ <RT>Cancel leaves</RT>
+ <RT>Signing irregularities</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>61</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Insertions</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Additions and corrections to text (Gathering term; do not assign)</BT>
+ <BT>Editions, issues and states (Gathering term; do not assign)</BT>
+ <NT>Inserted text leaves</NT>
+ <NT>Printed guard sheets</NT>
+ <NT>Separate errata lists</NT>
+ <RT>States</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>211</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Installments</NON-DESCRIPTOR>
+ <USE>Parts (Publishing)</USE>
+ <STA>Approved</STA>
+ <INP>2009-10-13</INP>
+ <APP>2009-10-13</APP>
+ <UPD>2009-10-13</UPD>
+ <TNR>321</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Integral errata lists</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <UF>Errata lists, Integral</UF>
+ <BT>Errata lists</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>154</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Inverted blocks</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>Blocks, inverted</UF>
+ <BT>Page make-up errors</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>45</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Irregular catchwords</NON-DESCRIPTOR>
+ <USE>Catchword irregularities</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>87</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Irregularly shaped books</NON-DESCRIPTOR>
+ <USE>Shaped books</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>212</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Irregularly signed gatherings</NON-DESCRIPTOR>
+ <USE>Signing irregularities</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>214</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Issues</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <CM>Determination of &quot;issue&quot; is considerable more complicated than is the determination of &quot;state&quot; and these terms must be applied with care. Though exact definitions vary, one can say that &quot;issue&quot; refers to a consciously planned publishing unit whereas &quot;state&quot; is a term which applies to differences (often resulting from an error or attempt to correct the error) among printed sheets of a single impression or issue. Chapters 2 and 11 of Bowers&apos; &quot;Principles of Bibliographic Description&quot; offer what is probably the most thorough treatment of the two concepts. McKerrow discusses them in less depth in chapter 3, part 2, of his &quot;An Introduction to Bibliography&quot;. G. Thomas Tanselle provides particularly useful, concise definitions at the end of his article, &quot;The Bibliographical Concepts of &apos;Issue&apos; and &apos;State&apos;&quot;, in &quot;Papers of the Bibliographical Society of America&quot; 69 (1975):17-66.</CM>
+ <BT>Editions, issues and states (Gathering term; do not assign)</BT>
+ <NT>Binding issues</NT>
+ <NT>Part-issued books in volume form</NT>
+ <NT>Re-issues</NT>
+ <NT>Simultaneous issues</NT>
+ <RT>Special materials printings</RT>
+ <RT>States</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2009-10-13</UPD>
+ <TNR>40</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Justification</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for any evidence of justification process or lack of it</SN>
+ <BT>Composition</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>108</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Label cancels</NON-DESCRIPTOR>
+ <USE>Cancel slips</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>63</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Large paper printings</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Special materials printings</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>217</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Licenses</NON-DESCRIPTOR>
+ <USE>Imprimaturs</USE>
+ <USE>Printing privileges</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>207</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Limitation statements</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <UF>Limited editions</UF>
+ <BT>Editions, issues and states (Gathering term; do not assign)</BT>
+ <RT>Special materials printings</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>218</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Limited editions</NON-DESCRIPTOR>
+ <USE>Limitation statements</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>219</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Locking-up</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Make-ready</BT>
+ <BT>Pressman&apos;s work (Gathering term; do not assign)</BT>
+ <NT>Displaced types</NT>
+ <NT>Pulled types</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2014-05-16</UPD>
+ <TNR>38</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Loose type</NON-DESCRIPTOR>
+ <USE>Displaced types</USE>
+ <USE>Pulled types</USE>
+ <USE>Space impressions</USE>
+ <USE>Type-body impressions</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>146</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Mackles</NON-DESCRIPTOR>
+ <USE>Slurs</USE>
+ <STA>Approved</STA>
+ <INP>2008-02-28</INP>
+ <APP>2008-02-28</APP>
+ <UPD>2008-02-28</UPD>
+ <TNR>302</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Macules</NON-DESCRIPTOR>
+ <USE>Slurs</USE>
+ <STA>Approved</STA>
+ <INP>2008-02-28</INP>
+ <APP>2008-02-28</APP>
+ <UPD>2008-02-28</UPD>
+ <TNR>303</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Made-up copies</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <UF>Sophisticated copies</UF>
+ <BT>Fakery, falsification, imitation, and copying (Gathering term; do not assign)</BT>
+ <RT>Fakes</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>178</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Make-ready</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <BT>Pressman&apos;s work (Gathering term; do not assign)</BT>
+ <NT>Locking-up</NT>
+ <NT>Perfecting</NT>
+ <NT>Point holes</NT>
+ <NT>Press figures</NT>
+ <NT>Register</NT>
+ <NT>Slurs</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-29</UPD>
+ <TNR>275</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Manuscript corrections</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Use for manuscript corrections believed to have been made in the printing or publishing house</SN>
+ <UF>Corrections, Manuscript</UF>
+ <UF>In-house manuscript corrections</UF>
+ <BT>Cancellation</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>71</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Marks, Cancellation</NON-DESCRIPTOR>
+ <USE>Cancellation marks</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>74</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Miniature books</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Use for volumes 10cm or less in height</SN>
+ <BT>Special shapes, sizes and kinds of books (Gathering term; do not assign)</BT>
+ <NT>Thumb Bibles</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2009-10-13</UPD>
+ <TNR>222</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Mottoes, Printers&apos;</NON-DESCRIPTOR>
+ <USE>Printers&apos; mottoes</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>223</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Mottoes, Publishers&apos;</NON-DESCRIPTOR>
+ <USE>Printers&apos; mottoes</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>225</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Multiple color printing</NON-DESCRIPTOR>
+ <USE>Printing in multiple colors</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>226</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Multiple printers</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for evidence of a book having been set or printed by division among different workmen or firms</SN>
+ <NT>Casting off errors</NT>
+ <NT>Composition</NT>
+ <NT>Press figures</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-14</UPD>
+ <TNR>86</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Multiple publishers</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Use for evidence of a book having been published by more than one publisher, such as title-pages with no difference in setting other than the publisher statement</SN>
+ <BT>Distribution and sales methods (Gathering term; do not assign)</BT>
+ <BT>Editions, issues and states (Gathering term; do not assign)</BT>
+ <RT>Simultaneous issues</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>227</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Nihil obstat</NON-DESCRIPTOR>
+ <USE>Imprimaturs</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>208</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Octavo format</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>8vo format</UF>
+ <BT>Formats</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>6</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Octodecimo format</NON-DESCRIPTOR>
+ <USE>Eighteenmo format</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>152</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Offsets</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <HN>Submitted by John Lancaster, 11/08/2011.</HN>
+ <SN>Use for accidental transfers of ink from printed sheets to other surfaces. Do not use for offset printing processes.</SN>
+ <UF>Rub offs</UF>
+ <UF>Set-offs</UF>
+ <UF>Setoffs</UF>
+ <BT>Accidental impressions</BT>
+ <STA>Approved</STA>
+ <INP>2012-06-26</INP>
+ <APP>2012-06-23</APP>
+ <UPD>2012-06-26</UPD>
+ <TNR>324</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Omissions of text</NON-DESCRIPTOR>
+ <USE>Text omissions</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>228</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Page-for-page reprints</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Use for evidence indicating an item has been set following the page make-up of an earlier edition</SN>
+ <UF>Setting by pages</UF>
+ <BT>Composition</BT>
+ <BT>Fakery, falsification, imitation, and copying (Gathering term; do not assign)</BT>
+ <RT>Facsimiles</RT>
+ <RT>Re-setting</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-08</UPD>
+ <TNR>176</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Page make-up</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Composition</BT>
+ <NT>Page make-up errors</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-08</UPD>
+ <TNR>114</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Page make-up errors</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>Errors, Page make-up</UF>
+ <BT>Page make-up</BT>
+ <NT>Inverted blocks</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-14</UPD>
+ <TNR>165</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Page proofs</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Proofs</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>230</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Pagination</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for any evidence of pagination, foliation, or columniation pattern or practice</SN>
+ <UF>Columniation</UF>
+ <UF>Foliation</UF>
+ <BT>Composition</BT>
+ <NT>Pagination errors</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-08</UPD>
+ <TNR>103</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Pagination errors</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>Columniation errors</UF>
+ <UF>Errors, Columniation</UF>
+ <UF>Errors, Foliation</UF>
+ <UF>Errors, Pagination</UF>
+ <UF>Foliation errors</UF>
+ <BT>Pagination</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>105</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Paper evidence</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <BT>Imposition</BT>
+ <NT>Turned chainlines</NT>
+ <STA>Approved</STA>
+ <INP>2005-12-09</INP>
+ <APP>2005-12-09</APP>
+ <UPD>2005-12-14</UPD>
+ <TNR>294</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Paperback originals</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <HN>Approved 6/2008</HN>
+ <SN>Use for books that appear originally as paperbacks rather than being printed from hardcover editions.</SN>
+ <UF>PBO</UF>
+ <BT>Paperbacks</BT>
+ <STA>Approved</STA>
+ <INP>2008-07-11</INP>
+ <APP>2008-07-11</APP>
+ <UPD>2008-07-11</UPD>
+ <TNR>309</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Paperbacks</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <HN>Approved 6/2007.</HN>
+ <SN>Use for inexpensively produced publications, bound in stiff paper or flexible card, and issued beginning in the 1930s for the mass market.</SN>
+ <BT>Special shapes, sizes and kinds of books (Gathering term; do not assign)</BT>
+ <NT>Paperback originals</NT>
+ <STA>Approved</STA>
+ <INP>2007-06-28</INP>
+ <APP>2007-06-28</APP>
+ <UPD>2008-07-11</UPD>
+ <TNR>300</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Part-issued books</NON-DESCRIPTOR>
+ <USE>Part-issued books in volume form</USE>
+ <STA>Approved</STA>
+ <INP>2009-10-13</INP>
+ <APP>2009-10-13</APP>
+ <UPD>2009-10-13</UPD>
+ <TNR>318</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Part-issued books in volume form</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Use for complete volumes of works, originally issued in parts, published just prior to the distribution of the final part and generally distinguished by the absence of stab holes.</SN>
+ <UF>Part-issued books</UF>
+ <BT>Distribution and sales methods (Gathering term; do not assign)</BT>
+ <BT>Issues</BT>
+ <RT>Parts (Publishing)</RT>
+ <STA>Approved</STA>
+ <INP>2009-10-13</INP>
+ <APP>2009-07-11</APP>
+ <UPD>2009-10-26</UPD>
+ <TNR>317</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Parts (Publishing)</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Use for the individually-published installments of a work intended to be bound together when complete.</SN>
+ <UF>Fascicles</UF>
+ <UF>Installments</UF>
+ <BT>[Distribution and sales methods]</BT>
+ <RT>Part-issued books in volume form</RT>
+ <STA>Approved</STA>
+ <INP>2009-10-13</INP>
+ <APP>2009-07-11</APP>
+ <UPD>2009-10-16</UPD>
+ <TNR>319</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>PBO</NON-DESCRIPTOR>
+ <USE>Paperback originals</USE>
+ <STA>Approved</STA>
+ <INP>2008-07-11</INP>
+ <APP>2008-07-11</APP>
+ <UPD>2008-07-11</UPD>
+ <TNR>310</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Pen facsimiles</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Facsimiles</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>171</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Perfecting</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for alignment of text on opposite sides of printed leaf</SN>
+ <UF>Backing-up</UF>
+ <BT>Make-ready</BT>
+ <NT>Perfecting errors</NT>
+ <RT>Register</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>35</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Perfecting errors</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>Errors, Perfecting</UF>
+ <BT>Perfecting</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>168</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Period printings</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Use for conscious imitations of earlier printing styles</SN>
+ <BT>Fakery, falsification, imitation, and copying (Gathering term; do not assign)</BT>
+ <RT>Facsimiles</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>177</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Photographic facsimiles</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Facsimiles</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>172</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Pin-holes (Printing)</NON-DESCRIPTOR>
+ <USE>Point holes</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2016-07-01</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>271</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Pin holes (Printing)</NON-DESCRIPTOR>
+ <USE>Point holes</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2016-07-01</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>270</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Pinholes (Printing)</NON-DESCRIPTOR>
+ <USE>Point holes</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2016-07-01</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>272</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Piracies</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <UF>Pirated editions</UF>
+ <BT>Editions, issues and states (Gathering term; do not assign)</BT>
+ <BT>Fakery, falsification, imitation, and copying (Gathering term; do not assign)</BT>
+ <RT>Authentication</RT>
+ <RT>Forgeries</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>33</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Pirated editions</NON-DESCRIPTOR>
+ <USE>Piracies</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>232</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Plate damage</NON-DESCRIPTOR>
+ <USE>Damaged printing plates</USE>
+ <STA>Approved</STA>
+ <INP>2015-04-21</INP>
+ <APP>2015-04-21</APP>
+ <UPD>2015-04-21</UPD>
+ <TNR>331</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Point holes</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <HN>1/05 Term added.</HN>
+ <SN>Use for holes in or near the edges of printed leaves made by the hand press</SN>
+ <UF>Pin-holes (Printing)</UF>
+ <UF>Pin holes (Printing)</UF>
+ <UF>Pinholes (Printing)</UF>
+ <UF>Points (Printing)</UF>
+ <UF>Press points</UF>
+ <BT>Make-ready</BT>
+ <RT>Register</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-14</UPD>
+ <TNR>269</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Points (Printing)</NON-DESCRIPTOR>
+ <USE>Point holes</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>274</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Press corrections</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>Corrections in press</UF>
+ <UF>In-press corrections</UF>
+ <UF>Running corrections</UF>
+ <UF>Stop press corrections</UF>
+ <BT>Additions and corrections to text (Gathering term; do not assign)</BT>
+ <BT>Pressman&apos;s work (Gathering term; do not assign)</BT>
+ <NT>Re-imposition</NT>
+ <NT>Re-setting</NT>
+ <NT>States</NT>
+ <RT>Proofs</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-14</UPD>
+ <TNR>126</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Press figures</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>Press numbers</UF>
+ <BT>Direction lines</BT>
+ <BT>Make-ready</BT>
+ <BT>Multiple printers</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-14</UPD>
+ <TNR>143</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Press numbers</NON-DESCRIPTOR>
+ <USE>Press figures</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>236</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Press points</NON-DESCRIPTOR>
+ <USE>Point holes</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>273</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Pressman&apos;s work (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Accidental impressions</NT>
+ <NT>Color printing</NT>
+ <NT>Inking</NT>
+ <NT>Locking-up</NT>
+ <NT>Make-ready</NT>
+ <NT>Press corrections</NT>
+ <NT>Printing in gold</NT>
+ <NT>Printing order</NT>
+ <STA>Approved</STA>
+ <INP>2005-04-04</INP>
+ <APP>2005-04-04</APP>
+ <UPD>2014-05-16</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>284</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Prices</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <BT>Distribution and sales methods (Gathering term; do not assign)</BT>
+ <NT>Book prices</NT>
+ <NT>Second-hand prices</NT>
+ <STA>Approved</STA>
+ <INP>2005-12-08</INP>
+ <APP>2005-12-08</APP>
+ <UPD>2005-12-08</UPD>
+ <TNR>292</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Prices of books</NON-DESCRIPTOR>
+ <USE>Book prices</USE>
+ <USE>Second-hand prices</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>48</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Printed guard sheets</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>Guard sheets, Printed</UF>
+ <BT>Insertions</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>191</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Printer&apos;s setting copy</NON-DESCRIPTOR>
+ <USE>Compositor&apos;s copy</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>117</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Printer identification (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Colophons</NT>
+ <NT>Printers&apos; devices</NT>
+ <NT>Printers&apos; mottoes</NT>
+ <STA>Approved</STA>
+ <INP>2005-04-04</INP>
+ <APP>2005-04-04</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>285</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Printers&apos; devices</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <UF>Devices, Printers&apos;</UF>
+ <UF>Devices, Publishers&apos;</UF>
+ <UF>Printers&apos; marks</UF>
+ <UF>Publishers&apos; devices</UF>
+ <BT>Printer identification (Gathering term; do not assign)</BT>
+ <BT>Publisher identification (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>141</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Printers&apos; marks</NON-DESCRIPTOR>
+ <USE>Printers&apos; devices</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>237</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Printers&apos; mottoes</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <UF>Mottoes, Printers&apos;</UF>
+ <UF>Mottoes, Publishers&apos;</UF>
+ <UF>Publishers&apos; mottoes</UF>
+ <BT>Printer identification (Gathering term; do not assign)</BT>
+ <BT>Publisher identification (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>224</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Printing in a single color</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for items printed entirely in a color other than black</SN>
+ <BT>Color printing</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>99</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Printing in gilt</NON-DESCRIPTOR>
+ <USE>Printing in gold</USE>
+ <STA>Approved</STA>
+ <INP>2008-03-18</INP>
+ <APP>2008-03-18</APP>
+ <UPD>2008-03-18</UPD>
+ <TNR>305</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Printing in gold</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <HN>Approved 1/2008.</HN>
+ <SN>Use for letterpress in which text and/or designs are printed in gold.</SN>
+ <UF>Gold printing</UF>
+ <UF>Printing in gilt</UF>
+ <BT>Pressman&apos;s work (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2008-03-18</INP>
+ <APP>2008-03-18</APP>
+ <UPD>2008-03-18</UPD>
+ <TNR>304</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Printing in multiple colors</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for items printed in more than one color, e.g., red and black</SN>
+ <UF>Multiple color printing</UF>
+ <BT>Color printing</BT>
+ <NT>Printing in multiple colors at one pass</NT>
+ <NT>Printing in multiple colors in separate passes</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>98</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Printing in multiple colors at one pass</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for items with multiple colors in which all colors have been printed simultaneously</SN>
+ <BT>Printing in multiple colors</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>240</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Printing in multiple colors in separate passes</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for items with multiple colors in which different colors have been printed successively</SN>
+ <BT>Printing in multiple colors</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>241</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Printing order</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for evidence of printing order, such as progressively damaged types or distorted rules</SN>
+ <BT>Pressman&apos;s work (Gathering term; do not assign)</BT>
+ <NT>Evidence</NT>
+ <RT>Setting order</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-14</UPD>
+ <TNR>131</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Printing privileges</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <UF>Licenses</UF>
+ <UF>Privileges, Printing</UF>
+ <BT>Copyright and licensing</BT>
+ <RT>Copyright notices</RT>
+ <RT>Imprimaturs</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>122</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Private press books</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Special shapes, sizes and kinds of books (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>243</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Privately published books</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Use for books published for private distribution only</SN>
+ <BT>Distribution and sales methods (Gathering term; do not assign)</BT>
+ <BT>Editions, issues and states (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>244</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Privileges, Printing</NON-DESCRIPTOR>
+ <USE>Printing privileges</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>242</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Proofs</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Additions and corrections to text (Gathering term; do not assign)</BT>
+ <NT>Corrected proofs</NT>
+ <NT>Galley proofs</NT>
+ <NT>Page proofs</NT>
+ <NT>Uncorrected proofs</NT>
+ <RT>Press corrections</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>124</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Publisher identification (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Colophons</NT>
+ <NT>Printers&apos; devices</NT>
+ <NT>Printers&apos; mottoes</NT>
+ <STA>Approved</STA>
+ <INP>2005-04-04</INP>
+ <APP>2005-04-04</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>290</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Publishers&apos; devices</NON-DESCRIPTOR>
+ <USE>Printers&apos; devices</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>238</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Publishers&apos; dummies</NON-DESCRIPTOR>
+ <USE>Dummies</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>149</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Publishers&apos; mottoes</NON-DESCRIPTOR>
+ <USE>Printers&apos; mottoes</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>239</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Publishers&apos; series</NON-DESCRIPTOR>
+ <USE>Series</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>246</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Pulled types</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>Loose type</UF>
+ <BT>Locking-up</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>220</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Quarto format</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>4to format</UF>
+ <BT>Formats</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>4</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Re-imposition</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Imposition</BT>
+ <BT>Press corrections</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-14</UPD>
+ <TNR>202</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Re-inking</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Inking</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>210</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Re-issues</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <UF>Remainder issues</UF>
+ <BT>Issues</BT>
+ <NT>Standing type</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>215</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Re-setting</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Composition</BT>
+ <BT>Press corrections</BT>
+ <RT>Page-for-page reprints</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-14</UPD>
+ <TNR>109</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Register</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for alignment of different colors when printing one side of a sheet in two or more passes through the press, as in red-and-black printing</SN>
+ <BT>Make-ready</BT>
+ <NT>Register errors</NT>
+ <RT>Perfecting</RT>
+ <RT>Point holes</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>231</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Register errors</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>Errors, Registration</UF>
+ <BT>Register</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>250</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Registers of signatures</NON-DESCRIPTOR>
+ <USE>Signature registers</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>251</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Remainder issues</NON-DESCRIPTOR>
+ <USE>Re-issues</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>248</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Repeated signatures</NON-DESCRIPTOR>
+ <USE>Signing repetitions</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>253</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Review copies</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Special use copies (Gathering term; do not assign)</BT>
+ <RT>Advance copies</RT>
+ <RT>Gratis copies</RT>
+ <RT>Sample copies</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>25</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Rub offs</NON-DESCRIPTOR>
+ <USE>Offsets</USE>
+ <STA>Approved</STA>
+ <INP>2012-06-26</INP>
+ <APP>2012-06-26</APP>
+ <UPD>2012-06-26</UPD>
+ <TNR>326</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Running corrections</NON-DESCRIPTOR>
+ <USE>Press corrections</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>234</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Running title irregularities</NON-DESCRIPTOR>
+ <USE>Headline irregularities</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>196</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Running title patterns</NON-DESCRIPTOR>
+ <USE>Headline patterns</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>198</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Running titles</NON-DESCRIPTOR>
+ <USE>Headlines</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>200</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Salesmen&apos;s dummies</NON-DESCRIPTOR>
+ <USE>Dummies</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>150</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Sample copies</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Use for pre-publication advertisement copies</SN>
+ <UF>Blad</UF>
+ <BT>Special use copies (Gathering term; do not assign)</BT>
+ <RT>Advance copies</RT>
+ <RT>Gratis copies</RT>
+ <RT>Review copies</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>26</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Second-hand prices</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <UF>Auction prices</UF>
+ <UF>Prices of books</UF>
+ <BT>Prices</BT>
+ <RT>Book prices</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-08</UPD>
+ <TNR>28</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Separate errata lists</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <UF>Errata lists, Separate</UF>
+ <BT>Errata lists</BT>
+ <BT>Insertions</BT>
+ <NT>Errata slips</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>155</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Series</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <UF>Publishers&apos; series</UF>
+ <BT>Distribution and sales methods (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>247</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Set-offs</NON-DESCRIPTOR>
+ <USE>Offsets</USE>
+ <STA>Approved</STA>
+ <INP>2012-06-26</INP>
+ <APP>2012-06-26</APP>
+ <UPD>2012-06-26</UPD>
+ <TNR>325</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Setoffs</NON-DESCRIPTOR>
+ <USE>Offsets</USE>
+ <STA>Approved</STA>
+ <INP>2012-06-26</INP>
+ <APP>2012-06-26</APP>
+ <UPD>2012-06-26</UPD>
+ <TNR>328</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Setting by formes</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for evidence that text has been set by formes, i.e., in the order in which it is imposed upon the press, rather than seriatim</SN>
+ <BT>Setting order</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>255</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Setting by pages</NON-DESCRIPTOR>
+ <USE>Page-for-page reprints</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>229</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Setting order</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Composition</BT>
+ <NT>Evidence</NT>
+ <NT>Setting by formes</NT>
+ <NT>Setting seriatim</NT>
+ <RT>Printing order</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-14</UPD>
+ <TNR>110</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Setting seriatim</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for evidence that the text has been set seriatim, i.e., consecutively from beginning to end, rather than by formes</SN>
+ <BT>Setting order</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>256</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Setting type</NON-DESCRIPTOR>
+ <USE>Composition</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>106</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Sexagesimo-quarto format</NON-DESCRIPTOR>
+ <USE>Sixty-fourmo format</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>257</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Sexto-decimo format</NON-DESCRIPTOR>
+ <USE>Sixteenmo format</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>258</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Shaped books</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Use for books of other than a conventional rectangular shape, e.g., circular, triangular, irregularly polygonal books</SN>
+ <UF>Irregularly shaped books</UF>
+ <UF>Specially shaped books</UF>
+ <BT>Special shapes, sizes and kinds of books (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>213</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Signature registers</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for the lists or summaries of signatures often printed at the end of early printed books</SN>
+ <UF>Registers of signatures</UF>
+ <BT>Signatures (Binder&apos;s notations)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>252</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Signatures (Binder&apos;s notations)</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for the symbols used to distinguish gatherings and put them in order</SN>
+ <BT>Direction lines</BT>
+ <NT>Signature registers</NT>
+ <NT>Signing patterns</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2016-07-01</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>144</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Signing gaps</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Signing irregularities</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>261</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Signing irregularities</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>Irregularly signed gatherings</UF>
+ <BT>Casting off errors</BT>
+ <BT>Signing patterns</BT>
+ <NT>Signing gaps</NT>
+ <NT>Signing repetitions</NT>
+ <NT>Unsigned gatherings</NT>
+ <RT>Inserted text leaves</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>84</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Signing patterns</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Signatures (Binder&apos;s notations)</BT>
+ <NT>Signing irregularities</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>260</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Signing repetitions</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>Repeated signatures</UF>
+ <BT>Signing irregularities</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>254</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Simultaneous issues</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Use for evidence of a book being published in two or more issues simultaneously</SN>
+ <BT>Issues</BT>
+ <RT>Multiple publishers</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>216</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Sixteenmo format</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>16mo format</UF>
+ <UF>Sexto-decimo format</UF>
+ <BT>Formats</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>10</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Sixty-fourmo format</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>64mo format</UF>
+ <UF>Sexagesimo-quarto format</UF>
+ <BT>Formats</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>18</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Skeletons</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Imposition</BT>
+ <NT>Headlines</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>201</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Slip cancels</NON-DESCRIPTOR>
+ <USE>Cancel slips</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>64</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Slits, Cancellation</NON-DESCRIPTOR>
+ <USE>Cancellation slits</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>76</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Slurs</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <HN>Proposed by Deborah J. Leslie; approved 1/2006; additional UF added 1/2008</HN>
+ <SN>Use for blurred or doubled ink impressions caused by the sliding of the paper on the printing surface.</SN>
+ <UF>Blurs</UF>
+ <UF>Double printing</UF>
+ <UF>Mackles</UF>
+ <UF>Macules</UF>
+ <BT>Accidental impressions</BT>
+ <BT>Make-ready</BT>
+ <STA>Approved</STA>
+ <INP>2005-12-29</INP>
+ <APP>2005-12-29</APP>
+ <UPD>2014-05-16</UPD>
+ <TNR>296</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Sophisticated copies</NON-DESCRIPTOR>
+ <USE>Made-up copies</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>221</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Space impressions</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for accidental impressions of spacing material</SN>
+ <UF>Accidental type impressions</UF>
+ <UF>Impressions, Space</UF>
+ <UF>Loose type</UF>
+ <BT>Accidental impressions</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>20</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Special materials printings</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Use for printings or issues of a work that are made, generally in relatively small numbers of copies, on distinctive materials</SN>
+ <BT>Special shapes, sizes and kinds of books (Gathering term; do not assign)</BT>
+ <NT>Cloth printings</NT>
+ <NT>Colored paper printings</NT>
+ <NT>Fine paper printings</NT>
+ <NT>Handmade paper printings</NT>
+ <NT>Large paper printings</NT>
+ <NT>Vellum printings</NT>
+ <NT>Wood printings</NT>
+ <RT>Issues</RT>
+ <RT>Limitation statements</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>95</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Special shapes, sizes and kinds of books (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Block books</NT>
+ <NT>Engraved books</NT>
+ <NT>Miniature books</NT>
+ <NT>Paperbacks</NT>
+ <NT>Private press books</NT>
+ <NT>Shaped books</NT>
+ <NT>Special materials printings</NT>
+ <STA>Approved</STA>
+ <INP>2005-04-04</INP>
+ <APP>2005-04-04</APP>
+ <UPD>2009-10-16</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>286</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Special use copies (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Advance copies</NT>
+ <NT>Book designers&apos; mock-ups</NT>
+ <NT>Dummies</NT>
+ <NT>Gratis copies</NT>
+ <NT>Review copies</NT>
+ <NT>Sample copies</NT>
+ <NT>Statutory copies</NT>
+ <STA>Approved</STA>
+ <INP>2005-04-04</INP>
+ <APP>2005-04-04</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>291</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Specially shaped books</NON-DESCRIPTOR>
+ <USE>Shaped books</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>259</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Spelling preferences</NON-DESCRIPTOR>
+ <USE>Compositor&apos;s spelling preferences</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>120</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Stamped corrections</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <UF>Corrections, Stamped</UF>
+ <BT>Cancellation</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>72</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Standing type</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Re-issues</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>249</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>States</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <CM>Determination of &quot;issue&quot; is considerable more complicated than is the determination of &quot;state&quot; and these terms must be applied with care. Though exact definitions vary, one can say that &quot;issue&quot; refers to a consciously planned publishing unit whereas &quot;state&quot; is a term which applies to differences (often resulting from an error or attempt to correct the error) among printed sheets of a single impression or issue. Chapters 2 and 11 of Bowers&apos; &quot;Principles of Bibliographic Description&quot; offer what is probably the most thorough treatment of the two concepts. McKerrow discusses them in less depth in chapter 3, part 2, of his &quot;An Introduction to Bibliography&quot;. G. Thomas Tanselle provides particularly useful, concise definitions at the end of his article, &quot;The Bibliographical Concepts of &apos;Issue&apos; and &apos;State&apos;&quot;, in &quot;Papers of the Bibliographical Society of America&quot; 69 (1975):17-66.</CM>
+ <BT>Additions and corrections to text (Gathering term; do not assign)</BT>
+ <BT>Editions, issues and states (Gathering term; do not assign)</BT>
+ <BT>Press corrections</BT>
+ <RT>Cancellation</RT>
+ <RT>Insertions</RT>
+ <RT>Issues</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-14</UPD>
+ <TNR>73</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Statutory copies</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <UF>Deposit copies</UF>
+ <BT>Copyright and licensing</BT>
+ <BT>Special use copies (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-14</UPD>
+ <TNR>139</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Stop press corrections</NON-DESCRIPTOR>
+ <USE>Press corrections</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>235</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Subscribers&apos; addresses</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Distribution and sales methods (Gathering term; do not assign)</BT>
+ <RT>Subscription lists</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>265</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Subscription lists</DESCRIPTOR>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Distribution and sales methods (Gathering term; do not assign)</BT>
+ <RT>Subscribers&apos; addresses</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>266</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Tax stamps</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Taxes and levies</BT>
+ <RT>Drawback notices</RT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-04-04</UPD>
+ <TNR>148</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Taxes and levies</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <BT>Control of printing (Gathering term; do not assign)</BT>
+ <BT>Control of publishing</BT>
+ <NT>Drawback notices</NT>
+ <NT>Tax stamps</NT>
+ <STA>Approved</STA>
+ <INP>2005-04-04</INP>
+ <APP>2005-04-04</APP>
+ <UPD>2005-12-14</UPD>
+ <TNR>281</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Text omissions</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for omission of a word or words from intended text as a result of composition error</SN>
+ <UF>Omissions of text</UF>
+ <BT>Composition errors</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>116</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Thirty-twomo format</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>32mo format</UF>
+ <UF>Tricesimo-secundo format</UF>
+ <BT>Formats</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>16</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Thumb Bibles</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC><!-- unknown line type [@@@] -->
+
+ <SN>Use for miniature volumes containing summaries or abridgments of biblical texts in verse or prose; typically illustrated and produced chiefly for use by children.</SN>
+ <UF>Bibles, thumb</UF>
+ <BT>Miniature books</BT>
+ <STA>Approved</STA>
+ <INP>2009-10-13</INP>
+ <APP>2009-01-24</APP>
+ <UPD>2009-10-26</UPD>
+ <TNR>316</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Tricesimo-secundo format</NON-DESCRIPTOR>
+ <USE>Thirty-twomo format</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>267</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Turned chainlines</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>Chainlines, turned</UF>
+ <BT>Paper evidence</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>92</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Twelvemo format</NON-DESCRIPTOR>
+ <USE>Duodecimo format</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>151</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Twenty-fourmo format</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <UF>24mo format</UF>
+ <UF>Vicesimo-quarto format</UF>
+ <BT>Formats</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>14</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Two-set printing</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <HN>1/98 Term added.</HN>
+ <SN>Use for the setting of two jobs in one forme</SN>
+ <BT>Imposition</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-26</INP>
+ <APP>2005-02-26</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>276</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Type-body impressions</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for accidental impressions of pieces of type, showing type height</SN>
+ <UF>Accidental type impressions</UF>
+ <UF>Impressions, Type-body</UF>
+ <UF>Loose type</UF>
+ <BT>Accidental impressions</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>21</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Type-size change</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Casting off errors</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>85</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Type facsimiles</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Facsimiles</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>173</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Typesetting</NON-DESCRIPTOR>
+ <USE>Composition</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>107</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Uncorrected proofs</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Proofs</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>245</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Unsigned gatherings</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <BT>Signing irregularities</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>262</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Vellum printings</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <BT>Special materials printings</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>263</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Vicesimo-quarto format</NON-DESCRIPTOR>
+ <USE>Twenty-fourmo format</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>268</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Wood printings</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SC>rbpub Publishing Terms</SC>
+ <SN>Use for items printed on wood</SN>
+ <BT>Special materials printings</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>264</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Work and turn</NON-DESCRIPTOR>
+ <USE>Half-sheet imposition</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>193</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Wraparound gatherings</DESCRIPTOR>
+ <SC>rbpri Printing Terms</SC>
+ <SN>Use for sheets on which non-sequential portions of the text, usually preliminary and final matter, have been printed and then so folded and assembled with other sheets that part of the gathering wraps round other gatherings of the item.</SN>
+ <BT>Imposition</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-09</UPD>
+ <TNR>203</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Xylographica</NON-DESCRIPTOR>
+ <USE>Block books</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>43</TNR>
+</CONCEPT>
+</THESAURUS>
