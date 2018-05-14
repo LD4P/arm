@@ -28,6 +28,7 @@
 
 # Links a resource to a Marking
 :arm_markedBy
+    a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:arm_markedBy 
         [
@@ -54,6 +55,7 @@
     .
      
 :MarkingForm_rdf_type 
+    a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:rdf_type
         [
@@ -76,6 +78,7 @@
     .
     
 :MarkingForm_rdf_value 
+    a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:rdf_value
         [
@@ -90,6 +93,7 @@
 ##### MARKING ACTIVITY #####
 
 :MarkingForm_activity_hasActivity
+    a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:activity_hasActivity
         [
@@ -103,6 +107,7 @@
     .
         
 :MarkingActivityForm 
+    a sh:NodeShape ;
     sh:and (
         raremat_monograph_activity:ActivityForm
         [
@@ -112,6 +117,7 @@
     .
     
 :MarkingActivityForm_rdf_type 
+    a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:rdf_type
         [
@@ -123,6 +129,7 @@
 ##### MARKING NOTE #####
 
 :MarkingForm_bf_note
+    a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:bf_note 
         [   
@@ -137,6 +144,7 @@
     . 
    
 :MarkingNoteForm 
+    a sh:NodeShape ;
     sh:and (
         raremat_monograph_note:NoteForm 
         [
@@ -146,6 +154,7 @@
     .
 
 :MarkingNoteForm_rdf_type 
+    a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:rdf_type
         [

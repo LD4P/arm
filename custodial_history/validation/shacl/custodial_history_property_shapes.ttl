@@ -87,6 +87,7 @@
 # The CustodialHistory has a CustodialEvent, OR the aggregate CustodialEvent 
 # has a CustodialEvent part.
 :bf_hasPart_ch_CustodialEvent 
+    a sh:PropertyShape ;
     sh:and (
         :bf_hasPart 
         [
@@ -103,6 +104,7 @@
 
 # The CustodialEvent is part of an aggregate CustodialEvent
 :bf_partOf_ch_CustodialEvent 
+    a sh:PropertyShape ;
     sh:and (
         :bf_partOf
         [
@@ -114,6 +116,7 @@
  
 # The CustodialEvent is part of the CustodialHistory   
 :bf_partOf_ch_CustodialHistory 
+    a sh:PropertyShape ;
     sh:and (
         :bf_partOf
         [
@@ -157,6 +160,7 @@
     .
 
 :ch_CustodialEvent_rdf_type 
+    a sh:PropertyShape ;
     sh:and (
         :rdf_type
         [
@@ -188,6 +192,7 @@
       
 
 :ch_CustodialEventActivity_rdf_type 
+    a sh:PropertyShape ;
     sh:and (
         :rdf_type
         [

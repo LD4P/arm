@@ -34,6 +34,7 @@
     .
 
 :ActivityForm_bf_agent 
+    a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:bf_agent
         [
@@ -55,6 +56,7 @@
     .
 
 :ActivityForm_bf_date 
+    a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:bf_date
         [
@@ -68,6 +70,7 @@
     .
       
 :ActivityForm_arm_atLocation 
+    a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:arm_atLocation 
         [

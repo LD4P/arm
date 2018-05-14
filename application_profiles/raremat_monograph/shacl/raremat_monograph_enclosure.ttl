@@ -28,6 +28,7 @@
 # constraints are added in InstanceForm:bf_hasPart_arm_Enclosure and 
 # ItemForm:bf_hasPart_arm_Enclosure.
 :bf_hasPart_arm_Enclosure
+    a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:bf_hasPart
         [
@@ -47,6 +48,7 @@
 # for different property groups is that properties need to be ordered
 # differently for Instance and Items.
 :InstanceForm_bf_hasPart_arm_Enclosure
+    a sh:PropertyShape ;
     sh:and (
         :bf_hasPart_arm_Enclosure
         [
@@ -62,6 +64,7 @@
 # for different property groups is that properties need to be ordered
 # differently for Instance and Items.
 :ItemForm_bf_hasPart_arm_Enclosure
+    a sh:PropertyShape ;
     sh:and (
         :bf_hasPart_arm_Enclosure
         [          
@@ -91,6 +94,7 @@
 ##### ENCLOSURE ACTIVITY #####
 
 :EnclosureForm_activity_hasActivity
+    a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:activity_hasActivity 
         [
@@ -105,6 +109,7 @@
     .
     
 :EnclosureActivityForm
+    a sh:NodeShape ;
     sh:and (
         raremat_monograph_activity:ActivityForm
         [
@@ -113,7 +118,8 @@
     ) ;     
     .
  
-:EnclosureActivityForm_rdf_type 
+:EnclosureActivityForm_rdf_type
+    a sh:PropertyShape ; 
     sh:and (
         arm_core_property_shapes:rdf_type 
         [
@@ -140,6 +146,7 @@
 ##### ENCLOSURE NOTE #####
 
 :EnclosureForm_bf_note
+    a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:bf_note 
         [       
@@ -153,6 +160,7 @@
     .
 
 :EnclosureNoteForm
+    a sh:NodeShape ;
     sh:and (
         raremat_monograph_note:NoteForm
         [
@@ -162,6 +170,7 @@
     .
  
 :EnclosureNoteForm_rdf_type 
+    a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:rdf_type 
         [
@@ -179,6 +188,7 @@
 ##### ENCLOSURE TYPE #####
 
 :EnclosureForm_crm_P2_has_type # + vocab 
+    a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:crm_P2_has_type
         [
@@ -190,6 +200,7 @@
     .
 
 :EnclosureForm_rdf_type 
+    a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:rdf_type
         [
@@ -214,6 +225,7 @@
 # Generic PropertyShape linking a resource to an Enclosure. Specific
 # constraints added in InstanceForm:bf_hasPart_arm_Enclosure and 
 :bf_hasPart_arm_Binding
+    a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:bf_hasPart
         [
@@ -226,6 +238,7 @@
     .
     
 :InstanceForm_bf_hasPart_arm_Binding
+    a sh:PropertyShape ;
     sh:and (
         :bf_hasPart_arm_Binding
         [
@@ -236,6 +249,7 @@
     .
     
 :ItemForm_bf_hasPart_arm_Binding
+    a sh:PropertyShape ;
     sh:and (
         :bf_hasPart_arm_Binding
         [
@@ -267,6 +281,7 @@
 ##### BINDING COMPONENT #####
 
 :BindingForm_bf_hasPart 
+    a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:bf_hasPart
         [
@@ -319,6 +334,7 @@
 ##### BINDING TYPE #####
 
 :BindingForm_crm_P2_has_type 
+    a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:crm_P2_has_type
         [

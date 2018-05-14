@@ -35,6 +35,7 @@
 # Use this PropertyShape to include ALL note types. In contexts where only
 # some types are applicable, use a shape defining a subset of note types.
 :NoteForm_rdf_type 
+    a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:rdf_type
         [
@@ -58,6 +59,7 @@
     .
 
 :NoteForm_rdf_value 
+    a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:rdf_value
         [

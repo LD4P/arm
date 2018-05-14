@@ -28,6 +28,7 @@
     .    
 
 :rdf_value 
+    a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:rdf_value
         [
@@ -40,7 +41,8 @@
     ) ;
     .
 
-:bf_status  
+:bf_status
+    a sh:PropertyShape ;  
     sh:and (
         arm_core_property_shapes:bf_status
         [

@@ -25,6 +25,7 @@
 
 # Links a resource to its material
 :arm_hasMaterial
+    a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:arm_hasMaterial
         [
@@ -46,6 +47,7 @@
     .
        
 :MaterialForm_crm_P2_has_type
+    a sh:PropertyShape ;
     sh:and (
         arm_core_property_shapes:crm_P2_has_type
         [

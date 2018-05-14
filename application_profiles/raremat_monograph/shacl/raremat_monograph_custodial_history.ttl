@@ -36,6 +36,7 @@
 # CustodialEvent. Thus we will not define an :ItemForm_ch_hasCustodialHistory
 # PropertyShape.              
 :ItemForm_ch_hasCustodialHistory_bf_hasPart 
+    a sh:PropertyShape ;
     sh:and (
         custodial_history_property_shapes:ch_hasCustodialHistory_bf_hasPart
         [
@@ -66,6 +67,7 @@
 # form, since this bypasses CustodialHistory, but will appear on the 
 # CustodialHistory page.     
 :CustodialHistoryForm_bf_hasPart_ch_CustodialEvent 
+    a sh:PropertyShape ;
     sh:and (
         custodial_history_property_shapes:bf_hasPart_ch_CustodialEvent  
         [
@@ -81,6 +83,7 @@
 # CustodialHistory resource has been created and attached when the Item
 # was created.    
 :CustodialHistoryForm_ch_isCustodialHistoryOf 
+    a sh:PropertyShape ;
     sh:and (
         custodial_history_property_shapes:ch_isCustodialHistoryOf 
         [
@@ -142,6 +145,7 @@
 # CustodialEvent is created in relation to its Item.
 
 :CustodialEventForm_bf_partOf_ch_isCustodialHistoryOf
+    a sh:PropertyShape ;
     sh:and (
         custodial_history_property_shapes:bf_partOf_ch_isCustodialHistoryOf
         [
@@ -163,6 +167,7 @@
 # unlinked, and once linked to another CustodialEvent linked to a particular
 # Item, it cannot be linked directly to an Item.      
 :CustodialEventForm_bf_hasPart_ch_CustodialEvent 
+    a sh:PropertyShape ;
     sh:and (
         custodial_history_property_shapes:bf_hasPart_ch_CustodialEvent 
         [
@@ -181,6 +186,7 @@
 # unlinked, and once linked to another CustodialEvent linked to a particular
 # Item, it cannot be linked directly to an Item.         
 :CustodialEventForm_bf_partOf_ch_CustodialEvent 
+    a sh:PropertyShape ;
     sh:and (
         custodial_history_property_shapes:bf_partOf_ch_CustodialEvent 
         [
@@ -198,6 +204,7 @@
 # as they require a form shape for each event type. 
 
 :CustodialEventActivityForm
+    a sh:NodeShape ;
     sh:and (
         raremat_monograph_activity:ActivityForm
         [
@@ -207,6 +214,7 @@
     .
 
 :CustodialEventActivityForm_rdf_type
+    a sh:PropertyShape ;
     sh:and (
         custodial_history_property_shapes::ch_CustodialEventActivity_rdf_type
         [
@@ -227,6 +235,7 @@
 # TODO Limit to certain classes of custodial events. 
 
 :CustodialEvent_arm_accessionedBy 
+    a sh:PropertyShape ;
     sh:and (
         custodial_history_property_shapes:ch_accessionedBy
         [
@@ -252,6 +261,7 @@
 ##### CUSTODIAL EVENT LOCATION #####
 
 :CustodialEvent_arm_atLocation 
+    a sh:PropertyShape ;
     sh:and (
         custodial_history_property_shapes:arm_atLocation
         [
@@ -273,6 +283,7 @@
 ##### CUSTODIAL EVENT DATE #####
 
 :CustodialEvent_bf_date 
+    a sh:PropertyShape ;
     sh:and (
         custodial_history_property_shapes:bf_date
         [
@@ -293,6 +304,7 @@
 # another CustodialEvent attached to a different Item, and (b) NOT 
 # attached to the current Item. 
 :CustodialEventForm_bf_partOf_ch_CustodialEvent 
+    a sh:PropertyShape ;
     sh:and (
         custodial_history_property_shapes:bf_partOf_ch_CustodialEvent
         [
@@ -308,6 +320,7 @@
 ##### CUSTODIAL EVENT TYPE #####
 
 :CustodialEventForm_rdf_type
+    a sh:PropertyShape ;
     sh:and (
         custodial_history_property_shapes:ch_CustodialEvent_rdf_type
         [
@@ -330,6 +343,7 @@
 # the event page.
 
 :CustodialEventForm_seq_directlyFollows
+    a sh:PropertyShape ;
     sh:and (
         custodial_history_property_shapes:seq_directlyFollows
         [
@@ -343,6 +357,7 @@
     .
     
 :CustodialEventForm_seq_directlyPrecedes
+    a sh:PropertyShape ;
     sh:and (
         custodial_history_property_shapes:seq_directlyPrecedes
         [
@@ -356,6 +371,7 @@
     .
     
 :CustodialEventForm_seq_follows
+    a sh:PropertyShape ;
     sh:and (
         custodial_history_property_shapes:seq_follows
         [
@@ -369,6 +385,7 @@
     .
     
 :CustodialEventForm_seq_precedes
+    a sh:PropertyShape ;
     sh:and (
         custodial_history_property_shapes:seq_precedes
         [

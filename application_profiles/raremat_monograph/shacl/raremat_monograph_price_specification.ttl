@@ -12,6 +12,7 @@
 
 
 :schema_priceSpecification 
+    a sh:PropertyShape ;
     sh:and (
         custodial_history_property_shapes:schema_priceSpecification 
         [
@@ -33,6 +34,7 @@
     .
 
 :schema_price
+    a sh:PropertyShape ;
     sh:and (
         custodial_history_property_shapes:schema_price 
         [
@@ -44,6 +46,7 @@
     .
     
 :schema_priceCurrency
+    a sh:PropertyShape ;
     sh:and (
         custodial_history_property_shapes:schema_price 
         [
