@@ -175,7 +175,7 @@
   
 :ItemAccompanimentsPropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Instance Parts and Accompaniments" ;
+  rdfs:label "Item Parts and Accompaniments" ;
   sh:description "To group parts and accompaniments of an item" ;
   sh:order "4"^^xsd:decimal .
   
