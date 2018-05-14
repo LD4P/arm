@@ -31,7 +31,7 @@
 
 # WARNING!!!!!!!!!!!!!!! Very drafty version of SHACL for ARtFrame application profile. A lot of this currently reflects a cut and paste of an RareMat SHACL file. This is unsafe to use as long as this warning is here.
 
-<https://w3id.org/arm/application_profile/artframe_art_form/>
+<https://w3id.org/arm/application_profile/art/shacl/artframe_art_form/>
   rdf:type owl:Ontology .
 
 
@@ -52,15 +52,49 @@ artframe_art_form:WorkForm
             sh:targetClass bf:Text ;
            ]
         ) ;
+
+# WorkTitlePropertyGroup
+
   sh:property artframe_art_form:WorkForm_arm_hasPreferredTitle ;
   sh:property artframe_art_form:WorkForm_bf_title ;
+
+# WorkActivityPropertyGroup
+
+  sh:property artframe_art_form:WorkForm_activity_hasActivity ;  
+
+#CopyrightPropertyGroup
+
+  sh:property artframe_art_form:WorkForm_bf_copyrightDate ;
+
+# WorkSubjectGenreFormPropertyGroup
+
+  sh:property artframe_art_form:WorkForm_arm_hasStylePeriod ;
   sh:property artframe_art_form:WorkForm_bf_subject ;
   sh:property artframe_art_form:WorkForm_bf_genreForm ;
-  sh:property artframe_art_form:WorkForm_bf_eventContent ;
+  sh:property artframe_art_form:WorkForm_bf_classification ;
+
+# WorkLanguageFormPropertyGroup
+
   sh:property artframe_art_form:WorkForm_bf_language ;
-  sh:property artframe_art_form:WorkForm_arm_hasStylePeriod ;
+
+# WorkToInstancePropertyGroup
+  
   sh:property artframe_art_form:WorkForm_bf_hasInstance ;
-  sh:property artframe_art_form:WorkForm_activity_hasActivity ;
+
+# WorkNotePropertyGroup
+  
+  sh:property artframe_art_form:WorkForm_bf_note ;
+
+# WorkAwardReceiptPropertyGroup
+  
+  sh:property artframe_art_form:WorkForm_award_receives ;
+
+# WorkIdentifierPropertyGroup
+
+  sh:property artframe_art_form:WorkForm_bf_identifiedBy ;
+
+# WorkToWorkPropertyGroup
+
   sh:property artframe_art_form:WorkForm_bf_hasPart ;
   sh:property artframe_art_form:WorkForm_bf_partOf ;
   sh:property artframe_art_form:WorkForm_bf_hasExpression ;
@@ -78,20 +112,19 @@ artframe_art_form:WorkForm
   sh:property artframe_art_form:WorkForm_arm_citedBy ;
   sh:property artframe_art_form:WorkForm_bf_accompanies ;
   sh:property artframe_art_form:WorkForm_bf_accompaniedBy ;
-  sh:property artframe_art_form:WorkForm_bf_content ;
-  sh:property artframe_art_form:WorkForm_ex_receives ;
-  sh:property artframe_art_form:WorkForm_bf_note ;
   sh:property artframe_art_form:WorkForm_bf_relatedTo ;
-  sh:property artframe_art_form:WorkForm_bf_version ;
-  sh:property artframe_art_form:WorkForm_bf_identifiedBy ;
-  sh:property artframe_art_form:WorkForm_bf_version ;
-  sh:property artframe_art_form:WorkForm_bf_date ;
-  sh:property artframe_art_form:WorkForm_bf_originDate ;
-  sh:property artframe_art_form:WorkForm_bf_copyrightDate .
+
+
+##Discuss if bf:content is needed
+#WorkContentPropertyGroup
+
+  sh:property artframe_art_form:WorkForm_bf_content ;
+  
+#WorkVersionPropertyGroup
+
+  sh:property artframe_art_form:WorkForm_bf_version .
 
 # TODO ensure that workform list is complete
-
-# TODO potentially replace bf:originPlace with arm:atLocation
 
 # ///// PROPERTY SHAPES FOR WorkTitlePropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
@@ -243,24 +276,6 @@ artframe_art_form:WorkForm_arm_hasStylePeriod
   sh:nodeKind sh:IRI ;
   sh:in ( <http://vocab.getty.edu/aat/300019257> <http://vocab.getty.edu/aat/300019280> <http://vocab.getty.edu/aat/300106711> <http://vocab.getty.edu/aat/300106716> <http://vocab.getty.edu/aat/300106723> <http://vocab.getty.edu/aat/300264736> <http://vocab.getty.edu/aat/300264737> <http://vocab.getty.edu/aat/300266744> <http://vocab.getty.edu/aat/300312378> <http://vocab.getty.edu/aat/300386009> <http://vocab.getty.edu/aat/300391250> <http://vocab.getty.edu/aat/300391448> <http://vocab.getty.edu/aat/300393217> <http://vocab.getty.edu/aat/300404836> <http://vocab.getty.edu/aat/300015647> <http://vocab.getty.edu/aat/300016617> <http://vocab.getty.edu/aat/300018279> <http://vocab.getty.edu/aat/300019255> <http://vocab.getty.edu/aat/300020656> <http://vocab.getty.edu/aat/300021516> <http://vocab.getty.edu/aat/300021854> <http://vocab.getty.edu/aat/300022097> <http://vocab.getty.edu/aat/300266481> <http://vocab.getty.edu/aat/300385955> <http://vocab.getty.edu/aat/300385959> <http://vocab.getty.edu/aat/300386794> <http://vocab.getty.edu/aat/300386974> <http://vocab.getty.edu/aat/300387737> <http://vocab.getty.edu/aat/300056487> <http://vocab.getty.edu/aat/300067402> <http://vocab.getty.edu/aat/300263555> <http://vocab.getty.edu/aat/300310539> <http://vocab.getty.edu/aat/300310540> <http://vocab.getty.edu/aat/300310541> <http://vocab.getty.edu/aat/300310542> <http://vocab.getty.edu/aat/300310543> <http://vocab.getty.edu/aat/300310544> <http://vocab.getty.edu/aat/300310545> <http://vocab.getty.edu/aat/300310546> <http://vocab.getty.edu/aat/300310547> <http://vocab.getty.edu/aat/300311734> <http://vocab.getty.edu/aat/300312275> <http://vocab.getty.edu/aat/300379388> <http://vocab.getty.edu/aat/300391392> <http://vocab.getty.edu/aat/300391437> <http://vocab.getty.edu/aat/300393250> <http://vocab.getty.edu/aat/300055513> <http://vocab.getty.edu/aat/300073708> <http://vocab.getty.edu/aat/300148033> ) ;
   sh:order "2"^^xsd:decimal .
- 
-artframe_art_form:WorkForm_bf_eventContent 
-  a sh:PropertyShape ;
-  sh:path bf:eventContent ;
-  sh:class skos:Concept ;
-  sh:group artframe_art_property_groups:WorkSubjectGenreFormPropertyGroup ;
-  sh:name "Event content" ;
-  sh:nodeKind sh:IRI ;
-  sh:order "3" ^^xsd:decimal ;
-    artframe_art_form:lookup artframe_art_form:LD4LookupService ;
-      sh:or (
-          [
-            sh:class bf:Agent ;
-          ]
-          [
-            sh:class bf:Event ;
-          ]
-        ) .
 
 artframe_art_form:WorkForm_bf_classification 
   a sh:PropertyShape ;
@@ -269,7 +284,7 @@ artframe_art_form:WorkForm_bf_classification
   sh:group artframe_art_property_groups:WorkSubjectGenreFormPropertyGroup ;
   sh:name "Classification" ;
   sh:nodeKind sh:IRI ;
-  sh:order "4" ^^xsd:decimal .
+  sh:order "3" ^^xsd:decimal .
   
 artframe_art_form:WorkForm_bf_language 
   a sh:PropertyShape ;
@@ -334,8 +349,9 @@ artframe_art_form:WorkForm_bf_note
          ]
          
         ) ;
-    ] ;
-    .
+ 
+      sh:order "0"^^xsd:decimal .
+ 
     
 # ///// PROPERTY SHAPES FOR WorkAwardReceipt PropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
@@ -537,32 +553,69 @@ artframe_art_form:InstanceForm rdf:type rdfs:Class ;
   rdfs:label "Instance of Art Work" ;
   rdfs:subClassOf rdfs:Resource ;
   sh:targetClass bf:Instance ;
+
+# InstanceTitlePropertyGroup
+
   sh:property artframe_art_form:InstanceForm_arm_hasPreferredTitle ;
   sh:property artframe_art_form:InstanceForm_bf_title ;
+
+# InstanceTypePropertyGroup
+
   sh:property artframe_art_form:InstanceForm_bf_carrier ;
+  sh:property artframe_art_form:InstanceForm_bf_media ;
+
+# InstanceGenreFormPropertyGroup
+
   sh:property artframe_art_form:InstanceForm_bf_genreForm ;
   sh:property artframe_art_form:InstanceForm_arm_hasStylePeriod ;
+
+# InstanceActivityPropertyGroup
+
   sh:property artframe_art_form:InstanceForm_arm_hasActivity ;
   sh:property artframe_art_form:InstanceForm_bf_responsibilityStatement ;
+
+#InstanceRelationshipsPropertyGroup
+
   sh:property artframe_art_form:InstanceForm_bf_hasPart ;
   sh:property artframe_art_form:InstanceForm_bf_accompaniedBy ;
   sh:property artframe_art_form:InstanceForm_bf_accompanies ;
+
+# InstancePhysicalDescriptionPropertyGroup
+
   sh:property artframe_art_form:InstanceForm_bf_extent ;
-  sh:property artframe_art_form:InstanceForm_meas_hasMeasurementGroup ;
+  sh:property artframe_art_form:InstanceForm_measure_hasMeasurementGroup ;
   sh:property artframe_art_form:InstanceForm_arm_hasSignatureStatement ;
   sh:property artframe_art_form:InstanceForm_arm_hasMaterial ;
-  sh:property raremat_monograph_form:ItemForm_rdau_P60596 ;
-  sh:property raremat_monograph_form:ItemForm_rdau_P60159 ;
+  sh:property artframe_art_form:ItemForm_rdau_P60596 ;
+  sh:property artframe_art_form:ItemForm_rdau_P60159 ;
   sh:property artframe_art_form:InstanceForm_bf_scale ;
+  sh:property raremat_monograph_enclosure:InstanceForm_bf_hasPart_arm_Binding ;
+  sh:property raremat_monograph_enclosure:InstanceForm_bf_hasPart_arm_Enclosure ;
+  sh:property artframe_art_form:InstanceForm_arm_writtenIn ;
+  sh:property artframe_art_form:InstanceForm_arm_markedBy ;
+
+# InstanceOfWorkPropertyGroup
+
   sh:property raremat_monograph_form:InstanceForm_bf_instanceOf ;
   sh:property raremat_monograph_form:InstanceForm_bf_editionStatement ;
+
+# InstanceHasItemPropertyGroup
+
   sh:property raremat_monograph_form:InstanceForm_bf_hasItem ;
   sh:property artframe_art_form:InstanceForm_bf_note ;
   sh:property artframe_art_form:InstanceForm_bf_identifiedBy ;
   sh:property artframe_art_form:InstanceForm_bf_scale ;
   sh:property artframe_art_form:InstanceForm_arm_hasCitation .
 
-# TODO Review. The following PropertyShape is subject to change depending on whether we follow BIBFRAME or bibliotek-o/ArtFrame. Going to stop work on this until a decision is made.
+# InstanceBibliographicCitationPropertyGroup
+
+# InstanceNotePropertyGroup
+
+# InstanceIdentifierPropertyGroup
+
+
+# ///// PROPERTY SHAPES FOR InstanceTitlePropertyGroup START HERE. /////////////////////////////////////////////////////////////
+
 
 artframe_art_form:InstanceForm_arm_hasPreferredTitle 
   a sh:PropertyShape ;
