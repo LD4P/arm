@@ -3199,8 +3199,10 @@ raremat_monograph_form:MarkingActivityForm_activity_isActivityOf
 raremat_monograph_form:PhysicalConditionForm
     rdf:type sh:NodeShape ;
     sh:targetClass arm:PhysicalCondition ;
-    rdfs:label "Page Form" ;
+    rdfs:label "PhysicalCondition Form" ;
     sh:property raremat_monograph_form:PhysicalConditionForm_rdf_value ;
+    sh:property raremat_monograph_form:PhysicalConditionForm_seq_directlyFollows ;
+    sh:property raremat_monograph_form:PhysicalConditionForm_seq_directlyPrecedes ;
     sh:property raremat_monograph_form:PhysicalConditionForm_seq_precedes ;
     sh:property raremat_monograph_form:PhysicalConditionForm_seq_follows ;
     .  
@@ -3212,26 +3214,47 @@ raremat_monograph_form:PhysicalConditionForm_rdf_value
     sh:description "Description of characteristics such as physical appearance, level of damage, quality, or completeness." ;
     sh:nodeKind sh:Literal ;
     sh:order "0"^^xsd:decimal .
+
+
+raremat_monograph_form:PhysicalConditionForm_seq_directlyPrecedes
+    a sh:PropertyShape ; 
+    sh:path seq:directlyPrecedes ;
+    sh:class arm:PhysicalCondition ;
+    sh:name "Directly drecedes" ;
+    sh:description "Links to a condition that directly follows the condition currently being described" ;
+    tosh:editWidget swa:NestedObjectEditor ;
+    sh:nodeKind sh:IRI ;
+    sh:order "1"^^xsd:decimal . 
     
+raremat_monograph_form:PhysicalConditionForm_seq_directlyFollows
+    a sh:PropertyShape ; 
+    sh:path seq:directlyFollows ;
+    sh:class arm:PhysicalCondition ;
+    sh:name "Directly follows" ;
+    sh:description "Links to a condition that directly precedes the condition currently being described" ;
+    tosh:editWidget swa:NestedObjectEditor ;
+    sh:nodeKind sh:IRI ;
+    sh:order "2"^^xsd:decimal .
+      
 raremat_monograph_form:PhysicalConditionForm_seq_precedes
     a sh:PropertyShape ; 
     sh:path seq:precedes ;
     sh:class arm:PhysicalCondition ;
     sh:name "Precedes" ;
-    sh:description "Links to a condition that follows the one currently being described" ;
+    sh:description "Links to a condition that follows the condition currently being described" ;
     tosh:editWidget swa:NestedObjectEditor ;
     sh:nodeKind sh:IRI ;
-    sh:order "1"^^xsd:decimal .
+    sh:order "3"^^xsd:decimal .
     
 raremat_monograph_form:PhysicalConditionForm_seq_follows
     a sh:PropertyShape ; 
     sh:path seq:follows ;
     sh:class arm:PhysicalCondition ;
     sh:name "Follows" ;
-    sh:description "Links to a condition that precedes the one currently being described" ;
+    sh:description "Links to a condition that precedes the condition currently being described" ;
     tosh:editWidget swa:NestedObjectEditor ;
     sh:nodeKind sh:IRI ;
-    sh:order "1"^^xsd:decimal .
+    sh:order "4"^^xsd:decimal .
     
 # /////// Work Identifier FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
