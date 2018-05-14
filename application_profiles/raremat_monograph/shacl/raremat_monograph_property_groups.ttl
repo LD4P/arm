@@ -60,7 +60,7 @@
   
 :WorkNotePropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Item notes" ;
+  rdfs:label "Work notes" ;
   sh:order "5"^^xsd:decimal .
   
 :WorkAwardReceiptPropertyGroup
@@ -70,7 +70,7 @@
   
 :WorkIdentifierPropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Item notes" ;
+  rdfs:label "Work Identifiers" ;
   sh:order "7"^^xsd:decimal .
   
 :WorkToWorkPropertyGroup
@@ -137,12 +137,12 @@
 
 :InstanceNotePropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Item notes" ;
+  rdfs:label "Instance notes" ;
   sh:order "10"^^xsd:decimal .
   
 :InstanceIdentifierPropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Item identifiers" ;
+  rdfs:label "Instance identifiers" ;
   sh:order "11"^^xsd:decimal .
 
 
