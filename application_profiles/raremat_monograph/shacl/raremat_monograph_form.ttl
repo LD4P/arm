@@ -1824,7 +1824,7 @@ raremat_monograph_form:ItemForm_arm_hasCitation
     sh:order "0"^^xsd:decimal .
 
     
-# ///// PROPERTY SHAPES FOR ItemPhysicalDescriptionPropertyGroup PropertyGroup START HERE. /////////////////////////////////////////////////////////////
+# ///// PROPERTY SHAPES FOR ItemHistoryAndProvenancePropertyGroup PropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
 # ItemForm_arm_hasExhibition Property Shape belongs at this point in the form sequence.
 
