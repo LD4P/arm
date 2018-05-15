@@ -88,12 +88,11 @@
 # has a CustodialEvent part.
 :bf_hasPart_ch_CustodialEvent 
     a sh:PropertyShape ;
-    sh:and (
-        :bf_hasPart 
+    sh:node 
+        :bf_hasPart ,
         [
             sh:class ch:CustodialEvent ;       
-        ]
-    ) ;    
+        ] ;
     .  
       
 :bf_partOf 
@@ -105,25 +104,23 @@
 # The CustodialEvent is part of an aggregate CustodialEvent
 :bf_partOf_ch_CustodialEvent 
     a sh:PropertyShape ;
-    sh:and (
-        :bf_partOf
+    sh:node 
+        :bf_partOf ,
         [
             sh:class ch:CustodialEvent ;
             sh:maxCount 1 ;
-        ] 
-    ) ;
+        ] ;
     . 
  
 # The CustodialEvent is part of the CustodialHistory   
 :bf_partOf_ch_CustodialHistory 
     a sh:PropertyShape ;
-    sh:and (
-        :bf_partOf
+    sh:node  
+        :bf_partOf ,       
         [
             sh:class ch:CustodialHistory ;
             sh:maxCount 1 ;
-        ] 
-    ) ;
+        ] ;
     . 
     
 # CustodialEvent to resource via CustodialHistory
@@ -161,8 +158,8 @@
 
 :ch_CustodialEvent_rdf_type 
     a sh:PropertyShape ;
-    sh:and (
-        :rdf_type
+    sh:node
+        :rdf_type ,
         [
             sh:in (
                 ch:Accessioning
@@ -186,15 +183,14 @@
                 ch:Transfer
                 ch:CustodialEvent 
             ) ;
-        ]
-    ) ;
+        ] ;
     .
       
 
 :ch_CustodialEventActivity_rdf_type 
     a sh:PropertyShape ;
-    sh:and (
-        :rdf_type
+    sh:node 
+        :rdf_type ,
         [
             sh:in (
                 ch:Accessioning
@@ -218,8 +214,7 @@
                 ch:Transfer
                 ch:CustodialEvent 
             ) ;                         
-        ]    
-    ) ;
+        ] ;
     .
 
 # Resource to CustodialHistory           

@@ -29,8 +29,8 @@
 # ItemForm:bf_hasPart_arm_Enclosure.
 :bf_hasPart_arm_Enclosure
     a sh:PropertyShape ;
-    sh:and (
-        arm_core_property_shapes:bf_hasPart
+    sh:node 
+        arm_core_property_shapes:bf_hasPart ,
         [
             sh:class arm:Enclosure ;
             # NON-VALIDATING   
@@ -39,8 +39,7 @@
             # for non-Binding Enclosures, thus use of "Other" in the name.
             sh:name "Other enclosure" ; 
             tosh:editWidget swa:NestedObjectEditor ;             
-        ]
-    ) ;
+        ] ;
     .
 
 # Links Instance to Enclosure. Note that Instance and Item use different
@@ -49,14 +48,13 @@
 # differently for Instance and Items.
 :InstanceForm_bf_hasPart_arm_Enclosure
     a sh:PropertyShape ;
-    sh:and (
-        :bf_hasPart_arm_Enclosure
+    sh:node 
+        :bf_hasPart_arm_Enclosure ,
         [
             # NON-VALIDATING 
             sh:group raremat_monograph_property_groups:InstancePhysicalDescriptionPropertyGroup ;   
             sh:order "0"^^xsd:decimal ;             
-        ]
-    ) ;
+        ] ;
     .
 
 # Links Instance to Enclosure. Note that Instance and Item use different
@@ -65,14 +63,13 @@
 # differently for Instance and Items.
 :ItemForm_bf_hasPart_arm_Enclosure
     a sh:PropertyShape ;
-    sh:and (
-        :bf_hasPart_arm_Enclosure
+    sh:node 
+        :bf_hasPart_arm_Enclosure ,
         [          
             # NON-VALIDATING 
             sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;   
             sh:order "0"^^xsd:decimal ;             
-        ]
-    ) ;
+        ] ;
     .
     
 :EnclosureForm
@@ -95,8 +92,8 @@
 
 :EnclosureForm_activity_hasActivity
     a sh:PropertyShape ;
-    sh:and (
-        arm_core_property_shapes:activity_hasActivity 
+    sh:node 
+        arm_core_property_shapes:activity_hasActivity ,
         [
             # NON-VALIDATING
             sh:name "Agent" ;
@@ -104,24 +101,22 @@
             sh:group raremat_monograph_property_groups:ActivityPropertyGroup ;
             sh:order "0"^^xsd:decimal ;
             tosh:editWidget swa:NestedObjectEditor ;       
-        ]
-    ) ;
+        ] ;
     .
     
 :EnclosureActivityForm
     a sh:NodeShape ;
-    sh:and (
-        raremat_monograph_activity:ActivityForm
+    sh:node 
+        raremat_monograph_activity:ActivityForm ,
         [
             sh:property :EnclosureActivityForm_rdf_type ;        
-        ]
-    ) ;     
+        ] ;     
     .
  
 :EnclosureActivityForm_rdf_type
     a sh:PropertyShape ; 
-    sh:and (
-        arm_core_property_shapes:rdf_type 
+    sh:node 
+        arm_core_property_shapes:rdf_type ,
         [
             sh:in (
                 # TODO Check this list with catalogers
@@ -138,8 +133,7 @@
             # NON-VALIDATING
             sh:name "Activity type" ;    
             sh:order "0"^^xsd:decimal ;  
-        ]
-    ) ;
+        ] ;
     .  
 
 
@@ -147,32 +141,30 @@
 
 :EnclosureForm_bf_note
     a sh:PropertyShape ;
-    sh:and (
-        arm_core_property_shapes:bf_note 
+    sh:node 
+        arm_core_property_shapes:bf_note ,
         [       
             # NON-VALIDATING
             sh:name "Enclosure note" ; 
             sh:description "Additional textual notes about this enclosure." ;     
             sh:order "0"^^xsd:decimal ;   
             tosh:editWidget swa:NestedObjectEditor ;
-        ]
-    ) ;
+        ] ;
     .
 
 :EnclosureNoteForm
     a sh:NodeShape ;
-    sh:and (
-        raremat_monograph_note:NoteForm
+    sh:node 
+        raremat_monograph_note:NoteForm ,
         [
             sh:property :EnclosureNoteForm_rdf_type ;        
-        ]
-    ) ;     
+        ] ;     
     .
  
 :EnclosureNoteForm_rdf_type 
     a sh:PropertyShape ;
-    sh:and (
-        arm_core_property_shapes:rdf_type 
+    sh:node 
+        arm_core_property_shapes:rdf_type ,
         [
             sh:in (
                 arm:DescriptiveNote
@@ -181,28 +173,26 @@
             # NON-VALIDATING
             sh:name "Note type" ;    
             sh:order "0"^^xsd:decimal ;       
-        ]
-    ) ;
+        ] ;
     . 
 
 ##### ENCLOSURE TYPE #####
 
 :EnclosureForm_crm_P2_has_type # + vocab 
     a sh:PropertyShape ;
-    sh:and (
-        arm_core_property_shapes:crm_P2_has_type
+    sh:node 
+        arm_core_property_shapes:crm_P2_has_type ,
         [
             # NON-VALIDATING
             sh:name "Specific enclosure type, such as boards, " ;
             sh:order "0"^^xsd:decimal ;   
-        ]
-    ) ;
+        ] ;
     .
 
 :EnclosureForm_rdf_type 
     a sh:PropertyShape ;
-    sh:and (
-        arm_core_property_shapes:rdf_type
+    sh:node 
+        arm_core_property_shapes:rdf_type ,
         [
             sh:in (
                 # Removing here since created separate Binding form shape
@@ -215,8 +205,7 @@
             ) ;
             # NON-VALIDATING
             sh:name "General type of enclosure" ;
-        ]
-    ) ;
+        ] ;
     .
 
 
@@ -226,37 +215,34 @@
 # constraints added in InstanceForm:bf_hasPart_arm_Enclosure and 
 :bf_hasPart_arm_Binding
     a sh:PropertyShape ;
-    sh:and (
-        arm_core_property_shapes:bf_hasPart
+    sh:node 
+        arm_core_property_shapes:bf_hasPart ,
         [
             sh:class arm:Binding ;
             # NON-VALIDATING   
             sh:name "Binding" ;  
             tosh:editWidget swa:NestedObjectEditor ;           
-        ]
-    ) ;
+        ] ;
     .
     
 :InstanceForm_bf_hasPart_arm_Binding
     a sh:PropertyShape ;
-    sh:and (
-        :bf_hasPart_arm_Binding
+    sh:node 
+        :bf_hasPart_arm_Binding ,
         [
             sh:group raremat_monograph_property_groups:InstancePhysicalDescriptionPropertyGroup ;   
             sh:order "0"^^xsd:decimal ;               
-        ]
-    ) ;
+        ] ;
     .
     
 :ItemForm_bf_hasPart_arm_Binding
     a sh:PropertyShape ;
-    sh:and (
-        :bf_hasPart_arm_Binding
+    sh:node 
+        :bf_hasPart_arm_Binding ,
         [
             sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;   
             sh:order "0"^^xsd:decimal ;               
-        ]
-    ) ;
+        ] ;
     .
     
        
@@ -282,8 +268,8 @@
 
 :BindingForm_bf_hasPart 
     a sh:PropertyShape ;
-    sh:and (
-        arm_core_property_shapes:bf_hasPart
+    sh:node 
+        arm_core_property_shapes:bf_hasPart ,
         [
             sh:in (
                 # Getty AAT binding components: http://vocab.getty.edu/page/aat/300194225
@@ -327,16 +313,15 @@
             sh:name "Binding component" ;
             sh:description "Part of the binding, such as binding board, headband, bead, finishing hardware, etc." ;
             sh:order "0"^^xsd:decimal ;   
-        ]
-    ) ;
+        ] ;
     . 
 
 ##### BINDING TYPE #####
 
 :BindingForm_crm_P2_has_type 
     a sh:PropertyShape ;
-    sh:and (
-        arm_core_property_shapes:crm_P2_has_type
+    sh:node 
+        arm_core_property_shapes:crm_P2_has_type ,
         [
             sh:in (
                 # RBMS Binding type vocabulary converted to RDF
@@ -659,6 +644,5 @@
             sh:name "Binding type" ;
             sh:description "Specific type of binding, such as adhesive binding, spiral binding, etc." ;
             sh:order "0"^^xsd:decimal ;   
-        ]
-    ) ;
+        ] ;
     .    

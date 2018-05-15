@@ -29,22 +29,21 @@
 
 :rdf_value 
     a sh:PropertyShape ;
-    sh:and (
-        arm_core_property_shapes:rdf_value
+    sh:node 
+        arm_core_property_shapes:rdf_value ,
         [
            sh:nodeKind sh:Literal ;
            # NON-VALIDATING
            sh:name "Value" ;
            sh:description "Identifier value." ;
            sh:order "0"^^xsd:decimal ;        
-        ] 
-    ) ;
+        ] ;
     .
 
 :bf_status
     a sh:PropertyShape ;  
-    sh:and (
-        arm_core_property_shapes:bf_status
+    sh:node 
+        arm_core_property_shapes:bf_status ,
         [
             sh:in (
                 arm:cancelled 
@@ -59,8 +58,7 @@
             sh:name "Status" ;
             sh:description "Identifier status." ;
             sh:order "0"^^xsd:decimal ;
-        ] 
-    ) ;
+        ] ;
     . 
  
     
