@@ -36,8 +36,8 @@
 # some types are applicable, use a shape defining a subset of note types.
 :NoteForm_rdf_type 
     a sh:PropertyShape ;
-    sh:and (
-        arm_core_property_shapes:rdf_type
+    sh:node 
+        arm_core_property_shapes:rdf_type ,
         [
             sh:in (
                 arm:CaptionNote
@@ -54,20 +54,18 @@
             # NON-VALIDATING
             sh:name "Note type" ;
             sh:description "Type of note." ;        
-        ]   
-    ) ;
+        ] ;
     .
 
 :NoteForm_rdf_value 
     a sh:PropertyShape ;
-    sh:and (
-        arm_core_property_shapes:rdf_value
+    sh:node 
+        arm_core_property_shapes:rdf_value ,
         [
             sh:minCount 1 ;
             sh:maxCount 1 ;
             # NON-VALIDATING
             sh:name "Note text" ;
             sh:description "String value for the note." ;
-        ]
-    ) ; 
+        ] ; 
     . 

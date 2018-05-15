@@ -13,15 +13,14 @@
 
 :schema_priceSpecification 
     a sh:PropertyShape ;
-    sh:and (
-        custodial_history_property_shapes:schema_priceSpecification 
+    sh:node 
+        custodial_history_property_shapes:schema_priceSpecification ,
         [
             # NON-VALIDATING
             sh:name "Price" ;
             sh:order "0"^^xsd:decimal ;
             tosh:editWidget swa:NestedObjectEditor ;         
-        ]   
-    ) ;
+        ] ;
     .
     
 :PriceSpecification
@@ -35,25 +34,23 @@
 
 :schema_price
     a sh:PropertyShape ;
-    sh:and (
-        custodial_history_property_shapes:schema_price 
+    sh:node 
+        custodial_history_property_shapes:schema_price ,
         [
             # NON-VALIDATING
             sh:name "Amount" ;
             sh:order "0"^^xsd:decimal ;  
-        ]   
-    ) ;
+        ] ;
     .
     
 :schema_priceCurrency
     a sh:PropertyShape ;
-    sh:and (
-        custodial_history_property_shapes:schema_price 
+    sh:node 
+        custodial_history_property_shapes:schema_price ,
         [
             # NON-VALIDATING
             sh:name "Currency" ;
             sh:description "Three-digit ISO 4217 currency code." ;
             sh:order "0"^^xsd:decimal ;  
-        ]   
-    ) ;
+        ] ;
     .

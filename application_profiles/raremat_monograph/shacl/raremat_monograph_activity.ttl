@@ -35,8 +35,8 @@
 
 :ActivityForm_bf_agent 
     a sh:PropertyShape ;
-    sh:and (
-        arm_core_property_shapes:bf_agent
+    sh:node 
+        arm_core_property_shapes:bf_agent ,
         [
             sh:maxCount 1 ;
             sh:nodeKind sh:IRI ; 
@@ -51,28 +51,26 @@
             # type. Otherwise, create another PropertyShape that ands this
             # one and adds the specific property group.
             # sh:group raremat_monograph_property_groups:ActivityPropertyGroup ;           
-        ]
-    ) ;
+        ] ;
     .
 
 :ActivityForm_bf_date 
     a sh:PropertyShape ;
-    sh:and (
-        arm_core_property_shapes:bf_date
+    sh:node 
+        arm_core_property_shapes:bf_date ,
         [
             sh:maxCount 1 ;
             # NON-VALIDATING
             sh:name "Date" ;
             sh:description "Date of the activity. Recommended to use EDTF format" ;
             sh:order "0"^^xsd:decimal ;
-        ]
-    ) ;
+        ] ;
     .
       
 :ActivityForm_arm_atLocation 
     a sh:PropertyShape ;
-    sh:and (
-        arm_core_property_shapes:arm_atLocation 
+    sh:node 
+        arm_core_property_shapes:arm_atLocation ,
         [
             # TODO May need to fix based on email thread
             sh:class gn:Feature ;
@@ -80,7 +78,6 @@
             sh:name "Location" ;
             sh:description "Location of the activity" ;
             raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
-        ]
-    ) ;
+        ] ;
     .
       

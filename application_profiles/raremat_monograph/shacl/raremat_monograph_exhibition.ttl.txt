@@ -15,6 +15,7 @@
 @prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/> .
 @prefix arm_core_property_shapes: <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
 @prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/> .
+@prefix raremat_monograph_note: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_note/> .
 
 # //////////////////////////////////////////////////////////////////////////
 #
@@ -61,8 +62,8 @@
     
 :ExhibitionEventForm_arm_atLocation
     a sh:PropertyShape ;  
-    sh:and ( 
-        arm_core_property_shapes:arm_atLocation 
+    sh:node 
+        arm_core_property_shapes:arm_atLocation ,
         [
             sh:maxCount 1 ;
             # NON-VALIDATING
@@ -73,14 +74,13 @@
             tosh:editWidget swa:NestedObjectEditor ;
             # TODO How do we indicate what to look up? In this case it's LC subject authorities
             raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
-        ]
-    ) ;
+        ] ;
     .
     
 :ExhibitionEventForm_arm_covers_temporal
     a sh:PropertyShape ;  
-    sh:and ( 
-        arm_core_property_shapes:arm_covers 
+    sh:node 
+        arm_core_property_shapes:arm_covers ,
         [
             # NON-VALIDATING
             sh:name "Temporal coverage" ; 
@@ -88,14 +88,13 @@
             sh:group :ExhibitionEventSubjectAndCoveragePropertyGroup ; 
             sh:order "0"^^xsd:decimal ; 
             tosh:editWidget swa:NestedObjectEditor ;
-        ]
-    ) ;
+        ] ;
     .
     
 :ExhibitionEventForm_arm_covers_geographic
     a sh:PropertyShape ;  
-    sh:and ( 
-        arm_core_property_shapes:arm_covers 
+    sh:node 
+        arm_core_property_shapes:arm_covers ,
         [
             # NON-VALIDATING
             sh:name "Geographic coverage" ; 
@@ -105,28 +104,26 @@
             tosh:editWidget swa:NestedObjectEditor ;
             # TODO How do we indicate what to look up? In this case it's LC subject authorities
             raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
-        ]
-    ) ;
+        ];
     .
     
 :ExhibitionEventForm_arm_endDate
     a sh:PropertyShape ;  
-    sh:and ( 
-        arm_core_property_shapes:arm_endDate 
+    sh:node 
+        arm_core_property_shapes:arm_endDate ,
         [
             # NON-VALIDATING
             sh:name "Exhibition end date" ; 
             sh:description "End date of the exhibition. EDTF format recommended." ;      
             sh:group :ExhibitionEventDatePropertyGroup ;
             sh:order "0"^^xsd:decimal ; 
-        ]
-    ) ;
+        ] ;
     .
 
 :ExhibitionEventForm_arm_hasActivity
     a sh:PropertyShape ;  
-    sh:and ( 
-        arm_core_property_shapes:arm_hasActivity 
+    sh:node 
+        arm_core_property_shapes:arm_hasActivity ,
         [
             # NON-VALIDATING
             sh:name "Associated agent activity" ; 
@@ -134,28 +131,26 @@
             sh:group :XXX;
             sh:order "0"^^xsd:decimal ; 
             tosh:editWidget swa:NestedObjectEditor;
-        ]
-    ) ;
+        ] ;
     .
         
 :ExhibitionEventForm_arm_startDate
     a sh:PropertyShape ;
-    sh:and (
-        arm_core_property_shapes:arm_startDate
+    sh:node
+        arm_core_property_shapes:arm_startDate ,
         [
             # NON-VALIDATING
             sh:name "Exhibition start date" ; 
             sh:description "Start date of the exhibition. EDTF format recommended." ; 
             sh:group :ExhibitionEventDatePropertyGroup ;    
             sh:order "0"^^xsd:decimal ; 
-        ]
-    ) ;
+        ] ;
     .
           
 :ExhibitionEventForm_bf_note
     a sh:PropertyShape ;
-    sh:and (
-        arm_core_property_shapes:bf_note 
+    sh:node
+        arm_core_property_shapes:bf_note ,
         [      
             # NON-VALIDATING
             sh:name "Exhibition note" ; 
@@ -163,16 +158,15 @@
             sh:group :ExhibitionEventNotePropertyGroup ;   
             sh:order "0"^^xsd:decimal ;   
             tosh:editWidget swa:NestedObjectEditor ;
-        ]
-    ) ;
+        ] ;
     .
 
 # TODO Define an ExhibitionEventNoteForm providing a PropertyShape for
 # rdf:type with appropriate note type choices.    
 :ExhibitionEventForm_bf_subject
     a sh:PropertyShape ;
-    sh:and (
-        arm_core_property_shapes:bf_subject 
+    sh:node
+        arm_core_property_shapes:bf_subject ,
         [       
             # NON-VALIDATING
             sh:name "Exhibition subject" ; 
@@ -182,13 +176,12 @@
             tosh:editWidget swa:NestedObjectEditor ;
             # TODO How do we indicate what to look up? In this case it's LC subject authorities
             raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
-        ]
-    ) ;
+        ] ;
     .
  
 :ExhibitionEventForm_bf_title
-    sh:and (
-        arm_core_property_shapes:bf_title 
+    sh:node
+        arm_core_property_shapes:bf_title ,
         [
             sh:maxCount 1 ;   # ??
             # NON-VALIDATING
@@ -197,13 +190,12 @@
             sh:group :ExhibitionEventTitlePropertyGroup ;  
             sh:order "0"^^xsd:decimal ; 
             tosh:editWidget swa:NestedObjectEditor ;    
-        ]
-    ) ;
+        ] ;
     . 
     
 :ExhibitionEventForm_bf_hasPart
-    sh:and (
-        arm_core_property_shapes:bf_hasPart 
+    sh:node
+        arm_core_property_shapes:bf_hasPart ,
         [
             sh:class schema:ExhibitionEvent ;
             # NON-VALIDATING
@@ -212,8 +204,7 @@
             sh:group :ExhibitionEventItemDescriptionPropertyGroup ;  
             sh:order "0"^^xsd:decimal ; 
             tosh:editWidget swa:NestedObjectEditor ;    
-        ]
-    ) ;
+        ] ;
     .     
 
 #
@@ -221,21 +212,17 @@
 #
 
 :ExhibitionEventNoteForm 
-    sh:and (
-        raremat_monograph_base:NoteForm 
+    sh:node
+        raremat_monograph_note:NoteForm ,
         [
             sh:property :ExhibitionEventNoteForm_rdf_type ;
-        ] 
-    ) ;
+        ]  ;
     .
 
-# If we don't need to specify the note types here, but only in 
-# :ExhibitionEventNoteForm, then we can use a generalized 
-# raremat_monograph_base:NoteForm_rdf_type. Check whether we need to
-# indicate this in both places.
+
 :ExhibitionEventNoteForm_rdf_type
-    sh:and (
-        arm_core_property_shapes:rdf_type
+    sh:node
+        arm_core_property_shapes:rdf_type ,
         [
             sh:class [
                 sh:in (
@@ -250,8 +237,7 @@
             sh:maxCount 1 ;
             # NON-VALIDATING
             sh:name "Type of note" ;                
-        ]
-    ) ;
+        ] ;
     .
 
 #
@@ -265,15 +251,14 @@
     .  
     
 :ExhibitionEventSubjectForm_bf_subject
-    sh:and (
-        arm_core_property_shapes:bf_subject
+    sh:node
+        arm_core_property_shapes:bf_subject ,
         [
             # NON-VALIDATING
             sh:name
             sh:description
         
-        ]
-    ) ;
+        ] ;
     .  
 
 #
@@ -302,8 +287,8 @@
     .
       
 :ExhibitionEventActivityForm_arm_atLocation
-    sh:and ( 
-        arm_core_property_shapes:arm_atLocation 
+    sh:node 
+        arm_core_property_shapes:arm_atLocation ,
         [
             sh:maxCount 1 ;
             # NON-VALIDATING
@@ -315,13 +300,12 @@
             # raremat_monograph_form:MaterialForm_crm_P2_has_type_gvp_broader_Extended 
             raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
             tosh:editWidget swa:NestedObjectEditor ;
-        ]
-    ) ;
+        ] ;
     .  
 
 :ExhibitionEventActivityForm_bf_agent
-    sh:and ( 
-        arm_core_property_shapes:bf_agent 
+    sh:node 
+        arm_core_property_shapes:bf_agent ,
         [
             sh:maxCount 1 ;
             # NON-VALIDATING
@@ -333,26 +317,24 @@
             # raremat_monograph_form:MaterialForm_crm_P2_has_type_gvp_broader_Extended 
             raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
             tosh:editWidget swa:NestedObjectEditor ;
-        ]
-    ) ;
+        ] ;
     . 
 
 :ExhibitionEventActivityForm_bf_date
-    sh:and (
-        arm_core_property_shapes:arm_startDate
+    sh:node
+        arm_core_property_shapes:arm_startDate ,
         [
             # NON-VALIDATING
             sh:name "Activity date" ; 
             sh:description "Date of the activity. EDTF format recommended." ; 
             sh:group :ExhibitionEventActivityPropertyGroup ;    
             sh:order "0"^^xsd:decimal ; 
-        ]
-    ) ;
+        ] ;
     .
 
 :ExhibitionEventActivityForm_bf_note
-    sh:and (
-        arm_core_property_shapes:bf_note 
+    sh:node
+        arm_core_property_shapes:bf_note ,
         [   
             sh:class [
                 sh:in ( arm:DescriptiveNote bf:Note )
@@ -363,8 +345,7 @@
             sh:group :ExhibitionEventActivityNotePropertyGroup ;   
             sh:order "0"^^xsd:decimal ;   
             tosh:editWidget swa:NestedObjectEditor ;
-        ]
-    ) ;
+        ] ;
     .
     
 #
