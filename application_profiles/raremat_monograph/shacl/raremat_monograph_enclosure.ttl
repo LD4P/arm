@@ -108,12 +108,8 @@
     
 :EnclosureActivityForm
     a sh:NodeShape ;
-    sh:node 
-        raremat_monograph_activity:ActivityForm ,
-        # This can probably be replaced with just sh:node :EnclosureActivityForm_rdf_type ;
-        [
-            sh:property :EnclosureActivityForm_rdf_type ;        
-        ] ;     
+    sh:node raremat_monograph_activity:ActivityForm  ;
+    sh:property :EnclosureActivityForm_rdf_type ;      
     .
  
 :EnclosureActivityForm_rdf_type
@@ -151,12 +147,8 @@
 
 :EnclosureNoteForm
     a sh:NodeShape ;
-    sh:node 
-        raremat_monograph_note:NoteForm ,
-        # This can probably be replaced with just sh:node :EnclosureNoteForm_rdf_type ;
-        [
-            sh:property :EnclosureNoteForm_rdf_type ;        
-        ] ;     
+    sh:node raremat_monograph_note:NoteForm ;
+    sh:property :EnclosureNoteForm_rdf_type ;       
     .
  
 :EnclosureNoteForm_rdf_type 

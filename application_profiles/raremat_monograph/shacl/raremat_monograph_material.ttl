@@ -27,14 +27,11 @@
 # Links a resource to its material
 :arm_hasMaterial
     a sh:PropertyShape ;
-    sh:node 
-        arm_core_property_shapes:arm_hasMaterial ,
-        [
-            # NON-VALIDATING
-            sh:name "Made of material" ;
-            sh:description "Materials of which this resource is made. There may be one or more." ;
-            tosh:editWidget swa:NestedObjectEditor ;                   
-        ] ;
+    sh:node arm_core_property_shapes:arm_hasMaterial ;
+    # NON-VALIDATING
+    sh:name "Made of material" ;
+    sh:description "Materials of which this resource is made. There may be one or more." ;
+    tosh:editWidget swa:NestedObjectEditor ;                   
     .
 
 :MaterialForm
@@ -47,13 +44,10 @@
        
 :MaterialForm_crm_P2_has_type
     a sh:PropertyShape ;
-    sh:node 
-        arm_core_property_shapes:crm_P2_has_type ,
-        [
-            # NON-VALIDATING
-            sh:name "Material type" ;
-            sh:order "0"^^xsd:int ;          
-        ] ;
+    sh:node arm_core_property_shapes:crm_P2_has_type ;
+    # NON-VALIDATING
+    sh:name "Material type" ;
+    sh:order "0"^^xsd:int ;          
     .      
       
 # The following sh:path ( crm:P2_has_type gvp:broaderExtended ) isn't meant 

@@ -85,7 +85,7 @@
     a sh:PropertyShape ;
     sh:path arm:markedBy ;
     sh:nodeKind sh:IRI ; 
-    sh:class arm:Enclosure ;
+    sh:class arm:Marking ;
     .
         
 :arm_startDate 
@@ -144,8 +144,9 @@
     a sh:PropertyShape ;
     sh:path bf:status ;
     sh:nodeKind sh:IRI ;
-    # Range specified in ontology; in theory shouldn't need to specify here,
-    # since validation *should* factor in ontology axioms.
+    # Range is specified in the ontology; a validator implementation 
+    # *should* factor in ontology axioms, but add here for implementations
+    # that don't.
     sh:class bf:Status ;
     . 
             

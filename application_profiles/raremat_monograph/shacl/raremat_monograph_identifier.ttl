@@ -29,36 +29,29 @@
 
 :rdf_value 
     a sh:PropertyShape ;
-    sh:node 
-        arm_core_property_shapes:rdf_value ,
-        [
-           sh:nodeKind sh:Literal ;
-           # NON-VALIDATING
-           sh:name "Value" ;
-           sh:description "Identifier value." ;
-           sh:order "0"^^xsd:int ;        
-        ] ;
+    sh:node arm_core_property_shapes:rdf_value ;
+    sh:nodeKind sh:Literal ;
+    # NON-VALIDATING
+    sh:name "Value" ;
+    sh:description "Identifier value." ;
+    sh:order "0"^^xsd:int ;        
     .
 
 :bf_status
     a sh:PropertyShape ;  
-    sh:node 
-        arm_core_property_shapes:bf_status ,
-        [
-            sh:in (
-                arm:cancelled 
-                arm:current
-                arm:deprecated
-                arm:invalid
-            ) ;
-            # Valid data should have any prior status removed when a new one  
-            # is asserted.
-            sh:maxCount 1 ;
-            # NON-VALIDATING
-            sh:name "Status" ;
-            sh:description "Identifier status." ;
-            sh:order "0"^^xsd:int ;
-        ] ;
+    sh:node arm_core_property_shapes:bf_status ;
+    sh:in (
+        arm:cancelled 
+        arm:current
+        arm:deprecated
+        arm:invalid
+    ) ;
+    # Valid data should have any prior status removed when a new one  
+    # is asserted.
+    sh:maxCount 1 ;
+    # NON-VALIDATING
+    sh:name "Status" ;
+    sh:description "Identifier status." ;
+    sh:order "0"^^xsd:int ;
     . 
  
-    

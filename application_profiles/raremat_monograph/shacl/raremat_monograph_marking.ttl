@@ -29,16 +29,13 @@
 # Links a resource to a Marking
 :arm_markedBy
     a sh:PropertyShape ;
-    sh:node 
-        arm_core_property_shapes:arm_markedBy , 
-        [
-            sh:class arm:Marking ;
-            # NON-VALIDATING
-            sh:name "Markings" ;
-            sh:group raremat_monograph_property_groups:PhysicalDescriptionPropertyGroup ;
-            sh:description "Markings applied to objects during or after creation, conveying information such as the object's origin or maker, its authenticity, or a change in its official status." ;
-            tosh:editWidget swa:NestedObjectEditor ;
-        ] ;
+    sh:node arm_core_property_shapes:arm_markedBy ; 
+    sh:class arm:Marking ;
+    # NON-VALIDATING
+    sh:name "Markings" ;
+    sh:group raremat_monograph_property_groups:PhysicalDescriptionPropertyGroup ;
+    sh:description "Markings applied to objects during or after creation, conveying information such as the object's origin or maker, its authenticity, or a change in its official status." ;
+    tosh:editWidget swa:NestedObjectEditor ;
     .
     
 :MarkingForm
@@ -54,104 +51,71 @@
      
 :MarkingForm_rdf_type 
     a sh:PropertyShape ;
-    sh:node 
-        arm_core_property_shapes:rdf_type ,
-        [
-            sh:in ( 
-                arm:Marking 
-                arm:Autograph 
-                arm:BindersTicket 
-                arm:Inscription
-                arm:Label 
-                arm:Seal 
-                arm:Stamp 
-                arm:Watermark 
-            ) ;
-            # NON-VALIDATING
-            sh:name "Marking type" ;
-            sh:description "Marking type" ;
-            sh:order "0"^^xsd:int ;
-        ] ;
+    sh:node arm_core_property_shapes:rdf_type ;
+    sh:in ( 
+        arm:Marking 
+        arm:Autograph 
+        arm:BindersTicket 
+        arm:Inscription
+        arm:Label 
+        arm:Seal 
+        arm:Stamp 
+        arm:Watermark 
+    ) ;
+    # NON-VALIDATING
+    sh:name "Marking type" ;
+    sh:description "Marking type" ;
+    sh:order "0"^^xsd:int ;
     .
     
 :MarkingForm_rdf_value 
     a sh:PropertyShape ;
-    sh:node 
-        arm_core_property_shapes:rdf_value ,
-        [
-            # NON-VALIDATING
-            sh:name "Textual value of the marking" ;
-            sh:description "Textual value" ;
-            sh:order "0"^^xsd:int ;
-        ] ;
+    sh:node arm_core_property_shapes:rdf_value ;
+    # NON-VALIDATING
+    sh:name "Textual value of the marking" ;
+    sh:description "Textual value" ;
+    sh:order "0"^^xsd:int ;
     .
 
 ##### MARKING ACTIVITY #####
 
 :MarkingForm_activity_hasActivity
     a sh:PropertyShape ;
-    sh:node 
-        arm_core_property_shapes:activity_hasActivity ,
-        [
-            sh:class activity:Activity ;
-            # NON-VALIDATING
-            sh:name "Marking creator" ;
-            sh:order "0"^^xsd:int ;
-            tosh:editWidget swa:NestedObjectEditor ;
-        ] ;
+    sh:node arm_core_property_shapes:activity_hasActivity ;
+    # Only one Activity type applies to Markings
+    # raremat_monograph_activity:ActivityForm should apply here due to sh:class value
+    sh:class activity:CreatorActivity ;
+    # NON-VALIDATING
+    sh:name "Marking creator" ;
+    sh:order "0"^^xsd:int ;
+    tosh:editWidget swa:NestedObjectEditor ;
     .
-        
-:MarkingActivityForm 
-    a sh:NodeShape ;
-    sh:node 
-        raremat_monograph_activity:ActivityForm ,
-        [
-            sh:property :MarkingActivityForm_rdf_type ;
-        ] ;
-    .
-    
-:MarkingActivityForm_rdf_type 
-    a sh:PropertyShape ;
-    sh:node 
-        arm_core_property_shapes:rdf_type ,
-        [
-            sh:hasValue arm:CreatorActivity ;
-        ] ;
-    .
-    
+
+
 ##### MARKING NOTE #####
 
 :MarkingForm_bf_note
     a sh:PropertyShape ;
-    sh:node 
-        arm_core_property_shapes:bf_note ,
-        [   
-            sh:class bf:Note ;    
-            # NON-VALIDATING
-            sh:name "Marking note" ; 
-            sh:description "Additional textual notes about this marking." ;     
-            sh:order "0"^^xsd:int ;   
-            tosh:editWidget swa:NestedObjectEditor ;
-        ] ;
+    sh:node arm_core_property_shapes:bf_note ;
+    sh:class bf:Note ;    
+    # NON-VALIDATING
+    sh:name "Marking note" ; 
+    sh:description "Additional textual notes about this marking." ;     
+    sh:order "0"^^xsd:int ;   
+    tosh:editWidget swa:NestedObjectEditor ;
     . 
    
 :MarkingNoteForm 
     a sh:NodeShape ;
-    sh:node 
-        raremat_monograph_note:NoteForm ,
-        [
-            sh:property :MarkingNote_rdf_type ;
-        ] ;
+    sh:node raremat_monograph_note:NoteForm ;
+    sh:property :MarkingNote_rdf_type ;
     .
 
 :MarkingNoteForm_rdf_type 
     a sh:PropertyShape ;
-    sh:node 
-        arm_core_property_shapes:rdf_type ,
-        [
-            sh:in (
-                arm:DescriptiveNote
-                bf:Note
-            ) ;
-        ] ;
+    sh:node arm_core_property_shapes:rdf_type ;
+    sh:in (
+        arm:DescriptiveNote
+        bf:Note
+    ) ;
     .

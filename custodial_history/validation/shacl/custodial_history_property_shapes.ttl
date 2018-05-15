@@ -88,11 +88,8 @@
 # has a CustodialEvent part.
 :bf_hasPart_ch_CustodialEvent 
     a sh:PropertyShape ;
-    sh:node 
-        :bf_hasPart ,
-        [
-            sh:class ch:CustodialEvent ;       
-        ] ;
+    sh:node :bf_hasPart ;
+    sh:class ch:CustodialEvent ;       
     .  
       
 :bf_partOf 
@@ -104,23 +101,17 @@
 # The CustodialEvent is part of an aggregate CustodialEvent
 :bf_partOf_ch_CustodialEvent 
     a sh:PropertyShape ;
-    sh:node 
-        :bf_partOf ,
-        [
-            sh:class ch:CustodialEvent ;
-            sh:maxCount 1 ;
-        ] ;
+    sh:node :bf_partOf ;
+    sh:class ch:CustodialEvent ;
+    sh:maxCount 1 ;
     . 
  
 # The CustodialEvent is part of the CustodialHistory   
 :bf_partOf_ch_CustodialHistory 
     a sh:PropertyShape ;
-    sh:node  
-        :bf_partOf ,       
-        [
-            sh:class ch:CustodialHistory ;
-            sh:maxCount 1 ;
-        ] ;
+    sh:node :bf_partOf ;       
+    sh:class ch:CustodialHistory ;
+    sh:maxCount 1 ;
     . 
     
 # CustodialEvent to resource via CustodialHistory
@@ -136,8 +127,9 @@
     a sh:PropertyShape ;
     sh:path bf:status ;
     sh:nodeKind sh:IRI ;
-    # Range specified in ontology; in theory shouldn't need to specify here,
-    # since validation *should* factor in ontology axioms.
+    # Range is specified in the ontology; a validator implementation 
+    # *should* factor in ontology axioms, but add here for implementations
+    # that don't.
     sh:class bf:Status ;
     . 
             
@@ -158,63 +150,60 @@
 
 :ch_CustodialEvent_rdf_type 
     a sh:PropertyShape ;
-    sh:node
-        :rdf_type ,
-        [
-            sh:in (
-                ch:Accessioning
-                ch:Auction
-                ch:Bequest
-                ch:ClaimOfOwnership
-                ch:Deaccessioning
-                ch:Deposit
-                ch:Destruction
-                ch:Discarding
-                ch:Donation
-                ch:Inheritance
-                ch:Loan
-                ch:Loss
-                ch:Offer
-                ch:Ownership
-                ch:Recovery
-                ch:Repatriation
-                ch:Sale
-                ch:Theft
-                ch:Transfer
-                ch:CustodialEvent 
-            ) ;
-        ] ;
+    sh:node :rdf_type ;
+    # Can we just specify sh:class and have the application present all
+    # the subclasses, since all subclasses are allowed?
+    sh:class ch:CustodialEvent ;
+    sh:in (
+        ch:Accessioning
+        ch:Auction
+        ch:Bequest
+        ch:ClaimOfOwnership
+        ch:Deaccessioning
+        ch:Deposit
+        ch:Destruction
+        ch:Discarding
+        ch:Donation
+        ch:Inheritance
+        ch:Loan
+        ch:Loss
+        ch:Offer
+        ch:Ownership
+        ch:Recovery
+        ch:Repatriation
+        ch:Sale
+        ch:Theft
+        ch:Transfer
+        ch:CustodialEvent 
+    ) ;
     .
-      
 
+# TODO Fix - this should be the activity types, not the event types      
 :ch_CustodialEventActivity_rdf_type 
     a sh:PropertyShape ;
-    sh:node 
-        :rdf_type ,
-        [
-            sh:in (
-                ch:Accessioning
-                ch:Auction
-                ch:Bequest
-                ch:ClaimOfOwnership
-                ch:Deaccessioning
-                ch:Deposit
-                ch:Destruction
-                ch:Discarding
-                ch:Donation
-                ch:Inheritance
-                ch:Loan
-                ch:Loss
-                ch:Offer
-                ch:Ownership
-                ch:Recovery
-                ch:Repatriation
-                ch:Sale
-                ch:Theft
-                ch:Transfer
-                ch:CustodialEvent 
-            ) ;                         
-        ] ;
+    sh:node :rdf_type ;
+    sh:in (
+        ch:Accessioning
+        ch:Auction
+        ch:Bequest
+        ch:ClaimOfOwnership
+        ch:Deaccessioning
+        ch:Deposit
+        ch:Destruction
+        ch:Discarding
+        ch:Donation
+        ch:Inheritance
+        ch:Loan
+        ch:Loss
+        ch:Offer
+        ch:Ownership
+        ch:Recovery
+        ch:Repatriation
+        ch:Sale
+        ch:Theft
+        ch:Transfer
+        ch:CustodialEvent 
+    ) ;                         
     .
 
 # Resource to CustodialHistory           
@@ -269,7 +258,7 @@
     sh:path schema:priceCurrency ;
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    # Schema defines the value as "The currency (in 3-letter ISO 4217 format) of the price" ;    
+    # Schema defines the value as "The currency (in 3-letter ISO 4217 format) of the price"     
     sh:pattern "^[A-Z]{3}$" ;
     .
 
@@ -305,5 +294,3 @@
     sh:path seq:precede ;
     sh:nodeKind sh:IRI ;
     .
-
-    
