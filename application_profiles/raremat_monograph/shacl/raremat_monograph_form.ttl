@@ -3335,7 +3335,7 @@ raremat_monograph_form:MarkingActivityForm_activity_isActivityOf
     sh:order "3" ;
     sh:maxCount "1" ;
     sh:description "Related Marking" ;
-    sh:name "Location" ;
+    sh:name "Marking" ;
     sh:class arm:Marking ;
     sh:nodeKind sh:IRI .
     
