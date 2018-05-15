@@ -33,7 +33,6 @@
             # NON-VALIDATING
             sh:name "Made of material" ;
             sh:description "Materials of which this resource is made. There may be one or more." ;
-            sh:order "0"^^xsd:int ;
             tosh:editWidget swa:NestedObjectEditor ;                   
         ] ;
     .

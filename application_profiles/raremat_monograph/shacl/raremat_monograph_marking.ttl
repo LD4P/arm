@@ -37,7 +37,6 @@
             sh:name "Markings" ;
             sh:group raremat_monograph_property_groups:PhysicalDescriptionPropertyGroup ;
             sh:description "Markings applied to objects during or after creation, conveying information such as the object's origin or maker, its authenticity, or a change in its official status." ;
-            sh:order "0"^^xsd:int ;
             tosh:editWidget swa:NestedObjectEditor ;
         ] ;
     .
