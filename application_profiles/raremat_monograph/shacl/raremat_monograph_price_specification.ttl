@@ -16,13 +16,12 @@
     sh:node custodial_history_property_shapes:schema_priceSpecification ;
     # NON-VALIDATING
     sh:name "Price" ;
-    sh:order "0"^^xsd:int ;
     tosh:editWidget swa:NestedObjectEditor ;         
     .
     
 :PriceSpecification
     a sh:NodeShape ;
-    rdfs:label "Price specification" ;
+    rdfs:label "Price specification form" ;
     sh:targetClass schema:PriceSpecification ;
     sh:property
         :schema_price ,
@@ -34,7 +33,7 @@
     sh:node custodial_history_property_shapes:schema_price ;
     # NON-VALIDATING
     sh:name "Amount" ;
-    sh:order "0"^^xsd:int ;  
+    sh:order "10"^^xsd:int ;  
     .
     
 :schema_priceCurrency
@@ -43,5 +42,5 @@
     # NON-VALIDATING
     sh:name "Currency" ;
     sh:description "Three-digit ISO 4217 currency code." ;
-    sh:order "0"^^xsd:int ;  
+    sh:order "20"^^xsd:int ;  
     .
