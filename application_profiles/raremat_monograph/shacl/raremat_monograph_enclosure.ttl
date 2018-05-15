@@ -53,7 +53,7 @@
         [
             # NON-VALIDATING 
             sh:group raremat_monograph_property_groups:InstancePhysicalDescriptionPropertyGroup ;   
-            sh:order "0"^^xsd:decimal ;             
+            sh:order "10"^^xsd:decimal ;             
         ] ;
     .
 
@@ -68,7 +68,7 @@
         [          
             # NON-VALIDATING 
             sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;   
-            sh:order "0"^^xsd:decimal ;             
+            sh:order "2"^^xsd:decimal ;             
         ] ;
     .
     
@@ -205,6 +205,7 @@
             ) ;
             # NON-VALIDATING
             sh:name "General type of enclosure" ;
+            sh:order "0"^^xsd:decimal ; 
         ] ;
     .
 
@@ -231,7 +232,7 @@
         :bf_hasPart_arm_Binding ,
         [
             sh:group raremat_monograph_property_groups:InstancePhysicalDescriptionPropertyGroup ;   
-            sh:order "0"^^xsd:decimal ;               
+            sh:order "9"^^xsd:decimal ;               
         ] ;
     .
     
@@ -241,7 +242,7 @@
         :bf_hasPart_arm_Binding ,
         [
             sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;   
-            sh:order "0"^^xsd:decimal ;               
+            sh:order "1"^^xsd:decimal ;               
         ] ;
     .
     
