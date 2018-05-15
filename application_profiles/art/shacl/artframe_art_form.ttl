@@ -120,8 +120,6 @@ artframe_art_form:WorkForm
 
   sh:property artframe_art_form:WorkForm_bf_content ;
   
-#WorkVersionPropertyGroup
-
   sh:property artframe_art_form:WorkForm_bf_version .
 
 # TODO ensure that workform list is complete
@@ -421,6 +419,15 @@ artframe_art_form:WorkForm_bf_references
       sh:class bf:Work ;
       sh:description "Resource that is referenced by the described resource." ;
       sh:name "References" ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:nodeKind sh:IRI .
+
+artframe_art_form:WorkForm_bf_version 
+      a sh:PropertyShape ;
+      sh:path bf:version ;
+      sh:class bf:Work ;
+      sh:description " 	Term or terms that identify works such as arranged for music, vulgate for religious work, etc." ;
+      sh:name "Version" ;
       sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:nodeKind sh:IRI .
     
