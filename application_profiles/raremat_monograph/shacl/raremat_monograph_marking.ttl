@@ -37,7 +37,7 @@
             sh:name "Markings" ;
             sh:group raremat_monograph_property_groups:PhysicalDescriptionPropertyGroup ;
             sh:description "Markings applied to objects during or after creation, conveying information such as the object's origin or maker, its authenticity, or a change in its official status." ;
-            sh:order "0"^^xsd:decimal ;
+            sh:order "0"^^xsd:int ;
             tosh:editWidget swa:NestedObjectEditor ;
         ] ;
     .
@@ -71,7 +71,7 @@
             # NON-VALIDATING
             sh:name "Marking type" ;
             sh:description "Marking type" ;
-            sh:order "0"^^xsd:decimal ;
+            sh:order "0"^^xsd:int ;
         ] ;
     .
     
@@ -83,7 +83,7 @@
             # NON-VALIDATING
             sh:name "Textual value of the marking" ;
             sh:description "Textual value" ;
-            sh:order "0"^^xsd:decimal ;
+            sh:order "0"^^xsd:int ;
         ] ;
     .
 
@@ -97,7 +97,7 @@
             sh:class activity:Activity ;
             # NON-VALIDATING
             sh:name "Marking creator" ;
-            sh:order "0"^^xsd:decimal ;
+            sh:order "0"^^xsd:int ;
             tosh:editWidget swa:NestedObjectEditor ;
         ] ;
     .
@@ -131,7 +131,7 @@
             # NON-VALIDATING
             sh:name "Marking note" ; 
             sh:description "Additional textual notes about this marking." ;     
-            sh:order "0"^^xsd:decimal ;   
+            sh:order "0"^^xsd:int ;   
             tosh:editWidget swa:NestedObjectEditor ;
         ] ;
     . 

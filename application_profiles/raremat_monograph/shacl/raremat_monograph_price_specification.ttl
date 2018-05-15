@@ -18,7 +18,7 @@
         [
             # NON-VALIDATING
             sh:name "Price" ;
-            sh:order "0"^^xsd:decimal ;
+            sh:order "0"^^xsd:int ;
             tosh:editWidget swa:NestedObjectEditor ;         
         ] ;
     .
@@ -39,7 +39,7 @@
         [
             # NON-VALIDATING
             sh:name "Amount" ;
-            sh:order "0"^^xsd:decimal ;  
+            sh:order "0"^^xsd:int ;  
         ] ;
     .
     
@@ -51,6 +51,6 @@
             # NON-VALIDATING
             sh:name "Currency" ;
             sh:description "Three-digit ISO 4217 currency code." ;
-            sh:order "0"^^xsd:decimal ;  
+            sh:order "0"^^xsd:int ;  
         ] ;
     .

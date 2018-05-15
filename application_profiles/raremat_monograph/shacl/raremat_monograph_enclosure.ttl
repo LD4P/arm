@@ -53,7 +53,7 @@
         [
             # NON-VALIDATING 
             sh:group raremat_monograph_property_groups:InstancePhysicalDescriptionPropertyGroup ;   
-            sh:order "10"^^xsd:decimal ;             
+            sh:order "10"^^xsd:int ;             
         ] ;
     .
 
@@ -68,7 +68,7 @@
         [          
             # NON-VALIDATING 
             sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;   
-            sh:order "2"^^xsd:decimal ;             
+            sh:order "2"^^xsd:int ;             
         ] ;
     .
     
@@ -99,7 +99,7 @@
             sh:name "Agent" ;
             sh:description "Agent related to the Enclosure: binder, designer, creator, etc." ;
             sh:group raremat_monograph_property_groups:ActivityPropertyGroup ;
-            sh:order "0"^^xsd:decimal ;
+            sh:order "0"^^xsd:int ;
             tosh:editWidget swa:NestedObjectEditor ;       
         ] ;
     .
@@ -132,7 +132,7 @@
             ) ;       
             # NON-VALIDATING
             sh:name "Activity type" ;    
-            sh:order "0"^^xsd:decimal ;  
+            sh:order "0"^^xsd:int ;  
         ] ;
     .  
 
@@ -147,7 +147,7 @@
             # NON-VALIDATING
             sh:name "Enclosure note" ; 
             sh:description "Additional textual notes about this enclosure." ;     
-            sh:order "0"^^xsd:decimal ;   
+            sh:order "0"^^xsd:int ;   
             tosh:editWidget swa:NestedObjectEditor ;
         ] ;
     .
@@ -172,7 +172,7 @@
             ) ;
             # NON-VALIDATING
             sh:name "Note type" ;    
-            sh:order "0"^^xsd:decimal ;       
+            sh:order "0"^^xsd:int ;       
         ] ;
     . 
 
@@ -185,7 +185,7 @@
         [
             # NON-VALIDATING
             sh:name "Specific enclosure type, such as boards, " ;
-            sh:order "0"^^xsd:decimal ;   
+            sh:order "0"^^xsd:int ;   
         ] ;
     .
 
@@ -205,7 +205,7 @@
             ) ;
             # NON-VALIDATING
             sh:name "General type of enclosure" ;
-            sh:order "0"^^xsd:decimal ; 
+            sh:order "0"^^xsd:int ; 
         ] ;
     .
 
@@ -232,7 +232,7 @@
         :bf_hasPart_arm_Binding ,
         [
             sh:group raremat_monograph_property_groups:InstancePhysicalDescriptionPropertyGroup ;   
-            sh:order "9"^^xsd:decimal ;               
+            sh:order "9"^^xsd:int ;               
         ] ;
     .
     
@@ -242,7 +242,7 @@
         :bf_hasPart_arm_Binding ,
         [
             sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;   
-            sh:order "1"^^xsd:decimal ;               
+            sh:order "1"^^xsd:int ;               
         ] ;
     .
     
@@ -313,7 +313,7 @@
             # NON-VALIDATING
             sh:name "Binding component" ;
             sh:description "Part of the binding, such as binding board, headband, bead, finishing hardware, etc." ;
-            sh:order "0"^^xsd:decimal ;   
+            sh:order "0"^^xsd:int ;   
         ] ;
     . 
 
@@ -644,6 +644,6 @@
             # NON-VALIDATING
             sh:name "Binding type" ;
             sh:description "Specific type of binding, such as adhesive binding, spiral binding, etc." ;
-            sh:order "0"^^xsd:decimal ;   
+            sh:order "0"^^xsd:int ;   
         ] ;
     .    

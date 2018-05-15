@@ -34,7 +34,7 @@
     sh:name "Exhibition" ; 
     sh:description "An exhibition this item was displayed in." ;  
     sh:group raremat_monograph_form:ItemHistoryAndProvenancePropertyGroup ;     
-    sh:order "0"^^xsd:decimal ;   
+    sh:order "0"^^xsd:int ;   
     tosh:editWidget swa:NestedObjectEditor ;
     .
     
@@ -70,7 +70,7 @@
             sh:name "Exhibition location" ; 
             sh:description "" ;      
             sh:group :ExhibitionEventLocationPropertyGroup ; 
-            sh:order "0"^^xsd:decimal ; 
+            sh:order "0"^^xsd:int ; 
             tosh:editWidget swa:NestedObjectEditor ;
             # TODO How do we indicate what to look up? In this case it's LC subject authorities
             raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
@@ -86,7 +86,7 @@
             sh:name "Temporal coverage" ; 
             sh:description "Time period covered by this exhibition." ;      
             sh:group :ExhibitionEventSubjectAndCoveragePropertyGroup ; 
-            sh:order "0"^^xsd:decimal ; 
+            sh:order "0"^^xsd:int ; 
             tosh:editWidget swa:NestedObjectEditor ;
         ] ;
     .
@@ -100,7 +100,7 @@
             sh:name "Geographic coverage" ; 
             sh:description "Location covered by this exhibition." ;      
             sh:group :ExhibitionEventLocationPropertyGroup ; 
-            sh:order "0"^^xsd:decimal ; 
+            sh:order "0"^^xsd:int ; 
             tosh:editWidget swa:NestedObjectEditor ;
             # TODO How do we indicate what to look up? In this case it's LC subject authorities
             raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
@@ -116,7 +116,7 @@
             sh:name "Exhibition end date" ; 
             sh:description "End date of the exhibition. EDTF format recommended." ;      
             sh:group :ExhibitionEventDatePropertyGroup ;
-            sh:order "0"^^xsd:decimal ; 
+            sh:order "0"^^xsd:int ; 
         ] ;
     .
 
@@ -129,7 +129,7 @@
             sh:name "Associated agent activity" ; 
             sh:description "Agent activity associated with the exhibition." ;      
             sh:group :XXX;
-            sh:order "0"^^xsd:decimal ; 
+            sh:order "0"^^xsd:int ; 
             tosh:editWidget swa:NestedObjectEditor;
         ] ;
     .
@@ -143,7 +143,7 @@
             sh:name "Exhibition start date" ; 
             sh:description "Start date of the exhibition. EDTF format recommended." ; 
             sh:group :ExhibitionEventDatePropertyGroup ;    
-            sh:order "0"^^xsd:decimal ; 
+            sh:order "0"^^xsd:int ; 
         ] ;
     .
           
@@ -156,7 +156,7 @@
             sh:name "Exhibition note" ; 
             sh:description "Additional textual notes about this exhibition." ;   
             sh:group :ExhibitionEventNotePropertyGroup ;   
-            sh:order "0"^^xsd:decimal ;   
+            sh:order "0"^^xsd:int ;   
             tosh:editWidget swa:NestedObjectEditor ;
         ] ;
     .
@@ -172,7 +172,7 @@
             sh:name "Exhibition subject" ; 
             sh:description "" ;   
             sh:group :ExhibitionEventSubjectAndCoveragePropertyGroup ;   
-            sh:order "0"^^xsd:decimal ;   
+            sh:order "0"^^xsd:int ;   
             tosh:editWidget swa:NestedObjectEditor ;
             # TODO How do we indicate what to look up? In this case it's LC subject authorities
             raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
@@ -188,7 +188,7 @@
             sh:name "Exhibition title" ; 
             sh:description "" ;     
             sh:group :ExhibitionEventTitlePropertyGroup ;  
-            sh:order "0"^^xsd:decimal ; 
+            sh:order "0"^^xsd:int ; 
             tosh:editWidget swa:NestedObjectEditor ;    
         ] ;
     . 
@@ -202,7 +202,7 @@
             sh:name "Item description in the exhibition" ; 
             sh:description "Attributes of the item in the context of this exhibition." ;     
             sh:group :ExhibitionEventItemDescriptionPropertyGroup ;  
-            sh:order "0"^^xsd:decimal ; 
+            sh:order "0"^^xsd:int ; 
             tosh:editWidget swa:NestedObjectEditor ;    
         ] ;
     .     
@@ -295,7 +295,7 @@
             sh:name "Location of this activity" ; 
             sh:description "" ;      
             sh:group :ExhibitionEventActivityPropertyGroup ; 
-            sh:order "0"^^xsd:decimal ;
+            sh:order "0"^^xsd:int ;
             # TODO Specify lookup sources via restriction PropertyShapes: see for example
             # raremat_monograph_form:MaterialForm_crm_P2_has_type_gvp_broader_Extended 
             raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
@@ -312,7 +312,7 @@
             sh:name "Agent" ; 
             sh:description "Agent of this activity" ;      
             sh:group :ExhibitionEventActivityPropertyGroup ; 
-            sh:order "0"^^xsd:decimal ; 
+            sh:order "0"^^xsd:int ; 
             # TODO Specify lookup sources via restriction PropertyShapes: see for example
             # raremat_monograph_form:MaterialForm_crm_P2_has_type_gvp_broader_Extended 
             raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
@@ -328,7 +328,7 @@
             sh:name "Activity date" ; 
             sh:description "Date of the activity. EDTF format recommended." ; 
             sh:group :ExhibitionEventActivityPropertyGroup ;    
-            sh:order "0"^^xsd:decimal ; 
+            sh:order "0"^^xsd:int ; 
         ] ;
     .
 
@@ -343,7 +343,7 @@
             sh:name "Note on the activity" ; 
             sh:description "Additional textual note about this activity." ;   
             sh:group :ExhibitionEventActivityNotePropertyGroup ;   
-            sh:order "0"^^xsd:decimal ;   
+            sh:order "0"^^xsd:int ;   
             tosh:editWidget swa:NestedObjectEditor ;
         ] ;
     .
@@ -373,7 +373,7 @@
     # NON-VALIDATING
     sh:name "Arrangement" ; 
     sh:description "Arrangement of the item in the exhibition (e.g., \"Open to plate 10\"" ;  
-    sh:order "0"^^xsd:decimal ;
+    sh:order "0"^^xsd:int ;
     .  
     
 :ExhibitionForm_bf_title 
@@ -385,7 +385,7 @@
     # NON-VALIDATING 
     sh:name "Exhibition title" ; 
     sh:description "Title of the item in the exhibition" ;  
-    sh:order "0"^^xsd:decimal ;
+    sh:order "0"^^xsd:int ;
     .   
             
 :ExhibitionForm_arm_hasActivity 
@@ -396,7 +396,7 @@
     # NON-VALIDATING
     sh:name "Activity" ; 
     sh:description "Agent activity and role for the item in the exhibition (e.g., curator)." ;  
-    sh:order "0"^^xsd:decimal ;
+    sh:order "0"^^xsd:int ;
     .      
 
 :ExhibitionForm_bf_identifiedBy
@@ -407,7 +407,7 @@
     # NON-VALIDATING
     sh:name "Exhibition identifier" ; 
     sh:description "Identifier of the item in the exhibition" ;  
-    sh:order "0"^^xsd:decimal ;
+    sh:order "0"^^xsd:int ;
     .  
 
 #
@@ -421,54 +421,54 @@
 :ExhibitionEventActivityPropertyGroup
     a sh:PropertyGroup ;
     rdfs:label "Agent Roles and Activities" ;
-    sh:order "0"^^xsd:decimal ;
+    sh:order "0"^^xsd:int ;
     . 
 
 :ExhibitionEventActivityNotePropertyGroup
     a sh:PropertyGroup ;
     rdfs:label "Activity Notes" ;
-    sh:order "0"^^xsd:decimal ;
+    sh:order "0"^^xsd:int ;
     . 
        
 :ExhibitionEventDatePropertyGroup 
     a sh:PropertyGroup ;
     rdfs:label "Exhibition Dates" ;
-    sh:order "0"^^xsd:decimal ;
+    sh:order "0"^^xsd:int ;
     .  
   
 :ExhibitionEventExhibitionPropertyGroup 
     a sh:PropertyGroup ;
     rdfs:label "Exhibited Items" ;
-    sh:order "0"^^xsd:decimal ;
+    sh:order "0"^^xsd:int ;
     .  
 
 :ExhibitionEventExhibitionPropertyGroup
     a sh:PropertyGroup ;
     rdfs:label "Item Description" ;
-    sh:order "0"^^xsd:decimal ;
+    sh:order "0"^^xsd:int ;
     .  
    
 :ExhibitionEventLocationPropertyGroup      
     a sh:PropertyGroup ;
     rdfs:label "Exhibition Locations" ;
-    sh:order "0"^^xsd:decimal ;
+    sh:order "0"^^xsd:int ;
     .   
    
 :ExhibitionEventNotePropertyGroup      
     a sh:PropertyGroup ;
     rdfs:label "Exhibition Notes" ;
-    sh:order "0"^^xsd:decimal ;
+    sh:order "0"^^xsd:int ;
     .  
        
 :ExhibitionEventSubjectAndCoveragePropertyGroup
     a sh:PropertyGroup ;
     rdfs:label "Subject and Coverage of this Exhibition" ;
-    sh:order "0"^^xsd:decimal ;
+    sh:order "0"^^xsd:int ;
     .  
     
 :ExhibitionEventTitlePropertyGroup
     a sh:PropertyGroup ;
     rdfs:label "Exhibition Titles" ;
-    sh:order "0"^^xsd:decimal ;
+    sh:order "0"^^xsd:int ;
     .    
      
