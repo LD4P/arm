@@ -22,16 +22,29 @@
     rdfs:label "Related agent and role" ;
     sh:targetClass activity:Activity ;
     sh:property
-        # How would this work in a nested form without creating a recursive
-        # loop?
-        # :ActivityForm_activity_isActivityOf ,
+
+        # Not editable. Only for display on Activity page. 
+        :ActivityForm_activity_isActivityOf ,
+        
+        # Type is defined in the sub-shape, since the type options depend
+        # on the resource related to the activity. Type will be ordered
+        # first.
+        # :ActivityForm_rdf_type ,
+           
         :ActivityForm_bf_agent ,
         :ActivityForm_bf_date ,
         :ActivityForm_arm_atLocation ;
-        # Type is determined by the sub-shape, since the type options
-        # depend on the resource related to the activity
-        # :ActivityForm_rdf_type ;   
     .
+ 
+# Not editable. Only for display of related resource on Activity page. 
+:ActivityForm_activity_isActivityOf 
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:activity_isActivityOf ;
+    # NON-VALIDATING
+    sh:name "Associated resource" ;
+    sh:order "10"^^xsd:int ;
+    .
+
 
 :ActivityForm_bf_agent 
     a sh:PropertyShape ;
@@ -42,7 +55,7 @@
     # NON-VALIDATING
     sh:name "Agent" ;
     sh:description "Agent" ;
-    sh:order "0"^^xsd:int ;
+    sh:order "30"^^xsd:int ;
     # Currently we don't have a general ActivityPropertyGroup, but
     # only per-type groups (WorkActivityPropertyGroup, etc.). Check
     # on possibility of combining the groups regardless of subject
@@ -58,7 +71,7 @@
     # NON-VALIDATING
     sh:name "Date" ;
     sh:description "Date of the activity. Recommended to use EDTF format" ;
-    sh:order "0"^^xsd:int ;
+    sh:order "40"^^xsd:int ;
     .
       
 :ActivityForm_arm_atLocation 
@@ -69,6 +82,7 @@
     # NON-VALIDATING
     sh:name "Location" ;
     sh:description "Location of the activity" ;
+    sh:order "50"^^xsd:int ;
     raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
     .
       

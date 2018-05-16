@@ -43,9 +43,11 @@
     sh:name "Custodial event" ;
     sh:description "A custodial 'event' includes both static and transitional conditions: e.g., a period of ownership and a purchase. It is not restricted by the general notion of 'event.'" ;
     sh:group raremat_monograph_property_groups:ItemHistoryAndProvenancePropertyGroup ;
-    sh:order "0"^^xsd:int ;   
+    sh:order "0"^^xsd:int ; # TODO Add - see issue #85  
     tosh:editWidget swa:NestedObjectEditor ; 
     .    
+
+##### CUSTODIAL HISTORY #####
 
 # Form for the CustodialHistory page, so CustodialEvents can be added to it.
 :CustodialHistoryForm 
@@ -53,22 +55,12 @@
     rdfs:label "Custodial history" ;
     sh:targetClass ch:CustodialHistory ;
     sh:property 
-        :CustodialHistoryForm_bf_hasPart_ch_CustodialEvent ,
         # The relationship to the Item is not editable, but define the 
         # PropertyShape for display purposes.
-        :CustodialHistoryForm_ch_isCustodialHistoryOf ;       
-    .
-
-# The CustodialHistory has a CustodialEvent. Will not appear on the Item
-# form, since this bypasses CustodialHistory, but will appear on the 
-# CustodialHistory page.     
-:CustodialHistoryForm_bf_hasPart_ch_CustodialEvent 
-    a sh:PropertyShape ;
-    sh:node custodial_history_property_shapes:bf_hasPart_ch_CustodialEvent ; 
-    # NON-VALIDATING
-    sh:name "Custodial event" ;
-    sh:description "A custodial event for the related Item. Custodial \"event\" includes both static and transitional conditions: e.g., a period of ownership and a purchase. It is not restricted by the general notion of \"event.\"" ;
-    sh:order "0"^^xsd:int ;            
+        :CustodialHistoryForm_ch_isCustodialHistoryOf ,    
+        
+        # Edit only from CustodialHistory page.  
+        :CustodialHistoryForm_bf_hasPart_ch_CustodialEvent ; 
     .
 
 # Displays on the CustodialHistory page but should not be editable. The
@@ -81,10 +73,22 @@
     # NON-VALIDATING
     sh:name "Item" ;
     sh:description "The custodial history belongs to the specified Item." ;
-    sh:order "0"^^xsd:int ;        
+    sh:order "10"^^xsd:int ;        
+    .
+    
+# The CustodialHistory has a CustodialEvent. Will not appear on the Item
+# form, since this bypasses CustodialHistory, but will appear on the 
+# CustodialHistory page.     
+:CustodialHistoryForm_bf_hasPart_ch_CustodialEvent 
+    a sh:PropertyShape ;
+    sh:node custodial_history_property_shapes:bf_hasPart_ch_CustodialEvent ; 
+    # NON-VALIDATING
+    sh:name "Custodial event" ;
+    sh:description "A custodial event for the related Item. Custodial \"event\" includes both static and transitional conditions: e.g., a period of ownership and a purchase. It is not restricted by the general notion of \"event.\"" ;
+    sh:order "20"^^xsd:int ;            
     .
 
-   
+ 
 ##### CUSTODIAL EVENT #####
 
 :CustodialEventForm 
@@ -92,23 +96,8 @@
     rdfs:label "Custodial event" ;
     sh:targetClass ch:CustodialEvent ;
     sh:property
-        custodial_history_property_shapes:activity_hasActivity , 
-        :CustodialEventForm_arm_accessionedBy , 
-        :CustodialEventForm_arm_atLocation , 
-        :CustodialEventForm_bf_date ,
-        
-        # Relates aggregate CustodialEvent to individual CustodialEvent. We
-        # distinguish these by the fact that only the latter is related
-        # directly to a CustodialHistory.       
-        :CustodialEventForm_bf_hasPart_ch_CustodialEvent ,
-        
-        # Relates individual CustodialEvent to aggregate CustodialEvent. We
-        # distinguish these by the fact that only the former is related
-        # directly to a CustodialHistory.
-        :CustodialEventForm_bf_partOf_ch_CustodialEvent ,
-        
-        # Not needed, since bypassing the CustodialHistory in editing and
-        # display.
+    
+        # Do NOT use: bypassing the CustodialHistory in editing and display.
         # :CustodialEventForm_bf_partOf_ch_CustodialHistory ,
         
         # Links the CustodialEvent to its Item. For display purposes only
@@ -119,12 +108,38 @@
         :CustodialEventForm_bf_partOf_ch_isCustodialHistoryOf ,
         
         :CustodialEventForm_rdf_type , 
-        raremat_monograph_price_specification:schema_priceSpecification , 
-        :CustodialEventForm_seq_directlyFollows , 
-        :CustodialEventForm_seq_directlyPrecedes ,        
-        :CustodialEventForm_seq_follows , 
-        :CustodialEventForm_seq_precedes ; 
+        
+        :CustodialEventForm_activity_hasActivity ,
+
+        :CustodialEventForm_bf_date ,
+        
+        :CustodialEventForm_arm_atLocation , 
+        
+        :CustodialEventForm:schema_priceSpecification , 
+        
+        # NB Applies only to certain types of CustodialEvent; ignore this 
+        # for now.
+        :CustodialEventForm_arm_accessionedBy , 
+
+        # Relates individual CustodialEvent to aggregate CustodialEvent. We
+        # distinguish these by the fact that only the former is related
+        # directly to a CustodialHistory.
+        # Ignore for first iteration of VitroLib.
+        # :CustodialEventForm_bf_partOf_ch_CustodialEvent ,
+        
+        # Relates aggregate CustodialEvent to individual CustodialEvent. We
+        # distinguish these by the fact that only the latter is related
+        # directly to a CustodialHistory.    
+        # Ignore for first iteration of VitroLib.   
+        # :CustodialEventForm_bf_hasPart_ch_CustodialEvent ,
+
+        # Precedence relationships among CustodialEvents of the Item
+        :CustodialEventForm_seq_directlyPrecedes ,   
+        :CustodialEventForm_seq_directlyFollows ,   
+        :CustodialEventForm_seq_precedes ,    
+        :CustodialEventForm_seq_follows ; 
     .
+
 
 ##### CUSTODIAL EVENT TO ITEM #####
 
@@ -138,62 +153,91 @@
     sh:class bf:Item ;
     sh:name "Item" ;
     sh:description "The custodial event belongs to this Item." ; 
-    sh:order "0"^^xsd:int ;       
-    .
- 
-
-##### CUSTODIAL EVENT TO CUSTODIAL EVENT #####
-
-# Relates aggregate CustodialEvent to individual CustodialEvent. We
-# distinguish these by the fact that only the latter is related directly to 
-# a CustodialHistory. Note that a CustodialEvent resource cannot switch
-# between the two types: once linked to a particular Item, it cannot be
-# unlinked, and once linked to another CustodialEvent linked to a particular
-# Item, it cannot be linked directly to an Item.      
-:CustodialEventForm_bf_hasPart_ch_CustodialEvent 
-    a sh:PropertyShape ;
-    sh:node custodial_history_property_shapes:bf_hasPart_ch_CustodialEvent ; 
-    # NON-VALIDATING
-    sh:name "Custodial event for the Item" ;
-    sh:description "This aggregate custodial event has the Item's individual custodial event as a part. For example, a sale at auction of multiple Items is related to the event that pertains directly to a single Item." ;
-    sh:order "0"^^xsd:int ;        
+    sh:order "10"^^xsd:int ;       
     .
 
-# Relates individual CustodialEvent to aggregate CustodialEvent. We
-# distinguish these by the fact that only the former is related directly to 
-# a CustodialHistory. Note that a CustodialEvent resource cannot switch
-# between the two types: once linked to a particular Item, it cannot be
-# unlinked, and once linked to another CustodialEvent linked to a particular
-# Item, it cannot be linked directly to an Item.         
-:CustodialEventForm_bf_partOf_ch_CustodialEvent 
+
+##### CUSTODIAL EVENT TYPE #####
+
+:CustodialEventForm_rdf_type
     a sh:PropertyShape ;
-    sh:node custodial_history_property_shapes:bf_partOf_ch_CustodialEvent ;
+    sh:node custodial_history_property_shapes:ch_CustodialEvent_rdf_type ;
     # NON-VALIDATING
-    sh:name "Aggregate custodial event encompassing multiple Items" ;
-    sh:description "The custodial event for this Item is part of a larger custodial event encompassing multiple Items. For example, this Item was part of an auction lot that included multiple Items." ;
-    sh:order "0"^^xsd:int ;        
+    sh:name "Custodial event type" ;
+    sh:order "20"^^xsd:int ;
     . 
+ 
     
 ##### CUSTODIAL EVENT ACTIVITY #####
 
+# Links CustodialEvent to Activity/Agent
+:CustodialEventForm_activity_hasActivity
+    a sh:PropertyShape ;
+    sh:node custodial_history_property_shapes:activity_hasActivity ;
+    # NON-VALIDATING 
+    sh:order "30"^^xsd:int ;
+    .
+
 # Possible activities depend on event type; omit these constraints for now, 
 # as they require a form shape for each event type. 
-
 :CustodialEventActivityForm
     a sh:NodeShape ;
+    # All property shapes other than type come from the general ActivityForm.
     sh:node raremat_monograph_activity:ActivityForm ;
     sh:property :CustodialEventActivityForm_rdf_type ;    
     .
 
 :CustodialEventActivityForm_rdf_type
     a sh:PropertyShape ;
-    sh:node custodial_history_property_shapes::ch_CustodialEventActivity_rdf_type ;
+    sh:node custodial_history_property_shapes:ch_CustodialEventActivity_rdf_type ;
     # NON-VALIDATING
     sh:name "Role" ;
     sh:description "The role played by the agent in relation to the custodial event." ;
-    sh:order "0"^^xsd:int ;
+    sh:order "10"^^xsd:int ;
     .    
 
+
+##### CUSTODIAL EVENT DATE #####
+
+:CustodialEvent_bf_date 
+    a sh:PropertyShape ;
+    sh:node custodial_history_property_shapes:bf_date ;
+    sh:maxCount 1 ;
+    # NON-VALIDATING
+    sh:name "Date" ;
+    sh:description "Date of the custodial event. Recommended to use EDTF format" ;
+    sh:order "40"^^xsd:int ;
+    .
+
+
+##### CUSTODIAL EVENT LOCATION #####
+
+:CustodialEvent_arm_atLocation 
+    a sh:PropertyShape ;
+    sh:node custodial_history_property_shapes:arm_atLocation ;
+    sh:maxCount 1 ;
+    # NON-VALIDATING
+    sh:name "Location" ;
+    sh:description "Location of the event" ;
+    sh:group raremat_monograph_property_groups:LocationPropertyGroup ;
+    sh:order "50"^^xsd:int ;
+    sh:nodeKind sh:IRI ;
+    # TODO May need to fix based on email thread
+    sh:class gn:Feature ;     
+    raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
+    .
+    
+    
+##### CUSTODIAL EVENT PRICE #####
+
+:CustodialEventForm_schema_priceSpecification 
+    a sh:NodeShape ;
+    sh:node raremat_monograph_price_specification:schema_priceSpecification ;
+    # NON-VALIDATING
+    sh:order "60"^^xsd:int ;
+    .
+    
+    
 ##### CUSTODIAL EVENT ACCESSION NUMBER #####
 
 # NB Also attach the accession number to the Item using bf:identifiedBy. If
@@ -209,7 +253,7 @@
     sh:name "Accession number" ;
     sh:description "Accession number of the item associated with the event." ;
     sh:group raremat_monograph_property_groups:IdentifierPropertyGroup ;
-    sh:order "0"^^xsd:int ;
+    sh:order "70"^^xsd:int ;
     .
     
 :AccessionNumberForm 
@@ -222,65 +266,54 @@
     .    
 
 
-##### CUSTODIAL EVENT LOCATION #####
-
-:CustodialEvent_arm_atLocation 
-    a sh:PropertyShape ;
-    sh:node custodial_history_property_shapes:arm_atLocation ;
-    sh:maxCount 1 ;
-    # NON-VALIDATING
-    sh:name "Location" ;
-    sh:description "Location of the event" ;
-    sh:group raremat_monograph_property_groups:LocationPropertyGroup ;
-    sh:order "0"^^xsd:int ;
-    sh:nodeKind sh:IRI ;
-    # TODO May need to fix based on email thread
-    sh:class gn:Feature ;     
-    raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
-    .
+##### INDIVIDUAL AND AGGREGATE CUSTODIAL EVENTS #####
 
 
-##### CUSTODIAL EVENT DATE #####
+# Relates individual CustodialEvent to aggregate CustodialEvent. We
+# distinguish these by the fact that only the former is related directly to 
+# a CustodialHistory. Note that a CustodialEvent resource cannot switch
+# between the two types: once linked to a particular Item, it cannot be
+# unlinked, and once linked to another CustodialEvent linked to a particular
+# Item, it cannot be linked directly to an Item.   
 
-:CustodialEvent_bf_date 
-    a sh:PropertyShape ;
-    sh:node custodial_history_property_shapes:bf_date ;
-    sh:maxCount 1 ;
-    # NON-VALIDATING
-    sh:name "Date" ;
-    sh:description "Date of the custodial event. Recommended to use EDTF format" ;
-    sh:order "0"^^xsd:int ;
-    .
-
-
-##### CUSTODIAL EVENT PART OF AGGREGATE CUSTODIAL EVENT #####
+# Omitting in first iteration of RareMat VitroLib.
 
 # The object is an aggregate CustodialEvent: by definition, it is either 
 # a new CustodialEvent, or, if it exists, it must be: (a) attached to
 # another CustodialEvent attached to a different Item, and (b) NOT 
 # attached to the current Item. 
+     
 :CustodialEventForm_bf_partOf_ch_CustodialEvent 
     a sh:PropertyShape ;
     sh:node custodial_history_property_shapes:bf_partOf_ch_CustodialEvent ;
     # NON-VALIDATING
-    sh:name "Part of" ;
-    sh:description: "This custodial event is part of an aggregate custodial event that includes multiple Items" ;
-    sh:order "0"^^xsd:int ; 
-    .   
-
-
-##### CUSTODIAL EVENT TYPE #####
-
-:CustodialEventForm_rdf_type
-    a sh:PropertyShape ;
-    sh:node custodial_history_property_shapes:ch_CustodialEvent_rdf_type ;
-    # NON-VALIDATING
-    sh:name "Custodial event type" ;
-    sh:order "0"^^xsd:int ;
+    sh:name "Aggregate custodial event" ;
+    sh:description "The custodial event for this Item is part of an aggregate custodial event encompassing multiple Items. For example, this Item was part of an auction lot that included multiple Items." ;
+    sh:order "80"^^xsd:int ;        
     .
 
- 
+# Relates aggregate CustodialEvent to individual CustodialEvent. We
+# distinguish these by the fact that only the latter is related directly to 
+# a CustodialHistory. Note that a CustodialEvent resource cannot switch
+# between the two types: once linked to a particular Item, it cannot be
+# unlinked, and once linked to another CustodialEvent linked to a particular
+# Item, it cannot be linked directly to an Item.
+
+# Omitting in first iteration of RareMat VitroLib.
+      
+:CustodialEventForm_bf_hasPart_ch_CustodialEvent 
+    a sh:PropertyShape ;
+    sh:node custodial_history_property_shapes:bf_hasPart_ch_CustodialEvent ; 
+    # NON-VALIDATING
+    sh:name "Custodial event for the Item" ;
+    sh:description "This aggregate custodial event has the Item's individual custodial event as a part. For example, a sale at auction of multiple Items is related to the event that pertains directly to a single Item." ;
+    sh:order "90"^^xsd:int ;        
+    .
+
+    
 ##### CUSTODIAL EVENT PRECEDENCE RELATIONSHIPS #####
+
+# Order of individual CustodialEvents within an Item's CustodialHistory.
 
 # Ideally, when creating a CustodialEvent, user would have the option of 
 # using a precedence predicate and either linking to an existing 
@@ -290,16 +323,6 @@
 # now, we should probably only make precedes/follows links available from 
 # the event page.
 
-:CustodialEventForm_seq_directlyFollows
-    a sh:PropertyShape ;
-    sh:node custodial_history_property_shapes:seq_directlyFollows ;
-    sh:class ch:CustodialEvent ;
-    # NON-VALIDATING
-    sh:name "Directly follows" ;
-    sh:description "The current custodial event directly follows the designated custodial event." ;
-    sh:order "0"^^xsd:int ;
-    .
-    
 :CustodialEventForm_seq_directlyPrecedes
     a sh:PropertyShape ;
     sh:node custodial_history_property_shapes:seq_directlyPrecedes ;
@@ -307,9 +330,29 @@
     # NON-VALIDATING
     sh:name "Directly precedes" ;
     sh:description "The current custodial event directly precedes the designated custodial event." ;
-    sh:order "0"^^xsd:int ;
+    sh:order "100"^^xsd:int ;
     .
     
+:CustodialEventForm_seq_directlyFollows
+    a sh:PropertyShape ;
+    sh:node custodial_history_property_shapes:seq_directlyFollows ;
+    sh:class ch:CustodialEvent ;
+    # NON-VALIDATING
+    sh:name "Directly follows" ;
+    sh:description "The current custodial event directly follows the designated custodial event." ;
+    sh:order "110"^^xsd:int ;
+    .
+ 
+ :CustodialEventForm_seq_precedes
+    a sh:PropertyShape ;
+    sh:node custodial_history_property_shapes:seq_precedes ;
+    sh:class ch:CustodialEvent ;
+    # NON-VALIDATING
+    sh:name "Precedes" ;
+    sh:description "The current custodial event directly or indirectly precedes the designated custodial event." ;
+    sh:order "120"^^xsd:int ;
+    .
+        
 :CustodialEventForm_seq_follows
     a sh:PropertyShape ;
     sh:node custodial_history_property_shapes:seq_follows ;
@@ -317,15 +360,6 @@
     # NON-VALIDATING
     sh:name "Follows" ;
     sh:description "The current custodial event directly or indirectly follows the designated custodial event." ;
-    sh:order "0"^^xsd:int ;
+    sh:order "130"^^xsd:int ;
     .
-    
-:CustodialEventForm_seq_precedes
-    a sh:PropertyShape ;
-    sh:node custodial_history_property_shapes:seq_precedes ;
-    sh:class ch:CustodialEvent ;
-    # NON-VALIDATING
-    sh:name "Precedes" ;
-    sh:description "The current custodial event directly or indirectly precedes the designated custodial event." ;
-    sh:order "0"^^xsd:int ;
-    .
+   

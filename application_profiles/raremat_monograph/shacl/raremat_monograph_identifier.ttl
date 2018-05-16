@@ -34,7 +34,7 @@
     # NON-VALIDATING
     sh:name "Value" ;
     sh:description "Identifier value." ;
-    sh:order "0"^^xsd:int ;        
+    sh:order "10"^^xsd:int ;        
     .
 
 :bf_status
@@ -52,6 +52,6 @@
     # NON-VALIDATING
     sh:name "Status" ;
     sh:description "Identifier status." ;
-    sh:order "0"^^xsd:int ;
+    sh:order "20"^^xsd:int ;
     . 
  
