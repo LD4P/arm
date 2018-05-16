@@ -1380,7 +1380,7 @@ raremat_monograph_form:InstanceForm_arm_hasSignatureStatement
 raremat_monograph_form:InstanceForm_arm_hasMaterial 
     a sh:PropertyShape ;
     sh:path arm:hasMaterial ;
-    sh:class crm:E57 ;
+    sh:class crm:E57_Material ;
     sh:group raremat_monograph_property_groups:InstancePhysicalDescriptionPropertyGroup ;
     sh:description "Materials that make up this this instance. Materials can also be more granularly associated with each part of the instance, and/or as base or applied material." ;
     sh:name "Has material" ;
@@ -1392,7 +1392,7 @@ raremat_monograph_form:InstanceForm_arm_hasMaterial
 raremat_monograph_form:InstanceForm__rdau_P60596 
     a sh:PropertyShape ;
     sh:path rdau:P60596 ;
-    sh:class crm:E57 ;
+    sh:class crm:E57_Material ;
     sh:group raremat_monograph_property_groups:InstancePhysicalDescriptionPropertyGroup ;
     sh:description "Base materials for this this instance. Base materials can also be more granularly associated with each part of the instance." ;
     sh:name "Has base material" ;
@@ -1403,7 +1403,7 @@ raremat_monograph_form:InstanceForm__rdau_P60596
 raremat_monograph_form:InstanceForm_rdau_P60159 
     a sh:PropertyShape ;
     sh:path rdau:P60159 ;
-    sh:class crm:E57 ;
+    sh:class crm:E57_Material ;
     sh:group raremat_monograph_property_groups:InstancePhysicalDescriptionPropertyGroup ;
     sh:description "Applied materials for this this instance. Applied materials can also be more granularly associated with each part of the instance." ;
     sh:name "Has applied material" ;
@@ -1871,7 +1871,7 @@ raremat_monograph_form:ItemForm_arm_hasPhysicalCondition
 raremat_monograph_form:ItemForm_arm_hasMaterial 
     a sh:PropertyShape ;
     sh:path arm:hasMaterial ;
-    sh:class crm:E57 ;
+    sh:class crm:E57_Material ;
     sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;
     sh:description "Materials that make up this this item. Materials can also be more granularly associated with each part of the item, and/or as base or applied material." ;
     sh:name "Has material" ;
@@ -1883,7 +1883,7 @@ raremat_monograph_form:ItemForm_arm_hasMaterial
 raremat_monograph_form:ItemForm_rdau_P60596 
     a sh:PropertyShape ;
     sh:path rdau:P60596 ;
-    sh:class crm:E57 ;
+    sh:class crm:E57_Material ;
     sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;
     sh:description "Base materials for this this instance. Base materials can also be more granularly associated with each part of the item." ;
     sh:name "Has base material" ;
@@ -1895,7 +1895,7 @@ raremat_monograph_form:ItemForm_rdau_P60596
 raremat_monograph_form:ItemForm_rdau_P60159 
     a sh:PropertyShape ;
     sh:path rdau:P60159 ;
-    sh:class crm:E57 ;
+    sh:class crm:E57_Material ;
     sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;
     sh:description "Applied materials for this this item. Applied materials can also be more granularly associated with each part of the item." ;
     sh:name "Has applied material" ;
@@ -3153,7 +3153,7 @@ raremat_monograph_form:SignatureStatementForm_dcterms_description
 raremat_monograph_form:MaterialForm
     rdf:type sh:NodeShape ;
     rdfs:label "Material form" ;
-    sh:targetClass crm:E57 ;
+    sh:targetClass crm:E57_Material ;
     sh:property raremat_monograph_form:MaterialForm_crm_P2_has_type ;
     .
   
