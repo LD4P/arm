@@ -183,26 +183,33 @@
     a sh:PropertyShape ;
     sh:node :rdf_type ;
     sh:in (
-        ch:Accessioning
-        ch:Auction
-        ch:Bequest
-        ch:ClaimOfOwnership
-        ch:Deaccessioning
-        ch:Deposit
-        ch:Destruction
-        ch:Discarding
-        ch:Donation
-        ch:Inheritance
-        ch:Loan
-        ch:Loss
-        ch:Offer
-        ch:Ownership
-        ch:Recovery
-        ch:Repatriation
-        ch:Sale
-        ch:Theft
-        ch:Transfer
-        ch:CustodialEvent 
+        activity:ContributorActivity
+        activity:PatronActivity
+        ch:AccessionerActivity
+        ch:AcquisitionActivity
+        ch:BorrowerActivity
+        ch:BuyerActivity
+        ch:ClaimantActivity
+        ch:DealerActivity
+        ch:DeaccessionerActivity
+        ch:DepositorActivity
+        ch:DestructionActivity
+        ch:DiscarderActivity
+        ch:DisputantActivity
+        ch:DonorActivity
+        ch:InheritorActivity
+        ch:LenderActivity
+        ch:LossActivity
+        ch:OfferActivity
+        ch:OwnerActivity
+        ch:RecipientActivity
+        ch:RecovererActivity
+        ch:RepatriatorActivity
+        ch:SellerActivity
+        ch:TestatorActivity
+        ch:ThiefActivity
+        ch:TransfererActivity
+        ch:WitnessActivity 
     ) ;                         
     .
 

@@ -211,7 +211,7 @@ Some of these classes are also defined as subclasses of schema:Event. â€œStaticâ
 > - **Label**: Auction
 > - **URI**: http://example.org/Auction
 > - **Definition**: The sale at auction of a resource. 
-> - **Comment**: Refers to the transfer of ownership through auction, rather than the auction in which that occurs. Typical associated Activities: BuyerActivity, SellerActivity, BrokerActivity.
+> - **Comment**: Refers to the transfer of ownership through auction, rather than the auction in which that occurs. Typical associated Activities: BuyerActivity, SellerActivity, DealerActivity.
 > - **SubclassOf**: ex:Sale, schema:Event.
 
 **ex:Bequest**
@@ -317,7 +317,7 @@ Some of these classes are also defined as subclasses of schema:Event. â€œStaticâ
 > - **Label**: Sale
 > - **URI**: http://example.org/Sale
 > - **Definition**: The exchange of a resource for money or other object of value.
-> - **Comment**: Typical associated Activities: BuyerActivity, SellerActivity, BrokerActivity.
+> - **Comment**: Typical associated Activities: BuyerActivity, SellerActivity, DealerActivity.
 > - **SubclassOf**: ex:CustodialEvent, bf:SaleEvent.
 
 **ex:Theft**
@@ -361,12 +361,6 @@ Activity Subclasses
 > - **SubclassOf**: http://example.org/Activity
 > - **Definition**: The act of taking possession, but not ownership, of a resource.
 
-**ex:BrokerActivity**
-> - **Label**: Broker
-> - **URI**: http://example.org/BrokerActivity
-> - **SubclassOf**: http://example.org/Activity
-> - **Definition**: The act of negotiating or arranging for a transaction.
-
 **ex:BuyerActivity**
 > - **Label**: Broker
 > - **URI**: http://example.org/BuyerActivity
@@ -384,6 +378,12 @@ Activity Subclasses
 > - **URI**: http://example.org/DeaccessionerActivity
 > - **SubclassOf**: http://example.org/Activity
 > - **Definition**: The act of permanently removing accessioned items from a collection or repository.
+
+**ex:DealerActivity**
+> - **Label**: Dealer
+> - **URI**: http://example.org/DealerActivity
+> - **SubclassOf**: http://example.org/Activity
+> - **Definition**: The act of negotiating or arranging for a transaction.
 
 **ex:DepositorActivity**
 > - **Label**: Depositor
@@ -444,6 +444,12 @@ Activity Subclasses
 > - **URI**: http://example.org/OwnerActivity
 > - **SubclassOf**: http://example.org/Activity
 > - **Definition**: The legal possession of a resource.
+
+**ex:PatronActivity**
+> - **Label**: Patron
+> - **URI**: http://example.org/PatronActivity
+> - **SubclassOf**: http://example.org/PatronActivity
+> - **Definition**: The activity of commissioning a work. Usually a patron uses his or her means or influence to support the work of artists, writers, etc. This includes those who commission and pay for individual works.
 
 **ex:RecipientActivity**
 > - **Label**: Recipient
