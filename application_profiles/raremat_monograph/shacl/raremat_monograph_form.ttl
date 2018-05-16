@@ -31,7 +31,7 @@
 
 # TODO annotation properties and imports for <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/ >
 
-<https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/ >
+<https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/>
   rdf:type owl:Ontology .
 
 
@@ -1864,7 +1864,6 @@ raremat_monograph_form:ItemForm_arm_hasPhysicalCondition
     sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;
     sh:description "Description of characteristics such as physical appearance, level of damage, quality, or completeness" ;
     sh:name "Physical condition" ;
-    sh:nodeKind sh:Literal ;
     sh:order "7"^^xsd:int ;
     tosh:editWidget swa:NestedObjectEditor .
     
