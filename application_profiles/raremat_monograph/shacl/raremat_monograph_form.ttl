@@ -1820,10 +1820,10 @@ raremat_monograph_form:ItemForm_bf_hasPart
 raremat_monograph_form:ItemForm_bf_partOf 
     a sh:PropertyShape ;
     sh:path bf:partOf ;
-    sh:name "Part of item" ;
+    sh:name "Part of a bound collection" ;
     sh:order "3"^^xsd:int ;
     sh:description "The item being described is part of another item." ;
-    sh:class bf:Item ;
+    sh:class arm:BoundCollection ;
     sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup .
     
 raremat_monograph_form:ItemForm_measure_hasMeasurementGroup 
