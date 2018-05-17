@@ -68,30 +68,53 @@
     rdfs:label "Enclosure" ;
     sh:targetClass arm:Enclosure ;
     sh:property
+    
         :EnclosureForm_rdf_type ,
-        :EnclosureForm_arm_hasMaterial ,          
-        :EnclosureForm_arm_markedBy ,
+        
+        # Omit for now: no vocabulary has been identified
+        :EnclosureForm_crm_P2_has_type ,
+        
         :EnclosureForm_activity_hasActivity ,
+        
+        # Omitting on first iteration of VitroLib
+        # :EnclosureForm_arm_hasMaterial ,
+                  
+        :EnclosureForm_arm_markedBy ,
+        
         :EnclosureForm_bf_note ;   
     .
-    
-##### ENCLOSURE MATERIAL #####
 
-:EnclosureForm_arm_hasMaterial
+##### ENCLOSURE TYPE #####
+
+# Not used for Bindings, only other Enclosures
+:EnclosureForm_rdf_type 
     a sh:PropertyShape ;
-    sh:node raremat_monograph_material:arm_hasMaterial ;
+    sh:node arm_core_property_shapes:rdf_type ;
+    sh:in (
+        # Removing here since created separate Binding form shape
+        # arm:Binding
+        arm:DustJacket
+        arm:SlipCase
+        arm:WrapAroundBand
+        arm:Wrapper
+        arm:Enclosure
+    ) ;
     # NON-VALIDATING
-    sh:order "0"^^xsd:int ;
+    sh:name "General type of enclosure" ;
+    sh:order "10"^^xsd:int ; 
     .
 
-##### ENCLOSURE MARKING #####
-
-:EnclosureForm_arm_markedBy
+  
+# Not used for Bindings, which has its own type vocabulary 
+# Omit for now: no vocabulary has been identified
+:EnclosureForm_crm_P2_has_type # + vocab 
     a sh:PropertyShape ;
-    sh:node raremat_monograph_marking:arm_markedBy ;
+    sh:node arm_core_property_shapes:crm_P2_has_type ;
     # NON-VALIDATING
-    sh:order "0"^^xsd:int ;
+    sh:name "Specific enclosure type, such as boards, " ;
+    sh:order "20"^^xsd:int ;   
     .
+
     
 ##### ENCLOSURE ACTIVITY #####
 
@@ -102,7 +125,7 @@
     sh:name "Agent" ;
     sh:description "Agent related to the Enclosure: binder, designer, creator, etc." ;
     sh:group raremat_monograph_property_groups:ActivityPropertyGroup ;
-    sh:order "50"^^xsd:int ;
+    sh:order "30"^^xsd:int ;
     tosh:editWidget swa:NestedObjectEditor ;       
     .
     
@@ -132,7 +155,26 @@
     sh:order "0"^^xsd:int ;  
     .  
 
+##### ENCLOSURE MATERIAL #####
 
+# Omit in first iteration of VitroLib
+:EnclosureForm_arm_hasMaterial
+    a sh:PropertyShape ;
+    sh:node raremat_monograph_material:arm_hasMaterial ;
+    # NON-VALIDATING
+    sh:order "40"^^xsd:int ;
+    .
+
+
+##### ENCLOSURE MARKING #####
+
+:EnclosureForm_arm_markedBy
+    a sh:PropertyShape ;
+    sh:node raremat_monograph_marking:arm_markedBy ;
+    # NON-VALIDATING
+    sh:order "60"^^xsd:int ;
+    .
+    
 ##### ENCLOSURE NOTE #####
 
 :EnclosureForm_bf_note
@@ -141,7 +183,7 @@
     # NON-VALIDATING
     sh:name "Enclosure note" ; 
     sh:description "Additional textual notes about this enclosure." ;     
-    sh:order "60"^^xsd:int ;   
+    sh:order "70"^^xsd:int ;   
     tosh:editWidget swa:NestedObjectEditor ;
     .
 
@@ -160,35 +202,8 @@
     ) ;
     # NON-VALIDATING
     sh:name "Note type" ;    
-    sh:order "0"^^xsd:int ;       
+    sh:order "10"^^xsd:int ;       
     . 
-
-##### ENCLOSURE TYPE #####
-
-:EnclosureForm_crm_P2_has_type # + vocab 
-    a sh:PropertyShape ;
-    sh:node arm_core_property_shapes:crm_P2_has_type ;
-    # NON-VALIDATING
-    sh:name "Specific enclosure type, such as boards, " ;
-    sh:order "20"^^xsd:int ;   
-    .
-
-:EnclosureForm_rdf_type 
-    a sh:PropertyShape ;
-    sh:node arm_core_property_shapes:rdf_type ;
-    sh:in (
-        # Removing here since created separate Binding form shape
-        # arm:Binding
-        arm:DustJacket
-        arm:SlipCase
-        arm:WrapAroundBand
-        arm:Wrapper
-        arm:Enclosure
-    ) ;
-    # NON-VALIDATING
-    sh:name "General type of enclosure" ;
-    sh:order "10"^^xsd:int ; 
-    .
 
 
 ##### BINDING-SPECIFIC SHAPES #####
@@ -217,74 +232,29 @@
     sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;   
     sh:order "1"^^xsd:int ;               
     .
-    
-       
+           
 :BindingForm
     a sh:NodeShape ;
     rdfs:label "Binding" ;
     sh:targetClass arm:Binding ;
     sh:property
+        :BindingForm_crm_P2_has_type ,  
+        
         :EnclosureForm_activity_hasActivity ,
-        # Uses generic Material form shape
+
         # In future, could  create a Binding-specific shape for 
         # arm:hasMaterial that specifies the RBMS binding vocab materials -
-        # i.e., only materials used for bindings
-        raremat_monograph_material:arm_hasMaterial ,  
-        # Uses general Marking form shape, no special constraints needed
-        raremat_monograph_marking:arm_markedBy ,
-        :EnclosureForm_bf_note ,   
-        :BindingForm_crm_P2_has_type ,   
-        :BindingForm_bf_hasPart ; 
+        # i.e., only materials used for bindings.
+        # Omitting on first iteration of VitroLib
+        # :EnclosureForm_arm_hasMaterial ,
+        
+        :BindingForm_bf_hasPart , 
+        
+        :EnclosureForm_arm_markedBy ,
+        
+        :EnclosureForm_bf_note ;    
     .
 
-##### BINDING COMPONENT #####
-
-:BindingForm_bf_hasPart 
-    a sh:PropertyShape ;
-    sh:node arm_core_property_shapes:bf_hasPart ;
-    sh:in (
-        # Getty AAT binding components: http://vocab.getty.edu/page/aat/300194225
-        aat:300261522
-        aat:300253047
-        aat:300261776
-        aat:300312358
-        aat:300202819
-        aat:300263630
-        aat:300253051
-        aat:300253057
-        aat:300263628
-        aat:300195163
-        aat:300263627
-        aat:300195149
-        aat:300209357
-        aat:300083023
-        aat:300263593
-        aat:300263626
-        aat:300195150
-        aat:300263618
-        aat:300248893
-        aat:300195163
-        aat:300261765
-        aat:300263629
-        aat:300261769
-        aat:300410465
-        aat:300263625
-        aat:300252986
-        aat:300261564
-        aat:300208775
-        aat:300263631
-        aat:300253125
-        aat:300253099
-        aat:300253096
-        aat:300261780
-        aat:300263632
-        aat:300253949       
-    ) ;
-    # NON-VALIDATING
-    sh:name "Binding component" ;
-    sh:description "Part of the binding, such as binding board, headband, bead, finishing hardware, etc." ;
-    sh:order "0"^^xsd:int ;   
-    . 
 
 ##### BINDING TYPE #####
 
@@ -611,5 +581,55 @@
     # NON-VALIDATING
     sh:name "Binding type" ;
     sh:description "Specific type of binding, such as adhesive binding, spiral binding, etc." ;
-    sh:order "0"^^xsd:int ;   
+    sh:order "20"^^xsd:int ;   
     .    
+
+    
+##### BINDING COMPONENT #####
+
+:BindingForm_bf_hasPart 
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:bf_hasPart ;
+    sh:in (
+        # Getty AAT binding components: http://vocab.getty.edu/page/aat/300194225
+        aat:300261522
+        aat:300253047
+        aat:300261776
+        aat:300312358
+        aat:300202819
+        aat:300263630
+        aat:300253051
+        aat:300253057
+        aat:300263628
+        aat:300195163
+        aat:300263627
+        aat:300195149
+        aat:300209357
+        aat:300083023
+        aat:300263593
+        aat:300263626
+        aat:300195150
+        aat:300263618
+        aat:300248893
+        aat:300195163
+        aat:300261765
+        aat:300263629
+        aat:300261769
+        aat:300410465
+        aat:300263625
+        aat:300252986
+        aat:300261564
+        aat:300208775
+        aat:300263631
+        aat:300253125
+        aat:300253099
+        aat:300253096
+        aat:300261780
+        aat:300263632
+        aat:300253949       
+    ) ;
+    # NON-VALIDATING
+    sh:name "Binding component" ;
+    sh:description "Part of the binding, such as binding board, headband, bead, finishing hardware, etc." ;
+    sh:order "50"^^xsd:int ;   
+    . 
