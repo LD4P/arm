@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/carriers/nc" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+        <madsrdf:authoritativeLabel>volume</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSCollection rdf:resource="http://id.loc.gov/vocabulary/carriers/collection_Carriers"/>
+        <madsrdf:isMemberOfMADSCollection rdf:resource="http://id.loc.gov/vocabulary/carriers/collection_RDACarriers"/>
+        <madsrdf:isMemberOfMADSCollection rdf:resource="http://id.loc.gov/vocabulary/carriers/collection_UnmediatedCarriers"/>
+        <madsrdf:code>nc</madsrdf:code>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/carriers"/>
+        <madsrdf:scopeNote xml:lang="en">MARC 007/01: no code</madsrdf:scopeNote>
+        <madsrdf:adminMetadata>
+            <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+                <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</ri:recordStatus>
+                <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-23T00:00:00</ri:recordChangeDate>
+                <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+            </ri:RecordInfo>
+        </madsrdf:adminMetadata>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">volume</rdfs:label>
+        <skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">volume</skos:prefLabel>
+        <skos:scopeNote xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">MARC 007/01: no code</skos:scopeNote>
+        <skos:notation xmlns:skos="http://www.w3.org/2004/02/skos/core#">nc</skos:notation>
+        <skos:inScheme rdf:resource="http://id.loc.gov/vocabulary/carriers" xmlns:skos="http://www.w3.org/2004/02/skos/core#"/>
+        <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+            <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+                <cs:subjectOfChange rdf:resource="http://id.loc.gov/vocabulary/carriers/nc"/>
+                <cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+                <cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-23T00:00:00</cs:createdDate>
+                <cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</cs:changeReason>
+            </cs:ChangeSet>
+        </skos:changeNote>
+    </madsrdf:Authority>
+
+    <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/carriers/nb" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+        <madsrdf:authoritativeLabel>sheet</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSCollection rdf:resource="http://id.loc.gov/vocabulary/carriers/collection_Carriers"/>
+        <madsrdf:isMemberOfMADSCollection rdf:resource="http://id.loc.gov/vocabulary/carriers/collection_RDACarriers"/>
+        <madsrdf:isMemberOfMADSCollection rdf:resource="http://id.loc.gov/vocabulary/carriers/collection_UnmediatedCarriers"/>
+        <madsrdf:code>nb</madsrdf:code>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/carriers"/>
+        <madsrdf:scopeNote xml:lang="en">MARC 007/01: no code</madsrdf:scopeNote>
+        <madsrdf:adminMetadata>
+            <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+                <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</ri:recordStatus>
+                <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-23T00:00:00</ri:recordChangeDate>
+                <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+            </ri:RecordInfo>
+        </madsrdf:adminMetadata>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">sheet</rdfs:label>
+        <skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">sheet</skos:prefLabel>
+        <skos:scopeNote xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">MARC 007/01: no code</skos:scopeNote>
+        <skos:notation xmlns:skos="http://www.w3.org/2004/02/skos/core#">nb</skos:notation>
+        <skos:inScheme rdf:resource="http://id.loc.gov/vocabulary/carriers" xmlns:skos="http://www.w3.org/2004/02/skos/core#"/>
+        <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+            <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+                <cs:subjectOfChange rdf:resource="http://id.loc.gov/vocabulary/carriers/nb"/>
+                <cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+                <cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-23T00:00:00</cs:createdDate>
+                <cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</cs:changeReason>
+            </cs:ChangeSet>
+        </skos:changeNote>
+    </madsrdf:Authority>
+
+    <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/carriers/na" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+        <madsrdf:authoritativeLabel>roll</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSCollection rdf:resource="http://id.loc.gov/vocabulary/carriers/collection_Carriers"/>
+        <madsrdf:isMemberOfMADSCollection rdf:resource="http://id.loc.gov/vocabulary/carriers/collection_RDACarriers"/>
+        <madsrdf:isMemberOfMADSCollection rdf:resource="http://id.loc.gov/vocabulary/carriers/collection_UnmediatedCarriers"/>
+        <madsrdf:code>na</madsrdf:code>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/carriers"/>
+        <madsrdf:scopeNote xml:lang="en">MARC 007/01: no code</madsrdf:scopeNote>
+        <madsrdf:adminMetadata>
+            <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+                <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</ri:recordStatus>
+                <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-23T00:00:00</ri:recordChangeDate>
+                <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+            </ri:RecordInfo>
+        </madsrdf:adminMetadata>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">roll</rdfs:label>
+        <skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">roll</skos:prefLabel>
+        <skos:scopeNote xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">MARC 007/01: no code</skos:scopeNote>
+        <skos:notation xmlns:skos="http://www.w3.org/2004/02/skos/core#">na</skos:notation>
+        <skos:inScheme rdf:resource="http://id.loc.gov/vocabulary/carriers" xmlns:skos="http://www.w3.org/2004/02/skos/core#"/>
+        <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+            <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+                <cs:subjectOfChange rdf:resource="http://id.loc.gov/vocabulary/carriers/na"/>
+                <cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+                <cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-23T00:00:00</cs:createdDate>
+                <cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</cs:changeReason>
+            </cs:ChangeSet>
+        </skos:changeNote>
+    </madsrdf:Authority>
+
+
+    <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/carriers/no" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+        <madsrdf:authoritativeLabel>card</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSCollection rdf:resource="http://id.loc.gov/vocabulary/carriers/collection_Carriers"/>
+        <madsrdf:isMemberOfMADSCollection rdf:resource="http://id.loc.gov/vocabulary/carriers/collection_RDACarriers"/>
+        <madsrdf:isMemberOfMADSCollection rdf:resource="http://id.loc.gov/vocabulary/carriers/collection_UnmediatedCarriers"/>
+        <madsrdf:code>no</madsrdf:code>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/carriers"/>
+        <madsrdf:scopeNote xml:lang="en">MARC 007/01: no code</madsrdf:scopeNote>
+        <madsrdf:adminMetadata>
+            <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+                <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</ri:recordStatus>
+                <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-23T00:00:00</ri:recordChangeDate>
+                <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+            </ri:RecordInfo>
+        </madsrdf:adminMetadata>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">card</rdfs:label>
+        <skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">card</skos:prefLabel>
+        <skos:scopeNote xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">MARC 007/01: no code</skos:scopeNote>
+        <skos:notation xmlns:skos="http://www.w3.org/2004/02/skos/core#">no</skos:notation>
+        <skos:inScheme rdf:resource="http://id.loc.gov/vocabulary/carriers" xmlns:skos="http://www.w3.org/2004/02/skos/core#"/>
+        <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+            <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+                <cs:subjectOfChange rdf:resource="http://id.loc.gov/vocabulary/carriers/no"/>
+                <cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+                <cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-23T00:00:00</cs:createdDate>
+                <cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</cs:changeReason>
+            </cs:ChangeSet>
+        </skos:changeNote>
+    </madsrdf:Authority>
+    
+    <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/carriers/nz" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+        <madsrdf:authoritativeLabel>other unmediated carrier</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSCollection rdf:resource="http://id.loc.gov/vocabulary/carriers/collection_Carriers"/>
+        <madsrdf:isMemberOfMADSCollection rdf:resource="http://id.loc.gov/vocabulary/carriers/collection_RDACarriers"/>
+        <madsrdf:isMemberOfMADSCollection rdf:resource="http://id.loc.gov/vocabulary/carriers/collection_UnmediatedCarriers"/>
+        <madsrdf:code>nz</madsrdf:code>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/carriers"/>
+        <madsrdf:scopeNote xml:lang="en">MARC 007/01: no code</madsrdf:scopeNote>
+        <madsrdf:adminMetadata>
+            <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+                <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</ri:recordStatus>
+                <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-23T00:00:00</ri:recordChangeDate>
+                <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+            </ri:RecordInfo>
+        </madsrdf:adminMetadata>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">other unmediated carrier</rdfs:label>
+        <skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">other unmediated carrier</skos:prefLabel>
+        <skos:scopeNote xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">MARC 007/01: no code</skos:scopeNote>
+        <skos:notation xmlns:skos="http://www.w3.org/2004/02/skos/core#">nz</skos:notation>
+        <skos:inScheme rdf:resource="http://id.loc.gov/vocabulary/carriers" xmlns:skos="http://www.w3.org/2004/02/skos/core#"/>
+        <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+            <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+                <cs:subjectOfChange rdf:resource="http://id.loc.gov/vocabulary/carriers/nz"/>
+                <cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+                <cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-23T00:00:00</cs:createdDate>
+                <cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</cs:changeReason>
+            </cs:ChangeSet>
+        </skos:changeNote>
+    </madsrdf:Authority>
+    
+</rdf:RDF>
