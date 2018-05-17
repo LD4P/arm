@@ -29,7 +29,7 @@
         # Type is defined in the sub-shape, since the type options depend
         # on the resource related to the activity. Type will be ordered
         # first.
-        # :ActivityForm_rdf_type ,
+        # :ActivityForm_rdf_type , - should be ordered second after :ActivityForm_activity_isActivityOf 
            
         :ActivityForm_bf_agent ,
         :ActivityForm_bf_date ,

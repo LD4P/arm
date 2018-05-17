@@ -43,10 +43,10 @@
     rdfs:label "Marking form" ;
     sh:targetClass arm:Marking ;
     sh:property 
-        :MarkingForm_activity_hasActivity ,
-        :MarkingForm_bf_note ,
         :MarkingForm_rdf_type ,
-        :MarkingForm_rdf_value ;
+        :MarkingForm_rdf_value ,
+        :MarkingForm_activity_hasActivity ,
+        :MarkingForm_bf_note ;
     .
      
 :MarkingForm_rdf_type 
@@ -65,7 +65,7 @@
     # NON-VALIDATING
     sh:name "Marking type" ;
     sh:description "Marking type" ;
-    sh:order "0"^^xsd:int ;
+    sh:order "10"^^xsd:int ;
     .
     
 :MarkingForm_rdf_value 
@@ -74,7 +74,7 @@
     # NON-VALIDATING
     sh:name "Textual value of the marking" ;
     sh:description "Textual value" ;
-    sh:order "0"^^xsd:int ;
+    sh:order "20"^^xsd:int ;
     .
 
 ##### MARKING ACTIVITY #####
@@ -82,12 +82,13 @@
 :MarkingForm_activity_hasActivity
     a sh:PropertyShape ;
     sh:node arm_core_property_shapes:activity_hasActivity ;
-    # Only one Activity type applies to Markings
-    # raremat_monograph_activity:ActivityForm should apply here due to sh:class value
+    # Only one Activity type applies to Markings.
+    # raremat_monograph_activity:ActivityForm should apply here due to 
+    # sh:class value.
     sh:class activity:CreatorActivity ;
     # NON-VALIDATING
     sh:name "Marking creator" ;
-    sh:order "0"^^xsd:int ;
+    sh:order "30"^^xsd:int ;
     tosh:editWidget swa:NestedObjectEditor ;
     .
 
@@ -101,7 +102,7 @@
     # NON-VALIDATING
     sh:name "Marking note" ; 
     sh:description "Additional textual notes about this marking." ;     
-    sh:order "0"^^xsd:int ;   
+    sh:order "40"^^xsd:int ;   
     tosh:editWidget swa:NestedObjectEditor ;
     . 
    

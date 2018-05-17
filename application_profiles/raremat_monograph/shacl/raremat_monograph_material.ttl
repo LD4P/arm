@@ -47,7 +47,7 @@
     sh:node arm_core_property_shapes:crm_P2_has_type ;
     # NON-VALIDATING
     sh:name "Material type" ;
-    sh:order "0"^^xsd:int ;          
+    sh:order "10"^^xsd:int ;          
     .      
       
 # The following sh:path ( crm:P2_has_type gvp:broaderExtended ) isn't meant 

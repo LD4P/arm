@@ -55,6 +55,7 @@
     # NON-VALIDATING
     sh:name "Note type" ;
     sh:description "Type of note." ;        
+    sh:order "10"^^xsd:int ;
     .
 
 :NoteForm_rdf_value 
@@ -65,4 +66,5 @@
     # NON-VALIDATING
     sh:name "Note text" ;
     sh:description "String value for the note." ;
+    sh:order "20"^^xsd:int ;
     . 
