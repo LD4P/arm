@@ -1832,7 +1832,7 @@ raremat_monograph_form:ItemForm_seq_directlyPrecedes
     sh:path seq:directlyPrecedes ;
     sh:class bf:Item ;
     sh:name "Directly precedes" ;
-    sh:description "Primarily applicable to Boundwiths, links to a item that directly follows the item currently being described" ;
+    sh:description "Primarily applicable to bound-withs, links to an item that directly follows the item currently being described." ;
     tosh:editWidget swa:NestedObjectEditor ;
     sh:nodeKind sh:IRI ;
     sh:order "4"^^xsd:int . 
@@ -1842,7 +1842,7 @@ raremat_monograph_form:ItemForm_seq_directlyFollows
     sh:path seq:directlyFollows ;
     sh:class bf:Item ;
     sh:name "Directly follows" ;
-    sh:description "Primarily applicable to Boundwiths, lLinks to a item that directly precedes the item currently being described" ;
+    sh:description "Primarily applicable to bound-withs, links to an item that directly precedes the item currently being described." ;
     tosh:editWidget swa:NestedObjectEditor ;
     sh:nodeKind sh:IRI ;
     sh:order "5"^^xsd:int .
@@ -1852,7 +1852,7 @@ raremat_monograph_form:ItemForm_seq_precedes
     sh:path seq:precedes ;
     sh:class bf:Item ;
     sh:name "Precedes" ;
-    sh:description "Primarily applicable to Boundwiths, links to a condition that follows the condition currently being described" ;
+    sh:description "Primarily applicable to bound-withs, links to an item that follows the item currently being described." ;
     tosh:editWidget swa:NestedObjectEditor ;
     sh:nodeKind sh:IRI ;
     sh:order "6"^^xsd:int .
@@ -1862,7 +1862,7 @@ raremat_monograph_form:ItemForm_seq_follows
     sh:path seq:follows ;
     sh:class bf:Item ;
     sh:name "Follows" ;
-    sh:description "Primarily applicable to Boundwiths, links to a condition that precedes the condition currently being described" ;
+    sh:description "Primarily applicable to bound-withs, links to an item that precedes the item currently being described." ;
     tosh:editWidget swa:NestedObjectEditor ;
     sh:nodeKind sh:IRI ;
     sh:order "7"^^xsd:int .
