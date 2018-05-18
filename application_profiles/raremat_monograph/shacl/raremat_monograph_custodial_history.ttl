@@ -43,7 +43,7 @@
     sh:name "Custodial event" ;
     sh:description "A custodial 'event' includes both static and transitional conditions: e.g., a period of ownership and a purchase. It is not restricted by the general notion of 'event.'" ;
     sh:group raremat_monograph_property_groups:ItemHistoryAndProvenancePropertyGroup ;
-    sh:order "0"^^xsd:int ; # TODO Add - see issue #85  
+    sh:order "0"^^xsd:int ;
     tosh:editWidget swa:NestedObjectEditor ; 
     .    
 
