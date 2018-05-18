@@ -1826,6 +1826,47 @@ raremat_monograph_form:ItemForm_bf_partOf
     sh:class arm:BoundCollection ;
     sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup .
     
+
+raremat_monograph_form:ItemForm_seq_directlyPrecedes
+    a sh:PropertyShape ; 
+    sh:path seq:directlyPrecedes ;
+    sh:class bf:Item ;
+    sh:name "Directly precedes" ;
+    sh:description "Primarily applicable to bound-withs, links to an item that directly follows the item currently being described." ;
+    tosh:editWidget swa:NestedObjectEditor ;
+    sh:nodeKind sh:IRI ;
+    sh:order "4"^^xsd:int . 
+    
+raremat_monograph_form:ItemForm_seq_directlyFollows
+    a sh:PropertyShape ; 
+    sh:path seq:directlyFollows ;
+    sh:class bf:Item ;
+    sh:name "Directly follows" ;
+    sh:description "Primarily applicable to bound-withs, links to an item that directly precedes the item currently being described." ;
+    tosh:editWidget swa:NestedObjectEditor ;
+    sh:nodeKind sh:IRI ;
+    sh:order "5"^^xsd:int .
+      
+raremat_monograph_form:ItemForm_seq_precedes
+    a sh:PropertyShape ; 
+    sh:path seq:precedes ;
+    sh:class bf:Item ;
+    sh:name "Precedes" ;
+    sh:description "Primarily applicable to bound-withs, links to an item that follows the item currently being described." ;
+    tosh:editWidget swa:NestedObjectEditor ;
+    sh:nodeKind sh:IRI ;
+    sh:order "6"^^xsd:int .
+    
+raremat_monograph_form:ItemForm_seq_follows
+    a sh:PropertyShape ; 
+    sh:path seq:follows ;
+    sh:class bf:Item ;
+    sh:name "Follows" ;
+    sh:description "Primarily applicable to bound-withs, links to an item that precedes the item currently being described." ;
+    tosh:editWidget swa:NestedObjectEditor ;
+    sh:nodeKind sh:IRI ;
+    sh:order "7"^^xsd:int .
+    
 raremat_monograph_form:ItemForm_measure_hasMeasurementGroup 
     a sh:PropertyShape ;
     sh:path measure:hasMeasurementGroup ;
@@ -1833,14 +1874,14 @@ raremat_monograph_form:ItemForm_measure_hasMeasurementGroup
     sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;
     sh:name "Instance measurement information" ;
     sh:nodeKind sh:IRI ;
-    sh:order "4"^^xsd:int ;
+    sh:order "8"^^xsd:int ;
     tosh:editWidget swa:NestedObjectEditor .
    
 raremat_monograph_form:ItemForm_bf_extent 
     a sh:PropertyShape ;
     sh:path bf:extent ;
     sh:name "Item pagination and foliation" ;
-    sh:order "5"^^xsd:int ;
+    sh:order "9"^^xsd:int ;
     sh:description "Sequential numbering of individual leaves, plates, pages (numbering on both sides), or columns (used as a sequence of numbering) of a resource." ;
     sh:class arm:PaginationFoliation ;
     sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;
@@ -1854,7 +1895,7 @@ raremat_monograph_form:ItemForm_arm_hasSignatureStatement
     sh:description "A formulaic statement describing the pattern followed in assembling the sheets of the book, as expressed in its signatures. Signatures are letters, numerals, symbols, or a group of such characters printed at the foot of the rectos of the first few leaves of each gathering (quire) to aid the binder in correctly assembling the sections." ;
     sh:name "Signature statement" ;
     sh:nodeKind sh:IRI ;
-    sh:order "6"^^xsd:int ;
+    sh:order "10"^^xsd:int ;
     tosh:editWidget swa:NestedObjectEditor .
     
 raremat_monograph_form:ItemForm_arm_hasPhysicalCondition
@@ -1864,7 +1905,7 @@ raremat_monograph_form:ItemForm_arm_hasPhysicalCondition
     sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;
     sh:description "Description of characteristics such as physical appearance, level of damage, quality, or completeness" ;
     sh:name "Physical condition" ;
-    sh:order "7"^^xsd:int ;
+    sh:order "11"^^xsd:int ;
     tosh:editWidget swa:NestedObjectEditor .
     
 raremat_monograph_form:ItemForm_arm_hasMaterial 
@@ -1875,7 +1916,7 @@ raremat_monograph_form:ItemForm_arm_hasMaterial
     sh:description "Materials that make up this this item. Materials can also be more granularly associated with each part of the item, and/or as base or applied material." ;
     sh:name "Has material" ;
     sh:nodeKind sh:IRI ;
-    sh:order "8"^^xsd:int ;
+    sh:order "12"^^xsd:int ;
     tosh:editWidget swa:NestedObjectEditor .
 
 
@@ -1887,7 +1928,7 @@ raremat_monograph_form:ItemForm_rdau_P60596
     sh:description "Base materials for this this instance. Base materials can also be more granularly associated with each part of the item." ;
     sh:name "Has base material" ;
     sh:nodeKind sh:IRI ;
-    sh:order "9"^^xsd:int ;
+    sh:order "13"^^xsd:int ;
     tosh:editWidget swa:NestedObjectEditor .
   
   
@@ -1899,7 +1940,7 @@ raremat_monograph_form:ItemForm_rdau_P60159
     sh:description "Applied materials for this this item. Applied materials can also be more granularly associated with each part of the item." ;
     sh:name "Has applied material" ;
     sh:nodeKind sh:IRI ;
-    sh:order "10"^^xsd:int ;
+    sh:order "14"^^xsd:int ;
     tosh:editWidget swa:NestedObjectEditor .
     
     
@@ -1918,7 +1959,7 @@ raremat_monograph_form:ItemForm_arm_writtenIn
     sh:description "The Font or HandWriting the textual information is displayed in." ;
     sh:name "Font or HandWriting" ;
     sh:nodeKind sh:IRI ;
-    sh:order "11"^^xsd:int ;
+    sh:order "15"^^xsd:int ;
     tosh:editWidget swa:NestedObjectEditor .
     
 raremat_monograph_form:ItemForm_arm_markedBy 
@@ -1951,7 +1992,7 @@ raremat_monograph_form:ItemForm_arm_markedBy
     sh:description "Markings applied to objects during or after creation, conveying information such as the object's origin or maker, its authenticity, or a change in its official status." ;
     sh:name "Markings" ;
     sh:nodeKind sh:IRI ;
-    sh:order "12"^^xsd:int ;
+    sh:order "16"^^xsd:int ;
     tosh:editWidget swa:NestedObjectEditor .
     
     
