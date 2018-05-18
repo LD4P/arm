@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet exclude-result-prefixes="xs arm" version="3.0"
-  xmlns:arm="https://w3id.org/arm/core/vocabularies/binding_type/0.1#"
+  xmlns:arm="https://w3id.org/arm/core/vocabularies/rbms_binding_type/0.1#"
   xmlns:dcterms="http://purl.org/dc/terms/"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -21,7 +21,7 @@
 
   <!-- Current base URI -->
   <xsl:param name="base-uri"
-    >https://w3id.org/arm/core/vocabularies/binding_type/0.1</xsl:param>
+    >https://w3id.org/arm/core/vocabularies/rbms_binding_type/0.1</xsl:param>
 
   <!-- id.loc.gov for RBMS -->
   <xsl:param name="rbms">http://id.loc.gov/rwo/agents/n78097904</xsl:param>
