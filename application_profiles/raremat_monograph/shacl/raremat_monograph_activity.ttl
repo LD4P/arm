@@ -32,7 +32,9 @@
         # :ActivityForm_rdf_type , - should be ordered second after :ActivityForm_activity_isActivityOf 
            
         :ActivityForm_bf_agent ,
+        
         :ActivityForm_bf_date ,
+        
         :ActivityForm_arm_atLocation ;
     .
  
@@ -44,7 +46,6 @@
     sh:name "Associated resource" ;
     sh:order "10"^^xsd:int ;
     .
-
 
 :ActivityForm_bf_agent 
     a sh:PropertyShape ;
@@ -85,4 +86,3 @@
     sh:order "50"^^xsd:int ;
     raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
     .
-      

@@ -47,6 +47,7 @@
     tosh:editWidget swa:NestedObjectEditor ; 
     .    
 
+
 ##### CUSTODIAL HISTORY #####
 
 # Form for the CustodialHistory page, so CustodialEvents can be added to it.
@@ -56,7 +57,7 @@
     sh:targetClass ch:CustodialHistory ;
     sh:property 
         # The relationship to the Item is not editable, but define the 
-        # PropertyShape for display purposes.
+        # PropertyShape for display purposes on the CustodialHistory page.
         :CustodialHistoryForm_ch_isCustodialHistoryOf ,    
         
         # Edit only from CustodialHistory page.  

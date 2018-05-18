@@ -23,10 +23,29 @@
     rdfs:label "Identifier" ;
     sh:targetClass bf:Identifier ;
     sh:property 
+    
+        # Only for use on Identifier page; do not include in embedded forms.
+        :bf_identifies ,
+        
+        # Possible Identifier types depend on the context, so include it in 
+        # the sub-shapes.
+        # :IdentifierForm_rdf_type ,
+        
         :rdf_value ,
+        
         :bf_status ;
     .    
 
+# Only for use on Identifier page; do not include in embedded forms.
+:bf_identifies 
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:bf_identifies ;
+    # NON-VALIDATING
+    sh:name "Resource identified" ;
+    sh:description "Resource this identifier identifies." ;
+    sh:order "5"^^xsd:int ; 
+    . 
+    
 :rdf_value 
     a sh:PropertyShape ;
     sh:node arm_core_property_shapes:rdf_value ;

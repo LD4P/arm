@@ -26,9 +26,11 @@
     rdfs:label "Note form" ;
     sh:targetClass bf:Note ;
     sh:property 
+
         # Possible note types depend on the context, so include it in the
         # sub-shapes
         # :NoteForm_rdf_type ,
+        
         :NoteForm_rdf_value ;
     .  
 

@@ -72,9 +72,15 @@
     a sh:PropertyShape ;
     sh:path arm:hasMaterial ;
     sh:nodeKind sh:IRI ; 
-    sh:class crm:E57 ;
+    sh:class crm:E57_Material ;
     .
 
+:arm_isMaterialOf 
+    a sh:PropertyShape ;
+    sh:path arm:isMaterialOf ;
+    sh:nodeKind sh:IRI ; 
+    .
+    
 :arm_isAgentOf
     a sh:PropertyShape ;
     sh:path arm:isAgentOf ;
@@ -87,7 +93,13 @@
     sh:nodeKind sh:IRI ; 
     sh:class arm:Marking ;
     .
-        
+
+:arm_markes 
+    a sh:PropertyShape ;
+    sh:path arm:marks ;
+    sh:nodeKind sh:IRI ; 
+    .    
+            
 :arm_startDate 
     a sh:PropertyShape ;
     sh:path arm:startDate ;
@@ -125,6 +137,12 @@
     sh:path bf:identifiedBy ;
     sh:nodeKind sh:IRI ;
     sh:class bf:Identifier ;
+    .
+    
+:bf_identifies
+    a sh:PropertyShape ;
+    sh:path bf:identifies ;
+    sh:nodeKind sh:IRI ;
     .
        
 :bf_note

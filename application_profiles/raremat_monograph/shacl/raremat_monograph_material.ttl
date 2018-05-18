@@ -37,11 +37,24 @@
 :MaterialForm
     rdf:type sh:NodeShape ;
     rdfs:label "Material form" ;
-    sh:targetClass crm:E57 ;
+    sh:targetClass crm:E57_Material;
     sh:property 
+    
+        # Only for use on Material page; do not include in embedded forms.
+        :MaterialForm_arm_isMaterialOf ,
+        
         :MaterialForm_crm_P2_has_type ;
     .
-       
+ 
+:MaterialForm_arm_isMaterialOf 
+    a sh:NodeShape ;
+    sh:node arm_core_property_shapes:arm_isMaterialOf ;
+    # NON-VALIDATING
+    sh:name "Resource" ;
+    sh:description "Resource made of this Material" ;
+    sh:order "10"^^xsd:int ; 
+    .
+      
 :MaterialForm_crm_P2_has_type
     a sh:PropertyShape ;
     sh:node arm_core_property_shapes:crm_P2_has_type ;

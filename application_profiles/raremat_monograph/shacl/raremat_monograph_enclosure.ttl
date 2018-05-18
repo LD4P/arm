@@ -35,8 +35,7 @@
     # NB Binding has some fields that don't apply to all Enclosures,
     # so defined a Binding-specific form shape below, and using this 
     # for non-Binding Enclosures, thus use of "Other" in the name.
-    sh:name "Other enclosure" ; 
-    tosh:editWidget swa:NestedObjectEditor ;             
+    sh:name "Other enclosure" ;           
     .
 
 # Links Instance to Enclosure. Note that Instance and Item use different
@@ -69,11 +68,14 @@
     sh:targetClass arm:Enclosure ;
     sh:property
     
+        # Only for use on Enclosure page 
+        :EnclosureForm_bf_partOf ,
+           
         :EnclosureForm_rdf_type ,
         
         # Omit for now: no vocabulary has been identified
         :EnclosureForm_crm_P2_has_type ,
-        
+     
         :EnclosureForm_activity_hasActivity ,
         
         # Omitting on first iteration of VitroLib
@@ -83,6 +85,19 @@
         
         :EnclosureForm_bf_note ;   
     .
+
+##### RELATED RESOURCE #####
+
+# Only for use on Enclosure page
+:EnclosureForm_bf_partOf
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:bf_partOf ;
+    # NON-VALIDATING
+    sh:name "Related resource" ;
+    sh:description "Resource this enclosure encloses." ;
+    sh:order "5"^^xsd:int ;   
+    .    
+
 
 ##### ENCLOSURE TYPE #####
 
@@ -111,7 +126,8 @@
     a sh:PropertyShape ;
     sh:node arm_core_property_shapes:crm_P2_has_type ;
     # NON-VALIDATING
-    sh:name "Specific enclosure type, such as boards, " ;
+    sh:name "Enclosure type" ;
+    sh:description "" ;
     sh:order "20"^^xsd:int ;   
     .
 
@@ -208,8 +224,7 @@
 
 ##### BINDING-SPECIFIC SHAPES #####
 
-# Generic PropertyShape linking a resource to an Enclosure. Specific
-# constraints added in InstanceForm:bf_hasPart_arm_Enclosure and 
+# Links a resource to a Binding.
 :bf_hasPart_arm_Binding
     a sh:PropertyShape ;
     sh:node arm_core_property_shapes:bf_hasPart ;
@@ -238,6 +253,10 @@
     rdfs:label "Binding" ;
     sh:targetClass arm:Binding ;
     sh:property
+    
+         # Only for use on Binding page 
+        :EnclosureForm_bf_partOf ,
+        
         :BindingForm_crm_P2_has_type ,  
         
         :EnclosureForm_activity_hasActivity ,
