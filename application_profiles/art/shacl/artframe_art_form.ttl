@@ -1482,8 +1482,6 @@ artframe_art_form:ItemForm_bf_identifiedBy
 # /////// Work Activity FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
 artframe_art_form:ArtWorkActivityForm
-  rdf:type rdfs:Class ;
-  rdf:type sh:NodeShape ;
   rdfs:label "Agent Activity" ;
   sh:targetClass arm:Activity ;
   rdfs:subClassOf rdfs:Resource ;
@@ -1550,7 +1548,6 @@ artframe_art_form:ArtWorkActivityForm_arm_atLocation
 # /////// Instance Activity FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
 artframe_art_form:ArtInstanceActivityForm
-  rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Agent Activity" ;
   sh:targetClass activity:Activity ;
@@ -1615,8 +1612,6 @@ artframe_art_form:ArtInstanceActivityForm_arm_atLocation
 # /////// Item Activity FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
 artframe_art_form:ArtItemActivityForm
-  rdf:type rdfs:Class ;
-  rdf:type sh:NodeShape ;
   rdfs:label "Agent Activity" ;
   sh:targetClass activity:Activity ;
   rdfs:subClassOf rdfs:Resource ;
@@ -1680,8 +1675,6 @@ artframe_art_form:ArtInstanceActivityForm_arm_atLocation
 # /////// Attribution FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
 artframe_art_form:AttributionForm
-  rdf:type rdfs:Class ;
-  rdf:type sh:NodeShape ;
   rdfs:label "Attribution form" ;
   sh:targetClass arm:Attribution ;
   rdfs:subClassOf rdfs:Resource ;
@@ -1744,7 +1737,6 @@ artframe_art_form:AttributionForm
 # /////// MeasurementGroup FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
 artframe_art_form:MeasurementGroupForm
-  rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Measurement Group Form" ;
   sh:description "A group of measurements, e.g. length, width, height measuring the size of a resource would be one measurement group" ;
@@ -1776,7 +1768,6 @@ artframe_art_form:MeasurementGroupForm_measurement_hasMeasurement
 # /////// Measurement FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
 artframe_art_form:MeasurementForm
-  rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Measurement form" ;
   sh:targetClass measure:Measurement ;
@@ -1903,7 +1894,6 @@ artframe_art_form:MeasurementForm_measurement_measures
 # /////// NOTE FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
 artframe_art_form:NoteForm
-  rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Note form" ;
   rdfs:subClassOf rdfs:Resource ;
@@ -1958,7 +1948,6 @@ artframe_art_form:NoteForm_dcterms_description
 # /////// AwardReceipt FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
 artframe_art_form:AwardReceiptForm
-  rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Award receipt" ;
   sh:targetClass award:AwardReceipt ;
@@ -2038,7 +2027,6 @@ artframe_art_form:AwardReceiptForm_arm_hasActivity
 # /////// AwardActivity FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
 artframe_art_form:AwardReceiptActivityForm
-  rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Award receipt agent activity" ;
   rdfs:subClassOf rdfs:Resource ;
@@ -2093,7 +2081,6 @@ artframe_art_form:AwardForm_rdfs_label
 # /////// Work Title FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
 artframe_art_form:WorkTitleForm
-  rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Title form" ;
   rdfs:subClassOf rdfs:Resource ;
@@ -2208,7 +2195,6 @@ artframe_art_form:WorkTitleForm_bf_note
 # /////// Instance Title FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
 artframe_art_form:InstanceTitleForm
-  rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Title form" ;
   rdfs:subClassOf rdfs:Resource ;
@@ -2351,7 +2337,6 @@ artframe_art_form:InstanceTitleForm_bf_note
 # /////// Item Title FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
 artframe_art_form:ItemTitleForm
-  rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Title form" ;
   rdfs:subClassOf rdfs:Resource ;
@@ -2566,7 +2551,6 @@ artframe_art_form:MaterialForm_crm_P2_has_type_skos_inScheme
 # /////// Font FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
 artframe_art_form:FontForm
-  rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Font form" ;
   rdfs:subClassOf rdfs:Resource ;
