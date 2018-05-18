@@ -26,11 +26,11 @@ In total, there are four use cases to be modeled:
 
 There is also a need to model dates, identifiers, and other data related to citations. The proposed model will follow the general BIBFRAME modeling practices for dates, identifiers, and any other core data elements.
 
-To address these four use cases, a new class should be created to represent bibliographic citation entities (**ex:Citation**). A citation functions as an intermediate node between a reference source (bf:Work), and a resource of interest to the cataloger (typically a bf:Item or bf:Instance).
+To address these four use cases, a new class should be created to represent bibliographic citation entities (**ex:Citation**). A citation functions as an intermediate node between a reference source, and a resource of interest to the cataloger (typically a bf:Item or bf:Instance).
 
 A citation is related to a resource of interest by the property **ex:hasCitation** (inverse ex:isCitationOf) and to the citing work by the property **ex:hasSource** (inverse ex:isSourceOf).
 
-A citation may link directly to its source bf:Work, or it may link indirectly to the source through a specific location, modeled as a hierarchical chain proceeding from the most specific location up to the citing work. For example, a citation entity may be listed as a specific **ex:Entry** in a citing source, which may be located (**bf:place**) on a **ex:Page**, which may be part of (**bf:partOf**) a **ex:Volume**, which may be part of (**bf:partOf**) the citing source (bf:Work).
+A citation may link directly to its source, or it may link indirectly to the source through a specific location, modeled as a hierarchical chain proceeding from the most specific location up to the citing source. For example, a citation entity may be listed as a specific **ex:Entry** in a citing source, which may be located (**bf:place**) on a **ex:Page**, which may be part of (**bf:partOf**) a **ex:Volume**, which may be part of (**bf:partOf**) the citing source (**bf:Instance**).
 
 Cataloger comments on citations are constructed using the BIBFRAME notes.
 
@@ -41,7 +41,7 @@ A negative citation is also modeled as an **bf:Note**, with the value "not found
 | Entity       | Type         | 
 |:-------------|:-------------|
 | Resource of interest to cataloger; typically instance or item but may also be a work | bf:Instance, bf:Item, bf:Work |
-| Reference source    | bf:Work      |
+| Reference source    | bf:Instance, bf:Work      |
 | Cataloger commentary | bf:Note      |
 | Citation | ex:Citation     |
 
