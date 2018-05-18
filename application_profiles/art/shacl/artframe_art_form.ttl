@@ -1121,7 +1121,7 @@ artframe_art_form:ItemForm rdf:type rdfs:Class ;
   sh:property artframe_art_form:ItemForm_bf_genreForm ;
 sh:property artframe_art_form:ItemForm_arm_hasStylePeriod ;
   sh:property artframe_art_form:ItemForm_bf_hasPart ;
-  sh:property artframe_art_form:ItemForm_bf__partOf ;
+  sh:property artframe_art_form:ItemForm_bf_partOf ;
 
 # ItemRelationshipsPropertyGroup         
          
@@ -1167,7 +1167,7 @@ sh:property artframe_art_form:ItemForm_arm_hasStylePeriod ;
          
 # ///// PROPERTY SHAPES FOR ItemOfInstance PropertyGroup START HERE. /////////////////////////////////////////////////////////////      
 
-artframe_art_form:ItemForm__bf_itemOf 
+artframe_art_form:ItemForm_bf_itemOf 
       a sh:PropertyShape ;
       sh:path bf:itemOf ;
       sh:class bf:Instance ;
@@ -1199,6 +1199,7 @@ artframe_art_form:ItemForm_bf_title
   sh:nodeKind sh:IRI ;
   sh:order "1"^^xsd:decimal .
 
+# ///// PROPERTY SHAPES FOR Item Activity Property Group START HERE. /////////////////////////////////////////////////////////////     
 
 # TODO Update Activity List when there are subclasses, and custodial history is added to the form. 
 
@@ -1525,7 +1526,7 @@ artframe_art_form:ArtWorkActivityForm_arm_hasAttribution
 artframe_art_form:ArtWorkActivityForm_bf_originDate 
       a sh:PropertyShape ;
       sh:path bf:originDate;
-      sh:order "2" ;
+      sh:order "3" ;
       sh:maxCount "1" ;
       sh:description "Date of the activity. Recommended to use EDTF format" ;
       sh:name "Work Creation Date" ;
@@ -1534,7 +1535,7 @@ artframe_art_form:ArtWorkActivityForm_bf_originDate
 artframe_art_form:ArtWorkActivityForm_arm_atLocation 
       a sh:PropertyShape ;
       sh:path arm:atLocation ;
-      sh:order "3" ;
+      sh:order "4" ;
       sh:maxCount "1" ;
       sh:description "Location of the activity" ;
       sh:name "Location" ;
@@ -1556,9 +1557,9 @@ artframe_art_form:ArtInstanceActivityForm
   rdfs:subClassOf rdfs:Resource ;
   sh:property artframe_art_form:ArtInstanceActivityForm_rdf_type ;
   sh:property artframe_art_form:ArtInstanceActivityForm_bf_agent ;
+  sh:property artframe_art_form:ArtInstanceActivityForm_arm_hasAttribution ;
   sh:property artframe_art_form:ArtInstanceActivityForm_bf_date ;
-  sh:property artframe_art_form:ArtInstanceActivityForm_arm_atLocation ;
-  sh:property artframe_art_form:ArtInstanceActivityForm_arm_hasAttribution ;      
+  sh:property artframe_art_form:ArtInstanceActivityForm_arm_atLocation ;      
   .
   
 artframe_art_form:ArtInstanceActivityForm_rdf_type 
@@ -1579,11 +1580,21 @@ artframe_art_form:ArtInstanceActivityForm_bf_agent
       sh:name "Agent" ;
       sh:nodeKind sh:IRI .
 
-
+artframe_art_form:ArtInstanceActivityForm_arm_hasAttribution 
+      a sh:PropertyShape ;
+      sh:path arm:hasAttribution ;
+      sh:order "2" ;
+      sh:maxCount "1" ;
+      sh:description "Used to attribute an Activity, such as ArtistActivity, to a particular agent or agents" ;
+      sh:name "Attribution" ;
+      sh:class arm:Attribution ;
+      sh:nodeKind sh:IRI ;
+      tosh:editWidget swa:NestedObjectEditor .
+         
 artframe_art_form:ArtInstanceActivityForm_bf_date 
       a sh:PropertyShape ;
       sh:path bf:date;
-      sh:order "2" ;
+      sh:order "3" ;
       sh:maxCount "1" ;
       sh:description "Date of the activity. Recommended to use EDTF format" ;
       sh:name "Date" ;
@@ -1592,7 +1603,7 @@ artframe_art_form:ArtInstanceActivityForm_bf_date
 artframe_art_form:ArtInstanceActivityForm_arm_atLocation 
       a sh:PropertyShape ;
       sh:path arm:atLocation ;
-      sh:order "3" ;
+      sh:order "4" ;
       sh:maxCount "1" ;
       sh:description "Location of the activity" ;
       sh:name "Location" ;
@@ -1601,15 +1612,134 @@ artframe_art_form:ArtInstanceActivityForm_arm_atLocation
       artframe_art_form:lookup bibliotek-o_shapes_audio:LD4LookupService .
 .
 
+# /////// Item Activity FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+artframe_art_form:ArtItemActivityForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Agent Activity" ;
+  sh:targetClass activity:Activity ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property artframe_art_form:ArtInstanceActivityForm_rdf_type ;
+  sh:property artframe_art_form:ArtInstanceActivityForm_bf_agent ;
+  sh:property artframe_art_form:ArtInstanceActivityForm_arm_hasAttribution ;
+  sh:property artframe_art_form:ArtInstanceActivityForm_bf_date ;
+  sh:property artframe_art_form:ArtInstanceActivityForm_arm_atLocation ;      
+  .
+  
+artframe_art_form:ArtItemActivityForm_rdf_type 
+      a sh:PropertyShape ;
+      sh:path rdf:type ;
+      sh:order "0" ;
+      sh:description "Agent role or activity type" ;
+      sh:name "Agent role" ;
+sh:class ( activity:ColoristActivity activity:PapermakerActivity activity:StereotyperActivity ) ;
+
+artframe_art_form:ArtInstanceActivityForm_bf_agent 
+      a sh:PropertyShape ;
+      sh:path bf:agent ;
+      sh:order "1" ;
+      sh:maxCount "1" ;
+      sh:class bf:Agent ;
+      sh:description "Agent" ;
+      sh:name "Agent" ;
+      sh:nodeKind sh:IRI .
+
 artframe_art_form:ArtInstanceActivityForm_arm_hasAttribution 
       a sh:PropertyShape ;
       sh:path arm:hasAttribution ;
-      sh:order "4" ;
+      sh:order "2" ;
       sh:maxCount "1" ;
       sh:description "Used to attribute an Activity, such as ArtistActivity, to a particular agent or agents" ;
       sh:name "Attribution" ;
       sh:class arm:Attribution ;
-      sh:nodeKind sh:IRI .
+      sh:nodeKind sh:IRI ;
+      tosh:editWidget swa:NestedObjectEditor .
+         
+artframe_art_form:ArtInstanceActivityForm_bf_date 
+      a sh:PropertyShape ;
+      sh:path bf:date;
+      sh:order "3" ;
+      sh:maxCount "1" ;
+      sh:description "Date of the activity. Recommended to use EDTF format" ;
+      sh:name "Date" ;
+      sh:nodeKind sh:Literal .
+      
+artframe_art_form:ArtInstanceActivityForm_arm_atLocation 
+      a sh:PropertyShape ;
+      sh:path arm:atLocation ;
+      sh:order "4" ;
+      sh:maxCount "1" ;
+      sh:description "Location of the activity" ;
+      sh:name "Location" ;
+      sh:class gn:Feature ;
+      sh:nodeKind sh:IRI ;
+      artframe_art_form:lookup bibliotek-o_shapes_audio:LD4LookupService .
+.
+         
+# /////// Attribution FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+artframe_art_form:AttributionForm
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Attribution form" ;
+  sh:targetClass arm:Attribution ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property artframe_art_form:AttributionForm_bf_agent ;
+  sh:property artframe_art_form:AttributionForm_bf_date ;
+  sh:property artframe_art_form:AttributionForm_arm_hasSource ;
+  sh:property artframe_art_form:AttributionForm_bf_note ;
+  .         
+
+ artframe_art_form:AttributionForm_bf_agent 
+    a sh:PropertyShape ;
+    sh:path bf:agent ;
+    sh:order "0" ;
+    sh:maxCount "1" ;
+    sh:class bf:Agent ;
+    sh:description "Attributor" ;
+    sh:name "Agent" ;
+    sh:nodeKind sh:IRI .
+         
+ artframe_art_form:AttributionForm_bf_date 
+    a sh:PropertyShape ;
+    sh:path bf:date;
+    sh:order "1" ;
+    sh:maxCount "1" ;
+    sh:description "Date of the attribution. Recommended to use EDTF format" ;
+    sh:name "Date" ;
+    sh:nodeKind sh:Literal .  
+         
+ artframe_art_form:AttributionForm_arm_hasSource
+    a sh:ProperyShape ;
+    sh:path arm:hasSource ;
+    sh:order "2" ;
+    sh:name "Attribution source" ;
+    sh:description "Source of the attribution. The source may be an agent, work, or instance" ;
+    sh:or (
+        [
+             sh:class bf:Work ;
+        ]
+        [
+             sh:class bf:Instance ;
+        ]
+        [
+             sh:class bf:Agent ;
+        ] 
+      ) ;
+
+     sh:nodeKind sh:IRI .
+         
+ artframe_art_form:AttributionForm_bf_note 
+    a sh:PropertyShape ;
+    sh:path bf:note ;
+    sh:order "3" ;
+    sh:name "Note" ;
+    sh:class bf:Note ;
+    sh:description "Note about this attribution" ;
+    tosh:editWidget swa:NestedObjectEditor ;
+    sh:nodeKind sh:IRI .
+        
          
 # /////// MeasurementGroup FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
