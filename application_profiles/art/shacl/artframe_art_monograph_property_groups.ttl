@@ -110,47 +110,53 @@
   rdfs:label "Instance Agents and Roles" ;
   sh:description "To group Agent role information for the resource." ;
   sh:order "3"^^xsd:decimal .
-  
+
+:InstanceCopyrightPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Instance copyright information" ;
+  sh:description "To group copyright information related to the bf:Instance." ;
+  sh:order "4"^^xsd:decimal .
+
 :InstanceRelationshipsPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Instance Relationships" ;
-  sh:order "4"^^xsd:decimal .
+  sh:order "5"^^xsd:decimal .
   
 :InstancePhysicalDescriptionPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Instance physical description" ;
-  sh:order "5"^^xsd:decimal .
+  sh:order "6"^^xsd:decimal .
 
 :InstanceScalePropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Scale of the resource" ;
-  sh:order "6"^^xsd:decimal .
+  sh:order "7"^^xsd:decimal .
   
 :InstanceOfWorkPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Instance of Work" ;
-  sh:order "7"^^xsd:decimal .
+  sh:order "8"^^xsd:decimal .
   
 :InstanceHasItemPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Has item" ;
-  sh:order "8"^^xsd:decimal .
+  sh:order "9"^^xsd:decimal .
 
 :InstanceNotePropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Item notes" ;
-  sh:order "9"^^xsd:decimal .
+  sh:order "10"^^xsd:decimal .
   
 :InstanceBibliographicCitationPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Bibliographic Citations for the Instance" ;
   sh:description "To group bibliographic citations of the instance." ;
-  sh:order "10"^^xsd:decimal .
+  sh:order "11"^^xsd:decimal .
   
 :InstanceIdentifierPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Item identifiers" ;
-  sh:order "11"^^xsd:decimal .
+  sh:order "12"^^xsd:decimal .
 
 
 
