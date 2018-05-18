@@ -3364,7 +3364,7 @@ raremat_monograph_form:PhysicalConditionForm_seq_directlyPrecedes
     a sh:PropertyShape ; 
     sh:path seq:directlyPrecedes ;
     sh:class arm:PhysicalCondition ;
-    sh:name "Directly drecedes" ;
+    sh:name "Directly precedes" ;
     sh:description "Links to a condition that directly follows the condition currently being described" ;
     tosh:editWidget swa:NestedObjectEditor ;
     sh:nodeKind sh:IRI ;
