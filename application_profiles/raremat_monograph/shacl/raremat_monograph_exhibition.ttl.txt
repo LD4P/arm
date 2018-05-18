@@ -34,7 +34,7 @@
     sh:name "Exhibition" ; 
     sh:description "An exhibition this item was displayed in." ;  
     sh:group raremat_monograph_form:ItemHistoryAndProvenancePropertyGroup ;     
-    sh:order "0"^^xsd:int ;   
+    sh:order "1"^^xsd:int ;   
     tosh:editWidget swa:NestedObjectEditor ;
     .
     
