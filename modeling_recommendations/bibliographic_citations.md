@@ -30,7 +30,7 @@ To address these four use cases, a new class should be created to represent bibl
 
 A citation is related to a resource of interest by the property **ex:hasCitation** (inverse ex:isCitationOf) and to the citing work by the property **ex:hasSource** (inverse ex:isSourceOf).
 
-A citation may link directly to its source, or it may link indirectly to the source through a specific location, modeled as a hierarchical chain proceeding from the most specific location up to the citing resource. For example, a citation entity may be listed as a specific **ex:Entry** in a citing source, which may be located (**bf:place**) on a **ex:Page**, which may be part of (**bf:partOf**) a **ex:Volume**, which may be part of (**bf:partOf**) the citing source (**bf:Instance**).
+A citation may link directly to its source, or it may link indirectly to the source through a specific location, modeled as a hierarchical chain proceeding from the most specific location up to the citing source. For example, a citation entity may be listed as a specific **ex:Entry** in a citing source, which may be located (**bf:place**) on a **ex:Page**, which may be part of (**bf:partOf**) a **ex:Volume**, which may be part of (**bf:partOf**) the citing source (**bf:Instance**).
 
 Cataloger comments on citations are constructed using the BIBFRAME notes.
 
