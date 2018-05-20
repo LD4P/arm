@@ -281,7 +281,11 @@
     a sh:PropertyShape ;
     sh:node arm_core_property_shapes:crm_P2_has_type ;
     sh:in (
-        # RBMS Binding vocabulary converted to RDF
+        # RBMS Binding vocabulary converted to RDF.
+        # Note that the modeling recommendation suggests the AAT 
+        # bindings by structure hierarchy (http://vocab.getty.edu/aat/300211209),
+        # but since the terms are numerous that would best be handled by a
+        # lookup. So compromise and use the RBMS vocabulary for now. 
         rbms_binding:rbbin1
         rbms_binding:rbbin5
         rbms_binding:rbbin10
