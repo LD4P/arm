@@ -40,6 +40,9 @@
     a sh:PropertyShape ;
     sh:path activity:isActivityOf ;
     sh:nodeKind sh:IRI ; 
+    # Not always true. E.g., in the ARM model, BinderActivity links to both 
+    # Item and Binding.
+    # sh:maxCount 1 ;
     . 
 
 :arm_atLocation
@@ -74,7 +77,7 @@
     a sh:PropertyShape ;
     sh:path bf:date ;
     sh:nodeKind sh:Literal ;
-    # Recommended but not required
+    # Recommended but not required.
     # sh:datatype edtf:EDTF ;
     .
        
@@ -177,8 +180,7 @@
         ch:CustodialEvent 
     ) ;
     .
-
-# TODO Fix - this should be the activity types, not the event types      
+   
 :ch_CustodialEventActivity_rdf_type 
     a sh:PropertyShape ;
     sh:node :rdf_type ;
@@ -258,6 +260,10 @@
     sh:path schema:price ;
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:decimal ;
+    # A resource can have multiple prices (price specifications), either in
+    # the same or different currencies, but each price specification has
+    # only one value (price) and currency.
+    sh:maxCount 1 ; 
     .
     
 :schema_priceCurrency
@@ -267,6 +273,10 @@
     sh:datatype xsd:string ;
     # Schema defines the value as "The currency (in 3-letter ISO 4217 format) of the price"     
     sh:pattern "^[A-Z]{3}$" ;
+    # A resource can have multiple prices (price specifications), either in
+    # the same or different currencies, but each price specification has
+    # only one value (price) and currency.
+    sh:maxCount 1 ; 
     .
 
 :schema_priceSpecification
