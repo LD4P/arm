@@ -1,0 +1,61 @@
+@prefix activity: <https://w3id.org/arm/core/activity/0.1/> .
+@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_title/> .
+@prefix arm_core_property_shapes: <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
+  
+:TitleForm 
+    a sh:NodeShape ;
+    rdfs:label "Title Form" ;
+    sh:targetClass bf:Title ;
+    sh:property 
+    
+        # Not editable. Use only for display on Title page. Do not include
+        # in embedded form.
+        :TitleForm_arm_titleOf ,
+        
+        # Possible title types are determined by context, so do not 
+        # include here.
+        # :TitleForm_rdf:type ,
+        
+        :TitleForm_rdf:value ;
+ 
+        # Implement following as needed in specific contexts where this form
+        # is used.
+        # :TitleForm_bf_mainTitle ,
+        # :TitleForm_bf_subtitle ,
+        # :TitleForm_bf_partNumber ,
+        # :TitleForm_bf_partName ,
+        # :TitleForm_arm_hasSource ,
+        # :TitleForm_bf_status ,
+        # :TitleForm_arm_isPreferredTitleOf ,
+        # :TitleForm_bf_note ;
+    .
+    
+:TitleForm_arm_titleOf 
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:arm_titleOf ;
+    # NON-VALIDATING
+    sh:name "Title" ;
+    # Order determined by the specific form.
+    .
+    
+:TitleForm_rdf_value 
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:rdf_value ;
+    sh:nodeKind sh:IRI ;
+    # NON-VALIDATING
+    sh:name "Title" ;
+    # Order determined by the specific form.
+    .
