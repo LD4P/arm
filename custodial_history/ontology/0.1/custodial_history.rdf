@@ -489,7 +489,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arm/custodial_history/ontology/0.1/accessions">
         <rdfs:label xml:lang="en">accessions</rdfs:label>    
         <skos:definition xml:lang="en"></skos:definition>
-        <rdfs:domain rdf:resource="https://w3id.org/arm/custodial_history/ontology/0.1/AccessionNumber"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arm/core/ontology/0.1/AccessionNumber"/>
         <rdfs:range rdf:resource="https://w3id.org/arm/custodial_history/ontology/0.1/CustodialEvent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arm/custodial_history/ontology/0.1/accessionedBy" />
         <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
