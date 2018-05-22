@@ -32,7 +32,7 @@
     sh:node arm_core_property_shapes:arm_markedBy ; 
     sh:class arm:Marking ;
     # NON-VALIDATING
-    sh:name "Markings" ;
+    sh:name "Marking" ;
     sh:group raremat_monograph_property_groups:PhysicalDescriptionPropertyGroup ;
     sh:description "Markings applied to objects during or after creation, conveying information such as the object's origin or maker, its authenticity, or a change in its official status." ;
     tosh:editWidget swa:NestedObjectEditor ;
@@ -43,6 +43,7 @@
     rdfs:label "Marking form" ;
     sh:targetClass arm:Marking ;
     sh:property 
+    
         # Only for use on Marking form; do not include in embedded forms.
         :MarkingForm_arm_marks ,
         
@@ -80,7 +81,6 @@
     ) ;
     # NON-VALIDATING
     sh:name "Marking type" ;
-    sh:description "Marking type" ;
     sh:order "10"^^xsd:int ;
     .
     
@@ -99,8 +99,6 @@
     a sh:PropertyShape ;
     sh:node arm_core_property_shapes:activity_hasActivity ;
     # Only one Activity type applies to Markings.
-    # raremat_monograph_activity:ActivityForm should apply here due to 
-    # sh:class value.
     sh:class activity:CreatorActivity ;
     # NON-VALIDATING
     sh:name "Marking creator" ;

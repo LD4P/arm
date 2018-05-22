@@ -190,7 +190,7 @@
 
 :CustodialEventActivityForm_rdf_type
     a sh:PropertyShape ;
-    sh:node custodial_history_property_shapes:ch_CustodialEventActivity_rdf_type ;
+    sh:node custodial_history_property_shapes:ch_CustodialEvent_activity_Activity_rdf_type ;
     # NON-VALIDATING
     sh:name "Role" ;
     sh:description "The role played by the agent in relation to the custodial event." ;
@@ -233,7 +233,7 @@
 
 :CustodialEventForm_schema_priceSpecification 
     a sh:NodeShape ;
-    sh:node raremat_monograph_price_specification:schema_priceSpecification ;
+    sh:node raremat_monograph_price_specification:PriceSpecifationForm_schema_priceSpecification ;
     # NON-VALIDATING
     sh:order "60"^^xsd:int ;
     .
