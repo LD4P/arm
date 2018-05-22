@@ -66,6 +66,17 @@
     sh:maxCount 1 ;
     .
 
+# Defines possible types of Exhibition Activities
+:arm_Exhibition_activity_Activity_rdf_type 
+    a sh:PropertyShape ;
+    sh:node :rdf_type ;
+    sh:in (
+        # What else?
+        activity:CuratorActivity
+        activity:Activity
+    ) ;
+    .
+    
 # Links an Exhibition context node to the ExhibitionEvent.
 :arm_Exhibition_bf_partOf_schema_ExhibitionEvent
     a sh:PropertyShape ;
@@ -73,7 +84,8 @@
     sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
     .
-
+    
+   
 # Links a resource to its Arrangement (e.g., rolled, folded, open to page 10),
 # or a group of resources to their organization.    
 :arm_hasArrangement 
@@ -137,6 +149,7 @@
     a sh:PropertyShape ;
     sh:path arm:isExhibitionOf ;
     sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
     sh:maxCount 1 ;
     .
         
@@ -187,6 +200,7 @@
     a sh:PropertyShape ;
     sh:path arm:titleOf ;
     sh:nodeKind sh:IRI ; 
+    sh:minCount 1 ;
     # Titles are unique to a specific resource.
     sh:maxCount 1 ;
     .
@@ -328,4 +342,18 @@
     sh:nodeKind sh:IRI ;
     sh:class schema:ExhibitionEvent ;
     sh:maxCount 1 ;
+    .
+
+# Defines possible ExhibitionEvent Activities.    
+:schema_ExhibitionEvent_activity_Activity_rdf_type 
+    a sh:PropertyShape ;
+    sh:node :rdf_type ;
+    sh:in (
+        activity:ContributorActivity
+        activity:CuratorActivity
+        activity:DirectorActivity
+        activity:OrganizerActivity
+        activity:SponsorActivity
+        activity:Activity
+    ) ;
     .

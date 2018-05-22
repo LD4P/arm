@@ -25,11 +25,13 @@
         # in embedded form.
         :TitleForm_arm_titleOf ,
         
-        # Possible title types are determined by context, so do not 
-        # include here.
-        # :TitleForm_rdf:type ,
+        # Type options depend on context (i.e., the specific form). In some
+        # forms there are no type options, in which case the PropertyShape
+        # is not included on the form, and the type is specified by the
+        # form sh:targetClass. 
+        # :TitleForm_rdf_type ,
         
-        :TitleForm_rdf:value ;
+        :TitleForm_rdf_value ;
  
         # Implement following as needed in specific contexts where this form
         # is used.
@@ -42,7 +44,9 @@
         # :TitleForm_arm_isPreferredTitleOf ,
         # :TitleForm_bf_note ;
     .
-    
+
+# Not editable. Use only for display on Title page. Do not include
+# in embedded form.   
 :TitleForm_arm_titleOf 
     a sh:PropertyShape ;
     sh:node arm_core_property_shapes:arm_titleOf ;
@@ -50,12 +54,11 @@
     sh:name "Title" ;
     # Order determined by the specific form.
     .
-    
+     
 :TitleForm_rdf_value 
     a sh:PropertyShape ;
     sh:node arm_core_property_shapes:rdf_value ;
-    sh:nodeKind sh:IRI ;
+    sh:nodeKind sh:Literal ;
     # NON-VALIDATING
-    sh:name "Title" ;
-    # Order determined by the specific form.
+    # Name, order, etc determined by the specific 
     .

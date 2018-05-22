@@ -181,7 +181,7 @@
     ) ;
     .
    
-:ch_CustodialEventActivity_rdf_type 
+:ch_CustodialEvent_activity_Activity_rdf_type 
     a sh:PropertyShape ;
     sh:node :rdf_type ;
     sh:in (

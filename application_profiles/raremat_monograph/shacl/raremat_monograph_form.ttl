@@ -1632,9 +1632,10 @@ raremat_monograph_form:ItemForm
   
 # ItemHistoryAndProvenancePropertyGroup
 
-    # Temporarily removing - SHACL for exhibitions is incomplete.
     sh:property raremat_monograph_custodial_history:ItemForm_ch_hasCustodialHistory_bf_hasPart ;
-    # sh:property raremat_shapes_monograph_exhibition:ItemForm_arm_hasExhibition ;
+    
+    sh:property raremat_shapes_monograph_exhibition:ItemForm_arm_hasExhibition_bf_partOf ;
+    
     sh:property raremat_monograph_form:ItemForm_award_receives ;
 
 
@@ -2014,7 +2015,7 @@ raremat_monograph_form:ItemForm_arm_hasCitation
 
 # ItemForm_arm_hasCustodialHistory Property Shape belongs at this point in the form sequence.
 
-# ItemForm_arm_hasExhibition Property Shape belongs at this point in the form sequence.
+# ItemForm_arm_hasExhibition_bf_partOf Property Shape belongs at this point in the form sequence.
 
 raremat_monograph_form:ItemForm_award_receives 
     a sh:PropertyShape ;

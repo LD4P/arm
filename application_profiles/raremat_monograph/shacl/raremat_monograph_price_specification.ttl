@@ -19,16 +19,16 @@
     tosh:editWidget swa:NestedObjectEditor ;         
     .
     
-:PriceSpecification
+:PriceSpecificationForm
     a sh:NodeShape ;
     rdfs:label "Price specification form" ;
     sh:targetClass schema:PriceSpecification ;
     sh:property
-        :schema_price ,
-        :schema_priceCurrency ;
+        :PriceSpecifationForm_schema_price ,
+        :PriceSpecifationForm_schema_priceCurrency ;
     .
 
-:schema_price
+:PriceSpecifationForm_schema_price
     a sh:PropertyShape ;
     sh:node custodial_history_property_shapes:schema_price ;
     # NON-VALIDATING
@@ -36,7 +36,7 @@
     sh:order "10"^^xsd:int ;  
     .
     
-:schema_priceCurrency
+:PriceSpecifationForm_schema_priceCurrency
     a sh:PropertyShape ;
     sh:node custodial_history_property_shapes:schema_price ;
     # NON-VALIDATING
