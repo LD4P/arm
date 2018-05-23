@@ -25,8 +25,8 @@
 
 
 # Generic PropertyShape linking a resource to an Enclosure. Specific
-# constraints are added in InstanceForm:bf_hasPart_arm_Enclosure and 
-# ItemForm:bf_hasPart_arm_Enclosure.
+# constraints are added in InstanceForm_bf_hasPart_arm_Enclosure and 
+# ItemForm_bf_hasPart_arm_Enclosure.
 :bf_hasPart_arm_Enclosure
     a sh:PropertyShape ;
     sh:node arm_core_property_shapes:bf_hasPart ;
@@ -140,7 +140,6 @@
     # NON-VALIDATING
     sh:name "Agent" ;
     sh:description "Agent related to the Enclosure: binder, designer, creator, etc." ;
-    sh:group raremat_monograph_property_groups:ActivityPropertyGroup ;
     sh:order "30"^^xsd:int ;
     tosh:editWidget swa:NestedObjectEditor ;       
     .
@@ -189,6 +188,7 @@
     sh:node raremat_monograph_marking:arm_markedBy ;
     # NON-VALIDATING
     sh:order "60"^^xsd:int ;
+    tosh:editWidget swa:NestedObjectEditor ;
     .
     
 ##### ENCLOSURE NOTE #####

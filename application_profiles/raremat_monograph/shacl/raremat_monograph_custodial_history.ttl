@@ -221,7 +221,6 @@
     # NON-VALIDATING
     sh:name "Location" ;
     sh:description "Location of the event" ;
-    sh:group raremat_monograph_property_groups:LocationPropertyGroup ;
     sh:order "50"^^xsd:int ;
     sh:nodeKind sh:IRI ;
     # TODO May need to fix based on email thread
@@ -254,7 +253,6 @@
     # NON-VALIDATING
     sh:name "Accession number" ;
     sh:description "Accession number of the item associated with the event." ;
-    sh:group raremat_monograph_property_groups:IdentifierPropertyGroup ;
     sh:order "70"^^xsd:int ;
     .
     
