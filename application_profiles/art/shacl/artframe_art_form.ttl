@@ -98,12 +98,15 @@ artframe_art_form:WorkForm
   sh:property artframe_art_form:WorkForm_bf_hasPart ;
   sh:property artframe_art_form:WorkForm_bf_partOf ;
   sh:property artframe_art_form:WorkForm_bf_hasExpression ;
+  sh:property artframe_art_form:WorkForm_bf_expressionOf ;
   sh:property artframe_art_form:WorkForm_bf_references ;
-  sh:property artframe_art_form:WorkForm_rdau_P60198
+  sh:property artframe_art_form:WorkForm_bf_referencedBy ;
+  sh:property artframe_art_form:WorkForm_rdau_P60198 ;
   sh:property artframe_art_form:WorkForm_bf_version ;
   sh:property artframe_art_form:WorkForm_rdau_P60250 ;
   sh:property artframe_art_form:WorkForm_rdau_P60260 ;
   sh:property artframe_art_form:WorkForm_rdau_P60833 ;
+  sh:property artframe_art_form:WorkForm_rdau_P60832 ;
   sh:property artframe_art_form:WorkForm_rdau_P60214 ;
   sh:property artframe_art_form:WorkForm_rdau_P60246 ;
   sh:property artframe_art_form:WorkForm_rdau_P60305 ;
@@ -117,6 +120,8 @@ artframe_art_form:WorkForm
   sh:property artframe_art_form:WorkForm_rdau_P60241 ;
   sh:property artframe_art_form:WorkForm_rdau_P60311 ;
   sh:property artframe_art_form:WorkForm_rdau_P60312 ;
+  sh:property artframe_art_form:WorkForm_rdau_P60244 ;
+  sh:property artframe_art_form:WorkForm_rdau_P60280 ;
   sh:property artframe_art_form:WorkForm_arm_cites ;
   sh:property artframe_art_form:WorkForm_arm_citedBy ;
   sh:property artframe_art_form:WorkForm_bf_accompanies ;
@@ -372,6 +377,13 @@ artframe_art_form:WorkForm_bf_hasPart
 
 # TODO decide what types of bf:Works a bf:Text, bf:StillImage or bf:Object can be a part of, e.g. another bf:Text
 
+artframe_art_form:WorkForm_bf_relatedTo 
+      a sh:PropertyShape ;
+      sh:path bf:relatedTo ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "Related to" .
+
 artframe_art_form:WorkForm_bf_partOf 
       a sh:PropertyShape ;
       sh:path bf:partOf ;
@@ -379,13 +391,19 @@ artframe_art_form:WorkForm_bf_partOf
       sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "Is part or contents of the art work" .
 
-artframe_art_form:WorkForm_bf_hasExpression 
+sh:property artframe_art_form:WorkForm_bf_hasExpression
       a sh:PropertyShape ;
       sh:path bf:hasExpression ;
       sh:class bf:Work ;
-      sh:description "Work that is an expression of a described Work. For use to relate Works under FRBR/RDA rules." ;
       sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:name "Has expression" .
+      sh:name "Has expression " .
+
+sh:property artframe_art_form:WorkForm_bf_expressionOf
+      a sh:PropertyShape ;
+      sh:path bf:expressionOf ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "Expression of" .
 
 artframe_art_form:WorkForm_bf_references 
       a sh:PropertyShape ;
@@ -592,7 +610,7 @@ artframe_art_form:WorkForm_arm_citedBy
 
 
 
-artframe_art_form:InstanceForm rdf:type rdfs:Class ;
+artframe_art_form:InstanceForm
   rdf:type sh:NodeShape ;
   rdfs:label "Instance of Art Work" ;
   rdfs:subClassOf rdfs:Resource ;
@@ -625,9 +643,19 @@ artframe_art_form:InstanceForm rdf:type rdfs:Class ;
 #InstanceRelationshipsPropertyGroup
 
   sh:property artframe_art_form:InstanceForm_bf_hasPart ;
+  sh:property artframe_art_form:InstanceForm_bf_partOf ;
   sh:property artframe_art_form:InstanceForm_bf_accompaniedBy ;
   sh:property artframe_art_form:InstanceForm_bf_accompanies ;
   sh:property artframe_art_form:InstanceForm_bf_references ;
+  sh:property artframe_art_form:InstanceForm_bf_referencedBy ;
+  sh:property artframe_art_form:InstanceForm_rdau_P60297 ;
+  sh:property artframe_art_form:InstanceForm_rdau_P60272 ;
+  sh:property artframe_art_form:InstanceForm_rdau_P60168 ;
+  sh:property artframe_art_form:InstanceForm_rdau_P60271 ;
+  sh:property artframe_art_form:InstanceForm_rdau_P60301 ;
+  sh:property artframe_art_form:InstanceForm_rdau_P60217 ;
+  sh:property artframe_art_form:InstanceForm_rdau_P60083 ;
+  sh:property artframe_art_form:InstanceForm_rdau_P60469 ;
 
 # InstancePhysicalDescriptionPropertyGroup
 
@@ -823,6 +851,15 @@ artframe_art_form:InstanceForm_bf_hasPart
       sh:description "Part of the instance being described." ;
       sh:class bf:Instance ;
       sh:group artframe_art_property_groups:InstanceRelationshipsPropertyGroup .
+        
+artframe_art_form:InstanceForm_bf_partOf 
+      a sh:PropertyShape ;
+      sh:path bf:partOf ;
+      sh:name "Instance part" ;
+      sh:order "0"^^xsd:decimal ;
+      sh:description "Resource in which the described resource is physically or logically contained." ;
+      sh:class bf:Instance ;
+      sh:group artframe_art_property_groups:InstanceRelationshipsPropertyGroup . 
      
 artframe_art_form:InstanceForm_bf_accompaniedBy 
       a sh:PropertyShape ;
@@ -854,8 +891,40 @@ artframe_art_form:InstanceForm_bf_referencedBy
       a sh:PropertyShape ;
       sh:path bf:referencedBy ;
       sh:class bf:Instance ;
-      sh:description "Resource that references the described resource," ;
+      sh:description "Resource that references the described resource." ;
       sh:name "Referenced by" ;
+      sh:group artframe_art_property_groups:InstanceRelationshipsPropertyGroup .
+         
+artframe_art_form:InstanceForm_rdau_P60297
+      a sh:PropertyShape ;
+      sh:path <http://rdaregistry.info/Elements/u/P60297>
+      sh:class bf:Instance ;
+      sh:description "Relates a resource to a resource that is used as a basis for a reproduction." ;
+      sh:name "is reproduction of" ;
+      sh:group artframe_art_property_groups:InstanceRelationshipsPropertyGroup .
+
+artframe_art_form:InstanceForm_rdau_P60272
+      a sh:PropertyShape ;
+      sh:path <http://rdaregistry.info/Elements/u/P60272>
+      sh:class bf:Instance ;
+      sh:description "Relates a resource to a resource that reproduces another resource." ;
+      sh:name "is reproduced as" ;
+      sh:group artframe_art_property_groups:InstanceRelationshipsPropertyGroup .
+         
+artframe_art_form:InstanceForm_rdau_P60168
+      a sh:PropertyShape ;
+      sh:path <http://rdaregistry.info/Elements/u/P60168>
+      sh:class bf:Instance ;
+      sh:description "Relates a resource to a resource that reissues the same resource as a printed resource being described." ;
+      sh:name "is reprint of" ;
+      sh:group artframe_art_property_groups:InstanceRelationshipsPropertyGroup . 
+         
+artframe_art_form:InstanceForm_rdau_P60271
+      a sh:PropertyShape ;
+      sh:path <http://rdaregistry.info/Elements/u/P60271>
+      sh:class bf:Instance ;
+      sh:description "Relates a resource to a resource that reissues the same resource as a printed resource being described." ;
+      sh:name "is reprinted as" ;
       sh:group artframe_art_property_groups:InstanceRelationshipsPropertyGroup .
 
 # TODO Add additional RDA Instance relationships
@@ -914,7 +983,7 @@ artframe_art_form:InstanceForm_bf_polarity
       sh:path bf:soundContent ;
       sh:name "Polarity" ;
       sh:order "4"^^xsd:decimal ;
-      sh:description " 	Relationship of the colors and tones in an image to the colors and tones of the object reproduced." ;
+      sh:description "Relationship of the colors and tones in an image to the colors and tones of the object reproduced." ;
       sh:class bf:Polarity ;
       sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup ;
       tosh:editWidget swa:NestedObjectEditor .         
@@ -1102,7 +1171,7 @@ artframe_art_form:InstanceForm_bf_identifiedBy
 
 
 
-artframe_art_form:ItemForm rdf:type rdfs:Class ;
+artframe_art_form:ItemForm
   rdf:type sh:NodeShape ;
   rdfs:label "Item of Art Work" ;
   rdfs:subClassOf rdfs:Resource ;
