@@ -27,13 +27,14 @@
 @prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/> . 
 
 
-# Catalogers prefer not to have to create a CustodialHistory resource
-# in order to add CustodialEvents, so it should be created behind the 
-# scenes without the editor's awareness. The easiest approach is to create
-# the CustodialHistory resource when the Item is created, attaching the 
-# Item to the CustodialHistory via ch:hasCustodialHistory. This obviates
-# the need to check for an existing CustodialHistory resource when adding a
-# CustodialEvent. Thus we will not define an :ItemForm_ch_hasCustodialHistory
+# Links Item to a CustodialEvent.
+# Catalogers prefer not to create a CustodialHistory resource in order to 
+# add CustodialEvents, so it should be created by the application behind the
+# scenes. The easiest approach is to create the CustodialHistory resource 
+# when the Item is created, attaching the Item to the CustodialHistory via 
+# ch:hasCustodialHistory. This eliminates the need to check whether the
+# CustodialHistory node already exists, or must be created when creating a
+# new CustodialEvent. Thus we do not define an :ItemForm_ch_hasCustodialHistory
 # PropertyShape.              
 :ItemForm_ch_hasCustodialHistory_bf_hasPart 
     a sh:PropertyShape ;
