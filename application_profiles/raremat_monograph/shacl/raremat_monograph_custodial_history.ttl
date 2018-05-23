@@ -39,7 +39,7 @@
 :ItemForm_ch_hasCustodialHistory_bf_hasPart 
     a sh:PropertyShape ;
     sh:node custodial_history_property_shapes:ch_hasCustodialHistory_bf_hasPart ;
-    sh:targetClass bf:Item ;
+    sh:class ch:CustodialEvent ;
     # NON-VALIDATING
     sh:name "Custodial event" ;
     sh:description "A custodial 'event' includes both static and transitional conditions: e.g., a period of ownership and a purchase. It is not restricted by the general notion of 'event.'" ;
