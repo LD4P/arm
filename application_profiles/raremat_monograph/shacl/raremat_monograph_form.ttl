@@ -1689,7 +1689,7 @@ raremat_monograph_form:ItemForm_activity_hasActivity
     sh:order "0"^^xsd:int ;
     sh:group raremat_monograph_property_groups:ItemActivityPropertyGroup ;
     tosh:editWidget swa:NestedObjectEditor ;
-    (  
+    sh:or (  
         [
             sh:class activity:AddresseeActivity ;
         ]
