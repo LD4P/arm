@@ -416,7 +416,7 @@ artframe_art_form:WorkForm_bf_version
       a sh:PropertyShape ;
       sh:path bf:version ;
       sh:class bf:Work ;
-      sh:description " 	Term or terms that identify works such as arranged for music, vulgate for religious work, etc." ;
+      sh:description "Term or terms that identify works such as arranged for music, vulgate for religious work, etc." ;
       sh:name "Version" ;
       sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:nodeKind sh:IRI .
@@ -467,14 +467,6 @@ artframe_art_form:WorkForm_rdau_P60246
       sh:class bf:Work ;
       sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "is parodied as" ;
-      sh:nodeKind sh:IRI .
-      
-artframe_art_form:WorkForm_rdau_P60305 
-      a sh:PropertyShape ;
-      sh:path <http://rdaregistry.info/Elements/u/P60305> ;
-      sh:class bf:Work ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:name "is based on" ;
       sh:nodeKind sh:IRI .
 
 artframe_art_form:WorkForm_rdau_P60254 
