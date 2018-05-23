@@ -1823,7 +1823,7 @@ raremat_monograph_form:ItemForm_bf_partOf
     sh:path bf:partOf ;
     sh:name "Part of a bound collection" ;
     sh:order "3"^^xsd:int ;
-    sh:description "The item being described is part of another item." ;
+    sh:description "The item being described is part of a bound collection." ;
     sh:class arm:BoundCollection ;
     sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup .
     
