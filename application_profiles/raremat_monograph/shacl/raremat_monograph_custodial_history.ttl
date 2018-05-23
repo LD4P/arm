@@ -35,11 +35,11 @@
 # ch:hasCustodialHistory. This eliminates the need to check whether the
 # CustodialHistory node already exists, or must be created when creating a
 # new CustodialEvent. Thus we do not define an :ItemForm_ch_hasCustodialHistory
-# PropertyShape.              
+# PropertyShape.         
+     
 :ItemForm_ch_hasCustodialHistory_bf_hasPart 
     a sh:PropertyShape ;
     sh:node custodial_history_property_shapes:ch_hasCustodialHistory_bf_hasPart ;
-    sh:class ch:CustodialEvent ;
     # NON-VALIDATING
     sh:name "Custodial event" ;
     sh:description "A custodial 'event' includes both static and transitional conditions: e.g., a period of ownership and a purchase. It is not restricted by the general notion of 'event.'" ;
@@ -223,7 +223,7 @@
     sh:description "Location of the event" ;
     sh:order "50"^^xsd:int ;
     sh:nodeKind sh:IRI ;
-    # TODO May need to fix based on email thread
+    # TODO May need to change
     sh:class gn:Feature ;     
     raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
     .
