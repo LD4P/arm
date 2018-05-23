@@ -15,6 +15,7 @@
 @prefix prov: <http://www.w3.org/ns/prov> .
 @prefix raremat_monograph_custodial_history: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_custodial_history/> .
 @prefix raremat_monograph_enclosure: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_enclosure/> .
+@prefix raremat_monograph_exhibition: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/> .
 @prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/> .
 @prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_property_groups/> .
 @prefix rdau: <http://rdaregistry.info/Elements/u/> .
@@ -405,7 +406,7 @@ raremat_monograph_form:WorkForm_bf_hasExpression
     sh:class bf:Work ;
     sh:description "Work that is an expression of a described Work. For use to relate Works under FRBR/RDA rules." ;
     sh:group raremat_monograph_property_groups:WorkToWorkPropertyGroup ;
-    sh:order "2"^^xsd:int 
+    sh:order "2"^^xsd:int ;
     sh:name "Has expression" .
 
 raremat_monograph_form:WorkForm_bf_referencedBy 
@@ -414,7 +415,7 @@ raremat_monograph_form:WorkForm_bf_referencedBy
     sh:class bf:Work ;
     sh:description "Resource that references the described resource." ;
     sh:name "Referenced by" ;
-    sh:order "3"^^xsd:int 
+    sh:order "3"^^xsd:int ;
     sh:group raremat_monograph_property_groups:WorkToWorkPropertyGroup .
 
 raremat_monograph_form:WorkForm_bf_references 
@@ -1525,7 +1526,7 @@ raremat_monograph_form:InstanceForm_arm_hasCitation
 raremat_monograph_form:InstanceForm_award_receives 
     a sh:PropertyShape ;
     sh:path award:receives ;
-    sh:class award:AwardReceipt> ;
+    sh:class award:AwardReceipt ;
     sh:group raremat_monograph_property_groups:InstanceAwardReceiptPropertyGroup ;
     sh:name "Instance award receipt" ;
     sh:nodeKind sh:IRI ;
@@ -1634,7 +1635,7 @@ raremat_monograph_form:ItemForm
 
     sh:property raremat_monograph_custodial_history:ItemForm_ch_hasCustodialHistory_bf_hasPart ;
     
-    sh:property raremat_shapes_monograph_exhibition:ItemForm_arm_hasExhibition_bf_partOf ;
+    sh:property raremat_monograph_exhibition:ItemForm_arm_hasExhibition_bf_partOf ;
     
     sh:property raremat_monograph_form:ItemForm_award_receives ;
 
@@ -3325,8 +3326,7 @@ raremat_monograph_form:MarkingForm_arm_hasActivity
     sh:name "Marking Agent" ;
     sh:order "2"^^xsd:int ;
     tosh:editWidget swa:NestedObjectEditor ;
-    [
-                sh:class activity:CreatorActivity .
+    sh:class activity:CreatorActivity .
 
 # /////// Marking Activity FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
