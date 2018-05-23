@@ -395,14 +395,15 @@ artframe_art_form:WorkForm_bf_references
       sh:name "References" ;
       sh:group artframe_art_property_groups:WorkToWorkPropertyGroup .
     
-artframe_art_form:WorkForm_bf_references 
+artframe_art_form:WorkForm_bf_referencedBy
       a sh:PropertyShape ;
-      sh:path bf:references ;
+      sh:path bf:referencedBy ;
       sh:class bf:Work ;
-      sh:description "Resource that is referenced by the described resource." ;
-      sh:name "References" ;
+      sh:description "Resource that references the described resource." ;
+      sh:name "Referenced by" ;
       sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:nodeKind sh:IRI .
+
 
 artframe_art_form:WorkForm_rdau_P60198 
       a sh:PropertyShape ;
@@ -451,6 +452,14 @@ artframe_art_form:WorkForm_rdau_P60833
       sh:class bf:Work ;
       sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "is inspiration for" ;
+      sh:nodeKind sh:IRI .
+
+artframe_art_form:WorkForm_rdau_P60832 
+      a sh:PropertyShape ;
+      sh:path <http://rdaregistry.info/Elements/u/P60832> ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "is inspired by" ;
       sh:nodeKind sh:IRI .
       
 artframe_art_form:WorkForm_rdau_P60214 
