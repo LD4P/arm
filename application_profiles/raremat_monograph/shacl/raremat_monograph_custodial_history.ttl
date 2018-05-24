@@ -179,7 +179,7 @@
     sh:node custodial_history_property_shapes:rdfs_label ;
     # NON-VALIDATING
     sh:name "Custodial event name" ;
-    sh:description "Optionally specify a name for the custodial event" ;
+    sh:description "Optionally specify a name for the custodial event." ;
     sh:order "25"^^xsd:int ;
     . 
        
@@ -220,7 +220,7 @@
     sh:maxCount 1 ;
     # NON-VALIDATING
     sh:name "Date" ;
-    sh:description "Date of the custodial event. Recommended to use EDTF format" ;
+    sh:description "Date of the custodial event. Recommended to use EDTF format." ;
     sh:order "40"^^xsd:int ;
     .
 

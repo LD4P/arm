@@ -33,6 +33,7 @@
     sh:node custodial_history_property_shapes:schema_price ;
     # NON-VALIDATING
     sh:name "Amount" ;
+    sh:description "Numeric value of the price." ;
     sh:order "10"^^xsd:int ;  
     .
     
