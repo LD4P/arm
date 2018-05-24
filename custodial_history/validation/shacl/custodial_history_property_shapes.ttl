@@ -254,6 +254,12 @@
     # Do not specify sh:nodeKind; leave for implementations to define 
     # according to context.
     .
+    
+:rdfs_label
+    a sh:PropertyShape ;
+    sh:path rdfs:label ;
+    sh:nodeKind sh:Literal ;
+    .
    
 :schema_price
     a sh:PropertyShape ;

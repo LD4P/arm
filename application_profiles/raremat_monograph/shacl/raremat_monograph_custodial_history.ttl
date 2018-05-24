@@ -111,6 +111,8 @@
         
         :CustodialEventForm_rdf_type , 
         
+        :CustodialEventForm_rdfs_label ,
+        
         :CustodialEventForm_activity_hasActivity ,
 
         :CustodialEventForm_bf_date ,
@@ -166,10 +168,21 @@
     sh:node custodial_history_property_shapes:ch_CustodialEvent_rdf_type ;
     # NON-VALIDATING
     sh:name "Custodial event type" ;
+    sh:description "Custodial events include both states and transitions (e.g., ownership, sale)." ;
     sh:order "20"^^xsd:int ;
     . 
  
-    
+##### CUSTODIAL EVENT LABEL #####
+
+:CustodialEventForm_rdfs_label
+    a sh:PropertyShape ;
+    sh:node custodial_history_property_shapes:rdfs_label ;
+    # NON-VALIDATING
+    sh:name "Custodial event name" ;
+    sh:description "Optionally specify a name for the custodial event" ;
+    sh:order "25"^^xsd:int ;
+    . 
+       
 ##### CUSTODIAL EVENT ACTIVITY #####
 
 # Links CustodialEvent to Activity/Agent
