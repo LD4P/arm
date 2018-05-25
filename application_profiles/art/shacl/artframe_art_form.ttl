@@ -95,43 +95,38 @@ artframe_art_form:WorkForm
 
 # WorkToWorkPropertyGroup
 
-  sh:property artframe_art_form:WorkForm_bf_hasPart ;
-  sh:property artframe_art_form:WorkForm_bf_partOf ;
-  sh:property artframe_art_form:WorkForm_bf_hasExpression ;
+  sh:property artframe_art_form:WorkForm_bf_accompaniedBy ;
+  sh:property artframe_art_form:WorkForm_bf_accompanies ;
+  sh:property artframe_art_form:WorkForm_arm_citedBy ;
+  sh:property artframe_art_form:WorkForm_arm_cites ;
   sh:property artframe_art_form:WorkForm_bf_expressionOf ;
-  sh:property artframe_art_form:WorkForm_bf_references ;
-  sh:property artframe_art_form:WorkForm_bf_referencedBy ;
-  sh:property artframe_art_form:WorkForm_rdau_P60198 ;
-  sh:property artframe_art_form:WorkForm_bf_version ;
-  sh:property artframe_art_form:WorkForm_rdau_P60250 ;
+  sh:property artframe_art_form:WorkForm_bf_hasExpression ;
+  sh:property artframe_art_form:WorkForm_bf_hasPart ;
   sh:property artframe_art_form:WorkForm_rdau_P60260 ;
-  sh:property artframe_art_form:WorkForm_rdau_P60833 ;
-  sh:property artframe_art_form:WorkForm_rdau_P60832 ;
-  sh:property artframe_art_form:WorkForm_rdau_P60214 ;
-  sh:property artframe_art_form:WorkForm_rdau_P60246 ;
-  sh:property artframe_art_form:WorkForm_rdau_P60305 ;
-  sh:property artframe_art_form:WorkForm_rdau_P60198 ;
-  sh:property artframe_art_form:WorkForm_rdau_P60254 ;
-  sh:property artframe_art_form:WorkForm_rdau_P60182 ;
+  sh:property artframe_art_form:WorkForm_rdau_P60241 ;
   sh:property artframe_art_form:WorkForm_rdau_P60204 ;
   sh:property artframe_art_form:WorkForm_rdau_P60307 ;
-  sh:property artframe_art_form:WorkForm_rdau_P60244 ;
-  sh:property artframe_art_form:WorkForm_rdau_P60280 ;
-  sh:property artframe_art_form:WorkForm_rdau_P60241 ;
+  sh:property artframe_art_form:WorkForm_rdau_P60305 ;
+  sh:property artframe_art_form:WorkForm_rdau_P60198 ;
+  sh:property artframe_art_form:WorkForm_rdau_P60250 ;
+  sh:property artframe_art_form:WorkForm_rdau_P60182 ;
+  sh:property artframe_art_form:WorkForm_rdau_P60254 ;
+  sh:property artframe_art_form:WorkForm_rdau_P60214 ;
   sh:property artframe_art_form:WorkForm_rdau_P60311 ;
+  sh:property artframe_art_form:WorkForm_rdau_P60832 ;
+  sh:property artframe_art_form:WorkForm_rdau_P60833 ;
+  sh:property artframe_art_form:WorkForm_rdau_P60246 ;
   sh:property artframe_art_form:WorkForm_rdau_P60312 ;
-  sh:property artframe_art_form:WorkForm_rdau_P60244 ;
   sh:property artframe_art_form:WorkForm_rdau_P60280 ;
-  sh:property artframe_art_form:WorkForm_arm_cites ;
-  sh:property artframe_art_form:WorkForm_arm_citedBy ;
-  sh:property artframe_art_form:WorkForm_bf_accompanies ;
-  sh:property artframe_art_form:WorkForm_bf_accompaniedBy ;
+  sh:property artframe_art_form:WorkForm_rdau_P60244 ;
+  sh:property artframe_art_form:WorkForm_bf_partOf ;
+  sh:property artframe_art_form:WorkForm_bf_referencedBy ;
+  sh:property artframe_art_form:WorkForm_bf_references ;
   sh:property artframe_art_form:WorkForm_bf_relatedTo ;
-
-
-# TODO ensure that workform list is complete
-
-# ///// PROPERTY SHAPES FOR WorkTitlePropertyGroup START HERE. /////////////////////////////////////////////////////////////
+  sh:property artframe_art_form:WorkForm_bf_version ;
+  
+   
+ # ///// PROPERTY SHAPES FOR WorkTitlePropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
 artframe_art_form:WorkForm_arm_hasPreferredTitle 
   a sh:PropertyShape ;
@@ -368,206 +363,6 @@ artframe_art_form:WorkForm_bf_identifiedBy
 
 # TODO decide what types of parts bf:Works can have, e.g. bf:StillImage
 
-artframe_art_form:WorkForm_bf_hasPart 
-      a sh:PropertyShape ;
-      sh:path bf:hasPart ;
-      sh:class bf:Work ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:name "Contents or part of the art work" .    
-
-# TODO decide what types of bf:Works a bf:Text, bf:StillImage or bf:Object can be a part of, e.g. another bf:Text
-
-artframe_art_form:WorkForm_bf_relatedTo 
-      a sh:PropertyShape ;
-      sh:path bf:relatedTo ;
-      sh:class bf:Work ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:name "Related to" .
-
-artframe_art_form:WorkForm_bf_partOf 
-      a sh:PropertyShape ;
-      sh:path bf:partOf ;
-      sh:class bf:Work ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:name "Is part or contents of the art work" .
-
-sh:property artframe_art_form:WorkForm_bf_hasExpression
-      a sh:PropertyShape ;
-      sh:path bf:hasExpression ;
-      sh:class bf:Work ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:name "Has expression " .
-
-sh:property artframe_art_form:WorkForm_bf_expressionOf
-      a sh:PropertyShape ;
-      sh:path bf:expressionOf ;
-      sh:class bf:Work ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:name "Expression of" .
-
-artframe_art_form:WorkForm_bf_references 
-      a sh:PropertyShape ;
-      sh:path bf:references ;
-      sh:class bf:Work ;
-      sh:description "Resource that is referenced by the described resource." ;
-      sh:name "References" ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup .
-    
-artframe_art_form:WorkForm_bf_referencedBy
-      a sh:PropertyShape ;
-      sh:path bf:referencedBy ;
-      sh:class bf:Work ;
-      sh:description "Resource that references the described resource." ;
-      sh:name "Referenced by" ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:nodeKind sh:IRI .
-
-
-artframe_art_form:WorkForm_rdau_P60198 
-      a sh:PropertyShape ;
-      sh:path <http://rdaregistry.info/Elements/u/P60198> ;
-      sh:class bf:Work ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:name "is complemented by" ;
-      sh:nodeKind sh:IRI .
-
-artframe_art_form:WorkForm_bf_version 
-      a sh:PropertyShape ;
-      sh:path bf:version ;
-      sh:class bf:Work ;
-      sh:description "Term or terms that identify works such as arranged for music, vulgate for religious work, etc." ;
-      sh:name "Version" ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:nodeKind sh:IRI .
-    
-artframe_art_form:WorkForm_rdau_P60250 
-      a sh:PropertyShape ;
-      sh:path <http://rdaregistry.info/Elements/u/P60250> ;
-      sh:class bf:Work ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:name "is derivative" ;
-      sh:nodeKind sh:IRI .
-
-artframe_art_form:WorkForm_rdau_P60305 
-      a sh:PropertyShape ;
-      sh:path <http://rdaregistry.info/Elements/u/P60305> ;
-      sh:class bf:Work ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:name "Is based on" ;
-      sh:nodeKind sh:IRI .
-      
-artframe_art_form:WorkForm_rdau_P60260 
-      a sh:PropertyShape ;
-      sh:path <http://rdaregistry.info/Elements/u/P60260> ;
-      sh:class bf:Work ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:name "is adapted as" ;
-      sh:nodeKind sh:IRI .
-      
-artframe_art_form:WorkForm_rdau_P60833 
-      a sh:PropertyShape ;
-      sh:path <http://rdaregistry.info/Elements/u/P60833> ;
-      sh:class bf:Work ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:name "is inspiration for" ;
-      sh:nodeKind sh:IRI .
-
-artframe_art_form:WorkForm_rdau_P60832 
-      a sh:PropertyShape ;
-      sh:path <http://rdaregistry.info/Elements/u/P60832> ;
-      sh:class bf:Work ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:name "is inspired by" ;
-      sh:nodeKind sh:IRI .
-      
-artframe_art_form:WorkForm_rdau_P60214 
-      a sh:PropertyShape ;
-      sh:path <http://rdaregistry.info/Elements/u/P60214> ;
-      sh:class bf:Work ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:name "is imitated as" ;
-      sh:nodeKind sh:IRI .
-      
-artframe_art_form:WorkForm_rdau_P60246 
-      a sh:PropertyShape ;
-      sh:path <http://rdaregistry.info/Elements/u/P60246> ;
-      sh:class bf:Work ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:name "is parodied as" ;
-      sh:nodeKind sh:IRI .
-
-artframe_art_form:WorkForm_rdau_P60254 
-      a sh:PropertyShape ;
-      sh:path <http://rdaregistry.info/Elements/u/P60254> ;
-      sh:class bf:Work ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:name "is illustrations for" ;
-      sh:nodeKind sh:IRI .
-
-artframe_art_form:WorkForm_rdau_P60182 
-      a sh:PropertyShape ;
-      sh:path <http://rdaregistry.info/Elements/u/P60182> ;
-      sh:class bf:Work ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:name "is illustrations" ;
-      sh:nodeKind sh:IRI .
-
-artframe_art_form:WorkForm_rdau_P60204 
-      a sh:PropertyShape ;
-      sh:path <http://rdaregistry.info/Elements/u/P60204> ;
-      sh:class bf:Work ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:name "is augmented by" ;
-      sh:nodeKind sh:IRI .
-
-artframe_art_form:WorkForm_rdau_P60307 
-      a sh:PropertyShape ;
-      sh:path <http://rdaregistry.info/Elements/u/P60307> ;
-      sh:class bf:Work ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:name "is augmentation of" ;
-      sh:nodeKind sh:IRI .
-      
-artframe_art_form:WorkForm_rdau_P60241 
-      a sh:PropertyShape ;
-      sh:path <http://rdaregistry.info/Elements/u/P60241> ;
-      sh:class bf:Work ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:name "is adaptation of" ;
-      sh:nodeKind sh:IRI .
-      
-artframe_art_form:WorkForm_rdau_P60311 
-      a sh:PropertyShape ;
-      sh:path <http://rdaregistry.info/Elements/u/P60311> ;
-      sh:class bf:Work ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:name "is imitation of" ;
-      sh:nodeKind sh:IRI .
-      
-artframe_art_form:WorkForm_rdau_P60312 
-      a sh:PropertyShape ;
-      sh:path <http://rdaregistry.info/Elements/u/P60312> ;
-      sh:class bf:Work ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:name "is parody of" ;
-      sh:nodeKind sh:IRI .
-
-artframe_art_form:WorkForm_rdau_P60244 
-      a sh:PropertyShape ;
-      sh:path <http://rdaregistry.info/Elements/u/P60244> ;
-      sh:class bf:Work ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:name "Is translation of" ;
-      sh:nodeKind sh:IRI .     
-
-rtframe_art_form:WorkForm_rdau_P60280 
-      a sh:PropertyShape ;
-      sh:path <http://rdaregistry.info/Elements/u/P60280> ;
-      sh:class bf:Work ;
-      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
-      sh:name "Is translated as" ;
-      sh:nodeKind sh:IRI .     
-    
 artframe_art_form:WorkForm_bf_accompaniedBy 
       a sh:PropertyShape ;
       sh:path bf:accompaniedBy ;
@@ -575,6 +370,7 @@ artframe_art_form:WorkForm_bf_accompaniedBy
       sh:description "Resource that accompanies the described resource." ;
       sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "AccompaniesBy" ;
+      sh:order "0"^^xsd:int ;
       sh:nodeKind sh:IRI .
 
 artframe_art_form:WorkForm_bf_accompanies 
@@ -584,8 +380,9 @@ artframe_art_form:WorkForm_bf_accompanies
       sh:description "Resource that adds to or is issued with the described resource." ;
       sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "Accompanies" ;
+      sh:order "1"^^xsd:int ;
       sh:nodeKind sh:IRI .
-      
+
 artframe_art_form:WorkForm_arm_cites 
       a sh:PropertyShape ;
       sh:path arm:cites ;
@@ -594,8 +391,9 @@ artframe_art_form:WorkForm_arm_cites
       section of a (well-known) work of art to incorporate it a new visual creation." ;
       sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "Cites" ;
+      sh:order "2"^^xsd:int ;
       sh:nodeKind sh:IRI .
-      
+
 artframe_art_form:WorkForm_arm_citedBy 
       a sh:PropertyShape ;
       sh:path arm:citedBy ;
@@ -604,7 +402,239 @@ artframe_art_form:WorkForm_arm_citedBy
       section of a (well-known) work of art to incorporate it a new visual creation." ;
       sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "Cited by" ;
-      sh:nodeKind sh:IRI .     
+      sh:order "3"^^xsd:int ;
+      sh:nodeKind sh:IRI .  
+
+sh:property artframe_art_form:WorkForm_bf_expressionOf
+      a sh:PropertyShape ;
+      sh:path bf:expressionOf ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "Expression of" ;
+      sh:order "4"^^xsd:int ;
+      sh:nodeKind sh:IRI .
+
+sh:property artframe_art_form:WorkForm_bf_hasExpression
+      a sh:PropertyShape ;
+      sh:path bf:hasExpression ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "Has expression" ;
+      sh:order "5"^^xsd:int ;
+      sh:nodeKind sh:IRI .
+
+artframe_art_form:WorkForm_bf_hasPart 
+      a sh:PropertyShape ;
+      sh:path bf:hasPart ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "Contents or part of the art work" ;  
+      sh:order "6" ;  
+      sh:nodeKind sh:IRI .
+
+artframe_art_form:WorkForm_rdau_P60260 
+      a sh:PropertyShape ;
+      sh:path <http://rdaregistry.info/Elements/u/P60260> ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "is adapted as" ;
+      sh:order "7"^^xsd:int ;
+      sh:nodeKind sh:IRI .
+
+artframe_art_form:WorkForm_rdau_P60241 
+      a sh:PropertyShape ;
+      sh:path <http://rdaregistry.info/Elements/u/P60241> ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "is adaptation of" ;
+      sh:order "8"^^xsd:int ;
+      sh:nodeKind sh:IRI .
+
+artframe_art_form:WorkForm_rdau_P60307 
+      a sh:PropertyShape ;
+      sh:path <http://rdaregistry.info/Elements/u/P60307> ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "is augmentation of" ;
+      sh:order "9"^^xsd:int ;
+      sh:nodeKind sh:IRI .
+
+artframe_art_form:WorkForm_rdau_P60204 
+      a sh:PropertyShape ;
+      sh:path <http://rdaregistry.info/Elements/u/P60204> ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "is augmented by" ;
+      sh:order "10"^^xsd:int ;
+      sh:nodeKind sh:IRI .
+
+artframe_art_form:WorkForm_rdau_P60305 
+      a sh:PropertyShape ;
+      sh:path <http://rdaregistry.info/Elements/u/P60305> ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "Is based on" ;
+      sh:order "11"^^xsd:int ;
+      sh:nodeKind sh:IRI .
+
+artframe_art_form:WorkForm_rdau_P60198 
+      a sh:PropertyShape ;
+      sh:path <http://rdaregistry.info/Elements/u/P60198> ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "is complemented by" ;
+      sh:order "12"^^xsd:int ;
+      sh:nodeKind sh:IRI .
+
+artframe_art_form:WorkForm_rdau_P60250 
+      a sh:PropertyShape ;
+      sh:path <http://rdaregistry.info/Elements/u/P60250> ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "is derivative" ;
+      sh:order "13"^^xsd:int ;
+      sh:nodeKind sh:IRI .
+
+artframe_art_form:WorkForm_rdau_P60182 
+      a sh:PropertyShape ;
+      sh:path <http://rdaregistry.info/Elements/u/P60182> ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "is illustrations" ;
+      sh:order "14"^^xsd:int ;
+      sh:nodeKind sh:IRI .
+
+artframe_art_form:WorkForm_rdau_P60254 
+      a sh:PropertyShape ;
+      sh:path <http://rdaregistry.info/Elements/u/P60254> ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "is illustrations for" ;
+      sh:order "15"^^xsd:int ;
+      sh:nodeKind sh:IRI .
+
+artframe_art_form:WorkForm_rdau_P60214 
+      a sh:PropertyShape ;
+      sh:path <http://rdaregistry.info/Elements/u/P60214> ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "is imitated as" ;
+      sh:order "16"^^xsd:int ;
+      sh:nodeKind sh:IRI .
+
+artframe_art_form:WorkForm_rdau_P60311 
+      a sh:PropertyShape ;
+      sh:path <http://rdaregistry.info/Elements/u/P60311> ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "is imitation of" ;
+      sh:order "17"^^xsd:int ;
+      sh:nodeKind sh:IRI .
+
+artframe_art_form:WorkForm_rdau_P60832 
+      a sh:PropertyShape ;
+      sh:path <http://rdaregistry.info/Elements/u/P60832> ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "is inspired by" ;
+      sh:order "18"^^xsd:int ;
+      sh:nodeKind sh:IRI .
+
+artframe_art_form:WorkForm_rdau_P60833 
+      a sh:PropertyShape ;
+      sh:path <http://rdaregistry.info/Elements/u/P60833> ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "is inspiration for" ;
+      sh:order "19"^^xsd:int ;
+      sh:nodeKind sh:IRI .
+
+artframe_art_form:WorkForm_rdau_P60246 
+      a sh:PropertyShape ;
+      sh:path <http://rdaregistry.info/Elements/u/P60246> ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "is parodied as" ;
+      sh:order "20"^^xsd:int ;
+      sh:nodeKind sh:IRI .
+
+artframe_art_form:WorkForm_rdau_P60312 
+      a sh:PropertyShape ;
+      sh:path <http://rdaregistry.info/Elements/u/P60312> ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "is parody of" ;
+      sh:order "21"^^xsd:int ;
+      sh:nodeKind sh:IRI .
+
+Artframe_art_form:WorkForm_rdau_P60280 
+      a sh:PropertyShape ;
+      sh:path <http://rdaregistry.info/Elements/u/P60280> ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "Is translated as" ;
+      sh:order "22"^^xsd:int ;
+      sh:nodeKind sh:IRI . 
+
+artframe_art_form:WorkForm_rdau_P60244 
+      a sh:PropertyShape ;
+      sh:path <http://rdaregistry.info/Elements/u/P60244> ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "Is translation of" ;
+      sh:order "23"^^xsd:int ;
+      sh:nodeKind sh:IRI .  
+
+# TODO decide what types of bf:Works a bf:Text, bf:StillImage or bf:Object can be a part of, e.g. another bf:Text
+
+artframe_art_form:WorkForm_bf_partOf 
+      a sh:PropertyShape ;
+      sh:path bf:partOf ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "Is part or contents of the art work" ;
+      sh:order "24"^^xsd:int ;
+      sh:nodeKind sh:IRI .
+
+artframe_art_form:WorkForm_bf_referencedBy
+      a sh:PropertyShape ;
+      sh:path bf:referencedBy ;
+      sh:class bf:Work ;
+      sh:description "Resource that references the described resource." ;
+      sh:name "Referenced by" ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:order "25"^^xsd:int ;
+      sh:nodeKind sh:IRI .
+
+artframe_art_form:WorkForm_bf_references 
+      a sh:PropertyShape ;
+      sh:path bf:references ;
+      sh:class bf:Work ;
+      sh:description "Resource that is referenced by the described resource." ;
+      sh:name "References" ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:order "26"^^xsd:int ;
+      sh:nodeKind sh:IRI .
+
+artframe_art_form:WorkForm_bf_relatedTo 
+      a sh:PropertyShape ;
+      sh:path bf:relatedTo ;
+      sh:class bf:Work ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:name "Related to" ;
+      sh:order "27"^^xsd:int ;
+      sh:nodeKind sh:IRI .
+
+artframe_art_form:WorkForm_bf_version 
+      a sh:PropertyShape ;
+      sh:path bf:version ;
+      sh:class bf:Work ;
+      sh:description "Term or terms that identify works such as arranged for music, vulgate for religious work, etc." ;
+      sh:name "Version" ;
+      sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
+      sh:order "28"^^xsd:int ;
+      sh:nodeKind sh:IRI .           
+         
       
 # /////// INSTANCE FORM BEGINS HERE ///////////////////////////////////////////////////////////////////////////////
 

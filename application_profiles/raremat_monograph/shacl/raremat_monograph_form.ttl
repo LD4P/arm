@@ -1418,7 +1418,17 @@ raremat_monograph_form:InstanceForm_bf_hasPart
     sh:name "Instance part" ;
     sh:order "8"^^xsd:int ;
     sh:description "Part of the instance being described." ;
-    sh:class bf:Instance ;
+    sh:or (
+        [
+            sh:class arm:Page ;
+        ]
+        [
+            sh:class arm:Volume ;
+        ]
+        [
+            sh:class bf:Instance ;
+        ]
+      ) ;
     sh:group raremat_monograph_property_groups:InstancePhysicalDescriptionPropertyGroup .
 
 # An Binding Property Shape belongs at this point in the form sequence. See :InstanceForm_bf_hasPart_arm_Binding
@@ -1812,7 +1822,17 @@ raremat_monograph_form:ItemForm_bf_hasPart
     sh:name "Item part" ;
     sh:order "0"^^xsd:int ;
     sh:description "Part of the item being described." ;
-    sh:class bf:Item ;
+    sh:or (
+        [
+            sh:class arm:Page ;
+        ]
+        [
+            sh:class arm:Volume ;
+        ]
+        [
+            sh:class bf:Instance ;
+        ]
+      ) ;
     sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup .
    
 # A Binding Property Shape belongs at this point in the form sequence. See :ItemForm_bf_hasPart_arm_Binding
@@ -2230,45 +2250,7 @@ raremat_monograph_form:MeasurementForm_measure_hasUnit
     sh:name "Unit" ;
     sh:nodeKind sh:IRI ;
     sh:order "1"^^xsd:int ;
-    sh:or (
-        [
-                sh:hasValue <http://qudt.org/vocab/unit#Centimeter> ;
-        ]
-        [
-                sh:hasValue <http://qudt.org/vocab/unit#Foot> ;
-        ]
-        [
-                sh:hasValue <http://qudt.org/vocab/unit#Gram> ;
-        ]
-        [
-                sh:hasValue <http://qudt.org/vocab/unit#Inch> ;
-        ]
-        [
-                sh:hasValue <http://qudt.org/vocab/unit#Kilogram> ;
-        ]
-        [
-                sh:hasValue <http://qudt.org/vocab/unit#Kilometer> ;
-        ]
-        [
-                sh:hasValue <http://qudt.org/vocab/unit#Meter> ;
-        ]
-        [
-                sh:hasValue <http://qudt.org/vocab/unit#MileUSStatute> ;
-        ]
-        [
-                sh:hasValue <http://qudt.org/vocab/unit#Millimeter> ;
-        ]
-        [
-                sh:hasValue <http://qudt.org/vocab/unit#MetricTon> ;
-        ]
-        [
-                sh:hasValue <http://qudt.org/vocab/unit#OunceMass> ;
-        ]
-        [
-                sh:hasValue <http://qudt.org/vocab/unit#PoundMass> ;
-        ]
-      ) 
-.
+    sh:in ( <http://qudt.org/vocab/unit#Centimeter> <http://qudt.org/vocab/unit#Foot> <http://qudt.org/vocab/unit#Gram> <http://qudt.org/vocab/unit#Inch> <http://qudt.org/vocab/unit#Kilogram> <http://qudt.org/vocab/unit#Kilometer> <http://qudt.org/vocab/unit#Meter> <http://qudt.org/vocab/unit#MileUSStatute> <http://qudt.org/vocab/unit#Millimeter> <http://qudt.org/vocab/unit#MetricTon> <http://qudt.org/vocab/unit#OunceMass> <http://qudt.org/vocab/unit#PoundMass> ) .
 
 raremat_monograph_form:MeasurementForm_measure_measures 
     a sh:PropertyShape ;
@@ -2277,66 +2259,8 @@ raremat_monograph_form:MeasurementForm_measure_measures
     sh:name "Dimension or other aspect" ;
     sh:nodeKind sh:IRI ;
     sh:order "2"^^xsd:int ;
-    sh:or (
-        [
-                sh:hasValue <http://vocab.getty.edu/aat/300055621> ;
-        ]
-        [
-                sh:hasValue <http://vocab.getty.edu/aat/300055623> ;
-        ]
-        [
-                sh:hasValue <http://vocab.getty.edu/aat/300055624> ;
-        ]
-        [
-                sh:hasValue <http://vocab.getty.edu/aat/300055644> ;
-        ]
-        [
-                sh:hasValue <http://vocab.getty.edu/aat/300055645> ;
-        ]
-        [
-                sh:hasValue <http://vocab.getty.edu/aat/300055646> ;
-        ]
-        [
-            sh:hasValue <http://vocab.getty.edu/aat/300055647> ;
-        ]
-        [
-            sh:hasValue <http://vocab.getty.edu/aat/300055649> ;
-        ]
-        [
-            sh:hasValue <http://vocab.getty.edu/aat/300056240> ;
-        ]
-        [
-            sh:hasValue <http://vocab.getty.edu/aat/300072633> ;
-        ]
-        [
-            sh:hasValue <http://vocab.getty.edu/aat/300312044> ;
-        ]
-        [
-            sh:hasValue <http://vocab.getty.edu/aat/300404162> ;
-        ]
-        [
-            sh:hasValue <http://vocab.getty.edu/aat/300404164> ;
-        ]
-        [
-            sh:hasValue <http://vocab.getty.edu/aat/300404403> ;
-        ]
-        [
-            sh:hasValue <http://vocab.getty.edu/aat/300404430> ;
-        ]
-        [
-            sh:hasValue <http://vocab.getty.edu/aat/300404431> ;
-        ]
-        [
-            sh:hasValue <http://vocab.getty.edu/aat/300404432> ;
-        ]
-        [
-            sh:hasValue <http://vocab.getty.edu/aat/300404433> ;
-        ]
-        [
-            sh:hasValue <http://vocab.getty.edu/aat/300404437> ;
-        ]
-      ) 
-.
+    sh:in ( aat:300055621 aat:300055623 aat:300055624 aat:300055644 aat:300055645> aat:300055646 aat:300055647 aat:300055649 aat:300056240 aat:300072633 aat:300312044 aat:300404162 aat:300404164 aat:300404403 aat:300404430 aat:300404431 aat:300404432 aat:300404433 aat:300404437 ) .
+
 
 # /////// NOTE FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
@@ -2410,26 +2334,7 @@ raremat_monograph_form:AwardReceiptForm_rdf_type
     sh:description "Sequential numbering of individual leaves, plates, pages (numbering on both sides), or columns (used as a sequence of numbering) of a resource." ;
     sh:name "Type of Award Receipt" ;
     sh:order "0"^^xsd:int ;
-    sh:or (
-        [
-            sh:hasValue award:AwardWinner ;
-        ]
-        [
-            sh:hasValue award:AwardNominee ;
-        ]
-        [
-            sh:hasValue award:AwardHonoraryMention ;
-        ]
-        [
-            sh:hasValue award:AwardCitation ;
-        ]
-        [
-            sh:hasValue award:AwardLonglist ;
-        ]
-        [
-            sh:hasValue award:AwardShortlist ;
-        ]
-        ) ;
+    sh:in ( award:AwardWinner award:AwardNominee award:AwardHonoraryMention award:AwardCitation award:AwardLonglist award:AwardShortlist ) ;
     sh:nodeKind sh:IRI ;
     sh:order "0"^^xsd:int .
     
@@ -3059,7 +2964,7 @@ raremat_monograph_form:BibliographicCitationForm_arm_atLocation
             sh:class arm:Volume ;
         ]
         [
-            sh:class bf:Text ;
+            sh:class bf:Instance ;
         ]
       ) ;
     sh:name "Entry source" ;
@@ -3094,7 +2999,7 @@ raremat_monograph_form:PageForm_bf_partOf
              sh:class arm:Volume ;
         ]
         [
-             sh:class bf:Text ;
+             sh:class bf:Instance ;
         ]
       ) ;
     sh:name "Part of" ;
