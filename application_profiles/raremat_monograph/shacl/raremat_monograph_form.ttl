@@ -1418,7 +1418,17 @@ raremat_monograph_form:InstanceForm_bf_hasPart
     sh:name "Instance part" ;
     sh:order "8"^^xsd:int ;
     sh:description "Part of the instance being described." ;
-    sh:class bf:Instance ;
+    sh:or (
+        [
+            sh:class arm:Page ;
+        ]
+        [
+            sh:class arm:Volume ;
+        ]
+        [
+            sh:class bf:Instance ;
+        ]
+      ) ;
     sh:group raremat_monograph_property_groups:InstancePhysicalDescriptionPropertyGroup .
 
 # An Binding Property Shape belongs at this point in the form sequence. See :InstanceForm_bf_hasPart_arm_Binding
@@ -1812,7 +1822,17 @@ raremat_monograph_form:ItemForm_bf_hasPart
     sh:name "Item part" ;
     sh:order "0"^^xsd:int ;
     sh:description "Part of the item being described." ;
-    sh:class bf:Item ;
+    sh:or (
+        [
+            sh:class arm:Page ;
+        ]
+        [
+            sh:class arm:Volume ;
+        ]
+        [
+            sh:class bf:Instance ;
+        ]
+      ) ;
     sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup .
    
 # A Binding Property Shape belongs at this point in the form sequence. See :ItemForm_bf_hasPart_arm_Binding
@@ -3059,7 +3079,7 @@ raremat_monograph_form:BibliographicCitationForm_arm_atLocation
             sh:class arm:Volume ;
         ]
         [
-            sh:class bf:Text ;
+            sh:class bf:Instance ;
         ]
       ) ;
     sh:name "Entry source" ;
@@ -3094,7 +3114,7 @@ raremat_monograph_form:PageForm_bf_partOf
              sh:class arm:Volume ;
         ]
         [
-             sh:class bf:Text ;
+             sh:class bf:Instance ;
         ]
       ) ;
     sh:name "Part of" ;
