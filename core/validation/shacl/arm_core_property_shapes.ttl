@@ -152,7 +152,14 @@
     sh:minCount 1 ;
     sh:maxCount 1 ;
     .
-        
+
+# Links a location to the resource located there.        
+:arm_isLocationOf
+    a sh:PropertyShape ;
+    sh:path arm:isLocationOf ;
+    sh:nodeKind sh:IRI ;
+    .
+            
 # Links material to resource made of it in whole or in part.
 :arm_isMaterialOf 
     a sh:PropertyShape ;
@@ -334,6 +341,7 @@
     # according to context.
     .
 
+# Links a resource to its rdfs:label.
 :rdfs_label
     a sh:PropertyShape ;
     sh:path rdfs:label ;

@@ -123,7 +123,7 @@
         
         # NB Applies only to certain types of CustodialEvent; ignore this 
         # for now.
-        :CustodialEventForm_arm_accessionedBy , 
+        :CustodialEventForm_ch_accessionedBy , 
 
         # Relates individual CustodialEvent to aggregate CustodialEvent. We
         # distinguish these by the fact that only the former is related
@@ -220,7 +220,7 @@
     sh:maxCount 1 ;
     # NON-VALIDATING
     sh:name "Date" ;
-    sh:description "Date of the custodial event. Recommended to use EDTF format." ;
+    sh:description "Date or date interval of the custodial event. Recommended to use EDTF format." ;
     sh:order "40"^^xsd:int ;
     .
 
@@ -258,14 +258,13 @@
 # the number is already attached to the Item, use that identifier rather 
 # than creating a new one.
 
-# TODO Limit to certain classes of custodial events. 
-
-:CustodialEvent_arm_accessionedBy 
+# TODO Limit to certain classes of CustodialEvents.
+:CustodialEvent_ch_accessionedBy 
     a sh:PropertyShape ;
     sh:node custodial_history_property_shapes:ch_accessionedBy ;
     # NON-VALIDATING
     sh:name "Accession number" ;
-    sh:description "Accession number of the item associated with the event." ;
+    sh:description "Accession number of the item associated with this custodial event." ;
     sh:order "70"^^xsd:int ;
     .
     
@@ -274,10 +273,26 @@
     rdfs:label "Accession number" ;
     sh:targetClass arm:AccessionNumber ;
     sh:property 
+        # Use only on AccessionNumber page, not on embedded form on 
+        # CustodialEvent or Item page; the Item is linked to through other
+        # properties in both these cases.
+        :AccessionNumberForm_bf_identifies ,
         raremat_monograph_identifier:rdf_value ,
         raremat_monograph_identifier:bf_status ;
     .    
 
+# Use only on AccessionNumber page, not on embedded form on CustodialEvent 
+# or Item page; the Item is linked to through other properties in both these 
+# cases.
+:AccessionNumberForm_bf_identifies
+    a sh:PropertyShape ;
+    sh:node custodial_history_property_shape:bf_identifies ;
+    # NON-VALIDATING
+    sh:name "Item" ;
+    sh:description "Item identified by the accession number." ;
+    sh:order "10"^^xsd:int ;
+    . 
+    
 
 ##### INDIVIDUAL AND AGGREGATE CUSTODIAL EVENTS #####
 
