@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet exclude-result-prefixes="xs arm" version="3.0"
-  xmlns:arm="https://w3id.org/arm/core/vocabularies/rbms_binding/0.1#"
+<xsl:stylesheet exclude-result-prefixes="xs arm vann owl" version="2.0"
+  xmlns:arm="https://w3id.org/arm/core/ontology/0.1/"
   xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:vann="http://purl.org/vocab/vann/"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
@@ -19,19 +21,67 @@
   <xsl:strip-space elements="*"/>
   <xsl:output indent="yes" method="xml"/>
 
-  <!-- Current base URI -->
-  <xsl:param name="base-uri"
-    >https://w3id.org/arm/core/vocabularies/rbms_binding/0.1</xsl:param>
+  <!-- Current RBMS vocab -->
+  <xsl:param name="rbms-vocab">rbms_binding</xsl:param>
+
+  <!--  <rbms>
+    <vocabs>
+      <vocab>binding</vocab>
+      <vocab>genre</vocab>
+      <vocab>paper</vocab>
+      <vocab>printing_and_publishing</vocab>
+      <vocab>provenance</vocab>
+      <vocab>relationship_designators</vocab>
+      <vocab>type</vocab>
+    </vocabs>
+  </rbms>-->
 
   <!-- id.loc.gov for RBMS -->
   <xsl:param name="rbms">http://id.loc.gov/rwo/agents/n78097904</xsl:param>
+
+  <!-- Current ontology version -->
+  <xsl:param name="current-version" select="'0.1'"/>
+
+  <!-- Current base URI -->
+  <xsl:variable name="base-uri"
+    select="concat('https://w3id.org/arm/core/vocabularies/', $rbms-vocab, '/', $current-version, '/')"/>
 
   <!-- Key for linking BT, NT, RT -->
   <xsl:key match="CONCEPT" name="termKey" use="DESCRIPTOR"/>
 
   <xsl:template match="/THESAURUS">
+    <!-- Output separate skos:ConceptScheme resource -->
+    <xsl:result-document href="{$rbms-vocab}_scheme.rdf" method="xml">
+      <xsl:call-template name="arm:concept-scheme"/>
+    </xsl:result-document>
+
+    <!-- Output thesaurus -->
     <rdf:RDF>
       <xsl:apply-templates/>
+    </rdf:RDF>
+  </xsl:template>
+
+  <xsl:template name="arm:concept-scheme">
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about="{$base-uri}">
+        <rdf:type
+          rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >Version 0.1.0</owl:versionInfo>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+        <rdfs:label xml:lang="en">RBMS <xsl:value-of
+            select="arm:vocab-name($rbms-vocab)"/> Vocabulary</rdfs:label>
+        <dcterms:title xml:lang="en">RBMS <xsl:value-of
+            select="arm:vocab-name($rbms-vocab)"/> Vocabulary</dcterms:title>
+        <skos:definition xml:lang="en">The RBMS <xsl:value-of
+            select="arm:vocab-name($rbms-vocab)"/> Vocabulary is a controlled
+          vocabulary maintained by the Rare Books and Manuscripts Section of the
+          Association of College and Research Libraries.</skos:definition>
+        <vann:preferredNamespacePrefix>
+          <xsl:value-of select="$rbms-vocab"/>
+        </vann:preferredNamespacePrefix>
+      </rdf:Description>
     </rdf:RDF>
   </xsl:template>
 
@@ -39,9 +89,14 @@
   <xsl:template match="CONCEPT[DESCRIPTOR]">
     <!-- Construct the concept URI, use the TNR number for uniqueness -->
     <xsl:param name="uri">
-      <xsl:value-of
-        select="concat($base-uri, concat('/', substring-before(SC, ' '), TNR))"
-      />
+      <xsl:variable name="prefix"
+        select="
+          string-join(
+          for $sc in SC
+          return
+            substring-before($sc, ' ')
+          , '')"/>
+      <xsl:value-of select="concat($base-uri, $prefix, TNR)"/>
     </xsl:param>
     <rdf:Description rdf:about="{$uri}">
       <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -55,10 +110,7 @@
       <xsl:apply-templates select="SN"/>
       <xsl:apply-templates select="HN"/>
       <xsl:apply-templates select="STA"/>
-      <xsl:apply-templates select="INP | APP | UPD | NVD">
-        <!-- Pass the concept URI to the skos:changeNote template -->
-        <xsl:with-param name="uri" select="$uri" tunnel="yes"/>
-      </xsl:apply-templates>
+      <xsl:apply-templates select="INP | APP | UPD | NVD"/>
     </rdf:Description>
   </xsl:template>
 
@@ -70,7 +122,15 @@
 
   <xsl:template match="BT | NT | RT">
     <xsl:variable name="node" select="key('termKey', .)"/>
-    <xsl:sequence select="arm:broader-narrower($node, name(.))"/>
+    <xsl:variable name="prefix"
+      select="
+        string-join(
+        for $sc in $node/SC
+        return
+          substring-before($sc, ' ')
+        , '')
+        "/>
+    <xsl:sequence select="arm:broader-narrower($node, $prefix, name(.))"/>
   </xsl:template>
 
   <xsl:template match="CM">
@@ -109,9 +169,11 @@
   <!-- Function to select broader, narrower, or related depending on context -->
   <xsl:function as="element()" name="arm:broader-narrower">
     <xsl:param as="element()" name="node"/>
+    <xsl:param as="xs:string" name="prefix"/>
     <xsl:param as="xs:string" name="name"/>
+
     <xsl:variable name="uri"
-      select="concat($base-uri, '/', concat(substring-before($node/SC, ' '), $node/TNR))"/>
+      select="concat($base-uri, $prefix, $node/TNR)"/>
     <xsl:choose>
       <xsl:when test="$name = 'BT'">
         <skos:broader rdf:resource="{$uri}"/>
@@ -124,6 +186,13 @@
       </xsl:when>
       <xsl:otherwise/>
     </xsl:choose>
+  </xsl:function>
+
+  <xsl:function as="xs:string" name="arm:vocab-name">
+    <xsl:param as="xs:string" name="vocab"/>
+    <xsl:value-of
+      select="concat(upper-case(substring($vocab, 6, 1)), substring($vocab, 7))"
+    />
   </xsl:function>
 
   <!-- Named template to convert admin dates to skos:changeNote elements -->
