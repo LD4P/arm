@@ -27,18 +27,19 @@
 @prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/> . 
 
 
-# Catalogers prefer not to have to create a CustodialHistory resource
-# in order to add CustodialEvents, so it should be created behind the 
-# scenes without the editor's awareness. The easiest approach is to create
-# the CustodialHistory resource when the Item is created, attaching the 
-# Item to the CustodialHistory via ch:hasCustodialHistory. This obviates
-# the need to check for an existing CustodialHistory resource when adding a
-# CustodialEvent. Thus we will not define an :ItemForm_ch_hasCustodialHistory
-# PropertyShape.              
+# Links Item to a CustodialEvent.
+# Catalogers prefer not to create a CustodialHistory resource in order to 
+# add CustodialEvents, so it should be created by the application behind the
+# scenes. The easiest approach is to create the CustodialHistory resource 
+# when the Item is created, attaching the Item to the CustodialHistory via 
+# ch:hasCustodialHistory. This eliminates the need to check whether the
+# CustodialHistory node already exists, or must be created when creating a
+# new CustodialEvent. Thus we do not define an :ItemForm_ch_hasCustodialHistory
+# PropertyShape.         
+     
 :ItemForm_ch_hasCustodialHistory_bf_hasPart 
     a sh:PropertyShape ;
     sh:node custodial_history_property_shapes:ch_hasCustodialHistory_bf_hasPart ;
-    sh:targetClass bf:Item ;
     # NON-VALIDATING
     sh:name "Custodial event" ;
     sh:description "A custodial 'event' includes both static and transitional conditions: e.g., a period of ownership and a purchase. It is not restricted by the general notion of 'event.'" ;
@@ -110,6 +111,8 @@
         
         :CustodialEventForm_rdf_type , 
         
+        :CustodialEventForm_rdfs_label ,
+        
         :CustodialEventForm_activity_hasActivity ,
 
         :CustodialEventForm_bf_date ,
@@ -120,7 +123,7 @@
         
         # NB Applies only to certain types of CustodialEvent; ignore this 
         # for now.
-        :CustodialEventForm_arm_accessionedBy , 
+        :CustodialEventForm_ch_accessionedBy , 
 
         # Relates individual CustodialEvent to aggregate CustodialEvent. We
         # distinguish these by the fact that only the former is related
@@ -165,10 +168,21 @@
     sh:node custodial_history_property_shapes:ch_CustodialEvent_rdf_type ;
     # NON-VALIDATING
     sh:name "Custodial event type" ;
+    sh:description "Custodial events include both states and transitions (e.g., ownership, sale)." ;
     sh:order "20"^^xsd:int ;
     . 
  
-    
+##### CUSTODIAL EVENT LABEL #####
+
+:CustodialEventForm_rdfs_label
+    a sh:PropertyShape ;
+    sh:node custodial_history_property_shapes:rdfs_label ;
+    # NON-VALIDATING
+    sh:name "Custodial event name" ;
+    sh:description "Optionally specify a name for the custodial event." ;
+    sh:order "25"^^xsd:int ;
+    . 
+       
 ##### CUSTODIAL EVENT ACTIVITY #####
 
 # Links CustodialEvent to Activity/Agent
@@ -190,7 +204,7 @@
 
 :CustodialEventActivityForm_rdf_type
     a sh:PropertyShape ;
-    sh:node custodial_history_property_shapes:ch_CustodialEventActivity_rdf_type ;
+    sh:node custodial_history_property_shapes:ch_CustodialEvent_activity_Activity_rdf_type ;
     # NON-VALIDATING
     sh:name "Role" ;
     sh:description "The role played by the agent in relation to the custodial event." ;
@@ -206,7 +220,7 @@
     sh:maxCount 1 ;
     # NON-VALIDATING
     sh:name "Date" ;
-    sh:description "Date of the custodial event. Recommended to use EDTF format" ;
+    sh:description "Date or date interval of the custodial event. Recommended to use EDTF format." ;
     sh:order "40"^^xsd:int ;
     .
 
@@ -220,10 +234,9 @@
     # NON-VALIDATING
     sh:name "Location" ;
     sh:description "Location of the event" ;
-    sh:group raremat_monograph_property_groups:LocationPropertyGroup ;
     sh:order "50"^^xsd:int ;
     sh:nodeKind sh:IRI ;
-    # TODO May need to fix based on email thread
+    # TODO May need to change
     sh:class gn:Feature ;     
     raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
     .
@@ -233,7 +246,7 @@
 
 :CustodialEventForm_schema_priceSpecification 
     a sh:NodeShape ;
-    sh:node raremat_monograph_price_specification:schema_priceSpecification ;
+    sh:node raremat_monograph_price_specification:PriceSpecifationForm_schema_priceSpecification ;
     # NON-VALIDATING
     sh:order "60"^^xsd:int ;
     .
@@ -245,15 +258,13 @@
 # the number is already attached to the Item, use that identifier rather 
 # than creating a new one.
 
-# TODO Limit to certain classes of custodial events. 
-
-:CustodialEvent_arm_accessionedBy 
+# TODO Limit to certain classes of CustodialEvents.
+:CustodialEvent_ch_accessionedBy 
     a sh:PropertyShape ;
     sh:node custodial_history_property_shapes:ch_accessionedBy ;
     # NON-VALIDATING
     sh:name "Accession number" ;
-    sh:description "Accession number of the item associated with the event." ;
-    sh:group raremat_monograph_property_groups:IdentifierPropertyGroup ;
+    sh:description "Accession number of the item associated with this custodial event." ;
     sh:order "70"^^xsd:int ;
     .
     
@@ -262,10 +273,26 @@
     rdfs:label "Accession number" ;
     sh:targetClass arm:AccessionNumber ;
     sh:property 
+        # Use only on AccessionNumber page, not on embedded form on 
+        # CustodialEvent or Item page; the Item is linked to through other
+        # properties in both these cases.
+        :AccessionNumberForm_bf_identifies ,
         raremat_monograph_identifier:rdf_value ,
         raremat_monograph_identifier:bf_status ;
     .    
 
+# Use only on AccessionNumber page, not on embedded form on CustodialEvent 
+# or Item page; the Item is linked to through other properties in both these 
+# cases.
+:AccessionNumberForm_bf_identifies
+    a sh:PropertyShape ;
+    sh:node custodial_history_property_shape:bf_identifies ;
+    # NON-VALIDATING
+    sh:name "Item" ;
+    sh:description "Item identified by the accession number." ;
+    sh:order "10"^^xsd:int ;
+    . 
+    
 
 ##### INDIVIDUAL AND AGGREGATE CUSTODIAL EVENTS #####
 

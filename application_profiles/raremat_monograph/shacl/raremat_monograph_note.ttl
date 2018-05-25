@@ -27,8 +27,10 @@
     sh:targetClass bf:Note ;
     sh:property 
 
-        # Possible note types depend on the context, so include it in the
-        # sub-shapes
+        # Type options depend on context (i.e., the specific form). In some
+        # forms there are no type options, in which case the PropertyShape
+        # is not included on the form, and the type is specified by the
+        # form sh:targetClass. 
         # :NoteForm_rdf_type ,
         
         :NoteForm_rdf_value ;
@@ -36,7 +38,7 @@
 
 # Use this PropertyShape to include ALL note types. In contexts where only
 # some types are applicable, use a shape defining a subset of note types.
-:NoteForm_rdf_type 
+:NoteForm_rdf_type_all
     a sh:PropertyShape ;
     sh:node arm_core_property_shapes:rdf_type ;
     # Can we just specify sh:class and have the application present all
@@ -55,8 +57,7 @@
         bf:Note
     );
     # NON-VALIDATING
-    sh:name "Note type" ;
-    sh:description "Type of note." ;        
+    sh:name "Note type" ;   
     sh:order "10"^^xsd:int ;
     .
 

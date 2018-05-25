@@ -25,38 +25,40 @@
     sh:property 
     
         # Only for use on Identifier page; do not include in embedded forms.
-        :bf_identifies ,
+        :IdentifierForm_bf_identifies ,
         
-        # Possible Identifier types depend on the context, so include it in 
-        # the sub-shapes.
+        # Type options depend on context (i.e., the specific form). In some
+        # forms there are no type options, in which case the PropertyShape
+        # is not included on the form, and the type is specified by the
+        # form sh:targetClass. 
         # :IdentifierForm_rdf_type ,
         
-        :rdf_value ,
+        :IdentifierForm_rdf_value ,
         
-        :bf_status ;
+        :IdentifierForm_bf_status ;
     .    
 
 # Only for use on Identifier page; do not include in embedded forms.
-:bf_identifies 
+:IdentifierForm_bf_identifies 
     a sh:PropertyShape ;
     sh:node arm_core_property_shapes:bf_identifies ;
     # NON-VALIDATING
     sh:name "Resource identified" ;
     sh:description "Resource this identifier identifies." ;
-    sh:order "5"^^xsd:int ; 
+    sh:order "10"^^xsd:int ; 
     . 
-    
-:rdf_value 
+           
+:IdentifierForm_rdf_value 
     a sh:PropertyShape ;
     sh:node arm_core_property_shapes:rdf_value ;
     sh:nodeKind sh:Literal ;
     # NON-VALIDATING
     sh:name "Value" ;
     sh:description "Identifier value." ;
-    sh:order "10"^^xsd:int ;        
+    sh:order "30"^^xsd:int ;        
     .
 
-:bf_status
+:IdentifierForm_bf_status
     a sh:PropertyShape ;  
     sh:node arm_core_property_shapes:bf_status ;
     sh:in (
@@ -71,6 +73,6 @@
     # NON-VALIDATING
     sh:name "Status" ;
     sh:description "Identifier status." ;
-    sh:order "20"^^xsd:int ;
+    sh:order "40"^^xsd:int ;
     . 
  

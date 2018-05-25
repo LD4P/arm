@@ -29,6 +29,8 @@
 # These are only preliminary validation shapes. Add more constraints later.
 #
 
+
+# Links a resource to its Activity.
 :activity_hasActivity 
     a sh:PropertyShape ;
     sh:path arm:hasActivity ;
@@ -36,30 +38,39 @@
     sh:class arm:Activity ;
     .
 
+# Links an Activity to a resource.
 :activity_isActivityOf 
     a sh:PropertyShape ;
     sh:path activity:isActivityOf ;
     sh:nodeKind sh:IRI ; 
+    # Not always true. E.g., in the ARM model, BinderActivity links to both 
+    # Item and Binding.
+    # sh:maxCount 1 ;
     . 
 
+# Links a resource to its location.
 :arm_atLocation
     a sh:PropertyShape ;
     sh:path arm:atLocation ;
     sh:nodeKind sh:IRI ;
     .
 
+# Links an agent to a resource (generally an Activity or Contribution, but
+# open to others). 
 :arm_isAgentOf
     a sh:PropertyShape ;
     sh:path arm:isAgentOf ;
     sh:nodeKind sh:IRI ;
     .
-        
+
+# Links a location to the resource located there.        
 :arm_isLocationOf
     a sh:PropertyShape ;
     sh:path arm:isLocationOf ;
     sh:nodeKind sh:IRI ;
     .
 
+# Links a resource to its agent. Generally an Activity, but open to others. 
 :bf_agent
     a sh:PropertyShape ;
     sh:path bf:agent ;
@@ -69,15 +80,17 @@
     # other subject types, where it wouldn't be unique?
     # sh:maxCount 1 ;
     .
-    
+
+# Date of an event, condition, or other resource.     
 :bf_date
     a sh:PropertyShape ;
     sh:path bf:date ;
     sh:nodeKind sh:Literal ;
-    # Recommended but not required
+    # Recommended but not required.
     # sh:datatype edtf:EDTF ;
     .
-       
+
+# Generic shape linking a resource to one of its parts.       
 :bf_hasPart 
     a sh:PropertyShape ;
     sh:path bf:hasPart ;
@@ -91,7 +104,39 @@
     sh:node :bf_hasPart ;
     sh:class ch:CustodialEvent ;       
     .  
-      
+
+# Links a resource to an Identifier.    
+:bf_identifiedBy
+    a sh:PropertyShape ;
+    sh:path bf:identifiedBy ;
+    sh:nodeKind sh:IRI ;
+    sh:class bf:Identifier ;
+    .
+    
+# Links a resource to its CustodialEvent via AccessionNumber
+:bf_identifiedBy_ch_accessions
+    a sh:PropertyShape ;
+    sh:path ( bf:identifiedBy ch:accessions ) ;
+    sh:nodeKind sh:IRI ;
+    sh:class ch:CustodialEvent ;
+    .
+
+# Links an Identifier to the resource it identifies.    
+:bf_identifies
+    a sh:PropertyShape ;
+    sh:path bf:identifies ;
+    sh:nodeKind sh:IRI ;
+    .
+
+# Links a resource to a Note about the resource.       
+:bf_note
+    a sh:PropertyShape ;
+    sh:path bf:note ;
+    sh:nodeKind sh:IRI ;
+    sh:class bf:Note ;  
+    .
+
+# Generic shape linking a resource to a resource it is a part of.                 
 :bf_partOf 
     a sh:PropertyShape ;
     sh:path bf:partOf ;
@@ -123,6 +168,7 @@
     sh:maxCount 1 ;
     .
 
+# Links a resource to its status.
 :bf_status 
     a sh:PropertyShape ;
     sh:path bf:status ;
@@ -132,7 +178,8 @@
     # that don't.
     sh:class bf:Status ;
     . 
-            
+
+# Links certain types of CustodialEvents to an AccessionNumber.                 
 :ch_accessionedBy 
     a sh:PropertyShape ;
     sh:path ch:accessionedBy ;
@@ -140,14 +187,24 @@
     sh:class arm:AccessionNumber ;
     .
 
-:ch_accessions 
+# Links a CustodialEvent to the associated resource via AccessionNumber.    
+:ch_accessionedBy_bf_identifies 
     a sh:PropertyShape ;
-    sh:path ch:accessions ;
+    sh:path ( ch:accessionedBy bf:identifies ) ;
     sh:nodeKind sh:IRI ; 
     # NB Don't include sh:class bf:Item, since the ontology and validation
     # shapes can be used outside the bibliographic context.
     .
 
+# Links an AccessionNumber to the CustodialEvent.
+:ch_accessions 
+    a sh:PropertyShape ;
+    sh:path ch:accessions ;
+    sh:nodeKind sh:IRI ; 
+    sh:class ch:CustodialEvent ;
+    .
+
+# Links a CustodialEvent to its specific rdf:type.
 :ch_CustodialEvent_rdf_type 
     a sh:PropertyShape ;
     sh:node :rdf_type ;
@@ -178,20 +235,22 @@
     ) ;
     .
 
-# TODO Fix - this should be the activity types, not the event types      
-:ch_CustodialEventActivity_rdf_type 
+# Links a CustodialEvent to the rdf:type of an associated Activity.
+# TODO Specific Activity types can be linked only to specific CustodialEvent
+# types. For example, a BuyerActivity is relevant to a Sale but not to a
+# Theft.  
+:ch_CustodialEvent_activity_Activity_rdf_type 
     a sh:PropertyShape ;
     sh:node :rdf_type ;
     sh:in (
-        activity:ContributorActivity
-        activity:PatronActivity
         ch:AccessionerActivity
         ch:AcquisitionActivity
         ch:BorrowerActivity
         ch:BuyerActivity
         ch:ClaimantActivity
-        ch:DealerActivity
+        activity:ContributorActivity
         ch:DeaccessionerActivity
+        ch:DealerActivity
         ch:DepositorActivity
         ch:DestructionActivity
         ch:DiscarderActivity
@@ -202,6 +261,7 @@
         ch:LossActivity
         ch:OfferActivity
         ch:OwnerActivity
+        activity:PatronActivity
         ch:RecipientActivity
         ch:RecovererActivity
         ch:RepatriatorActivity
@@ -210,6 +270,7 @@
         ch:ThiefActivity
         ch:TransfererActivity
         ch:WitnessActivity 
+        activity:Activity
     ) ;                         
     .
 
@@ -239,36 +300,57 @@
     # shapes can be used outside the bibliographic context.
     sh:maxCount 1 ;
     .
-    
+
+# Links a resource to its rdf:type.     
 :rdf_type
     a sh:PropertyShape ;
     sh:path rdf:type ;
     sh:nodeKind sh:IRI ;
     .
-    
+
+# Links a resource to its rdf:value, either a Literal or non-Literal.     
 :rdf_value
     a sh:PropertyShape ;
     sh:path rdf:value ;
     # Do not specify sh:nodeKind; leave for implementations to define 
     # according to context.
     .
-   
+
+# Links a resource to its rdfs:label.    
+:rdfs_label
+    a sh:PropertyShape ;
+    sh:path rdfs:label ;
+    sh:nodeKind sh:Literal ;
+    .
+
+# Links a PriceSpecification to the amount.  
 :schema_price
     a sh:PropertyShape ;
     sh:path schema:price ;
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:decimal ;
+    # A resource can have multiple prices (PriceSpecifications), either in
+    # the same or different currencies, but each PriceSpecification has only 
+    # one value (price) and currency.
+    sh:maxCount 1 ; 
     .
-    
+
+# Links a PriceSpecification to a currency.    
 :schema_priceCurrency
     a sh:PropertyShape ;
     sh:path schema:priceCurrency ;
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    # Schema defines the value as "The currency (in 3-letter ISO 4217 format) of the price"     
+    # Schema defines the value as "The currency (in 3-letter ISO 4217 
+    # format) of the price."     
     sh:pattern "^[A-Z]{3}$" ;
+    # A resource can have multiple prices (PriceSpecifications) with 
+    # different values, but each PriceSpecification has only one value 
+    # (price) and currency.
+    sh:maxCount 1 ; 
     .
 
+# Links certain types of CustodialEvents, such as Sale, to price paid.
 :schema_priceSpecification
     a sh:PropertyShape ;
     sh:path schema:priceSpecification ;
@@ -276,28 +358,36 @@
     sh:class schema:PriceSpecification ;
     .
 
+# Links a CustodialEvent to a directly preceding one.
 :seq_directlyFollows
     a sh:PropertyShape ;
     sh:path seq:directlyFollows ;
     sh:nodeKind sh:IRI ;
+    sh:class ch:CustodialEvent ;
     sh:maxCount 1 ;
     .
-    
+
+# Links a CustodialEvent to a directly following one.    
 :seq_directlyPrecedes
     a sh:PropertyShape ;
     sh:path seq:directlyPrecedes ;
     sh:nodeKind sh:IRI ;
+    sh:class ch:CustodialEvent ;
     sh:maxCount 1 ;
     .
-    
+
+# Links a CustodialEvent to a directly or indirectly preceding one.    
 :seq_follows
     a sh:PropertyShape ;
     sh:path seq:follows ;
     sh:nodeKind sh:IRI ;
+    sh:class ch:CustodialEvent ;
     .
-    
+
+# Links a CustodialEvent to a directly or indirectly following one.    
 :seq_precedes
     a sh:PropertyShape ;
     sh:path seq:precede ;
     sh:nodeKind sh:IRI ;
+    sh:class ch:CustodialEvent ;
     .
