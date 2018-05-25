@@ -1,0 +1,2370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel1">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">annotator</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel2"/>
+      <skos:scopeNote xml:lang="en">Use for the writer of manuscript annotations on a printed item.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel3">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">artist</skos:prefLabel>
+      <skos:altLabel xml:lang="en">graphic technician</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel106"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel5"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel72"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel114"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel75"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel6"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel7"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel8"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel58"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel66"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel9"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel90"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for conceiving, and perhaps also implementing, an original graphic design or work of art. Prefer "illustrator" for book illustrators.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel10">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">assignee</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel11"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel12"/>
+      <skos:scopeNote xml:lang="en">Use for the entity to whom a license for printing or publishing has been transferred.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel2">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">associated name</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel1"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel13"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel14"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel15"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel16"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel17"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel18"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel19"/>
+      <skos:scopeNote xml:lang="en">Use with a name associated with or found in an item or collection, but which cannot be determined to be that of a &#x93;former owner&#x94; or other relator indicative of provenance.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel20">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">attributed name</skos:prefLabel>
+      <skos:altLabel xml:lang="en">supposed name</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:scopeNote xml:lang="en">Use to relate an author, artist, etc. to a work for which there is or once was substantial authority for designating that person as author, creator, etc.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel124">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">bearer</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:scopeNote xml:lang="en">Use for an entity who carries or delivers a communication, order, or other message.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2017-07-10</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2017-07-10</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2017-10-11</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel22">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">binder</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel23"/>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel23">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">binding designer</skos:prefLabel>
+      <skos:altLabel xml:lang="en">designer of binding</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel22"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel7"/>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel95">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">blurb writer</skos:prefLabel>
+      <skos:altLabel xml:lang="en">blurb-writer</skos:altLabel>
+      <skos:altLabel xml:lang="en">blurber</skos:altLabel>
+      <skos:altLabel xml:lang="en">blurbist</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for writing a commendation or testimonial for a work, which appears on or within the publication itself.</skos:scopeNote>
+      <skos:historyNote xml:lang="en">1/05 Add term</skos:historyNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-28</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-28</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel113">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">book artist</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:scopeNote xml:lang="en">Use for an entity who conceives and perhaps also executes an artist's book.</skos:scopeNote>
+      <skos:historyNote xml:lang="en">Proposed by Nina Schneider, 5/2011</skos:historyNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel7">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">book designer</skos:prefLabel>
+      <skos:altLabel xml:lang="en">designer of book</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel3"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel23"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel26"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel27"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel28"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for the entire graphic design of a book, including arrangement of type and illustration, choice of materials, and process used.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-12-14</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel26">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">bookjacket designer</skos:prefLabel>
+      <skos:altLabel xml:lang="en">book jacket designer</skos:altLabel>
+      <skos:altLabel xml:lang="en">designer of book jacket</skos:altLabel>
+      <skos:altLabel xml:lang="en">designer of bookjacket</skos:altLabel>
+      <skos:altLabel xml:lang="en">dust jacket designer</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel7"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for the design of a dust  jacket.</skos:scopeNote>
+      <skos:historyNote xml:lang="en">SN and UFs approved 20100116; change term request, 200907</skos:historyNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel30">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">bookplate designer</skos:prefLabel>
+      <skos:altLabel xml:lang="en">designer of bookplate</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel32">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">bookseller</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel33"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel34"/>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel8">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">calligrapher</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel3"/>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel37">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">cartographer</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel36">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">censor</skos:prefLabel>
+      <skos:altLabel xml:lang="en">bowdlerizer</skos:altLabel>
+      <skos:altLabel xml:lang="en">expurgator</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:scopeNote xml:lang="en">Use for a censor, bowdlerizer, expurgator, etc., official or private.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel39">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">collector</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel15"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for bringing together material from various sources, which has been arranged, described, and cataloged as a collection. The collector is neither the creator of the material nor the entity to whom manuscripts in the collection may have been addressed.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel40">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">collotyper</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel41"/>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel106">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">colorist</skos:prefLabel>
+      <skos:altLabel xml:lang="en">colorer</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel3"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel75"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for applying color to drawings, prints, photographs, maps, etc.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2009-10-13</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2009-07-11</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel42">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">compiler</skos:prefLabel>
+      <skos:altLabel xml:lang="en">comp.</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel67"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for producing a work or publication by selecting and putting together material from the works of various persons or bodies.</skos:scopeNote>
+      <skos:historyNote xml:lang="en">Expanded from abbreviated form 6/2012.</skos:historyNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel44">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">compositor</skos:prefLabel>
+      <skos:altLabel xml:lang="en">typesetter</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel46"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel28"/>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel103">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">conservator</skos:prefLabel>
+      <skos:altLabel xml:lang="en">preservationist</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for documenting, preserving, or treating printed or manuscript material, works of art, artifacts, or specimens.</skos:scopeNote>
+      <skos:historyNote xml:lang="en">Proposed by Christopher Cook; approved 1/2006</skos:historyNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-12-29</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-12-29</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel47">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">contributor</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:scopeNote xml:lang="en">Use for an entity responsible for contributing to a larger work, such as a monographic anthology, serial publication, or other compilation of individual works. Do not use for an entity whose sole function in relation to a work is editor, author, compiler, or translator.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel11">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">copyright holder</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel10"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel12"/>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel53">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">corrector</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel54"/>
+      <skos:scopeNote xml:lang="en">Use for the entity that corrected a manuscript, such as the scriptorium official who corrected the work of a scribe. For printed matter, use proofreader.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel55">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">correspondent</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel56"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel125"/>
+      <skos:scopeNote xml:lang="en">Use for the writer or recipient of a letter or other communication.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2017-10-11</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel58">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">cover designer</skos:prefLabel>
+      <skos:altLabel xml:lang="en">designer of cover</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel3"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for the graphic design of a book cover, album cover, slipcase, box, container, etc. For the entity responsible for the graphic design of an entire book, use book designer; for book jackets, use bookjacket designer.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel60">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">dedicatee</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel61"/>
+      <skos:scopeNote xml:lang="en">Use for the entity to whom a book, manuscript, etc., is dedicated (NOT the recipient of a gift).</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel61">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">dedicator</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel60"/>
+      <skos:scopeNote xml:lang="en">Use for the author of a dedication, which may be a formal statement or in epistolary or verse form.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel13">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">depositor</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel2"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for placing material in the physical custody of a library or repository without transferring the legal title.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-12-14</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel33">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">distributor</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel32"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel46"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel34"/>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2015-04-21</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel14">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">donor</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel2"/>
+      <skos:scopeNote xml:lang="en">Use for the entity who donates a book, manuscript, etc., to the present owner; donors to previous owners are designated as former owner or inscriber.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel66">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">draftsman</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel3"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for executing artistic or technical drawings.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-06-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel67">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">editor</skos:prefLabel>
+      <skos:altLabel xml:lang="en">ed.</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel42"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for preparing for publication a work not primarily his/her/its own, such as by elucidating text, adding introductory or other critical matter, or technically directing an editorial staff.</skos:scopeNote>
+      <skos:historyNote xml:lang="en">Expanded from abbreviated form 6/2012.</skos:historyNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel41">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">electrotyper</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel69"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel40"/>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel5">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">engraver</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel3"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel90"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel70"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel71"/>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel72">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">etcher</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel3"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel90"/>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel49">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">facsimilist</skos:prefLabel>
+      <skos:altLabel xml:lang="en">copier</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel51"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel52"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for executing a facsimile.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel114">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">fore-edge painter</skos:prefLabel>
+      <skos:altLabel xml:lang="en">fore-edge artist</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel3"/>
+      <skos:scopeNote xml:lang="en">Use for the painter of a fore-edge painting.</skos:scopeNote>
+      <skos:historyNote xml:lang="en">Submitted by Robert Maxwell, 3/2012.</skos:historyNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel50">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">forger</skos:prefLabel>
+      <skos:altLabel xml:lang="en">copier</skos:altLabel>
+      <skos:altLabel xml:lang="en">counterfeiter</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel15">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">former owner</skos:prefLabel>
+      <skos:altLabel xml:lang="en">inscribee</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel2"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel39"/>
+      <skos:scopeNote xml:lang="en">Use for an entity that previously owned an item. For an entity giving the item to the present owner, use "donor."</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel16">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">honoree</skos:prefLabel>
+      <skos:altLabel xml:lang="en">memorial</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel2"/>
+      <skos:scopeNote xml:lang="en">Use for the entity in whose memory or honor a book, manuscript, etc. is donated.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel77">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">illuminator</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel75"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel78"/>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel75">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">illustrator</skos:prefLabel>
+      <skos:altLabel xml:lang="en">ill.</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel3"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel106"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel77"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel78"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for conceiving, and perhaps also implementing, a design or illustration, usually to accompany a written text.</skos:scopeNote>
+      <skos:historyNote xml:lang="en">Expanded from abbreviated form 6/2012.</skos:historyNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel118">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">indexer</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for compiling an index.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2014-05-16</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2014-05-16</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2014-05-16</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel17">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">inscriber</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel2"/>
+      <skos:scopeNote xml:lang="en">Use for the entity that signs a presentation statement.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel122">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">interlocutor</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:scopeNote xml:lang="en">Use for an entity that takes part in a dialogue, conversation, or discussion. Do not use for participants in interviews, debates, or disputations.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2015-07-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2015-07-27</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2015-07-27</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel81">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">interviewee</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel82"/>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel82">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">interviewer</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel81"/>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel18">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">lender</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel2"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for permitting the temporary use of an item.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel12">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">licensee</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel10"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel11"/>
+      <skos:scopeNote xml:lang="en">Use for the original recipient of the right to print or publish.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel80">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">licensor</skos:prefLabel>
+      <skos:altLabel xml:lang="en">imprimatur</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:scopeNote xml:lang="en">Use for the signer of a license, imprimatur, etc.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel6">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">lithographer</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel3"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for preparing the stone or plate for lithographic printing, including a graphic artist creating a design directly on the surface from which printing will be done.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel83">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">marbler</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for marbling paper, cloth, leather, etc.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel99">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">medium</skos:prefLabel>
+      <skos:altLabel xml:lang="en">channel</skos:altLabel>
+      <skos:altLabel xml:lang="en">clairvoyant</skos:altLabel>
+      <skos:altLabel xml:lang="en">psychic</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:note xml:lang="en">Proposed by Laura O'Keefe, 8/03. Although modern specialist usage recognizes distinctions among the functions of "medium," "psychic," "channel," and "clairvoyant," these terms appear to be less distinct in earlier works. This accounts for the inclusion of UFs that are not strictly equivalent according to specialists in psychic phenomena.</skos:note>
+      <skos:scopeNote xml:lang="en">Use for an entity who purports to communicate with spirits.</skos:scopeNote>
+      <skos:historyNote xml:lang="en">Candidate term 12/03.</skos:historyNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-04-01</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-04-01</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-12-14</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel70">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">metal-engraver</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel5"/>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel111">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">paper engineer</skos:prefLabel>
+      <skos:altLabel xml:lang="en">engineer, paper</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for the design of mechanisms of three-dimensional paper structures found in movable and pop-up books, greeting cards, etc.</skos:scopeNote>
+      <skos:historyNote xml:lang="en">Term accepted, 20100116; Candidate term, 201001 and 200907.</skos:historyNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2010-01-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2010-01-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel86">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">papermaker</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel120">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">patron</skos:prefLabel>
+      <skos:altLabel xml:lang="en">commissioning body</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel65"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for commissioning a work. For the entity assuming primary responsibility for the production of a work, that is, the entity under the auspices of which a work is printed, published, etc., use &#x93;Sponsor.&#x94;</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2015-04-21</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2015-04-21</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2015-04-21</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel9">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">photographer</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel3"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for taking photographs, whether they are used in their original form or as reproductions.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-12-14</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel69">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">platemaker</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel41"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel87"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel88"/>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel117">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">pressman</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel46"/>
+      <skos:scopeNote xml:lang="en">Use for a person who physically operates a printing press. For the entity responsible for the production of printed matter, use Printer.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2013-01-30</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2013-01-30</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2014-05-16</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel46">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">printer</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel44"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel33"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel117"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel88"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel34"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel28"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for the production of printed matter. For a person who physically operates a printing press, use Pressman.</skos:scopeNote>
+      <skos:historyNote xml:lang="en">SN changed 7/2013.</skos:historyNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2014-05-16</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel88">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">printer of plates</skos:prefLabel>
+      <skos:altLabel xml:lang="en">plates, printer of</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel69"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel46"/>
+      <skos:scopeNote xml:lang="en">Use for printer of illustrations from plates.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel90">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">printmaker</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel5"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel72"/>
+      <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel91"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel3"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for making a relief, intaglio, or planographic printing surface.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel54">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">proofreader</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel53"/>
+      <skos:scopeNote xml:lang="en">Use for corrector of printed matter. For manuscripts, use corrector.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel34">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">publisher</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel32"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel33"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel46"/>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel56">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">recipient</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel55"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel125"/>
+      <skos:scopeNote xml:lang="en">Use for the entity to whom correspondence is addressed.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2017-10-11</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel78">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">rubricator</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel77"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel75"/>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel51">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">scribe</skos:prefLabel>
+      <skos:altLabel xml:lang="en">copier</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel49"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel52"/>
+      <skos:scopeNote xml:lang="en">Use for the amanuensis and for the writer of manuscripts proper.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-12-14</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel125">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">sender</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel55"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel56"/>
+      <skos:scopeNote xml:lang="en">Use for the entity from whom correspondence is sent.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2017-10-11</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2017-10-11</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2017-10-11</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel19">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">signer</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel2"/>
+      <skos:scopeNote xml:lang="en">Use for the entity whose signature appears without a presentation or other statement indicative of provenance. When there is a presentation statement, use inscriber.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-12-14</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel65">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">sponsor</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel120"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for sponsoring or funding the production of a work, e.g., the entity "under the auspices of which" a work was written, printed, published, etc. For the entity responsible for commissioning a work, use Patron.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2015-04-21</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel87">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">stereotyper</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel69"/>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel105">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">subscriber</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for purchasing or pledging to purchase an item in advance of its publication.Use for a person who purchases or pledges to purchase an item in advance of its publication.</skos:scopeNote>
+      <skos:historyNote xml:lang="en">Approved 6/2005</skos:historyNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2007-01-09</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-06-09</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel52">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">transcriber</skos:prefLabel>
+      <skos:altLabel xml:lang="en">copier</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel49"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel51"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for preparing a handwritten or typewritten copy from original material, including from dictated or orally recorded material. For makers of pen-facsimiles, use facsimilist.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/94">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">translator</skos:prefLabel>
+      <skos:altLabel xml:lang="en">tr.</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for rendering a text from one language into another, or from an older form of a language into the modern form.</skos:scopeNote>
+      <skos:historyNote xml:lang="en">Expanded from abbreviated form 6/2012.</skos:historyNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-12-14</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel27">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">type designer</skos:prefLabel>
+      <skos:altLabel xml:lang="en">designer of type</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel7"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel28"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for designing the type face used in a particular item.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel28">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">typographer</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel7"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel44"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel46"/>
+      <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel27"/>
+      <skos:scopeNote xml:lang="en">Use for the entity primarily responsible for choice and arrangement of type used in an item. If the typographer is also responsible for other aspects of the graphic design (e.g., book designer), added entries for both functions may be used as desired.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel63">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">witness</skos:prefLabel>
+      <skos:altLabel xml:lang="en">deponent</skos:altLabel>
+      <skos:altLabel xml:lang="en">eyewitness</skos:altLabel>
+      <skos:altLabel xml:lang="en">observer</skos:altLabel>
+      <skos:altLabel xml:lang="en">onlooker</skos:altLabel>
+      <skos:altLabel xml:lang="en">testifier</skos:altLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:scopeNote xml:lang="en">Use for an entity who verifies the truthfulness of a documented event or action.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2017-08-09</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel71">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">wood-engraver</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel5"/>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel91">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">woodcutter</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel90"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for creating a printing surface by cutting the image in relief on the plank side of a wood block.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2005-02-25</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2012-07-26</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>NVD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2000-01-01</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+   <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbrel119">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:prefLabel xml:lang="en">zinester</skos:prefLabel>
+      <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/"/>
+      <skos:scopeNote xml:lang="en">Use for the entity responsible for creating, publishing, and/or distributing a zine.</skos:scopeNote>
+      <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>INP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2015-04-21</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>APP</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2015-04-21</dcterms:date>
+      </skos:changeNote>
+      <skos:changeNote rdf:parseType="Resource">
+         <rdf:value>UPD</rdf:value>
+         <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+         <dcterms:date>2015-04-21</dcterms:date>
+      </skos:changeNote>
+   </rdf:Description>
+</rdf:RDF>
