@@ -16,33 +16,33 @@
 @prefix raremat_monograph_activity: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_activity/> .
 @prefix raremat_monograph_note: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_note/> .
 
-# TODO Resolve this namespace with that defined in the file.
 @prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/> . 
 
 #
 # IMPORTANT: This PropertyShape can only be used if we can define a single
 # PhysicalDescriptionPropertyGroup applying to both Instances and Items
 # (see issue #65). Otherwise, the property groups are distinct for the
-# two types, but we can use sh:node with this as a common base shapes.
+# two types, but we can use sh:node with this as a common base shape.
 #
 
-# Links a resource to a Marking
+# Generic property shape linking a resource to a Marking. Specific 
+# constraints are added in derivative shapes. Currently used only by
+# raremat_monograph_enclosure:EnclosureForm.
+
 :arm_markedBy
     a sh:PropertyShape ;
     sh:node arm_core_property_shapes:arm_markedBy ; 
-    sh:class arm:Marking ;
     # NON-VALIDATING
-    sh:name "Markings" ;
-    sh:group raremat_monograph_property_groups:PhysicalDescriptionPropertyGroup ;
-    sh:description "Markings applied to objects during or after creation, conveying information such as the object's origin or maker, its authenticity, or a change in its official status." ;
-    tosh:editWidget swa:NestedObjectEditor ;
+    sh:name "Marking" ;
+    sh:description "Marking applied to objects during or after creation, conveying information such as the object's origin or maker, its authenticity, or a change in its official status." ;
     .
-    
+ 
 :MarkingForm
     rdf:type sh:NodeShape ;
     rdfs:label "Marking form" ;
     sh:targetClass arm:Marking ;
     sh:property 
+    
         # Only for use on Marking form; do not include in embedded forms.
         :MarkingForm_arm_marks ,
         
@@ -80,7 +80,6 @@
     ) ;
     # NON-VALIDATING
     sh:name "Marking type" ;
-    sh:description "Marking type" ;
     sh:order "10"^^xsd:int ;
     .
     
@@ -99,8 +98,6 @@
     a sh:PropertyShape ;
     sh:node arm_core_property_shapes:activity_hasActivity ;
     # Only one Activity type applies to Markings.
-    # raremat_monograph_activity:ActivityForm should apply here due to 
-    # sh:class value.
     sh:class activity:CreatorActivity ;
     # NON-VALIDATING
     sh:name "Marking creator" ;

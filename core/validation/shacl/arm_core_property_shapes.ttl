@@ -6,6 +6,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -16,18 +17,15 @@
 # ///// ARM CORE PROPERTY SHAPES - MAY BE EXTENDED BY UI SHAPES ///// #
 #
 
-# 
-# TODO/TO CONSIDER
 #
-# If this file grows too large, break up in some way - 
-# maybe by ontology namespace - i.e., BF properties, ARM properties, etc.?
+# If this file grows too large, break up in some way - e.g., by ontology 
+# namespace.
 #
-# Not requiring edtf:EDTF typing of dates - indicate on forms that it is
-# recommended.
 #
-# These are only preliminary validation shapes. Add more constraints later.
+# These are preliminary validation shapes. Add more constraints later.
 #
 
+# Links a resource to its Activity.
 :activity_hasActivity 
     a sh:PropertyShape ;
     sh:path arm:hasActivity ;
@@ -35,24 +33,31 @@
     sh:class arm:Activity ;
     .
 
+# Links an Activity to a resource.
 :activity_isActivityOf 
     a sh:PropertyShape ;
     sh:path activity:isActivityOf ;
     sh:nodeKind sh:IRI ; 
+    # Not always true. E.g., in the ARM model, BinderActivity links to both 
+    # Item and Binding.
+    # sh:maxCount 1 ;
     .   
-    
+
+# Links a resource to its location.    
 :arm_atLocation
     a sh:PropertyShape ;
     sh:path arm:atLocation ;
     sh:nodeKind sh:IRI ;
     .
-    
+
+# Links a resource to its geographical or temporal coverage.   
 :arm_covers
     a sh:PropertyShape ;
     sh:path arm:covers ;
     sh:nodeKind sh:IRI ;
     .
-    
+
+# End date of an event or condition.    
 :arm_endDate 
     a sh:PropertyShape ;
     sh:path arm:endDate ;
@@ -61,32 +66,108 @@
     sh:maxCount 1 ;
     .
 
+# Defines possible types of Exhibition Activities
+:arm_Exhibition_activity_Activity_rdf_type 
+    a sh:PropertyShape ;
+    sh:node :rdf_type ;
+    sh:in (
+        # What else?
+        activity:CuratorActivity
+        activity:Activity
+    ) ;
+    .
+    
+# Links an Exhibition context node to the ExhibitionEvent.
+:arm_Exhibition_bf_partOf_schema_ExhibitionEvent
+    a sh:PropertyShape ;
+    sh:path bf:partOf ;
+    sh:nodeKind sh:IRI ;
+    sh:maxCount 1 ;
+    .
+    
+   
+# Links a resource to its Arrangement (e.g., rolled, folded, open to page 10),
+# or a group of resources to their organization.    
 :arm_hasArrangement 
     a sh:PropertyShape ;
     sh:path arm:hasArrangement ;
     sh:nodeKind sh:IRI ; 
     sh:class arm:Arrangement ;
     .
-    
+
+# Links a resource to the Exhibition context node.  
+:arm_hasExhibition 
+    a sh:PropertyShape ;
+    sh:path arm:hasExhibition ;
+    sh:nodeKind sh:IRI ; 
+    sh:class arm:Exhibition ;
+    .
+  
+# Links a resource exhibited to the ExhibitionEvent via the Exhibition node.  
+:arm_hasExhibition_bf_partOf 
+    a sh:PropertyShape ;
+    sh:path ( arm:hasExhibition bf:partOf ) ;
+    sh:nodeKind sh:IRI ; 
+    sh:class schema:ExhibitionEvent ;
+    .
+
+# Links a resource to its material.    
 :arm_hasMaterial 
     a sh:PropertyShape ;
     sh:path arm:hasMaterial ;
     sh:nodeKind sh:IRI ; 
     sh:class crm:E57_Material ;
     .
-
-:arm_isMaterialOf 
-    a sh:PropertyShape ;
-    sh:path arm:isMaterialOf ;
-    sh:nodeKind sh:IRI ; 
-    .
     
+# Links a resource to its preferred title.    
+:arm_hasPreferredTitle 
+    a sh:PropertyShape ;
+    sh:path arm:hasPreferredTitle ;
+    sh:nodeKind sh:IRI ; 
+    sh:class bf:Title ;
+    sh:maxCount 1 ;
+    .
+
+# Links an agent to a resource (generally an Activity or Contribution, but
+# open to others).    
 :arm_isAgentOf
     a sh:PropertyShape ;
     sh:path arm:isAgentOf ;
     sh:nodeKind sh:IRI ;
     .
-              
+
+# Links an Arrangement resource to a resource or collection of resources
+# with that Arrangement.
+:arm_isArrangementOf
+    a sh:PropertyShape ;
+    sh:path arm:isArrangementOf ;
+    sh:nodeKind sh:IRI ;
+    .
+
+# Links an Exhibition context node to the resource exhibited.
+:arm_isExhibitionOf
+    a sh:PropertyShape ;
+    sh:path arm:isExhibitionOf ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    .
+
+# Links a location to the resource located there.        
+:arm_isLocationOf
+    a sh:PropertyShape ;
+    sh:path arm:isLocationOf ;
+    sh:nodeKind sh:IRI ;
+    .
+            
+# Links material to resource made of it in whole or in part.
+:arm_isMaterialOf 
+    a sh:PropertyShape ;
+    sh:path arm:isMaterialOf ;
+    sh:nodeKind sh:IRI ; 
+    .
+
+# Links a resource to a Marking that marks it.                      
 :arm_markedBy 
     a sh:PropertyShape ;
     sh:path arm:markedBy ;
@@ -94,12 +175,25 @@
     sh:class arm:Marking ;
     .
 
-:arm_markes 
+# Links a Marking to the resource it is in or on.
+:arm_marks 
     a sh:PropertyShape ;
     sh:path arm:marks ;
     sh:nodeKind sh:IRI ; 
+    # Can't have a Marking without being in or on something.
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
     .    
-            
+
+# Links a resource to its preferred title. 
+:arm_hasPreferredTitle 
+    a sh:PropertyShape ;
+    sh:path arm:isPreferredTitleOf ;
+    sh:nodeKind sh:IRI ; 
+    sh:maxCount 1 ;
+    .
+    
+# Start date of an event, condition, or other resource.            
 :arm_startDate 
     a sh:PropertyShape ;
     sh:path arm:startDate ;
@@ -108,6 +202,17 @@
     sh:maxCount 1 ;
     .
 
+# Links a title to the resource it entitles.
+:arm_titleOf 
+    a sh:PropertyShape ;
+    sh:path arm:titleOf ;
+    sh:nodeKind sh:IRI ; 
+    sh:minCount 1 ;
+    # Titles are unique to a specific resource.
+    sh:maxCount 1 ;
+    .
+
+# Links a resource to its agent. Generally an Activity, but open to others.    
 :bf_agent
     a sh:PropertyShape ;
     sh:path bf:agent ;
@@ -117,7 +222,8 @@
     # other subject types, where it wouldn't be unique?
     # sh:maxCount 1 ;
     .
-    
+
+# Date of an event, condition, or other resource.    
 :bf_date
     a sh:PropertyShape ;
     sh:path bf:date ;
@@ -125,26 +231,54 @@
     # Recommended but not required
     # sh:datatype edtf:EDTF ;
     .
-    
+
+# Generic shape linking a resource to one of its parts.    
  :bf_hasPart
     a sh:PropertyShape ;
     sh:path bf:hasPart;
     sh:nodeKind sh:IRI ;
     .
+ 
+# Links an ExhibitionEvent to an Exhibition context node.  
+ :bf_hasPart_arm_Exhibition 
+    a sh:PropertyShape ;
+    sh:path bf:hasPart;
+    sh:nodeKind sh:IRI ;
+    sh:class arm:Exhibition ;
+    .
+ 
+# Links an ExhibitionEvent to a resource exhibited, via the Exhibition node.   
+ :bf_hasPart_arm_isExhibitionOf
+    a sh:PropertyShape ;
+    sh:path ( bf:hasPart arm:isExhibitionOf ) ;
+    sh:nodeKind sh:IRI ;
+    .
     
+# Links a multi-part or traveling ExhibitionEvent to an ExhibitionEvent that
+# is part of it.   
+ :bf_hasPart_schema_ExhibitionEvent
+    a sh:PropertyShape ;
+    sh:path bf:partOf ;
+    sh:nodeKind sh:IRI ;
+    sh:class schema:ExhibitionEvent ;
+    .
+
+# Links a resource to an Identifier.    
 :bf_identifiedBy
     a sh:PropertyShape ;
     sh:path bf:identifiedBy ;
     sh:nodeKind sh:IRI ;
     sh:class bf:Identifier ;
     .
-    
+
+# Links an Identifier to the resource it identifies.    
 :bf_identifies
     a sh:PropertyShape ;
     sh:path bf:identifies ;
     sh:nodeKind sh:IRI ;
     .
-       
+
+# Links a resource to a Note about the resource.       
 :bf_note
     a sh:PropertyShape ;
     sh:path bf:note ;
@@ -152,12 +286,14 @@
     sh:class bf:Note ;  
     .
 
+# Generic shape linking a resource to a resource it is a part of.
 :bf_partOf
     a sh:PropertyShape ;
     sh:path bf:partOf ;
     sh:nodeKind sh:IRI ;
     .
-
+    
+# Links a resource to its status.   
 :bf_status 
     a sh:PropertyShape ;
     sh:path bf:status ;
@@ -167,13 +303,15 @@
     # that don't.
     sh:class bf:Status ;
     . 
-            
+
+# Links a resource to its subject/topic.           
 :bf_subject
     a sh:PropertyShape ;
     sh:path bf:subject ;
     sh:nodeKind sh:IRI ;
     .
-       
+
+# Links a resource to its title.       
 :bf_title 
     a sh:PropertyShape ;
     sh:path bf:title ;
@@ -181,21 +319,55 @@
     sh:class bf:Title ;
     . 
 
+# Links a resource to a taxonomy term that types it.
 :crm_P2_has_type
     a sh:PropertyShape ;
     sh:nodeKind sh:IRI ;
     sh:class skos:Concept ;
     .
-           
+
+# Links a resource to its rdf:type.           
 :rdf_type
     a sh:PropertyShape ;
     sh:path rdf:type ;
     sh:nodeKind sh:IRI ;
     .
-    
+
+# Links a resource to its rdf:value, either a Literal or non-Literal.    
 :rdf_value
     a sh:PropertyShape ;
     sh:path rdf:value ;
     # Do not specify sh:nodeKind; leave for implementations to define 
     # according to context.
+    .
+
+# Links a resource to its rdfs:label.
+:rdfs_label
+    a sh:PropertyShape ;
+    sh:path rdfs:label ;
+    sh:nodeKind sh:Literal ;
+    .
+   
+# Links an ExhibitionEvent to a multi-part or traveling ExhibitionEvent of 
+# which it is a part.
+ :schema_ExhibitionEvent_bf_partOf_schema_ExhibitionEvent
+    a sh:PropertyShape ;
+    sh:path bf:partOf ;
+    sh:nodeKind sh:IRI ;
+    sh:class schema:ExhibitionEvent ;
+    sh:maxCount 1 ;
+    .
+
+# Defines possible ExhibitionEvent Activities.    
+:schema_ExhibitionEvent_activity_Activity_rdf_type 
+    a sh:PropertyShape ;
+    sh:node :rdf_type ;
+    sh:in (
+        activity:ContributorActivity
+        activity:CuratorActivity
+        activity:DirectorActivity
+        activity:OrganizerActivity
+        activity:SponsorActivity
+        activity:Activity
+    ) ;
     .
