@@ -28,7 +28,7 @@
 # Links a resource to its Activity.
 :activity_hasActivity 
     a sh:PropertyShape ;
-    sh:path arm:hasActivity ;
+    sh:path activity:hasActivity ;
     sh:nodeKind sh:IRI ; 
     sh:class arm:Activity ;
     .
