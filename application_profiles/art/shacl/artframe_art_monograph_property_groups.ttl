@@ -22,8 +22,6 @@
 
 @prefix : <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/> . 
 
-# WARNING!!!!!!!!!!!!!!! Very drafty version of SHACL for ARtFrame property groups. A lot of this currently reflects a cut and paste of an RareMat SHACL file. 
-#
 # ////////// PROPERTY GROUP DEFINITIONS ////////// #
 #
 
@@ -35,76 +33,74 @@
   sh:description "To group title information for the resource." ;
   sh:order "0"^^xsd:decimal .
 
+:WorkIdentifierPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Work identifiers" ;
+  sh:order "1"^^xsd:decimal .
+
 :WorkActivityPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Work Agent and Origin Information" ;
   sh:description "To group Agent role information for the resource." ;
-  sh:order "1"^^xsd:decimal .
+  sh:order "2"^^xsd:decimal .
 
 :WorkCopyrightPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Work copyright information" ;
   sh:description "To group cpyright information for the resource." ;
-  sh:order "2"^^xsd:decimal .
+  sh:order "3"^^xsd:decimal .
   
 :WorkSubjectGenreFormPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Subject, Type and Genre" ;
   sh:description "To group subject, type, Genre, and Form information for the resource." ;
-  sh:order "3"^^xsd:decimal .
+  sh:order "4"^^xsd:decimal .
   
 :WorkLanguageFormPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Language" ;
   sh:description "To group language information for the resource." ;
-  sh:order "4"^^xsd:decimal .
+  sh:order "5"^^xsd:decimal .
+
+:WorkNotePropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Work notes" ;
+  sh:order "6"^^xsd:decimal .
+
+:WorkAwardReceiptPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Awards received" ;
+  sh:order "7"^^xsd:decimal .
+
+:WorkToWorkPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Related Works" ;
+  sh:order "8"^^xsd:decimal .
   
 :WorkToInstancePropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Related Instances" ;
   sh:description "Instances of this work" ;
-  sh:order "5"^^xsd:decimal .
-  
-:WorkNotePropertyGroup
-  rdf:type sh:PropertyGroup ;
-  rdfs:label "Item notes" ;
-  sh:order "6"^^xsd:decimal .
-  
-:WorkAwardReceiptPropertyGroup
-  rdf:type sh:PropertyGroup ;
-  rdfs:label "Awards received" ;
-  sh:order "7"^^xsd:decimal .
-  
-:WorkIdentifierPropertyGroup
-  rdf:type sh:PropertyGroup ;
-  rdfs:label "Item notes" ;
-  sh:order "8"^^xsd:decimal .
-  
-:WorkToWorkPropertyGroup
-  rdf:type sh:PropertyGroup ;
-  rdfs:label "Related Works" ;
   sh:order "9"^^xsd:decimal .
 
-
 # ///// INSTANCE PROPERTY GROUPS ///////////////////////////////////////////////////////////
+
+:InstanceOfWorkPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Instance of Work" ;
+  sh:order "0"^^xsd:decimal .
 
 :InstanceTitlePropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Titles" ;
   sh:description "To group title information for the resource." ;
-  sh:order "0"^^xsd:decimal .
-
-:InstanceTypePropertyGroup
-  rdf:type sh:PropertyGroup ;
-  rdfs:label "Instance Carrier Type" ;
   sh:order "1"^^xsd:decimal .
-  
-:InstanceGenreFormPropertyGroup
+
+:InstanceIdentifierPropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Instance Genre" ;
-  sh:description "To group Instance Genres." ;
+  rdfs:label "Item identifiers" ;
   sh:order "2"^^xsd:decimal .
-  
+
 :InstanceActivityPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Instance Agents and Roles" ;
@@ -117,46 +113,42 @@
   sh:description "To group copyright information related to the bf:Instance." ;
   sh:order "4"^^xsd:decimal .
 
-:InstanceRelationshipsPropertyGroup
+:InstanceTypePropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Instance Relationships" ;
+  rdfs:label "Instance Carrier Type" ;
   sh:order "5"^^xsd:decimal .
-  
+
 :InstancePhysicalDescriptionPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Instance physical description" ;
   sh:order "6"^^xsd:decimal .
-
-:InstanceScalePropertyGroup
+  
+:InstanceGenreFormPropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Scale of the resource" ;
+  rdfs:label "Instance Genre" ;
+  sh:description "To group Instance Genres." ;
   sh:order "7"^^xsd:decimal .
-  
-:InstanceOfWorkPropertyGroup
-  rdf:type sh:PropertyGroup ;
-  rdfs:label "Instance of Work" ;
-  sh:order "8"^^xsd:decimal .
-  
-:InstanceHasItemPropertyGroup
-  rdf:type sh:PropertyGroup ;
-  rdfs:label "Has item" ;
-  sh:order "9"^^xsd:decimal .
 
 :InstanceNotePropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Item notes" ;
-  sh:order "10"^^xsd:decimal .
-  
+  sh:order "8"^^xsd:decimal .
+
 :InstanceBibliographicCitationPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Bibliographic Citations for the Instance" ;
   sh:description "To group bibliographic citations of the instance." ;
-  sh:order "11"^^xsd:decimal .
-  
-:InstanceIdentifierPropertyGroup
+  sh:order "9"^^xsd:decimal .
+
+:InstanceRelationshipsPropertyGroup
   rdf:type sh:PropertyGroup ;
-  rdfs:label "Item identifiers" ;
-  sh:order "12"^^xsd:decimal .
+  rdfs:label "Instance Relationships" ;
+  sh:order "10"^^xsd:decimal .
+  
+:InstanceHasItemPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Has item" ;
+  sh:order "11"^^xsd:decimal .
 
 
 
@@ -172,52 +164,58 @@
   rdfs:label "Titles" ;
   sh:description "To group title information for the resource." ;
   sh:order "1"^^xsd:decimal .
+
+:ItemIdentifierPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Item identifiers" ;
+  sh:order "2"^^xsd:decimal .
   
 :ItemActivityPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Item Agent and Roles" ;
   sh:description "To group Agent role information for the resource." ;
-  sh:order "2"^^xsd:decimal .
+  sh:order "3"^^xsd:decimal .
   
 :ItemGenreFormPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Item genre" ;
   sh:description "To group Item Genres." ;
-  sh:order "3"^^xsd:decimal .
-  
-:ItemAccompanimentsPropertyGroup
-  rdf:type sh:PropertyGroup ;
-  rdfs:label "Instance Parts and Accompaniments" ;
-  sh:description "To group parts and accompaniments of an item" ;
   sh:order "4"^^xsd:decimal .
-  
+
 :ItemPhysicalDescriptionPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Item Physical Description" ;
   sh:description "To group item physical description information" ;
   sh:order "5"^^xsd:decimal .
 
+:ItemHistoryAndProvenancePropertyGroup
+   a sh:PropertyGroup ;
+   rdfs:label "Item history and provenance" ;
+   sh:order "6"^^xsd:decimal .
+
+:ItemExhibitionsPropertyGroup
+   a sh:PropertyGroup ;
+   rdfs:label "Exhibition history" ;
+   sh:order "7"^^xsd:decimal .
+
 :ItemNotePropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Item notes" ;
-  sh:order "6"^^xsd:decimal .
-  
+  sh:order "8"^^xsd:decimal .
+
 :ItemBibliographicCitationPropertyGroup
   rdf:type sh:PropertyGroup ;
   rdfs:label "Bibliographic Citations for the Item" ;
   sh:description "To group bibliographic citations for the item." ;
-  sh:order "7"^^xsd:decimal .
-  
-:ItemIdentifierPropertyGroup
-rdf:type sh:PropertyGroup ;
-  rdfs:label "Item identifiers" ;
-  sh:order "8"^^xsd:decimal .
-    
-:ItemHistoryAndProvenancePropertyGroup
-    a sh:PropertyGroup ;
-    rdfs:label "Item history and provenance" ;
-    sh:order "9"^^xsd:decimal .
+  sh:order "9"^^xsd:decimal .
 
+:ItemRelationshipsPropertyGroup
+  rdf:type sh:PropertyGroup ;
+  rdfs:label "Item relationships" ;
+  sh:description "To group parts and accompaniments of an item" ;
+  sh:order "10"^^xsd:decimal .
+  
+    
 ######## EXPERIMENTAL - combine property groups for multiple types ########
 
 #
