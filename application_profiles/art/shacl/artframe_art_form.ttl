@@ -991,8 +991,7 @@ artframe_art_form:InstanceForm_bf_colorContent
       sh:order "2"^^xsd:decimal ;
       sh:description "Color characteristics, e.g., black and white, multicolored." ;
       sh:class bf:ColorContent ;
-      sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup ;
-      tosh:editWidget swa:NestedObjectEditor .
+      sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup .
          
 #TODO: Controlled vocabulary for soundContent?
          
@@ -1003,8 +1002,7 @@ artframe_art_form:InstanceForm_bf_soundContent
       sh:order "3"^^xsd:decimal ;
       sh:description "Indication of whether the production of sound is an integral part of the resource." ;
       sh:class bf:SoundContent ;
-      sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup ;
-      tosh:editWidget swa:NestedObjectEditor .
+      sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup .
          
 #TODO: Add vocabulary from: http://id.loc.gov/vocabulary/mpolarity.html         
          
@@ -1015,8 +1013,7 @@ artframe_art_form:InstanceForm_bf_polarity
       sh:order "4"^^xsd:decimal ;
       sh:description "Relationship of the colors and tones in an image to the colors and tones of the object reproduced." ;
       sh:class bf:Polarity ;
-      sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup ;
-      tosh:editWidget swa:NestedObjectEditor .         
+      sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup .       
           
 artframe_art_form:InstanceForm_measure_hasMeasurementGroup 
       a sh:PropertyShape ;
@@ -1425,8 +1422,7 @@ artframe_art_form:ItemForm_bf_colorContent
       sh:order "1"^^xsd:decimal ;
       sh:description "Color characteristics, e.g., black and white, multicolored." ;
       sh:class bf:ColorContent ;
-      sh:group artframe_art_property_groups:ItemPhysicalDescriptionPropertyGroup ;
-      tosh:editWidget swa:NestedObjectEditor .
+      sh:group artframe_art_property_groups:ItemPhysicalDescriptionPropertyGroup .
       
 artframe_art_form:ItemForm_measure_hasMeasurementGroup 
       a sh:PropertyShape ;   
