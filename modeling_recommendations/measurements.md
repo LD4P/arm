@@ -236,4 +236,4 @@ Diagram 6: Measurements of arrangements: multiple arrangement resources
 ![Measurement diagram 6](/modeling_recommendations/modeling_diagrams/measurement_multiple_arrangements.png)
 **Notes/TBD**
 
--   In this version, two arrangements are expressed as a separate resource, without a default or unspecified arrangement. Choice of model 5 vs 6 would be an implementation decision by the cataloger.
+-   In this version, two arrangements are expressed as separate resources, without a default or unspecified arrangement. Choice of model 5 vs 6 would be an implementation decision by the cataloger.
