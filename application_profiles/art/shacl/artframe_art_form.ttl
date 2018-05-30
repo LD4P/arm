@@ -975,7 +975,6 @@ artframe_art_form:InstanceForm_bf_extent sh:path bf:extent ;
 artframe_art_form:InstanceForm_bf_illustrativeContent
     a sh:PropertyShape ;
     sh:path bf:illustrativeContent  ;
-    sh:class skos:Concept ;
     sh:in ( <http://id.loc.gov/vocabulary/millus/chr> <http://id.loc.gov/vocabulary/millus/coa> <http://id.loc.gov/vocabulary/millus/fac> <http://id.loc.gov/vocabulary/millus/for> <http://id.loc.gov/vocabulary/millus/gnt> <http://id.loc.gov/vocabulary/millus/ilm> <http://id.loc.gov/vocabulary/millus/ill> <http://id.loc.gov/vocabulary/millus/map> <http://id.loc.gov/vocabulary/millus/mus> <http://id.loc.gov/vocabulary/millus/pho> <http://id.loc.gov/vocabulary/millus/pht> <http://id.loc.gov/vocabulary/millus/pln> <http://id.loc.gov/vocabulary/millus/plt> <http://id.loc.gov/vocabulary/millus/por> <http://id.loc.gov/vocabulary/millus/sam> ) ;
     sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup ;
     sh:description "Information about content intended to illustrate a resource." ;
@@ -983,22 +982,21 @@ artframe_art_form:InstanceForm_bf_illustrativeContent
     sh:nodeKind sh:IRI ;
     sh:order "1"^^xsd:int .
 
-#TODO: Controlled vocabulary for colorContent?         
+#TODO: Complete controlled list for colorContent        
      
 artframe_art_form:InstanceForm_bf_colorContent 
       a sh:PropertyShape ;
       sh:path bf:colorContent ;
+      sh:in ( <http://rdaregistry.info/termList/RDAColourContent/1002> <http://rdaregistry.info/termList/RDAColourContent/1003> aat:300129361 aat:300130602 aat:300127490 aat:300128438 aat:300128307 aat:300126734 aat:300124707 aat:300130257 aat:300126225 aat:300127794 aat:300127809 aat:300128385 ) ;
       sh:name "Color content" ;
       sh:order "2"^^xsd:decimal ;
       sh:description "Color characteristics, e.g., black and white, multicolored." ;
-      sh:class bf:ColorContent ;
       sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup .
-         
-#TODO: Controlled vocabulary for soundContent?
          
 artframe_art_form:InstanceForm_bf_soundContent 
       a sh:PropertyShape ;
       sh:path bf:soundContent ;
+      sh:in ( <http://rdaregistry.info/termList/soundCont/1001> <http://rdaregistry.info/termList/soundCont/1002> ) ;
       sh:name "Sound content" ;
       sh:order "3"^^xsd:decimal ;
       sh:description "Indication of whether the production of sound is an integral part of the resource." ;
