@@ -123,7 +123,7 @@ artframe_art_form:WorkForm
   sh:property artframe_art_form:WorkForm_bf_referencedBy ;
   sh:property artframe_art_form:WorkForm_bf_references ;
   sh:property artframe_art_form:WorkForm_bf_relatedTo ;
-  sh:property artframe_art_form:WorkForm_bf_version ;
+  sh:property artframe_art_form:WorkForm_bf_version .
   
    
  # ///// PROPERTY SHAPES FOR WorkTitlePropertyGroup START HERE. /////////////////////////////////////////////////////////////
@@ -160,30 +160,30 @@ artframe_art_form:WorkForm_activity_hasActivity
   sh:order "0"^^xsd:decimal ;
   sh:group artframe_art_property_groups:WorkActivityPropertyGroup ;
   tosh:editWidget swa:NestedObjectEditor ; 
-  sh:or ( 
+   sh:or ( 
           [
-            activity:AuthorActivity 
+            sh:class activity:AuthorActivity ;
           ]
           [
-            activity:CreatorActivity 
+            sh:class activity:CreatorActivity ;
           ]
           [
-            activity:ArchitectActivity
+            sh:class activity:ArchitectActivity ;
           ]
           [
-            activity:ArtistActivity 
+            sh:class activity:ArtistActivity ;
           ]
           [
-            activity:DesignerActivity 
+            sh:class activity:DesignerActivity ;
           ]
           [  
-            activity:DraftsmanActivity
+            sh:class activity:DraftsmanActivity ;
           ]
           [
-            activity:PhotographerActivity 
+            sh:class activity:PhotographerActivity ;
           ]
           [
-            activity:SculptorActivity 
+            sh:class activity:SculptorActivity ;
           ]  
          ) .
   
