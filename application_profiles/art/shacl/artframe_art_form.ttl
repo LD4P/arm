@@ -15,7 +15,7 @@
 @prefix measure: <https://w3id.org/arm/measurement/ontology/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov> .
-@prefix artframe_art_form: <https://w3id.org/arm/application_profile/artframe_art_form/> . 
+@prefix artframe_art_form: <https://w3id.org/arm/application_profiles/art/shacl/artframe_art_form/> . 
 @prefix rdau: <http://rdaregistry.info/Elements/u/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -974,49 +974,44 @@ artframe_art_form:InstanceForm_bf_extent sh:path bf:extent ;
          
 artframe_art_form:InstanceForm_bf_illustrativeContent
     a sh:PropertyShape ;
-    sh:path ( bf:illustrativeContent rdf:value )  ;
+    sh:path bf:illustrativeContent  ;
+    sh:in ( <http://id.loc.gov/vocabulary/millus/chr> <http://id.loc.gov/vocabulary/millus/coa> <http://id.loc.gov/vocabulary/millus/fac> <http://id.loc.gov/vocabulary/millus/for> <http://id.loc.gov/vocabulary/millus/gnt> <http://id.loc.gov/vocabulary/millus/ilm> <http://id.loc.gov/vocabulary/millus/ill> <http://id.loc.gov/vocabulary/millus/map> <http://id.loc.gov/vocabulary/millus/mus> <http://id.loc.gov/vocabulary/millus/pho> <http://id.loc.gov/vocabulary/millus/pht> <http://id.loc.gov/vocabulary/millus/pln> <http://id.loc.gov/vocabulary/millus/plt> <http://id.loc.gov/vocabulary/millus/por> <http://id.loc.gov/vocabulary/millus/sam> ) ;
     sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup ;
     sh:description "Information about content intended to illustrate a resource." ;
     sh:name "Illustrative content" ;
-    sh:class bf:Illustration ;
     sh:nodeKind sh:IRI ;
-sh:order "1"^^xsd:int .
+    sh:order "1"^^xsd:int .
 
-#TODO: Controlled vocabulary for colorContent?         
+#TODO: Complete controlled list for colorContent        
      
 artframe_art_form:InstanceForm_bf_colorContent 
       a sh:PropertyShape ;
       sh:path bf:colorContent ;
+      sh:in ( <http://rdaregistry.info/termList/RDAColourContent/1002> <http://rdaregistry.info/termList/RDAColourContent/1003> aat:300129361 aat:300130602 aat:300127490 aat:300128438 aat:300128307 aat:300126734 aat:300124707 aat:300130257 aat:300126225 aat:300127794 aat:300127809 aat:300128385 ) ;
       sh:name "Color content" ;
       sh:order "2"^^xsd:decimal ;
       sh:description "Color characteristics, e.g., black and white, multicolored." ;
-      sh:class bf:ColorContent ;
-      sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup ;
-      tosh:editWidget swa:NestedObjectEditor .
-         
-#TODO: Controlled vocabulary for soundContent?
+      sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup .
          
 artframe_art_form:InstanceForm_bf_soundContent 
       a sh:PropertyShape ;
       sh:path bf:soundContent ;
+      sh:in ( <http://rdaregistry.info/termList/soundCont/1001> <http://rdaregistry.info/termList/soundCont/1002> ) ;
       sh:name "Sound content" ;
       sh:order "3"^^xsd:decimal ;
       sh:description "Indication of whether the production of sound is an integral part of the resource." ;
       sh:class bf:SoundContent ;
-      sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup ;
-      tosh:editWidget swa:NestedObjectEditor .
-         
-#TODO: Add vocabulary from: http://id.loc.gov/vocabulary/mpolarity.html         
+      sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup .      
          
 artframe_art_form:InstanceForm_bf_polarity 
       a sh:PropertyShape ;
       sh:path bf:soundContent ;
+      sh:class skos:Concept ;
+      sh:in ( <http://id.loc.gov/vocabulary/mpolarity/mix> <http://id.loc.gov/vocabulary/mpolarity/neg> <http://id.loc.gov/vocabulary/mpolarity/pos>) ;
       sh:name "Polarity" ;
       sh:order "4"^^xsd:decimal ;
       sh:description "Relationship of the colors and tones in an image to the colors and tones of the object reproduced." ;
-      sh:class bf:Polarity ;
-      sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup ;
-      tosh:editWidget swa:NestedObjectEditor .         
+      sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup .       
           
 artframe_art_form:InstanceForm_measure_hasMeasurementGroup 
       a sh:PropertyShape ;
@@ -1425,8 +1420,7 @@ artframe_art_form:ItemForm_bf_colorContent
       sh:order "1"^^xsd:decimal ;
       sh:description "Color characteristics, e.g., black and white, multicolored." ;
       sh:class bf:ColorContent ;
-      sh:group artframe_art_property_groups:ItemPhysicalDescriptionPropertyGroup ;
-      tosh:editWidget swa:NestedObjectEditor .
+      sh:group artframe_art_property_groups:ItemPhysicalDescriptionPropertyGroup .
       
 artframe_art_form:ItemForm_measure_hasMeasurementGroup 
       a sh:PropertyShape ;   
@@ -2694,4 +2688,3 @@ artframe_art_form:FontForm_arm_hasStyle
 
 # TODO ^^^^^^^^^^^^^^
 
-# ///// PROPERTY GROUPS ARE NOW IN https://github.com/LD4P/ArtFrame-RareMat/blob/develop/application_profiles/shacl/raremat_shacl_monograph_property_groups.ttl /////////////////////////////////////////////////////////////
