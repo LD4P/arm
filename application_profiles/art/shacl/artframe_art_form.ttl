@@ -31,7 +31,7 @@
 
 # WARNING!!!!!!!!!!!!!!! Very drafty version of SHACL for ARtFrame application profile. A lot of this currently reflects a cut and paste of an RareMat SHACL file. This is unsafe to use as long as this warning is here.
 
-<https://w3id.org/arm/application_profile/art/shacl/artframe_art_form/>
+<https://w3id.org/arm/application_profiles/art/shacl/artframe_art_form/>
   rdf:type owl:Ontology .
 
 
