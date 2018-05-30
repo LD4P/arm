@@ -974,13 +974,14 @@ artframe_art_form:InstanceForm_bf_extent sh:path bf:extent ;
          
 artframe_art_form:InstanceForm_bf_illustrativeContent
     a sh:PropertyShape ;
-    sh:path ( bf:illustrativeContent rdf:value )  ;
+    sh:path bf:illustrativeContent  ;
+    sh:class skos:Concept ;
+    sh:in ( <http://id.loc.gov/vocabulary/millus/chr> <http://id.loc.gov/vocabulary/millus/coa> <http://id.loc.gov/vocabulary/millus/fac> <http://id.loc.gov/vocabulary/millus/for> <http://id.loc.gov/vocabulary/millus/gnt> <http://id.loc.gov/vocabulary/millus/ilm> <http://id.loc.gov/vocabulary/millus/ill> <http://id.loc.gov/vocabulary/millus/map> <http://id.loc.gov/vocabulary/millus/mus> <http://id.loc.gov/vocabulary/millus/pho> <http://id.loc.gov/vocabulary/millus/pht> <http://id.loc.gov/vocabulary/millus/pln> <http://id.loc.gov/vocabulary/millus/plt> <http://id.loc.gov/vocabulary/millus/por> <http://id.loc.gov/vocabulary/millus/sam> ) ;
     sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup ;
     sh:description "Information about content intended to illustrate a resource." ;
     sh:name "Illustrative content" ;
-    sh:class bf:Illustration ;
     sh:nodeKind sh:IRI ;
-sh:order "1"^^xsd:int .
+    sh:order "1"^^xsd:int .
 
 #TODO: Controlled vocabulary for colorContent?         
      
@@ -1002,17 +1003,16 @@ artframe_art_form:InstanceForm_bf_soundContent
       sh:order "3"^^xsd:decimal ;
       sh:description "Indication of whether the production of sound is an integral part of the resource." ;
       sh:class bf:SoundContent ;
-      sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup .
-         
-#TODO: Add vocabulary from: http://id.loc.gov/vocabulary/mpolarity.html         
+      sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup .      
          
 artframe_art_form:InstanceForm_bf_polarity 
       a sh:PropertyShape ;
       sh:path bf:soundContent ;
+      sh:class skos:Concept ;
+      sh:in ( <http://id.loc.gov/vocabulary/mpolarity/mix> <http://id.loc.gov/vocabulary/mpolarity/neg> <http://id.loc.gov/vocabulary/mpolarity/pos>) ;
       sh:name "Polarity" ;
       sh:order "4"^^xsd:decimal ;
       sh:description "Relationship of the colors and tones in an image to the colors and tones of the object reproduced." ;
-      sh:class bf:Polarity ;
       sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup .       
           
 artframe_art_form:InstanceForm_measure_hasMeasurementGroup 
