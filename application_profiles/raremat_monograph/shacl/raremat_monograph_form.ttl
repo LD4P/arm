@@ -2920,7 +2920,7 @@ raremat_monograph_form:BibliographicCitationForm_arm_hasSource
     a sh:PropertyShape ;
     sh:path arm:hasSource ;
     sh:class arm:Entry ;
-    sh:description "Note about this title" ;
+    sh:description "Entry source of the citation" ;
     tosh:editWidget swa:NestedObjectEditor ;
     sh:nodeKind sh:IRI ;
     sh:order "0"^^xsd:int .
@@ -2941,17 +2941,9 @@ raremat_monograph_form:BibliographicCitationEntryForm
     rdf:type sh:NodeShape ;
     sh:targetClass arm:Entry ;
     rdfs:label "Bibliographic Citation Entry Form" ;
-    sh:property raremat_monograph_form:BibliographicCitationForm_bf_place ;
+    sh:property raremat_monograph_form:BibliographicCitationForm_arm_atLocation ;
     sh:property raremat_monograph_form:BibliographicCitationForm_rdf_value ;
     . 
-     
-raremat_monograph_form:BibliographicCitationForm_rdf_value
-    a sh:PropertyShape ;
-    sh:path rdf:value ;
-    sh:name "Citation value" ;
-    sh:description "The value of the citation." ;
-    sh:nodeKind sh:Literal ;
-    sh:order "0"^^xsd:int .
 
 raremat_monograph_form:BibliographicCitationForm_arm_atLocation 
     a sh:PropertyShape ;
@@ -2971,6 +2963,14 @@ raremat_monograph_form:BibliographicCitationForm_arm_atLocation
     sh:description "Location where the citation entry was found" ;
     tosh:editWidget swa:NestedObjectEditor ;
     sh:nodeKind sh:IRI ;
+    sh:order "0"^^xsd:int .
+    
+raremat_monograph_form:BibliographicCitationForm_rdf_value
+    a sh:PropertyShape ;
+    sh:path rdf:value ;
+    sh:name "Citation value" ;
+    sh:description "The value of the citation." ;
+    sh:nodeKind sh:Literal ;
     sh:order "1"^^xsd:int .
     
 # /////// Page FORM BEGINS HERE ////////////////////////////////////////////////////////////  
