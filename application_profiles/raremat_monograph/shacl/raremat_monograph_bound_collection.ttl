@@ -1,0 +1,43 @@
+@prefix activity: <https://w3id.org/arm/core/activity/0.1/> .
+@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_bound_collection/> .
+@prefix arm_core_property_shapes: <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
+  
+:BoundCollectionForm 
+    a sh:NodeShape ;
+    rdfs:label "Bound Collection Form" ;
+    sh:targetClass arm:BoundCollection ;
+    sh:property 
+        :BoundCollectionForm_rdfs_label ,
+        :BoundCollectionForm_bf_title ;
+    .
+
+:BoundCollectionForm_rdfs_label 
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:rdfs_label ;
+    # NON-VALIDATING
+    sh:name "Label" ;
+    sh:description "Label for the bound collection. Recommended to be the title, if one exists; otherwise a cataloger-supplied value identifying or briefly describing the resource." ;
+    sh:order "10"^^xsd:int ;
+    .
+     
+:BoundCollectionForm_bf_title 
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:bf_title ;
+    # NON-VALIDATING
+    sh:name "Title" ;
+    sh:description "Title of the bound collection, if one exists." ;
+    sh:order "20"^^xsd:int ;
+    .
