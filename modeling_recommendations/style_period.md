@@ -70,14 +70,6 @@ The RareMat/ArtFrame Style/Period model is quite simple, involving a class, Styl
 Term Specifications
 ---------------
 
-Classes
-========
-**ex:StylePeriod**
-> - **URI:** TBD
-> - **Label:** Style/Period
-> - **Definition:** A defined style, historical period, group, school, dynasty, movement, nationality, culture, etc. whose characteristics are represented in the work. 
-
-
 Properties
 ==========
 
@@ -88,7 +80,7 @@ Properties
 > - **Domain:** unspecified
 > - **Range:** unspecified
 > - **Inverse:** ex:isStylePeriodOf
-> - **Editorial note:** Range is unspecified to allow values from controlled vocabularies not typed as ex:StylePeriod.
+> - **Editorial note:** Range is unspecified to allow values from various controlled vocabularies.
 
 **ex:isStylePeriodOf** (object property)
 > - **URI:** TBD
@@ -97,9 +89,9 @@ Properties
 > - **Domain:** unspecified
 > - **Range:** unspecified
 > - **Inverse:** ex:hasStylePeriod
-> - **Editorial note:** Domain is unspecified to allow subjects from controlled vocabularies not typed as ex:StylePeriod.
+> - **Editorial note:** Domain is unspecified to allow subjects from various controlled vocabularies.
 
-Note: Range of hasStylePeriod and domain of isStylePeriodOf remain unspecified so that vocabularies can be used without unwanted entailments.
+
 
 Diagram
 -----------

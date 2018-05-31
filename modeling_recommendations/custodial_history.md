@@ -134,6 +134,9 @@ This sample describes a scenario in which one item has been sold twice, with an 
 
 :price1 a schema:PriceSpecification ;
     schema:price “10” ;
+    # Note: The Schema definition of priceCurrency specifies the object as
+    # a 3-letter ISO 4217 format - i.e., a literal rather than a URI. This
+    # is left as [an area for future research](#AreasForFutureResearch).
     schema:priceCurrency <iso-4217-code> .  
 ```
 
@@ -208,7 +211,7 @@ Some of these classes are also defined as subclasses of schema:Event. “Static�
 > - **Label**: Auction
 > - **URI**: http://example.org/Auction
 > - **Definition**: The sale at auction of a resource. 
-> - **Comment**: Refers to the transfer of ownership through auction, rather than the auction in which that occurs. Typical associated Activities: BuyerActivity, SellerActivity, BrokerActivity.
+> - **Comment**: Refers to the transfer of ownership through auction, rather than the auction in which that occurs. Typical associated Activities: BuyerActivity, SellerActivity, DealerActivity.
 > - **SubclassOf**: ex:Sale, schema:Event.
 
 **ex:Bequest**
@@ -314,7 +317,7 @@ Some of these classes are also defined as subclasses of schema:Event. “Static�
 > - **Label**: Sale
 > - **URI**: http://example.org/Sale
 > - **Definition**: The exchange of a resource for money or other object of value.
-> - **Comment**: Typical associated Activities: BuyerActivity, SellerActivity, BrokerActivity.
+> - **Comment**: Typical associated Activities: BuyerActivity, SellerActivity, DealerActivity.
 > - **SubclassOf**: ex:CustodialEvent, bf:SaleEvent.
 
 **ex:Theft**
@@ -358,12 +361,6 @@ Activity Subclasses
 > - **SubclassOf**: http://example.org/Activity
 > - **Definition**: The act of taking possession, but not ownership, of a resource.
 
-**ex:BrokerActivity**
-> - **Label**: Broker
-> - **URI**: http://example.org/BrokerActivity
-> - **SubclassOf**: http://example.org/Activity
-> - **Definition**: The act of negotiating or arranging for a transaction.
-
 **ex:BuyerActivity**
 > - **Label**: Broker
 > - **URI**: http://example.org/BuyerActivity
@@ -381,6 +378,12 @@ Activity Subclasses
 > - **URI**: http://example.org/DeaccessionerActivity
 > - **SubclassOf**: http://example.org/Activity
 > - **Definition**: The act of permanently removing accessioned items from a collection or repository.
+
+**ex:DealerActivity**
+> - **Label**: Dealer
+> - **URI**: http://example.org/DealerActivity
+> - **SubclassOf**: http://example.org/Activity
+> - **Definition**: The act of negotiating or arranging for a transaction.
 
 **ex:DepositorActivity**
 > - **Label**: Depositor
@@ -441,6 +444,12 @@ Activity Subclasses
 > - **URI**: http://example.org/OwnerActivity
 > - **SubclassOf**: http://example.org/Activity
 > - **Definition**: The legal possession of a resource.
+
+**ex:PatronActivity**
+> - **Label**: Patron
+> - **URI**: http://example.org/PatronActivity
+> - **SubclassOf**: http://example.org/PatronActivity
+> - **Definition**: The activity of commissioning a work. Usually a patron uses his or her means or influence to support the work of artists, writers, etc. This includes those who commission and pay for individual works.
 
 **ex:RecipientActivity**
 > - **Label**: Recipient
@@ -519,14 +528,14 @@ Properties
 > - **Label**: accessions
 > - **URI**: http://example.org/accessions
 > - **Domain**: ex:AccessionNumber
-> - **Range**: unspecified
+> - **Range**: ex:CustodialEvent
 > - **Definition**: 
 > - **Inverse**: ex:accessionedBy
 
 **ex:accessionedBy**
 > - **Label**: accessionedBy
 > - **URI**: http://example.org/accessionedBy
-> - **Domain**: unspecified
+> - **Domain**: CustodialEvent
 > - **Range**: ex:AccessionNumber
 > - **Definition**: 
 > - **Inverse**: ex:accessions
@@ -676,6 +685,12 @@ Properties
 ========
 - Public versus private data in this model is left as an implementation issue. Given that this model contains potentially sensitive data (e.g.: donors, value, etc.), implementers must consider how sensitive data are handled in their application. Note that the public/private issue is not specific to provenance data and extends into other library and non-library data as well.
 - Modeling of confidence level. This also applies beyond the provenance domain.
+- Consider defining two subclasses of CustodialEvent, one for individual (single Item) and one for aggregate (multi-Item) events. 
+    - Originally the custodial history model distinguished aggregate from individual custodial events formally, using two different classes. We then decided that the types of resources would be profiled similarly, with properties and relationships such as activities, dates, locations, price, etc, and we collapsed them into a single class.
+    - In working on the application profiles for VitroLib, it now appears to me that the distinction both (a) is important, perhaps *_defining_*, and (b) facilitates application functionality. In general it is not good practice to bend the ontology to suit the application, but in this case the difficulty posed for applications may well suggest a deficiency in the model.
+    - The primary difference between the two is that the individual event attaches directly to an item, whereas the aggregate event does not, and attaches only to individual custodial events. This is a fundamental distinction in the semantics and the behavior. The difficulty in the application is that when the user wants to add a bf:partOf relationship between an individual and an aggregate event, he/she should be presented with choices of only the aggregate type - which has no definition in the model other than it is *_not_* attached directly to any items, and is attached directly to a custodial event that *_is_* attached to an item.
+    - The proposal would be to define a CustodialEvent class, with two subclasses, IndividualCustodialEvent and AggregateCustodialEvent. This allows the common profiling of the two types of custodial events, but also models the important distinctions between them.
+    - Note also that the aggregate CustodialEvent cannot have an accession number.
 - Concurrent and overlapping events. The lending use case, for example, will raise issues of sequencing, overlapping, and concurrency. We should not rely on dates to provide this type of nuanced sequencing since dates (even approximate dates) may not be known.
 - Consider use of a predicate such as frapo:hasOutput (also used in the PhysicalCondition model) to express a causal relationship to another event or state (e.g., a sale results in an ownership). This cannot always be determined from sequencing, since there can be gaps in the sequence. 
 - How strong is the case for the CustodialHistory class? It is essentially a container for the various CustodialEvent pertaining to a resource. However, there may be assertions on the history as a whole that do not apply to a specific event, such as an annotation. We expect this question to be addressed by implementation of and experimentation with the model, and leave open the possibility of future deprecation.
@@ -688,3 +703,4 @@ Properties
   - What are the pros and cons of including non-custodial and custodial events in the same timeline? 
   - Could provide another argument for allowing Activities to attach directly to the History, rather than requiring an intervening custodial or other event; otherwise, one would need to define events for all the activities in the physical condition model (and perhaps other models): condition assessment activity, conservator activity, etc. Or, as above, do away with the history aggregator node altogether and attach individual events and activities directly to the item. The history would then be reconstructed from the various events and activities rather than provided as a unit in a container node.
   - Would require confronting the issue of overlapping and concurrent events, since conservation activities provide a strong use case (e.g., rebinding during a period of ownership).
+- schema:priceSpecification takes a literal value in 3-letter ISO 4217 format as its object; whereas we would like to use URIs if possible. Determine whether an RDF vocabulary for currencies exists, and consider whether it is appropriate to use as object of schema:priceSpecification.

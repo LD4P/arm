@@ -4,12 +4,14 @@ ArtFrame and RareMat, 2017-08-10
 
 **Table of Contents**
 > - [Overview](#overview)
+> - [Relevant Documentation](#documentation)
 > - [Summary of Recommendations](#recommendations)
 > - [BIBFRAME Approach to Measurements](#bibframe)
 > - [Recommended Approach to Measurements](#recommended_approach)
 > - [Diagrams & Discussion](#diagrams)
+> - [Areas for Future Research](#future-research)
 
-<a name="overview">Overview:</a>
+<a name="overview">Overview</a>
 ---------
 In current MARC cataloging practice dimensions are recorded in one single subfield (300 \$c) even if the content standard or domain specific cataloging practice direct the cataloger to record the measurements in much more detail. BIBFRAME has carried this forward by defining the datatype property bf:dimensions. However, there are number of domain specific ontologies (such as [*QUDT*](http://qudt.org/doc/2016/DOC_SCHEMA-QUDT-v2.0.html), [*VRA
 RDF*](https://s3.amazonaws.com/VRA/ontology.html#) and [*CIDOC CRM*](http://www.cidoc-crm.org/)) that do provide more granularity and in 2015 a discussion paper was submitted to the Committee on Cataloging: Description & Access to expand RDA instructions in this area. Measurements were also identified at the [*In-Person Meeting of ArtFrame and the Rare Materials Ontology
@@ -23,11 +25,11 @@ Recommendations were tested on sample data pulled from existing descriptions.
 
 While the measurement model was developed specifically to address the descriptive needs of bibliographic items in the art and rare materials domains, we define it as an independent model with the expectation that it could be useful in the description of a broad range of resources.
 
-Relevant documentation:
+<a name="documentation">Relevant Documentation</a>
 ------------------------
 [*Machine-Actionable Data Elements for Measurements, Extent of the Carrier, Pagination and Foliation, Dimensions, Extent of the Content, and Duration – Discussion Paper*](http://www.rda-jsc.org/sites/all/files/6JSC-ALA-Discussion-5.pdf) (2015)
 
-<a name="recommendations">Summary of recommendations:</a>
+<a name="recommendations">Summary of Recommendations</a>
 ---------------------------
 -   Use of rdfs:label provides a human-readable form of the measurement
 -   Use rdf:value for numeric values
@@ -68,8 +70,8 @@ Relevant documentation:
 
 <a name="recommended_approach">Recommended Approach to Measurements</a>
 ------------------------------------
-Involved Classes
------------------------
+### Involved Classes
+
 **ex:MeasurementGroup**
 > - **Label**: Measurement Group
 > - **IRI:** tbd
@@ -85,8 +87,7 @@ Involved Classes
 > - **IRI**: tbd
 > - **Definition:** The arrangement, organization, or configuration of a single object or collection of objects. For example, a parchment may be rolled or unrolled; a collection of visual materials has a specific arrangement; computer files are organized and ordered in a specific way.
 
-Involved Properties
----------------------------
+### Involved Properties
 
 **ex:hasMeasurementGroup** (Object property)
 > - **Label:** has measurement group
@@ -184,11 +185,12 @@ Involved Properties
 
 <a name="diagrams">Diagrams and Discussion</a>
 ---------------------
-Models of measurements of a resource, a part of the resource, and the resource in a particular arrangement.
+The diagrams illustrate models of measurements of a resource, a part of the resource, and the resource in a particular arrangement.
 
-Diagram 1: Basic measurement model with optional descriptions
---------------------------
+### Diagram 1: Basic measurement model with optional descriptions
+
 ![Measurement diagram 1](/modeling_recommendations/modeling_diagrams/measurement_basic.png)
+
 **Notes**
 
 -   rdfs:label provides a human-readable form of the measurement.
@@ -202,25 +204,32 @@ Whether or not the model is used in this way in our descriptions is an implement
 
 -   Note that each value of dcterms:description is atomic: there should be one assertion for each literal value, rather than combining values into a composite string.
 
-Diagram 2: Single resource with multiple measurement group and descriptions
------------------------------------------------------------------------------------
+
+### Diagram 2: Single resource with multiple measurement group and descriptions
+
 ![Measurement diagram 2](/modeling_recommendations/modeling_diagrams/measurement_multiple.png)
 
-Diagram 3: Measurements of whole and part: part a resource
---------------------
+
+### Diagram 3: Measurements of whole and part: part a resource
+
 ![Measurement diagram 3](/modeling_recommendations/modeling_diagrams/measurement_whole_part.png)
+
 **Notes**
 -   For domain extensions: Identify classes for parts of resources like binding, frame, etc. Should there be a superclass?
 
-Diagram 4: Measurements of whole and part with additional physical characteristics
----------------
+
+### Diagram 4: Measurements of whole and part with additional physical characteristics
+
 ![Measurement diagram 4](/modeling_recommendations/modeling_diagrams/measurement_physical_characteristics.png)
+
 **Notes**
 -   Demonstrates that when a part of a resource, such as a binding or frame, is recognized as a distinct resource, other assertions can be made about it (color, material, etc.).
 
-Diagram 5: Measurements of arrangement: arrangement is a resource
-------------------
+
+### <a name="diagram-5">Diagram 5: Measurements of arrangement: arrangement is a resource</a>
+
 ![Measurement diagram 5](/modeling_recommendations/modeling_diagrams/measurement_arrangement.png)
+
 **Notes/TBD**
 
 -   Rationale for a state object is not necessarily that there are other assertions to be made about it, but that a controlled vocabulary of states, rather than literal values, can be used.
@@ -231,9 +240,24 @@ Diagram 5: Measurements of arrangement: arrangement is a resource
 
 -   Find or define controlled vocabulary for physical arrangement.
 
-Diagram 6: Measurements of arrangements: multiple arrangement resources
-----------------------
+### <a name="diagram-6">Diagram 6: Measurements of arrangements: multiple arrangement resources</a>
+
 ![Measurement diagram 6](/modeling_recommendations/modeling_diagrams/measurement_multiple_arrangements.png)
+
 **Notes/TBD**
 
--   In this version, two arrangements are expressed as a separate resource, without a default or unspecified arrangement. Choice of model 5 vs 6 would be an implementation decision by the cataloger.
+-   In this version, two arrangements are expressed as separate resources, without a default or unspecified arrangement. Choice of model 5 vs 6 would be an implementation decision by the cataloger.
+
+<a name="future-research">Areas for Future Research</a>
+----------------------
+
+* **Measurements of specific arrangements of a resource.** As illustrated in Diagrams [5](#diagram-5) and [6](#diagram-6), when a MeasurementGroup applies to a specific arrangement of a resource, the model proposes that it
+is attached directly to the Arrangement and only indirectly to the resource itself. This creates an asymmetry between this and other scenarios, where the predicates hasMeasurementGroup/isMeasurementGroupOf link the MeasurementGroup
+directly to the Item, Instance, or other resource; this in turn results in non-uniform querying of these scenarios. One might propose an alternative model in which the MeasurementGroup is directly attached to the resource, 
+as in other cases, and linked to the Arrangement via some other suitable predicate with the semantics "measures arrangement of."  However, the Arrangement nevertheless _does_ need to attach directly to the resource, since it is a
+descriptor of the resource itself independent of any measurements. One could contemplate a triangular model in which each resource attaches directly (but redundantly) to _both_ of the others, as in [Diagram 7](#diagram-7). The larger research
+question is whether introducing redundancy into a model for the sake of maintaining uniform modeling and query patterns is preferable to maintaing non-uniform models to avoid redundancy, noting that redundancy creates data maintenance 
+problems.
+
+### <a name="diagram-7">Diagram 7: Triangulated Resource, Arrangement, and Measurement</a>
+![Measurement diagram 7](/modeling_recommendations/modeling_diagrams/measurement_triangulated_resource_arrangement_and_measurement.png)

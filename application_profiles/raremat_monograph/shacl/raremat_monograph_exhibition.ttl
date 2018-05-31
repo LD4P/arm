@@ -1,16 +1,9 @@
-@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/> .
-
-@prefix aat: <http://vocab.getty.edu/aat/> .
-@prefix arm: <https://w3id.org/arm/ontologies/core/> .
+@prefix activity: <https://w3id.org/arm/core/activity/0.1/> .
+@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
+@prefix arrangement: <https://w3id.org/arm/core/vocabularies/arrangement/0.1/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix gn: <http://www.geonames.org/ontology/> .
-@prefix gvp: <http://vocab.getty.edu/ontology#> .
-@prefix lingvo: <http://www.lingvoj.org/ontology#> .
-@prefix madsrdf: <http://www.loc.gov/standards/mads/rdf/v1.rdf#> .
-@prefix measurement: <https://w3id.org/arm/ontologies/measurement/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix prov: <http://www.w3.org/ns/prov> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
@@ -18,46 +11,28 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix swa: <http://topbraid.org/swa#> .
 @prefix tosh: <http://topbraid.org/tosh#> .
-@prefix vivo: <http://vivoweb.org/ontology/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix raremat_monograph_base: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_base/> .
-@prefix arm_core_property_shapes: <https://w3id.org/arm/validation/shacl/arm_core_property_shapes/> .
-@prefix raremat_shacl_monograph: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_shacl_monograph/> .
+@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/> .
+@prefix arm_core_property_shapes: <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
+@prefix raremat_monograph_activity: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_activity/> .
+@prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/> .
+@prefix raremat_monograph_identifier: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_identifier/> .
+@prefix raremat_monograph_note: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_note/> .
+@prefix raremat_monograph_title: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_title/> .
 
-#
-# TODO
-#
-# First check documentation for decisions, then put on list for cataloger questions:
-# - Property groups
-# - Property order
-# - Max count 1 for exhibition event title, exhibition title?
-#
-# To implement:
-# - Add Agent - embedded form from hasActivity - both event and exhibition
-# - hasActivity needs to go to an activity form for event / exhibition. How?
-#
-# QUESTIONS
-#
-# Lookup service
-# - How to indicate what to look up?
-# TODO Specify lookup sources via restriction PropertyShapes: see for example
-# raremat_shacl_monograph:MaterialForm_crm_P2_has_type_gvp_broader_Extended 
-#
-
-
-# Links Item to Exhibition and ExhibitionEvent
-:ItemForm_arm_hasExhibition 
+# Links Item exhibited to ExhibitionEvent via Exhibition node. Embedded form
+# in the ItemForm.
+:ItemForm_arm_hasExhibition_bf_partOf 
     a sh:PropertyShape ;
-    sh:path ( arm:hasExhibition dcterms:isPartOf ) ;
-    sh:class schema:ExhibitionEvent ;  
-    sh:nodeKind sh:IRI ;   
+    sh:node arm_core_property_shapes:arm_hasExhibition_bf_partOf ;
     # NON-VALIDATING   
     sh:name "Exhibition" ; 
     sh:description "An exhibition this item was displayed in." ;  
-    sh:group raremat_shacl_monograph:ItemHistoryAndProvenancePropertyGroup ;     
-    sh:order "0"^^xsd:decimal ;   
-    tosh:editWidget swa:NestedObjectEditor .
+    sh:group raremat_monograph_form:ItemHistoryAndProvenancePropertyGroup ;     
+    sh:order "1"^^xsd:int ;   
+    tosh:editWidget swa:NestedObjectEditor ;
+    .
     
 #
 # ///// EXHIBITION EVENT FORM ///// #
@@ -67,228 +42,178 @@
     a sh:NodeShape ;   
     rdfs:label "Exhibition" ;
     sh:targetClass schema:ExhibitionEvent ;
+    
+    # Embedded form for ExhibitionEvent includes ONLY the title; other 
+    # properties are edited from ExhibitionEvent page.
     sh:property 
-        :ExhibitionEventForm_arm_atLocation ,  # DONE
-        :ExhibitionEventForm_arm_covers_geographic , # DONE
-        :ExhibitionEventForm_arm_covers_temporal ,  # DONE
-        :ExhibitionEventForm_arm_endDate ,     # DONE
-        :ExhibitionEventForm_arm_hasActivity , # DONE??
-        :ExhibitionEventForm_arm_startDate ,   # DONE
-        :ExhibitionEventForm_bf_note ,          # DONE??
-        :ExhibitionEventForm_bf_subject ,      # TODO specify the embedded form? or not, since just a lookup
-        :ExhibitionEventForm_bf_title ,        # TODO specify the embedded form
-        :ExhibitionEventForm_dcterms_hasPart ,  # TODO specify the embedded form
-        :ExhibitionEventForm_dcterms_isPartOf 
+    
+        # In embedded form on ItemForm
+        :ExhibitionEventForm_bf_title , 
+        
+        # Other PropertyShapes: display only on ExhibitionEvent page, not on
+        # embedded form on Item page.
+        
+        # Links an ExhibitionEvent to the Item via the Exhibition context 
+        # node.
+        :ExhibitionEventForm_bf_hasPart_arm_isExhibitionOf ,
+        
+        :ExhibitionEventForm_arm_startDate ,   
+ 
+        :ExhibitionEventForm_arm_endDate ,        
+        
+        :ExhibitionEventForm_arm_atLocation ,  
+
+        :ExhibitionEventForm_bf_subject ,     
+                         
+        :ExhibitionEventForm_arm_covers_geographic , 
+        
+        :ExhibitionEventForm_arm_covers_temporal ,  
+
+        :ExhibitionEventForm_arm_hasActivity , 
+
+        :ExhibitionEventForm_bf_note ;         
+
+        # Multi-site or traveling ExhibitionEvent links to another 
+        # ExhibitionEvent that is part of it.
+        # Omit in first iteration of VitroLib.
+        # :ExhibitionEventForm_bf_hasPart_schema_ExhibitionEvent ;         
+        
+        # ExhibitionEvent part of a multi-site or traveling ExhibitionEvent.
+        # Omit in first iteration of VitroLib.
+        # :ExhibitionEventForm_schema_ExhibitionEvent_bf_partOf_schema_ExhibitionEvent ;  
     .
-    
-:ExhibitionEventForm_arm_atLocation
-    a sh:PropertyShape ;  
-    sh:and ( 
-        arm_core_property_shapes:arm_atLocation 
-        [
-            sh:maxCount 1 ;
-            # NON-VALIDATING
-            sh:name "Exhibition location" ; 
-            sh:description "" ;      
-            sh:group :ExhibitionEventLocationPropertyGroup ; 
-            sh:order "0"^^xsd:decimal ; 
-            tosh:editWidget swa:NestedObjectEditor ;
-            # TODO How do we indicate what to look up? In this case it's LC subject authorities
-            raremat_shacl_monograph:lookup raremat_shacl_monograph:LD4LookupService ;
-        ]
-    ) .
-    
-:ExhibitionEventForm_arm_covers_temporal
-    a sh:PropertyShape ;  
-    sh:and ( 
-        arm_core_property_shapes:arm_covers 
-        [
-            # NON-VALIDATING
-            sh:name "Temporal coverage" ; 
-            sh:description "Time period covered by this exhibition." ;      
-            sh:group :ExhibitionEventSubjectAndCoveragePropertyGroup ; 
-            sh:order "0"^^xsd:decimal ; 
-            tosh:editWidget swa:NestedObjectEditor ;
-        ]
-    ) .
-    
-:ExhibitionEventForm_arm_covers_geographic
-    a sh:PropertyShape ;  
-    sh:and ( 
-        arm_core_property_shapes:arm_covers 
-        [
-            # NON-VALIDATING
-            sh:name "Geographic coverage" ; 
-            sh:description "Location covered by this exhibition." ;      
-            sh:group :ExhibitionEventLocationPropertyGroup ; 
-            sh:order "0"^^xsd:decimal ; 
-            tosh:editWidget swa:NestedObjectEditor ;
-            # TODO How do we indicate what to look up? In this case it's LC subject authorities
-            raremat_shacl_monograph:lookup raremat_shacl_monograph:LD4LookupService ;
-        ]
-    ) .
+
+# Links an ExhibitionEvent to the Item via the Exhibition context node.
+# Displays only on ExhibitionEvent page.
+:ExhibitionEventForm_bf_hasPart_arm_isExhibitionOf
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:bf_hasPart_arm_isExhibitionOf ;
+    sh:class bf:Item ;
+    # NON-VALIDATING
+    sh:name "Item in the exhibition" ;
+    sh:order "10"^^xsd:int ;
+    sh:group :ExhibitionEventExhibitionPropertyGroup ;
+    .
+        
+# In embedded form on ItemForm as well as on ExhibitionEvent page.
+:ExhibitionEventForm_bf_title 
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:bf_title ;
+    sh:maxCount 1 ;
+    # NON-VALIDATING
+    sh:name "Exhibition title" ;
+    sh:order "20"^^xsd:int ;
+    tosh:editWidget swa:NestedObjectEditor ;
+    .
+
+:ExhibitionEventForm_arm_startDate
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:arm_startDate ;
+    # NON-VALIDATING
+    sh:name "Exhibition start date" ; 
+    sh:description "Start date of the exhibition. EDTF format recommended." ; 
+    sh:group :ExhibitionEventDateAndLocationPropertyGroup ; 
+    sh:order "10"^^xsd:int ; 
+    .
     
 :ExhibitionEventForm_arm_endDate
     a sh:PropertyShape ;  
-    sh:and ( 
-        arm_core_property_shapes:arm_endDate 
-        [
-            # NON-VALIDATING
-            sh:name "Exhibition end date" ; 
-            sh:description "End date of the exhibition. EDTF format recommended." ;      
-            sh:group :ExhibitionEventDatePropertyGroup ;
-            sh:order "0"^^xsd:decimal ; 
-        ]
-    ) .
-
-:ExhibitionEventForm_arm_hasActivity
+    sh:node arm_core_property_shapes:arm_endDate ;
+    # NON-VALIDATING
+    sh:name "Exhibition end date" ; 
+    sh:description "End date of the exhibition. EDTF format recommended." ;      
+    sh:group :ExhibitionEventDateAndLocationPropertyGroup ; 
+    sh:order "20"^^xsd:int ; 
+    .
+            
+:ExhibitionEventForm_arm_atLocation
     a sh:PropertyShape ;  
-    sh:and ( 
-        arm_core_property_shapes:arm_hasActivity 
-        [
-            # NON-VALIDATING
-            sh:name "Associated agent activity" ; 
-            sh:description "Agent activity associated with the exhibition." ;      
-            sh:group :XXX;
-            sh:order "0"^^xsd:decimal ; 
-            tosh:editWidget swa:NestedObjectEditor;
-        ]
-    ) .
-        
-:ExhibitionEventForm_arm_startDate
-    a sh:PropertyShape ;
-    sh:and (
-        arm_core_property_shapes:arm_startDate
-        [
-            # NON-VALIDATING
-            sh:name "Exhibition start date" ; 
-            sh:description "Start date of the exhibition. EDTF format recommended." ; 
-            sh:group :ExhibitionEventDatePropertyGroup ;    
-            sh:order "0"^^xsd:decimal ; 
-        ]
-    ) .
-     
-     
-:ExhibitionEventForm_bf_note
-    a sh:PropertyShape ;
-    sh:and (
-        arm_core_property_shapes:bf_note 
-        [   
-            sh:class [
-                sh:in ( arm:DescriptiveNote arm:SummaryNote bf:Note )
-            ] ;     
-            # NON-VALIDATING
-            sh:name "Exhibition note" ; 
-            sh:description "Additional textual notes about this exhibition." ;   
-            sh:group :ExhibitionEventNotePropertyGroup ;   
-            sh:order "0"^^xsd:decimal ;   
-            tosh:editWidget swa:NestedObjectEditor ;
-        ]
-    ) .
-    
+    sh:node arm_core_property_shapes:arm_atLocation ;
+    sh:maxCount 1 ;
+    # NON-VALIDATING
+    sh:name "Exhibition location" ;    
+    sh:group :ExhibitionEventDateAndLocationPropertyGroup ; 
+    sh:order "30"^^xsd:int ; 
+    # TODO Where do we specify the source data for the lookups?
+    raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
+    .
+   
 :ExhibitionEventForm_bf_subject
     a sh:PropertyShape ;
-    sh:and (
-        arm_core_property_shapes:bf_subject 
-        [       
-            # NON-VALIDATING
-            sh:name "Exhibition subject" ; 
-            sh:description "" ;   
-            sh:group :ExhibitionEventSubjectAndCoveragePropertyGroup ;   
-            sh:order "0"^^xsd:decimal ;   
-            tosh:editWidget swa:NestedObjectEditor ;
-            # TODO How do we indicate what to look up? In this case it's LC subject authorities
-            raremat_shacl_monograph:lookup raremat_shacl_monograph:LD4LookupService ;
-        ]
-    ) .
- 
-:ExhibitionEventForm_bf_title
-    sh:and (
-        arm_core_property_shapes:bf_title 
-        [
-            sh:maxCount 1 ;   # ??
-            # NON-VALIDATING
-            sh:name "Exhibition title" ; 
-            sh:description "" ;     
-            sh:group :ExhibitionEventTitlePropertyGroup ;  
-            sh:order "0"^^xsd:decimal ; 
-            tosh:editWidget swa:NestedObjectEditor ;    
-        ]
-    ) . 
-    
-:ExhibitionEventForm_dcterms_hasPart
-    sh:and (
-        arm_core_property_shapes:dcterms_hasPart 
-        [
-            sh:class schema:ExhibitionEvent ;
-            # NON-VALIDATING
-            sh:name "Item description in the exhibition" ; 
-            sh:description "Attributes of the item in the context of this exhibition." ;     
-            sh:group :ExhibitionEventItemDescriptionPropertyGroup ;  
-            sh:order "0"^^xsd:decimal ; 
-            tosh:editWidget swa:NestedObjectEditor ;    
-        ]
-    ) .     
-
-#
-# ///// EXHIBITION EVENT NOTE FORM ///// #
-#
-
-:ExhibitionEventNoteForm 
-    sh:and (
-        raremat_monograph_base:NoteForm 
-        [
-            sh:property :ExhibitionEventNoteForm_rdf_type ;
-        ] 
-    ) ;
+    sh:node arm_core_property_shapes:bf_subject ;
+    # NON-VALIDATING
+    sh:name "Exhibition subject" ;   
+    sh:group :ExhibitionEventSubjectAndCoveragePropertyGroup ;   
+    sh:order "10"^^xsd:int ;   
+    tosh:editWidget swa:NestedObjectEditor ;
+    # TODO How do we indicate what to look up? In this case it's LC subject authorities
+    raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
     .
-
-# If we don't need to specify the note types here, but only in 
-# :ExhibitionEventNoteForm, then we can use a generalized 
-# raremat_monograph_base:NoteForm_rdf_type. Check whether we need to
-# indicate this in both places.
-:ExhibitionEventNoteForm_rdf_type
-    sh:and (
-        arm_core_property_shapes:rdf_type
-        [
-            sh:class [
-                sh:in (
-                    # Note types relevant to ExhibitionEvent
-                    arm:DescriptiveNote
-                    arm:SubjectNote
-                    arm:SummaryNote
-                    bf:Note
-                ) ;
-            ] ;   
-            sh:minCount 1 ;
-            sh:maxCount 1 ;
-            # NON-VALIDATING
-            sh:name "Type of note" ;                
-        ]
-    ) ;
-    .
-
-#
-# ///// EXHIBITION EVENT SUBJECT FORM ///// #
-#
-
-:ExhibitionEventSubjectForm 
-    a sh:NodeShape ;
-    rdf:label "Subject of the exhibition" ;
-    sh:property :ExhibitionEventSubjectForm_bf_subject ;
-    .  
-    
-:ExhibitionEventSubjectForm_bf_subject
-    sh:and (
-        arm_core_property_shapes:bf_subject
-        [
-            # NON-VALIDATING
-            sh:name
-            sh:description
         
-        ]
-    ) ;
+:ExhibitionEventForm_arm_covers_temporal
+    a sh:PropertyShape ;  
+    sh:node arm_core_property_shapes:arm_covers ;
+    # NON-VALIDATING
+    sh:name "Temporal coverage" ; 
+    sh:description "Time period covered by this exhibition." ;      
+    sh:group :ExhibitionEventSubjectAndCoveragePropertyGroup ; 
+    sh:order "20"^^xsd:int ; 
+    raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
+    .
+    
+:ExhibitionEventForm_arm_covers_geographic
+    a sh:PropertyShape ;  
+    sh:node arm_core_property_shapes:arm_covers ;
+    # NON-VALIDATING
+    sh:name "Geographic coverage" ; 
+    sh:description "Geographic area covered by this exhibition." ;      
+    sh:group :ExhibitionEventSubjectAndCoveragePropertyGroup ; 
+    sh:order "40"^^xsd:int ; 
+    raremat_monograph_form:lookup raremat_monograph_form:LD4LookupService ;
+    .
+    
+:ExhibitionEventForm_arm_hasActivity
+    a sh:PropertyShape ;  
+    sh:node arm_core_property_shapes:arm_hasActivity ;
+    # NON-VALIDATING
+    sh:name "Associated agent and role" ; 
+    sh:description "Agent and role associated with the exhibition." ;      
+    sh:group :ExhibitionEventActivityPropertyGroup ;
+    sh:order "10"^^xsd:int ; 
+    tosh:editWidget swa:NestedObjectEditor;
+    .
+                 
+:ExhibitionEventForm_bf_note
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:bf_note ;  
+    # NON-VALIDATING
+    sh:name "Exhibition note" ; 
+    sh:description "Additional textual notes about this exhibition." ;     
+    sh:order "100"^^xsd:int ;   
+    tosh:editWidget swa:NestedObjectEditor ;
+    .
+
+#
+# ///// EXHIBITION EVENT TITLE FORM ///// #
+#
+
+:ExhibitionEventTitleForm 
+    a sh:NodeShape ;
+    sh:node raremat_monograph_title:TitleForm ;
+    # No subtypes defined for ExhibitionEvent title
+    sh:targetClass bf:Title ;
+    sh:property
+        :ExhibitionEventTitleForm_rdf_value ;
+    .
+
+:ExhibitionEventTitleForm_rdf_value  
+    a sh:PropertyShape ;
+    sh:node raremat_monograph_title:TitleForm_rdf_value ;
+    # NON-VALIDATING
+    sh:name "Exhibition title" ;
+    sh:order "20"^^xsd:int ;
     .  
+
 
 #
 # ///// EXHIBITION EVENT ACTIVITY FORM ///// #
@@ -296,196 +221,265 @@
 
 :ExhibitionEventActivityForm 
     a sh:NodeShape ;   
-    rdfs:label "Agent activity for the exhibition" ;
-    # This list should be used to generate the ExhibitionEvent Activity type options. 
-    sh:targetClass [
-        sh:in (
-            <https://w3id.org/arm/ontologies/core/Activity> 
-            <https://w3id.org/arm/ontologies/core/CuratorActivity> 
-            <https://w3id.org/arm/ontologies/core/DirectorActivity> 
-            <https://w3id.org/arm/ontologies/custodial_history/DonorActivity>
-            <https://w3id.org/arm/ontologies/core/OrganizerActivity> 
-            <https://w3id.org/arm/ontologies/core/SponsorActivity> 
-        ) ;
-    ] ;
-    sh:property 
-        :ExhibitionEventActivityForm_arm_atLocation , 
-        :ExhibitionEventActivityForm_bf_agent ,
-        :ExhibitionEventActivityForm_bf_date ,
-        :ExhibitionEventActivityForm_bf_note 
+    sh:node raremat_monograph_activity:ActivityForm ;
+    sh:property :ExhibitionEventActivityForm_rdf_type ;        
     .
-      
-:ExhibitionEventActivityForm_arm_atLocation
-    sh:and ( 
-        arm_core_property_shapes:arm_atLocation 
-        [
-            sh:maxCount 1 ;
-            # NON-VALIDATING
-            sh:name "Location of this activity" ; 
-            sh:description "" ;      
-            sh:group :ExhibitionEventActivityPropertyGroup ; 
-            sh:order "0"^^xsd:decimal ;
-            # TODO Specify lookup sources via restriction PropertyShapes: see for example
-            # raremat_shacl_monograph:MaterialForm_crm_P2_has_type_gvp_broader_Extended 
-            raremat_shacl_monograph:lookup raremat_shacl_monograph:LD4LookupService ;
-            tosh:editWidget swa:NestedObjectEditor ;
-        ]
-    ) .  
 
-:ExhibitionEventActivityForm_bf_agent
-    sh:and ( 
-        arm_core_property_shapes:bf_agent 
-        [
-            sh:maxCount 1 ;
-            # NON-VALIDATING
-            sh:name "Agent" ; 
-            sh:description "Agent of this activity" ;      
-            sh:group :ExhibitionEventActivityPropertyGroup ; 
-            sh:order "0"^^xsd:decimal ; 
-            # TODO Specify lookup sources via restriction PropertyShapes: see for example
-            # raremat_shacl_monograph:MaterialForm_crm_P2_has_type_gvp_broader_Extended 
-            raremat_shacl_monograph:lookup raremat_shacl_monograph:LD4LookupService ;
-            tosh:editWidget swa:NestedObjectEditor ;
-        ]
-    ) . 
+:ExhibitionEventActivityForm_rdf_type
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:schema_ExhibitionEvent_activity_Activity_rdf_type ;
+    # NON-VALIDATING
+    sh:name "Agent and activity" ;
+    sh:description "Agent and activity related to the exhibition." ;
+    sh:order "20"^^xsd:int ;
+    .
 
-:ExhibitionEventActivityForm_bf_date
-    sh:and (
-        arm_core_property_shapes:arm_startDate
-        [
-            # NON-VALIDATING
-            sh:name "Activity date" ; 
-            sh:description "Date of the activity. EDTF format recommended." ; 
-            sh:group :ExhibitionEventActivityPropertyGroup ;    
-            sh:order "0"^^xsd:decimal ; 
-        ]
-    ) .
 
-:ExhibitionEventActivityForm_bf_note
-    sh:and (
-        arm_core_property_shapes:bf_note 
-        [   
-            sh:class [
-                sh:in ( arm:DescriptiveNote bf:Note )
-            ] ;     
-            # NON-VALIDATING
-            sh:name "Note on the activity" ; 
-            sh:description "Additional textual note about this activity." ;   
-            sh:group :ExhibitionEventActivityNotePropertyGroup ;   
-            sh:order "0"^^xsd:decimal ;   
-            tosh:editWidget swa:NestedObjectEditor ;
-        ]
-    ) .
-    
+#
+# ///// EXHIBITION EVENT NOTE FORM ///// #
+#
+
+:ExhibitionEventNoteForm 
+    a sh:NodeShape ;
+    sh:node raremat_monograph_note:NoteForm ;
+    sh:property :ExhibitionEventNoteForm_rdf_type ;
+    .
+
+:ExhibitionEventNoteForm_rdf_type
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:rdf_type ;
+    sh:in (
+        # Note types relevant to ExhibitionEvent
+        arm:DescriptiveNote
+        arm:SubjectNote
+        arm:SummaryNote
+        bf:Note
+    ) ;  
+    sh:minCount 1 ;
+    # NON-VALIDATING
+    sh:name "Note type" ;  
+    sh:order "10"^^xsd:int ;             
+    .
+
+       
 #
 # ///// EXHIBITION FORM ///// #
 #           
 
-:ExhibitionEventExhibitionForm 
+:ExhibitionForm 
     a sh:NodeShape ;   
     rdfs:label "Item description in the context of this exhibition" ;
     sh:targetClass arm:Exhibition ;
     sh:property 
-        :ExhibitionEventExhibitionForm_arm_hasArrangement , 
-        :ExhibitionEventExhibitionForm_bf_agent ,
-        :ExhibitionEventExhibitionForm_arm_endDate ,
-        :ExhibitionEventExhibitionForm_arm_startDate ,
-        :ExhibitionEventExhibitionForm_bf_note 
+    
+        # Only for display on Exhibition page. Not editable in any context.
+        :ExhibitionForm_arm_isExhibitionOf ,
+        
+        # Embedded form on ItemForm.
+        :ExhibitionForm_bf_title ,
+        
+        # Other PropertyShapes: display only on ExhibitionEvent page, not on
+        # embedded form on Item page.
+        
+        :ExhibitionForm_bf_identifiedBy ,
+        
+        :ExhibitionForm_arm_startDate ,
+            
+        :ExhibitionForm_arm_endDate ,
+        
+        :ExhibitionForm_arm_hasArrangement , 
+        
+        :ExhibitionForm_arm_hasActivity ,
+                
+        :ExhibitionForm_bf_note ; 
     .
 
+
+# Only for display on Exhibition page. Not editable in any context.
+:ExhibitionForm_arm_isExhibitionOf 
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:arm_isExhibitionOf ;
+    # NON-VALIDATING
+    sh:name "Item exhibited" ;
+    sh:order "10"^^xsd:int ;
+    .
+
+# Embedded form on ItemForm
+:ExhibitionForm_bf_title
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:bf_title ;    
+    # NON-VALIDATING
+    sh:name "Item title in the exhibition" ;
+    sh:description "Indicate Item title used in the exhibition." ; 
+    sh:order "20"^^xsd:int ;
+    tosh:editWidget swa:NestedObjectEditor;
+    .
+ 
+:ExhibitionForm_bf_identifiedBy 
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:bf_identifiedBy ;
+    sh:maxCount 1 ;
+    # NON-VALIDATING
+    sh:name "Item exhibition identifier" ;
+    sh:description "Identifier of this item in the exhibition." ;
+    sh:order "30"^^xsd:int ;
+    .
+
+:ExhibitionEventForm_arm_startDate
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:arm_startDate ;
+    # NON-VALIDATING
+    sh:name "Start date" ; 
+    sh:description "Date item entered the exhibition. Leave blank if the same as the exhibition start date." ; 
+    sh:order "40"^^xsd:int ; 
+    .
+    
+:ExhibitionEventForm_arm_endDate
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:arm_endDate ;
+    # NON-VALIDATING
+    sh:name "End date" ; 
+    sh:description "Date item was removed from the exhibition. Leave blank if the same as the exhibition end date." ; 
+    sh:order "50"^^xsd:int ; 
+    .
+        
 :ExhibitionForm_arm_hasArrangement 
     a sh:PropertyShape ;
-    sh:path arm:hasArrangement;
-    sh:nodeKind sh:IRI ; 
-    sh:class arm:Arrangement ;
-    sh:maxCount 1 ;
-    
+    sh:node arm_core_property_shapes:arm_hasArrangement ;
+    sh:maxCount 1 ;    
+    sh:in (
+        arrangement:folded
+        arrangement:unfolded
+        arrangement:rolled
+        arrangement:unrolled 
+    ) ;
     # NON-VALIDATING
     sh:name "Arrangement" ; 
     sh:description "Arrangement of the item in the exhibition (e.g., \"Open to plate 10\"" ;  
-    sh:order "0"^^xsd:decimal .   
-    
-:ExhibitionForm_bf_title 
-    a sh:PropertyShape ;
-    sh:path bf:title ;
-    sh:nodeKind sh:IRI ; 
-    sh:class bf:Title ;
-    sh:maxCount 1 ;    
-    # NON-VALIDATING 
-    sh:name "Exhibition title" ; 
-    sh:description "Title of the item in the exhibition" ;  
-    sh:order "0"^^xsd:decimal .   
-            
+    sh:order "60"^^xsd:int ;
+    .  
+                
 :ExhibitionForm_arm_hasActivity 
     a sh:PropertyShape ;
-    sh:path arm:hasActivity ;
-    sh:nodeKind sh:IRI ; 
-    sh:class arm:Activity ;   
+    sh:node arm_core_property_shapes:activity_hasActivity ;  
     # NON-VALIDATING
-    sh:name "Activity" ; 
+    sh:name "Associated agent and role" ; 
     sh:description "Agent activity and role for the item in the exhibition (e.g., curator)." ;  
-    sh:order "0"^^xsd:decimal .      
+    sh:order "70"^^xsd:int ;
+    .      
 
-:ExhibitionForm_bf_identifiedBy
+                 
+:ExhibitionEventForm_bf_note
     a sh:PropertyShape ;
-    sh:path bf:identifiedBy ;
-    sh:nodeKind sh:IRI ; 
-    sh:class bf:Identifier ;    
+    sh:node arm_core_property_shapes:bf_note ;  
     # NON-VALIDATING
-    sh:name "Exhibition identifier" ; 
-    sh:description "Identifier of the item in the exhibition" ;  
-    sh:order "0"^^xsd:decimal .  
+    sh:name "Note" ; 
+    sh:description "Additional textual notes about this item in the context of the exhibition." ;    
+    sh:order "80"^^xsd:int ;   
+    .
 
+#
+# ///// EXHIBITION  TITLE FORM ///// #
+#
+
+:ExhibitionTitleForm 
+    a sh:NodeShape ;
+    sh:node raremat_monograph_title:TitleForm ;
+    # No subtypes defined for Exhibition title.
+    sh:targetClass bf:Title ;
+    sh:property         
+        :ExhibitionTitleForm_rdf_value ;
+    .
+    
+:ExhibitionTitleForm_rdf_value  
+    a sh:PropertyShape ;
+    sh:node raremat_monograph_title:TitleForm_rdf_value ;
+    # NON-VALIDATING
+    sh:name "Title" ;
+    sh:description "Exhibition title of the item." ;
+    sh:order "10"^^xsd:int ;
+    .  
+
+#
+# ///// EXHIBITION IDENTIFIER FORM ///// #
+#
+
+:ExhibitionIdentifierForm 
+    a sh:NodeShape ;
+    sh:node raremat_monograph_identifier:IdentifierForm ;
+    
+    # Only one possible type, so no PropertyShape for type. 
+    sh:targetClass bf:Identifier ;
+    .
+
+    
 #
 # ///// EXHIBITION ACTIVITY FORM ///// #
 #
+
+:ExhibitionActivityForm 
+    a sh:NodeShape ;   
+    sh:node raremat_monograph_activity:ActivityForm ;
+    sh:property 
+        :ExhibitionActivityForm_rdf_type ;
+    .
+
+:ExhibitionActivityForm_rdf_type
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:schema_Exhibition_activity_Activity_rdf_type ;
+    # NON-VALIDATING
+    sh:name "Agent and activity" ;
+    sh:description "Agent and activity associated with the item in the context of the exhibition (e.g., curator)." ;
+    sh:order "20"^^xsd:int ;
+    .
+
+
+#
+# ///// EXHIBITION NOTE FORM ///// #
+#
+
+:ExhibitionNoteForm 
+    a sh:NodeShape ;
+    sh:node raremat_monograph_note:NoteForm ;
+    sh:property :ExhibitionNoteForm_rdf_type ;
+    .
+
+:ExhibitionNoteForm_rdf_type
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:rdf_type ;
+    sh:in (
+        # Note types relevant to Item in the ExhibitionEvent
+        arm:DescriptiveNote
+        arm:SubjectNote
+        arm:SummaryNote
+        bf:Note
+    ) ;  
+    sh:minCount 1 ;
+    # NON-VALIDATING
+    sh:name "Type of note" ;  
+    sh:order "10"^^xsd:int ;              
+    .
         
 #
 # ///// PROPERTY GROUPS ///// #
 #
 
-:ExhibitionEventActivityPropertyGroup
-    a sh:PropertyGroup ;
-    rdfs:label "Agent Roles and Activities" ;
-    sh:order "0"^^xsd:decimal . 
-
-:ExhibitionEventActivityNotePropertyGroup
-    a sh:PropertyGroup ;
-    rdfs:label "Activity Notes" ;
-    sh:order "0"^^xsd:decimal . 
-       
-:ExhibitionEventDatePropertyGroup 
-    a sh:PropertyGroup ;
-    rdfs:label "Exhibition Dates" ;
-    sh:order "0"^^xsd:decimal .  
-  
 :ExhibitionEventExhibitionPropertyGroup 
     a sh:PropertyGroup ;
     rdfs:label "Exhibited Items" ;
-    sh:order "0"^^xsd:decimal .  
+    sh:order "0"^^xsd:int ;
+    .  
 
-:ExhibitionEventExhibitionPropertyGroup
+:ExhibitionEventDateAndLocationPropertyGroup      
     a sh:PropertyGroup ;
-    rdfs:label "Item Description" ;
-    sh:order "0"^^xsd:decimal .  
-   
-:ExhibitionEventLocationPropertyGroup      
-    a sh:PropertyGroup ;
-    rdfs:label "Exhibition Locations" ;
-    sh:order "0"^^xsd:decimal .   
-   
-:ExhibitionEventNotePropertyGroup      
-    a sh:PropertyGroup ;
-    rdfs:label "Exhibition Notes" ;
-    sh:order "0"^^xsd:decimal .  
-       
+    rdfs:label "Dates and Locations" ;
+    sh:order "0"^^xsd:int ;
+    .   
+         
 :ExhibitionEventSubjectAndCoveragePropertyGroup
     a sh:PropertyGroup ;
-    rdfs:label "Subject and Coverage of this Exhibition" ;
-    sh:order "0"^^xsd:decimal .  
-    
-:ExhibitionEventTitlePropertyGroup
-    a sh:PropertyGroup ;
-    rdfs:label "Exhibition Titles" ;
-    sh:order "0"^^xsd:decimal .    
-     
+    rdfs:label "Subject and Coverage" ;
+    sh:order "0"^^xsd:int ;
+    .  
+
+# Everything else goes on the Other tab, for now at least.    

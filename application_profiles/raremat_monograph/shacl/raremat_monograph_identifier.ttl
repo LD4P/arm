@@ -1,0 +1,78 @@
+@prefix aat: <http://vocab.getty.edu/aat/> .
+@prefix activity: <https://w3id.org/arm/core/activity/0.1/> .
+@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix crm: <http://www.cidoc-crm.org/Property/P2-has-type/Version-6.2/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/schacl/raremat_monograph/identifier/> .
+@prefix arm_core_property_shapes: <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
+@prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/> . 
+
+
+:IdentifierForm 
+    a sh:NodeShape ;
+    rdfs:label "Identifier" ;
+    sh:targetClass bf:Identifier ;
+    sh:property 
+    
+        # Only for use on Identifier page; do not include in embedded forms.
+        :IdentifierForm_bf_identifies ,
+        
+        # Type options depend on context (i.e., the specific form). In some
+        # forms there are no type options, in which case the PropertyShape
+        # is not included on the form, and the type is specified by the
+        # form sh:targetClass. 
+        # :IdentifierForm_rdf_type ,
+        
+        :IdentifierForm_rdf_value ,
+        
+        :IdentifierForm_bf_status ;
+    .    
+
+# Only for use on Identifier page; do not include in embedded forms.
+:IdentifierForm_bf_identifies 
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:bf_identifies ;
+    # NON-VALIDATING
+    sh:name "Resource identified" ;
+    sh:description "Resource this identifier identifies." ;
+    sh:order "10"^^xsd:int ; 
+    . 
+           
+:IdentifierForm_rdf_value 
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:rdf_value ;
+    sh:nodeKind sh:Literal ;
+    # NON-VALIDATING
+    sh:name "Value" ;
+    sh:description "Identifier value." ;
+    sh:order "30"^^xsd:int ;        
+    .
+
+:IdentifierForm_bf_status
+    a sh:PropertyShape ;  
+    sh:node arm_core_property_shapes:bf_status ;
+    sh:in (
+        arm:cancelled 
+        arm:current
+        arm:deprecated
+        arm:invalid
+    ) ;
+    # Valid data should have any prior status removed when a new one  
+    # is asserted.
+    sh:maxCount 1 ;
+    # NON-VALIDATING
+    sh:name "Status" ;
+    sh:description "Identifier status." ;
+    sh:order "40"^^xsd:int ;
+    . 
+ 

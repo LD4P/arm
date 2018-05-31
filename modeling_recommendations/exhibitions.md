@@ -482,6 +482,7 @@ Properties
 - Description, coverage, and subject are different options for describing the topic of the Exhibition Event.
 
 
+
 **Diagram 2. Items in an Exhibition Event**
 
 ![Items_in_an_Exhibition_Event_2](/modeling_recommendations/modeling_diagrams/exhibition_item.png)
@@ -490,8 +491,9 @@ Properties
 - While it is the Item which is directly related to the ExhibitionEvent (via the Exhibition node), by following  
   the links to Instance and Work, these are by extrapolation also “in” the ExhibitionEvent.
   
+
  
- **Diagram 3. Item Description the the Context of an Exhibition**
+ **Diagram 3. Item Description in the Context of an Exhibition**
  
 ![Item_Description_in_the_Context_of_an_Exhibition_3](/modeling_recommendations/modeling_diagrams/exhibition_item_description.png)
 
@@ -509,6 +511,7 @@ Properties
   - Perhaps other features not illustrated here.
   
 
+
 **Diagram 4. Exhibition catalog**
 
 ![Exhibition_Catalog 4](/modeling_recommendations/modeling_diagrams/exhibition_catalog.png)
@@ -519,6 +522,7 @@ Properties
 - Other publications associated with an ExhibitionEvent may include flyers, audio guides, etc. These will generally follow the 
   model provided here for catalogs, with different genreForms.
   
+
 
 **Digram 5. Multi-Site Exhibition**
 
@@ -538,7 +542,9 @@ Properties
   well. Only the entire exhibition has a catalog (though this is not a requirement).
   
   
+
 **Diagram 6. Traveling Exhibition**
+
 ![Traveling_Exhibitions_6](/modeling_recommendations/modeling_diagrams/exhibition_traveling.png)
 
 ***Notes***

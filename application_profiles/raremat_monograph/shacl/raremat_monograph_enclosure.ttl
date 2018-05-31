@@ -1,45 +1,658 @@
-@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_binding/> .
-
 @prefix aat: <http://vocab.getty.edu/aat/> .
-@prefix arm: <https://w3id.org/arm/ontologies/core/> .
+@prefix activity: <https://w3id.org/arm/core/activity/0.1/> .
+@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix crm: <http://www.cidoc-crm.org/Property/P2-has-type/Version-6.2/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix gn: <http://www.geonames.org/ontology/> .
-@prefix gvp: <http://vocab.getty.edu/ontology#> .
-@prefix lingvo: <http://www.lingvoj.org/ontology#> .
-@prefix madsrdf: <http://www.loc.gov/standards/mads/rdf/v1.rdf#> .
-@prefix measurement: <https://w3id.org/arm/ontologies/measurement/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix prov: <http://www.w3.org/ns/prov> .
+@prefix rbms_binding: <https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <http://schema.org/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix swa: <http://topbraid.org/swa#> .
 @prefix tosh: <http://topbraid.org/tosh#> .
-@prefix vivo: <http://vivoweb.org/ontology/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix raremat_monograph_base: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_base/> .
-@prefix arm_core_property_shapes: <https://w3id.org/arm/validation/shacl/arm_core_property_shapes/> .
-@prefix raremat_shacl_monograph: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_shacl_monograph/> .
+@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_enclosure/> .
+@prefix arm_core_property_shapes: <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
+@prefix raremat_monograph_activity: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_activity/> .
+@prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/> .
+@prefix raremat_monograph_marking: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_marking/> .
+@prefix raremat_monograph_material: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_material/> .
+@prefix raremat_monograph_note: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_note/> .
+@prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/> . 
 
-# Links Item to Exhibition and ExhibitionEvent
-:ItemForm_dcterms_hasPart_enclosure
-    sh:and (
-        arm_core_property_shapes:dcterms_hasPart
-        [
-            sh:class arm:Enclosure
-            # NON-VALIDATING   
-            sh:name "Enclosure" ; 
-            sh:description "A resource that encloses this item, such as a binding, dust jacket, frame, mount, etc." ;  
-            sh:group raremat_shacl_monograph:ItemHistoryAndProvenancePropertyGroup ;     
-            sh:order "0"^^xsd:decimal ;   
-            tosh:editWidget swa:NestedObjectEditor .       
+
+# Generic PropertyShape linking a resource to an Enclosure. Specific
+# constraints are added in InstanceForm_bf_hasPart_arm_Enclosure and 
+# ItemForm_bf_hasPart_arm_Enclosure.
+:bf_hasPart_arm_Enclosure
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:bf_hasPart ;
+    sh:class arm:Enclosure ;
+    # NON-VALIDATING   
+    # NB Binding has some fields that don't apply to all Enclosures,
+    # so defined a Binding-specific form shape below, and using this 
+    # for non-Binding Enclosures, thus use of "Other" in the name.
+    sh:name "Other enclosure" ;           
+    .
+
+# Links Instance to Enclosure. Note that Instance and Item use different
+# PropertyShapes because they belong to different property groups. The need
+# for different property groups is that properties need to be ordered
+# differently for Instance and Items.
+:InstanceForm_bf_hasPart_arm_Enclosure
+    a sh:PropertyShape ;
+    sh:node :bf_hasPart_arm_Enclosure ;
+    # NON-VALIDATING 
+    sh:group raremat_monograph_property_groups:InstancePhysicalDescriptionPropertyGroup ;   
+    sh:order "10"^^xsd:int ;             
+    .
+
+# Links Instance to Enclosure. Note that Instance and Item use different
+# PropertyShapes because they belong to different property groups. The need
+# for different property groups is that properties need to be ordered
+# differently for Instance and Items.
+:ItemForm_bf_hasPart_arm_Enclosure
+    a sh:PropertyShape ;
+    sh:node :bf_hasPart_arm_Enclosure ;      
+    # NON-VALIDATING 
+    sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;   
+    sh:order "2"^^xsd:int ;             
+    .
+    
+:EnclosureForm
+    a sh:NodeShape ;
+    rdfs:label "Enclosure" ;
+    sh:targetClass arm:Enclosure ;
+    sh:property
+    
+        # Only for use on Enclosure page 
+        :EnclosureForm_bf_partOf ,
+           
+        :EnclosureForm_rdf_type ,
         
-        ]
+        # Omit for now: no vocabulary has been identified
+        :EnclosureForm_crm_P2_has_type ,
+     
+        :EnclosureForm_activity_hasActivity ,
+        
+        # Omitting on first iteration of VitroLib
+        # :EnclosureForm_arm_hasMaterial ,
+                  
+        :EnclosureForm_arm_markedBy ,
+        
+        :EnclosureForm_bf_note ;   
+    .
+
+##### RELATED RESOURCE #####
+
+# Only for use on Enclosure page
+:EnclosureForm_bf_partOf
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:bf_partOf ;
+    # NON-VALIDATING
+    sh:name "Related resource" ;
+    sh:description "Resource this enclosure encloses." ;
+    sh:order "5"^^xsd:int ;   
+    .    
+
+
+##### ENCLOSURE TYPE #####
+
+# Not used for Bindings, only other Enclosures
+:EnclosureForm_rdf_type 
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:rdf_type ;
+    sh:in (
+        # Removing here since created separate Binding form shape
+        # arm:Binding
+        arm:DustJacket
+        arm:SlipCase
+        arm:WrapAroundBand
+        arm:Wrapper
+        arm:Enclosure
     ) ;
+    # NON-VALIDATING
+    sh:name "General type of enclosure" ;
+    sh:order "10"^^xsd:int ; 
+    .
+
+  
+# Not used for Bindings, which has its own type vocabulary 
+# Omit for now: no vocabulary has been identified
+:EnclosureForm_crm_P2_has_type # + vocab 
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:crm_P2_has_type ;
+    # NON-VALIDATING
+    sh:name "Enclosure type" ;
+    sh:description "" ;
+    sh:order "20"^^xsd:int ;   
+    .
+
+    
+##### ENCLOSURE ACTIVITY #####
+
+:EnclosureForm_activity_hasActivity
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:activity_hasActivity ;
+    # NON-VALIDATING
+    sh:name "Agent" ;
+    sh:description "Agent related to the Enclosure: binder, designer, creator, etc." ;
+    sh:order "30"^^xsd:int ;
+    tosh:editWidget swa:NestedObjectEditor ;       
+    .
+    
+:EnclosureActivityForm
+    a sh:NodeShape ;
+    sh:node raremat_monograph_activity:ActivityForm  ;
+    sh:property :EnclosureActivityForm_rdf_type ;      
     .
  
-# TODO - add list of types for enclosure (sh:in)
+:EnclosureActivityForm_rdf_type
+    a sh:PropertyShape ; 
+    sh:node arm_core_property_shapes:rdf_type ;
+    sh:in (
+        # TODO Check this list with catalogers
+        # BinderActivity attaches to both Item and Binding, but
+        # we will ignore that for now and attach only to the
+        # Binding.
+        arm:BinderActivity
+        arm:CreatorActivity
+        arm:DesignerActivity
+        arm:EngraverActivity
+        arm:MarblerActivity
+        arm:PapermakerActivity               
+    ) ;       
+    # NON-VALIDATING
+    sh:name "Activity type" ;    
+    sh:order "0"^^xsd:int ;  
+    .  
+
+##### ENCLOSURE MATERIAL #####
+
+# Omit in first iteration of VitroLib
+:EnclosureForm_arm_hasMaterial
+    a sh:PropertyShape ;
+    sh:node raremat_monograph_material:arm_hasMaterial ;
+    # NON-VALIDATING
+    sh:order "40"^^xsd:int ;
+    .
+
+
+##### ENCLOSURE MARKING #####
+
+:EnclosureForm_arm_markedBy
+    a sh:PropertyShape ;
+    sh:node raremat_monograph_marking:arm_markedBy ;
+    # NON-VALIDATING
+    sh:order "60"^^xsd:int ;
+    tosh:editWidget swa:NestedObjectEditor ;
+    .
+    
+##### ENCLOSURE NOTE #####
+
+:EnclosureForm_bf_note
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:bf_note ;
+    # NON-VALIDATING
+    sh:name "Enclosure note" ; 
+    sh:description "Additional textual notes about this enclosure." ;     
+    sh:order "70"^^xsd:int ;   
+    tosh:editWidget swa:NestedObjectEditor ;
+    .
+
+:EnclosureNoteForm
+    a sh:NodeShape ;
+    sh:node raremat_monograph_note:NoteForm ;
+    sh:property :EnclosureNoteForm_rdf_type ;       
+    .
+ 
+:EnclosureNoteForm_rdf_type 
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:rdf_type ;
+    sh:in (
+        arm:DescriptiveNote
+        bf:Note
+    ) ;
+    # NON-VALIDATING
+    sh:name "Note type" ;    
+    sh:order "10"^^xsd:int ;       
+    . 
+
+
+##### BINDING-SPECIFIC SHAPES #####
+
+# Links a resource to a Binding.
+:bf_hasPart_arm_Binding
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:bf_hasPart ;
+    sh:class arm:Binding ;
+    # NON-VALIDATING   
+    sh:name "Binding" ;  
+    tosh:editWidget swa:NestedObjectEditor ;           
+    .
+    
+:InstanceForm_bf_hasPart_arm_Binding
+    a sh:PropertyShape ;
+    sh:node :bf_hasPart_arm_Binding ;
+    sh:group raremat_monograph_property_groups:InstancePhysicalDescriptionPropertyGroup ;   
+    sh:order "9"^^xsd:int ;               
+    .
+    
+:ItemForm_bf_hasPart_arm_Binding
+    a sh:PropertyShape ;
+    sh:node :bf_hasPart_arm_Binding ;
+    sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;   
+    sh:order "1"^^xsd:int ;               
+    .
+           
+:BindingForm
+    a sh:NodeShape ;
+    rdfs:label "Binding" ;
+    sh:targetClass arm:Binding ;
+    sh:property
+    
+         # Only for use on Binding page 
+        :EnclosureForm_bf_partOf ,
+        
+        :BindingForm_crm_P2_has_type ,  
+        
+        :EnclosureForm_activity_hasActivity ,
+
+        # In future, could  create a Binding-specific shape for 
+        # arm:hasMaterial that specifies the RBMS binding vocab materials -
+        # i.e., only materials used for bindings.
+        # Omitting on first iteration of VitroLib
+        # :EnclosureForm_arm_hasMaterial ,
+        
+        :BindingForm_bf_hasPart , 
+        
+        :EnclosureForm_arm_markedBy ,
+        
+        :EnclosureForm_bf_note ;    
+    .
+
+
+##### BINDING TYPE #####
+
+:BindingForm_crm_P2_has_type 
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:crm_P2_has_type ;
+    sh:in (
+        # RBMS Binding vocabulary converted to RDF.
+        # Note that the modeling recommendation suggests the AAT 
+        # bindings by structure hierarchy (http://vocab.getty.edu/aat/300211209),
+        # but since the terms are numerous that would best be handled by a
+        # lookup. So compromise and use the RBMS vocabulary for now. 
+        rbms_binding:rbbin1
+        rbms_binding:rbbin5
+        rbms_binding:rbbin10
+        rbms_binding:rbbin13
+        rbms_binding:rbbin15
+        rbms_binding:rbbin20
+        rbms_binding:rbbin22
+        rbms_binding:rbbin23
+        rbms_binding:rbbin32
+        rbms_binding:rbbin35
+        rbms_binding:rbbin37
+        rbms_binding:rbbin423
+        rbms_binding:rbbin43
+        rbms_binding:rbbin44
+        rbms_binding:rbbin51
+        rbms_binding:rbbin55
+        rbms_binding:rbbin56
+        rbms_binding:rbbin57
+        rbms_binding:rbbin58
+        rbms_binding:rbbin59
+        rbms_binding:rbbin64
+        rbms_binding:rbbin69
+        rbms_binding:rbbin71
+        rbms_binding:rbbin79
+        rbms_binding:rbbin81
+        rbms_binding:rbbin88
+        rbms_binding:rbbin94
+        rbms_binding:rbbin95
+        rbms_binding:rbbin97
+        rbms_binding:rbbin100
+        rbms_binding:rbbin102
+        rbms_binding:rbbin112
+        rbms_binding:rbbin114
+        rbms_binding:rbbin8
+        rbms_binding:rbbin118
+        rbms_binding:rbbin83
+        rbms_binding:rbbin119
+        rbms_binding:rbbin36
+        rbms_binding:rbbin127
+        rbms_binding:rbbin128
+        rbms_binding:rbbin129
+        rbms_binding:rbbin131
+        rbms_binding:rbbin133
+        rbms_binding:rbbin135
+        rbms_binding:rbbin427
+        rbms_binding:rbbin84
+        rbms_binding:rbbin85
+        rbms_binding:rbbin146
+        rbms_binding:rbbin104
+        rbms_binding:rbbin147
+        rbms_binding:rbbin148
+        rbms_binding:rbbin419
+        rbms_binding:rbbin120
+        rbms_binding:rbbin151
+        rbms_binding:rbbin49
+        rbms_binding:rbbin155
+        rbms_binding:rbbin130
+        rbms_binding:rbbin156
+        rbms_binding:rbbin160
+        rbms_binding:rbbin161
+        rbms_binding:rbbin162
+        rbms_binding:rbbin165
+        rbms_binding:rbbin170
+        rbms_binding:rbbin108
+        rbms_binding:rbbin106
+        rbms_binding:rbbin190
+        rbms_binding:rbbin191
+        rbms_binding:rbbin192
+        rbms_binding:rbbin398
+        rbms_binding:rbbin46
+        rbms_binding:rbbin152
+        rbms_binding:rbbin193
+        rbms_binding:rbbin24
+        rbms_binding:rbbin93
+        rbms_binding:rbbin202
+        rbms_binding:rbbin203
+        rbms_binding:rbbin52
+        rbms_binding:rbbin171
+        rbms_binding:rbbin208
+        rbms_binding:rbbin209
+        rbms_binding:rbbin179
+        rbms_binding:rbbin141
+        rbms_binding:rbbin213
+        rbms_binding:rbbin139
+        rbms_binding:rbbin25
+        rbms_binding:rbbin218
+        rbms_binding:rbbin66
+        rbms_binding:rbbin221
+        rbms_binding:rbbin47
+        rbms_binding:rbbin223
+        rbms_binding:rbbin225
+        rbms_binding:rbbin82
+        rbms_binding:rbbin226
+        rbms_binding:rbbin227
+        rbms_binding:rbbin136
+        rbms_binding:rbbin180
+        rbms_binding:rbbin67
+        rbms_binding:rbbin194
+        rbms_binding:rbbin17
+        rbms_binding:rbbin96
+        rbms_binding:rbbin173
+        rbms_binding:rbbin248
+        rbms_binding:rbbin253
+        rbms_binding:rbbin256
+        rbms_binding:rbbin258
+        rbms_binding:rbbin80
+        rbms_binding:rbbin260
+        rbms_binding:rbbin74
+        rbms_binding:rbbin230
+        rbms_binding:rbbin174
+        rbms_binding:rbbin262
+        rbms_binding:rbbin263
+        rbms_binding:rbbin264
+        rbms_binding:rbbin266
+        rbms_binding:rbbin268
+        rbms_binding:rbbin42
+        rbms_binding:rbbin26
+        rbms_binding:rbbin274
+        rbms_binding:rbbin89
+        rbms_binding:rbbin276
+        rbms_binding:rbbin277
+        rbms_binding:rbbin279
+        rbms_binding:rbbin281
+        rbms_binding:rbbin283
+        rbms_binding:rbbin284
+        rbms_binding:rbbin286
+        rbms_binding:rbbin287
+        rbms_binding:rbbin288
+        rbms_binding:rbbin246
+        rbms_binding:rbbin290
+        rbms_binding:rbbin291
+        rbms_binding:rbbin142
+        rbms_binding:rbbin294
+        rbms_binding:rbbin296
+        rbms_binding:rbbin298
+        rbms_binding:rbbin299
+        rbms_binding:rbbin18
+        rbms_binding:rbbin195
+        rbms_binding:rbbin310
+        rbms_binding:rbbin311
+        rbms_binding:rbbin293
+        rbms_binding:rbbin315
+        rbms_binding:rbbin316
+        rbms_binding:rbbin86
+        rbms_binding:rbbin409
+        rbms_binding:rbbin320
+        rbms_binding:rbbin322
+        rbms_binding:rbbin324
+        rbms_binding:rbbin181
+        rbms_binding:rbbin406
+        rbms_binding:rbbin326
+        rbms_binding:rbbin327
+        rbms_binding:rbbin16
+        rbms_binding:rbbin426
+        rbms_binding:rbbin418
+        rbms_binding:rbbin111
+        rbms_binding:rbbin101
+        rbms_binding:rbbin339
+        rbms_binding:rbbin196
+        rbms_binding:rbbin164
+        rbms_binding:rbbin39
+        rbms_binding:rbbin259
+        rbms_binding:rbbin307
+        rbms_binding:rbbin342
+        rbms_binding:rbbin343
+        rbms_binding:rbbin285
+        rbms_binding:rbbin143
+        rbms_binding:rbbin9
+        rbms_binding:rbbin280
+        rbms_binding:rbbin271
+        rbms_binding:rbbin121
+        rbms_binding:rbbin302
+        rbms_binding:rbbin345
+        rbms_binding:rbbin295
+        rbms_binding:rbbin175
+        rbms_binding:rbbin346
+        rbms_binding:rbbin182
+        rbms_binding:rbbin231
+        rbms_binding:rbbin413
+        rbms_binding:rbbin219
+        rbms_binding:rbbin159
+        rbms_binding:rbbin417
+        rbms_binding:rbbin328
+        rbms_binding:rbbin176
+        rbms_binding:rbbin183
+        rbms_binding:rbbin90
+        rbms_binding:rbbin353
+        rbms_binding:rbbin344
+        rbms_binding:rbbin355
+        rbms_binding:rbbin329
+        rbms_binding:rbbin303
+        rbms_binding:rbbin358
+        rbms_binding:rbbin99
+        rbms_binding:rbbin359
+        rbms_binding:rbbin75
+        rbms_binding:rbbin240
+        rbms_binding:rbbin361
+        rbms_binding:rbbin122
+        rbms_binding:rbbin330
+        rbms_binding:rbbin349
+        rbms_binding:rbbin184
+        rbms_binding:rbbin364
+        rbms_binding:rbbin357
+        rbms_binding:rbbin123
+        rbms_binding:rbbin34
+        rbms_binding:rbbin134
+        rbms_binding:rbbin124
+        rbms_binding:rbbin145
+        rbms_binding:rbbin348
+        rbms_binding:rbbin366
+        rbms_binding:rbbin269
+        rbms_binding:rbbin48
+        rbms_binding:rbbin153
+        rbms_binding:rbbin367
+        rbms_binding:rbbin369
+        rbms_binding:rbbin154
+        rbms_binding:rbbin210
+        rbms_binding:rbbin374
+        rbms_binding:rbbin376
+        rbms_binding:rbbin31
+        rbms_binding:rbbin377
+        rbms_binding:rbbin211
+        rbms_binding:rbbin436
+        rbms_binding:rbbin378
+        rbms_binding:rbbin40
+        rbms_binding:rbbin372
+        rbms_binding:rbbin304
+        rbms_binding:rbbin381
+        rbms_binding:rbbin382
+        rbms_binding:rbbin224
+        rbms_binding:rbbin305
+        rbms_binding:rbbin385
+        rbms_binding:rbbin365
+        rbms_binding:rbbin11
+        rbms_binding:rbbin306
+        rbms_binding:rbbin297
+        rbms_binding:rbbin60
+        rbms_binding:rbbin197
+        rbms_binding:rbbin387
+        rbms_binding:rbbin255
+        rbms_binding:rbbin126
+        rbms_binding:rbbin138
+        rbms_binding:rbbin338
+        rbms_binding:rbbin242
+        rbms_binding:rbbin76
+        rbms_binding:rbbin411
+        rbms_binding:rbbin237
+        rbms_binding:rbbin272
+        rbms_binding:rbbin354
+        rbms_binding:rbbin275
+        rbms_binding:rbbin420
+        rbms_binding:rbbin388
+        rbms_binding:rbbin389
+        rbms_binding:rbbin185
+        rbms_binding:rbbin53
+        rbms_binding:rbbin386
+        rbms_binding:rbbin323
+        rbms_binding:rbbin177
+        rbms_binding:rbbin390
+        rbms_binding:rbbin73
+        rbms_binding:rbbin186
+        rbms_binding:rbbin187
+        rbms_binding:rbbin273
+        rbms_binding:rbbin14
+        rbms_binding:rbbin368
+        rbms_binding:rbbin308
+        rbms_binding:rbbin45
+        rbms_binding:rbbin407
+        rbms_binding:rbbin392
+        rbms_binding:rbbin50
+        rbms_binding:rbbin4
+        rbms_binding:rbbin21
+        rbms_binding:rbbin270
+        rbms_binding:rbbin431
+        rbms_binding:rbbin87
+        rbms_binding:rbbin278
+        rbms_binding:rbbin204
+        rbms_binding:rbbin198
+        rbms_binding:rbbin205
+        rbms_binding:rbbin331
+        rbms_binding:rbbin169
+        rbms_binding:rbbin215
+        rbms_binding:rbbin319
+        rbms_binding:rbbin397
+        rbms_binding:rbbin235
+        rbms_binding:rbbin27
+        rbms_binding:rbbin12
+        rbms_binding:rbbin7
+        rbms_binding:rbbin229
+        rbms_binding:rbbin394
+        rbms_binding:rbbin410
+        rbms_binding:rbbin399
+        rbms_binding:rbbin289
+        rbms_binding:rbbin206
+        rbms_binding:rbbin250
+        rbms_binding:rbbin347
+        rbms_binding:rbbin19
+        rbms_binding:rbbin199
+        rbms_binding:rbbin28
+        rbms_binding:rbbin29
+        rbms_binding:rbbin393
+        rbms_binding:rbbin395
+        rbms_binding:rbbin402
+        rbms_binding:rbbin144
+        rbms_binding:rbbin405
+        rbms_binding:rbbin391
+        rbms_binding:rbbin321
+        rbms_binding:rbbin78
+        rbms_binding:rbbin332
+        rbms_binding:rbbin91
+        rbms_binding:rbbin113
+        rbms_binding:rbbin150
+        rbms_binding:rbbin137
+        rbms_binding:rbbin251     
+    ) ;
+    # NON-VALIDATING
+    sh:name "Binding type" ;
+    sh:description "Specific type of binding, such as adhesive binding, spiral binding, etc." ;
+    sh:order "20"^^xsd:int ;   
+    .    
+
+    
+##### BINDING COMPONENT #####
+
+:BindingForm_bf_hasPart 
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:bf_hasPart ;
+    sh:in (
+        # Getty AAT binding components: http://vocab.getty.edu/page/aat/300194225
+        aat:300261522
+        aat:300253047
+        aat:300261776
+        aat:300312358
+        aat:300202819
+        aat:300263630
+        aat:300253051
+        aat:300253057
+        aat:300263628
+        aat:300195163
+        aat:300263627
+        aat:300195149
+        aat:300209357
+        aat:300083023
+        aat:300263593
+        aat:300263626
+        aat:300195150
+        aat:300263618
+        aat:300248893
+        aat:300195163
+        aat:300261765
+        aat:300263629
+        aat:300261769
+        aat:300410465
+        aat:300263625
+        aat:300252986
+        aat:300261564
+        aat:300208775
+        aat:300263631
+        aat:300253125
+        aat:300253099
+        aat:300253096
+        aat:300261780
+        aat:300263632
+        aat:300253949       
+    ) ;
+    # NON-VALIDATING
+    sh:name "Binding component" ;
+    sh:description "Part of the binding, such as binding board, headband, bead, finishing hardware, etc." ;
+    sh:order "50"^^xsd:int ;   
+    . 

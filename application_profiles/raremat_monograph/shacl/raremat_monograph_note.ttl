@@ -1,0 +1,73 @@
+@prefix activity: <https://w3id.org/arm/core/activity/0.1/> .
+@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_note/> .
+@prefix arm_core_property_shapes: <https://w3id.org/arm/validation/shacl/arm_core_property_shapes/> .
+
+#
+# TODO This is very similar to raremat_monograph_form:NoteForm and its
+# properties, with some differences. Resolve differences and combine. 
+#
+# Also likely extensible to other application profiles.
+#
+
+:NoteForm
+    a sh:NodeShape ;
+    rdfs:label "Note form" ;
+    sh:targetClass bf:Note ;
+    sh:property 
+
+        # Type options depend on context (i.e., the specific form). In some
+        # forms there are no type options, in which case the PropertyShape
+        # is not included on the form, and the type is specified by the
+        # form sh:targetClass. 
+        # :NoteForm_rdf_type ,
+        
+        :NoteForm_rdf_value ;
+    .  
+
+# Use this PropertyShape to include ALL note types. In contexts where only
+# some types are applicable, use a shape defining a subset of note types.
+:NoteForm_rdf_type_all
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:rdf_type ;
+    # Can we just specify sh:class and have the application present all
+    # Note types?
+    sh:class bf:Note ;
+    sh:in (
+        arm:CaptionNote
+        arm:ContentsNote
+        arm:DescriptiveNote
+        arm:InaccuracyNote
+        arm:LimitationNote
+        arm:RelatedMaterialNote
+        arm:SubjectNote
+        arm:SummaryNote
+        arm:SupplementaryContentNote   
+        bf:Note
+    );
+    # NON-VALIDATING
+    sh:name "Note type" ;   
+    sh:order "10"^^xsd:int ;
+    .
+
+:NoteForm_rdf_value 
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:rdf_value ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    # NON-VALIDATING
+    sh:name "Note text" ;
+    sh:description "String value for the note." ;
+    sh:order "20"^^xsd:int ;
+    . 

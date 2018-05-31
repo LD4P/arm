@@ -1,0 +1,5562 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- ALPHABETICAL --><!DOCTYPE THESAURUS [
+<!ELEMENT THESAURUS (CONCEPT+)>
+<!ELEMENT CONCEPT ( (DESCRIPTOR|NON-DESCRIPTOR),SC*,CM*,HN*,SN*,UF*,USE*,BT*,NT*,RT*,STA*,TYP*,INP*,APP*,UPD*,NVD*,TNR*,FLG*)>
+<!ELEMENT DESCRIPTOR (#PCDATA)>
+<!ELEMENT NON-DESCRIPTOR (#PCDATA)>
+<!ELEMENT SC (#PCDATA)>
+<!ELEMENT CM (#PCDATA)>
+<!ELEMENT HN (#PCDATA)>
+<!ELEMENT SN (#PCDATA)>
+<!ELEMENT UF (#PCDATA)>
+<!ELEMENT USE (#PCDATA)>
+<!ELEMENT BT (#PCDATA)>
+<!ELEMENT NT (#PCDATA)>
+<!ELEMENT RT (#PCDATA)>
+<!ELEMENT STA (#PCDATA)>
+<!ELEMENT TYP (#PCDATA)>
+<!ELEMENT INP (#PCDATA)>
+<!ELEMENT APP (#PCDATA)>
+<!ELEMENT UPD (#PCDATA)>
+<!ELEMENT NVD (#PCDATA)>
+<!ELEMENT TNR (#PCDATA)>
+<!ELEMENT FLG (#PCDATA)>
+]>
+
+<THESAURUS>
+<CONCEPT>
+ <DESCRIPTOR>Accordion fold format</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Double leaf format</UF>
+ <UF>Orihon format</UF>
+ <BT>Text block (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>1</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Adhesive bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Perfect bindings</UF>
+ <BT>Types of binding structure (Gathering term; do not assign)</BT>
+ <NT>Caoutchouc bindings</NT>
+ <RT>Non-adhesive bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>5</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>All along sewing</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Sewing patterns</BT>
+ <RT>Two-on sewing</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>10</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>All-over style bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>13</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Alum tawed bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <RT>Fur bindings</RT>
+ <RT>Leather bindings</RT>
+ <RT>Vellum bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>15</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Alum tawed thongs</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Thongs</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>20</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Aluminum bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>22</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Ancillary structures (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Doublures</NT>
+ <NT>Endpapers</NT>
+ <NT>Headbands</NT>
+ <NT>Turn-ins</NT>
+ <NT>Vellum endleaves</NT>
+ <NT>Vellum pastedowns</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>23</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Antique bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Retrospective bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>30</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Apollo and Pegasus bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Canevari bindings</UF>
+ <BT>Proprietary bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>32</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Architectural bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <RT>Cathedral bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>35</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Armorial bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Bindings with a coat of arms, or any part of a coat of arms, e.g., a crest.</SN>
+ <UF>Heraldic bindings</UF>
+ <BT>Proprietary bindings</BT>
+ <RT>Monogrammed bindings</RT>
+ <RT>Royal bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>37</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Art Deco bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC><!-- unknown line type [@@@] -->
+
+ <SN>Use for bindings produced during the 1920s and 1930s, in Art Deco style, often characterized by sleek, geometric, or stylized forms.</SN>
+ <UF>Bindings, Art Deco</UF>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2009-10-12</INP>
+ <APP>2009-01-24</APP>
+ <UPD>2009-10-16</UPD>
+ <TNR>423</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Azured tools</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Hatched tools</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>41</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Backless bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Types of binding structure (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>43</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Bands</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Supports (Gathering term; do not assign)</BT>
+ <NT>Disguised bands</NT>
+ <NT>Double bands</NT>
+ <NT>False bands</NT>
+ <NT>Raised bands</NT>
+ <RT>Cords</RT>
+ <RT>Tapes</RT>
+ <RT>Thongs</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>44</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Bevelled edge boards</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Chamfered edge boards</UF>
+ <BT>Edges of binding boards</BT>
+ <RT>Square edge boards</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>51</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Bills, binders&apos;</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Binders&apos; bills</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>54</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Binders&apos; bills</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Bills, binders&apos;</UF>
+ <BT>Binders&apos; evidence (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>55</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Binders&apos; evidence (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Binders&apos; bills</NT>
+ <NT>Binders&apos; instructions</NT>
+ <NT>Binders&apos; receipts</NT>
+ <NT>Binders&apos; tickets</NT>
+ <NT>Signed bindings</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2007-08-03</UPD>
+ <TNR>56</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Binders&apos; instructions</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Instructions, binders&apos;</UF>
+ <BT>Binders&apos; evidence (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>57</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Binders&apos; receipts</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Receipts, binders&apos;</UF>
+ <BT>Binders&apos; evidence (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>58</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Binders&apos; tickets</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Tickets, binders&apos;</UF>
+ <BT>Binders&apos; evidence (Gathering term; do not assign)</BT>
+ <RT>Signed bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>59</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Binding errors</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>For any kind of errors in binding, except folding errors.</SN>
+ <UF>Errors in binding</UF>
+ <BT>Errors (Gathering term; do not assign)</BT>
+ <RT>Folding errors</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>64</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Binding labels</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Changed 6/2016. Formerly, &quot;Binding labels&quot; may have been indexed as &quot;Labels.&quot;</HN>
+ <UF>Spine labels</UF>
+ <BT>Titling</BT>
+ <NT>Cloth binding labels</NT>
+ <NT>Lettering pieces</NT>
+ <NT>Paper binding labels</NT>
+ <RT>Edge titles</RT>
+ <RT>Tooled lettering</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2016-06-29</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>69</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Bindings, Art Deco</NON-DESCRIPTOR>
+ <USE>Art Deco bindings</USE>
+ <STA>Approved</STA>
+ <INP>2009-10-12</INP>
+ <APP>2009-10-12</APP>
+ <UPD>2009-10-12</UPD>
+ <TNR>424</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Blind rolled bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Blind tooled bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>70</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Blind stamped bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Blind tooled bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>72</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Blind tooled bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Blind rolled bindings</UF>
+ <UF>Blind stamped bindings</UF>
+ <BT>Stamped or tooled bindings</BT>
+ <RT>Gold tooled bindings</RT>
+ <RT>Platinum tooled bindings</RT>
+ <RT>Silver tooled bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>71</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Block printed papers</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Woodblock printed papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>77</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Blocked bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Scope note added 6/2007; disambiguated from &quot;panel-stamped bindings&quot; based on literary warrant.</HN>
+ <SN>Use for cloth or leather bindings, originally appearing in the 1820s, with blind, gilt, or color designs made from the impression of relief blocks.</SN>
+ <UF>Plaque-impressed bindings</UF>
+ <BT>Stamped or tooled bindings</BT>
+ <NT>Gold blocked bindings</NT>
+ <RT>Panel-stamped bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2007-08-03</UPD>
+ <TNR>79</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Board fastenings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <BT>Fastenings, Attachments, or Titling (Gathering term; do not assign)</BT>
+ <NT>Catches</NT>
+ <NT>Clasp plates</NT>
+ <NT>Clasps</NT>
+ <NT>Loop-and-ball fastenings</NT>
+ <NT>Ties</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>81</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Boards</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Types of binding structure (Gathering term; do not assign)</BT>
+ <NT>Edges of binding boards</NT>
+ <NT>Hemp boards</NT>
+ <NT>Pasteboard</NT>
+ <NT>Wooden boards</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>88</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Book jackets</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Dust jackets</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>92</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Bookbinding (Assign only with subdivisions)</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Use only with subdivisions, to identify noteworthy binding types, styles, and techniques which cannot be otherwise classified using terms on this list.</SN>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>94</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Bosses</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Furniture</BT>
+ <NT>Brass bosses</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>95</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Boxes, clamshell</NON-DESCRIPTOR>
+ <USE>Clamshell boxes</USE>
+ <STA>Approved</STA>
+ <INP>2014-05-16</INP>
+ <APP>2014-05-16</APP>
+ <UPD>2014-05-16</UPD>
+ <TNR>428</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Braided headbands</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Plaited headbands</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>98</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Brass bosses</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Bosses</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>97</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Brass clasps</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Metal clasps</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>100</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Brocade bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Silk brocade bindings</UF>
+ <BT>Cloth bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>102</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Buckskin bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Deerskin bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>105</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Buntpapier</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Decorated paper bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>107</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Bust rolls</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Medallion tools</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>109</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Bust stamps</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Medallion tools</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>110</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Buttonhole stitched headbands</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Worked headbands</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>112</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Calf bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Leather bindings</BT>
+ <NT>Marbled calf bindings</NT>
+ <NT>Mottled calf bindings</NT>
+ <NT>Sprinkled calf bindings</NT>
+ <NT>Stained calf bindings</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2007-08-03</UPD>
+ <TNR>114</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Cameo rolls</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Medallion tools</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>115</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Cameo stamps</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Medallion tools</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>116</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Canevari bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Apollo and Pegasus bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>33</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Caoutchouc bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Gutta percha bindings</UF>
+ <BT>Adhesive bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>8</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Case bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Types of binding structure (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>118</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Catches</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Pins</UF>
+ <BT>Board fastenings</BT>
+ <NT>Silver catches</NT>
+ <RT>Clasp plates</RT>
+ <RT>Clasps</RT>
+ <RT>Loop-and-ball fastenings</RT>
+ <RT>Ties</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>83</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Categories of bindings/Occasions for binding (Gathering term;do not assign)</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Contemporary bindings</NT>
+ <NT>Original covers</NT>
+ <NT>Presentation bindings</NT>
+ <NT>Prize bindings</NT>
+ <NT>Proprietary bindings</NT>
+ <NT>Publishers&apos; bindings</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>119</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cathedral bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <RT>Architectural bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>36</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Centerpiece and cornerpiece bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <RT>Centerpieces (Designs)</RT>
+ <RT>Cornerpieces (Designs)</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>127</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Centerpieces (Designs)</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <RT>Centerpiece and cornerpiece bindings</RT>
+ <RT>Cornerpieces (Designs)</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>128</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Centerpieces (Furniture)</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Furniture</BT>
+ <RT>Cornerpieces (Furniture)</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>129</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Chained bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Fastenings, Attachments, or Titling (Gathering term; do not assign)</BT>
+ <RT>Furniture</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>131</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Chamfered edge boards</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Bevelled edge boards</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>132</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Chemises</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Protective housing (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>133</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Circuit edges</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Types of binding structure (Gathering term; do not assign)</BT>
+ <RT>Flap bindings</RT>
+ <RT>Yapp style bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>135</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Clamshell boxes</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Use for box structures that include two three-sided trays (one made to fit inside the other when closed) attached to a case.</SN>
+ <UF>Boxes, clamshell</UF>
+ <UF>Double tray boxes</UF>
+ <UF>Drop spine boxes</UF>
+ <BT>Protective housing (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2014-05-16</INP>
+ <APP>2014-05-16</APP>
+ <UPD>2014-05-16</UPD>
+ <TNR>427</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Clasp plates</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Board fastenings</BT>
+ <NT>Silver clasp plates</NT>
+ <RT>Catches</RT>
+ <RT>Clasps</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>84</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Clasps</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Board fastenings</BT>
+ <NT>Enamel clasps</NT>
+ <NT>Metal clasps</NT>
+ <RT>Catches</RT>
+ <RT>Clasp plates</RT>
+ <RT>Loop-and-ball fastenings</RT>
+ <RT>Ties</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>85</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cloth binding labels</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Changed 6/2016. Formerly, &quot;Cloth binding labels&quot; may have been indexed as &quot;Cloth labels.&quot;</HN>
+ <BT>Binding labels</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2016-06-29</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>146</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cloth bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Not for publishers’ cloth; primarily for 16th-17th century bindings covered in cloth.</SN>
+ <UF>Textile bindings</UF>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <NT>Brocade bindings</NT>
+ <NT>Embroidered bindings</NT>
+ <NT>Lace bindings (Materials)</NT>
+ <NT>Needlepoint bindings</NT>
+ <NT>Velvet bindings</NT>
+ <RT>Publishers&apos; cloth bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>104</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cloth tapes</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Tapes</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>147</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cloth wrappers</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Printed cloth wrappers</UF>
+ <BT>Wrappers</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>148</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Coil bindings</NON-DESCRIPTOR>
+ <USE>Spiral bindings</USE>
+ <STA>Approved</STA>
+ <INP>2008-07-11</INP>
+ <APP>2008-07-11</APP>
+ <UPD>2008-07-11</UPD>
+ <TNR>421</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Comb bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Approved 6/2008</HN>
+ <SN>Use for bindings in which the curved prongs of a strip of metal, plastic, etc., pass through a series of holes in a margin of the text block.</SN>
+ <BT>Mechanical bindings</BT>
+ <STA>Approved</STA>
+ <INP>2008-07-11</INP>
+ <APP>2008-07-11</APP>
+ <UPD>2008-07-11</UPD>
+ <TNR>419</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Contemporary bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Categories of bindings/Occasions for binding (Gathering term;do not assign)</BT>
+ <RT>Original covers</RT>
+ <RT>Publishers&apos; bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>120</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Coptic bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>151</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cords</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Supports (Gathering term; do not assign)</BT>
+ <NT>Double cords</NT>
+ <NT>Raised cords</NT>
+ <NT>Recessed cords</NT>
+ <RT>Bands</RT>
+ <RT>Tapes</RT>
+ <RT>Thongs</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>49</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cornerpieces (Designs)</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <RT>Centerpiece and cornerpiece bindings</RT>
+ <RT>Centerpieces (Designs)</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>155</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cornerpieces (Furniture)</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Furniture</BT>
+ <RT>Centerpieces (Furniture)</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>130</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Corrugated board bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Rem added 7/00.</HN>
+ <SN>Use for bindings made of corrugated board.</SN>
+ <UF>Corrugated cardboard bindings</UF>
+ <UF>Corrugated paper bindings</UF>
+ <BT>Paper bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>156</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Corrugated cardboard bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Corrugated board bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>157</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Corrugated paper bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Corrugated board bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>158</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cosway bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>160</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cottage style bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>161</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cottonian Library book covers</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Robert Southey’s cloth book covers.</SN>
+ <BT>Proprietary bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>162</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Cuir bouilli bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Molded leather bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>163</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cuir-ciselé bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <CM>&quot;Cuir-ciselé or cut leather is a self-explanatory decorative technique: the leather is given patterns inscribed by a knife or other sharp tool.&quot;--Needham</CM>
+ <UF>Cut leather bindings</UF>
+ <UF>Lederschnitt bindings</UF>
+ <BT>Leather bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>165</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Cut-in indexes</NON-DESCRIPTOR>
+ <USE>Thumb indexes</USE>
+ <STA>Approved</STA>
+ <INP>2015-04-21</INP>
+ <APP>2015-04-21</APP>
+ <UPD>2015-04-21</UPD>
+ <TNR>432</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Cut leather bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Cuir-ciselé bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>166</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Cutout leatherwork</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Tracery</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>168</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Decorated edges</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Edge decoration</UF>
+ <BT>Edges of text block</BT>
+ <NT>Gauffered edges</NT>
+ <NT>Gilt edges</NT>
+ <NT>Graphite edges</NT>
+ <NT>Painted edges</NT>
+ <NT>Paste edges</NT>
+ <NT>Stained edges</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>170</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Decorated paper bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Changed 6/2016. Formerly, &quot;Decorated paper bindings&quot; may have been indexed as &quot;Decorated papers.&quot;</HN>
+ <SN>Use for the occurrence of such papers as any part of bindings, cases, endpapers, or doublures.</SN>
+ <UF>Buntpapier</UF>
+ <UF>Patterned papers</UF>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <NT>Embossed paper bindings</NT>
+ <NT>Flock paper bindings</NT>
+ <NT>Marbled paper bindings</NT>
+ <NT>Painted paper bindings</NT>
+ <NT>Paste paper bindings</NT>
+ <NT>Printed paper bindings</NT>
+ <NT>Sprinkled paper bindings</NT>
+ <NT>Stamped paper bindings</NT>
+ <NT>Stencilled paper bindings</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2016-06-29</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>108</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Deerskin bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Term added 2/97.</HN>
+ <UF>Buckskin bindings</UF>
+ <UF>Doeskin bindings</UF>
+ <BT>Leather bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>106</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Dentelle bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Lace bindings (Designs)</UF>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>190</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Diced leather bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Leather bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>191</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Disguised bands</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Bands</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>192</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Doeskin bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Deerskin bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>189</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Dos-à-dos bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Types of binding structure (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>398</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Double bands</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Bands</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>46</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Double cords</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Cords</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>152</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Double fore-edge paintings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Fore-edge paintings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>193</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Double leaf format</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Accordion fold format</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>2</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Double tray boxes</NON-DESCRIPTOR>
+ <USE>Clamshell boxes</USE>
+ <STA>Approved</STA>
+ <INP>2014-05-16</INP>
+ <APP>2014-05-16</APP>
+ <UPD>2014-05-16</UPD>
+ <TNR>429</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Doublures</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Ancillary structures (Gathering term; do not assign)</BT>
+ <NT>Leather doublures</NT>
+ <NT>Moiré doublures</NT>
+ <NT>Silk doublures</NT>
+ <NT>Tooled doublures</NT>
+ <NT>Vellum doublures</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>24</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Drop spine boxes</NON-DESCRIPTOR>
+ <USE>Clamshell boxes</USE>
+ <STA>Approved</STA>
+ <INP>2014-05-16</INP>
+ <APP>2014-05-16</APP>
+ <UPD>2014-05-16</UPD>
+ <TNR>430</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Dust jackets</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>A detachable flexible cover (usually paper) for a book.  Cf. Wrappers.</SN>
+ <UF>Book jackets</UF>
+ <UF>Dust wrappers</UF>
+ <BT>Protective housing (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>93</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Dust wrappers</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Dust jackets</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>200</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Dutch flowered papers</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Dutch gilt papers</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>201</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Dutch gilt papers</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Dutch flowered papers</UF>
+ <BT>Embossed paper bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>202</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Edge decoration</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Decorated edges</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>172</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Edge titles</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>The identification of the author, title, etc. of a book written on the edge of its block.</SN>
+ <UF>Fore-edge titles</UF>
+ <BT>Titling</BT>
+ <RT>Binding labels</RT>
+ <RT>Tooled lettering</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>203</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Edges of binding boards</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <BT>Boards</BT>
+ <NT>Bevelled edge boards</NT>
+ <NT>Square edge boards</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>52</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Edges of text block</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <BT>Text block (Gathering term; do not assign)</BT>
+ <NT>Decorated edges</NT>
+ <NT>Thumb indexes</NT>
+ <NT>Untrimmed edges</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2015-04-21</UPD>
+ <TNR>171</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Edges, untrimmed</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Untrimmed edges</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>207</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Embossed bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <NT>Embossed cloth bindings</NT>
+ <NT>Relievo bindings</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>208</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Embossed cloth bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Embossed bindings</BT>
+ <BT>Publishers&apos; cloth bindings</BT>
+ <NT>Ribbon-embossed cloth bindings</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>209</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Embossed paper bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Changed 6/2016. Formerly, &quot;Embossed paper bindings&quot; may have been indexed as &quot;Embossed papers.&quot;</HN>
+ <BT>Decorated paper bindings</BT>
+ <NT>Dutch gilt papers</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2016-06-29</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>179</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Embroidered bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Needlework bindings</UF>
+ <BT>Cloth bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>141</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Enamel bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Limoges work bindings</UF>
+ <BT>Treasure bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>213</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Enamel clasps</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Clasps</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>139</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Endbands</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Headbands</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>216</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Endpapers</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Lining papers</UF>
+ <BT>Ancillary structures (Gathering term; do not assign)</BT>
+ <RT>Vellum endleaves</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>25</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Engraved paper binding labels</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Changed 6/2016. Formerly, &quot;Engraved paper binding labels&quot; may have been indexed as &quot;Engraved paper labels.&quot;</HN>
+ <BT>Paper binding labels</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2016-06-29</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>218</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Envelope flaps</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Flap bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>232</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Errors (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Binding errors</NT>
+ <NT>Folding errors</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>66</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Errors in binding</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Binding errors</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>65</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Errors in folding</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Folding errors</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>220</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Etruscan bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>An English binding style used from the 1770s through the first few decades of the nineteenth century.  Characterized by an outer border of palmettes created by acid staining, and a central panel which is usually tree calf.</SN>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>221</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Fabric ties</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Ties</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>222</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>False bands</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Bands</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>47</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Fan style bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <NT>Scottish wheel design bindings</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>223</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Fanfare bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>225</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Fastenings, Attachments, or Titling (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Board fastenings</NT>
+ <NT>Chained bindings</NT>
+ <NT>Furniture</NT>
+ <NT>Ribbon markers</NT>
+ <NT>Titling</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2015-04-21</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>82</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Filigree</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Decorative work using fine wires, usually gold or silver.  Use for filigree occurring anywhere on bindings or casings.</SN>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>226</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Fillet tools</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Roulette tools</UF>
+ <BT>Types of tools</BT>
+ <RT>Gouge tools</RT>
+ <RT>Pallet tools</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>227</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Finding ribbon</NON-DESCRIPTOR>
+ <USE>Ribbon markers</USE>
+ <STA>Approved</STA>
+ <INP>2015-04-21</INP>
+ <APP>2015-04-21</APP>
+ <UPD>2015-04-21</UPD>
+ <TNR>437</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Flap bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Use for bindings which include or employ flaps.</SN>
+ <UF>Envelope flaps</UF>
+ <UF>Flaps</UF>
+ <UF>Wallet edges</UF>
+ <BT>Types of binding structure (Gathering term; do not assign)</BT>
+ <RT>Circuit edges</RT>
+ <RT>Tucks</RT>
+ <RT>Yapp style bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>136</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Flaps</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Flap bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>233</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Flat spines</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Smooth spines</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>236</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Flock paper bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Changed 6/2016. Formerly, &quot;Flock paper bindings&quot; may have been indexed as &quot;Flocked papers.&quot;</HN>
+ <BT>Decorated paper bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2016-06-29</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>180</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Folding errors</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>For errors in folding one or more sheets of text.</SN>
+ <UF>Errors in folding</UF>
+ <BT>Errors (Gathering term; do not assign)</BT>
+ <RT>Binding errors</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>67</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Fore-edge paintings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Painted edges</BT>
+ <NT>Double fore-edge paintings</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>194</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Fore-edge titles</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Edge titles</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>238</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>French pointillé tooling</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Pointillé tooling</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>239</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Fur bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <RT>Alum tawed bindings</RT>
+ <RT>Leather bindings</RT>
+ <RT>Vellum bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>17</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Furniture</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Metal attachments to one or both covers.  Their function is to protect the binding.</SN>
+ <UF>Metal furniture</UF>
+ <BT>Fastenings, Attachments, or Titling (Gathering term; do not assign)</BT>
+ <NT>Bosses</NT>
+ <NT>Centerpieces (Furniture)</NT>
+ <NT>Cornerpieces (Furniture)</NT>
+ <NT>Silver furniture</NT>
+ <RT>Chained bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>96</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Gauffered edges</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Goffered edges</UF>
+ <UF>Tooled edges</UF>
+ <BT>Decorated edges</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>173</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Gem bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Jewelled bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>245</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Geometric rolls</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Geometric tools</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>247</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Geometric stamps</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Geometric tools</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>249</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Geometric tools</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Geometric rolls</UF>
+ <UF>Geometric stamps</UF>
+ <BT>Types of tools</BT>
+ <RT>Vegetal tools</RT>
+ <RT>Zoomorphic tools</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>248</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Gilt blocked bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Gold blocked bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>252</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Gilt edges</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Decorated edges</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>253</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Gilt silver bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Silver bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>254</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Girdle books</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Types of binding structure (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>256</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Glued-on headbands</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Stuck-on headbands</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>257</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Goatskin bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Leather bindings</BT>
+ <NT>Morocco bindings</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>258</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Goffered edges</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Gauffered edges</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>243</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Gold blocked bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Bindings with a design impressed by a block through gold.</SN>
+ <UF>Gilt blocked bindings</UF>
+ <BT>Blocked bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>80</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Gold powdered bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>260</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Gold stamped bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Gold tooled bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>261</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Gold tooled bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <CM>&quot;Gold tooling--the bonding of gold leaf to leather by means of heated stamps.&quot;--Needham</CM>
+ <UF>Gold stamped bindings</UF>
+ <BT>Stamped or tooled bindings</BT>
+ <RT>Blind tooled bindings</RT>
+ <RT>Platinum tooled bindings</RT>
+ <RT>Silver tooled bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>74</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Gouge indexes</NON-DESCRIPTOR>
+ <USE>Thumb indexes</USE>
+ <STA>Approved</STA>
+ <INP>2015-04-21</INP>
+ <APP>2015-04-21</APP>
+ <UPD>2015-04-21</UPD>
+ <TNR>433</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Gouge tools</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Types of tools</BT>
+ <RT>Fillet tools</RT>
+ <RT>Pallet tools</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>230</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Graphite edges</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Decorated edges</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>174</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Greek style bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <CM>&quot;Points of this fashion include the use of wooden boards, with grooved edges; smooth backs, with no bands showing through; raised headcaps at top and bottom of the back, containing a double row of sewn headbands; edges of the leaves cut flush with the boards; clasps made of braided leather, catching on pins protruding from the edge of the boards of the upper covers.&quot;--Needham.</CM>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>262</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Grotesque bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>16th century; decorated with grotesque figures, usually classical.</SN>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>263</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Guard books</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Stub books</UF>
+ <BT>Types of binding structure (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>264</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Guards</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Sewing strips</UF>
+ <BT>Supports (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>266</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Gutta percha bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Caoutchouc bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>117</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Half bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <RT>Quarter bindings</RT>
+ <RT>Three-quarter bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>268</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Hatched tools</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Azured tools</UF>
+ <BT>Types of tools</BT>
+ <RT>Open tools</RT>
+ <RT>Solid tools</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>42</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Headbands</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Endbands</UF>
+ <BT>Ancillary structures (Gathering term; do not assign)</BT>
+ <NT>Stuck-on headbands</NT>
+ <NT>Worked headbands</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>26</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Headcaps</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Spines (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>274</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Hemp boards</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Boards</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>89</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Heraldic bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Armorial bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>38</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Hollis bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Proprietary bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>276</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Hollow backs</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Spines (Gathering term; do not assign)</BT>
+ <RT>Tight backs</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>277</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Indexes, thumb</NON-DESCRIPTOR>
+ <USE>Thumb indexes</USE>
+ <STA>Approved</STA>
+ <INP>2015-04-21</INP>
+ <APP>2015-04-21</APP>
+ <UPD>2015-04-21</UPD>
+ <TNR>434</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Inlays</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <RT>Onlays</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>279</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Instructions, binders&apos;</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Binders&apos; instructions</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>61</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Interlace bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Strapwork bindings</UF>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>281</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Interleaved books</DESCRIPTOR>
+ <HN>Added 12/2011.</HN>
+ <SN>Use for books bound with blank leaves systematically inserted between the original leaves, whether by the publisher or owner, to facilitate user-added content.</SN>
+ <BT>Text block (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2012-04-23</INP>
+ <APP>2012-04-23</APP>
+ <UPD>2012-05-30</UPD>
+ <TNR>425</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Iron clasps</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Metal clasps</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>283</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Islamic bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <RT>Mudéjar bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>284</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Ivory bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Treasure bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>286</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Jansenist style bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>287</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Japanese sewing</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Unsupported sewing</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>288</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Jewelled bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Gem bindings</UF>
+ <BT>Treasure bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>246</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Kangaroo leather bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Term added 2/97.</HN>
+ <BT>Leather bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>290</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Kermes dyed bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Bindings dyed by means of Kermes (a red dyestuff obtained from a Mediterranean scale insect).  Kermes was largely supplanted by cochineal as a dyestuff after the latter&apos;s introduction into Europe in the 16th and 17th centuries.</SN>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>291</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Lace bindings (Designs)</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Dentelle bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>188</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Lace bindings (Materials)</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Needlework bindings</UF>
+ <BT>Cloth bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>142</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Lacquered bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Bindings with scenes on their covers which are first painted and then covered with lacquer.  Primarily 16th century; the painted scenes can be on leather or pasteboard.</SN>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <RT>Painted bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>294</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Lambskin bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Sheepskin bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>296</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Landscape bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>298</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Law bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>299</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Leak&apos;s patent relievo leather bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Relievo bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>300</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Leak&apos;s relievo leather bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Relievo bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>301</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Leather bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <NT>Calf bindings</NT>
+ <NT>Cuir-ciselé bindings</NT>
+ <NT>Deerskin bindings</NT>
+ <NT>Diced leather bindings</NT>
+ <NT>Goatskin bindings</NT>
+ <NT>Kangaroo leather bindings</NT>
+ <NT>Molded leather bindings</NT>
+ <NT>Ostrich leather bindings</NT>
+ <NT>Pigskin bindings</NT>
+ <NT>Relievo bindings</NT>
+ <NT>Reversed leather bindings</NT>
+ <NT>Russia leather bindings</NT>
+ <NT>Sealskin bindings</NT>
+ <NT>Shagreen bindings</NT>
+ <NT>Sheepskin bindings</NT>
+ <RT>Alum tawed bindings</RT>
+ <RT>Fur bindings</RT>
+ <RT>Vellum bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2007-08-03</UPD>
+ <TNR>18</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Leather doublures</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Doublures</BT>
+ <NT>Morocco doublures</NT>
+ <NT>Suede doublures</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>195</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Leather labels</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Lettering pieces</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>309</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Leather thongs</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Thongs</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>310</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Lederschnitt bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Cuir-ciselé bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>167</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Ledger bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>311</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Letter pieces</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Lettering pieces</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>312</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Lettering pieces</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Leather labels</UF>
+ <UF>Letter pieces</UF>
+ <UF>Skiver labels</UF>
+ <BT>Binding labels</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>293</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Levant bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Morocco bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>314</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Limoges work bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Enamel bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>214</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Limp bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Use for any kind of limp binding.</SN>
+ <BT>Types of binding structure (Gathering term; do not assign)</BT>
+ <RT>Wrappers</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>315</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Lining papers</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Endpapers</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>217</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Linings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Spine linings</UF>
+ <BT>Spines (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>316</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Loop-and-ball fastenings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Board fastenings</BT>
+ <RT>Catches</RT>
+ <RT>Clasps</RT>
+ <RT>Ties</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>86</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Machine-made headbands</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Approved 6/2005.</HN>
+ <SN>Use for headbands woven by machine on cloth or other type of support, often in imitation of worked headbands.</SN>
+ <BT>Stuck-on headbands</BT>
+ <STA>Approved</STA>
+ <INP>2006-04-13</INP>
+ <APP>2006-04-13</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>409</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Mahogany marbled calf bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Tree calf bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>318</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Manuscript waste</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Waste</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>320</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Marbled calf bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Calf bindings</BT>
+ <NT>Tree calf bindings</NT>
+ <RT>Stained calf bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>322</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Marbled edges</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Stained edges</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>324</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Marbled inlaid leather</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Maril</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>325</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Marbled paper bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Changed 6/2016. Formerly, &quot;Marbled paper bindings&quot; may have been indexed as &quot;Marbled papers.&quot;</HN>
+ <BT>Decorated paper bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2016-06-29</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>181</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Marbled sheepskin bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Proposed by Rose-Ann Movsovic; term approved 1/2006</HN>
+ <SN>Use for sheepsking bindings whose surface has been treated with acid to produce a marbled effect.</SN>
+ <BT>Sheepskin bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-12-29</INP>
+ <APP>2005-12-29</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>406</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Maril</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Marbled inlaid leather</UF>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>326</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Masonic bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Bindings decorated with Masonic motifs; primarily late 18th and early 19th centuries.</SN>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>327</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Materials and treatment (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Alum tawed bindings</NT>
+ <NT>Aluminum bindings</NT>
+ <NT>Cloth bindings</NT>
+ <NT>Decorated paper bindings</NT>
+ <NT>Embossed bindings</NT>
+ <NT>Filigree</NT>
+ <NT>Fur bindings</NT>
+ <NT>Gold powdered bindings</NT>
+ <NT>Half bindings</NT>
+ <NT>Inlays</NT>
+ <NT>Kermes dyed bindings</NT>
+ <NT>Lacquered bindings</NT>
+ <NT>Leather bindings</NT>
+ <NT>Maril</NT>
+ <NT>Onlays</NT>
+ <NT>Painted bindings</NT>
+ <NT>Paper bindings</NT>
+ <NT>Papier-mâché bindings</NT>
+ <NT>Pictorial cloth bindings</NT>
+ <NT>Printed boards</NT>
+ <NT>Quarter bindings</NT>
+ <NT>Stamped or tooled bindings</NT>
+ <NT>Three-quarter bindings</NT>
+ <NT>Tortoise shell bindings</NT>
+ <NT>Tracery</NT>
+ <NT>Treasure bindings</NT>
+ <NT>Unlettered bindings</NT>
+ <NT>Vellum bindings</NT>
+ <NT>Visible structure</NT>
+ <NT>Waste</NT>
+ <NT>Wooden bindings</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>16</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Mauchline ware bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC><!-- unknown line type [@@@] -->
+
+ <HN>Submitted by: Jennie Clements, UNC Chapel Hill, 9/9/11; added 6/26/2012.</HN>
+ <SN>Use for novelty bindings decorated using a technique that originated in the 1830s in the Scottish town of Mauchline, in which wooden boards are decorated with stenciling, transfer prints, photographs, etc., then heavily varnished.</SN>
+ <BT>Wooden bindings</BT>
+ <BT>Wooden boards</BT>
+ <STA>Approved</STA>
+ <INP>2012-06-26</INP>
+ <APP>2012-06-23</APP>
+ <UPD>2012-06-26</UPD>
+ <TNR>426</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Mechanical bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Approved 6/2008.</HN>
+ <SN>Use for bindings in which a device of metal, plastic, etc., holds single leaves together in a non-exchangeable manner.</SN>
+ <BT>Types of binding structure (Gathering term; do not assign)</BT>
+ <NT>Comb bindings</NT>
+ <NT>Spiral bindings</NT>
+ <STA>Approved</STA>
+ <INP>2008-07-11</INP>
+ <APP>2008-07-11</APP>
+ <UPD>2008-07-11</UPD>
+ <TNR>418</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Medallion rolls</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Medallion tools</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>333</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Medallion stamps</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Medallion tools</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>334</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Medallion tools</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Bust rolls</UF>
+ <UF>Bust stamps</UF>
+ <UF>Cameo rolls</UF>
+ <UF>Cameo stamps</UF>
+ <UF>Medallion rolls</UF>
+ <UF>Medallion stamps</UF>
+ <UF>Portrait medallion rolls</UF>
+ <UF>Portrait medallion stamps</UF>
+ <BT>Types of tools</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>111</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Medieval treasure bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Treasure bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>337</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Metal clasps</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Clasps</BT>
+ <NT>Brass clasps</NT>
+ <NT>Iron clasps</NT>
+ <NT>Silver clasps</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>101</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Metal furniture</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Furniture</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>241</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Middle Hill boards</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Found on books and manuscripts bound for Sir Thomas Phillipps&apos; library at Middle Hill.  The usual style is a drab colored paper over millboard, without pastedowns or other endpapers.  The text block is sewn on two cords, which are laced through the boards.  Phillipps&apos; shelf-mark is usually present in the form: [Roman numeral].[lowercase letter].[Arabic numeral].</SN>
+ <BT>Proprietary bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>339</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Moiré doublures</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Doublures</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>196</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Molded leather bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Cuir bouilli bindings</UF>
+ <UF>Sculptured leather bindings</UF>
+ <UF>Shaped leather bindings</UF>
+ <BT>Leather bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2007-08-03</UPD>
+ <TNR>164</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Monogrammed bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Proprietary bindings</BT>
+ <RT>Armorial bindings</RT>
+ <RT>Royal bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>39</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Morocco bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Levant bindings</UF>
+ <BT>Goatskin bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>259</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Morocco doublures</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Leather doublures</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>307</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Mosaic bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>342</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Mottled calf bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Calf bindings</BT>
+ <RT>Stained calf bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2007-08-03</UPD>
+ <TNR>343</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Mudéjar bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <CM>A Spanish binding style, used in the 13th-15th centuries, &quot;with Islamic decorative schemes: elaborate geometric interlace bands against a background entirely filled with hundreds of repetitions of small knotwork or cablework tools.&quot; -- Needham.</CM>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <RT>Islamic bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>285</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Needlepoint bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Needlework bindings</UF>
+ <BT>Cloth bindings</BT>
+ <NT>Petit point bindings</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>143</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Needlework bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Embroidered bindings</USE>
+ <USE>Lace bindings (Materials)</USE>
+ <USE>Needlepoint bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>212</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Non-adhesive bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Types of binding structure (Gathering term; do not assign)</BT>
+ <RT>Adhesive bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>9</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Onlays</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <NT>Paper onlays</NT>
+ <RT>Inlays</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2008-07-11</UPD>
+ <TNR>280</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Open tools</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Types of tools</BT>
+ <RT>Hatched tools</RT>
+ <RT>Solid tools</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>271</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Original covers</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>For examples of original covers as issued by the bookseller, publisher, etc.</SN>
+ <BT>Categories of bindings/Occasions for binding (Gathering term;do not assign)</BT>
+ <RT>Contemporary bindings</RT>
+ <RT>Publishers&apos; bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>121</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Orihon format</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Accordion fold format</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>3</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Ostrich leather bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Term added 2/97.</HN>
+ <BT>Leather bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>302</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Overcasting</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Unsupported sewing</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>345</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Painted bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <NT>Painted leather bindings</NT>
+ <NT>Vellucent bindings</NT>
+ <RT>Lacquered bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>295</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Painted edges</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Decorated edges</BT>
+ <NT>Fore-edge paintings</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>175</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Painted leather bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Painted bindings</BT>
+ <RT>Stained calf bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>346</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Painted paper bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Changed 6/2016. Formerly, &quot;Painted paper bindings&quot; may have been indexed as &quot;Painted papers.&quot;</HN>
+ <BT>Decorated paper bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2016-06-29</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>182</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Pallet tools</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Types of tools</BT>
+ <RT>Fillet tools</RT>
+ <RT>Gouge tools</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>231</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Panel stamp bindings</NON-DESCRIPTOR>
+ <USE>Panel-stamped bindings</USE>
+ <STA>Approved</STA>
+ <INP>2007-06-28</INP>
+ <UPD>2007-06-28</UPD>
+ <TNR>414</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Panel-stamped bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Approved 6/2007. Disambiguated from &quot;blocked bindings&quot; based on literary warant.</HN>
+ <SN>Use for leather bindings with designs in relief from the impression of intaglio dies, produced predominantly in the 15th and 16th centuries.</SN>
+ <UF>Panel stamp bindings</UF>
+ <BT>Stamped or tooled bindings</BT>
+ <RT>Blocked bindings</RT>
+ <STA>Approved</STA>
+ <INP>2007-06-28</INP>
+ <APP>2007-06-28</APP>
+ <UPD>2007-06-28</UPD>
+ <TNR>413</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Paper binding labels</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Changed 6/2016. Formerly, &quot;Paper binding labels&quot; may have been indexed as &quot;Paper labels.&quot;</HN>
+ <BT>Binding labels</BT>
+ <NT>Engraved paper binding labels</NT>
+ <NT>Printed paper binding labels</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2016-06-29</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>219</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Paper bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <NT>Corrugated board bindings</NT>
+ <RT>Publishers&apos; paper bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>159</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Paper onlays</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Approved 6/2008.</HN>
+ <SN>Use for decorative pieces of paper adhered to the cover material of a binding, frequently color-printed and employed in the decoration of publishers&apos; cloth bindings</SN>
+ <BT>Onlays</BT>
+ <STA>Approved</STA>
+ <INP>2008-07-11</INP>
+ <APP>2008-07-11</APP>
+ <UPD>2008-07-11</UPD>
+ <TNR>417</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Paper wrappers</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Wrappers</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>350</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Papier-mâché bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>328</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Parchment bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Vellum bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>351</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Paste edges</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Decorated edges</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>176</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Paste paper bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Changed 6/2016. Formerly, &quot;Paste paper bindings&quot; may have been indexed as &quot;Paste papers.&quot;</HN>
+ <BT>Decorated paper bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2016-06-29</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>183</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Pasteboard</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Boards</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>90</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Patterned papers</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Decorated paper bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>178</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Peccary bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Pigskin bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>352</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Penitential bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <CM>&quot;A number of later sixteenth-century Parisian &apos;penitential&apos; bindings are tooled in silver on dark brown morocco to create a somber appearance.&quot; -- Needham</CM>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <RT>Somber bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>353</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Perfect bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Adhesive bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>6</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Petit point bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Needlepoint bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>344</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Pictorial bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>355</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Pictorial cloth bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <BT>Publishers&apos; cloth bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>329</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Pictorial paper wrappers</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Printed wrappers</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>356</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Pigskin bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Peccary bindings</UF>
+ <BT>Leather bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>303</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Pinhead style bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Stamped or tooled bindings</BT>
+ <RT>Pointillé tooling</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>358</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Pins</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Catches</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>125</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Plaited headbands</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Braided headbands</UF>
+ <BT>Worked headbands</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>99</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Plaque-impressed bindings</NON-DESCRIPTOR>
+ <USE>Blocked bindings</USE>
+ <STA>Approved</STA>
+ <INP>2007-08-03</INP>
+ <APP>2007-08-03</APP>
+ <UPD>2007-08-03</UPD>
+ <TNR>416</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Plaquette stamps</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Types of tools</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>359</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Platina tooled bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Platinum tooled bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>360</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Platinum tooled bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Platina tooled bindings</UF>
+ <BT>Stamped or tooled bindings</BT>
+ <RT>Blind tooled bindings</RT>
+ <RT>Gold tooled bindings</RT>
+ <RT>Silver tooled bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>75</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Pointillé tooling</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>French pointillé tooling</UF>
+ <BT>Stamped or tooled bindings</BT>
+ <RT>Pinhead style bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>240</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Portrait medallion rolls</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Medallion tools</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>335</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Portrait medallion stamps</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Medallion tools</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>336</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Pre-ornamented bookcloth bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Pre-ornamented cloth bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>362</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Preornamented cloth bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Pre-ornamented cloth bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>363</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Pre-ornamented cloth bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Term added 01/01.</HN>
+ <SN>Use for cloth bindings produced ca. 1835-1846, characterized by a central ornament in which the cloth was ornamented before the case was made, as described by Krupp &amp; Rosner, &quot;Pre-Ornamented Bookcloth on Nineteenth-Century Cloth Bindings,&quot; PBSA 94:2.</SN>
+ <UF>Pre-ornamented bookcloth bindings</UF>
+ <UF>Preornamented cloth bindings</UF>
+ <BT>Publishers&apos; cloth bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>361</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Presentation bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Categories of bindings/Occasions for binding (Gathering term;do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>122</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Printed boards</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <BT>Publishers&apos; bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>330</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Printed cloth wrappers</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Cloth wrappers</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>149</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Printed paper binding labels</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Changed 6/2016. Formerly, &quot;Printed paper binding labels&quot; may have been indexed as &quot;Printed paper labels.&quot;</HN>
+ <BT>Paper binding labels</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2016-06-29</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>349</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Printed paper bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Changed 6/2016. Formerly, &quot;Printed paper bindings&quot; may have been indexed as &quot;Printed papers.&quot;</HN>
+ <BT>Decorated paper bindings</BT>
+ <NT>Woodblock printed papers</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2016-06-29</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>184</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Printed paper wrappers</NON-DESCRIPTOR>
+ <USE>Printed wrappers</USE>
+ <STA>Approved</STA>
+ <INP>2007-08-03</INP>
+ <APP>2007-08-03</APP>
+ <UPD>2007-08-03</UPD>
+ <TNR>415</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Printed waste</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Waste</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>364</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Printed wrappers</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Pictorial paper wrappers</UF>
+ <UF>Printed paper wrappers</UF>
+ <BT>Wrappers</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2007-08-03</UPD>
+ <TNR>357</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Prize bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Categories of bindings/Occasions for binding (Gathering term;do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>123</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Proprietary bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <BT>Categories of bindings/Occasions for binding (Gathering term;do not assign)</BT>
+ <NT>Apollo and Pegasus bindings</NT>
+ <NT>Armorial bindings</NT>
+ <NT>Cottonian Library book covers</NT>
+ <NT>Hollis bindings</NT>
+ <NT>Middle Hill boards</NT>
+ <NT>Monogrammed bindings</NT>
+ <NT>Royal bindings</NT>
+ <NT>Settle bindings</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>34</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Protective housing (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Chemises</NT>
+ <NT>Clamshell boxes</NT>
+ <NT>Dust jackets</NT>
+ <NT>Slipcases</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2014-05-16</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>134</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Publishers&apos; bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Categories of bindings/Occasions for binding (Gathering term;do not assign)</BT>
+ <NT>Printed boards</NT>
+ <NT>Publishers&apos; cloth bindings</NT>
+ <NT>Publishers&apos; paper bindings</NT>
+ <RT>Contemporary bindings</RT>
+ <RT>Original covers</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>124</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Publishers&apos; cloth bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Publishers&apos; bindings</BT>
+ <NT>Embossed cloth bindings</NT>
+ <NT>Pictorial cloth bindings</NT>
+ <NT>Pre-ornamented cloth bindings</NT>
+ <RT>Cloth bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>145</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Publishers&apos; paper bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Publishers&apos; bindings</BT>
+ <RT>Paper bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>348</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Punch-dotting</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <CM>&quot;A type of decoration of Islamic origin in which small punched depressions in the leather are filled with a kind of colored gesso.&quot; -- Needham</CM>
+ <BT>Stamped or tooled bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>366</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Quarter bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <RT>Half bindings</RT>
+ <RT>Three-quarter bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>269</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Raised bands</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Bands</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>48</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Raised cords</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Cords</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>153</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Rebacking</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Subsequent treatment</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>367</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Recasing</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Subsequent treatment</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>369</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Receipts, binders&apos;</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Binders&apos; receipts</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>62</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Recessed cords</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Sawn-in cords</UF>
+ <BT>Cords</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>154</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Red ruling</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Ruling in red</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>371</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Registers (place markers)</NON-DESCRIPTOR>
+ <USE>Ribbon markers</USE>
+ <STA>Approved</STA>
+ <INP>2015-04-21</INP>
+ <APP>2015-04-21</APP>
+ <UPD>2015-04-21</UPD>
+ <TNR>439</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Relievo bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Term added 01/01.</HN>
+ <SN>Use for bindings of deeply embossed leather executed in Leake&apos;s patent relievo process (1846-1850s).</SN>
+ <UF>Leak&apos;s patent relievo leather bindings</UF>
+ <UF>Leak&apos;s relievo leather bindings</UF>
+ <UF>Relievo leather bindings</UF>
+ <BT>Embossed bindings</BT>
+ <BT>Leather bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>210</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Relievo leather bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Relievo bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>373</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Remboîtage</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Subsequent treatment</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>374</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Repoussé silver bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Silver bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>375</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Resewing</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Subsequent treatment</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>376</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Retrospective bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>A conscious imitation of an earlier style.</SN>
+ <UF>Antique bindings</UF>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>31</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Reversed leather bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Leather bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>377</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Ribbon-embossed cloth bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Term added 7/00.</HN>
+ <SN>Use for cloth bindings embossed by machines used to emboss ribbons, thereby giving the bindings a raised, often floral pattern.</SN>
+ <BT>Embossed cloth bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>211</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Ribbon markers</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Use for ribbons attached at the head of the spine to be used as a place marker in the book. For unattached devices intended to be inserted between leaves in a book as a place marker, use Bookmarks.</SN>
+ <UF>Finding ribbon</UF>
+ <UF>Registers (place markers)</UF>
+ <UF>Signets</UF>
+ <BT>Fastenings, Attachments, or Titling (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2015-04-21</INP>
+ <APP>2015-04-21</APP>
+ <UPD>2015-04-21</UPD>
+ <TNR>436</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Roan bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Split sheepskin bindings</UF>
+ <BT>Sheepskin bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>378</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Roulette tools</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Fillet tools</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>228</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Royal bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Proprietary bindings</BT>
+ <RT>Armorial bindings</RT>
+ <RT>Monogrammed bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>40</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Ruling in red</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Manuscript ruling in red ink in order to set off the text.</SN>
+ <UF>Red ruling</UF>
+ <BT>Text block (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>372</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Russia calf bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Russia leather bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>380</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Russia leather bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Russia calf bindings</UF>
+ <BT>Leather bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>304</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Sawn-in cords</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Recessed cords</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>370</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Scaleboard</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Wooden boards</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>381</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Scottish herringbone design bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <RT>Scottish wheel design bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>382</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Scottish wheel design bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Fan style bindings</BT>
+ <RT>Scottish herringbone design bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>224</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Sculptured leather bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Molded leather bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>340</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Seal skin bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Sealskin bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>383</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Sealskin bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Term added 6/02.</HN>
+ <UF>Seal-skin bindings</UF>
+ <UF>Seal skin bindings</UF>
+ <BT>Leather bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>305</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Seal-skin bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Sealskin bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>384</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Semé</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Stamped or tooled bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>385</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Settle bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Proprietary bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>365</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Sewing patterns</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <BT>Text block (Gathering term; do not assign)</BT>
+ <NT>All along sewing</NT>
+ <NT>Stabbing</NT>
+ <NT>Two-on sewing</NT>
+ <NT>Unsupported sewing</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>11</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Sewing strips</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Guards</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>267</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Shagreen bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Leather bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>306</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Shaped leather bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Molded leather bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>341</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Sheepskin bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Leather bindings</BT>
+ <NT>Lambskin bindings</NT>
+ <NT>Marbled sheepskin bindings</NT>
+ <NT>Roan bindings</NT>
+ <NT>Tree sheep bindings</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>297</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Signed bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Binders&apos; evidence (Gathering term; do not assign)</BT>
+ <RT>Binders&apos; tickets</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>60</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Signets</NON-DESCRIPTOR>
+ <USE>Ribbon markers</USE>
+ <STA>Approved</STA>
+ <INP>2015-04-21</INP>
+ <APP>2015-04-21</APP>
+ <UPD>2015-04-21</UPD>
+ <TNR>438</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Silk brocade bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Brocade bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>103</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Silk doublures</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Doublures</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>197</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Silk ties</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Ties</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>387</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Silver bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Gilt silver bindings</UF>
+ <UF>Repoussé silver bindings</UF>
+ <BT>Treasure bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>255</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Silver catches</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Catches</BT>
+ <RT>Silver clasp plates</RT>
+ <RT>Silver clasps</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>126</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Silver clasp plates</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Clasp plates</BT>
+ <RT>Silver catches</RT>
+ <RT>Silver clasps</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>138</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Silver clasps</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Metal clasps</BT>
+ <RT>Silver catches</RT>
+ <RT>Silver clasp plates</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>338</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Silver furniture</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Furniture</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>242</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Silver tooled bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Stamped or tooled bindings</BT>
+ <RT>Blind tooled bindings</RT>
+ <RT>Gold tooled bindings</RT>
+ <RT>Platinum tooled bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>76</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Skiver labels</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Lettering pieces</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>313</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Slip cases</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Slipcases</USE>
+ <STA>Approved</STA>
+ <INP>2006-07-19</INP>
+ <APP>2006-07-19</APP>
+ <UPD>2006-08-28</UPD>
+ <TNR>412</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Slipcases</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Term added 6/06. Proposed by Nina Schneider.</HN>
+ <SN>Use for protective containers open along one edge.</SN>
+ <UF>Slip cases</UF>
+ <BT>Protective housing (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2006-07-19</INP>
+ <APP>2006-07-19</APP>
+ <UPD>2007-01-08</UPD>
+ <TNR>411</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Smooth spines</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Flat spines</UF>
+ <BT>Spines (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>237</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Solid tools</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Types of tools</BT>
+ <RT>Hatched tools</RT>
+ <RT>Open tools</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>272</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Somber bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <CM>&quot;&apos;Somber&apos; bindings of silver-tooled black morocco were common in Restoration England.&quot; -- Needham.</CM>
+ <BT>Styles (Gathering term; do not assign)</BT>
+ <RT>Penitential bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>354</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Spine labels</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Binding labels</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>292</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Spine linings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Linings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>317</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Spines (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Headcaps</NT>
+ <NT>Hollow backs</NT>
+ <NT>Linings</NT>
+ <NT>Smooth spines</NT>
+ <NT>Tight backs</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2007-08-03</UPD>
+ <TNR>275</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Spiral bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Approved 6/2008.</HN>
+ <SN>Use for bindings in which a coil of metal, plastic, etc., passes through a series of holes in a margin of the text block.</SN>
+ <UF>Coil bindings</UF>
+ <UF>Spirex bindings</UF>
+ <BT>Mechanical bindings</BT>
+ <STA>Approved</STA>
+ <INP>2008-07-11</INP>
+ <APP>2008-07-11</APP>
+ <UPD>2008-07-11</UPD>
+ <TNR>420</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Spirex bindings</NON-DESCRIPTOR>
+ <USE>Spiral bindings</USE>
+ <STA>Approved</STA>
+ <INP>2008-07-11</INP>
+ <APP>2008-07-11</APP>
+ <UPD>2008-07-11</UPD>
+ <TNR>422</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Split sheepskin bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Roan bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>379</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Sprinkled calf bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Calf bindings</BT>
+ <RT>Stained calf bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>388</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Sprinkled edges</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Stained edges</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>389</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Sprinkled paper bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Changed 6/2016. Formerly, &quot;Sprinkled paper bindings&quot; may have been indexed as &quot;Sprinkled papers.&quot;</HN>
+ <BT>Decorated paper bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2016-06-29</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>185</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Square edge boards</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Edges of binding boards</BT>
+ <RT>Bevelled edge boards</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>53</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Stabbing</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Sewing patterns</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>386</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Stained calf bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Use for leather stained in ways other than by marbling, mottling, or sprinkling.  This includes staining by means of blocking, stencilling, or free-hand design.</SN>
+ <BT>Calf bindings</BT>
+ <RT>Marbled calf bindings</RT>
+ <RT>Mottled calf bindings</RT>
+ <RT>Painted leather bindings</RT>
+ <RT>Sprinkled calf bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>323</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Stained edges</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Decorated edges</BT>
+ <NT>Marbled edges</NT>
+ <NT>Sprinkled edges</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>177</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Stained vellum bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Use for vellum bindings that have been colored by the application of a dilute colored liquid, a process that results in a transparent color that penetrates the material, allowing the underlying texture of the skin to be visible.</SN>
+ <BT>Vellum bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2016-02-02</UPD>
+ <TNR>390</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Stamped or tooled bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <NT>Blind tooled bindings</NT>
+ <NT>Blocked bindings</NT>
+ <NT>Gold tooled bindings</NT>
+ <NT>Panel-stamped bindings</NT>
+ <NT>Pinhead style bindings</NT>
+ <NT>Platinum tooled bindings</NT>
+ <NT>Pointillé tooling</NT>
+ <NT>Punch-dotting</NT>
+ <NT>Semé</NT>
+ <NT>Silver tooled bindings</NT>
+ <NT>Types of tools</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2007-06-28</UPD>
+ <TNR>73</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Stamped paper bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Changed 6/2016. Formerly, &quot;Stamped paper bindings&quot; may have been indexed as &quot;Stamped papers.&quot;</HN>
+ <BT>Decorated paper bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2016-06-29</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>186</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Stencilled paper bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Changed 6/2016. Formerly, &quot;Stencilled paper bindings&quot; may have been indexed as &quot;Stencilled papers.&quot;</HN>
+ <BT>Decorated paper bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2016-06-29</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>187</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Strapwork bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Interlace bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>282</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Stub books</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Guard books</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>265</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Stuck-on headbands</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Glued-on headbands</UF>
+ <BT>Headbands</BT>
+ <NT>Machine-made headbands</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>273</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Styles (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>All-over style bindings</NT>
+ <NT>Architectural bindings</NT>
+ <NT>Art Deco bindings</NT>
+ <NT>Cathedral bindings</NT>
+ <NT>Centerpiece and cornerpiece bindings</NT>
+ <NT>Centerpieces (Designs)</NT>
+ <NT>Coptic bindings</NT>
+ <NT>Cornerpieces (Designs)</NT>
+ <NT>Cosway bindings</NT>
+ <NT>Cottage style bindings</NT>
+ <NT>Dentelle bindings</NT>
+ <NT>Etruscan bindings</NT>
+ <NT>Fan style bindings</NT>
+ <NT>Fanfare bindings</NT>
+ <NT>Greek style bindings</NT>
+ <NT>Grotesque bindings</NT>
+ <NT>Interlace bindings</NT>
+ <NT>Islamic bindings</NT>
+ <NT>Jansenist style bindings</NT>
+ <NT>Landscape bindings</NT>
+ <NT>Law bindings</NT>
+ <NT>Ledger bindings</NT>
+ <NT>Masonic bindings</NT>
+ <NT>Mosaic bindings</NT>
+ <NT>Mudéjar bindings</NT>
+ <NT>Penitential bindings</NT>
+ <NT>Pictorial bindings</NT>
+ <NT>Retrospective bindings</NT>
+ <NT>Scottish herringbone design bindings</NT>
+ <NT>Somber bindings</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2009-10-12</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>14</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Subsequent treatment</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Rebacking</NT>
+ <NT>Recasing</NT>
+ <NT>Remboîtage</NT>
+ <NT>Resewing</NT>
+ <NT>Washing</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>368</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Suede doublures</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Leather doublures</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>308</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Supports (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Bands</NT>
+ <NT>Cords</NT>
+ <NT>Guards</NT>
+ <NT>Tapes</NT>
+ <NT>Thongs</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>45</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Tacket bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Tacketed bindings</USE>
+ <STA>Notvalid</STA>
+ <INP>2006-04-13</INP>
+ <APP>2006-04-13</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>408</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Tacketed bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Approved 6/2005</HN>
+ <SN>Use for bindings in which the case is attached to the text block by means tackets, such as strips of parchment or leather thongs.</SN>
+ <UF>Tacket bindings</UF>
+ <BT>Types of binding structure (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2006-04-13</INP>
+ <APP>2006-04-13</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>407</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Tall copies</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Text block (Gathering term; do not assign)</BT>
+ <RT>Untrimmed edges</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>392</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Tapes</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Supports (Gathering term; do not assign)</BT>
+ <NT>Cloth tapes</NT>
+ <NT>Vellum tapes</NT>
+ <RT>Bands</RT>
+ <RT>Cords</RT>
+ <RT>Thongs</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>50</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Text block (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Accordion fold format</NT>
+ <NT>Edges of text block</NT>
+ <NT>Interleaved books</NT>
+ <NT>Ruling in red</NT>
+ <NT>Sewing patterns</NT>
+ <NT>Tall copies</NT>
+ <NT>Unbound sheets</NT>
+ <NT>Unopened books</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2012-04-23</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>4</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Textile bindings</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Cloth bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>140</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Thongs</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Supports (Gathering term; do not assign)</BT>
+ <NT>Alum tawed thongs</NT>
+ <NT>Leather thongs</NT>
+ <NT>Vellum thongs</NT>
+ <RT>Bands</RT>
+ <RT>Cords</RT>
+ <RT>Tapes</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>21</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Three-quarter bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <RT>Half bindings</RT>
+ <RT>Quarter bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>270</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Thumb cuts</NON-DESCRIPTOR>
+ <USE>Thumb indexes</USE>
+ <STA>Approved</STA>
+ <INP>2015-04-21</INP>
+ <APP>2015-04-21</APP>
+ <UPD>2015-04-21</UPD>
+ <TNR>435</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Thumb indexes</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Use for cut-outs on the fore-edge of a book intended for locating sections within the volume, especially common on dictionaries and Bibles.</SN>
+ <UF>Cut-in indexes</UF>
+ <UF>Gouge indexes</UF>
+ <UF>Indexes, thumb</UF>
+ <UF>Thumb cuts</UF>
+ <BT>Edges of text block</BT>
+ <STA>Approved</STA>
+ <INP>2015-04-21</INP>
+ <APP>2015-04-21</APP>
+ <UPD>2015-04-21</UPD>
+ <TNR>431</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Tickets, binders&apos;</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Binders&apos; tickets</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>63</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Ties</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Fabric ties</UF>
+ <BT>Board fastenings</BT>
+ <NT>Silk ties</NT>
+ <RT>Catches</RT>
+ <RT>Clasps</RT>
+ <RT>Loop-and-ball fastenings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>87</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Tight backs</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Spines (Gathering term; do not assign)</BT>
+ <RT>Hollow backs</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>278</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Titling</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <BT>Fastenings, Attachments, or Titling (Gathering term; do not assign)</BT>
+ <NT>Binding labels</NT>
+ <NT>Edge titles</NT>
+ <NT>Tooled lettering</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>204</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Tooled doublures</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Doublures</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>198</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Tooled edges</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Gauffered edges</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>244</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Tooled lettering</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Tooled titles</UF>
+ <BT>Titling</BT>
+ <RT>Binding labels</RT>
+ <RT>Edge titles</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>205</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Tooled titles</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Tooled lettering</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>396</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Tortoise shell bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>331</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Tracery</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <CM>&quot;Cutout leatherwork, or tracery, was never a common technique in European bookbinding, but examples are known from the fifteenth and sixteenth centuries ... Several of the earliest European gold-tooled bookbindings, from both Venice and Naples, have leather tracery decoration, which was brought out, as in the Islamic archetypes, by being laid over a bright azure ground.&quot; -- Needham.</CM>
+ <UF>Cutout leatherwork</UF>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>169</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Treasure bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <CM>&quot;Covered with gold and silver, ivories, enamelwork, and gems.&quot; -- Needham.</CM>
+ <UF>Medieval treasure bindings</UF>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <NT>Enamel bindings</NT>
+ <NT>Ivory bindings</NT>
+ <NT>Jewelled bindings</NT>
+ <NT>Silver bindings</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>215</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Tree calf bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Mahogany marbled calf bindings</UF>
+ <BT>Marbled calf bindings</BT>
+ <RT>Tree sheep bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>319</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Tree sheep bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <CM>In case of doubt use Tree calf bindings.</CM>
+ <BT>Sheepskin bindings</BT>
+ <RT>Tree calf bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>397</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Tucks</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Types of binding structure (Gathering term; do not assign)</BT>
+ <RT>Flap bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>235</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Turn-ins</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Ancillary structures (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>27</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Two-on sewing</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Sewing patterns</BT>
+ <RT>All along sewing</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>12</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Types of binding structure (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <NT>Adhesive bindings</NT>
+ <NT>Backless bindings</NT>
+ <NT>Boards</NT>
+ <NT>Case bindings</NT>
+ <NT>Circuit edges</NT>
+ <NT>Dos-à-dos bindings</NT>
+ <NT>Flap bindings</NT>
+ <NT>Girdle books</NT>
+ <NT>Guard books</NT>
+ <NT>Limp bindings</NT>
+ <NT>Mechanical bindings</NT>
+ <NT>Non-adhesive bindings</NT>
+ <NT>Tacketed bindings</NT>
+ <NT>Tucks</NT>
+ <NT>Wrappers</NT>
+ <NT>Yapp style bindings</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2008-07-11</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>7</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Types of tools</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <BT>Stamped or tooled bindings</BT>
+ <NT>Fillet tools</NT>
+ <NT>Geometric tools</NT>
+ <NT>Gouge tools</NT>
+ <NT>Hatched tools</NT>
+ <NT>Medallion tools</NT>
+ <NT>Open tools</NT>
+ <NT>Pallet tools</NT>
+ <NT>Plaquette stamps</NT>
+ <NT>Solid tools</NT>
+ <NT>Vegetal tools</NT>
+ <NT>Zoomorphic tools</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>229</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Unbound sheets</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Text block (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>394</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Unlettered bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <HN>Approved 6/2005.</HN>
+ <SN>Use for bindings with no title or author’s name on the spine or cover.</SN>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2006-04-13</INP>
+ <APP>2006-04-13</APP>
+ <UPD>2007-01-09</UPD>
+ <TNR>410</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Unopened books</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Books in which the folded edges of the sections have not been trimmed away or opened by a utensil such as a knife.</SN>
+ <BT>Text block (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>399</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Unsupported sewing</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>Gathering term; do not use; index under a narrower term.</SN>
+ <BT>Sewing patterns</BT>
+ <NT>Japanese sewing</NT>
+ <NT>Overcasting</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>289</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Untrimmed edges</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Edges, untrimmed</UF>
+ <BT>Edges of text block</BT>
+ <RT>Tall copies</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>206</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Vegetal rolls</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Vegetal tools</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>400</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Vegetal stamps</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Vegetal tools</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>401</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Vegetal tools</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Vegetal rolls</UF>
+ <UF>Vegetal stamps</UF>
+ <BT>Types of tools</BT>
+ <RT>Geometric tools</RT>
+ <RT>Zoomorphic tools</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>250</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Vellucent bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Painted bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>347</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Vellum bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Parchment bindings</UF>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <NT>Stained vellum bindings</NT>
+ <RT>Alum tawed bindings</RT>
+ <RT>Fur bindings</RT>
+ <RT>Leather bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>19</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Vellum doublures</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Doublures</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>199</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Vellum endleaves</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Ancillary structures (Gathering term; do not assign)</BT>
+ <RT>Endpapers</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>28</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Vellum pastedowns</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Ancillary structures (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>29</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Vellum tapes</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Tapes</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>393</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Vellum thongs</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Thongs</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>395</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Vellum wrappers</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Wrappers</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>402</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Velvet bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Cloth bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>144</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Visible structure</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <CM>Originally proposed to include bindings whose elements have become visible through wear; BSC edited scope to reflect only bindings whose elements were designed to be visible.</CM>
+ <HN>Candidate term, 1/2006</HN>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-12-29</INP>
+ <APP>2005-12-29</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>405</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Wallet edges</NON-DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <USE>Flap bindings</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>234</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Washing</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Subsequent treatment</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>391</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Waste</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <NT>Manuscript waste</NT>
+ <NT>Printed waste</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>321</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Woodblock printed papers</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Block printed papers</UF>
+ <BT>Printed paper bindings</BT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>78</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Wooden bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Materials and treatment (Gathering term; do not assign)</BT>
+ <NT>Mauchline ware bindings</NT>
+ <RT>Wooden boards</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2012-06-26</UPD>
+ <TNR>332</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Wooden boards</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Boards</BT>
+ <NT>Mauchline ware bindings</NT>
+ <NT>Scaleboard</NT>
+ <RT>Wooden bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2012-06-26</UPD>
+ <TNR>91</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Worked headbands</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Headbands</BT>
+ <NT>Buttonhole stitched headbands</NT>
+ <NT>Plaited headbands</NT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>113</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Wrappers</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <SN>A physically attached flexible cover for a book.  Cf. Dust jacket.</SN>
+ <UF>Paper wrappers</UF>
+ <BT>Types of binding structure (Gathering term; do not assign)</BT>
+ <NT>Cloth wrappers</NT>
+ <NT>Printed wrappers</NT>
+ <NT>Vellum wrappers</NT>
+ <RT>Limp bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>150</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Yapp style bindings</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <BT>Types of binding structure (Gathering term; do not assign)</BT>
+ <RT>Circuit edges</RT>
+ <RT>Flap bindings</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2006-07-19</UPD>
+ <TNR>137</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Zoomorphic rolls</NON-DESCRIPTOR>
+ <USE>Zoomorphic tools</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2005-06-16</UPD>
+ <TNR>403</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Zoomorphic stamps</NON-DESCRIPTOR>
+ <USE>Zoomorphic tools</USE>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2005-06-16</UPD>
+ <TNR>404</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Zoomorphic tools</DESCRIPTOR>
+ <SC>rbbin Binding Terms</SC>
+ <UF>Zoomorphic rolls</UF>
+ <UF>Zoomorphic stamps</UF>
+ <BT>Types of tools</BT>
+ <RT>Geometric tools</RT>
+ <RT>Vegetal tools</RT>
+ <STA>Approved</STA>
+ <INP>2005-06-16</INP>
+ <APP>2005-06-16</APP>
+ <UPD>2005-06-16</UPD>
+ <TNR>251</TNR>
+</CONCEPT>
+</THESAURUS>

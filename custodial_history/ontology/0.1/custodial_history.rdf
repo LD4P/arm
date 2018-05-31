@@ -28,7 +28,7 @@
         <rdfs:label xml:lang="en">Custodial History Ontology</rdfs:label>
         <dcterms:title xml:lang="en">Custodial History Ontology</dcterms:title>
         <skos:definition xml:lang="en">The Custodial History Ontology models the custodial history of resources, including events, such as transfer of ownership, and time periods, such as ownership. While developed for use in the bibliographic domain, it can be used in other descriptive contexts as well.</skos:definition>
-        <vann:preferredNamespacePrefix>cho</vann:preferredNamespacePrefix>
+        <vann:preferredNamespacePrefix>ch</vann:preferredNamespacePrefix>
     </owl:Ontology>
     
     
@@ -39,15 +39,6 @@
     //
     /////////////////////////////////////////////////////////////////////////////////////// 
     -->
-    
-    <owl:Class rdf:about="https://w3id.org/arm/custodial_history/ontology/0.1/AccessionNumber">
-        <rdfs:label xml:lang="en">Accession Number</rdfs:label>    
-        <skos:definition xml:lang="en">Numeric, alphanumeric, or other identifying code assigned when an art object, book, or other item enters the collection of a museum, library, or other repository. Such codes are unique within the set of codes, and specifically identify the particular item at hand. The numbers may be marked on the objects or not (http://vocab.getty.edu/aat/300312355).</skos:definition>
-        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier" />
-        <skos:editorialNote xml:lang="en">This class has been approved for adoption in BIBFRAME, but not yet implemented, so defining here temporarily.</skos:editorialNote>
-        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-    </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/custodial_history/ontology/0.1/CustodialHistory">
         <rdfs:label xml:lang="en">Custodial history</rdfs:label>    
@@ -487,7 +478,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arm/custodial_history/ontology/0.1/accessionedBy">
         <rdfs:label xml:lang="en">accessioned by</rdfs:label>    
         <skos:definition xml:lang="en"></skos:definition>
-        <rdfs:range rdf:resource="https://w3id.org/arm/custodial_history/ontology/0.1/AccessionNumber"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arm/custodial_history/ontology/0.1/CustodialEvent"/>
+        <rdfs:range rdf:resource="https://w3id.org/arm/core/ontology/0.1/AccessionNumber"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arm/custodial_history/ontology/0.1/accessions" />
         <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
@@ -496,7 +488,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/arm/custodial_history/ontology/0.1/accessions">
         <rdfs:label xml:lang="en">accessions</rdfs:label>    
         <skos:definition xml:lang="en"></skos:definition>
-        <rdfs:domain rdf:resource="https://w3id.org/arm/custodial_history/ontology/0.1/AccessionNumber"/>
+        <rdfs:domain rdf:resource="https://w3id.org/arm/core/ontology/0.1/AccessionNumber"/>
+        <rdfs:range rdf:resource="https://w3id.org/arm/custodial_history/ontology/0.1/CustodialEvent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arm/custodial_history/ontology/0.1/accessionedBy" />
         <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>

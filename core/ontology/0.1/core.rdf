@@ -262,6 +262,15 @@
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class> 
     
+    <owl:Class rdf:about="https://w3id.org/arm/core/ontology/0.1/OclcNumber">
+        <rdfs:label xml:lang="en">OCLC number</rdfs:label>
+        <skos:definition xml:lang="en">Alphanumeric code assigned by OCLC to a resource. </skos:definition>        
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+        <skos:editorialNote xml:lang="en">Deprecate this class if defined in BIBFRAME.</skos:editorialNote>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:Class>
+    
     <owl:Class rdf:about="https://w3id.org/arm/core/ontology/0.1/Page">
         <rdfs:label xml:lang="en">Page</rdfs:label>
         <skos:definition xml:lang="en">A single page within a resource.</skos:definition>
@@ -450,6 +459,24 @@
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:ObjectProperty>
     
+    <owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/0.1/cites">
+        <rdfs:label xml:lang="en">cites</rdfs:label>
+        <skos:definition xml:lang="en">Visual citation is an artistic process/practice in which a creator reproduces the totality or a section of a (well-known) work of art (here, the object) to incorporate it a new visual creation (here, the subject).</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/0.1/citedBy"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/0.1/citedBy">
+        <rdfs:label xml:lang="en">cited by</rdfs:label>
+        <skos:definition xml:lang="en">Visual citation is an artistic process/practice in which a creator reproduces the totality or a section of a (well-known) work of art (here, the subject) to incorporate it into a new visual creation (here, the object).</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/0.1/cites"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
+    
     <owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/0.1/coveredIn">
         <rdfs:label xml:lang="en">covered in</rdfs:label>
         <skos:definition xml:lang="en">Specifies a resource whose content covers this time period or location.</skos:definition>
@@ -600,6 +627,15 @@
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:ObjectProperty>
     
+    <owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/0.1/hasStylePeriod">
+        <rdfs:label xml:lang="en">has style/period</rdfs:label>
+        <skos:definition xml:lang="en">A resource’s relationship to a style/period it represents.</skos:definition>
+        <skos:editorialNote xml:lang="en">Range is unspecified to allow values from controlled vocabularies not typed as arm:StylePeriod without unwanted entailments.</skos:editorialNote>
+        <owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/0.1/isStylePeriodOf"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
+    
     <owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/0.1/hasTypeface">
         <rdfs:label xml:lang="en">has typeface</rdfs:label>
         <skos:definition xml:lang="en">A relationship between a Font and its design or “font family”</skos:definition>
@@ -732,6 +768,15 @@
         <skos:definition xml:lang="en">Relates this resource to a resource of which it is the source.</skos:definition>
         <skos:scopeNote xml:lang="en">Has general applicability to many types of sources and resources.</skos:scopeNote>        
         <owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/0.1/hasSource"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
+ 
+    <owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/0.1/isStylePeriodOf">
+        <rdfs:label xml:lang="en">is style/period of</rdfs:label>
+        <skos:definition xml:lang="en">A resource’s relationship to a style/period representing it.</skos:definition>
+        <skos:editorialNote xml:lang="en">Domain is unspecified to allow subjects from controlled vocabularies not typed as arm:StylePeriod without unwanted entailments.</skos:editorialNote>
+        <owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/0.1/hasStylePeriod"/>
         <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:ObjectProperty>

@@ -1,0 +1,1897 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- ALPHABETICAL --><!DOCTYPE THESAURUS [
+<!ELEMENT THESAURUS (CONCEPT+)>
+<!ELEMENT CONCEPT ( (DESCRIPTOR|NON-DESCRIPTOR),SC*,CM*,HN*,SN*,UF*,USE*,BT*,NT*,RT*,STA*,TYP*,INP*,APP*,UPD*,NVD*,TNR*,FLG*)>
+<!ELEMENT DESCRIPTOR (#PCDATA)>
+<!ELEMENT NON-DESCRIPTOR (#PCDATA)>
+<!ELEMENT SC (#PCDATA)>
+<!ELEMENT CM (#PCDATA)>
+<!ELEMENT HN (#PCDATA)>
+<!ELEMENT SN (#PCDATA)>
+<!ELEMENT UF (#PCDATA)>
+<!ELEMENT USE (#PCDATA)>
+<!ELEMENT BT (#PCDATA)>
+<!ELEMENT NT (#PCDATA)>
+<!ELEMENT RT (#PCDATA)>
+<!ELEMENT STA (#PCDATA)>
+<!ELEMENT TYP (#PCDATA)>
+<!ELEMENT INP (#PCDATA)>
+<!ELEMENT APP (#PCDATA)>
+<!ELEMENT UPD (#PCDATA)>
+<!ELEMENT NVD (#PCDATA)>
+<!ELEMENT TNR (#PCDATA)>
+<!ELEMENT FLG (#PCDATA)>
+]>
+
+<THESAURUS>
+<CONCEPT>
+ <DESCRIPTOR>2 to em spaces</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Word spacings</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>1</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>3 to em spaces</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Word spacings</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>3</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>5 to em spaces</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Word spacings</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>4</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Apex</NON-DESCRIPTOR>
+ <USE>Apices</USE>
+ <STA>Approved</STA>
+ <INP>2005-12-15</INP>
+ <APP>2005-12-15</APP>
+ <UPD>2005-12-15</UPD>
+ <TNR>153</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Apices</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <UF>Apex</UF>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-15</UPD>
+ <TNR>5</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Arabic numerals</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Numerals</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>7</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Arms</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>9</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Ascenders</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>10</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Axes</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <NT>Slants</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-15</UPD>
+ <TNR>11</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Backs</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>13</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Beaked serifs</NON-DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <USE>Tapered serifs</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>14</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Bevels</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>16</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Black letter types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <UF>Fraktur types</UF>
+ <UF>Gothic types</UF>
+ <UF>Text letter types</UF>
+ <UF>Wedding texts</UF>
+ <UF>Wedding types</UF>
+ <BT>Latin characters</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>17</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Boldface types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Weights, densities, widths, or designs (Gathering term; do not assign)</BT>
+ <NT>Extra-bold types</NT>
+ <NT>Semi-bold types</NT>
+ <NT>Ultra-bold types</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>24</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Borders</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Type ornaments</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>29</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Bowls</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>31</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Brackets</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>32</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Brass types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Metal types</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>33</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Brasses</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Letter spacings</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>35</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Broken types</NON-DESCRIPTOR>
+ <USE>Damaged types</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>37</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Bulged rules</NON-DESCRIPTOR>
+ <USE>Tapered rules</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>39</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Capital letters</NON-DESCRIPTOR>
+ <USE>Upper case types</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>41</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Cartouches</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Type ornaments</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>43</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Characters or spacing matter (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>Gathering term; do not use; index under narrower term.</SN>
+ <NT>Fonts</NT>
+ <NT>Letter spacings</NT>
+ <NT>Line spacings</NT>
+ <NT>Word spacings</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>44</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Civilité</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Script types</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>47</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Classes (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>Gathering term; do not use; index under narrower term.</SN>
+ <NT>Modern types</NT>
+ <NT>Old Style types</NT>
+ <NT>Ornate types</NT>
+ <NT>Sans serif types</NT>
+ <NT>Transitional types</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>49</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Computer types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Means of manufacture (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>55</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Condensed types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Weights, densities, widths, or designs (Gathering term; do not assign)</BT>
+ <NT>Extra-condensed types</NT>
+ <NT>Semi-condensed types</NT>
+ <NT>Ultra-condensed types</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>57</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Coppers</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Letter spacings</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>61</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Counters</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>62</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Crossbars</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>63</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Damaged type features (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>Gathering term; do not use; index under narrower term.</SN>
+ <NT>Damaged type ornaments</NT>
+ <NT>Damaged types</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>64</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Damaged type ornaments</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Damaged type features (Gathering term; do not assign)</BT>
+ <BT>Type ornaments</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>65</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Damaged types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <UF>Broken types</UF>
+ <UF>Type batter</UF>
+ <BT>Damaged type features (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>38</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Decorative rules</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Rules</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>67</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Descenders</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <UF>Drop letters</UF>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>69</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Display types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>Refers to type sizes – generally 24 point or larger – used for headlines, advertising, title pages, broadsides, posters, etc.</SN>
+ <BT>Uses of typefaces (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>71</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Double rules</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Rules</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>73</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Drop letters</NON-DESCRIPTOR>
+ <USE>Descenders</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>70</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Ears</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>74</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Elite types</NON-DESCRIPTOR>
+ <USE>Point sizes $x 10 point</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>75</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Em quads</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Word spacings</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>77</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>En quads</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Word spacings</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>78</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Exotic types</NON-DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <USE>Non-Latin characters</USE>
+ <USE>Ornate types</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>79</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Expanded types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Weights, densities, widths, or designs (Gathering term; do not assign)</BT>
+ <NT>Extra-expanded types</NT>
+ <NT>Semi-expanded types</NT>
+ <NT>Ultra-expanded types</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>81</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Extra-bold types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Boldface types</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>26</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Extra-condensed types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Condensed types</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>58</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Extra-expanded types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Expanded types</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>82</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Extra-light types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Light types</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>85</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Faces</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>87</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Feet</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>88</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Fonts</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Characters or spacing matter (Gathering term; do not assign)</BT>
+ <NT>Letterforms</NT>
+ <NT>Lower case types</NT>
+ <NT>Numerals</NT>
+ <NT>Punctuation marks</NT>
+ <NT>Small capitals</NT>
+ <NT>Upper case types</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>45</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Foundry types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Letterpress types</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>93</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Fraktur types</NON-DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <USE>Black letter types</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>18</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Fronts</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>95</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Generic designations (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>Gathering term; do not use; index under narrower term.</SN>
+ <NT>Latin characters</NT>
+ <NT>Music types</NT>
+ <NT>Non-Latin characters</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2015-04-21</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>96</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Gothic types</NON-DESCRIPTOR>
+ <USE>Black letter types</USE>
+ <USE>Sans serif types</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>19</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Grooves</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>97</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Grotesque types</NON-DESCRIPTOR>
+ <USE>Sans serif types</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>98</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Hairline serifs</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Serifs</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>99</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Height-to-paper</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>The height of the type from foot to face.  Used for describing sorts.</SN>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>101</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Hooked serifs</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Serifs</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>102</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Humanist types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <UF>Venetian types</UF>
+ <BT>Old Style types</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>103</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>In-line types</NON-DESCRIPTOR>
+ <USE>Open-face types</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>105</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Intertypes</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Letterpress types</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>107</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Italic types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>Most italics are italicized versions of a Roman face, but a few were designed to accompany Roman types that did not have their own italic and were given names different from their accompanying Roman.  For example, Arrighi was designed to accompany Centaur. Italic faces --  both computer and hand-designed -- are often just the roman face slanted a few degrees off its vertical axis.</SN>
+ <BT>Latin characters</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-15</UPD>
+ <TNR>108</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Kerns</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>109</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Latin characters</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Generic designations (Gathering term; do not assign)</BT>
+ <NT>Black letter types</NT>
+ <NT>Italic types</NT>
+ <NT>Roman types</NT>
+ <NT>Script types</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>23</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Lead types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Metal types</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>111</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Leading</NON-DESCRIPTOR>
+ <USE>Leads</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>112</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Leads</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <UF>Leading</UF>
+ <BT>Line spacings</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>113</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Letter spacings</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Characters or spacing matter (Gathering term; do not assign)</BT>
+ <NT>Brasses</NT>
+ <NT>Coppers</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>36</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Letterforms</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <HN>Changed 6/2016. Formerly, &quot;Letterforms&quot; may have been indexed as &quot;Letters.&quot;</HN>
+ <UF>Letters (Letterforms)</UF>
+ <BT>Fonts</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2016-06-29</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>89</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Letterpress types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Means of manufacture (Gathering term; do not assign)</BT>
+ <NT>Foundry types</NT>
+ <NT>Intertypes</NT>
+ <NT>Linotypes</NT>
+ <NT>Ludlow types</NT>
+ <NT>Monotypes</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>94</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Letters (Letterforms)</NON-DESCRIPTOR>
+ <USE>Letterforms</USE>
+ <STA>Approved</STA>
+ <INP>2016-06-29</INP>
+ <APP>2016-06-29</APP>
+ <UPD>2016-06-29</UPD>
+ <TNR>156</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Ligatures</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>117</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Light types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Weights, densities, widths, or designs (Gathering term; do not assign)</BT>
+ <NT>Extra-light types</NT>
+ <NT>Semi-light types</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>86</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Line sizes</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>Use only for Wood types; for metal types, use Point sizes.  Line sizes should be subdivided by the size designation listed in the appendix.  For example:  655  Line sizes (Type evidence)|x 26 line. |2 rbtyp</SN>
+ <BT>Type sizes (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-15</UPD>
+ <TNR>119</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Line spacings</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Characters or spacing matter (Gathering term; do not assign)</BT>
+ <NT>Leads</NT>
+ <NT>Slugs</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>46</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Lineale types</NON-DESCRIPTOR>
+ <USE>Sans serif types</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>122</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Links</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>123</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Linotypes</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Letterpress types</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>114</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Loops</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>124</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Lower case types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Fonts</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>90</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Ludlow types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Letterpress types</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>115</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Means of manufacture (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>Gathering term; do not use; index under narrower term.</SN>
+ <NT>Computer types</NT>
+ <NT>Letterpress types</NT>
+ <NT>Stereotype plates</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>56</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Metal types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>Use for printing types made from metal.  Although in the hand-press period metal types were generally made of lead, antimony, and tin, types have been made from other metals as well.  Often, cataloguers will not be able to identify the materials used in the composition of their sorts, with the exception of brass.  This term is probably most useful in differentiating metal types from wood types.</SN>
+ <BT>Type materials (Gathering term; do not assign)</BT>
+ <NT>Brass types</NT>
+ <NT>Lead types</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>34</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Modern types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Classes (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>50</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Monotypes</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Letterpress types</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>116</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Music types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>Use for typefaces that represent music notation.</SN>
+ <UF>Musical types</UF>
+ <BT>Generic designations (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2015-04-21</INP>
+ <APP>2015-04-21</APP>
+ <UPD>2015-04-21</UPD>
+ <TNR>154</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Musical types</NON-DESCRIPTOR>
+ <USE>Music types</USE>
+ <STA>Approved</STA>
+ <INP>2015-04-21</INP>
+ <APP>2015-04-21</APP>
+ <UPD>2015-04-21</UPD>
+ <TNR>155</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Nicks</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>127</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Non-Latin characters</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>Use this term for non-Latin alphabets.  It is not within the scope of this thesaurus to list all non-Roman characters; optionally, subdivide by a particular alphabets in |x.</SN>
+ <UF>Exotic types</UF>
+ <BT>Generic designations (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-15</UPD>
+ <TNR>80</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Numbers (Type)</NON-DESCRIPTOR>
+ <USE>Numerals</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2016-07-01</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>128</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Numerals</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <UF>Numbers (Type)</UF>
+ <BT>Fonts</BT>
+ <NT>Arabic numerals</NT>
+ <NT>Roman numerals</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>8</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Old Style types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>Use this term to refer to the roman types descended from Nicolaus Jenson&apos;s modifications of the Venetian letter, and as a class of type.</SN>
+ <BT>Classes (Gathering term; do not assign)</BT>
+ <NT>Humanist types</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>51</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Open-face types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <UF>In-line types</UF>
+ <UF>Outline types</UF>
+ <BT>Weights, densities, widths, or designs (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>106</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Ornaments</NON-DESCRIPTOR>
+ <USE>Type ornaments</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>131</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Ornate types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>Use for all faces, in Latin or non-Latin characters that exhibit some form of embellishment or decoration.</SN>
+ <UF>Exotic types</UF>
+ <BT>Classes (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-15</UPD>
+ <TNR>52</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Outline types</NON-DESCRIPTOR>
+ <USE>Open-face types</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>130</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Pica types</NON-DESCRIPTOR>
+ <USE>Point sizes $x 12 point</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>132</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Pin marks</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>134</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Point sizes</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>Use only for metal types; for wood types, use Line sizes.  Point sizes should be subdivided by one of the point size designation listed in the appendix.  For example:  655 Point sizes (Type evidence)|x 12 point. |2 rbtyp</SN>
+ <BT>Type sizes (Gathering term; do not assign)</BT>
+ <NT>Point sizes $x 10 point</NT>
+ <NT>Point sizes $x 12 point</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2007-08-03</UPD>
+ <TNR>135</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Point sizes $x 10 point</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <UF>Elite types</UF>
+ <BT>Point sizes</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2007-08-03</UPD>
+ <TNR>76</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Point sizes $x 12 point</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <UF>Pica types</UF>
+ <BT>Point sizes</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2007-08-03</UPD>
+ <TNR>133</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Printers&apos; flowers</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Type ornaments</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>136</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Punctuation marks</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Fonts</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-15</UPD>
+ <TNR>91</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Roman numerals</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Numerals</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>129</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Roman types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Latin characters</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>110</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Rubber types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Type materials (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>137</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Rules</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Type ornaments</BT>
+ <NT>Decorative rules</NT>
+ <NT>Double rules</NT>
+ <NT>Tapered rules</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>68</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Sans serif types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <UF>Gothic types</UF>
+ <UF>Grotesque types</UF>
+ <UF>Lineale types</UF>
+ <BT>Classes (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>53</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Script types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>Use for typefaces which imitate cursive writing.</SN>
+ <BT>Latin characters</BT>
+ <NT>Civilité</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>48</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Semi-bold types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Boldface types</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>27</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Semi-condensed types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Condensed types</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>59</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Semi-expanded types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Expanded types</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>83</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Semi-light types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Light types</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>118</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Serifs</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <NT>Hairline serifs</NT>
+ <NT>Hooked serifs</NT>
+ <NT>Slab serifs</NT>
+ <NT>Spur serifs</NT>
+ <NT>Square serifs</NT>
+ <NT>Tapered serifs</NT>
+ <NT>Wedge serifs</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>100</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Shaded types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Weights, densities, widths, or designs (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>142</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Shoulders</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>143</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Slab serifs</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Serifs</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>138</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Slants</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Axes</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>12</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Slugs</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Line spacings</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>121</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Small capitals</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Fonts</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>92</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Spur serifs</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Serifs</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>139</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Square serifs</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Serifs</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>140</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Stems</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>144</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Stereotype plates</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Means of manufacture (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>125</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Swash</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>A swash is a decorative variant of a standard letter.</SN>
+ <BT>Weights, densities, widths, or designs (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-15</UPD>
+ <TNR>145</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Tail-pieces</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Type ornaments</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>146</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Tapered rules</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <UF>Bulged rules</UF>
+ <BT>Rules</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>40</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Tapered serifs</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <UF>Beaked serifs</UF>
+ <BT>Serifs</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>15</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Text letter types</NON-DESCRIPTOR>
+ <USE>Black letter types</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>20</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Text types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>Refers to the type sizes – generally 24 point or smaller – used for text rather than display purposes.</SN>
+ <BT>Uses of typefaces (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>147</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Transitional types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Classes (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>54</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Type batter</NON-DESCRIPTOR>
+ <USE>Damaged types</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>66</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Type evidence</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>Use, preferably with subdivisions, to identify noteworthy examples of types and type impressions which cannot be otherwise classified using terms on this list.</SN>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-15</UPD>
+ <TNR>148</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Type materials (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>Gathering term; do not use; index under narrower term.</SN>
+ <NT>Metal types</NT>
+ <NT>Rubber types</NT>
+ <NT>Wood types</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>126</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Type ornaments</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>Refers broadly to printers&apos; flowers, borders, rules, etc.</SN>
+ <UF>Ornaments</UF>
+ <NT>Borders</NT>
+ <NT>Cartouches</NT>
+ <NT>Damaged type ornaments</NT>
+ <NT>Printers&apos; flowers</NT>
+ <NT>Rules</NT>
+ <NT>Tail-pieces</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>30</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Type sizes (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>Gathering term; do not use; index under narrower term.</SN>
+ <NT>Line sizes</NT>
+ <NT>Point sizes</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>120</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Typeface elements</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <NT>Apices</NT>
+ <NT>Arms</NT>
+ <NT>Ascenders</NT>
+ <NT>Axes</NT>
+ <NT>Backs</NT>
+ <NT>Bevels</NT>
+ <NT>Bowls</NT>
+ <NT>Brackets</NT>
+ <NT>Counters</NT>
+ <NT>Crossbars</NT>
+ <NT>Descenders</NT>
+ <NT>Ears</NT>
+ <NT>Faces</NT>
+ <NT>Feet</NT>
+ <NT>Fronts</NT>
+ <NT>Grooves</NT>
+ <NT>Height-to-paper</NT>
+ <NT>Kerns</NT>
+ <NT>Ligatures</NT>
+ <NT>Links</NT>
+ <NT>Loops</NT>
+ <NT>Nicks</NT>
+ <NT>Pin marks</NT>
+ <NT>Serifs</NT>
+ <NT>Shoulders</NT>
+ <NT>Stems</NT>
+ <NT>X-heights</NT>
+ <NT>Y-heights</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-15</UPD>
+ <TNR>6</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Typefaces</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>Use as a broad term for unidentifiable, but noteworthy typefaces. It may also be used with subdivisions to name identifiable typefaces. For example: 655  Typefaces (Type evidence) |x Baskerville. |2 rbtyp</SN>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-12-15</UPD>
+ <TNR>152</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Ultra-bold types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Boldface types</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>28</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Ultra-condensed types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Condensed types</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>60</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Ultra-expanded types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Expanded types</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>84</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Upper case types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <UF>Capital letters</UF>
+ <BT>Fonts</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>42</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Uses of typefaces (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>Gathering term; do not use; index under narrower term.</SN>
+ <NT>Display types</NT>
+ <NT>Text types</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>72</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Venetian types</NON-DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <USE>Humanist types</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>104</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Wedding texts</NON-DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <USE>Black letter types</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>21</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <NON-DESCRIPTOR>Wedding types</NON-DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <USE>Black letter types</USE>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>22</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Wedge serifs</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Serifs</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>141</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Weights, densities, widths, or designs (Gathering term; do not assign)</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <SN>Gathering term; do not use; index under narrower term.</SN>
+ <NT>Boldface types</NT>
+ <NT>Condensed types</NT>
+ <NT>Expanded types</NT>
+ <NT>Light types</NT>
+ <NT>Open-face types</NT>
+ <NT>Shaded types</NT>
+ <NT>Swash</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2007-08-03</UPD>
+ <NVD>2000-01-01</NVD>
+ <TNR>25</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Wood types</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Type materials (Gathering term; do not assign)</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>149</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Word spacings</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Characters or spacing matter (Gathering term; do not assign)</BT>
+ <NT>2 to em spaces</NT>
+ <NT>3 to em spaces</NT>
+ <NT>5 to em spaces</NT>
+ <NT>Em quads</NT>
+ <NT>En quads</NT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>2</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>X-heights</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>150</TNR>
+</CONCEPT>
+
+<CONCEPT>
+ <DESCRIPTOR>Y-heights</DESCRIPTOR>
+ <SC>rbtyp Type Terms</SC>
+ <BT>Typeface elements</BT>
+ <STA>Approved</STA>
+ <INP>2005-02-25</INP>
+ <APP>2005-02-25</APP>
+ <UPD>2005-02-25</UPD>
+ <TNR>151</TNR>
+</CONCEPT>
+</THESAURUS>

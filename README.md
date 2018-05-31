@@ -61,6 +61,8 @@ for easy separation._
   * [`raremat_monograph/shacl/`](application_profiles/raremat_monograph/shacl/): SHACL application profiles for rare materials monographs
   * [`sources/`](application_profiles/sources/): Source ontologies and vocabularies for the application profiles  
   
+* [`tools`](tools/): Tools used in support of the ontology development, such as XSL data conversion scripts
+  
 * [`doc/`](doc/): Informational documents
 
 

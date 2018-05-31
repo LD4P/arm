@@ -135,16 +135,6 @@
         <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>
-
-    <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/AttributionActivity">
-        <rdfs:label xml:lang="en">Attribution</rdfs:label>    
-        <skos:definition xml:lang="en">The activity of which there is or once was substantial authority for designating that person as author, creator, etc. of the work indicative of provenance.</skos:definition>
-        <skos:scopeNote xml:lang="en">This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/att.</skos:scopeNote>
-        <skos:editorialNote xml:lang="en">Future work: consider more formal alignment between the class and corresponding MARC relator.</skos:editorialNote>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/activity/0.1/Activity"/>
-        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-    </owl:Class>
     
     <owl:Class rdf:about="https://w3id.org/arm/core/activity/0.1/AuthorActivity">
         <rdfs:label xml:lang="en">Author</rdfs:label>    
