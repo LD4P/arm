@@ -29,7 +29,7 @@
     sh:node arm_core_property_shapes:rdfs_label ;
     # NON-VALIDATING
     sh:name "Label" ;
-    sh:description "Label for the bound collection. Recommended to be the title, if one exists; otherwise a cataloger-supplied value identifying or briefly describing the resource." ;
+    sh:description "Label for the bound collection (required). Recommended to be the title, if one exists; otherwise a cataloger-supplied value identifying or briefly describing the resource." ;
     sh:order "10"^^xsd:int ;
     .
      
