@@ -322,6 +322,7 @@
 # Links a resource to a taxonomy term that types it.
 :crm_P2_has_type
     a sh:PropertyShape ;
+    sh:path crm:P2_has_type ;
     sh:nodeKind sh:IRI ;
     sh:class skos:Concept ;
     .
