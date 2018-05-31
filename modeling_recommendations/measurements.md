@@ -8,6 +8,7 @@ ArtFrame and RareMat, 2017-08-10
 > - [BIBFRAME Approach to Measurements](#bibframe)
 > - [Recommended Approach to Measurements](#recommended_approach)
 > - [Diagrams & Discussion](#diagrams)
+> - [Areas for Future Research](#future-research)
 
 <a name="overview">Overview:</a>
 ---------
@@ -218,7 +219,7 @@ Diagram 4: Measurements of whole and part with additional physical characteristi
 **Notes**
 -   Demonstrates that when a part of a resource, such as a binding or frame, is recognized as a distinct resource, other assertions can be made about it (color, material, etc.).
 
-Diagram 5: Measurements of arrangement: arrangement is a resource
+<a name="diagram-5">Diagram 5: Measurements of arrangement: arrangement is a resource</a>
 ------------------
 ![Measurement diagram 5](/modeling_recommendations/modeling_diagrams/measurement_arrangement.png)
 **Notes/TBD**
@@ -231,9 +232,23 @@ Diagram 5: Measurements of arrangement: arrangement is a resource
 
 -   Find or define controlled vocabulary for physical arrangement.
 
-Diagram 6: Measurements of arrangements: multiple arrangement resources
+<a name="diagram-6">Diagram 6: Measurements of arrangements: multiple arrangement resources</a>
 ----------------------
 ![Measurement diagram 6](/modeling_recommendations/modeling_diagrams/measurement_multiple_arrangements.png)
 **Notes/TBD**
 
 -   In this version, two arrangements are expressed as separate resources, without a default or unspecified arrangement. Choice of model 5 vs 6 would be an implementation decision by the cataloger.
+
+<a name="future-research">Areas for Future Research</a>
+
+* Measurements of specific arrangements of a resource. As illustrated in Diagrams [5](#diagram-5) and [6](#diagram-6), when a MeasurementGroup applies to a specific arrangement of a resource, the model proposes that it
+is attached directly to the Arrangement and only indirectly to the resource itself. This creates an asymmetry between this and other scenarios, where the predicates hasMeasurementGroup/isMeasurementGroupOf link the MeasurementGroup
+directly to the Item, Instance, or other resource; this in turn results in non-uniform querying of these scenarios. One might propose an alternative model in which the MeasurementGroup is directly attached to the resource, 
+as in other cases, and linked to the Arrangement via some other suitable predicate with the semantics "measures arrangement of."  However, the Arrangement nevertheless _does_ need to attach directly to the resource, since it is a
+descriptor of the resource itself independent of any measurements. One could contemplate a triangular model in which each resource attaches directly (but redundantly) to _both_ of the others, as in [Diagram 7](#diagram-7). The larger research
+question is whether introducing redundancy into a model for the sake of maintaining uniform querying is preferable to maintaining non-uniform models to avoid redundancy, noting that redundancy creates data maintenance 
+problems.
+
+<a name="diagram-7">Diagram 7: Triangulated Resource, Arrangement, and Measurement</a>
+
+![Measurement diagram 7](/modeling_recommendations/modeling_diagrams/measurement_triangulated_resource_arrangement_and_measurement.png)
