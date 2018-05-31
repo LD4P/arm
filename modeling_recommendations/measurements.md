@@ -190,6 +190,7 @@ The diagrams illustrate models of measurements of a resource, a part of the reso
 ### Diagram 1: Basic measurement model with optional descriptions
 
 ![Measurement diagram 1](/modeling_recommendations/modeling_diagrams/measurement_basic.png)
+
 **Notes**
 
 -   rdfs:label provides a human-readable form of the measurement.
@@ -203,15 +204,19 @@ Whether or not the model is used in this way in our descriptions is an implement
 
 -   Note that each value of dcterms:description is atomic: there should be one assertion for each literal value, rather than combining values into a composite string.
 
+
 ### Diagram 2: Single resource with multiple measurement group and descriptions
 
 ![Measurement diagram 2](/modeling_recommendations/modeling_diagrams/measurement_multiple.png)
 
+
 ### Diagram 3: Measurements of whole and part: part a resource
 
 ![Measurement diagram 3](/modeling_recommendations/modeling_diagrams/measurement_whole_part.png)
+
 **Notes**
 -   For domain extensions: Identify classes for parts of resources like binding, frame, etc. Should there be a superclass?
+
 
 ### Diagram 4: Measurements of whole and part with additional physical characteristics
 
@@ -219,6 +224,7 @@ Whether or not the model is used in this way in our descriptions is an implement
 
 **Notes**
 -   Demonstrates that when a part of a resource, such as a binding or frame, is recognized as a distinct resource, other assertions can be made about it (color, material, etc.).
+
 
 ### <a name="diagram-5">Diagram 5: Measurements of arrangement: arrangement is a resource</a>
 
@@ -245,7 +251,7 @@ Whether or not the model is used in this way in our descriptions is an implement
 <a name="future-research">Areas for Future Research</a>
 ----------------------
 
-* Measurements of specific arrangements of a resource. As illustrated in Diagrams [5](#diagram-5) and [6](#diagram-6), when a MeasurementGroup applies to a specific arrangement of a resource, the model proposes that it
+* **Measurements of specific arrangements of a resource.** As illustrated in Diagrams [5](#diagram-5) and [6](#diagram-6), when a MeasurementGroup applies to a specific arrangement of a resource, the model proposes that it
 is attached directly to the Arrangement and only indirectly to the resource itself. This creates an asymmetry between this and other scenarios, where the predicates hasMeasurementGroup/isMeasurementGroupOf link the MeasurementGroup
 directly to the Item, Instance, or other resource; this in turn results in non-uniform querying of these scenarios. One might propose an alternative model in which the MeasurementGroup is directly attached to the resource, 
 as in other cases, and linked to the Arrangement via some other suitable predicate with the semantics "measures arrangement of."  However, the Arrangement nevertheless _does_ need to attach directly to the resource, since it is a
@@ -254,5 +260,4 @@ question is whether introducing redundancy into a model for the sake of maintain
 problems.
 
 ### <a name="diagram-7">Diagram 7: Triangulated Resource, Arrangement, and Measurement</a>
-
 ![Measurement diagram 7](/modeling_recommendations/modeling_diagrams/measurement_triangulated_resource_arrangement_and_measurement.png)
