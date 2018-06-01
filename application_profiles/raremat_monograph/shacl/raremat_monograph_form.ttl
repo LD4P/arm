@@ -1643,9 +1643,13 @@ raremat_monograph_form:ItemForm
   
 # ItemHistoryAndProvenancePropertyGroup
 
-    sh:property raremat_monograph_custodial_history:ItemForm_ch_hasCustodialHistory_bf_hasPart ;
+    # VitroLib requires a PropertyShape with single-valued sh:path.
+    # TranslateShacl ignore multi-valued sh:paths.
+    # sh:property raremat_monograph_custodial_history:ItemForm_ch_hasCustodialHistory_bf_hasPart ;   
+    sh:property raremat_monograph_custodial_history:ItemForm_ch_hasCustodialHistory ;
     
-    sh:property raremat_monograph_exhibition:ItemForm_arm_hasExhibition_bf_partOf ;
+    # Not implementing in this iteration of VitroLib.
+    # sh:property raremat_monograph_exhibition:ItemForm_arm_hasExhibition_bf_partOf ;
     
     sh:property raremat_monograph_form:ItemForm_award_receives ;
 

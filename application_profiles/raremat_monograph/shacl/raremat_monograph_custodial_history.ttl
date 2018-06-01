@@ -36,7 +36,8 @@
 # CustodialHistory node already exists, or must be created when creating a
 # new CustodialEvent. Thus we do not define an :ItemForm_ch_hasCustodialHistory
 # PropertyShape.         
-     
+
+# Ignored by TranslateShacl due to multi-valued sh:path.     
 :ItemForm_ch_hasCustodialHistory_bf_hasPart 
     a sh:PropertyShape ;
     sh:node custodial_history_property_shapes:ch_hasCustodialHistory_bf_hasPart ;
@@ -48,6 +49,17 @@
     tosh:editWidget swa:NestedObjectEditor ; 
     .    
 
+# The form UI should ignore the intervening CustodialHistory node.
+:ItemForm_ch_hasCustodialHistory_bf_hasPart 
+    a sh:PropertyShape ;
+    sh:node custodial_history_property_shapes:ch_hasCustodialHistory ;
+    # NON-VALIDATING
+    sh:name "Custodial event" ;
+    sh:description "A custodial 'event' includes both static and transitional conditions: e.g., a period of ownership and a purchase. It is not restricted by the general notion of 'event.'" ;
+    sh:group raremat_monograph_property_groups:ItemHistoryAndProvenancePropertyGroup ;
+    sh:order "0"^^xsd:int ;
+    tosh:editWidget swa:NestedObjectEditor ; 
+    
 
 ##### CUSTODIAL HISTORY #####
 
