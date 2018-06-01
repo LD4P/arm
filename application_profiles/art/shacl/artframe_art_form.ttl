@@ -7,6 +7,7 @@
 @prefix core: <http://vivoweb.org/ontology/core#> .
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix raremat_monograph_enclosure: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_enclosure/> .
 @prefix raremat_monograph_exhibition: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/> .
 @prefix gn: <http://www.geonames.org/ontology/> .
 @prefix gvp: <http://vocab.getty.edu/ontology#> .
@@ -260,7 +261,7 @@ artframe_art_form:WorkForm_bf_genreForm
  sh:nodeKind sh:IRI ;
  sh:or (
  [
- sh:hasValue http://id.loc.gov/authorities/genreForms ;
+ sh:hasValue <http://id.loc.gov/authorities/genreForms> ;
  ]
  [
  sh:hasValue <http://vocab.getty.edu/aat/> ;
@@ -387,8 +388,7 @@ artframe_art_form:WorkForm_arm_cites
       a sh:PropertyShape ;
       sh:path arm:cites ;
       sh:class bf:Work ;
-      sh:description "Visual citation : an artistic process/practice where a creator reproduces the totality or a
-      section of a (well-known) work of art to incorporate it a new visual creation." ;
+      sh:description "Visual citation : an artistic process/practice where a creator reproduces the totality or a section of a work of art to incorporate it in a new visual citation." ;
       sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "Cites" ;
       sh:order "2"^^xsd:int ;
@@ -398,14 +398,13 @@ artframe_art_form:WorkForm_arm_citedBy
       a sh:PropertyShape ;
       sh:path arm:citedBy ;
       sh:class bf:Work ;
-      sh:description "Visual citation : an artistic process/practice where a creator reproduces the totality or a
-      section of a (well-known) work of art to incorporate it a new visual creation." ;
+      sh:description "Visual citation : an artistic process/practice where a creator reproduces the totality or a section of a work of art to incorporate it in a new visual citation." ;
       sh:group artframe_art_property_groups:WorkToWorkPropertyGroup ;
       sh:name "Cited by" ;
       sh:order "3"^^xsd:int ;
       sh:nodeKind sh:IRI .  
 
-sh:property artframe_art_form:WorkForm_bf_expressionOf
+artframe_art_form:WorkForm_bf_expressionOf
       a sh:PropertyShape ;
       sh:path bf:expressionOf ;
       sh:class bf:Work ;
@@ -414,7 +413,7 @@ sh:property artframe_art_form:WorkForm_bf_expressionOf
       sh:order "4"^^xsd:int ;
       sh:nodeKind sh:IRI .
 
-sh:property artframe_art_form:WorkForm_bf_hasExpression
+artframe_art_form:WorkForm_bf_hasExpression
       a sh:PropertyShape ;
       sh:path bf:hasExpression ;
       sh:class bf:Work ;
@@ -567,7 +566,7 @@ artframe_art_form:WorkForm_rdau_P60312
       sh:order "21"^^xsd:int ;
       sh:nodeKind sh:IRI .
 
-Artframe_art_form:WorkForm_rdau_P60280 
+artframe_art_form:WorkForm_rdau_P60280 
       a sh:PropertyShape ;
       sh:path <http://rdaregistry.info/Elements/u/P60280> ;
       sh:class bf:Work ;
@@ -668,7 +667,7 @@ artframe_art_form:InstanceForm
 
 #InstanceCopyrightPropertyGroup
 
-  sh:property artframe_art_form:InstanceForm_bf_copyrightDate
+  sh:property artframe_art_form:InstanceForm_bf_copyrightDate ;
 
 #InstanceRelationshipsPropertyGroup
 
@@ -706,12 +705,12 @@ artframe_art_form:InstanceForm
 
 # InstanceOfWorkPropertyGroup
 
-  sh:property raremat_monograph_form:InstanceForm_Of ;
-  sh:property raremat_monograph_form:InstanceForm_bf_editionStatement ;
+  sh:property artframe_art_form:InstanceForm_Of ;
+  sh:property artframe_art_form:InstanceForm_bf_editionStatement ;
 
 # InstanceHasItemPropertyGroup
 
-  sh:property raremat_monograph_form:InstanceForm_bf_hasItem ;
+  sh:property artframe_art_form:InstanceForm_bf_hasItem ;
   sh:property artframe_art_form:InstanceForm_bf_note ;
   sh:property artframe_art_form:InstanceForm_bf_identifiedBy ;
   sh:property artframe_art_form:InstanceForm_arm_hasCitation .
@@ -752,7 +751,7 @@ artframe_art_form:InstanceForm_bf_carrier
   a sh:PropertyShape ;
   sh:path bf:carrier ;
   sh:class skos:Concept ;
-  sh:in ( <http://rdaregistry.info/termList/RDACarrierType/1049> <http://rdaregistry.info/termList/RDACarrierType/1059> <http://rdaregistry.info/termList/RDACarrierType/1045> <http://rdaregistry.info/termList/RDACarrierType/1040> <http://rdaregistry.info/termList/RDACarrierType/1018> <http://rdaregistry.info/termList/RDACarrierType/1047> <http://rdaregistry.info/termList/RDACarrierType/1048> ;
+  sh:in ( <http://rdaregistry.info/termList/RDACarrierType/1049> <http://rdaregistry.info/termList/RDACarrierType/1059> <http://rdaregistry.info/termList/RDACarrierType/1045> <http://rdaregistry.info/termList/RDACarrierType/1040> <http://rdaregistry.info/termList/RDACarrierType/1018> <http://rdaregistry.info/termList/RDACarrierType/1047> <http://rdaregistry.info/termList/RDACarrierType/1048> ) ;
   sh:group artframe_art_property_groups:InstanceTypePropertyGroup ;
   sh:name "Carrier type" ;
   sh:nodeKind sh:IRI ;
@@ -811,43 +810,43 @@ artframe_art_form:InstanceForm_activity_hasActivity sh:path activity:hasActivity
   tosh:editWidget swa:NestedObjectEditor ;
   sh:or (
           [  
-            activity:ArtCopyistActivity 
+            sh:class activity:ArtCopyistActivity ;
           ]
           [
-            activity:CollectorActivity 
+            sh:class activity:CollectorActivity ;
           ]
           [
-            activity:EngraverActivity 
+            sh:class activity:EngraverActivity ;
           ]
           [
-            activity:EtcherActivity 
+            sh:class activity:EtcherActivity ;
           ]
           [
-            activity:FacsimilistActivity 
+            sh:class activity:FacsimilistActivity ;
           ]
           [            
-            activity:LithographerActivity 
+            sh:class activity:LithographerActivity ;
           ]
           [
-            activity:PrintmakerActivity 
+            sh:class activity:PrintmakerActivity ;
           ]
           [
-            activity:PrinterActivity 
+            sh:class activity:PrinterActivity ;
           ]
           [
-            activity:ManufacturerActivity 
+            sh:class activity:ManufacturerActivity ;
           ]
           [
-            activity:PublisherActivity 
+            sh:class activity:PublisherActivity ;
           ]
           [
-            activity:ProducerActivity 
+            sh:class activity:ProducerActivity ;
           ]
           [
-            activity:PapermakerActivity 
+            sh:class activity:PapermakerActivity ;
           ]
           [
-            activity:StereotyperActivity 
+            sh:class activity:StereotyperActivity ;
           ] 
          ) .
 
@@ -927,7 +926,7 @@ artframe_art_form:InstanceForm_bf_referencedBy
          
 artframe_art_form:InstanceForm_rdau_P60297
       a sh:PropertyShape ;
-      sh:path <http://rdaregistry.info/Elements/u/P60297>
+      sh:path <http://rdaregistry.info/Elements/u/P60297> ;
       sh:class bf:Instance ;
       sh:description "Relates a resource to a resource that is used as a basis for a reproduction." ;
       sh:name "is reproduction of" ;
@@ -935,7 +934,7 @@ artframe_art_form:InstanceForm_rdau_P60297
 
 artframe_art_form:InstanceForm_rdau_P60272
       a sh:PropertyShape ;
-      sh:path <http://rdaregistry.info/Elements/u/P60272>
+      sh:path <http://rdaregistry.info/Elements/u/P60272> ;
       sh:class bf:Instance ;
       sh:description "Relates a resource to a resource that reproduces another resource." ;
       sh:name "is reproduced as" ;
@@ -943,7 +942,7 @@ artframe_art_form:InstanceForm_rdau_P60272
          
 artframe_art_form:InstanceForm_rdau_P60168
       a sh:PropertyShape ;
-      sh:path <http://rdaregistry.info/Elements/u/P60168>
+      sh:path <http://rdaregistry.info/Elements/u/P60168> ;
       sh:class bf:Instance ;
       sh:description "Relates a resource to a resource that reissues the same resource as a printed resource being described." ;
       sh:name "is reprint of" ;
@@ -951,7 +950,7 @@ artframe_art_form:InstanceForm_rdau_P60168
          
 artframe_art_form:InstanceForm_rdau_P60271
       a sh:PropertyShape ;
-      sh:path <http://rdaregistry.info/Elements/u/P60271>
+      sh:path <http://rdaregistry.info/Elements/u/P60271> ;
       sh:class bf:Instance ;
       sh:description "Relates a resource to a resource that reissues the same resource as a printed resource being described." ;
       sh:name "is reprinted as" ;
@@ -970,7 +969,6 @@ artframe_art_form:InstanceForm_bf_extent sh:path bf:extent ;
       sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup ;
       tosh:editWidget swa:NestedObjectEditor .
          
-#TODO: Add controlled illsutration vocabulary from http://id.loc.gov/vocabulary/millus.html
          
 artframe_art_form:InstanceForm_bf_illustrativeContent
     a sh:PropertyShape ;
@@ -1016,7 +1014,7 @@ artframe_art_form:InstanceForm_bf_polarity
 artframe_art_form:InstanceForm_measure_hasMeasurementGroup 
       a sh:PropertyShape ;
       sh:path measure:hasMeasurementGroup ;
-      sh:class meas:MeasurementGroup ;
+      sh:class measure:MeasurementGroup ;
       sh:group artframe_art_property_groups:InstancePhysicalDecriptionPropertyGroup ;
       sh:name "Instance measurement information" ;
       sh:nodeKind sh:IRI ;
