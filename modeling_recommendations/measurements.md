@@ -254,7 +254,7 @@ Whether or not the model is used in this way in our descriptions is an implement
 * **Measurements of specific arrangements of a resource.** As illustrated in Diagrams [5](#diagram-5) and [6](#diagram-6), when a MeasurementGroup applies to a specific arrangement of a resource, the model proposes that it
 is attached directly to the Arrangement and only indirectly to the resource itself. This creates an asymmetry between this and other scenarios, where the predicates hasMeasurementGroup/isMeasurementGroupOf link the MeasurementGroup
 directly to the Item, Instance, or other resource; this in turn results in non-uniform querying of these scenarios. One might propose an alternative model in which the MeasurementGroup is directly attached to the resource, 
-as in other cases, and linked to the Arrangement via some other suitable predicate with the semantics "measures arrangement of."  However, the Arrangement nevertheless _does_ need to attach directly to the resource, since it is a
+as in other cases, and linked to the Arrangement, either using hasMeasurementGroup again, or via some other suitable predicate with the semantics "measures arrangement of."  However, the Arrangement nevertheless _does_ need to attach directly to the resource, since it is a
 descriptor of the resource itself independent of any measurements. One could contemplate a triangular model in which each resource attaches directly (but redundantly) to _both_ of the others, as in [Diagram 7](#diagram-7). The larger research
 question is whether introducing redundancy into a model for the sake of maintaining uniform modeling and query patterns is preferable to maintaing non-uniform models to avoid redundancy, noting that redundancy creates data maintenance 
 problems.
