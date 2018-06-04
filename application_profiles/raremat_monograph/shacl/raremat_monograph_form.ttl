@@ -2972,8 +2972,8 @@ raremat_monograph_form:BibliographicCitationForm_arm_atLocation
 raremat_monograph_form:BibliographicCitationForm_rdf_value
     a sh:PropertyShape ;
     sh:path rdf:value ;
-    sh:name "Citation value" ;
-    sh:description "The value of the citation." ;
+    sh:name "Citation entry value" ;
+    sh:description "The value of the citation entry." ;
     sh:nodeKind sh:Literal ;
     sh:order "1"^^xsd:int .
     
