@@ -1,4 +1,5 @@
 @prefix aat: <http://vocab.getty.edu/aat/> .
+@prefix activity: <https://w3id.org/arm/core/activity/0.1/> .
 @prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
 @prefix artframe_art_property_groups: <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/> .
 @prefix award: <https://w3id.org/arm/award/ontology/0.1/> .
@@ -285,7 +286,7 @@ artframe_art_form:WorkForm_bf_classification
   sh:group artframe_art_property_groups:WorkSubjectGenreFormPropertyGroup ;
   sh:name "Classification" ;
   sh:nodeKind sh:IRI ;
-  sh:order "3" ^^xsd:decimal .
+  sh:order "3"^^xsd:decimal .
   
 artframe_art_form:WorkForm_bf_language 
   a sh:PropertyShape ;
@@ -662,7 +663,7 @@ artframe_art_form:InstanceForm
 
 # InstanceActivityPropertyGroup
 
-  sh:property artframe_art_form:InstanceForm_arm_hasActivity ;
+  sh:property artframe_art_form:InstanceForm_activity_hasActivity ;
   sh:property artframe_art_form:InstanceForm_bf_responsibilityStatement ;
 
 #InstanceCopyrightPropertyGroup
@@ -1112,7 +1113,7 @@ artframe_art_form:InstanceForm_bf_editionStatement
       a sh:PropertyShape ;
       sh:path bf:editionStatement ;
       sh:name "Edition statement or version of the resource" ;
-      sh:description: "Edition or version of the resource and associated statements of responsibility for the edition; usually transcribed." ;
+      sh:description "Edition or version of the resource and associated statements of responsibility for the edition; usually transcribed." ;
       sh:nodeKind sh:Literal ;
       sh:group artframe_art_property_groups:InstanceOfWorkPropertyGroup .
 
@@ -1146,23 +1147,21 @@ artframe_art_form:InstanceForm_bf_note
            sh:class arm:DescriptiveNote ;
          ]
          [
-           sh:class arm:LimitationNote
+           sh:class arm:LimitationNote ;
          ]
          [
-           sh:class arm:CaptionNote
+           sh:class arm:CaptionNote ;
          ]
          [
-           sh:class arm:InaccuracyNote
+           sh:class arm:InaccuracyNote ;
          ]
          [
-           sh:class arm:PreferredCitation
+           sh:class arm:PreferredCitation ;
          ]
          [
-           sh:class arm:RelatedMaterialNote
+           sh:class arm:RelatedMaterialNote ;
          ]
-        ) ;
-    ] ;
-    .
+        ) .
 # ///// PROPERTY SHAPES FOR InstanceBibliographicCitationPropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
 artframe_art_form:InstanceForm__arm_hasCitation 
@@ -1247,7 +1246,7 @@ sh:property artframe_art_form:ItemForm_arm_hasStylePeriod ;
 # ItemHistoryAndProvenancePropertyGroup
 ## add custodial history
 
-  sh:property artframe_art_formt_exhibition:ItemForm_arm_hasExhibition  ; 
+  sh:property raremat_monograph_exhibition:ItemForm_arm_hasExhibition  ; 
          
 # ItemNotePropertyGroup         
          
@@ -1304,7 +1303,7 @@ artframe_art_form:ItemForm_arm_hasActivity
   sh:order "0"^^xsd:decimal ;
   sh:group artframe_art_property_groups:ItemActivityPropertyGroup ;
   tosh:editWidget swa:NestedObjectEditor ;
-  ( 
+  sh:or ( 
         [
             sh:class activity:ColoristActivity ;
         ]
@@ -1326,7 +1325,7 @@ artframe_art_form:ItemForm_bf_genreForm
   sh:name "Form Genre" ;
   sh:nodeKind sh:IRI ;
   sh:order "0"^^xsd:decimal ;
-  artframe_shapes_art:lookup artframe_shapes_art:LD4LookupService .
+  artframe_art_form:lookup artframe_art_form:LD4LookupService .
   
 artframe_art_form:ItemForm_bf_genreForm_madsrdf_isMemberOfMADSScheme 
  a sh:PropertyShape ;
@@ -1528,11 +1527,8 @@ artframe_art_form:ItemForm_bf_note
          ]
          [
            sh:class bf:LimitationNote
-         ]
-         
-        ) ;
-    ] ;
-    .
+    ]
+) .
 # ///// PROPERTY SHAPES FOR ItemBibliographicCitationPropertyGroup START HERE. ///////
 
 artframe_art_form:ItemForm_arm_hasCitation 
@@ -1556,7 +1552,7 @@ artframe_art_form:ItemForm_bf_identifiedBy
             sh:class bf:ShelfMark ;
           ]
           [
-            sh:class arm:AccessionNumber> ;
+            sh:class arm:AccessionNumber ;
           ]
         ) ;
       sh:description "Identifiers for Items" ;
@@ -1577,11 +1573,11 @@ artframe_art_form:ArtWorkActivityForm
   rdfs:label "Agent Activity" ;
   sh:targetClass arm:Activity ;
   rdfs:subClassOf rdfs:Resource ;
-  sh:property artframe_shapes_art:ArtWorkActivityForm_rdf_type ;
-  sh:property artframe_shapes_art:ArtWorkActivityForm_bf_agent ;
-  sh:property artframe_shapes_art:ArtWorkActivityForm_arm_hasAttribution ;
-  sh:property artframe_shapes_art:ArtWorkActivityForm_bf_originDate ;
-  sh:property artframe_shapes_art:ArtWorkActivityForm_bf_originPlace ;
+  sh:property artframe_art_form:ArtWorkActivityForm_rdf_type ;
+  sh:property artframe_art_form:ArtWorkActivityForm_bf_agent ;
+  sh:property artframe_art_form:ArtWorkActivityForm_arm_hasAttribution ;
+  sh:property artframe_art_form:ArtWorkActivityForm_bf_originDate ;
+  sh:property artframe_art_form:ArtWorkActivityForm_bf_originPlace ;
   .
   
 artframe_art_form:ArtWorkWorkActivityForm_rdf_type 
@@ -1633,9 +1629,6 @@ artframe_art_form:ArtWorkActivityForm_arm_atLocation
       sh:nodeKind sh:IRI ;
       artframe_art_form:lookup artframe_art_form:LD4LookupService .
       
-.
-
-
       
 # /////// Instance Activity FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
@@ -1657,7 +1650,7 @@ artframe_art_form:ArtInstanceActivityForm_rdf_type
       sh:order "0" ;
       sh:description "Agent role or activity type" ;
       sh:name "Agent role" ;
-sh:class ( activity:ArtCopyistActivity activity:CollectorActivity activity:EngraverActivity activity:EtcherActivity activity:FacsimilistActivity activity:LithographerActivity activity:PrintmakerActivity activity:PrinterActivity activity:ManufacturerActivity activity:PublisherActivity activity:ProducerActivity activity:PapermakerActivity activity:StereotyperActivity ) ;
+sh:class ( activity:ArtCopyistActivity activity:CollectorActivity activity:EngraverActivity activity:EtcherActivity activity:FacsimilistActivity activity:LithographerActivity activity:PrintmakerActivity activity:PrinterActivity activity:ManufacturerActivity activity:PublisherActivity activity:ProducerActivity activity:PapermakerActivity activity:StereotyperActivity ) .
 
 artframe_art_form:ArtInstanceActivityForm_bf_agent 
       a sh:PropertyShape ;
@@ -1698,8 +1691,7 @@ artframe_art_form:ArtInstanceActivityForm_arm_atLocation
       sh:name "Location" ;
       sh:class gn:Feature ;
       sh:nodeKind sh:IRI ;
-      artframe_art_form:lookup bibliotek-o_shapes_audio:LD4LookupService .
-.
+      artframe_art_form:lookup artframe_art_form:LD4LookupService .
 
 # /////// Item Activity FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
@@ -1720,7 +1712,7 @@ artframe_art_form:ArtItemActivityForm_rdf_type
       sh:order "0" ;
       sh:description "Agent role or activity type" ;
       sh:name "Agent role" ;
-sh:class ( activity:ColoristActivity activity:PapermakerActivity activity:StereotyperActivity ) ;
+sh:class ( activity:ColoristActivity activity:PapermakerActivity activity:StereotyperActivity ) .
 
 artframe_art_form:ArtInstanceActivityForm_bf_agent 
       a sh:PropertyShape ;
@@ -1761,8 +1753,7 @@ artframe_art_form:ArtInstanceActivityForm_arm_atLocation
       sh:name "Location" ;
       sh:class gn:Feature ;
       sh:nodeKind sh:IRI ;
-      artframe_art_form:lookup bibliotek-o_shapes_audio:LD4LookupService .
-.
+      artframe_art_form:lookup artframe_art_form:LD4LookupService .
          
 # /////// Attribution FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
@@ -1833,18 +1824,9 @@ artframe_art_form:MeasurementGroupForm
   rdfs:label "Measurement Group Form" ;
   sh:description "A group of measurements, e.g. length, width, height measuring the size of a resource would be one measurement group" ;
   sh:targetClass measure:MeasurementGroup ;
-  sh:property artframe_shapes_art:MeasurementGroupForm_dcterms_description ;
-  sh:property artframe_shapes_art:MeasurementGroupForm_measure_hasMeasurement .
+  sh:property artframe_art_form:MeasurementGroupForm_dcterms_description ;
+  sh:property artframe_art_form:MeasurementGroupForm_measure_hasMeasurement .
   
-  
-artframe_art_form::MeasurementGroupForm_dcterms_description 
-      a sh:PropertyShape ;
-      sh:path dcterms:description ;
-      sh:description "Record any qualifying information about the measurement, e.g. 'approximate', 'or smaller', 'in container', 'with handle' " ;
-      sh:name "Qualifying information about the measurement" ;
-      sh:nodeKind sh:Literal ;
-      sh:order "0"^^xsd:decimal .
-    
 artframe_art_form:MeasurementGroupForm_measurement_hasMeasurement
       a sh:PropertyShape ;
       sh:path measure:hasMeasurement ;
@@ -1852,9 +1834,16 @@ artframe_art_form:MeasurementGroupForm_measurement_hasMeasurement
       sh:description "The measurement of a single aspect of a resource, including value, units, and the dimension measured. For example, a book may have a height (aspect) of 10 (value) centimeters (units). Each such measurement is attached to a MeasurementGroup." ;
       sh:name "Single measurement" ;
       sh:nodeKind sh:IRI ;
-      sh:order "1"^^xsd:decimal ;
+      sh:order "0"^^xsd:decimal ;
       tosh:editWidget swa:NestedObjectEditor .
-
+  
+artframe_art_form:MeasurementGroupForm_dcterms_description 
+      a sh:PropertyShape ;
+      sh:path dcterms:description ;
+      sh:description "Record any qualifying information about the measurement, e.g. 'approximate', 'or smaller', 'in container', 'with handle'" ;
+      sh:name "Qualifying information about the measurement" ;
+      sh:nodeKind sh:Literal ;
+      sh:order "1"^^xsd:decimal .
 
 
 # /////// Measurement FORM BEGINS HERE ////////////////////////////////////////////////////////////
@@ -1864,7 +1853,7 @@ artframe_art_form:MeasurementForm
   rdfs:label "Measurement form" ;
   sh:targetClass measure:Measurement ;
   rdfs:subClassOf rdfs:Resource ;
-  sh:property artframe_shapes_art:MeasurementForm_rdf_value .
+  sh:property artframe_art_form:MeasurementForm_rdf_value .
   
     
 artframe_art_form:MeasurementForm_rdf_value 
@@ -1991,8 +1980,7 @@ artframe_art_form:NoteForm
   rdfs:subClassOf rdfs:Resource ;
   sh:targetClass bf:Note ;
   sh:property artframe_art_form:NoteForm_rdf_type ;
-  sh:property artframe_shapes_art:NoteForm_rdf_value ;
-  .
+  sh:property artframe_art_form:NoteForm_rdf_value .
   
 artframe_art_form:NoteForm_rdf_type 
       a sh:PropertyShape ;
@@ -2019,8 +2007,8 @@ artframe_art_form:PaginationFoliationForm
   rdfs:label "Pagination and foliation form" ;
   rdfs:subClassOf rdfs:Resource ;
   sh:targetClass arm:PaginationFoliation ;
-  sh:property artframe_shapes_art:NoteForm_rdf_value ;
-  sh:property artframe_shapes_art:NoteForm_dcterms_description ;
+  sh:property artframe_art_form:NoteForm_rdf_value ;
+  sh:property artframe_art_form:NoteForm_dcterms_description ;
   .  
 
 artframe_art_form:PaginationFoliationForm_rdf_value 
@@ -2043,11 +2031,11 @@ artframe_art_form:AwardReceiptForm
   rdf:type sh:NodeShape ;
   rdfs:label "Award receipt" ;
   sh:targetClass award:AwardReceipt ;
-  sh:property artframe_shapes_art:AwardReceiptForm_rdf_type ;
-  sh:property artframe_shapes_art:AwardReceiptForm_award_hasAward ;
-  sh:property artframe_shapes_art:AwardReceiptForm_bf_date ;
-  sh:property artframe_shapes_art:AwardReceiptForm_activity_hasActivity ; 
-  .  
+  sh:property artframe_art_form:AwardReceiptForm_rdf_type ;
+  sh:property artframe_art_form:AwardReceiptForm_award_hasAward ;
+  sh:property artframe_art_form:AwardReceiptForm_bf_date ;
+  sh:property artframe_art_form:AwardReceiptForm_activity_hasActivity ;
+.
 
 artframe_art_form:AwardReceiptForm_rdf_type 
       a sh:PropertyShape ;
@@ -2159,8 +2147,7 @@ artframe_art_form:AwardForm
   rdfs:label "Award" ;
   rdfs:subClassOf rdfs:Resource ;
   sh:targetClass vivo:Award ;
-  sh:property artframe_shapes_art:AwardForm_rdfs_label .
-.
+  sh:property artframe_art_form:AwardForm_rdfs_label .
 
 artframe_art_form:AwardForm_rdfs_label 
       a sh:PropertyShape ;
@@ -2578,8 +2565,8 @@ artframe_art_form:TitleNoteForm
   rdfs:label "Title form" ;
   rdfs:subClassOf rdfs:Resource ;
   sh:targetClass <http://id.loc.gov/ontologies/bibframe/Title> ;
-  sh:property artframe_shapes_art:TitleNoteForm_rdf_type ;
-  sh:property artframe_shapes_art:TitleNoteForm_rdf_value ;
+  sh:property artframe_art_form:TitleNoteForm_rdf_type ;
+  sh:property artframe_art_form:TitleNoteForm_rdf_value ;
   .
 
 artframe_art_form:TitleNoteForm_rdf_type 
@@ -2640,49 +2627,3 @@ artframe_art_form:MaterialForm_crm_P2_has_type_skos_inScheme
       sh:name "AAT Material Terms" ;
       skos:editorialNote "Use look up service; AAT materials is too big to load directly into an RDF editor, or list out in the SHACL" .
       
-# /////// Font FORM BEGINS HERE ////////////////////////////////////////////////////////////
-
-artframe_art_form:FontForm
-  rdf:type sh:NodeShape ;
-  rdfs:label "Font form" ;
-  rdfs:subClassOf rdfs:Resource ;
-  sh:targetClass <http://example.org/Font> ;
-  sh:property artframe_shapes_art:FontForm_arm_hasTypeface ;
-  sh:property artframe_shapes_art:FontForm_measure_hasMeasurement ;
-  sh:property artframe_shapes_art:FontForm_arm_hasStyle ;
-  .
-
-# TODO add individuals of Typeface
-  
-artframe_art_form:FontForm_arm_hasTypeface
-      a sh:PropertyShape ;
-      sh:path arm:hasTypeface ;
-      sh:order "0"^^xsd:decimal ;
-      sh:class <http://example.org/Typeface> ;
-      sh:nodeKind sh:IRI ;
-      sh:name "Has typeface" ;
-      sh:description "A design or font family created by a typographer or type designer. It defines specific stylistic features to determine the type display of a writing system." .
-      
-artframe_art_form:FontForm_measure_hasMeasurement 
-      a sh:PropertyShape ;
-      sh:path measure:hasMeasurement ;
-      sh:order "1"^^xsd:decimal ;
-      sh:class <http://example.org/Measurement> ;
-      sh:nodeKind sh:IRI ;
-      sh:name "Font size" ;
-      tosh:editWidget swa:NestedObjectEditor ;
-      sh:description "Measurement of the font" .
-      
-artframe_art_form:FontForm_arm_hasStyle 
-      a sh:PropertyShape ;
-      sh:path arm:hasStyle ;
-      sh:order "2"^^xsd:decimal ;
-      sh:in ( <http://vocab.getty.edu/aat/300194460> <http://vocab.getty.edu/aat/300202391> ) ;
-      sh:nodeKind sh:IRI ;
-      sh:name "Typeface style" ;
-      sh:description "Styles include bold, italic, etc. A resource may have more than one style; e.g., a font may be both bold and italic, by repeating the style field on a particular font" .
-
-# /////// Font FORM BEGINS HERE ////////////////////////////////////////////////////////////
-
-# TODO ^^^^^^^^^^^^^^
-
