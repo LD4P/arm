@@ -1019,7 +1019,7 @@ artframe_art_form:InstanceForm_measure_hasMeasurementGroup
       sh:name "Instance measurement information" ;
       sh:nodeKind sh:IRI ;
       sh:order "5"^^xsd:decimal ;
-      tosh:editWidget swa:NestedObjectEditor 
+      tosh:editWidget swa:NestedObjectEditor .
             
 artframe_art_form:InstanceForm_arm_hasMaterial 
       a sh:PropertyShape ;
@@ -1337,7 +1337,7 @@ artframe_art_form:ItemForm_bf_genreForm_madsrdf_isMemberOfMADSScheme
  sh:nodeKind sh:IRI ;
  sh:or (
  [
- sh:hasValue http://id.loc.gov/authorities/genreForms ;
+ sh:hasValue <http://id.loc.gov/authorities/genreForms> ;
  ]
  [
  sh:hasValue <http://vocab.getty.edu/aat/> ;
