@@ -2924,7 +2924,8 @@ raremat_monograph_form:BibliographicCitationForm_arm_hasSource
     a sh:PropertyShape ;
     sh:path arm:hasSource ;
     sh:class arm:Entry ;
-    sh:description "Entry source of the citation" ;
+    sh:name "Entry" ;
+    sh:description "Entry of the citation from a particular source" ;
     tosh:editWidget swa:NestedObjectEditor ;
     sh:nodeKind sh:IRI ;
     sh:order "0"^^xsd:int .
@@ -2963,7 +2964,7 @@ raremat_monograph_form:BibliographicCitationForm_arm_atLocation
             sh:class bf:Instance ;
         ]
       ) ;
-    sh:name "Entry source" ;
+    sh:name "Source" ;
     sh:description "Location where the citation entry was found" ;
     tosh:editWidget swa:NestedObjectEditor ;
     sh:nodeKind sh:IRI ;
