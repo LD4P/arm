@@ -2923,9 +2923,22 @@ raremat_monograph_form:BibliographicCitationForm
 raremat_monograph_form:BibliographicCitationForm_arm_hasSource
     a sh:PropertyShape ;
     sh:path arm:hasSource ;
-    sh:class arm:Entry ;
-    sh:name "Entry" ;
-    sh:description "Entry of the citation from a particular source" ;
+    sh:or (
+        [
+            sh:class arm:Entry ;
+        ]
+        [
+            sh:class arm:Page ;
+        ]
+        [
+            sh:class arm:Volume ;
+        ]
+        [
+            sh:class bf:Instance ;
+        ]
+      ) ;
+    sh:name "Citation source" ;
+    sh:description "Citation source, either an Entry, Page, Volume, Instance of where a citation was found." ;
     tosh:editWidget swa:NestedObjectEditor ;
     sh:nodeKind sh:IRI ;
     sh:order "0"^^xsd:int .
