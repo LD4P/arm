@@ -1191,7 +1191,6 @@ artframe_art_form:InstanceForm_bf_identifiedBy
 artframe_art_form:ItemForm
   rdf:type sh:NodeShape ;
   rdfs:label "Item of Art Work" ;
-  rdfs:subClassOf rdfs:Resource ;
   sh:targetClass bf:Item ;
          
 # ItemTitlePropertyGroup
