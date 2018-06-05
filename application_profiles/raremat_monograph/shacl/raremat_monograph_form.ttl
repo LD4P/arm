@@ -2335,7 +2335,7 @@ raremat_monograph_form:AwardReceiptForm
 raremat_monograph_form:AwardReceiptForm_rdf_type 
     a sh:PropertyShape ;
     sh:path rdf:type ;
-    sh:description "Sequential numbering of individual leaves, plates, pages (numbering on both sides), or columns (used as a sequence of numbering) of a resource." ;
+    sh:description "The type of award receipt, e.g. honorable mention, short list, Nominee." ;
     sh:name "Type of Award Receipt" ;
     sh:order "0"^^xsd:int ;
     sh:in ( award:AwardWinner award:AwardNominee award:AwardHonoraryMention award:AwardCitation award:AwardLonglist award:AwardShortlist ) ;
