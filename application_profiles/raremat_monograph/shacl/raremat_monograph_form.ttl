@@ -1390,7 +1390,7 @@ raremat_monograph_form:InstanceForm_arm_hasMaterial
     tosh:editWidget swa:NestedObjectEditor .
 
 
-raremat_monograph_form:InstanceForm__rdau_P60596 
+raremat_monograph_form:InstanceForm_rdau_P60596 
     a sh:PropertyShape ;
     sh:path rdau:P60596 ;
     sh:class crm:E57_Material ;
