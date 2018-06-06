@@ -1898,7 +1898,7 @@ raremat_monograph_form:ItemForm_measure_hasMeasurementGroup
     sh:path measure:hasMeasurementGroup ;
     sh:class measure:MeasurementGroup ;
     sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;
-    sh:name "Instance measurement information" ;
+    sh:name "Item measurement information" ;
     sh:nodeKind sh:IRI ;
     sh:order "8"^^xsd:int ;
     tosh:editWidget swa:NestedObjectEditor .
