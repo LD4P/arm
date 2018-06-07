@@ -637,7 +637,6 @@ artframe_art_form:WorkForm_bf_version
 # /////// INSTANCE FORM BEGINS HERE ///////////////////////////////////////////////////////////////////////////////
 
 
-
 artframe_art_form:InstanceForm
   rdf:type sh:NodeShape ;
   rdfs:label "Instance of Art Work" ;
@@ -1249,6 +1248,11 @@ sh:property artframe_art_form:ItemForm_arm_hasStylePeriod ;
 # ItemIdentifierPropertyGroup         
          
   sh:property artframe_art_form:ItemForm_bf_identifiedBy ;
+
+# ItemHoldingsPropertyGroup   
+
+  sh:property artframe_art_form:ItemForm_bf_heldBy ;
+  sh:property artframe_art_form:ItemForm_bf_electronicLocator_rdf_value ;
   .
          
 # ///// PROPERTY SHAPES FOR ItemOfInstance PropertyGroup START HERE. /////////////////////////////////////////////////////////////      
@@ -1568,6 +1572,27 @@ artframe_art_form:ItemForm_bf_identifiedBy
 
 # ItemForm_arm_hasCustodialHistory Property Shape belongs at this point in the form sequence.
 
+# ///// PROPERTY SHAPES FOR ItemHoldings PropertyGroup START HERE. /////////////////////////////////////////////////////////////
+
+artframe_art_form:ItemForm_bf_heldBy
+  a sh:PropertyShape ;
+  sh:path bf:heldBy ;
+  sh:class bf:Agent ;
+  tosh:editWidget swa:NestedObjectEditor ;
+  sh:description "Entity holding the item or from which it is available." ;
+  sh:group artframe_art_property_groups:ItemHoldingsPropertyGroup ;
+  sh:name "Held by" ;
+  sh:nodeKind sh:IRI ;
+  sh:order "0"^^xsd:decimal .
+
+artframe_art_form:ItemForm_bf_electronicLocator 
+  a sh:PropertyShape ;
+  sh:path bf:electronicLocator ;
+  sh:description "Electronic location from which the resource is available." ;
+  sh:group artframe_art_property_groups:ItemHoldingsPropertyGroup ;
+  sh:name "Electronic location" ;
+  sh:nodeKind sh:IRI ;
+ sh:order "1"^^xsd:decimal .
 
 # /////// Work Activity FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
@@ -2121,10 +2146,10 @@ artframe_art_form:WorkTitleForm_bf_status
       a sh:PropertyShape ;
       sh:path bf:Status ;
       sh:in ( <https://w3id.org/arm/core/vocabularies/status/0.1/cancelled> <https://w3id.org/arm/core/vocabularies/status/0.1/current> <https://w3id.org/arm/core/vocabularies/status/0.1/deprecated> <https://w3id.org/arm/core/vocabularies/status/0.1/invalid> ) ;
-      sh:description "The place from which this title originates, such as spine, cover, container, etc." ;
+      sh:description "The status of the title, e.g. cancelled or current." ;
       sh:order "7"^^xsd:int ;
       sh:nodeKind sh:IRI ;
-      sh:name "Title origin" .
+      sh:name "Title status" .
          
       
 artframe_art_form:WorkTitleForm_arm_titleOf 
@@ -2298,10 +2323,10 @@ artframe_art_form:InstanceTitleForm_bf_status
       a sh:PropertyShape ;
       sh:path bf:Status ;
       sh:in ( <https://w3id.org/arm/core/vocabularies/status/0.1/cancelled> <https://w3id.org/arm/core/vocabularies/status/0.1/current> <https://w3id.org/arm/core/vocabularies/status/0.1/deprecated> <https://w3id.org/arm/core/vocabularies/status/0.1/invalid> ) ;
-      sh:description "The place from which this title originates, such as spine, cover, container, etc." ;
+      sh:description "The status of the title, e.g. cancelled or current." ;
       sh:order "8"^^xsd:int ;
       sh:nodeKind sh:IRI ;
-      sh:name "Title origin" .
+      sh:name "Title status" .
       
 artframe_art_form:InstanceTitleForm_arm_titleOf 
       a sh:PropertyShape ;
@@ -2454,10 +2479,10 @@ artframe_art_form:ItemTitleForm_bf_status
       a sh:PropertyShape ;
       sh:path bf:Status ;
       sh:in ( <https://w3id.org/arm/core/vocabularies/status/0.1/cancelled> <https://w3id.org/arm/core/vocabularies/status/0.1/current> <https://w3id.org/arm/core/vocabularies/status/0.1/deprecated> <https://w3id.org/arm/core/vocabularies/status/0.1/invalid> ) ;
-      sh:description "The place from which this title originates, such as spine, cover, container, etc." ;
+      sh:description "The status of the title, e.g. cancelled or current ;
       sh:order "7"^^xsd:int ;
       sh:nodeKind sh:IRI ;
-      sh:name "Title origin" .
+      sh:name "Title status" .
       
 artframe_art_form:ItemTitleForm_arm_titleOf 
       a sh:PropertyShape ;
@@ -2890,26 +2915,26 @@ artframe_art_form:PhysicalConditionForm_seq_follows
     sh:order "4"^^xsd:int .
     
 # /////// Work Identifier FORM BEGINS HERE ////////////////////////////////////////////////////////////
-## Identifier work level identifiers for art work
 
 artframe_art_form:WorkIdentifierForm
     rdf:type sh:NodeShape ;
     rdfs:label "Work Identifier" ;
     sh:targetClass bf:Identifier ;
-    sh:property raremat_monograph_form:WorkIdentifierForm_rdf_type ;
-    sh:property raremat_monograph_form:WorkIdentifierForm_rdf_value ;
+    sh:property artframe_art_form:WorkIdentifierForm_rdf_type ;
+    sh:property artframe_art_form:WorkIdentifierForm_rdf_value ;
+    sh:property artframe_art_form:WorkIdentifierForm_bf_status ;
+    sh:property artframe_art_form:WorkIdentifierForm_bf_date ;
+    sh:property artframe_art_form:WorkIdentifierForm_arm_hasSource ;
 .
-
-## Identify Work identifier types for art
 
 artframe_art_form:WorkIdentifierForm_rdf_type 
     a sh:PropertyShape ;
     sh:path rdf:type ;
     sh:name "Type of Identifier" ;
     sh:order "0"^^xsd:int ;
-    sh:in ( bf:Identifier bf:Iswc bf:Istc bf:DissertationIdentifier ) ;
+    sh:class bf:Identifier ;
     sh:minCount "1" .     
-
+                                                                                                 
 artframe_art_form:WorkIdentifierForm_rdf_value 
     a sh:PropertyShape ;
     sh:path rdf:value ;
@@ -2919,9 +2944,47 @@ artframe_art_form:WorkIdentifierForm_rdf_value
     sh:name "Identifier value" ;
     sh:order "1"^^xsd:int ;
     sh:nodeKind sh:Literal .
+                                                                                                 
+artframe_art_form:WorkIdentifierForm_bf_status 
+      a sh:PropertyShape ;
+      sh:path bf:Status ;
+      sh:in ( <https://w3id.org/arm/core/vocabularies/status/0.1/cancelled> <https://w3id.org/arm/core/vocabularies/status/0.1/current> <https://w3id.org/arm/core/vocabularies/status/0.1/deprecated> <https://w3id.org/arm/core/vocabularies/status/0.1/invalid> ) ;
+      sh:description "The status of the identifier, cancelled, current, etc." ;
+      sh:order "2"^^xsd:int ;
+      sh:nodeKind sh:IRI ;
+      sh:name "Identifier status" .    
+                                                                                                 
+artframe_art_form:WorkIdentifierForm_bf_date 
+      a sh:PropertyShape ;
+      sh:path bf:date;
+      sh:order "3" ;
+      sh:maxCount "1" ;
+      sh:description "Dates associated with the identifier. Recommended to use EDTF format" ;
+      sh:name "Date" ;
+      sh:nodeKind sh:Literal .
 
+artframe_art_form:WorkIdentifierForm_arm_hasSource
+    a sh:PropertyShape ;
+    sh:path rdf:value ;
+    sh:minCount "1" ;
+    sh:maxCount "1" ;
+    sh:description "Source of the identifier" ;
+    sh:name "Identifier source" ;
+    sh:order "4"^^xsd:int ;
+    sh:or (
+        [
+             sh:class bf:Work ;
+        ]
+        [
+             sh:class bf:Instance ;
+        ]
+        [
+             sh:class bf:Agent ;
+        ] 
+      ) ;
+sh:nodeKind sh:IRI .
 
-# The following PropertyShape is not a field in the Work Identifier form. It simply binds this Identifier form to bf:Texts
+# The following PropertyShape is not a field in the Instance Identifier form. It simply binds this Identifier form to bf:Work
 
 artframe_art_form:WorkIdentifierForm_bf_identifies
     a sh:PropertyShape ;
@@ -2929,8 +2992,8 @@ artframe_art_form:WorkIdentifierForm_bf_identifies
     sh:minCount "1" ;
     sh:maxCount "1" ;
     sh:description "The work this identifier identifies" ;
-    sh:name "Work identified" ;
-    sh:class bf:Text .
+    sh:name "Instance identified" ;
+    sh:class bf:Work .
     
 # /////// Instance Identifier FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
@@ -2940,13 +3003,15 @@ artframe_art_form:InstanceIdentifierForm
     sh:targetClass bf:Identifier ;
     sh:property artframe_art_form:InstanceIdentifierForm_rdf_type ;
     sh:property artframe_art_form:InstanceIdentifierForm_rdf_value ;
+    sh:property artframe_art_form:InstanceIdentifierForm_bf_status ;
+    sh:property artframe_art_form:InstanceIdentifierForm_bf_date ;
+    sh:property artframe_art_form:InstanceIdentifierForm_arm_hasSource ;
     .
-## Identify identifier types for art instance
 
 artframe_art_form:InstanceIdentifierForm_rdf_type 
     a sh:PropertyShape ;
     sh:path rdf:type ;
-    sh:in ( bf:Identifier bf:Isbn bf:Coden bf:CopyrightNumber bf:Fingerprint bf:Ismn bf:Iso bf:Istc bf:Lccn bf:Local bf:Nbn arm:OclcNumber bf:PublisherNumber bf:ReportNumber bf:Strn ) ;
+    sh:in ( bf:Identifier bf:Local arm:OclcNumber bf:PublisherNumber bf:StockNumber ) ;
     sh:name "Type of Identifier" ;
     sh:order "0"^^xsd:int ;
     sh:minCount "1" .     
@@ -2960,6 +3025,45 @@ artframe_art_form:InstanceIdentifierForm_rdf_value
     sh:name "Identifier value" ;
     sh:order "1"^^xsd:int ;
     sh:nodeKind sh:Literal .
+                                                                                                 
+artframe_art_form:InstanceIdentifierForm_bf_status 
+      a sh:PropertyShape ;
+      sh:path bf:Status ;
+      sh:in ( <https://w3id.org/arm/core/vocabularies/status/0.1/cancelled> <https://w3id.org/arm/core/vocabularies/status/0.1/current> <https://w3id.org/arm/core/vocabularies/status/0.1/deprecated> <https://w3id.org/arm/core/vocabularies/status/0.1/invalid> ) ;
+      sh:description "The status of the identifier, cancelled, current, etc." ;
+      sh:order "2"^^xsd:int ;
+      sh:nodeKind sh:IRI ;
+      sh:name "Identifier status" .                                                                                                  
+                                                                                                 
+artframe_art_form:InstanceIdentifierForm_bf_date 
+      a sh:PropertyShape ;
+      sh:path bf:date;
+      sh:order "3" ;
+      sh:maxCount "1" ;
+      sh:description "Dates associated with the identifier. Recommended to use EDTF format" ;
+      sh:name "Date" ;
+      sh:nodeKind sh:Literal .
+                                                                                                 
+artframe_art_form:InstanceIdentifierForm_arm_hasSource
+    a sh:PropertyShape ;
+    sh:path rdf:value ;
+    sh:minCount "1" ;
+    sh:maxCount "1" ;
+    sh:description "Source of the identifier" ;
+    sh:name "Identifier source" ;
+    sh:order "4"^^xsd:int ;
+    sh:or (
+        [
+             sh:class bf:Work ;
+        ]
+        [
+             sh:class bf:Instance ;
+        ]
+        [
+             sh:class bf:Agent ;
+        ] 
+      ) ;
+sh:nodeKind sh:IRI .
 
 
 # The following PropertyShape is not a field in the Instance Identifier form. It simply binds this Identifier form to bf:Instance
@@ -2981,6 +3085,9 @@ artframe_art_form:ItemIdentifierForm
     sh:targetClass bf:Identifier ;
     sh:property artframe_art_form:ItemIdentifierForm_rdf_type ;
     sh:property artframe_art_form:ItemIdentifierForm_rdf_value ;
+    sh:property artframe_art_form:ItemIdentifierForm_bf_status ;
+    sh:property artframe_art_form:ItemIdentifierForm_bf_date ;
+    sh:property artframe_art_form:ItemIdentifierForm_arm_hasSource ;
     .
 ## Identify item level identifier types for art
 artframe_art_form:ItemIdentifierForm_rdf_type 
@@ -2988,7 +3095,7 @@ artframe_art_form:ItemIdentifierForm_rdf_type
     sh:path rdf:type ;
     sh:name "Type of Identifier" ;
     sh:order "0"^^xsd:int ;
-    sh:in ( bf:Identifier bf:ShelfMark arm:AccessionNumber bf:Barcode bf:Local ) ;
+    sh:in ( bf:Identifier bf:ShelfMark arm:AccessionNumber bf:Local ) ;
     sh:minCount "1" .
 
 artframe_art_form:ItemIdentifierForm_rdf_value 
@@ -3000,7 +3107,45 @@ artframe_art_form:ItemIdentifierForm_rdf_value
     sh:name "Identifier value" ;
     sh:order "1"^^xsd:int ;
     sh:nodeKind sh:Literal .
+                                                                                                 
+artframe_art_form:ItemIdentifierForm_bf_status 
+      a sh:PropertyShape ;
+      sh:path bf:Status ;
+      sh:in ( <https://w3id.org/arm/core/vocabularies/status/0.1/cancelled> <https://w3id.org/arm/core/vocabularies/status/0.1/current> <https://w3id.org/arm/core/vocabularies/status/0.1/deprecated> <https://w3id.org/arm/core/vocabularies/status/0.1/invalid> ) ;
+      sh:description "The status of the identifier, cancelled, current, etc." ;
+      sh:order "2"^^xsd:int ;
+      sh:nodeKind sh:IRI ;
+      sh:name "Identifier status" .                                                                                                 
 
+ artframe_art_form:ItemIdentifierForm_bf_date 
+      a sh:PropertyShape ;
+      sh:path bf:date;
+      sh:order "3" ;
+      sh:maxCount "1" ;
+      sh:description "Dates associated with the identifier. Recommended to use EDTF format" ;
+      sh:name "Date" ;
+      sh:nodeKind sh:Literal .                                                                                                
+
+artframe_art_form:ItemIdentifierForm_arm_hasSource
+    a sh:PropertyShape ;
+    sh:path rdf:value ;
+    sh:minCount "1" ;
+    sh:maxCount "1" ;
+    sh:description "Source of the identifier" ;
+    sh:name "Identifier source" ;
+    sh:order "4"^^xsd:int ;
+    sh:or (
+        [
+             sh:class bf:Work ;
+        ]
+        [
+             sh:class bf:Instance ;
+        ]
+        [
+             sh:class bf:Agent ;
+        ] 
+      ) ;
+sh:nodeKind sh:IRI .
 
 # The following PropertyShape is not a field in the Item Identifier form. It simply binds this Identifier form to bf:Item
 
