@@ -190,8 +190,8 @@
     a sh:PropertyShape ;
     sh:node custodial_history_property_shapes:rdfs_label ;
     # NON-VALIDATING
-    sh:name "Custodial event name" ;
-    sh:description "Optionally specify a name for the custodial event." ;
+    sh:name "Custodial event name or label" ;
+    sh:description "Specify a name or label for the custodial event." ;
     sh:order "25"^^xsd:int ;
     . 
        
