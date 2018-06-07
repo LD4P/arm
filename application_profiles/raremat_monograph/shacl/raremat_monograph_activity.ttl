@@ -72,7 +72,7 @@
     sh:maxCount 1 ;
     # NON-VALIDATING
     sh:name "Date" ;
-    sh:description "Date of the activity. Recommended to use EDTF format" ;
+    sh:description "Date of the activity. EDTF format recommended." ;
     sh:order "40"^^xsd:int ;
     .
       

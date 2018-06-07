@@ -232,7 +232,7 @@
     sh:maxCount 1 ;
     # NON-VALIDATING
     sh:name "Date" ;
-    sh:description "Date or date interval of the custodial event. Recommended to use EDTF format." ;
+    sh:description "Date or date interval of the custodial event. EDTF format recommended." ;
     sh:order "40"^^xsd:int ;
     .
 
