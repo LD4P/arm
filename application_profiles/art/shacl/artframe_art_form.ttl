@@ -980,12 +980,12 @@ artframe_art_form:InstanceForm_bf_illustrativeContent
 artframe_art_form:InstanceForm_bf_colorContent 
       a sh:PropertyShape ;
       sh:path bf:colorContent ;
-      sh:in ( <http://rdaregistry.info/termList/RDAColourContent/1002> <http://rdaregistry.info/termList/RDAColourContent/1003> aat:300129361 aat:300130602 aat:300127490 aat:300128438 aat:300128307 aat:300126734 aat:300124707 aat:300130257 aat:300126225 aat:300127794 aat:300127809 aat:300128385 ) ;
+      sh:class skos:Concept
       sh:name "Color content" ;
       sh:order "2"^^xsd:decimal ;
       sh:description "Color characteristics, e.g., black and white, multicolored." ;
       sh:group artframe_art_property_groups:InstancePhysicalDescriptionPropertyGroup .
-         
+
 artframe_art_form:InstanceForm_bf_soundContent 
       a sh:PropertyShape ;
       sh:path bf:soundContent ;
