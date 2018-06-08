@@ -2728,6 +2728,43 @@ artframe_art_form:CarrierForm_arm_carries
     sh:description "Items on this carrier" ;
 .
 
+#   /////// ColorContent FORM BEGINS HERE ////////////////////////////////////////////////////////////                                                                                            
+
+artframe_art_form:ColorContentForm
+  rdf:type sh:NodeShape ;
+  rdfs:label "ColorContent form" ;
+  sh:targetClass bf:ColorContent ;
+  sh:property artframe_art_form:ColorContentForm_crm_P2_has_type ;
+  .         
+
+artframe_art_form:ColorContentForm_crm_P2_has_type 
+      a sh:PropertyShape ;
+      sh:path crm:P2_has_type ;
+      sh:order "0"^^xsd:int ;
+      sh:class skos:Concept ;
+      sh:nodeKind sh:IRI ;
+      sh:name "Color content type" .
+
+## The following sh:path ( crm:P2_has_type gvp:broaderExtended ) isn't meant to be a field in the form, but rather state a restriction on the use of crm:P2_has_type to skos:Concepts in AAT's Color Hierarchy. 
+  
+artframe_art_form:ColorContentForm_crm_P2_has_type_gvp_broaderExtended 
+    a sh:PropertyShape ;
+    sh:path ( crm:P2_has_type gvp:broaderExtended ) ;
+    sh:hasValue aat:300131647 ;
+    sh:description "Values for colors taken from http://vocab.getty.edu/page/aat/300131647 (AAT's color hierarchy)" ;
+    sh:name "AAT Color Terms" ;
+    skos:editorialNote "Use look up service; AAT materials is too big to load directly into an RDF editor, or list out in the SHACL" .
+                                                                                            
+# The following sh:path crm:P2_has_type/skos:inScheme isn't meant to be a field in the form, but rather state a restriction on the use of crm:P2_has_type to skos:Concepts in AAT. 
+  
+artframe_art_form:MaterialForm_crm_P2_has_type_skos_inScheme 
+      a sh:PropertyShape ;
+      sh:path crm:P2_has_type ;
+      sh:hasValue <http://vocab.getty.edu/aat/> ;
+      sh:description "Values for materials taken are to be taken from AAT." ;
+      sh:name "AAT Material Terms" ;
+      skos:editorialNote "Use look up service; AAT materials is too big to load directly into an RDF editor, or list out in the SHACL" .                                                                                            
+
 # /////// Material FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
 artframe_art_form:MaterialForm
@@ -2799,7 +2836,7 @@ artframe_art_form:MarkingForm_arm_hasActivity
     sh:order "2"^^xsd:int ;
     tosh:editWidget swa:NestedObjectEditor ;
     sh:class activity:CreatorActivity .
-
+                                                                                                 
 # /////// Marking Activity FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
 artframe_art_form:MarkingActivityForm
@@ -2808,8 +2845,8 @@ artframe_art_form:MarkingActivityForm
     sh:targetClass activity:CreatorActivity ;
     sh:property artframe_art_form:MarkingActivityForm_bf_agent ;
     sh:property artframe_art_form:MarkingActivityForm_bf_date ;
-    sh:property raremat_monograph_form:MarkingActivityForm_bf_place ;
-    sh:property raremat_monograph_form:MarkingActivityForm_activity_isActivityOf ;
+    sh:property artframe_art_form:MarkingActivityForm_bf_place ;
+    sh:property artframe_art_form:MarkingActivityForm_activity_isActivityOf ;
     .
 
 artframe_art_form:MarkingActivityForm_bf_agent 
