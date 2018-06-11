@@ -9,9 +9,9 @@
                        rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1.0</owl:versionInfo>
       <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
       <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-      <rdfs:label xml:lang="en">RBMS Relationship_designators Vocabulary</rdfs:label>
-      <dcterms:title xml:lang="en">RBMS Relationship_designators Vocabulary</dcterms:title>
-      <skos:definition xml:lang="en">The RBMS Relationship_designators Vocabulary is a controlled vocabulary maintained by the Rare Books and Manuscripts Section of the Association of College and Research Libraries.</skos:definition>
+      <rdfs:label xml:lang="en">RBMS Relationship Designators Vocabulary</rdfs:label>
+      <dcterms:title xml:lang="en">RBMS Relationship Designators Vocabulary</dcterms:title>
+      <skos:definition xml:lang="en">The RBMS Relationship Designators Vocabulary is a controlled vocabulary maintained by the Rare Books and Manuscripts Section of the Association of College and Research Libraries.</skos:definition>
       <vann:preferredNamespacePrefix xmlns:vann="http://purl.org/vocab/vann/">rbms_relationship_designators</vann:preferredNamespacePrefix>
    </rdf:Description>
    <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_relationship_designators/0.1/rbtyp1">
