@@ -24,7 +24,7 @@
   <xsl:param name="base-uri">https://w3id.org/arm/core/vocabularies/</xsl:param>
 
   <!-- Current RBMS vocab -->
-  <xsl:param name="rbms-vocab">rbms_binding</xsl:param>
+  <xsl:param name="rbms-vocab">rbms_type</xsl:param>
 
   <!--  <rbms>
     <vocabs>
@@ -98,7 +98,7 @@
         <xsl:value-of select="DESCRIPTOR"/>
       </skos:prefLabel>
       <xsl:apply-templates select="UF"/>
-      <skos:inScheme rdf:resource="{$base-uri}"/>
+      <skos:inScheme rdf:resource="{$full-uri}"/>
       <xsl:apply-templates select="BT | NT | RT"/>
       <xsl:apply-templates select="CM"/>
       <xsl:apply-templates select="SN"/>
