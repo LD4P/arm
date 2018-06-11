@@ -21,6 +21,8 @@
   <xsl:strip-space elements="*"/>
   <xsl:output indent="yes" method="xml"/>
 
+  <xsl:param name="base-uri">https://w3id.org/arm/core/vocabularies/</xsl:param>
+
   <!-- Current RBMS vocab -->
   <xsl:param name="rbms-vocab">rbms_binding</xsl:param>
 
@@ -43,46 +45,38 @@
   <xsl:param name="current-version" select="'0.1'"/>
 
   <!-- Current base URI -->
-  <xsl:variable name="base-uri"
-    select="concat('https://w3id.org/arm/core/vocabularies/', $rbms-vocab, '/', $current-version, '/')"/>
+  <xsl:variable name="full-uri"
+    select="concat($base-uri, $rbms-vocab, '/', $current-version, '/')"/>
 
   <!-- Key for linking BT, NT, RT -->
   <xsl:key match="CONCEPT" name="termKey" use="DESCRIPTOR"/>
 
-  <xsl:template match="/THESAURUS">
-    <!-- Output separate skos:ConceptScheme resource -->
-    <xsl:result-document href="{$rbms-vocab}_scheme.rdf" method="xml">
-      <xsl:call-template name="arm:concept-scheme"/>
-    </xsl:result-document>
-
+  <xsl:template match="/THESAURUS">    
     <!-- Output thesaurus -->
     <rdf:RDF>
+      <!-- Output skos:ConceptScheme resource -->
+      <xsl:call-template name="arm:concept-scheme"/>
       <xsl:apply-templates/>
     </rdf:RDF>
   </xsl:template>
 
   <xsl:template name="arm:concept-scheme">
-    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-      <rdf:Description rdf:about="{$base-uri}">
-        <rdf:type
-          rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >Version 0.1.0</owl:versionInfo>
-        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-        <rdfs:label xml:lang="en">RBMS <xsl:value-of
-            select="arm:vocab-name($rbms-vocab)"/> Vocabulary</rdfs:label>
-        <dcterms:title xml:lang="en">RBMS <xsl:value-of
-            select="arm:vocab-name($rbms-vocab)"/> Vocabulary</dcterms:title>
-        <skos:definition xml:lang="en">The RBMS <xsl:value-of
-            select="arm:vocab-name($rbms-vocab)"/> Vocabulary is a controlled
-          vocabulary maintained by the Rare Books and Manuscripts Section of the
-          Association of College and Research Libraries.</skos:definition>
-        <vann:preferredNamespacePrefix>
-          <xsl:value-of select="$rbms-vocab"/>
-        </vann:preferredNamespacePrefix>
-      </rdf:Description>
-    </rdf:RDF>
+    <rdf:Description rdf:about="{$full-uri}">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+      <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Version 0.1.0</owl:versionInfo>
+      <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+      <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+      <rdfs:label xml:lang="en">RBMS <xsl:value-of
+          select="arm:vocab-name($rbms-vocab)"/> Vocabulary</rdfs:label>
+      <dcterms:title xml:lang="en">RBMS <xsl:value-of
+          select="arm:vocab-name($rbms-vocab)"/> Vocabulary</dcterms:title>
+      <skos:definition xml:lang="en">The RBMS <xsl:value-of
+          select="arm:vocab-name($rbms-vocab)"/> Vocabulary is a controlled vocabulary maintained by the Rare Books and Manuscripts Section of the Association of College and Research Libraries.</skos:definition>
+      <vann:preferredNamespacePrefix>
+        <xsl:value-of select="$rbms-vocab"/>
+      </vann:preferredNamespacePrefix>
+    </rdf:Description>
   </xsl:template>
 
   <!-- Match all terms -->
@@ -96,7 +90,7 @@
           return
             substring-before($sc, ' ')
           , '')"/>
-      <xsl:value-of select="concat($base-uri, $prefix, TNR)"/>
+      <xsl:value-of select="concat($full-uri, $prefix, TNR)"/>
     </xsl:param>
     <rdf:Description rdf:about="{$uri}">
       <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -172,8 +166,7 @@
     <xsl:param as="xs:string" name="prefix"/>
     <xsl:param as="xs:string" name="name"/>
 
-    <xsl:variable name="uri"
-      select="concat($base-uri, $prefix, $node/TNR)"/>
+    <xsl:variable name="uri" select="concat($full-uri, $prefix, $node/TNR)"/>
     <xsl:choose>
       <xsl:when test="$name = 'BT'">
         <skos:broader rdf:resource="{$uri}"/>
