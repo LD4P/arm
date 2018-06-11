@@ -24,7 +24,7 @@
   <xsl:param name="base-uri">https://w3id.org/arm/core/vocabularies/</xsl:param>
 
   <!-- Current RBMS vocab -->
-  <xsl:param name="rbms-vocab">rbms_type</xsl:param>
+  <xsl:param name="rbms-vocab">rbms_relationship_designators</xsl:param>
 
   <!--  <rbms>
     <vocabs>
