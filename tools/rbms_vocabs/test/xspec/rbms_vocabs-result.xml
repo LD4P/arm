@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="file:/Users/tt434/xspec/src/compiler/format-xspec-report.xsl"?>
+<x:report xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+          xmlns:xs="http://www.w3.org/2001/XMLSchema"
+          xmlns:test="http://www.jenitennison.com/xslt/unit-test"
+          xmlns:x="http://www.jenitennison.com/xslt/xspec"
+          xmlns:arm="https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/"
+          xmlns:dcterms="http://purl.org/dc/terms/"
+          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+          xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+          stylesheet="file:/Users/tt434/Dropbox/YUL/ld4p/raremat/arm/tools/rbms_vocabs/xsl/rbmsvocabs.xsl"
+          date="2018-05-25T15:19:19.441-04:00"
+          xspec="file:/Users/tt434/Dropbox/YUL/ld4p/raremat/arm/tools/rbms_vocabs/test/xspec/rbms_vocabs.xspec">
+   <x:scenario>
+      <x:label>When processing a thesaurus file</x:label>
+      <x:call template="arm:concept-scheme"/>
+      <x:result>
+         <rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#"
+                  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+                  xmlns:vann="http://purl.org/vocab/vann/">
+            <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/">
+               <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+               <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1.0</owl:versionInfo>
+               <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+               <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+               <rdfs:label xml:lang="en">RBMS Binding Vocabulary</rdfs:label>
+               <dcterms:title xml:lang="en">RBMS Binding Vocabulary</dcterms:title>
+               <skos:definition xml:lang="en">The RBMS Binding Vocabulary is a controlled vocabulary maintained by the Rare Books and Manuscripts Section of the Association of College and Research Libraries.</skos:definition>
+               <vann:preferredNamespacePrefix>rbms_binding</vann:preferredNamespacePrefix>
+            </rdf:Description>
+         </rdf:RDF>
+      </x:result>
+      <x:test successful="true">
+         <x:label>It should output a separate SKOS ConceptScheme resource</x:label>
+         <x:expect select="()"/>
+      </x:test>
+   </x:scenario>
+   <x:scenario>
+      <x:label>When processing a concept in the thesaurus</x:label>
+      <x:context href="file:/Users/tt434/Dropbox/YUL/ld4p/raremat/arm/tools/rbms_vocabs/test/xspec/fixtures/rbmsvocabs.xml"
+                 select="/*/CONCEPT[1]"/>
+      <x:result>
+         <rdf:Description xmlns:owl="http://www.w3.org/2002/07/owl#"
+                          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+                          xmlns:vann="http://purl.org/vocab/vann/"
+                          rdf:about="https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin5">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:prefLabel xml:lang="en">Adhesive bindings</skos:prefLabel>
+            <skos:altLabel xml:lang="en">Perfect bindings</skos:altLabel>
+            <skos:inScheme rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/"/>
+            <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin7"/>
+            <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin8"/>
+            <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin9"/>
+            <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+            <skos:changeNote rdf:parseType="Resource">
+               <rdf:value>INP</rdf:value>
+               <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+               <dcterms:date>2005-06-16</dcterms:date>
+            </skos:changeNote>
+            <skos:changeNote rdf:parseType="Resource">
+               <rdf:value>APP</rdf:value>
+               <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+               <dcterms:date>2005-06-16</dcterms:date>
+            </skos:changeNote>
+            <skos:changeNote rdf:parseType="Resource">
+               <rdf:value>UPD</rdf:value>
+               <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+               <dcterms:date>2006-07-19</dcterms:date>
+            </skos:changeNote>
+         </rdf:Description>
+      </x:result>
+      <x:test successful="true">
+         <x:label>It should output an rdf:Description with a URI</x:label>
+         <x:expect>
+            <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin5">...</rdf:Description>
+         </x:expect>
+      </x:test>
+   </x:scenario>
+   <x:scenario>
+      <x:label>When processing a UF reference</x:label>
+      <x:context href="file:/Users/tt434/Dropbox/YUL/ld4p/raremat/arm/tools/rbms_vocabs/test/xspec/fixtures/rbmsvocabs.xml"
+                 select="/*/CONCEPT[1]/UF"/>
+      <x:result>
+         <skos:altLabel xmlns:owl="http://www.w3.org/2002/07/owl#"
+                        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+                        xmlns:vann="http://purl.org/vocab/vann/"
+                        xml:lang="en">Perfect bindings</skos:altLabel>
+      </x:result>
+      <x:test successful="true">
+         <x:label>It should output a skos:altLabel</x:label>
+         <x:expect>
+            <skos:altLabel xml:lang="en">Perfect bindings</skos:altLabel>
+         </x:expect>
+      </x:test>
+   </x:scenario>
+   <x:scenario>
+      <x:label>When processing a CM element</x:label>
+      <x:context href="file:/Users/tt434/Dropbox/YUL/ld4p/raremat/arm/tools/rbms_vocabs/test/xspec/fixtures/rbmsvocabs.xml"
+                 select="/*/CONCEPT[7]/CM"/>
+      <x:result>
+         <skos:note xmlns:owl="http://www.w3.org/2002/07/owl#"
+                    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+                    xmlns:vann="http://purl.org/vocab/vann/"
+                    xml:lang="en">"Cuir-ciselé or cut leather is a self-explanatory decorative technique: the leather is given patterns inscribed by a knife or other sharp tool."--Needham</skos:note>
+      </x:result>
+      <x:test successful="true">
+         <x:label>It should output a skos:note</x:label>
+         <x:expect>
+            <skos:note xml:lang="en">"Cuir-ciselé or cut leather is a self-explanatory decorative technique: the leather is given patterns inscribed by a knife or other sharp tool."--Needham</skos:note>
+         </x:expect>
+      </x:test>
+   </x:scenario>
+   <x:scenario>
+      <x:label>When processing an SN element</x:label>
+      <x:context href="file:/Users/tt434/Dropbox/YUL/ld4p/raremat/arm/tools/rbms_vocabs/test/xspec/fixtures/rbmsvocabs.xml"
+                 select="/*/CONCEPT[3]/SN"/>
+      <x:result>
+         <skos:scopeNote xmlns:owl="http://www.w3.org/2002/07/owl#"
+                         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+                         xmlns:vann="http://purl.org/vocab/vann/"
+                         xml:lang="en">Gathering term; do not use; index under a narrower term.</skos:scopeNote>
+      </x:result>
+      <x:test successful="true">
+         <x:label>It should output a skos:scopeNote</x:label>
+         <x:expect>
+            <skos:scopeNote xml:lang="en">Gathering term; do not use; index under a narrower term.</skos:scopeNote>
+         </x:expect>
+      </x:test>
+   </x:scenario>
+   <x:scenario>
+      <x:label>When processing an HN element</x:label>
+      <x:context href="file:/Users/tt434/Dropbox/YUL/ld4p/raremat/arm/tools/rbms_vocabs/test/xspec/fixtures/rbmsvocabs.xml"
+                 select="/*/CONCEPT[6]/HN"/>
+      <x:result>
+         <skos:historyNote xmlns:owl="http://www.w3.org/2002/07/owl#"
+                           xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+                           xmlns:vann="http://purl.org/vocab/vann/"
+                           xml:lang="en">Changed 6/2016. Formerly, "Binding labels" may have been indexed as "Labels."</skos:historyNote>
+      </x:result>
+      <x:test successful="true">
+         <x:label>It should output a skos:historyNote</x:label>
+         <x:expect>
+            <skos:historyNote xml:lang="en">Changed 6/2016. Formerly, "Binding labels" may have been indexed as "Labels."</skos:historyNote>
+         </x:expect>
+      </x:test>
+   </x:scenario>
+   <x:scenario>
+      <x:label>When processing an STA element</x:label>
+      <x:context href="file:/Users/tt434/Dropbox/YUL/ld4p/raremat/arm/tools/rbms_vocabs/test/xspec/fixtures/rbmsvocabs.xml"
+                 select="/*/CONCEPT[1]/STA"/>
+      <x:result>
+         <skos:editorialNote xmlns:owl="http://www.w3.org/2002/07/owl#"
+                             xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+                             xmlns:vann="http://purl.org/vocab/vann/"
+                             xml:lang="en">Approved</skos:editorialNote>
+      </x:result>
+      <x:test successful="true">
+         <x:label>It should output a skos:editorialNote</x:label>
+         <x:expect>
+            <skos:editorialNote xml:lang="en">Approved</skos:editorialNote>
+         </x:expect>
+      </x:test>
+   </x:scenario>
+   <x:scenario>
+      <x:label>When processing a BT, NT, or RT element, corresponding SKOS elements should be returned</x:label>
+      <x:scenario>
+         <x:label>When called with BT</x:label>
+         <x:call function="arm:broader-narrower">
+            <x:param href="file:/Users/tt434/Dropbox/YUL/ld4p/raremat/arm/tools/rbms_vocabs/test/xspec/fixtures/rbmsvocabs.xml"
+                     name="node"
+                     select="/*/CONCEPT[3]"/>
+            <x:param name="name" select="'BT'"/>
+         </x:call>
+         <x:result>
+            <skos:broader xmlns:owl="http://www.w3.org/2002/07/owl#"
+                          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+                          xmlns:vann="http://purl.org/vocab/vann/"
+                          rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin7"/>
+         </x:result>
+         <x:test successful="true">
+            <x:label>skos:broader should be returned</x:label>
+            <x:expect>
+               <skos:broader rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin7"/>
+            </x:expect>
+         </x:test>
+      </x:scenario>
+      <x:scenario>
+         <x:label>When called with NT</x:label>
+         <x:call function="arm:broader-narrower">
+            <x:param href="file:/Users/tt434/Dropbox/YUL/ld4p/raremat/arm/tools/rbms_vocabs/test/xspec/fixtures/rbmsvocabs.xml"
+                     name="node"
+                     select="/*/CONCEPT[4]"/>
+            <x:param name="name" select="'NT'"/>
+         </x:call>
+         <x:result>
+            <skos:narrower xmlns:owl="http://www.w3.org/2002/07/owl#"
+                           xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+                           xmlns:vann="http://purl.org/vocab/vann/"
+                           rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin8"/>
+         </x:result>
+         <x:test successful="true">
+            <x:label>skos:narrower should be returned</x:label>
+            <x:expect>
+               <skos:narrower rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin8"/>
+            </x:expect>
+         </x:test>
+      </x:scenario>
+      <x:scenario>
+         <x:label>When called with RT</x:label>
+         <x:call function="arm:broader-narrower">
+            <x:param href="file:/Users/tt434/Dropbox/YUL/ld4p/raremat/arm/tools/rbms_vocabs/test/xspec/fixtures/rbmsvocabs.xml"
+                     name="node"
+                     select="/*/CONCEPT[5]"/>
+            <x:param name="name" select="'RT'"/>
+         </x:call>
+         <x:result>
+            <skos:related xmlns:owl="http://www.w3.org/2002/07/owl#"
+                          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+                          xmlns:vann="http://purl.org/vocab/vann/"
+                          rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin9"/>
+         </x:result>
+         <x:test successful="true">
+            <x:label>skos:related should be returned</x:label>
+            <x:expect>
+               <skos:related rdf:resource="https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin9"/>
+            </x:expect>
+         </x:test>
+      </x:scenario>
+   </x:scenario>
+   <x:scenario>
+      <x:label>When outputting a skos:ConceptScheme resource, format the scheme name</x:label>
+      <x:call function="arm:vocab-name">
+         <x:param name="vocab" select="'rbms_binding'"/>
+      </x:call>
+      <x:result select="'Binding'"/>
+      <x:test successful="true">
+         <x:label>Remove 'rbms_' prefix and capitalize name</x:label>
+         <x:expect select="'Binding'"/>
+      </x:test>
+   </x:scenario>
+   <x:scenario>
+      <x:label>When processing INP | APP | UPD | NVD</x:label>
+      <x:context href="file:/Users/tt434/Dropbox/YUL/ld4p/raremat/arm/tools/rbms_vocabs/test/xspec/fixtures/rbmsvocabs.xml"
+                 select="/*/CONCEPT[1]/(INP | APP | UPD | NVD)"/>
+      <x:result>
+         <skos:changeNote xmlns:owl="http://www.w3.org/2002/07/owl#"
+                          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+                          xmlns:vann="http://purl.org/vocab/vann/"
+                          rdf:parseType="Resource">
+            <rdf:value>INP</rdf:value>
+            <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+            <dcterms:date>2005-06-16</dcterms:date>
+         </skos:changeNote>
+         <skos:changeNote xmlns:owl="http://www.w3.org/2002/07/owl#"
+                          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+                          xmlns:vann="http://purl.org/vocab/vann/"
+                          rdf:parseType="Resource">
+            <rdf:value>APP</rdf:value>
+            <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+            <dcterms:date>2005-06-16</dcterms:date>
+         </skos:changeNote>
+         <skos:changeNote xmlns:owl="http://www.w3.org/2002/07/owl#"
+                          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+                          xmlns:vann="http://purl.org/vocab/vann/"
+                          rdf:parseType="Resource">
+            <rdf:value>UPD</rdf:value>
+            <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+            <dcterms:date>2006-07-19</dcterms:date>
+         </skos:changeNote>
+      </x:result>
+      <x:test successful="true">
+         <x:label>A sequence of skos:changeNote[rdf:parseType='Resource'] elements should be returned</x:label>
+         <x:expect>
+            <skos:changeNote rdf:parseType="Resource">
+               <rdf:value>INP</rdf:value>
+               <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+               <dcterms:date>2005-06-16</dcterms:date>
+            </skos:changeNote>
+            <skos:changeNote rdf:parseType="Resource">
+               <rdf:value>APP</rdf:value>
+               <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+               <dcterms:date>2005-06-16</dcterms:date>
+            </skos:changeNote>
+            <skos:changeNote rdf:parseType="Resource">
+               <rdf:value>UPD</rdf:value>
+               <dcterms:creator rdf:resource="http://id.loc.gov/rwo/agents/n78097904"/>
+               <dcterms:date>2006-07-19</dcterms:date>
+            </skos:changeNote>
+         </x:expect>
+      </x:test>
+   </x:scenario>
+</x:report>
