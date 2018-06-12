@@ -65,7 +65,7 @@ There is no modeling of Style/Period in BIBFRAME.
 
 Overview of the RareMat/ArtFrame Style/Period Model
 ----------
-The RareMat/ArtFrame Style/Period model is quite simple, involving a class, StylePeriod, and two predicates, hasStylePeriod and isStylePeriodOf. The range of hasStylePeriod and domain of isStylePeriodOf are left unspecified so that vocabularies (such as AAT) can be used without unwanted type entailments.
+The RareMat/ArtFrame Style/Period model is quite simple, involving two predicates, hasStylePeriod and isStylePeriodOf. The range of hasStylePeriod and domain of isStylePeriodOf are left unspecified so that vocabularies (such as AAT) can be used without unwanted type entailments.
 
 Term Specifications
 ---------------
