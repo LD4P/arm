@@ -1,4 +1,4 @@
-Art and Rare Materials BIBFRAME Ontology Extension
+Art and Rare Materials (ARM) BIBFRAME Ontology Extension
 ==========================
 
 Introduction
@@ -37,13 +37,15 @@ for easy separation.
 
 The `vocabularies/` directory contains two types of vocabularies:
 * Original ARM vocabularies
-* RBMS vocabularies converted from XML exports to RDF. We do not own, publish, or document these vocabularies, but use them in our application profiles.
+* RBMS vocabularies converted from XML exports to RDF. We do not own, publish, or document these vocabularies, but we include them here because they are used in our application profiles.
 
 Some aspects of the directory structure and filenames are accommodations to the publication implementation. Specifically:
 * GitHub does not recognize the `.owl` file extension, so we have used `.rdf` instead. Ideally we prefer the use of the `.owl` extension since these are OWL ontologies.
 * For simplicity, the RDF files are published directly from the repository directory tree rather than from a separate document root. In order to use versioned namespaces 
 (see [Ontology Versioning]("#ontology-versioning)), we therefore store every published version of the files in the repository tree, as opposed to the more usual practice 
 of identifying versions solely with tags on the repository.
+
+### Directory Structure
 
 * [`modeling_recommendations/`](modeling_recommendations/): Modeling recommendations
 
@@ -83,7 +85,7 @@ To support modularity, each ontology and vocabulary is versioned independently. 
 versions of these, but are not themselves versioned via namespace or version number but rather via GitHub.
 
 
-### <a name="ontology-versioning">Ontology versioning</a>
+### <a name="ontology-versioning">Ontology Versioning</a>
 
 The following protocols are used to version the ontologies. 
 
@@ -96,10 +98,10 @@ The following protocols are used to version the ontologies.
 * Version numbering (`MAJOR.MINOR.PATCH`). See [discussion below]("#numbering") on two possible numbering conventions.
 * The `owl:versionIRI` is updated for `MAJOR` and `MINOR` versions, but not `PATCH` versions. It thus includes only the `MAJOR` and `MINOR` version numbers.
 
-<a name="numbering">Two possible version number conventions are shown here.</a> Note that MODEL A is more rigorously defined than MODEL B, because the latter uses subjective notions of "sufficiently large" and "sufficiently significant" alongside the
-objective notions of backward- and non-backward-compatibility. Possibly MODEL B can be provided a fully objective formulation.
+<a name="numbering">Two possible version number conventions are shown here.</a> Note that Model A is more rigorously defined than Model B, because the latter uses subjective notions of "sufficiently large" and "sufficiently significant" alongside the
+objective notions of backward- and non-backward-compatibility. Possibly Model B can be provided a fully objective formulation.
 
-**MODEL A: (bibliotek-o)**
+**MODEL A (the bibliotek-o model)**
 
     * `MAJOR`: non-backward-compatible modifications
     * `MINOR`: backward-compatible semantic modifications
@@ -112,16 +114,16 @@ objective notions of backward- and non-backward-compatibility. Possibly MODEL B 
     * `PATCH`: backward-compatible semantic modifications as well as non-semantic modifications, such as fixing typos or adding rdfs:labels in other languages
 
 
-* To avoid an unnecessary proliferation of `MAJOR` versions, `owl:deprecated` is applied to terms slated for removal. The precise implementation depends on the choice of MODEL A or B above:
- * Model A: A term deprecated in a `MINOR` version will be removed in the next `MAJOR` version
- * MODEL B: A term deprecated in a `PATCH` version will be removed in the next `MINOR` version
+* To avoid an unnecessary proliferation of `MAJOR` versions, `owl:deprecated` is applied to terms slated for removal. The precise implementation depends on the choice of Model A or B above:
+  * Model A: A term deprecated in a `MINOR` version will be removed in the next `MAJOR` version
+  * Model B: A term deprecated in a `PATCH` version will be removed in the next `MINOR` version
 
 * `owl:versionInfo` provides a label containing the version number, formatted as "Version n.n.n"; e.g., "Version 1.1.0". This version number is also used to tag the repository, in this case `v1.1.0`. 
 * `owl:priorVersion` provides the URI of the previous MAJOR.MINOR version of the ontology, if any.
 * `owl:backwardCompatibleWith` or `owl:incompatibleWith` may also be used to reference previous MAJOR.MINOR versions of the ontology, where applicable.
 
 
-### Issuance and modification datetimes
+### Issuance and Modification Datetimes
 
 * `dcterms:issued` is used on each ontology term, and on the ontology as a whole, to indicate datetime of first issuance.
 * `dcterms:modified` is used on each ontology term, and on the ontology as a whole, to indicate last modification datetime. 
@@ -129,14 +131,14 @@ objective notions of backward- and non-backward-compatibility. Possibly MODEL B 
 * Datetime values are expressed in ISO-8601 format; e.g., "2017-04-22T01:30:00-04:00".
 * The `dcterms` values do not include extraneous text, so that they are machine-readable without parsing. Change descriptions are provided by `skos:changeNote` (see following section).
 
-### Change descriptions
+### Change Descriptions
 * `skos:changeNote` is used to provide human-readable descriptions of term modifications. 
 * One `skos:changeNote` is used per version. That is, if more than one change is made to the same term in the same version, all are recorded in the same change note. If multiple changes are made to the same term in different versions, they are recorded in multiple change notes.
 * The change note also records the ontology version, so that modifications to a term can be traced through the affected versions of the ontology. The format used is, e.g., "Fix rdfs:label (v1.0.1)".
 * A `skos:changeNote` could be applied to the ontology itself to record major, broad, or high-level changes affecting multiple terms.
 * Changes are also recorded in change logs for each ontology, vocabulary, and application profile. 
 
-### Vocabulary versioning
+### Vocabulary Versioning
 
 Several of the predicates used in the ontology versioning protocol are of type `owl:OntologyProperty` and thus cannot be used with our vocabularies, which are typed `void:Dataset` rather than
 `owl:Ontology`.  Vocabularies are versioned by including version number in the URI (e.g., https://w3id.org/arm/core/vocabularies/typeface/0.1/) , using the same schema outlined for ontologies; defining `owl:versionInfo` on the Dataset; 
