@@ -7,11 +7,10 @@
       <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
       <owl:versionInfo xmlns:owl="http://www.w3.org/2002/07/owl#"
                        rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1.0</owl:versionInfo>
-      <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-      <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
       <rdfs:label xml:lang="en">RBMS Binding Vocabulary</rdfs:label>
       <dcterms:title xml:lang="en">RBMS Binding Vocabulary</dcterms:title>
       <skos:definition xml:lang="en">The RBMS Binding Vocabulary is a controlled vocabulary maintained by the Rare Books and Manuscripts Section of the Association of College and Research Libraries.</skos:definition>
+      <skos:editorialNote xml:lang="en">Generated from 2018-05 XML export.</skos:editorialNote>
       <vann:preferredNamespacePrefix xmlns:vann="http://purl.org/vocab/vann/">rbms_binding</vann:preferredNamespacePrefix>
    </rdf:Description>
    <rdf:Description rdf:about="https://w3id.org/arm/core/vocabularies/rbms_binding/0.1/rbbin1">
