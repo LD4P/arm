@@ -32,7 +32,7 @@ def get_prefix(rdfxml):
     from rdflib.graph import Graph
     from rdflib.namespace import OWL, VOID
     g = Graph()
-    g.parse(data=rdfxml, format="application/rdf+xml") 
+    g.parse(data=rdfxml, format="application/rdf+xml")
     # Look for owl:versionIRI first (_assume_ only one!)
     for s, p, o in g.triples((None, OWL.versionIRI, None)):
         return(str(o))
@@ -69,29 +69,30 @@ def get_lode(rdfxml):
 
 def fix_anchors(html, prefix):
     """Fix anchors in LODE html, returns modified HTML."""
-    ## Pass 1 - find anchors to change
+    # Pass 1 - find anchors to change
     terms = {}
     seen_anchors = set()
-    for m in re.findall(r'''<a href="#([0-9a-f]+)" title="([^"]+)"''',html):
+    for m in re.findall(r'''<a href="#([0-9a-f]+)" title="([^"]+)"''', html):
         anchor = m[0]
         uri = m[1]
         # Only want URIs in this namespace
-        lmatch = re.match(prefix+r'''(\w+)$''', uri)
+        lmatch = re.match(prefix + r'''(\w+)$''', uri)
         if (lmatch):
             term = lmatch.group(1)
-            if (term in terms):            
+            if (term in terms):
                 if (terms[term] != anchor and anchor not in seen_anchors):
                     ns = prefix if (not lmatch.group(1)) else prefix + lmatch.group(1)
                     logging.info(" - ignoring additional anchor %s, already have %s for %s%s" % (anchor, terms[term], ns, term))
                     seen_anchors.add(anchor)
             else:
                 terms[term] = anchor
-    ## Pass 2 - implement changes
+    # Pass 2 - implement changes
     for term, anchor in terms.items():
         logging.info(" - replacing anchor %s with %s" % (anchor, term))
-        html = re.sub(' id="'+anchor+'"',' id="'+term+'"',html)
-        html = re.sub(' href="#'+anchor+'"',' href="#'+term+'"',html)
+        html = re.sub(' id="' + anchor + '"', ' id="' + term + '"', html)
+        html = re.sub(' href="#' + anchor + '"', ' href="#' + term + '"', html)
     return html
+
 
 def fix_links(html, source):
     """Fix source link in LODE HTML."""
@@ -155,5 +156,3 @@ if __name__ == '__main__':
     for rdf_file in rdf_files:
         create_lode_html(rdf_file)
     logging.info("Done.")
-
-
