@@ -35,7 +35,7 @@ Internal links to ontology terms in the HTML file are of the form `http://www.es
 
 * Remove the portion of the links up to the `#` character in the HTML file:
 
-`$ cd `/award/ontology/0.1/doc/lode`
+`$ cd /award/ontology/0.1/doc/lode`
 `$ sed -E 's%http://www.essepuntato.it/lode/http://www.essepuntato.it/tmp/[^#]+#%#%g' award.html > temp.html`
 
 * Delete the original HTML file:
