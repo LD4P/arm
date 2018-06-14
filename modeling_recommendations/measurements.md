@@ -205,9 +205,14 @@ Whether or not the model is used in this way in our descriptions is an implement
 -   Note that each value of dcterms:description is atomic: there should be one assertion for each literal value, rather than combining values into a composite string.
 
 
-### Diagram 2: Single resource with multiple measurement group and descriptions
+### <a name="diagram-2">Diagram 2: Single resource with multiple measurement group and descriptions</a>
 
 ![Measurement diagram 2](/modeling_recommendations/modeling_diagrams/measurement_multiple.png)
+
+**Notes**
+
+- The use of dcterms:descriptions is similar to the use of Arrangement resources (see [Diagram 5](#diagram-5)) to describe different measurements for a resource in different states, but description literals are used in cases where a controlled vocabulary
+cannot be defined due to variability of the state.
 
 
 ### Diagram 3: Measurements of whole and part: part a resource
@@ -235,6 +240,8 @@ Whether or not the model is used in this way in our descriptions is an implement
 -   Rationale for a state object is not necessarily that there are other assertions to be made about it, but that a controlled vocabulary of states, rather than literal values, can be used.
 
 -   Examples of resources with arrangements: road maps (folded/unfolded), parchments (rolled/unrolled), book (open/closed).
+
+-   The use of arrangements is similar to the use of dcterms:descriptions to associate different measurements with a resource (see [Diagram 2](#diagram-2), but in the case of arrangements it is possible to define a controlled vocabulary.
 
 -   The measurements attached directly to the Work/Instance/Item resource do not specify a particular arrangement, but presumably it is different from the folded arrangement.
 
