@@ -35,9 +35,10 @@ The core ontology has been split into two OWL files, `core.rdf` and `activity.rd
 or the [bibliotek-o](http://bibliotek-o.org) Activity model is still unresolved. As a temporary accommodation, the Activity model is used, but the relevant terms are stored in a separate RDF file
 for easy separation.
 
-The `vocabularies/` directory contains two types of vocabularies:
-* Original ARM vocabularies
-* RBMS vocabularies converted from XML exports to RDF. We do not own, publish, or document these vocabularies, but we include them here because they are used in our application profiles.
+The [`application_profiles/sources/'](application_profiles/sources/) directory contains ontology and vocabulary fragments referenced in the modeling recommendations and application profiles. 
+Two types of vocabularies are included:
+* Fragments of existing RDF vocabularies, such as Getty AAT.
+* RBMS vocabularies converted from XML to RDF. While in the absence of an RBMS-defined namespace they are namespaced within ARM, ARM does not claim ownership of these vocabularies nor does it publish them.
 
 Some aspects of the directory structure and filenames are accommodations to the publication implementation. Specifically:
 * GitHub does not recognize the `.owl` file extension, so we have used `.rdf` instead. Ideally we prefer the use of the `.owl` extension since these are OWL ontologies.
@@ -52,7 +53,7 @@ of identifying versions solely with tags on the repository.
 * [`core/`](core/): Core art and rare materials ontologies and vocabularies 
   * [`core.rdf`](core/core.rdf): Primary ontology file
   * [`activity.rdf`](core/activity.rdf): Secondary ontology file containing definitions of Activity classes and related predicates
-  * [`vocabularies/`](core/vocabularies): Core controlled vocabularies
+  * [`vocabularies/`](core/vocabularies): Original ARM controlled vocabularies
   * [`doc/`](core/doc/): Human-readable documentation
   * [`validation/`](core/validation/): SHACL validation files for the core ontology
 
@@ -73,7 +74,7 @@ of identifying versions solely with tags on the repository.
   * [`raremat_monograph/shacl/`](application_profiles/raremat_monograph/shacl/): SHACL application profiles for rare materials monographs
   * [`sources/`](application_profiles/sources/): Source ontologies and vocabularies for the application profiles  
   
-* [`tools/`](tools/): Tools used in support of the ontology and vocabulary development, such as XSL data conversion scripts or massaging of human-readable documentation.
+* [`tools/`](tools/): Tools used in support of the ontology and vocabulary development, such as XSL data conversion scripts or generating human-readable documentation
   
 * [`doc/`](doc/): Informational documents
 
