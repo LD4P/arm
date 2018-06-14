@@ -35,7 +35,11 @@ The Marking model is quite simple, involving a class hierarchy descending from a
 -------
 ![Markings diagram](/modeling_recommendations/modeling_diagrams/marking.png)
 
-Note that while the diagram and Sample RDF below show a marking attached to a binding, markings can apply to many types of resources.
+**Notes**
+
+- While the diagram and Sample RDF below show a marking attached to a binding, markings can apply to many types of resources.
+- Not all markings will have an rdf:value. E.g., autographs have a textual value but a seal may not. However, there is also the possibility of an rdf:value that points to a digital image of the marking. See [Areas for Future Research](#future).
+- Markings may optionally have a dcterms:description in addition to, or instead of, an rdf:value.
 
 
 <a name="terms">Term Specifications</a>
@@ -135,10 +139,11 @@ Properties
 -------------
 - Consider use of dcterms:isPartOf/dcterms:hasPart instead of marks/markedBy.
 - Marginalia and similar markings
-> - Define a class hierarchy
-> - Markings vs marginalia; see [Appendix](#appendix) for some preliminary remarks.
+- Define a class hierarchy
+- Markings vs marginalia; see [Appendix](#appendix) for some preliminary remarks.
 - Use of controlled vocabularies rather than subclassing for Marking types. We could define the superclass Marking, and leave all typing to marking taxonomies such as AAT. Explore pros and cons of each approach. If the marking taxonomy is deep and complex, it is more practical to use it rather than defining a parallel set of subclasses.
-
+This is an issue that applies across a number of modeling areas.
+- Representation of digital images of a marking. Possible predicates include rdf:value, foaf:depiction, perhaps others. 
 
 <a name="appendix">Appendix. Markings and Marginalia</a>
 --------------
