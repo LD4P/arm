@@ -38,7 +38,7 @@ The Marking model is quite simple, involving a class hierarchy descending from a
 **Notes**
 
 - While the diagram and Sample RDF below show a marking attached to a binding, markings can apply to many types of resources.
-- Not all markings will have an rdf:value. E.g., autographs have a textual value but a seal may not. However, there is also the possibility of an rdf:value that points to a digital image of the marking. See [Areas for Future Research](#future).
+- Not all markings will have an rdf:value. E.g., autographs have a textual value but a seal may not. There is also the possibility of an rdf:value that points to a digital image of the marking. See [Areas for Future Research](#future).
 - Markings may optionally have a dcterms:description in addition to, or instead of, an rdf:value.
 
 
