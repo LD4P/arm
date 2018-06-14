@@ -50,11 +50,13 @@ A negative citation is also modeled as an **bf:Note**, with the value "not found
 
 1.  Create a new class, **ex:Citation**, to represent bibliographic citations.
 
-2.  Create a new property, **ex:hasCitation** (inverse ex:isCitationOf) to link a citation to a cited resource. 
+2.  Create a new property, **ex:hasCitation** (inverse **ex:isCitationOf**) to link a citation to a cited resource. 
 
-2.  Optionally, the location within a citing source may also be specified. Create new classes, **ex:Volume**, **ex:Page**, and **ex:Entry**, to record the location of a citation.
+3.  Optionally, the location within a citing source may also be specified. Create new classes, **ex:Volume**, **ex:Page**, and **ex:Entry**, to record the location of a citation. 
+Depending on available information, _any combination_ of Entry, Page, Volume, and Instance may be specified in the location subgraph of the citation. It is recommended to record 
+as much information as possible; note that only if an Entry is identified can the text of the citation be retrieved.
 
-3.  Consider other location designators as appropriate.
+4.  Consider other location designators as appropriate.
 
 <a name="future">Areas for Future Research</a>
 --------------------------
