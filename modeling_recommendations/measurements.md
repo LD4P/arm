@@ -212,7 +212,7 @@ Whether or not the model is used in this way in our descriptions is an implement
 **Notes**
 
 - The use of dcterms:descriptions is similar to the use of Arrangement resources (see [Diagram 5](#diagram-5)) to describe different measurements for a resource in different states, but description literals are used in cases where a controlled vocabulary
-cannot be defined due to variability of the state.
+cannot be defined due to wide or perhaps unlimited variability.
 
 
 ### Diagram 3: Measurements of whole and part: part a resource
@@ -253,7 +253,7 @@ cannot be defined due to variability of the state.
 
 **Notes/TBD**
 
--   In this version, two arrangements are expressed as separate resources, without a default or unspecified arrangement. Choice of model 5 vs 6 would be an implementation decision by the cataloger.
+-   In this version, two arrangements are expressed as separate resources, without a default or unspecified arrangement. Choice of model 5 vs 6 would be an implementation decision by the cataloger, but use of 6 is recommended for consistency when each arrangement can be identified.
 
 <a name="future-research">Areas for Future Research</a>
 ----------------------
