@@ -43,7 +43,7 @@ Two types of vocabularies are included:
 Some aspects of the directory structure and filenames are accommodations to the publication implementation. Specifically:
 * GitHub does not recognize the `.owl` file extension, so we have used `.rdf` instead. Ideally we prefer the use of the `.owl` extension since these are OWL ontologies.
 * For simplicity, the RDF files are published directly from the repository directory tree rather than from a separate document root. In order to use versioned namespaces 
-(see [Ontology Versioning]("#ontology-versioning)), we therefore store every published version of the files in the repository tree, as opposed to the more usual practice 
+(see [Ontology Versioning](#ontology-versioning)), we therefore store every published version of the files in the repository tree, as opposed to the more usual practice 
 of identifying versions solely with tags on the repository.
 
 ### Directory Structure
