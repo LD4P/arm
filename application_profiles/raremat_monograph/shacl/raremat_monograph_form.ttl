@@ -4,7 +4,7 @@
 @prefix activity: <https://w3id.org/arm/core/activity/0.1/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix core: <http://vivoweb.org/ontology/core#> .
-@prefix crm: <http://www.cidoc-crm.org/Property/P2-has-type/Version-6.2/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix gn: <http://www.geonames.org/ontology/> .
 @prefix gvp: <http://vocab.getty.edu/ontology#> .
@@ -1390,7 +1390,7 @@ raremat_monograph_form:InstanceForm_arm_hasMaterial
     tosh:editWidget swa:NestedObjectEditor .
 
 
-raremat_monograph_form:InstanceForm__rdau_P60596 
+raremat_monograph_form:InstanceForm_rdau_P60596 
     a sh:PropertyShape ;
     sh:path rdau:P60596 ;
     sh:class crm:E57_Material ;
@@ -1643,9 +1643,13 @@ raremat_monograph_form:ItemForm
   
 # ItemHistoryAndProvenancePropertyGroup
 
-    sh:property raremat_monograph_custodial_history:ItemForm_ch_hasCustodialHistory_bf_hasPart ;
+    # VitroLib requires a PropertyShape with single-valued sh:path.
+    # TranslateShacl ignore multi-valued sh:paths.
+    # sh:property raremat_monograph_custodial_history:ItemForm_ch_hasCustodialHistory_bf_hasPart ;   
+    sh:property raremat_monograph_custodial_history:ItemForm_ch_hasCustodialHistory ;
     
-    sh:property raremat_monograph_exhibition:ItemForm_arm_hasExhibition_bf_partOf ;
+    # Not implementing in this iteration of VitroLib.
+    # sh:property raremat_monograph_exhibition:ItemForm_arm_hasExhibition_bf_partOf ;
     
     sh:property raremat_monograph_form:ItemForm_award_receives ;
 
@@ -1894,7 +1898,7 @@ raremat_monograph_form:ItemForm_measure_hasMeasurementGroup
     sh:path measure:hasMeasurementGroup ;
     sh:class measure:MeasurementGroup ;
     sh:group raremat_monograph_property_groups:ItemPhysicalDescriptionPropertyGroup ;
-    sh:name "Instance measurement information" ;
+    sh:name "Item measurement information" ;
     sh:nodeKind sh:IRI ;
     sh:order "8"^^xsd:int ;
     tosh:editWidget swa:NestedObjectEditor .
@@ -2331,7 +2335,7 @@ raremat_monograph_form:AwardReceiptForm
 raremat_monograph_form:AwardReceiptForm_rdf_type 
     a sh:PropertyShape ;
     sh:path rdf:type ;
-    sh:description "Sequential numbering of individual leaves, plates, pages (numbering on both sides), or columns (used as a sequence of numbering) of a resource." ;
+    sh:description "The type of award receipt, e.g. honorable mention, short list, Nominee." ;
     sh:name "Type of Award Receipt" ;
     sh:order "0"^^xsd:int ;
     sh:in ( award:AwardWinner award:AwardNominee award:AwardHonoraryMention award:AwardCitation award:AwardLonglist award:AwardShortlist ) ;
@@ -2522,7 +2526,7 @@ raremat_monograph_form:WorkTitleForm_arm_hasSource
 raremat_monograph_form:WorkTitleForm_bf_status 
     a sh:PropertyShape ;
     sh:path bf:Status ;
-    sh:in ( <https://w3id.org/arm/datasets/status/cancelled> <https://w3id.org/arm/datasets/status/current> <https://w3id.org/arm/datasets/status/deprecated> <https://w3id.org/arm/datasets/status/invalid> ) ;
+    sh:in ( <https://w3id.org/arm/core/vocabularies/status/0.1/cancelled> <https://w3id.org/arm/core/vocabularies/status/0.1/current> <https://w3id.org/arm/core/vocabularies/status/0.1/deprecated> <https://w3id.org/arm/core/vocabularies/status/0.1/invalid> ) ;
     sh:description "The place from which this title originates, such as spine, cover, container, etc." ;
     sh:order "7"^^xsd:int ;
     sh:nodeKind sh:IRI ;
@@ -2648,7 +2652,7 @@ raremat_monograph_form:InstanceTitleForm_bf_partName
 raremat_monograph_form:InstanceTitleForm_arm_origin 
     a sh:PropertyShape ;
     sh:path arm:hasOrigin ;
-    sh:in ( <https://w3id.org/arm/datasets/origin/addedTitlePage> <https://w3id.org/arm/datasets/origin/binder> <https://w3id.org/arm/datasets/origin/caption> <https://w3id.org/arm/datasets/origin/container> <https://w3id.org/arm/datasets/origin/cover> <https://w3id.org/arm/datasets/origin/margin> <https://w3id.org/arm/datasets/origin/spine> <https://w3id.org/arm/datasets/origin/supplied> <https://w3id.org/arm/datasets/origin/transcribed> <https://w3id.org/arm/datasets/origin/translated> ) ;
+    sh:in ( <https://w3id.org/arm/core/vocabularies/origin/0.1/addedTitlePage> <https://w3id.org/arm/core/vocabularies/origin/0.1/binder> <https://w3id.org/arm/core/vocabularies/origin/0.1/caption> <https://w3id.org/arm/core/vocabularies/origin/0.1/container> <https://w3id.org/arm/core/vocabularies/origin/0.1/cover> <https://w3id.org/arm/core/vocabularies/origin/0.1/margin> <https://w3id.org/arm/core/vocabularies/origin/0.1/spine> <https://w3id.org/arm/core/vocabularies/origin/0.1/supplied> <hhttps://w3id.org/arm/core/vocabularies/origin/0.1/transcribed> <https://w3id.org/arm/core/vocabularies/origin/0.1/translated> ) ;
     sh:description "The place from which this title originates, such as spine, cover, container, etc." ;
     sh:order "6"^^xsd:int ;
     sh:nodeKind sh:IRI ;
@@ -2676,7 +2680,7 @@ raremat_monograph_form:InstanceTitleForm_arm_hasSource
 raremat_monograph_form:InstanceTitleForm_bf_status 
     a sh:PropertyShape ;
     sh:path bf:Status ;
-    sh:in ( <https://w3id.org/arm/datasets/status/cancelled> <https://w3id.org/arm/datasets/status/current> <https://w3id.org/arm/datasets/status/deprecated> <https://w3id.org/arm/datasets/status/invalid> ) ;
+    sh:in ( <https://w3id.org/arm/core/vocabularies/status/0.1/cancelled> <https://w3id.org/arm/core/vocabularies/status/0.1/current> <https://w3id.org/arm/core/vocabularies/status/0.1/deprecated> <https://w3id.org/arm/core/vocabularies/status/0.1/invalid> ) ;
     sh:description "The place from which this title originates, such as spine, cover, container, etc." ;
     sh:order "8"^^xsd:int ;
     sh:nodeKind sh:IRI ;
@@ -2802,7 +2806,7 @@ raremat_monograph_form:ItemTitleForm_bf_partName
 raremat_monograph_form:ItemTitleForm_arm_origin 
     a sh:PropertyShape ;
     sh:path arm:hasOrigin ;
-    sh:in ( <https://w3id.org/arm/datasets/origin/addedTitlePage> <https://w3id.org/arm/datasets/origin/binder> <https://w3id.org/arm/datasets/origin/caption> <https://w3id.org/arm/datasets/origin/container> <https://w3id.org/arm/datasets/origin/cover> <https://w3id.org/arm/datasets/origin/margin> <https://w3id.org/arm/datasets/origin/spine> <https://w3id.org/arm/datasets/origin/supplied> <https://w3id.org/arm/datasets/origin/transcribed> <https://w3id.org/arm/datasets/origin/translated> ) ;
+    sh:in ( <https://w3id.org/arm/core/vocabularies/origin/0.1/addedTitlePage> <https://w3id.org/arm/core/vocabularies/origin/0.1/binder> <https://w3id.org/arm/core/vocabularies/origin/0.1/caption> <hhttps://w3id.org/arm/core/vocabularies/origin/0.1/container> <https://w3id.org/arm/core/vocabularies/origin/0.1/cover> <https://w3id.org/arm/core/vocabularies/origin/0.1/margin> <https://w3id.org/arm/core/vocabularies/origin/0.1/spine> <https://w3id.org/arm/core/vocabularies/origin/0.1/supplied> <https://w3id.org/arm/core/vocabularies/origin/0.1/transcribed> <https://w3id.org/arm/core/vocabularies/origin/0.1/translated> ) ;
     sh:description "The place from which this title originates, such as spine, cover, container, etc." ;
     sh:order "6"^^xsd:int ;
     sh:nodeKind sh:IRI ;
@@ -2830,7 +2834,7 @@ raremat_monograph_form:ItemTitleForm_arm_hasSource
 raremat_monograph_form:ItemTitleForm_bf_status 
     a sh:PropertyShape ;
     sh:path bf:Status ;
-    sh:in ( <https://w3id.org/arm/datasets/status/cancelled> <https://w3id.org/arm/datasets/status/current> <https://w3id.org/arm/datasets/status/deprecated> <https://w3id.org/arm/datasets/status/invalid> ) ;
+    sh:in ( <https://w3id.org/arm/core/vocabularies/status/0.1/cancelled> <https://w3id.org/arm/core/vocabularies/status/0.1/current> <https://w3id.org/arm/core/vocabularies/status/0.1/deprecated> <https://w3id.org/arm/core/vocabularies/status/0.1/invalid> ) ;
     sh:description "The place from which this title originates, such as spine, cover, container, etc." ;
     sh:order "8"^^xsd:int ;
     sh:nodeKind sh:IRI ;
@@ -2919,8 +2923,22 @@ raremat_monograph_form:BibliographicCitationForm
 raremat_monograph_form:BibliographicCitationForm_arm_hasSource
     a sh:PropertyShape ;
     sh:path arm:hasSource ;
-    sh:class arm:Entry ;
-    sh:description "Entry source of the citation" ;
+    sh:or (
+        [
+            sh:class arm:Entry ;
+        ]
+        [
+            sh:class arm:Page ;
+        ]
+        [
+            sh:class arm:Volume ;
+        ]
+        [
+            sh:class bf:Instance ;
+        ]
+      ) ;
+    sh:name "Citation source" ;
+    sh:description "Citation source, either an Entry, Page, Volume, Instance of where a citation was found." ;
     tosh:editWidget swa:NestedObjectEditor ;
     sh:nodeKind sh:IRI ;
     sh:order "0"^^xsd:int .
@@ -2959,7 +2977,7 @@ raremat_monograph_form:BibliographicCitationForm_arm_atLocation
             sh:class bf:Instance ;
         ]
       ) ;
-    sh:name "Entry source" ;
+    sh:name "Source" ;
     sh:description "Location where the citation entry was found" ;
     tosh:editWidget swa:NestedObjectEditor ;
     sh:nodeKind sh:IRI ;
@@ -2968,8 +2986,8 @@ raremat_monograph_form:BibliographicCitationForm_arm_atLocation
 raremat_monograph_form:BibliographicCitationForm_rdf_value
     a sh:PropertyShape ;
     sh:path rdf:value ;
-    sh:name "Citation value" ;
-    sh:description "The value of the citation." ;
+    sh:name "Citation entry value" ;
+    sh:description "The value of the citation entry." ;
     sh:nodeKind sh:Literal ;
     sh:order "1"^^xsd:int .
     
@@ -3148,7 +3166,7 @@ raremat_monograph_form:FontForm_arm_hasTypeface
     a sh:PropertyShape ;
     sh:path arm:hasTypeface ;
     sh:order "0"^^xsd:int ;
-    sh:in ( aat:300200661 <https://w3id.org/arm/datasets/typeface/gothic-antique> <https://w3id.org/arm/datasets/typeface/rotunda> <https://w3id.org/arm/datasets/typeface/textura> aat:300200001 aat:300194460 aat:300255252 aat:300211132 aat:300211185 aat:300211196 aat:300216317 aat:300195881 aat:300211202 aat:300211172 aat:300202354 aat:300211038 aat:300202391 aat:300211014 aat:300211017 aat:300215373 aat:300195655 aat:300195865 ) ;
+    sh:in ( aat:300200661 <https://w3id.org/arm/core/vocabularies/typeface/0.1/gothic-antique> <https://w3id.org/arm/core/vocabularies/typeface/0.1/rotunda> <https://w3id.org/arm/core/vocabularies/typeface/0.1/textura> aat:300200001 aat:300194460 aat:300255252 aat:300211132 aat:300211185 aat:300211196 aat:300216317 aat:300195881 aat:300211202 aat:300211172 aat:300202354 aat:300211038 aat:300202391 aat:300211014 aat:300211017 aat:300215373 aat:300195655 aat:300195865 ) ;
     sh:nodeKind sh:IRI ;
     sh:name "Has typeface" ;
     sh:description "A design or “font family” created by a typographer or type designer. It defines specific stylistic features to determine the type display of a writing system." .
@@ -3186,7 +3204,7 @@ raremat_monograph_form:HandwritingForm_arm_hasHandwritingType
     a sh:PropertyShape ;
     sh:path arm:hasHandwritingType ;
     sh:order "0"^^xsd:int ;
-    sh:in ( aat:300194411 aat:300195207 aat:300375118 aat:300195226 aat:300210195 aat:300210180 aat:300202638 aat:300194430 aat:300210204 aat:300210206 aat:300210205 aat:300210136 aat:300210143 aat:300210146 aat:300194451 aat:300210049 aat:300210050 aat:300210051 aat:300194448 aat:300379143 aat:300209776 aat:300209772 aat:300196122 aat:300198409 aat:300194424 aat:300209780 aat:300200668 aat:300210288 aat:300200828 <http://dbpedia.org/resource/Court_hand> <http://dbpedia.org/resource/Secretary_hand> <https://w3id.org/arm/datasets/handwriting_type/mixed_hand> aat:300194782 <https://w3id.org/arm/datasets/handwriting_type/other_hand> ) ;
+    sh:in ( aat:300194411 aat:300195207 aat:300375118 aat:300195226 aat:300210195 aat:300210180 aat:300202638 aat:300194430 aat:300210204 aat:300210206 aat:300210205 aat:300210136 aat:300210143 aat:300210146 aat:300194451 aat:300210049 aat:300210050 aat:300210051 aat:300194448 aat:300379143 aat:300209776 aat:300209772 aat:300196122 aat:300198409 aat:300194424 aat:300209780 aat:300200668 aat:300210288 aat:300200828 <http://dbpedia.org/resource/Court_hand> <http://dbpedia.org/resource/Secretary_hand> <https://w3id.org/arm/core/vocabularies/arrangement/0.1/mixed_hand> aat:300194782 <https://w3id.org/arm/core/vocabularies/arrangement/0.1/other_hand> ) ;
     sh:nodeKind sh:IRI ;
     sh:name "Has handwriting type" ;
     sh:description "The type of writing hand used by this example of handwriting" .

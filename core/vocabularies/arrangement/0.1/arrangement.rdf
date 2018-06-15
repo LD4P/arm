@@ -26,7 +26,7 @@
     </void:Dataset>    
     
     <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/arrangement/0.1/closed">
-        <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/Arrangement"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:label>closed</rdfs:label>
         <skos:definition>The condition of being closed, such as a book. Particular measurements and other descriptions may pertain to the object in this arrangement.</skos:definition>
         <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
@@ -34,7 +34,7 @@
     </owl:NamedIndividual>
     
     <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/arrangement/0.1/opened">
-        <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/Arrangement"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:label>opened</rdfs:label>
         <skos:definition>The condition of being opened, such as a book. Particular measurements and other descriptions may pertain to the object in this arrangement.</skos:definition>
         <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
@@ -42,7 +42,7 @@
     </owl:NamedIndividual>
     
     <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/arrangement/0.1/folded">
-        <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/Arrangement"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:label>folded</rdfs:label>
         <skos:definition>The condition of being folded, such as a parchment. Particular measurements and other descriptions may pertain to the object in this arrangement.</skos:definition>
         <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
@@ -50,7 +50,7 @@
     </owl:NamedIndividual>
     
     <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/arrangement/0.1/unfolded">
-        <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/Arrangement"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:label>infolded</rdfs:label>
         <skos:definition>The condition of being unfolded, such as a parchment. Particular measurements and other descriptions may pertain to the object in this arrangement.</skos:definition>
         <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
@@ -58,7 +58,7 @@
     </owl:NamedIndividual>
     
     <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/arrangement/0.1/rolled">
-        <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/Arrangement"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:label>rolled</rdfs:label>
         <skos:definition>The condition of being rolled, such as a scroll. Particular measurements and other descriptions may pertain to the object in this arrangement.</skos:definition>
         <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
@@ -66,7 +66,7 @@
     </owl:NamedIndividual>
     
     <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/arrangement/0.1/unrolled">
-        <rdf:type rdf:resource="https://w3id.org/arm/core/ontology/0.1/Arrangement"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:label>unrolled</rdfs:label>
         <skos:definition>The condition of being unrolled, such as a scroll. Particular measurements and other descriptions may pertain to the object in this arrangement.</skos:definition>
         <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>

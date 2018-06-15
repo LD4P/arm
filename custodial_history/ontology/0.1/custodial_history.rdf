@@ -477,7 +477,8 @@
     
     <owl:ObjectProperty rdf:about="https://w3id.org/arm/custodial_history/ontology/0.1/accessionedBy">
         <rdfs:label xml:lang="en">accessioned by</rdfs:label>    
-        <skos:definition xml:lang="en"></skos:definition>
+        <skos:definition xml:lang="en">The CustodialEvent being described is associated with the specified AccessionNumber.</skos:definition>
+        <skos:scopeNote xml:lang="en">The AccessionNumber will also be linked to the Item via predicate bf:identifies.</skos:scopeNote>
         <rdfs:domain rdf:resource="https://w3id.org/arm/custodial_history/ontology/0.1/CustodialEvent"/>
         <rdfs:range rdf:resource="https://w3id.org/arm/core/ontology/0.1/AccessionNumber"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arm/custodial_history/ontology/0.1/accessions" />
@@ -487,7 +488,8 @@
     
     <owl:ObjectProperty rdf:about="https://w3id.org/arm/custodial_history/ontology/0.1/accessions">
         <rdfs:label xml:lang="en">accessions</rdfs:label>    
-        <skos:definition xml:lang="en"></skos:definition>
+        <skos:definition xml:lang="en">The AccessionNumber being described is associated with the specified CustodialEvent.</skos:definition>
+        <skos:scopeNote xml:lang="en">The AccessionNumber will also be linked to the Item via predicate bf:identifies.</skos:scopeNote>
         <rdfs:domain rdf:resource="https://w3id.org/arm/core/ontology/0.1/AccessionNumber"/>
         <rdfs:range rdf:resource="https://w3id.org/arm/custodial_history/ontology/0.1/CustodialEvent"/>
         <owl:inverseOf rdf:resource="https://w3id.org/arm/custodial_history/ontology/0.1/accessionedBy" />

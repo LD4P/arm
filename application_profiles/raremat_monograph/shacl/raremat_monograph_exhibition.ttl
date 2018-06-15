@@ -21,6 +21,7 @@
 @prefix raremat_monograph_note: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_note/> .
 @prefix raremat_monograph_title: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_title/> .
 
+# VitroLib cannot use this, needs a single-valued sh:path.
 # Links Item exhibited to ExhibitionEvent via Exhibition node. Embedded form
 # in the ItemForm.
 :ItemForm_arm_hasExhibition_bf_partOf 
@@ -33,7 +34,18 @@
     sh:order "1"^^xsd:int ;   
     tosh:editWidget swa:NestedObjectEditor ;
     .
-    
+
+# The form UI should ignore the Exhibition context node.
+:ItemForm_arm_hasExhibition
+    a sh:PropertyShape ;
+    sh:node arm_core_property_shapes:arm_hasExhibition ;
+    # NON-VALIDATING   
+    sh:name "Exhibition" ; 
+    sh:description "An exhibition this item was displayed in." ;  
+    sh:group raremat_monograph_form:ItemHistoryAndProvenancePropertyGroup ;     
+    sh:order "1"^^xsd:int ;   
+    tosh:editWidget swa:NestedObjectEditor ;
+       
 #
 # ///// EXHIBITION EVENT FORM ///// #
 #

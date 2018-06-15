@@ -30,7 +30,7 @@ To address these four use cases, a new class should be created to represent bibl
 
 A citation is related to a resource of interest by the property **ex:hasCitation** (inverse ex:isCitationOf) and to the citing work by the property **ex:hasSource** (inverse ex:isSourceOf).
 
-A citation may link directly to its source, or it may link indirectly to the source through a specific location, modeled as a hierarchical chain proceeding from the most specific location up to the citing source. For example, a citation entity may be listed as a specific **ex:Entry** in a citing source, which may be located (**bf:place**) on a **ex:Page**, which may be part of (**bf:partOf**) a **ex:Volume**, which may be part of (**bf:partOf**) the citing source (**bf:Instance**).
+A citation may link directly to its source, or it may link indirectly to the source through a specific location, modeled as a hierarchical chain proceeding from the most specific location up to the citing source. For example, a citation entity may be listed as a specific **ex:Entry** in a citing source, which may be located (**bf:place**) on a **ex:Page**, which may be part of (**bf:partOf**) a **ex:Volume**, which may be part of (**bf:partOf**) the citing source (**bf:Instance**). Depending on available information, any single resource or combination of **Entry**, **Page**, **Volume**, and **Instance** may be specified in the location subgraph of the citation. 
 
 Cataloger comments on citations are constructed using the BIBFRAME notes.
 
@@ -50,11 +50,11 @@ A negative citation is also modeled as an **bf:Note**, with the value "not found
 
 1.  Create a new class, **ex:Citation**, to represent bibliographic citations.
 
-2.  Create a new property, **ex:hasCitation** (inverse ex:isCitationOf) to link a citation to a cited resource. 
+2.  Create a new property, **ex:hasCitation** (inverse **ex:isCitationOf**) to link a citation to a cited resource. 
 
-2.  Optionally, the location within a citing source may also be specified. Create new classes, **ex:Volume**, **ex:Page**, and **ex:Entry**, to record the location of a citation.
+3.  Optionally, the location within a citing source may also be specified. Create new classes, **ex:Volume**, **ex:Page**, and **ex:Entry**, to record the location of a citation. 
 
-3.  Consider other location designators as appropriate.
+4.  Consider other location designators as appropriate.
 
 <a name="future">Areas for Future Research</a>
 --------------------------

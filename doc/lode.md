@@ -1,7 +1,6 @@
 # Generating HTML LODE documentation
 
 TODO: Move some of this to /doc/publish.md
-TODO: Also try moving this to a central location so it doesn't have to be repeated for each ontology. Might be hard to follow, though.
 
 File and directory names used in examples:
 * Original ontology file: `/award/ontology/0.1/award.rdf`
@@ -36,7 +35,7 @@ Internal links to ontology terms in the HTML file are of the form `http://www.es
 
 * Remove the portion of the links up to the `#` character in the HTML file:
 
-`$ cd `/award/ontology/0.1/doc/lode`
+`$ cd /award/ontology/0.1/doc/lode`
 `$ sed -E 's%http://www.essepuntato.it/lode/http://www.essepuntato.it/tmp/[^#]+#%#%g' award.html > temp.html`
 
 * Delete the original HTML file:

@@ -2,7 +2,7 @@
 @prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> .
-@prefix crm: <http://www.cidoc-crm.org/Property/P2-has-type/Version-6.2/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix gn: <http://www.geonames.org/ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -36,7 +36,8 @@
 # CustodialHistory node already exists, or must be created when creating a
 # new CustodialEvent. Thus we do not define an :ItemForm_ch_hasCustodialHistory
 # PropertyShape.         
-     
+
+# Ignored by TranslateShacl due to multi-valued sh:path.     
 :ItemForm_ch_hasCustodialHistory_bf_hasPart 
     a sh:PropertyShape ;
     sh:node custodial_history_property_shapes:ch_hasCustodialHistory_bf_hasPart ;
@@ -48,6 +49,17 @@
     tosh:editWidget swa:NestedObjectEditor ; 
     .    
 
+# The form UI should ignore the intervening CustodialHistory node.
+:ItemForm_ch_hasCustodialHistory_bf_hasPart 
+    a sh:PropertyShape ;
+    sh:node custodial_history_property_shapes:ch_hasCustodialHistory ;
+    # NON-VALIDATING
+    sh:name "Custodial event" ;
+    sh:description "A custodial 'event' includes both static and transitional conditions: e.g., a period of ownership and a purchase. It is not restricted by the general notion of 'event.'" ;
+    sh:group raremat_monograph_property_groups:ItemHistoryAndProvenancePropertyGroup ;
+    sh:order "0"^^xsd:int ;
+    tosh:editWidget swa:NestedObjectEditor ; 
+    
 
 ##### CUSTODIAL HISTORY #####
 
@@ -178,8 +190,8 @@
     a sh:PropertyShape ;
     sh:node custodial_history_property_shapes:rdfs_label ;
     # NON-VALIDATING
-    sh:name "Custodial event name" ;
-    sh:description "Optionally specify a name for the custodial event." ;
+    sh:name "Custodial event name or label" ;
+    sh:description "Specify a name or label for the custodial event." ;
     sh:order "25"^^xsd:int ;
     . 
        
@@ -220,7 +232,7 @@
     sh:maxCount 1 ;
     # NON-VALIDATING
     sh:name "Date" ;
-    sh:description "Date or date interval of the custodial event. Recommended to use EDTF format." ;
+    sh:description "Date or date interval of the custodial event. EDTF format recommended." ;
     sh:order "40"^^xsd:int ;
     .
 

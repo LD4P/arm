@@ -797,6 +797,15 @@
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:ObjectProperty>
     
+    <owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/0.1/notates">
+        <rdfs:label xml:lang="en">notates</rdfs:label>
+        <skos:definition xml:lang="en">A Note's relationship to the resource it notates.</skos:definition>      
+        <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
+        <owl:inverseOf rdf:resource="http://id.loc.gov/ontologies/bibframe/note"/>
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:ObjectProperty>
+    
     <owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/0.1/subjectOf">
         <rdfs:label xml:lang="en">subject of</rdfs:label>
         <skos:definition xml:lang="en">The relationship between a resource and another resource of which it is the subject.</skos:definition>
