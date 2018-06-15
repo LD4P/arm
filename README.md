@@ -96,7 +96,7 @@ The following protocols are used to version the ontologies.
 * The `owl:ontologyIRI` redirects to the `owl:versionIRI` of the current version of the ontology.
 * Previous versions of the ontology continue to be available at their `owl:versionIRI`.
 * By importing or referencing terms from a particular `owl:versionIRI`, users are insulated from non-backward-compatible changes in newer published versions until they decide to upgrade.
-* Version numbering (`MAJOR.MINOR.PATCH`). See [discussion below]("#numbering") on two possible numbering conventions.
+* Version numbering (`MAJOR.MINOR.PATCH`). See [discussion below](#numbering) on two possible numbering conventions.
 * The `owl:versionIRI` is updated for `MAJOR` and `MINOR` versions, but not `PATCH` versions. It thus includes only the `MAJOR` and `MINOR` version numbers.
 
 <a name="numbering">Two possible version number conventions are shown here.</a> Note that Model A is more rigorously defined than Model B, because the latter uses subjective notions of "sufficiently large" and "sufficiently significant" alongside the
@@ -142,5 +142,5 @@ objective notions of backward- and non-backward-compatibility. Possibly Model B 
 ### Vocabulary Versioning
 
 Several of the predicates used in the ontology versioning protocol are of type `owl:OntologyProperty` and thus cannot be used with our vocabularies, which are typed `void:Dataset` rather than
-`owl:Ontology`.  Vocabularies are versioned by including version number in the URI (e.g., https://w3id.org/arm/core/vocabularies/typeface/0.1/) , using the same schema outlined for ontologies; defining `owl:versionInfo` on the Dataset; 
+`owl:Ontology`.  In particular, `owl:ontologyIRI` and `owl:versionIRI` have domain `owl:Ontology`, so only versioned URIs are used for the vocabularies (e.g., `https://w3id.org/arm/core/vocabularies/typeface/0.1/`), using the same schema outlined for ontologies. Versioning is also supported by defining `owl:versionInfo` on the Dataset; 
 and following the protocols described above for use of timestamps and change descriptions. 
