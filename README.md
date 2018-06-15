@@ -59,7 +59,7 @@ of identifying versions solely with tags on the repository.
 
 * [`award/`](award/): Award ontology 
   * [`ontology/0.1/award.rdf`](award/ontology/0.1/award.rdf): Ontology file
-  * [`ontology/0.1/doc/award.html`](award/ontology/0.1/doc/): Human-readable documentation
+  * [`ontology/0.1/doc/`](award/ontology/0.1/doc/): Human-readable documentation
   
 * [`custodial_history/`](custodial_history/): Custodial history ontology 
   * [`ontology/0.1/custodial_history.rdf`](custodial_history/ontology/0.1/custodial_history.rdf): Ontology file
