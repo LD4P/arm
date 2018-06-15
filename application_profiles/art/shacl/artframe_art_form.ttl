@@ -1290,7 +1290,6 @@ artframe_art_form:ItemForm_bf_title
 
 # ///// PROPERTY SHAPES FOR Item Activity Property Group START HERE. /////////////////////////////////////////////////////////////     
 
-# TODO Update Activity List when there are subclasses, and custodial history is added to the form. 
 
 artframe_art_form:ItemForm_arm_hasActivity 
   a sh:PropertyShape ;
@@ -1316,6 +1315,15 @@ artframe_art_form:ItemForm_arm_hasActivity
         [
             sh:class activity:StereotyperActivity ;
         ] 
+    [
+            sh:class activity:DedicateeActivity ;
+        ]
+        [
+            sh:class activity:DedicatorActivity ;
+    ]
+    [
+            sh:class activity:InscriberActivity ;
+    ]
   ) .
   
 #TODO add additional item level activities
