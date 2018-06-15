@@ -35,7 +35,7 @@ The core ontology has been split into two OWL files, `core.rdf` and `activity.rd
 or the [bibliotek-o](http://bibliotek-o.org) Activity model is still unresolved. As a temporary accommodation, the Activity model is used, but the relevant terms are stored in a separate RDF file
 for easy separation.
 
-The [`application_profiles/sources/'](application_profiles/sources/) directory contains ontology and vocabulary fragments referenced in the modeling recommendations and application profiles. 
+The [`application_profiles/sources/`](application_profiles/sources/) directory contains ontology and vocabulary fragments referenced in the modeling recommendations and application profiles. 
 Two types of vocabularies are included:
 * Fragments of existing RDF vocabularies, such as Getty AAT.
 * RBMS vocabularies converted from XML to RDF. While in the absence of an RBMS-defined namespace they are namespaced within ARM, ARM does not claim ownership of these vocabularies nor does it publish them.
@@ -51,23 +51,23 @@ of identifying versions solely with tags on the repository.
 * [`modeling_recommendations/`](modeling_recommendations/): Modeling recommendations
 
 * [`core/`](core/): Core art and rare materials ontologies and vocabularies 
-  * [`core.rdf`](core/core.rdf): Primary ontology file
-  * [`activity.rdf`](core/activity.rdf): Secondary ontology file containing definitions of Activity classes and related predicates
+  * [`ontology/0.1/core.rdf`](core/ontology/0.1/core.rdf): Primary ontology file
+  * [`ontology/0.1/activity.rdf`](core/ontology/0.1/activity.rdf): Secondary ontology file containing definitions of Activity classes and related predicates
   * [`vocabularies/`](core/vocabularies): Original ARM controlled vocabularies
-  * [`doc/`](core/doc/): Human-readable documentation
+  * [`ontology/0.1/doc/`](core/ontology/0.1/doc/): Human-readable documentation
   * [`validation/`](core/validation/): SHACL validation files for the core ontology
 
 * [`award/`](award/): Award ontology 
-  * [`award.rdf`](award/award.rdf): Ontology file
-  * [`doc/`](award/doc): Human-readable documentation
+  * [`ontology/0.1/award.rdf`](award/ontology/0.1/award.rdf): Ontology file
+  * [`ontology/0.1/doc/`](award/ontology/0.1/doc/): Human-readable documentation
   
 * [`custodial_history/`](custodial_history/): Custodial history ontology 
-  * [`custodial_history.rdf`](custodial_history/custodial_history.rdf): Ontology file
-  * [`doc/`](custodial_history/doc): Human-readable documentation
+  * [`ontology/0.1/custodial_history.rdf`](custodial_history/ontology/0.1/custodial_history.rdf): Ontology file
+  * [`ontology/0.1/doc/`](custodial_history/ontology/0.1/doc/): Human-readable documentation
   
 * [`measurement/`](measurement/): Measurement ontology 
-  * [`measurement.rdf`](measurement/measurement.rdf): Ontology file
-  * [`doc/`](measurement/doc): Human-readable documentation
+  * [`ontology/0.1/measurement.rdf`](measurement/ontology/0.1/measurement.rdf): Ontology file
+  * [`ontology/0.1/doc/`](measurement/ontology/0.1/doc): Human-readable documentation
   
 * [`application_profiles/`](application_profiles/): Application profiles 
   * [`art/shacl/`](application_profiles/art/shacl/): SHACL application profiles for artworks
@@ -96,7 +96,7 @@ The following protocols are used to version the ontologies.
 * The `owl:ontologyIRI` redirects to the `owl:versionIRI` of the current version of the ontology.
 * Previous versions of the ontology continue to be available at their `owl:versionIRI`.
 * By importing or referencing terms from a particular `owl:versionIRI`, users are insulated from non-backward-compatible changes in newer published versions until they decide to upgrade.
-* Version numbering (`MAJOR.MINOR.PATCH`). See [discussion below]("#numbering") on two possible numbering conventions.
+* Version numbering (`MAJOR.MINOR.PATCH`). See [discussion below](#numbering) on two possible numbering conventions.
 * The `owl:versionIRI` is updated for `MAJOR` and `MINOR` versions, but not `PATCH` versions. It thus includes only the `MAJOR` and `MINOR` version numbers.
 
 <a name="numbering">Two possible version number conventions are shown here.</a> Note that Model A is more rigorously defined than Model B, because the latter uses subjective notions of "sufficiently large" and "sufficiently significant" alongside the
@@ -142,5 +142,5 @@ objective notions of backward- and non-backward-compatibility. Possibly Model B 
 ### Vocabulary Versioning
 
 Several of the predicates used in the ontology versioning protocol are of type `owl:OntologyProperty` and thus cannot be used with our vocabularies, which are typed `void:Dataset` rather than
-`owl:Ontology`.  Vocabularies are versioned by including version number in the URI (e.g., https://w3id.org/arm/core/vocabularies/typeface/0.1/) , using the same schema outlined for ontologies; defining `owl:versionInfo` on the Dataset; 
+`owl:Ontology`.  In particular, `owl:ontologyIRI` and `owl:versionIRI` have domain `owl:Ontology`, so only versioned URIs are used for the vocabularies (e.g., `https://w3id.org/arm/core/vocabularies/typeface/0.1/`), using the same schema outlined for ontologies. Versioning is also supported by defining `owl:versionInfo` on the Dataset; 
 and following the protocols described above for use of timestamps and change descriptions. 
