@@ -641,7 +641,6 @@
         <skos:definition xml:lang="en">A relationship between a Font and its design or “font family”</skos:definition>
         <rdfs:domain rdf:resource="https://w3id.org/arm/core/ontology/0.1/Font"/>
         <rdfs:range rdf:resource="https://w3id.org/arm/core/ontology/0.1/Typeface"/>
-        <owl:inverseOf rdf:resource=""/>
         <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:ObjectProperty>
