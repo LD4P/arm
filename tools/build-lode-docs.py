@@ -9,6 +9,7 @@ from requests_toolbelt import MultipartEncoder
 import requests
 
 LODE_SERVICE = 'http://www.essepuntato.it/lode'
+BASE = '/arm'
 
 RDF_FILES = [
     'award/ontology/0.1/award.rdf',
@@ -103,11 +104,11 @@ def fix_links(html, source):
                   html)
     # .../*.css -> /css/*.css
     html = re.sub(r'''http://eelst\.cs\.unibo\.it/apps/LODE/([\w+\.]\.css|favicon.ico)''',
-                  r'''/css/\1''',
+                  BASE + r'''/css/\1''',
                   html)
     # .../*.js -> /js/*.js
     html = re.sub(r'''http://eelst\.cs\.unibo\.it/apps/LODE/([\w\.]+\.js)''',
-                  r'''/js/\1''',
+                  BASE + r'''/js/\1''',
                   html)
     return html
 
@@ -133,7 +134,7 @@ def create_lode_html(rdf_file):
     logging.debug("HTML from LODE service:\n" + html)
     # Massage HTML for our use
     html = fix_anchors(html, prefix)
-    html = fix_links(html, prefix + '/' + filename)
+    html = fix_links(html, os.path.join(prefix, filename))
     # Write out
     with open(html_file, 'w') as fh:
         fh.write(html)
