@@ -35,7 +35,7 @@ The core ontology has been split into two OWL files, `core.rdf` and `activity.rd
 or the [bibliotek-o](http://bibliotek-o.org) Activity model is still unresolved. As a temporary accommodation, the Activity model is used, but the relevant terms are stored in a separate RDF file
 for easy separation.
 
-The [`application_profiles/sources/'](application_profiles/sources/) directory contains ontology and vocabulary fragments referenced in the modeling recommendations and application profiles. 
+The [`application_profiles/sources/`](application_profiles/sources/) directory contains ontology and vocabulary fragments referenced in the modeling recommendations and application profiles. 
 Two types of vocabularies are included:
 * Fragments of existing RDF vocabularies, such as Getty AAT.
 * RBMS vocabularies converted from XML to RDF. While in the absence of an RBMS-defined namespace they are namespaced within ARM, ARM does not claim ownership of these vocabularies nor does it publish them.
@@ -51,23 +51,23 @@ of identifying versions solely with tags on the repository.
 * [`modeling_recommendations/`](modeling_recommendations/): Modeling recommendations
 
 * [`core/`](core/): Core art and rare materials ontologies and vocabularies 
-  * [`core.rdf`](core/core.rdf): Primary ontology file
-  * [`activity.rdf`](core/activity.rdf): Secondary ontology file containing definitions of Activity classes and related predicates
+  * [`ontology/0.1/core.rdf`](core/ontology/0.1/core.rdf): Primary ontology file
+  * [`ontology/0.1/activity.rdf`](core/ontology/0.1/activity.rdf): Secondary ontology file containing definitions of Activity classes and related predicates
   * [`vocabularies/`](core/vocabularies): Original ARM controlled vocabularies
-  * [`doc/`](core/doc/): Human-readable documentation
+  * [`ontology/0.1/doc/`](core/ontology/0.1/doc/): Human-readable documentation
   * [`validation/`](core/validation/): SHACL validation files for the core ontology
 
 * [`award/`](award/): Award ontology 
-  * [`award.rdf`](award/award.rdf): Ontology file
-  * [`doc/`](award/doc): Human-readable documentation
+  * [`ontology/0.1/award.rdf`](award/ontology/0.1/award.rdf): Ontology file
+  * [`ontology/0.1/doc/award.html`](award/ontology/0.1/doc/): Human-readable documentation
   
 * [`custodial_history/`](custodial_history/): Custodial history ontology 
-  * [`custodial_history.rdf`](custodial_history/custodial_history.rdf): Ontology file
-  * [`doc/`](custodial_history/doc): Human-readable documentation
+  * [`ontology/0.1/custodial_history.rdf`](custodial_history/ontology/0.1/custodial_history.rdf): Ontology file
+  * [`ontology/0.1/doc/`](custodial_history/ontology/0.1/doc/): Human-readable documentation
   
 * [`measurement/`](measurement/): Measurement ontology 
-  * [`measurement.rdf`](measurement/measurement.rdf): Ontology file
-  * [`doc/`](measurement/doc): Human-readable documentation
+  * [`ontology/0.1/measurement.rdf`](measurement/ontology/0.1/measurement.rdf): Ontology file
+  * [`ontology/0.1/doc/`](measurement/ontology/0.1/doc): Human-readable documentation
   
 * [`application_profiles/`](application_profiles/): Application profiles 
   * [`art/shacl/`](application_profiles/art/shacl/): SHACL application profiles for artworks
