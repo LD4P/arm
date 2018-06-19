@@ -66,7 +66,7 @@ of identifying versions solely with tags on the repository.
     * [`vocabularies/status/0.1/doc/lode/status.html`](core/vocabularies/status/0.1/doc/lode/status.html): Human-readable documentation of Status vocabulary
     * [`vocabularies/typeface/0.1/typeface.rdf`](core/vocabularies/typeface/0.1/typeface.rdf): Typeface
     * [`vocabularies/typeface/0.1/doc/lode/typeface.html`](core/vocabularies/typeface/0.1/doc/lode/typeface.html): Human-readable documentation of Typeface vocabulary
-  * [`validation/`](core/validation/): SHACL validation files for the core ontology
+  * [`validation/shacl/`](core/validation/shacl/): SHACL validation files for the core ontology
 
     
 * [`award/`](award/): Award ontology 
@@ -87,8 +87,9 @@ of identifying versions solely with tags on the repository.
   * [`sources/`](application_profiles/sources/): Source ontologies and vocabularies for the application profiles  
   
 * [`tools/`](tools/): Tools used in support of the ontology and vocabulary development, such as XSL data conversion scripts or generating human-readable documentation
+  * [`rbms_vocabs`](tools/rbms_vocabs/) Converts RBMS vocabulary XML dumps to RDF
+  * [`build-lode-docs.py`](tools/build-lode-docs.py) Generates ontology and vocabulary LODE documentation with various modifications 
   
-* [`doc/`](doc/): Informational documents
 
 
 Versioning and Change Management
