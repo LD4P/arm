@@ -120,7 +120,7 @@ def fix_links(html, source, info):
                   '<a href="' + source + '">' + text + '</a>',
                   html)
     # .../*.css -> /css/*.css
-    html = re.sub(r'''http://eelst\.cs\.unibo\.it/apps/LODE/([\w+\.]\.css|favicon.ico)''',
+    html = re.sub(r'''http://eelst\.cs\.unibo\.it/apps/LODE/([\w+\.]+\.css|favicon.ico)''',
                   BASE + r'''/css/\1''',
                   html)
     # .../*.js -> /js/*.js
