@@ -14,7 +14,7 @@ Relationship of Style/Period to Culture and Nationality
 
 Stylistic information is closely related to the cultural context of the work, since a style or period may be characteristic of a given culture (e.g. Minoan Style, Spanish Colonial Style, Olmec Style).  
 
-Art cataloguing standards have dealt with culture and nationality in various ways. In general, culture and nationality are considered attributes of the agent and should be recorded as such. In the case of nationality this is uncontroversial, since by definition only persons can have nationality. However, culture can at times be considered an attribute of a work, for example,  cultural objects created by a group of people, or a work deliberately created by an artist in the style of a culture that is not his/her own. The attribution of culture in these cases is more closely aligned with style; to the extent that culture adheres to a work, it can be captured by the concept of Style/Period. This group therefore recommends the usage of ex:hasStylePeriod for recording cultural-related information in the work context, and reserves direct attribution of nationality and culture to agents.  
+Art cataloguing standards have dealt with culture and nationality in various ways. In general, culture and nationality are considered attributes of the agent and should be recorded as such. In the case of nationality this is uncontroversial, since by definition only persons can have nationality. However, culture can at times be considered an attribute of a work, for example,  cultural objects created by a group of people, or a work deliberately created by an artist in the style of a culture that is not his/her own. The attribution of culture in these cases is more closely aligned with style; to the extent that culture adheres to a work, it can be captured by the concept of Style/Period. This group therefore recommends the usage of arm:hasStylePeriod for recording cultural-related information in the work context, and reserves direct attribution of nationality and culture to agents.  
 
 Sample Data
 -----------
@@ -65,32 +65,41 @@ There is no modeling of Style/Period in BIBFRAME.
 
 Overview of the RareMat/ArtFrame Style/Period Model
 ----------
-The RareMat/ArtFrame Style/Period model is quite simple, involving two predicates, hasStylePeriod and isStylePeriodOf. The range of hasStylePeriod and domain of isStylePeriodOf are left unspecified so that vocabularies (such as AAT) can be used without unwanted type entailments.
+The RareMat/ArtFrame Style/Period model is quite simple, involving two predicates, hasStylePeriod and isStylePeriodOf, and a class StylePeriod. The range of hasStylePeriod and domain of isStylePeriodOf are left unspecified so that vocabularies (such as AAT) can be used without unwanted type entailments.
+
 
 Term Specifications
 ---------------
 
+Classes
+==========
+
+**arm:StylePeriod** 
+> - **URI:** TBD
+> - **Label:** Style/Period
+> - **Definition:** A defined style, historical or artistic period, movement, group, or school whose characteristics are represented in a work.        
+
+
 Properties
 ==========
 
-**ex:hasStylePeriod** (object property)
+**arm:hasStylePeriod** (object property)
 > - **URI:** TBD
 > - **Label:** has style/period
 > - **Definition:** A resource’s relationship to a style/period it represents.
 > - **Domain:** unspecified
 > - **Range:** unspecified
-> - **Inverse:** ex:isStylePeriodOf
+> - **Inverse:** arm:isStylePeriodOf
 > - **Editorial note:** Range is unspecified to allow values from various controlled vocabularies.
 
-**ex:isStylePeriodOf** (object property)
+**arm:isStylePeriodOf** (object property)
 > - **URI:** TBD
 > - **Label:** is style/period of
 > - **Definition:** A style/period’s relationship to a resource representing it.
 > - **Domain:** unspecified
 > - **Range:** unspecified
-> - **Inverse:** ex:hasStylePeriod
-> - **Editorial note:** Domain is unspecified to allow subjects from various controlled vocabularies.
-
+> - **Inverse:** arm:hasStylePeriod
+> - **Editorial note:** Domain is unspecified to allow values from various controlled vocabularies.
 
 
 Diagram
@@ -103,20 +112,35 @@ Sample RDF
 ```
 :work a bf:StillImage ;
     bf:title :title ;
-    ex:hasStylePeriod <http://vocab.getty.edu/aat/300172863> .
+    arm:hasStylePeriod :style_period .
+    
+:style_period a arm:StylePeriod ;
+    crm:P2_has_type <http://vocab.getty.edu/aat/300172863> .
 
 :title rdf:value “Atala et Chactas” .
 ``` 
 
+
+
 Areas for Future Research
 ---------
-- Alignment with or use of VRA Style/Period or other ontologies.
-- Modeling of technique and instrumentation. 
-> - In some cases there are relationships between technique and style/period. E.g., <a href="http://vocab.getty.edu/aat/300067450">pointillism</a> from the Processes and Techniques Hierarchy, and <a href="http://vocab.getty.edu/aat/300021505">Neo-Impressionist</a> from the Styles and Periods Hierarchy.  
-> - There are frequently relationships between technique and instrumentation - e.g., dry-point designates both an engraving tool and the intaglio technique that uses this tool. How should these be modeled?
-> - BIBFRAME defines bf:productionMethod and bf:ProductionMethod, but these apply at the instance level and are therefore not applicable to the current context.
-- Modeling of culture and nationality in relation to an agent as suggested above.
-- Modeling of a work that emulates a style/period of an earlier time period. E.g., the early 20th-century composer Fritz Kreisler wrote pieces in the Baroque style.
+* Alignment with or use of VRA Style/Period or other ontologies.
+* Modeling of technique and instrumentation. 
+ * In some cases there are relationships between technique and style/period. E.g., <a href="http://vocab.getty.edu/aat/300067450">pointillism</a> from the Processes and Techniques Hierarchy, and <a href="http://vocab.getty.edu/aat/300021505">Neo-Impressionist</a> from the Styles and Periods Hierarchy.  
+ * There are frequently relationships between technique and instrumentation - e.g., dry-point designates both an engraving tool and the intaglio technique that uses this tool. How should these be modeled?
+ * BIBFRAME defines bf:productionMethod and bf:ProductionMethod, but these apply at the instance level and are therefore not applicable to the current context.
+* Modeling of culture and nationality in relation to an agent as suggested above.
+* Modeling of a work that emulates a style/period of an earlier time period. E.g., the early 20th-century composer Fritz Kreisler wrote pieces in the Baroque style.
+* Define StylePeriod as a subclass of skos:Concept?
+* Modeling of disjunctions, such as "Muromachi to Momoyama periods" or "Ming or Qing dynasty." Currently these will be modeled as either an rdf:value or rdfs:label on a StylePeriod individual. Is it possible to union taxonomy terms, so that
+this StylePeriod resource crm:P2_has_type ( aat:30001843 UNION aat:300018478 ), where aat:30001843 = Ming Dynasty, aat:300018478 = Qing Dynasty? With the current profiling, is it more appropriate to use rdf:value or rdfs:label? rdfs:label has no
+semantic weight; however, the disjunction is used to express unknown or limited information for human readers, so rdfs:label might be more appropriate. 
+* See https://github.com/LD4P/arm/issues/56#issuecomment-398498567 for discussion of issues related to profiling options using controlled vocabularies. 
+ * TODO Rebecca - add that text here
+ * If we choose model 1 throughout, then the choice of subclassing vs vocabularies will arise (another large issue to be researched).
+ * Basically now we see three modeling options: model 1 from the above-cited comment, model 2 from the above-cited comment, and within model 1 the additional choice of taxonomies vs class hierarchies.
+ * How do we weight consistent profiling against not spinning up nonce resources unless necessary?
+
 
 
 

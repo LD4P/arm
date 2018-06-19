@@ -348,6 +348,13 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/0.1/Marking"/>
         <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+    </owl:Class> 
+    
+    <owl:Class rdf:about="https://w3id.org/arm/core/ontology/0.1/StylePeriod">
+        <rdfs:label xml:lang="en">Style/Period</rdfs:label>
+        <skos:definition xml:lang="en">A defined style, historical or artistic period, movement, group, or school whose characteristics are represented in a work.</skos:definition>        
+        <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+        <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
     </owl:Class>   
     
     <owl:Class rdf:about="https://w3id.org/arm/core/ontology/0.1/SubjectNote">
