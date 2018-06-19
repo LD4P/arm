@@ -25,23 +25,32 @@ RDF_FILES = [
 ]
 
 
-def get_prefix(rdfxml):
-    """Get ontology prefix from the RDF/XML.
+def get_namespace_and_info(rdfxml):
+    """Get ontology or vocabulary namespace from the RDF/XML.
 
-    look for either owl:versionIRI or void:vocabulary.
+    look for either:
+      * owl:versionIRI property for the ontologies
+      * void:Dataset type definition for the vocabularies
+
+    in the case of vocabularies, also pull out extra information
+    from the VOID description and return in info dict.
     """
     from rdflib.graph import Graph
-    from rdflib.namespace import OWL, VOID
+    from rdflib.namespace import RDF, RDFS, OWL, VOID
     g = Graph()
     g.parse(data=rdfxml, format="application/rdf+xml")
+    info = {}
     # Look for owl:versionIRI first (_assume_ only one!)
     for s, p, o in g.triples((None, OWL.versionIRI, None)):
-        return(str(o))
-    # Look for void:vocabulary second (_assume_ only one!)
-    for s, p, o in g.triples((None, VOID.vocabulary, None)):
-        return(str(o))
+        return(str(o), info)
+    # Look for void:Dataset second (_assume_ only one!)
+    for s, p, o in g.triples((None, RDF.type, VOID.Dataset)):
+        info['h1'] = g.value(s, RDFS.label, None, str(s))
+        info['versionIRI'] = str(s)
+        logging.info(" - h1 = " + info['h1'])
+        return(str(s), info)
     # Else, oops
-    raise Exception("Failed to find prefix!")
+    raise Exception("Failed to find namespace!")
 
 
 def get_lode(rdfxml):
@@ -68,7 +77,7 @@ def get_lode(rdfxml):
     return(r.content.decode("utf-8"))
 
 
-def fix_anchors(html, prefix):
+def fix_anchors(html, namespace):
     """Fix anchors in LODE html, returns modified HTML."""
     # Pass 1 - find anchors to change
     terms = {}
@@ -77,12 +86,12 @@ def fix_anchors(html, prefix):
         anchor = m[0]
         uri = m[1]
         # Only want URIs in this namespace
-        lmatch = re.match(prefix + r'''(\w+)$''', uri)
+        lmatch = re.match(namespace + r'''(\w+)$''', uri)
         if (lmatch):
             term = lmatch.group(1)
             if (term in terms):
                 if (terms[term] != anchor and anchor not in seen_anchors):
-                    ns = prefix if (not lmatch.group(1)) else prefix + lmatch.group(1)
+                    ns = namespace if (not lmatch.group(1)) else namespace + lmatch.group(1)
                     logging.info(" - ignoring additional anchor %s, already have %s for %s%s" % (anchor, terms[term], ns, term))
                     seen_anchors.add(anchor)
             else:
@@ -95,9 +104,17 @@ def fix_anchors(html, prefix):
     return html
 
 
-def fix_links(html, source):
+def fix_links(html, source, info):
     """Fix source link in LODE HTML."""
-    text = "Ontology source" if '/ontology/' in source else "Vocabulary source"
+    text = "Ontology source"
+    if '/vocabularies/' in source:
+        text = "Vocabulary source"
+        # Add title block which is missing from LODE output
+        html = re.sub(r'''(<div class="head">)<dl>''',
+                      r'''\1''' + '<h1>' + info['h1'] + '</h1>' +
+                      '<dl><dt>Version IRI:</dt><dd>' +
+                      info['versionIRI'] + '</dd></dt>',
+                      html)
     # <a href="http://ee....">Ontology source</a>
     html = re.sub(r'''<a href="[^"]+">Ontology source</a>''',
                   '<a href="' + source + '">' + text + '</a>',
@@ -126,15 +143,18 @@ def create_lode_html(rdf_file):
             line = re.sub('skos:definition', 'rdfs:comment', line)
             rdfxml += line
     logging.debug("Massaged RDF/XML:\n" + rdfxml)
-    # Extract prefix from XML
-    prefix = get_prefix(rdfxml)
-    logging.info(" - prefix %s" % (prefix))
+    # Extract namespace and info from XML
+    (namespace, info) = get_namespace_and_info(rdfxml)
+    logging.info(" - namespace %s" % (namespace))
     # Get LODE documentation
     html = get_lode(rdfxml)
+    if re.search('LODE error', html):
+        logging.warn("Error from LODE service, skipping\n\n" + html + "\n\n")
+        return
     logging.debug("HTML from LODE service:\n" + html)
     # Massage HTML for our use
-    html = fix_anchors(html, prefix)
-    html = fix_links(html, os.path.join(prefix, filename))
+    html = fix_anchors(html, namespace)
+    html = fix_links(html, os.path.join(namespace, filename), info)
     # Write out
     with open(html_file, 'w') as fh:
         fh.write(html)
