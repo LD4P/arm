@@ -25,10 +25,11 @@
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1.0</owl:versionInfo>
         <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-        <rdfs:label xml:lang="en">Activity classes for the Art and Rare Materials Ontology</rdfs:label>
-        <skos:definition xml:lang="en">The Art and Rare Materials Ontology provides specialized modeling of bibliographic metadata in the art and rare materials domains. It is an extension to the BIBFRAME ontology for general bibliographic description.</skos:definition>
+        <rdfs:label xml:lang="en">Art and Rare Materials Core Ontology: Activities</rdfs:label>
+        <skos:definition xml:lang="en">Art and Rare Materials Core Ontology: Activities provides classes and predicates to model agents and roles for the core ARM ontology (https://w3id.org/arm/core/ontology/0.1/).</skos:definition>
+        <rdfs:comment xml:lang="en">During development of Version 0.1 of the Art and Rare Materials Core Ontology (https://w3id.org/arm/core/ontology/0.1/), time constraints prevented choosing between the BIBFRAME Contribution model and the bibliotek-o (http://bibliotek-o.org/ontology/) Activity model to describe agents and roles. For convenience, it was decided to implement the latter, define the terms in a separate file to signal their provisional nature and allow for easy removal, and recommend a more thorough analysis and evaluation in the future; no preference for the Activity model is implied.</rdfs:comment>        
         <vann:preferredNamespacePrefix>activity</vann:preferredNamespacePrefix>
-        <dcterms:title xml:lang="en">Activity classes for the Art and Rare Materials Ontology</dcterms:title>
+        <dcterms:title xml:lang="en">Art and Rare Materials Core Ontology: Activities</dcterms:title>
     </owl:Ontology>
     
     <!-- 

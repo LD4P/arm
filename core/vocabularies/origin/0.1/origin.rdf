@@ -19,8 +19,8 @@
         <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
         <rdfs:label xml:lang="en">Art and Rare Materials Origin Vocabulary</rdfs:label>
-        <dcterms:title xml:lang="en">Art and RareMat Origin Vocabulary</dcterms:title>
-        <skos:definition xml:lang="en">The Art and RareMat Origin Vocabulary is a controlled vocabulary to express the origin of data, such as a title originating from the spine of a volume. Origins in this sense are distinct from sources, which refer to other resources, such as a title issued by an organization.</skos:definition>
+        <dcterms:title xml:lang="en">Art and Rare Materials Origin Vocabulary</dcterms:title>
+        <skos:definition xml:lang="en">The Art and Rare Materials Origin Vocabulary is a controlled vocabulary to express the origin of data, such as a title originating from the spine of a volume. Origins in this sense are distinct from sources, which refer to other resources, such as a title issued by an organization.</skos:definition>
         <vann:preferredNamespacePrefix>origin</vann:preferredNamespacePrefix>
         <void:vocabulary rdf:resource="https://w3id.org/arm/core/ontology/0.1/"/>
     </void:Dataset>    

@@ -25,10 +25,11 @@
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1.0</owl:versionInfo>
         <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-        <rdfs:label xml:lang="en">Measurement Ontology</rdfs:label>
-        <skos:definition xml:lang="en">The Measurement Ontology provides terms to model physical, digital, or other types of measurements. Appropriate vocabularies may be selected by the implementer for units, dimensions, arrangements, and resources measured.</skos:definition>
+        <rdfs:label xml:lang="en">Art and Rare Materials Measurement Ontology</rdfs:label>
+        <skos:definition xml:lang="en">The Art and Rare Materials Measurement Ontology provides terms to model physical, digital, or other types of measurements. Appropriate vocabularies may be selected by the implementer for units, dimensions, arrangements, and resources measured.</skos:definition>
         <vann:preferredNamespacePrefix>measure</vann:preferredNamespacePrefix>
-        <dcterms:title xml:lang="en">Measurement Ontology</dcterms:title>
+        <dcterms:title xml:lang="en">Art and Rare Materials Measurement Ontology</dcterms:title>
+        <rdfs:comment xml:lang="en">This ontology was developed in the context of art and rare materials, but is defined as an independent ontology for use in other knowledge domains.</rdfs:comment>
     </owl:Ontology>
     
 

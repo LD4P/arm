@@ -18,9 +18,9 @@
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1.0</owl:versionInfo>
         <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-        <rdfs:label xml:lang="en">RareMat Status Vocabulary</rdfs:label>
-        <dcterms:title xml:lang="en">RareMat Status Vocabulary</dcterms:title>
-        <skos:definition xml:lang="en">The RareMat Status Vocabulary is a controlled vocabulary to express the status of data, such as an invalid identifier.</skos:definition>
+        <rdfs:label xml:lang="en">Art and Rare Materials Status Vocabulary</rdfs:label>
+        <dcterms:title xml:lang="en">Art and Rare Materials Status Vocabulary</dcterms:title>
+        <skos:definition xml:lang="en">The Art and Rare Materials Status Vocabulary is a controlled vocabulary to express the status of data, such as an invalid identifier.</skos:definition>
         <vann:preferredNamespacePrefix>status</vann:preferredNamespacePrefix>
         <void:vocabulary rdf:resource="http://id.loc.gov/ontologies/bibframe/"/>
     </void:Dataset>    
