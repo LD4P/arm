@@ -58,9 +58,17 @@ artframe_art_form:WorkForm
   sh:property artframe_art_form:WorkForm_arm_hasPreferredTitle ;
   sh:property artframe_art_form:WorkForm_bf_title ;
 
-# WorkActivityPropertyGroup
+# WorkTextActivityPropertyGroup
 
-  sh:property artframe_art_form:WorkForm_activity_hasActivity ;  
+  sh:property artframe_art_form:WorkTextForm_activity_hasActivity ;  
+
+# WorkStillImageActivityPropertyGroup
+
+  sh:property artframe_art_form:WorkStillImageForm_activity_hasActivity ;
+
+# WorkObjectActivityPropertyGroup
+
+  sh:property artframe_art_form:WorkObjectForm_activity_hasActivity ;
 
 #CopyrightPropertyGroup
 
@@ -151,14 +159,15 @@ artframe_art_form:WorkForm_bf_title
   sh:order "1"^^xsd:decimal .
 
 
-# ///// PROPERTY SHAPES FOR WorkActivityPropertyGroup START HERE. /////////////////////////////////////////////////////////////
+# ///// PROPERTY SHAPES FOR WorkTextActivityPropertyGroup START HERE. /////////////////////////////////////////////////////////////
 
-artframe_art_form:WorkForm_activity_hasActivity 
+artframe_art_form:WorkTextForm_activity_hasActivity 
   a sh:PropertyShape ;
   sh:path activity:hasActivity ;
   sh:name "Agent activity or role" ;
   sh:order "0"^^xsd:decimal ;
-  sh:group artframe_art_property_groups:WorkActivityPropertyGroup ;
+  sh:group artframe_art_property_groups:WorkTextActivityPropertyGroup ;
+  sh:class bf:Text ;
   tosh:editWidget swa:NestedObjectEditor ; 
    sh:or ( 
           [
@@ -168,7 +177,29 @@ artframe_art_form:WorkForm_activity_hasActivity
             sh:class activity:CreatorActivity ;
           ]
           [
-            sh:class activity:ArchitectActivity ;
+            sh:class activity:ArtistActivity ;
+          ]
+          [
+            sh:class activity:DesignerActivity ;
+          ]
+         ) .
+
+# ///// PROPERTY SHAPES FOR WorkStillImageActivityPropertyGroup START HERE. /////////////////////////////////////////////////////////////
+
+artframe_art_form:WorkStillImageForm_activity_hasActivity 
+  a sh:PropertyShape ;
+  sh:path activity:hasActivity ;
+  sh:name "Agent activity or role" ;
+  sh:order "0"^^xsd:decimal ;
+  sh:group artframe_art_property_groups:WorkStillImageActivityPropertyGroup ;
+  sh:class bf:StillImage ;
+  tosh:editWidget swa:NestedObjectEditor ; 
+   sh:or ( 
+          [
+            sh:class activity:ArtCopyistActivity
+          ]
+          [
+            sh:class activity:CreatorActivity ;
           ]
           [
             sh:class activity:ArtistActivity ;
@@ -181,6 +212,31 @@ artframe_art_form:WorkForm_activity_hasActivity
           ]
           [
             sh:class activity:PhotographerActivity ;
+          ]
+         ) .
+
+# ///// PROPERTY SHAPES FOR WorkObjectActivityPropertyGroup START HERE. /////////////////////////////////////////////////////////////
+
+artframe_art_form:WorkObjectForm_activity_hasActivity 
+  a sh:PropertyShape ;
+  sh:path activity:hasActivity ;
+  sh:name "Agent activity or role" ;
+  sh:order "0"^^xsd:decimal ;
+  sh:group artframe_art_property_groups:WorkObjectActivityPropertyGroup ;
+  tosh:editWidget swa:NestedObjectEditor ; 
+  sh:class bf:Object ;
+   sh:or ( 
+          [
+            sh:class activity:CreatorActivity ;
+          ]
+          [
+            sh:class activity:ArchitectActivity ;
+          ]
+          [
+            sh:class activity:ArtistActivity ;
+          ]
+          [
+            sh:class activity:DesignerActivity ;
           ]
           [
             sh:class activity:SculptorActivity ;
