@@ -132,7 +132,7 @@ Areas for Future Research
 * Modeling of culture and nationality in relation to an agent as suggested above.
 * Modeling of a work that emulates a style/period of an earlier time period. E.g., the early 20th-century composer Fritz Kreisler wrote pieces in the Baroque style.
 * Define StylePeriod as a subclass of skos:Concept?
-* Modeling of disjunctions, such as "Muromachi to Momoyama periods" or "Ming or Qing dynasty." Currently these will be modeled as either an rdf:value or rdfs:label on a StylePeriod individual. Is it possible to union taxonomy terms, so that
+* Modeling of ranges and disjunctions, such as "Muromachi to Momoyama periods" or "Ming or Qing dynasty." Currently these will be modeled as either an rdf:value or rdfs:label on a StylePeriod individual. Is it possible to union taxonomy terms, so that
 this StylePeriod resource crm:P2_has_type ( aat:30001843 UNION aat:300018478 ), where aat:30001843 = Ming Dynasty, aat:300018478 = Qing Dynasty? With the current profiling, is it more appropriate to use rdf:value or rdfs:label? rdfs:label has no
 semantic weight; however, the disjunction is used to express unknown or limited information for human readers, so rdfs:label might be more appropriate. 
 * See https://github.com/LD4P/arm/issues/56#issuecomment-398498567 for discussion of issues related to profiling options using controlled vocabularies. 
