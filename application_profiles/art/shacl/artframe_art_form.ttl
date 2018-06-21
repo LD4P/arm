@@ -3,7 +3,6 @@
 @prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
 @prefix artframe_art_property_groups: <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/> .
 @prefix award: <https://w3id.org/arm/award/ontology/0.1/> .
-@prefix activity: <https://w3id.org/arm/core/activity/0.1/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix core: <http://vivoweb.org/ontology/core#> .
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
@@ -314,6 +313,7 @@ artframe_art_form:WorkForm_bf_genreForm
  sh:group artframe_art_property_groups:WorkSubjectGenreFormPropertyGroup ;
  sh:name "Form Genre Terms" ;
  sh:nodeKind sh:IRI ;
+ sh:order "2"^^xsd:decimal ;
  sh:or (
  [
  sh:hasValue <http://id.loc.gov/authorities/genreForms> ;
@@ -331,7 +331,7 @@ artframe_art_form:WorkForm_arm_hasStylePeriod
   sh:name "Style Period" ;
   sh:nodeKind sh:IRI ;
   sh:in ( <http://vocab.getty.edu/aat/300019257> <http://vocab.getty.edu/aat/300019280> <http://vocab.getty.edu/aat/300106711> <http://vocab.getty.edu/aat/300106716> <http://vocab.getty.edu/aat/300106723> <http://vocab.getty.edu/aat/300264736> <http://vocab.getty.edu/aat/300264737> <http://vocab.getty.edu/aat/300266744> <http://vocab.getty.edu/aat/300312378> <http://vocab.getty.edu/aat/300386009> <http://vocab.getty.edu/aat/300391250> <http://vocab.getty.edu/aat/300391448> <http://vocab.getty.edu/aat/300393217> <http://vocab.getty.edu/aat/300404836> <http://vocab.getty.edu/aat/300015647> <http://vocab.getty.edu/aat/300016617> <http://vocab.getty.edu/aat/300018279> <http://vocab.getty.edu/aat/300019255> <http://vocab.getty.edu/aat/300020656> <http://vocab.getty.edu/aat/300021516> <http://vocab.getty.edu/aat/300021854> <http://vocab.getty.edu/aat/300022097> <http://vocab.getty.edu/aat/300266481> <http://vocab.getty.edu/aat/300385955> <http://vocab.getty.edu/aat/300385959> <http://vocab.getty.edu/aat/300386794> <http://vocab.getty.edu/aat/300386974> <http://vocab.getty.edu/aat/300387737> <http://vocab.getty.edu/aat/300056487> <http://vocab.getty.edu/aat/300067402> <http://vocab.getty.edu/aat/300263555> <http://vocab.getty.edu/aat/300310539> <http://vocab.getty.edu/aat/300310540> <http://vocab.getty.edu/aat/300310541> <http://vocab.getty.edu/aat/300310542> <http://vocab.getty.edu/aat/300310543> <http://vocab.getty.edu/aat/300310544> <http://vocab.getty.edu/aat/300310545> <http://vocab.getty.edu/aat/300310546> <http://vocab.getty.edu/aat/300310547> <http://vocab.getty.edu/aat/300311734> <http://vocab.getty.edu/aat/300312275> <http://vocab.getty.edu/aat/300379388> <http://vocab.getty.edu/aat/300391392> <http://vocab.getty.edu/aat/300391437> <http://vocab.getty.edu/aat/300393250> <http://vocab.getty.edu/aat/300055513> <http://vocab.getty.edu/aat/300073708> <http://vocab.getty.edu/aat/300148033> ) ;
-  sh:order "2"^^xsd:decimal .
+  sh:order "3"^^xsd:decimal .
 
 artframe_art_form:WorkForm_bf_classification 
   a sh:PropertyShape ;
@@ -340,7 +340,7 @@ artframe_art_form:WorkForm_bf_classification
   sh:group artframe_art_property_groups:WorkSubjectGenreFormPropertyGroup ;
   sh:name "Classification" ;
   sh:nodeKind sh:IRI ;
-  sh:order "3"^^xsd:decimal .
+  sh:order "4"^^xsd:decimal .
   
 artframe_art_form:WorkForm_bf_language 
   a sh:PropertyShape ;
