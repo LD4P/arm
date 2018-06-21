@@ -3,7 +3,6 @@
 @prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
 @prefix artframe_art_property_groups: <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/> .
 @prefix award: <https://w3id.org/arm/award/ontology/0.1/> .
-@prefix activity: <https://w3id.org/arm/core/activity/0.1/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix core: <http://vivoweb.org/ontology/core#> .
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
@@ -196,7 +195,7 @@ artframe_art_form:WorkStillImageForm_activity_hasActivity
   tosh:editWidget swa:NestedObjectEditor ; 
    sh:or ( 
           [
-            sh:class activity:ArtCopyistActivity
+            sh:class activity:ArtCopyistActivity ;
           ]
           [
             sh:class activity:CreatorActivity ;
@@ -314,6 +313,7 @@ artframe_art_form:WorkForm_bf_genreForm
  sh:group artframe_art_property_groups:WorkSubjectGenreFormPropertyGroup ;
  sh:name "Form Genre Terms" ;
  sh:nodeKind sh:IRI ;
+ sh:order "2"^^xsd:decimal ;
  sh:or (
  [
  sh:hasValue <http://id.loc.gov/authorities/genreForms> ;
@@ -331,7 +331,7 @@ artframe_art_form:WorkForm_arm_hasStylePeriod
   sh:name "Style Period" ;
   sh:nodeKind sh:IRI ;
   sh:in ( <http://vocab.getty.edu/aat/300019257> <http://vocab.getty.edu/aat/300019280> <http://vocab.getty.edu/aat/300106711> <http://vocab.getty.edu/aat/300106716> <http://vocab.getty.edu/aat/300106723> <http://vocab.getty.edu/aat/300264736> <http://vocab.getty.edu/aat/300264737> <http://vocab.getty.edu/aat/300266744> <http://vocab.getty.edu/aat/300312378> <http://vocab.getty.edu/aat/300386009> <http://vocab.getty.edu/aat/300391250> <http://vocab.getty.edu/aat/300391448> <http://vocab.getty.edu/aat/300393217> <http://vocab.getty.edu/aat/300404836> <http://vocab.getty.edu/aat/300015647> <http://vocab.getty.edu/aat/300016617> <http://vocab.getty.edu/aat/300018279> <http://vocab.getty.edu/aat/300019255> <http://vocab.getty.edu/aat/300020656> <http://vocab.getty.edu/aat/300021516> <http://vocab.getty.edu/aat/300021854> <http://vocab.getty.edu/aat/300022097> <http://vocab.getty.edu/aat/300266481> <http://vocab.getty.edu/aat/300385955> <http://vocab.getty.edu/aat/300385959> <http://vocab.getty.edu/aat/300386794> <http://vocab.getty.edu/aat/300386974> <http://vocab.getty.edu/aat/300387737> <http://vocab.getty.edu/aat/300056487> <http://vocab.getty.edu/aat/300067402> <http://vocab.getty.edu/aat/300263555> <http://vocab.getty.edu/aat/300310539> <http://vocab.getty.edu/aat/300310540> <http://vocab.getty.edu/aat/300310541> <http://vocab.getty.edu/aat/300310542> <http://vocab.getty.edu/aat/300310543> <http://vocab.getty.edu/aat/300310544> <http://vocab.getty.edu/aat/300310545> <http://vocab.getty.edu/aat/300310546> <http://vocab.getty.edu/aat/300310547> <http://vocab.getty.edu/aat/300311734> <http://vocab.getty.edu/aat/300312275> <http://vocab.getty.edu/aat/300379388> <http://vocab.getty.edu/aat/300391392> <http://vocab.getty.edu/aat/300391437> <http://vocab.getty.edu/aat/300393250> <http://vocab.getty.edu/aat/300055513> <http://vocab.getty.edu/aat/300073708> <http://vocab.getty.edu/aat/300148033> ) ;
-  sh:order "2"^^xsd:decimal .
+  sh:order "3"^^xsd:decimal .
 
 artframe_art_form:WorkForm_bf_classification 
   a sh:PropertyShape ;
@@ -340,7 +340,7 @@ artframe_art_form:WorkForm_bf_classification
   sh:group artframe_art_property_groups:WorkSubjectGenreFormPropertyGroup ;
   sh:name "Classification" ;
   sh:nodeKind sh:IRI ;
-  sh:order "3"^^xsd:decimal .
+  sh:order "4"^^xsd:decimal .
   
 artframe_art_form:WorkForm_bf_language 
   a sh:PropertyShape ;
@@ -1656,28 +1656,28 @@ artframe_art_form:ItemForm_bf_electronicLocator
   sh:nodeKind sh:IRI ;
  sh:order "1"^^xsd:decimal .
 
-# /////// Work Activity FORM BEGINS HERE ////////////////////////////////////////////////////////////
+# /////// Work Text Activity FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
-artframe_art_form:ArtWorkActivityForm
+artframe_art_form:WorkTextActivityForm
   rdfs:label "Agent Activity" ;
   sh:targetClass arm:Activity ;
   rdfs:subClassOf rdfs:Resource ;
-  sh:property artframe_art_form:ArtWorkActivityForm_rdf_type ;
-  sh:property artframe_art_form:ArtWorkActivityForm_bf_agent ;
-  sh:property artframe_art_form:ArtWorkActivityForm_arm_hasAttribution ;
-  sh:property artframe_art_form:ArtWorkActivityForm_bf_originDate ;
-  sh:property artframe_art_form:ArtWorkActivityForm_bf_originPlace ;
+  sh:property artframe_art_form:WorkTextActivityForm_rdf_type ;
+  sh:property artframe_art_form:WorkTextActivityForm_bf_agent ;
+  sh:property artframe_art_form:WorkTextActivityForm_arm_hasAttribution ;
+  sh:property artframe_art_form:WorkTextActivityForm_bf_originDate ;
+  sh:property artframe_art_form:WorkTextActivityForm_bf_originPlace ;
   .
   
-artframe_art_form:ArtWorkWorkActivityForm_rdf_type 
+artframe_art_form:WorkTextActivityForm_rdf_type 
       a sh:PropertyShape ;
       sh:path rdf:type ;
       sh:order "0" ;
       sh:description "Agent role or activity type" ;
       sh:name "Agent role" ;
-      sh:in ( activity:AuthorActivity activity:CreatorActivity activity:ArchitectActivity activity:ArtistActivity activity:DesignerActivity activity:DraftsmanActivity activity:PhotographerActivity activity:SculptorActivity ) .
+      sh:in ( activity:AuthorActivity activity:CreatorActivity activity:ArtistActivity activity:DesignerActivity ) .
 
-artframe_art_form:ArtWorkActivityForm_bf_agent 
+artframe_art_form:WorkTextActivityForm_bf_agent 
       a sh:PropertyShape ;
       sh:path bf:agent ;
       sh:order "1" ;
@@ -1687,7 +1687,7 @@ artframe_art_form:ArtWorkActivityForm_bf_agent
       sh:name "Agent" ;
       sh:nodeKind sh:IRI .
 
-artframe_art_form:ArtWorkActivityForm_arm_hasAttribution 
+artframe_art_form:WorkTextActivityForm_arm_hasAttribution 
       a sh:PropertyShape ;
       sh:path arm:hasAttribution ;
       sh:order "2" ;
@@ -1698,7 +1698,7 @@ artframe_art_form:ArtWorkActivityForm_arm_hasAttribution
       sh:nodeKind sh:IRI ;
       tosh:editWidget swa:NestedObjectEditor .
          
-artframe_art_form:ArtWorkActivityForm_bf_originDate 
+artframe_art_form:WorkTextActivityForm_bf_originDate 
       a sh:PropertyShape ;
       sh:path bf:originDate;
       sh:order "3" ;
@@ -1707,7 +1707,7 @@ artframe_art_form:ArtWorkActivityForm_bf_originDate
       sh:name "Work Creation Date" ;
       sh:nodeKind sh:Literal .
       
-artframe_art_form:ArtWorkActivityForm_arm_atLocation 
+artframe_art_form:WorkTextActivityForm_arm_atLocation 
       a sh:PropertyShape ;
       sh:path arm:atLocation ;
       sh:order "4" ;
@@ -1718,7 +1718,130 @@ artframe_art_form:ArtWorkActivityForm_arm_atLocation
       sh:nodeKind sh:IRI ;
       artframe_art_form:lookup artframe_art_form:LD4LookupService .
       
+# /////// Work StillImage Activity FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+artframe_art_form:WorkStillImageActivityForm
+  rdfs:label "Agent Activity" ;
+  sh:targetClass arm:Activity ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property artframe_art_form:WorkStillImageActivityForm_rdf_type ;
+  sh:property artframe_art_form:WorkStillImageActivityForm_bf_agent ;
+  sh:property artframe_art_form:WorkStillImageActivityForm_arm_hasAttribution ;
+  sh:property artframe_art_form:WorkStillImageActivityForm_bf_originDate ;
+  sh:property artframe_art_form:WorkStillImageActivityForm_bf_originPlace ;
+  .
+  
+artframe_art_form:WorkStillImageActivityForm_rdf_type 
+      a sh:PropertyShape ;
+      sh:path rdf:type ;
+      sh:order "0" ;
+      sh:description "Agent role or activity type" ;
+      sh:name "Agent role" ;
+      sh:in ( activity:ArtistActivity activity:ArtCopyistActivity activity:CreatorActivity activity:DesignerActivity activity:DraftsmanActivity activity:PhotographerActivity ) .
+
+artframe_art_form:WorkStillImageActivityForm_bf_agent 
+      a sh:PropertyShape ;
+      sh:path bf:agent ;
+      sh:order "1" ;
+      sh:maxCount "1" ;
+      sh:class bf:Agent ;
+      sh:description "Agent" ;
+      sh:name "Agent" ;
+      sh:nodeKind sh:IRI .
+
+artframe_art_form:WorkStillImageActivityForm_arm_hasAttribution 
+      a sh:PropertyShape ;
+      sh:path arm:hasAttribution ;
+      sh:order "2" ;
+      sh:maxCount "1" ;
+      sh:class arm:Attribution ;
+      sh:description "Attribution of a resource to an agent" ;
+      sh:name "Attribution" ;
+      sh:nodeKind sh:IRI ;
+      tosh:editWidget swa:NestedObjectEditor .
+         
+artframe_art_form:WorkStillImageActivityForm_bf_originDate 
+      a sh:PropertyShape ;
+      sh:path bf:originDate;
+      sh:order "3" ;
+      sh:maxCount "1" ;
+      sh:description "Date of the activity. Recommended to use EDTF format" ;
+      sh:name "Work Creation Date" ;
+      sh:nodeKind sh:Literal .
       
+artframe_art_form:WorkStillImageActivityForm_arm_atLocation 
+      a sh:PropertyShape ;
+      sh:path arm:atLocation ;
+      sh:order "4" ;
+      sh:maxCount "1" ;
+      sh:description "Location of the activity" ;
+      sh:name "Location" ;
+      sh:class gn:Feature ;
+      sh:nodeKind sh:IRI ;
+      artframe_art_form:lookup artframe_art_form:LD4LookupService .
+
+# /////// Work Object Activity FORM BEGINS HERE ////////////////////////////////////////////////////////////
+
+artframe_art_form:WorkObjectActivityForm
+  rdfs:label "Agent Activity" ;
+  sh:targetClass arm:Activity ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property artframe_art_form:WorkObjectActivityForm_rdf_type ;
+  sh:property artframe_art_form:WorkObjectActivityForm_bf_agent ;
+  sh:property artframe_art_form:WorkObjectActivityForm_arm_hasAttribution ;
+  sh:property artframe_art_form:WorkObjectActivityForm_bf_originDate ;
+  sh:property artframe_art_form:WorkObjectActivityForm_bf_originPlace ;
+  .
+  
+artframe_art_form:WorkObjectActivityForm_rdf_type 
+      a sh:PropertyShape ;
+      sh:path rdf:type ;
+      sh:order "0" ;
+      sh:description "Agent role or activity type" ;
+      sh:name "Agent role" ;
+      sh:in ( activity:CreatorActivity activity:ArchitectActivity activity:ArtistActivity activity:DesignerActivity activity:SculptorActivity ) .
+
+artframe_art_form:WorkObjectActivityForm_bf_agent 
+      a sh:PropertyShape ;
+      sh:path bf:agent ;
+      sh:order "1" ;
+      sh:maxCount "1" ;
+      sh:class bf:Agent ;
+      sh:description "Agent" ;
+      sh:name "Agent" ;
+      sh:nodeKind sh:IRI .
+
+artframe_art_form:WorkObjectActivityForm_arm_hasAttribution 
+      a sh:PropertyShape ;
+      sh:path arm:hasAttribution ;
+      sh:order "2" ;
+      sh:maxCount "1" ;
+      sh:class arm:Attribution ;
+      sh:description "Attribution of a resource to an agent" ;
+      sh:name "Attribution" ;
+      sh:nodeKind sh:IRI ;
+      tosh:editWidget swa:NestedObjectEditor .
+         
+artframe_art_form:WorkObjectActivityForm_bf_originDate 
+      a sh:PropertyShape ;
+      sh:path bf:originDate;
+      sh:order "3" ;
+      sh:maxCount "1" ;
+      sh:description "Date of the activity. Recommended to use EDTF format" ;
+      sh:name "Work Creation Date" ;
+      sh:nodeKind sh:Literal .
+      
+artframe_art_form:WorkObjectActivityForm_arm_atLocation 
+      a sh:PropertyShape ;
+      sh:path arm:atLocation ;
+      sh:order "4" ;
+      sh:maxCount "1" ;
+      sh:description "Location of the activity" ;
+      sh:name "Location" ;
+      sh:class gn:Feature ;
+      sh:nodeKind sh:IRI ;
+      artframe_art_form:lookup artframe_art_form:LD4LookupService .
+
 # /////// Instance Activity FORM BEGINS HERE ////////////////////////////////////////////////////////////
 
 artframe_art_form:ArtInstanceActivityForm
