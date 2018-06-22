@@ -29,7 +29,7 @@ The following protocols are used to version the ontologies.
 * The `owl:ontologyIRI` redirects to the `owl:versionIRI` of the current version of the ontology.
 * Previous versions of the ontology continue to be available at their `owl:versionIRI`.
 * By importing or referencing terms from a particular `owl:versionIRI`, users are insulated from non-backward-compatible changes in newer published versions until they decide to upgrade.
-* Version numbering (`MAJOR.MINOR.PATCH`). See [discussion below](#numbering) on two possible numbering conventions.
+* Version numbering (`MAJOR.MINOR.PATCH`). See [discussion below](#version-numbering) on two possible numbering conventions.
 * The `owl:versionIRI` is updated for `MAJOR` and `MINOR` versions, but not `PATCH` versions. It thus includes only the `MAJOR` and `MINOR` version numbers.
 
 
@@ -38,7 +38,7 @@ The following protocols are used to version the ontologies.
 
 Several of the predicates used in the ontology versioning protocol are of type `owl:OntologyProperty` and thus cannot be used with our vocabularies, which are typed `void:Dataset` rather than
 `owl:Ontology`.  In particular, `owl:ontologyIRI` and `owl:versionIRI` have domain `owl:Ontology`, so only versioned URIs are used for the vocabularies (e.g., `https://w3id.org/arm/core/vocabularies/typeface/0.1/`), using the same schema outlined for ontologies. Versioning is also supported by defining `owl:versionInfo` on the Dataset 
-and following the conventions described below for use of [version numbers](#version-numbering), [issuance and modification datetimes(#datetimes), and [change descriptions](#change-descriptions). 
+and following the conventions described below for use of [version numbers](#version-numbering), [issuance and modification datetimes](#datetimes), and [change descriptions](#change-descriptions). 
 
 <a name="version-numbering">Version Numbering</a>
 ----------------
