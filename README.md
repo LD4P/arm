@@ -52,34 +52,34 @@ of identifying versions solely with tags on the repository.
 
 * [`core/`](core/): Core art and rare materials ontologies and vocabularies 
   * [`ontology/0.1/core.rdf`](core/ontology/0.1/core.rdf): Primary ontology file
-  * [`ontology/0.1/doc/lode/core.html`](core/ontology/0.1/doc/core.html): Human-readable documentation of primary ontology
+  * [`ontology/0.1/core.html`](core/ontology/0.1/doc/core.html): Human-readable documentation of primary ontology
   * [`ontology/0.1/activity.rdf`](core/ontology/0.1/activity.rdf): Secondary ontology file containing definitions of Activity classes and related predicates
-  * [`ontology/0.1/doc/lode/activity.html`](core/ontology/0.1/doc/lode/activity.html): Human-readable documentation of Activity terms
+  * [`ontology/0.1/activity.html`](core/ontology/0.1/activity.html): Human-readable documentation of Activity terms
   * [`vocabularies/`](core/vocabularies): Original ARM controlled vocabularies
     * [`vocabularies/arrangement/0.1/arrangement.rdf`](core/vocabularies/arrangement/0.1/arrangement.rdf): Arrangement
-    * [`vocabularies/arrangement/0.1/doc/lode/arrangement.html`](core/vocabularies/arrangement/0.1/doc/lode/arrangement.html): Human-readable documentation of Arrangement vocabulary
+    * [`vocabularies/arrangement/0.1/arrangement.html`](core/vocabularies/arrangement/0.1/arrangement.html): Human-readable documentation of Arrangement vocabulary
     * [`vocabularies/handwriting_type/0.1/handwriting_type.rdf`](core/vocabularies/handwriting_type/0.1/handwriting_type.rdf): Handwriting type
-    * [`vocabularies/handwriting_type/0.1/doc/lode/handwriting_type.html`](core/vocabularies/handwriting_type/0.1/doc/lode/handwriting_type.html): Human-readable documentation of Handwriting type vocabulary  
+    * [`vocabularies/handwriting_type/0.1/handwriting_type.html`](core/vocabularies/handwriting_type/0.1/handwriting_type.html): Human-readable documentation of Handwriting type vocabulary  
     * [`vocabularies/origin/0.1/origin.rdf`](core/vocabularies/origin/0.1/origin.rdf): Origin
-    * [`vocabularies/origin/0.1/doc/lode/origin.html`](core/vocabularies/origin/0.1/doc/lode/origin.html): Human-readable documentation of Origin vocabulary
+    * [`vocabularies/origin/0.1/origin.html`](core/vocabularies/origin/0.1/origin.html): Human-readable documentation of Origin vocabulary
     * [`vocabularies/status/0.1/status.rdf`](core/vocabularies/status/0.1/status.rdf): Status
-    * [`vocabularies/status/0.1/doc/lode/status.html`](core/vocabularies/status/0.1/doc/lode/status.html): Human-readable documentation of Status vocabulary
+    * [`vocabularies/status/0.1/status.html`](core/vocabularies/status/0.1/status.html): Human-readable documentation of Status vocabulary
     * [`vocabularies/typeface/0.1/typeface.rdf`](core/vocabularies/typeface/0.1/typeface.rdf): Typeface
-    * [`vocabularies/typeface/0.1/doc/lode/typeface.html`](core/vocabularies/typeface/0.1/doc/lode/typeface.html): Human-readable documentation of Typeface vocabulary
+    * [`vocabularies/typeface/0.1/typeface.html`](core/vocabularies/typeface/0.1/typeface.html): Human-readable documentation of Typeface vocabulary
   * [`validation/shacl/`](core/validation/shacl/): SHACL validation files for the core ontology
 
     
 * [`award/`](award/): Award ontology 
   * [`ontology/0.1/award.rdf`](award/ontology/0.1/award.rdf): Ontology file
-  * [`ontology/0.1/doc/lode/award.html`](award/ontology/0.1/doc/lode/award.html): Human-readable documentation
+  * [`ontology/0.1/award.html`](award/ontology/0.1/award.html): Human-readable documentation
   
 * [`custodial_history/`](custodial_history/): Custodial history ontology 
   * [`ontology/0.1/custodial_history.rdf`](custodial_history/ontology/0.1/custodial_history.rdf): Ontology file
-  * [`ontology/0.1/doc/lode/custodial_history.html`](custodial_history/ontology/0.1/doc/lode/custodial_history.html): Human-readable documentation
+  * [`ontology/0.1/custodial_history.html`](custodial_history/ontology/0.1/custodial_history.html): Human-readable documentation
   
 * [`measurement/`](measurement/): Measurement ontology 
   * [`ontology/0.1/measurement.rdf`](measurement/ontology/0.1/measurement.rdf): Ontology file
-  * [`ontology/0.1/doc/lode/measurement.html`](measurement/ontology/0.1/doc/lode/measurement.html): Human-readable documentation
+  * [`ontology/0.1/measurement.html`](measurement/ontology/0.1/measurement.html): Human-readable documentation
   
 * [`application_profiles/`](application_profiles/): Application profiles 
   * [`art/shacl/`](application_profiles/art/shacl/): SHACL application profiles for artworks
