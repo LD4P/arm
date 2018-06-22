@@ -28,7 +28,7 @@ The Art and Rare Materials BIBFRAME Ontology Extensions are a product of the And
 
 Adoption, maintenance, and use of these ontologies will be determined by RBMS-BSC and ARLIS CAC following initial development and assessment.
 
-<a name="news>News</a>
+<a name="news">News</a>
 -------------
 
 * **2018-04-27** Release of Version 0.1.0 of all ontologies and vocabularies.
@@ -45,32 +45,36 @@ The core ontology has been split into two OWL files, `core.rdf` and `activity.rd
 or the [bibliotek-o](http://bibliotek-o.org) Activity model is still unresolved. As a temporary accommodation, the Activity model is used, but the relevant terms are stored in a separate RDF file
 for easy separation.
 
-[Ontology specification](https://w3id.org/arm/core/ontology/0.1/core.rdf)
-[Human-readable documentation](https://w3id.org/arm/core/ontology/0.1/core.html)
+#### Core
 
-[Ontology specification](https://w3id.org/arm/core/ontology/0.1/activity.rdf)
-[Human-readable documentation](https://w3id.org/arm/core/ontology/0.1/activity.html)
+* [Ontology specification](https://w3id.org/arm/core/ontology/0.1/core.rdf)
+* [Human-readable documentation](https://w3id.org/arm/core/ontology/0.1/core.html)
+
+#### Activity
+
+* [Ontology specification](https://w3id.org/arm/core/ontology/0.1/activity.rdf)
+* [Human-readable documentation](https://w3id.org/arm/core/ontology/0.1/activity.html)
 
 ### Award Ontology
 
 Specialized ontology for the description of awards received by bibliographic resources or agents; reusable in contexts beyond the bibliographic domain.
 
-[Ontology specification](https://w3id.org/arm/award/ontology/0.1/award.rdf)
-[Human-readable documentation](https://w3id.org/arm/award/ontology/0.1/award.html)
+* [Ontology specification](https://w3id.org/arm/award/ontology/0.1/award.rdf)
+* [Human-readable documentation](https://w3id.org/arm/award/ontology/0.1/award.html)
 
 ### Custodial History Ontology
 
 Specialized ontology for the description of awards received by bibliographic resources or agents; reusable in contexts beyond the bibliographic domain.
 
-[Ontology specification](https://w3id.org/arm/custodial_history/ontology/0.1/custodial_history.rdf)
-[Human-readable documentation](https://w3id.org/arm/custodial_history/ontology/0.1/custodial_history.html)
+* [Ontology specification](https://w3id.org/arm/custodial_history/ontology/0.1/custodial_history.rdf)
+* [Human-readable documentation](https://w3id.org/arm/custodial_history/ontology/0.1/custodial_history.html)
 
 ### Measurement Ontology
 
 Specialized ontology for the description of awards received by bibliographic resources or agents; reusable in contexts beyond the bibliographic domain.
 
-[Ontology specification](https://w3id.org/arm/measurement/ontology/0.1/measurement.rdf)
-[Human-readable documentation](https://w3id.org/arm/measurement/ontology/0.1/measurement.html)
+* [Ontology specification](https://w3id.org/arm/measurement/ontology/0.1/measurement.rdf)
+* [Human-readable documentation](https://w3id.org/arm/measurement/ontology/0.1/measurement.html)
 
 
 <a name="vocabularies">ARM Vocabularies</a>
@@ -84,35 +88,35 @@ A task left for future development is the identification of an existing or creat
 
 Arrangements of objects (e.g., folded, unfolded, rolled, unrolled). Designed in the context of exhibition displays and measurements.
 
-[Vocabulary specification](https://w3id.org/arm/core/vocabularies/0.1/arrangement.rdf)
-[Vocabulary specification](https://w3id.org/arm/core/vocabularies/0.1/arrangement.html)
+* [Vocabulary specification](https://w3id.org/arm/core/vocabularies/arrangement/0.1/arrangement.rdf)
+* [Human-readable documentation](https://w3id.org/arm/core/vocabularies/arrangement/0.1/arrangement.html)
 
 
 ### Handwriting Type
 
-[Vocabulary specification](https://w3id.org/arm/core/vocabularies/0.1/handwriting_type.rdf)
-[Vocabulary specification](https://w3id.org/arm/core/vocabularies/0.1/handwriting_type.html)
+* [Vocabulary specification](https://w3id.org/arm/core/vocabularies/handwriting_type/0.1/handwriting_type.rdf)
+* [Human-readable documentation](https://w3id.org/arm/core/vocabularies/handwriting_type/0.1/handwriting_type.html)
 
 
 ### Origin
 
 Designed to describe title origins (e.g., cover, container).
 
-[Vocabulary specification](https://w3id.org/arm/core/vocabularies/0.1/origin.rdf)
-[Vocabulary specification](https://w3id.org/arm/core/vocabularies/0.1/origin.html)
+* [Vocabulary specification](https://w3id.org/arm/core/vocabularies/origin/0.1/origin.rdf)
+* [Human-readable documentation](https://w3id.org/arm/core/vocabularies/origin/0.1/origin.html)
 
 
 ### Status
 
 Designed to describe identifier status (e.g., current, deprecated).
 
-[Vocabulary specification](https://w3id.org/arm/core/vocabularies/0.1/status.rdf)
-[Vocabulary specification](https://w3id.org/arm/core/vocabularies/0.1/status.html)
+* [Vocabulary specification](https://w3id.org/arm/core/vocabularies/status/0.1/status.rdf)
+* [Human-readable documentation](https://w3id.org/arm/core/vocabularies/status/0.1/status.html)
 
 
 ### Typeface
 
-[Vocabulary specification](https://w3id.org/arm/core/vocabularies/0.1/typeface.rdf)
-[Vocabulary specification](https://w3id.org/arm/core/vocabularies/0.1/typeface.html)
+* [Vocabulary specification](https://w3id.org/arm/core/vocabularies/typeface/0.1/typeface.rdf)
+* [Human-readable documentation](https://w3id.org/arm/core/vocabularies/typeface/0.1/typeface.html)
 
 
