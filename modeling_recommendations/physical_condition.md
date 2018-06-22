@@ -193,7 +193,7 @@ One condition assessment can describe one or more physical conditions as an over
 --------
 --------
 **Diagram 1: A condition assessment takes place, but does not result in a conservator activity.**
-![Physical Condition diagram 1](/modeling_recommendations/modeling_diagrams/physical_condition_assessment.png)
+![Physical Condition diagram 1](modeling_diagrams/physical_condition_assessment.png)
 ```
 :Item1 a bf:Item ;
     ex:hasActivity :activity1 ;
@@ -214,7 +214,7 @@ One condition assessment can describe one or more physical conditions as an over
 ```
 --------
 **Diagram 2: Conservator activity that is not the result of a condition assessment.**
-![Physical Condition diagram 2](/modeling_recommendations/modeling_diagrams/physical_condition_conservation.png)
+![Physical Condition diagram 2](modeling_diagrams/physical_condition_conservation.png)
 ```
 :Item2 a bf:Item ;
     ex:hasActivity :activity2 ;
@@ -232,7 +232,7 @@ One condition assessment can describe one or more physical conditions as an over
 ```
 ---------
 **Diagram 3: One condition assessment describing one physical condition leading to one conservator activity resulting in a new physical condition.**
-![Physical Condition diagram 3](/modeling_recommendations/modeling_diagrams/physical_condition_assessment_conservation.png)
+![Physical Condition diagram 3](modeling_diagrams/physical_condition_assessment_conservation.png)
 ```
 :Item3 a bf:Item ;
     ex:hasActivity :activity1 ;
@@ -268,7 +268,7 @@ activity2 a ex:ConservatorActivity ;
 ```
 ---------
 **Diagram 4: Condition assessment with two physical conditions, one leads to a conservator activity which results in a changed physical condition.**
-![Physical Condition diagram 4](/modeling_recommendations/modeling_diagrams/physical_condition_multiple.png)
+![Physical Condition diagram 4](modeling_diagrams/physical_condition_multiple.png)
 ```
 :Item4 a bf:Item ;
     ex:hasActivity :activity1, activity2 ;
@@ -295,7 +295,7 @@ assessment1 a ex:ConditionAssessment ;
 ```
 --------
 **Diagram 5: Two separate assessments identifying two different physical conditions. Each results in a conservator activity leading to a changed physical condition.**
-![Physical Condition diagram 5](/modeling_recommendations/modeling_diagrams/physical_condition_multiple_conservations.png)
+![Physical Condition diagram 5](modeling_diagrams/physical_condition_multiple_conservations.png)
 ```
 :Item5 a bf:Item ;
     ex:hasActivity :activity1, activity2, activity3, activity4 ;

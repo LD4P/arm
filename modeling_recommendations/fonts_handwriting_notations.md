@@ -95,7 +95,7 @@ We propose predicate :writtenIn to relate a bibliographic resource (most likely 
 #### Diagram
 
 Note that different multiple sample namespaces are shown; some may end up being the same. 
-![Font Diagram](/modeling_recommendations/modeling_diagrams/font.png)
+![Font Diagram](modeling_diagrams/font.png)
 
 #### RDF Sample
 
@@ -133,7 +133,7 @@ We propose reusing the writtenIn predicate to relate a bibliographic resource (m
 
 #### Diagram
 
-![Handwriting Type Diagram](/modeling_recommendations/modeling_diagrams/handwriting.png)
+![Handwriting Type Diagram](modeling_diagrams/handwriting.png)
 
 #### RDF Sample
 

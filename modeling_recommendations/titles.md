@@ -48,7 +48,7 @@ Title origins (the place from which a title originates, i.e. container, margin, 
 
 <a name="useCase">Relevant ArtFrame Use Case</a>
 --------
-![Title Use Case](/modeling_recommendations/modeling_diagrams/title_use_case.png)
+![Title Use Case](modeling_diagrams/title_use_case.png)
 
 Examples: Les Demoiselles d'Avignon (The Young Ladies of Avignon, and originally titled The Brothel of Avignon) (Wikipedia); Swimming, by Thomas Eakins (formerly The Swimming Hole) (title change based on research)
 
@@ -60,7 +60,7 @@ In a MARC bibliographic record, many types of titles are recorded in the 20x-24x
 --------
 The classes and properties that are available to express in BIBFRAME are summarized here:
 
-![BIBFRAME Title Model](/modeling_recommendations/modeling_diagrams/title_bibframe.png)
+![BIBFRAME Title Model](modeling_diagrams/title_bibframe.png)
 
 [*http://id.loc.gov/ontologies/bibframe-category.html*](http://id.loc.gov/ontologies/bibframe-category.html) accessed on July 31, 2017.
 
@@ -70,10 +70,10 @@ Subclasses of bf:VariantTitle: KeyTitle, AbbreviatedTitle, ParallelTitle, Collec
 
 <a name="bibliotek-o">Titles in bibliotek-o</a>
 --------
-![bibliotek-o title properties](/modeling_recommendations/modeling_diagrams/title_bibliotek-o_classes.png
+![bibliotek-o title properties](modeling_diagrams/title_bibliotek-o_classes.png
 )
 
-![bibliotek-o title classes](/modeling_recommendations/modeling_diagrams/title_bibliotek-o_properties.png)
+![bibliotek-o title classes](modeling_diagrams/title_bibliotek-o_properties.png)
 
 Named individuals to be used with ex:Origin: binder, caption, container, cover, margin, spine, supplied, transcribed 
 
@@ -269,15 +269,15 @@ resource.
 
 ### Transcribed title ###
 
-![TranscribedTitle](/modeling_recommendations/modeling_diagrams/title_transcribed.jpg)
+![TranscribedTitle](modeling_diagrams/title_transcribed.jpg)
 
 ### Creator's title ###
 
-![CreatorsTitle_2](/modeling_recommendations/modeling_diagrams/title_creators.jpg)
+![CreatorsTitle_2](modeling_diagrams/title_creators.jpg)
 
 ### Translated title ###
 
-![translatedTitle](/modeling_recommendations/modeling_diagrams/title_translated.jpg)
+![translatedTitle](modeling_diagrams/title_translated.jpg)
 
 <a name="rdf">RDF Samples</a>
 --------

@@ -63,7 +63,7 @@ Areas covered by other ontologies:
 Diagram
 -------
 
-![Bound-withs diagram](/modeling_recommendations/modeling_diagrams/bound_with.png)
+![Bound-withs diagram](modeling_diagrams/bound_with.png)
 
 Term Specifications
 ----------
@@ -181,7 +181,7 @@ Areas covered by other ontologies:
 Diagram
 -------
 
-![Carriers diagram](/modeling_recommendations/modeling_diagrams/carrier.png)
+![Carriers diagram](modeling_diagrams/carrier.png)
 
 Term Specifications
 --------

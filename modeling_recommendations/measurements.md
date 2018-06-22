@@ -189,7 +189,7 @@ The diagrams illustrate models of measurements of a resource, a part of the reso
 
 ### Diagram 1: Basic measurement model with optional descriptions
 
-![Measurement diagram 1](/modeling_recommendations/modeling_diagrams/measurement_basic.png)
+![Measurement diagram 1](modeling_diagrams/measurement_basic.png)
 
 **Notes**
 
@@ -207,7 +207,7 @@ Whether or not the model is used in this way in our descriptions is an implement
 
 ### <a name="diagram-2">Diagram 2: Single resource with multiple measurement group and descriptions</a>
 
-![Measurement diagram 2](/modeling_recommendations/modeling_diagrams/measurement_multiple.png)
+![Measurement diagram 2](modeling_diagrams/measurement_multiple.png)
 
 **Notes**
 
@@ -217,7 +217,7 @@ cannot be defined due to wide or perhaps unlimited variability.
 
 ### Diagram 3: Measurements of whole and part: part a resource
 
-![Measurement diagram 3](/modeling_recommendations/modeling_diagrams/measurement_whole_part.png)
+![Measurement diagram 3](modeling_diagrams/measurement_whole_part.png)
 
 **Notes**
 -   For domain extensions: Identify classes for parts of resources like binding, frame, etc. Should there be a superclass?
@@ -225,7 +225,7 @@ cannot be defined due to wide or perhaps unlimited variability.
 
 ### Diagram 4: Measurements of whole and part with additional physical characteristics
 
-![Measurement diagram 4](/modeling_recommendations/modeling_diagrams/measurement_physical_characteristics.png)
+![Measurement diagram 4](modeling_diagrams/measurement_physical_characteristics.png)
 
 **Notes**
 -   Demonstrates that when a part of a resource, such as a binding or frame, is recognized as a distinct resource, other assertions can be made about it (color, material, etc.).
@@ -233,7 +233,7 @@ cannot be defined due to wide or perhaps unlimited variability.
 
 ### <a name="diagram-5">Diagram 5: Measurements of arrangement: arrangement is a resource</a>
 
-![Measurement diagram 5](/modeling_recommendations/modeling_diagrams/measurement_arrangement.png)
+![Measurement diagram 5](modeling_diagrams/measurement_arrangement.png)
 
 **Notes/TBD**
 
@@ -249,7 +249,7 @@ cannot be defined due to wide or perhaps unlimited variability.
 
 ### <a name="diagram-6">Diagram 6: Measurements of arrangements: multiple arrangement resources</a>
 
-![Measurement diagram 6](/modeling_recommendations/modeling_diagrams/measurement_multiple_arrangements.png)
+![Measurement diagram 6](modeling_diagrams/measurement_multiple_arrangements.png)
 
 **Notes/TBD**
 
@@ -267,4 +267,4 @@ question is whether introducing redundancy into a model for the sake of maintain
 problems.
 
 ### <a name="diagram-7">Diagram 7: Triangulated Resource, Arrangement, and Measurement</a>
-![Measurement diagram 7](/modeling_recommendations/modeling_diagrams/measurement_triangulated_resource_arrangement_and_measurement.png)
+![Measurement diagram 7](modeling_diagrams/measurement_triangulated_resource_arrangement_and_measurement.png)
