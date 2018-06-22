@@ -27,15 +27,17 @@ Some aspects of the directory structure and filenames are accommodations to the 
 * For simplicity, the RDF files are published directly from the repository directory tree rather than from a separate document root. In order to use versioned namespaces 
 (see [Versioning](versioning.md)), we therefore store every published version of the files in the repository tree, as opposed to the more usual practice 
 of identifying versions solely with tags on the repository.
-* The top-level `css/` and `js/` directories are used in the display of the human-readable LODE documentation pages. 
+* The top-level `css` and `js` directories are used in the display of the human-readable LODE documentation pages. 
 
 ### Directory Structure
 
-* [`/README.md`](../README.md): Project overview
+All paths are relative to the top level of the repository.
 
-* [`/modeling_recommendations/`](../modeling_recommendations/): Modeling recommendations
+* [`README.md`](../README.md): Project overview
 
-* [`/core/`](../core/): Core art and rare materials ontologies and vocabularies 
+* [`modeling_recommendations`](../modeling_recommendations/): Modeling recommendations
+
+* [`core`](../core/): Core art and rare materials ontologies and vocabularies 
   * [`ontology/0.1/core.rdf`](../core/ontology/0.1/core.rdf): Primary ontology file
   * [`ontology/0.1/core.html`](../core/ontology/0.1/core.html): Human-readable documentation of primary ontology
   * [`ontology/0.1/activity.rdf`](../core/ontology/0.1/activity.rdf): Secondary ontology file containing definitions of Activity classes and related predicates
@@ -53,32 +55,32 @@ of identifying versions solely with tags on the repository.
     * [`vocabularies/typeface/0.1/typeface.html`](../core/vocabularies/typeface/0.1/typeface.html): Human-readable documentation of Typeface vocabulary
   * [`validation/shacl/`](../core/validation/shacl/): SHACL validation files for the core ontology
     
-* [`/award/`](../award/): Award ontology 
+* [`award`](../award/): Award ontology 
   * [`ontology/0.1/award.rdf`](../award/ontology/0.1/award.rdf): Ontology file
   * [`ontology/0.1/award.html`](../award/ontology/0.1/award.html): Human-readable documentation
   
-* [`/custodial_history/`](../custodial_history/): Custodial history ontology 
+* [`custodial_history`](../custodial_history/): Custodial history ontology 
   * [`ontology/0.1/custodial_history.rdf`](../custodial_history/ontology/0.1/custodial_history.rdf): Ontology file
   * [`ontology/0.1/custodial_history.html`](../custodial_history/ontology/0.1/custodial_history.html): Human-readable documentation
   
-* [`/measurement/`](../measurement/): Measurement ontology 
+* [`measurement`](../measurement/): Measurement ontology 
   * [`ontology/0.1/measurement.rdf`](../measurement/ontology/0.1/measurement.rdf): Ontology file
   * [`ontology/0.1/measurement.html`](../measurement/ontology/0.1/measurement.html): Human-readable documentation
   
-* [`/application_profiles/`](../application_profiles/): Application profiles 
+* [`application_profiles`](../application_profiles/): Application profiles 
   * [`art/shacl/`](../application_profiles/art/shacl/): SHACL application profiles for artworks
   * [`raremat_monograph/shacl/`](../application_profiles/raremat_monograph/shacl/): SHACL application profiles for rare materials monographs
   * [`sources/`](../application_profiles/sources/): Source ontology and vocabulary fragments used in the application profiles and modeling recommendations 
   
-* [`/doc/`](.): Informational documents 
+* [`doc`](.): Informational documents 
   * [`versioning.md`](versioning.md): The ARM versioning protocol for ontologies and vocabularies
   * [`repository_contents.md`](repository_contents.md): This document 
   
-* [`/tools/`](../tools/): Tools used in support of the ontology and vocabulary development, such as XSL data conversion scripts or generating human-readable documentation
+* [`tools`](../tools/): Tools used in support of the ontology and vocabulary development, such as XSL data conversion scripts or generating human-readable documentation
   * [`rbms_vocabs`](../tools/rbms_vocabs/) Converts RBMS vocabulary XML dumps to RDF
   * [`build-lode-docs.py`](../tools/build-lode-docs.py) Generates ontology and vocabulary LODE documentation with various modifications 
   
-* [`/css`](../css/): CSS files used in the display of the human-readable LODE documentation
-* [`/js`](../js/): JavaScript files used in the display of the human-readable LODE documentation
+* [`css`](../css/): CSS files used in the display of the human-readable LODE documentation
+* [`js`](../js/): JavaScript files used in the display of the human-readable LODE documentation
   
 
