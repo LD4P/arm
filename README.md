@@ -45,11 +45,15 @@ The core ontology has been split into two OWL files, `core.rdf` and `activity.rd
 or the [bibliotek-o](http://bibliotek-o.org) Activity model is still unresolved. As a temporary accommodation, the Activity model is used, but the relevant terms are stored in a separate RDF file
 for easy separation.
 
+#### Core
+
 * [Ontology specification](https://w3id.org/arm/core/ontology/0.1/core.rdf)
 * [Human-readable documentation](https://w3id.org/arm/core/ontology/0.1/core.html)
 
-* [Ontology specification (activities)](https://w3id.org/arm/core/ontology/0.1/activity.rdf)
-* [Human-readable documentation (activities)](https://w3id.org/arm/core/ontology/0.1/activity.html)
+#### Activity
+
+* [Ontology specification](https://w3id.org/arm/core/ontology/0.1/activity.rdf)
+* [Human-readable documentation](https://w3id.org/arm/core/ontology/0.1/activity.html)
 
 ### Award Ontology
 
@@ -91,7 +95,7 @@ Arrangements of objects (e.g., folded, unfolded, rolled, unrolled). Designed in 
 ### Handwriting Type
 
 * [Vocabulary specification](https://w3id.org/arm/core/vocabularies/handwriting_type/0.1/handwriting_type.rdf)
-* [Vocabulary specification](https://w3id.org/arm/core/vocabularies/handwriting_type/0.1/handwriting_type.html)
+* [Human-readable documentation](https://w3id.org/arm/core/vocabularies/handwriting_type/0.1/handwriting_type.html)
 
 
 ### Origin
@@ -99,7 +103,7 @@ Arrangements of objects (e.g., folded, unfolded, rolled, unrolled). Designed in 
 Designed to describe title origins (e.g., cover, container).
 
 * [Vocabulary specification](https://w3id.org/arm/core/vocabularies/origin/0.1/origin.rdf)
-* [Vocabulary specification](https://w3id.org/arm/core/vocabularies/origin/0.1/origin.html)
+* [Human-readable documentation](https://w3id.org/arm/core/vocabularies/origin/0.1/origin.html)
 
 
 ### Status
@@ -107,12 +111,12 @@ Designed to describe title origins (e.g., cover, container).
 Designed to describe identifier status (e.g., current, deprecated).
 
 * [Vocabulary specification](https://w3id.org/arm/core/vocabularies/status/0.1/status.rdf)
-* [Vocabulary specification](https://w3id.org/arm/core/vocabularies/status/0.1/status.html)
+* [Human-readable documentation](https://w3id.org/arm/core/vocabularies/status/0.1/status.html)
 
 
 ### Typeface
 
 * [Vocabulary specification](https://w3id.org/arm/core/vocabularies/typeface/0.1/typeface.rdf)
-* [Vocabulary specification](https://w3id.org/arm/core/vocabularies/typeface/0.1/typeface.html)
+* [Human-readable documentation](https://w3id.org/arm/core/vocabularies/typeface/0.1/typeface.html)
 
 
