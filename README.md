@@ -52,7 +52,7 @@ of identifying versions solely with tags on the repository.
 
 * [`core/`](core/): Core art and rare materials ontologies and vocabularies 
   * [`ontology/0.1/core.rdf`](core/ontology/0.1/core.rdf): Primary ontology file
-  * [`ontology/0.1/doc/lode/core.html`](core/ontology/0.1/doc/): Human-readable documentation of primary ontology
+  * [`ontology/0.1/doc/lode/core.html`](core/ontology/0.1/doc/core.html): Human-readable documentation of primary ontology
   * [`ontology/0.1/activity.rdf`](core/ontology/0.1/activity.rdf): Secondary ontology file containing definitions of Activity classes and related predicates
   * [`ontology/0.1/doc/lode/activity.html`](core/ontology/0.1/doc/lode/activity.html): Human-readable documentation of Activity terms
   * [`vocabularies/`](core/vocabularies): Original ARM controlled vocabularies
