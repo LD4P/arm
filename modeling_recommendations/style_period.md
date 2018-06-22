@@ -105,7 +105,7 @@ Properties
 Diagram
 -----------
 
-![Style and Period diagram](/modeling_recommendations/modeling_diagrams/style_period.png)
+![Style and Period diagram](modeling_diagrams/style_period.png)
 
 Sample RDF
 --------

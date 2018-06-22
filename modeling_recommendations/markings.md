@@ -33,7 +33,7 @@ The Marking model is quite simple, involving a class hierarchy descending from a
 
 <a name="diagram">Diagram</a>
 -------
-![Markings diagram](/modeling_recommendations/modeling_diagrams/marking.png)
+![Markings diagram](modeling_diagrams/marking.png)
 
 **Notes**
 

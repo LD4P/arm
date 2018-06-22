@@ -91,7 +91,7 @@ Concepts similar to but disjoint from ownership (i.e., to be represented by othe
 
 <a name="Diagram">Diagram</a>
 ======
-![Custodial History Diagram](/modeling_recommendations/modeling_diagrams/custodial_history.png)
+![Custodial History Diagram](modeling_diagrams/custodial_history.png)
 
 
 <a name="RDFSample">RDF Sample</a>

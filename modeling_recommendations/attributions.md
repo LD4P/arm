@@ -157,4 +157,4 @@ may be used as provided by the ontology.
 ```
 <a name="diagram">Diagram</a>
 -----------
-![Attribution](/modeling_recommendations/modeling_diagrams/attribution.png)
+![Attribution](modeling_diagrams/attribution.png)

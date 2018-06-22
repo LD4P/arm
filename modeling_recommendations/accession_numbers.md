@@ -18,7 +18,7 @@ CIDOC-CRM
 CIDOC-CRM has a way to record associated identifiers with an object, and
 accession numbers could fall into this pattern.
 
-![CIDOC-CRM AccessionNumber RDF-XML](/modeling_recommendations/modeling_diagrams/accession_number_cidoc-crm.png)
+![CIDOC-CRM AccessionNumber RDF-XML](modeling_diagrams/accession_number_cidoc-crm.png)
 
 However, introducing second pattern for recording identifiers into the
 bibliotek-o ontology would not be the ideal modeling. So it was
@@ -27,7 +27,7 @@ subclass AccessionNumber.
 
 bibliotek-o Identifier Model
 --------------------------------
-![Accession Number Diagram](/modeling_recommendations/modeling_diagrams/accession_number.png)
+![Accession Number Diagram](modeling_diagrams/accession_number.png)
 ```
 _:item a bf:Item ;
     bf:identifiedBy [
