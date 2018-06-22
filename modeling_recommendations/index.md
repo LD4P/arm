@@ -1,22 +1,21 @@
 # Modeling Recommendations
 
-  * <accession_numbers.html>
-  * <attributions.html>
-  * <awards.html>
-  * <bibliographic_citations.html>
-  * <bindings.html>
-  * <carriers_and_bound_withs.html>
-  * <custodial_history.html>
-  * <exhibitions.html>
-  * <fonts_handwriting_notations.html>
-  * <limitation_statements.html>
-  * <markings.html>
-  * <materials.html>
-  * <measurements.html>
-  * <modeling_diagrams
-notes.html>
-  * <pagination_foliation.html>
-  * <physical_condition.html>
-  * <signature_statements.html>
-  * <style_period.html>
-  * <titles.html>
+  * [Accession Number](accession_numbers.html)
+  * [Attribution](attributions.html)
+  * [Awards](awards.html)
+  * [Bibliographic Citations for Rare Materials Cataloging](bibliographic_citations.html)
+  * [Bindings](bindings.html)
+  * [Carriers and Bound-Withs](carriers_and_bound_withs.html)
+  * [Custodial History : Provenance Ownership Model](custodial_history.html)
+  * [Exhibitions](exhibitions.html)
+  * [Fonts, Handwriting Types, and Notations](fonts_handwriting_notations.html)
+  * [Limitation Statement Model](limitation_statements.html)
+  * [Markings](markings.html)
+  * [Materials](materials.html)
+  * [Materials](measurements.html)
+  * [Notes in Art Cataloging](notes.html)
+  * [Pagination and Foliation Model](pagination_foliation.html)
+  * [Activities Related to Physical Condition](physical_condition.html)
+  * [Signature Statement Model](signature_statements.html)
+  * [Style/Period](style_period.html)
+  * [Titles in Art Cataloging](titles.html)
