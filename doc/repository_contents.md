@@ -17,7 +17,7 @@ The core ontology has been split into two OWL files, `core.rdf` and `activity.rd
 or the [bibliotek-o](http://bibliotek-o.org) Activity model is still unresolved. As a temporary accommodation, the Activity model is used, but the relevant terms are stored in a separate RDF file
 for easy separation.
 
-The [`application_profiles/sources/`](../application_profiles/sources/) directory contains ontology and vocabulary fragments referenced in the modeling recommendations and application profiles. 
+The [`/application_profiles/sources/`](../application_profiles/sources/) directory contains ontology and vocabulary fragments referenced in the modeling recommendations and application profiles. 
 Two types of vocabularies are included:
 * Fragments of existing RDF vocabularies, such as Getty AAT.
 * RBMS vocabularies converted from XML to RDF. While in the absence of an RBMS-defined namespace they are namespaced within ARM, ARM does not claim ownership of these vocabularies nor does it publish them.
@@ -31,11 +31,11 @@ of identifying versions solely with tags on the repository.
 
 ### Directory Structure
 
-* [`README.md`](../README.md): Project overview
+* [`/README.md`](../README.md): Project overview
 
 * [`/modeling_recommendations/`](../modeling_recommendations/): Modeling recommendations
 
-* [`/core/`](core/): Core art and rare materials ontologies and vocabularies 
+* [`/core/`](../core/): Core art and rare materials ontologies and vocabularies 
   * [`ontology/0.1/core.rdf`](../core/ontology/0.1/core.rdf): Primary ontology file
   * [`ontology/0.1/core.html`](../core/ontology/0.1/core.html): Human-readable documentation of primary ontology
   * [`ontology/0.1/activity.rdf`](../core/ontology/0.1/activity.rdf): Secondary ontology file containing definitions of Activity classes and related predicates
@@ -53,7 +53,7 @@ of identifying versions solely with tags on the repository.
     * [`vocabularies/typeface/0.1/typeface.html`](../core/vocabularies/typeface/0.1/typeface.html): Human-readable documentation of Typeface vocabulary
   * [`validation/shacl/`](../core/validation/shacl/): SHACL validation files for the core ontology
     
-* [`/award/`](award/): Award ontology 
+* [`/award/`](../award/): Award ontology 
   * [`ontology/0.1/award.rdf`](../award/ontology/0.1/award.rdf): Ontology file
   * [`ontology/0.1/award.html`](../award/ontology/0.1/award.html): Human-readable documentation
   
@@ -61,7 +61,7 @@ of identifying versions solely with tags on the repository.
   * [`ontology/0.1/custodial_history.rdf`](../custodial_history/ontology/0.1/custodial_history.rdf): Ontology file
   * [`ontology/0.1/custodial_history.html`](../custodial_history/ontology/0.1/custodial_history.html): Human-readable documentation
   
-* [`/measurement/`](measurement/): Measurement ontology 
+* [`/measurement/`](../measurement/): Measurement ontology 
   * [`ontology/0.1/measurement.rdf`](../measurement/ontology/0.1/measurement.rdf): Ontology file
   * [`ontology/0.1/measurement.html`](../measurement/ontology/0.1/measurement.html): Human-readable documentation
   
@@ -72,7 +72,7 @@ of identifying versions solely with tags on the repository.
   
 * [`/doc/`](.): Informational documents 
   * [`versioning.md`](versioning.md): The ARM versioning protocol for ontologies and vocabularies
-  * [`repository_contents.md`](../doc/repository_contents.md): This document 
+  * [`repository_contents.md`](repository_contents.md): This document 
   
 * [`/tools/`](../tools/): Tools used in support of the ontology and vocabulary development, such as XSL data conversion scripts or generating human-readable documentation
   * [`rbms_vocabs`](../tools/rbms_vocabs/) Converts RBMS vocabulary XML dumps to RDF
