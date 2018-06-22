@@ -37,8 +37,8 @@ The following protocols are used to version the ontologies.
 ------------
 
 Several of the predicates used in the ontology versioning protocol are of type `owl:OntologyProperty` and thus cannot be used with our vocabularies, which are typed `void:Dataset` rather than
-`owl:Ontology`.  In particular, `owl:ontologyIRI` and `owl:versionIRI` have domain `owl:Ontology`, so only versioned URIs are used for the vocabularies (e.g., `https://w3id.org/arm/core/vocabularies/typeface/0.1/`), using the same schema outlined for ontologies. Versioning is also supported by defining `owl:versionInfo` on the Dataset; 
-and following the protocols described above for use of timestamps and change descriptions. 
+`owl:Ontology`.  In particular, `owl:ontologyIRI` and `owl:versionIRI` have domain `owl:Ontology`, so only versioned URIs are used for the vocabularies (e.g., `https://w3id.org/arm/core/vocabularies/typeface/0.1/`), using the same schema outlined for ontologies. Versioning is also supported by defining `owl:versionInfo` on the Dataset 
+and following the conventions described below for use of [version numbers](#version-numbering), [issuance and modification datetimes(#datetimes), and [change descriptions](#change-descriptions). 
 
 <a name="version-numbering">Version Numbering</a>
 ----------------
