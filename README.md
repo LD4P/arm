@@ -89,7 +89,7 @@ A task left for future development is the identification of an existing or creat
 Arrangements of objects (e.g., folded, unfolded, rolled, unrolled). Designed in the context of exhibition displays and measurements.
 
 * [Vocabulary specification](https://w3id.org/arm/core/vocabularies/arrangement/0.1/arrangement.rdf)
-* [Vocabulary specification](https://w3id.org/arm/core/vocabularies/arrangement/0.1/arrangement.html)
+* [Human-readable documentation](https://w3id.org/arm/core/vocabularies/arrangement/0.1/arrangement.html)
 
 
 ### Handwriting Type
