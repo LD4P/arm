@@ -1,6 +1,13 @@
 #!/usr/bin/env python
-"""Build LODE documentation for the ARM ontologies and vocabularies."""
+"""Build LODE documentation for the ARM ontologies and vocabularies.
 
+Designed to be run from the root directory with:
+
+> python tools/build-lode-docs.py
+
+and assumes paths for RDF files as set in the RDF_FILES list with
+paths relative to the repository root.
+"""
 import argparse
 import logging
 import os.path
