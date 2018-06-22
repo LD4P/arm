@@ -77,8 +77,8 @@ All paths are relative to the top level of the repository.
   * [`repository_contents.md`](repository_contents.md): This document 
   
 * [`tools`](../tools/): Tools used in support of the ontology and vocabulary development, such as XSL data conversion scripts or generating human-readable documentation
-  * [`rbms_vocabs`](../tools/rbms_vocabs/ Converts RBMS vocabulary XML dumps to RDF
-  * [`build-lode-docs.py`](../tools/build-lode-docs.py) Generates ontology and vocabulary LODE documentation with various modifications 
+  * [`rbms_vocabs`](../tools/rbms_vocabs): Converts RBMS vocabulary XML dumps to RDF
+  * [`build-lode-docs.py`](../tools/build-lode-docs.py): Generates ontology and vocabulary LODE documentation with various modifications 
   
 * [`css`](../css): CSS files used in the display of the human-readable LODE documentation
 * [`js`](../js): JavaScript files used in the display of the human-readable LODE documentation
