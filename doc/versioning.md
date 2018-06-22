@@ -5,12 +5,13 @@ Table of Contents
 ------------
 
 * [Introduction](#intro)
-* [Ontology Versioning(#ontology-versioning)
+* [Ontology Versioning](#ontology-versioning)
+* [Vocabulary Versioning](#vocabulary-versioning)
 * [Issuance and Modification Datetimes](#datetimes)
 * [Change Descriptions](#change-descriptions)
-* [Vocabulary Versioning](#vocabulary-versioning)
 
-<a name="intro"Introduction</a>
+
+<a name="intro">Introduction</a>
 ------------
 
 This document describes a process and protocol for versioning and change management of the ARM ontologies and vocabularies.
@@ -54,12 +55,18 @@ objective notions of backward- and non-backward-compatibility. Possibly Model B 
 * `owl:priorVersion` provides the URI of the previous MAJOR.MINOR version of the ontology, if any.
 * `owl:backwardCompatibleWith` or `owl:incompatibleWith` may also be used to reference previous MAJOR.MINOR versions of the ontology, where applicable.
 
+<a name="vocabulary-versioning">Vocabulary Versioning</a>
+------------
+
+Several of the predicates used in the ontology versioning protocol are of type `owl:OntologyProperty` and thus cannot be used with our vocabularies, which are typed `void:Dataset` rather than
+`owl:Ontology`.  In particular, `owl:ontologyIRI` and `owl:versionIRI` have domain `owl:Ontology`, so only versioned URIs are used for the vocabularies (e.g., `https://w3id.org/arm/core/vocabularies/typeface/0.1/`), using the same schema outlined for ontologies. Versioning is also supported by defining `owl:versionInfo` on the Dataset; 
+and following the protocols described above for use of timestamps and change descriptions. 
 
 <a name="datetimes">Issuance and Modification Datetimes</a>
 ------------
 
-* `dcterms:issued` is used on each ontology term, and on the ontology as a whole, to indicate datetime of first issuance.
-* `dcterms:modified` is used on each ontology term, and on the ontology as a whole, to indicate last modification datetime. 
+* `dcterms:issued` is used on each term, and on the ontology or vocabulary as a whole, to indicate datetime of first issuance.
+* `dcterms:modified` is used on each term, and on the ontology or vocabulary as a whole, to indicate last modification datetime. 
 * Terms not modified since first issuance have the same `dcterms:issued` and `dcterms:modified` values.
 * Datetime values are expressed in ISO-8601 format; e.g., "2017-04-22T01:30:00-04:00".
 * The `dcterms` values do not include extraneous text, so that they are machine-readable without parsing. Change descriptions are provided by `skos:changeNote` (see following section).
@@ -68,13 +75,8 @@ objective notions of backward- and non-backward-compatibility. Possibly Model B 
 ------------
 * `skos:changeNote` is used to provide human-readable descriptions of term modifications. 
 * One `skos:changeNote` is used per version. That is, if more than one change is made to the same term in the same version, all are recorded in the same change note. If multiple changes are made to the same term in different versions, they are recorded in multiple change notes.
-* The change note also records the ontology version, so that modifications to a term can be traced through the affected versions of the ontology. The format used is, e.g., "Fix rdfs:label (v1.0.1)".
-* A `skos:changeNote` could be applied to the ontology itself to record major, broad, or high-level changes affecting multiple terms.
+* The change note also records the ontology or vocabulary version, so that modifications to a term can be traced through the affected versions of the ontology. The format used is, e.g., "Fix rdfs:label (v1.0.1)".
+* A `skos:changeNote` could be applied to the ontology or vocabulary itself to record major, broad, or high-level changes affecting multiple terms.
 * Changes are also recorded in change logs for each ontology, vocabulary, and application profile. 
 
-<a name="vocabulary-versioning">Vocabulary Versioning</a>
-------------
 
-Several of the predicates used in the ontology versioning protocol are of type `owl:OntologyProperty` and thus cannot be used with our vocabularies, which are typed `void:Dataset` rather than
-`owl:Ontology`.  In particular, `owl:ontologyIRI` and `owl:versionIRI` have domain `owl:Ontology`, so only versioned URIs are used for the vocabularies (e.g., `https://w3id.org/arm/core/vocabularies/typeface/0.1/`), using the same schema outlined for ontologies. Versioning is also supported by defining `owl:versionInfo` on the Dataset; 
-and following the protocols described above for use of timestamps and change descriptions. 
