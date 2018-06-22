@@ -60,7 +60,7 @@ def get_lode(rdfxml):
 
     curl -H 'Expect:'
          -F "url="
-         -F "file=@award/ontology/0.1/doc/lode/temp.rdf;filename=temp.rdf"
+         -F "file=@award/ontology/0.1/temp.rdf;filename=temp.rdf"
          -F "module="
          -F "lang_label="
          http://www.essepuntato.it/lode
@@ -135,7 +135,7 @@ def create_lode_html(rdf_file):
     logging.info("Creating LODE docs for %s" % (rdf_file))
     (base, filename) = os.path.split(rdf_file)
     (filebase, fileext) = os.path.splitext(filename)
-    html_file = os.path.join(base, 'doc/lode', filebase + '.html')
+    html_file = os.path.join(base, filebase + '.html')
     # Read and massage RDF/XML
     rdfxml = ''
     with open(rdf_file, 'r') as fh:
