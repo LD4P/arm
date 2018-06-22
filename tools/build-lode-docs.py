@@ -32,30 +32,24 @@ RDF_FILES = [
 ]
 
 
-def get_namespace_and_info(rdfxml):
+def get_namespace(rdfxml):
     """Get ontology or vocabulary namespace from the RDF/XML.
 
     look for either:
       * owl:versionIRI property for the ontologies
-      * void:Dataset type definition for the vocabularies
-
-    in the case of vocabularies, also pull out extra information
-    from the VOID description and return in info dict.
+      * else the owl:Ontology (was void:Dataset before munging)
+        type definition for the vocabularies
     """
     from rdflib.graph import Graph
-    from rdflib.namespace import RDF, RDFS, OWL, VOID
+    from rdflib.namespace import RDF, OWL, VOID
     g = Graph()
     g.parse(data=rdfxml, format="application/rdf+xml")
-    info = {}
     # Look for owl:versionIRI first (_assume_ only one!)
     for s, p, o in g.triples((None, OWL.versionIRI, None)):
-        return(str(o), info)
+        return str(o)
     # Look for void:Dataset second (_assume_ only one!)
-    for s, p, o in g.triples((None, RDF.type, VOID.Dataset)):
-        info['h1'] = g.value(s, RDFS.label, None, str(s))
-        info['versionIRI'] = str(s)
-        logging.info(" - h1 = " + info['h1'])
-        return(str(s), info)
+    for s, p, o in g.triples((None, RDF.type, OWL.Ontology)):
+        return str(s)
     # Else, oops
     raise Exception("Failed to find namespace!")
 
@@ -111,16 +105,18 @@ def fix_anchors(html, namespace):
     return html
 
 
-def fix_links(html, source, info):
+def fix_links(html, source):
     """Fix source link in LODE HTML."""
     text = "Ontology source"
     if '/vocabularies/' in source:
         text = "Vocabulary source"
-        # Add title block which is missing from LODE output
-        html = re.sub(r'''(<div class="head">)<dl>''',
-                      r'''\1''' + '<h1>' + info['h1'] + '</h1>' +
-                      '<dl><dt>Version IRI:</dt><dd>' +
-                      info['versionIRI'] + '</dd></dt>',
+        # This is a nasty kludge to fix up the presentation of IRI
+        # and versionIRI which aren't in our void:Dataset description
+        # for the vocabularies. Takes the URI that LODE outputs as
+        # IRI and strips version suffix, puts full version URI in
+        # LODE's empty Version IRI field
+        html = re.sub(r'''(<dt>IRI:</dt><dd>)(https://w3id.org/[^\d]+)(\d\.\d/)(</dd>)''',
+                      r'''\1\2\4''' + '<dt>Version IRI:</dt><dd>' + r'''\2\3''' + '</dd>',
                       html)
     # <a href="http://ee....">Ontology source</a>
     html = re.sub(r'''<a href="[^"]+">Ontology source</a>''',
@@ -147,11 +143,17 @@ def create_lode_html(rdf_file):
     rdfxml = ''
     with open(rdf_file, 'r') as fh:
         for line in fh:
+            # LODE wants to see rdfs:comment to pull out abstract
             line = re.sub('skos:definition', 'rdfs:comment', line)
+            # LODE is designed to deal only with OWL ontologies and thus
+            # ignores the void:Dataset description in the vocabulary
+            # files. Here we recklessly change the type which means that
+            # title, abstract, etc. get pulled out OK.
+            line = re.sub('void:Dataset', 'owl:Ontology', line)
             rdfxml += line
     logging.debug("Massaged RDF/XML:\n" + rdfxml)
-    # Extract namespace and info from XML
-    (namespace, info) = get_namespace_and_info(rdfxml)
+    # Extract namespace from XML
+    namespace = get_namespace(rdfxml)
     logging.info(" - namespace %s" % (namespace))
     # Get LODE documentation
     html = get_lode(rdfxml)
@@ -161,7 +163,7 @@ def create_lode_html(rdf_file):
     logging.debug("HTML from LODE service:\n" + html)
     # Massage HTML for our use
     html = fix_anchors(html, namespace)
-    html = fix_links(html, os.path.join(namespace, filename), info)
+    html = fix_links(html, os.path.join(namespace, filename))
     # Write out
     with open(html_file, 'w') as fh:
         fh.write(html)
