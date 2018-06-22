@@ -35,14 +35,14 @@ All paths are relative to the top level of the repository.
 
 * [`README.md`](../README.md): Project overview
 
-* [`modeling_recommendations`](../modeling_recommendations/): Modeling recommendations
+* [`modeling_recommendations`](../modeling_recommendations): Modeling recommendations
 
 * [`core`](../core/): Core art and rare materials ontologies and vocabularies 
   * [`ontology/0.1/core.rdf`](../core/ontology/0.1/core.rdf): Primary ontology file
   * [`ontology/0.1/core.html`](../core/ontology/0.1/core.html): Human-readable documentation of primary ontology
   * [`ontology/0.1/activity.rdf`](../core/ontology/0.1/activity.rdf): Secondary ontology file containing definitions of Activity classes and related predicates
   * [`ontology/0.1/activity.html`](../core/ontology/0.1/activity.html): Human-readable documentation of Activity terms
-  * [`vocabularies/`](../core/vocabularies): Original ARM controlled vocabularies
+  * [`vocabularies`](../core/vocabularies): Original ARM controlled vocabularies
     * [`vocabularies/arrangement/0.1/arrangement.rdf`](../core/vocabularies/arrangement/0.1/arrangement.rdf): Arrangement
     * [`vocabularies/arrangement/0.1/arrangement.html`](../core/vocabularies/arrangement/0.1/arrangement.html): Human-readable documentation of Arrangement vocabulary
     * [`vocabularies/handwriting_type/0.1/handwriting_type.rdf`](../core/vocabularies/handwriting_type/0.1/handwriting_type.rdf): Handwriting type
@@ -55,32 +55,32 @@ All paths are relative to the top level of the repository.
     * [`vocabularies/typeface/0.1/typeface.html`](../core/vocabularies/typeface/0.1/typeface.html): Human-readable documentation of Typeface vocabulary
   * [`validation/shacl/`](../core/validation/shacl/): SHACL validation files for the core ontology
     
-* [`award`](../award/): Award ontology 
+* [`award`](../award): Award ontology 
   * [`ontology/0.1/award.rdf`](../award/ontology/0.1/award.rdf): Ontology file
   * [`ontology/0.1/award.html`](../award/ontology/0.1/award.html): Human-readable documentation
   
-* [`custodial_history`](../custodial_history/): Custodial history ontology 
+* [`custodial_history`](../custodial_history): Custodial history ontology 
   * [`ontology/0.1/custodial_history.rdf`](../custodial_history/ontology/0.1/custodial_history.rdf): Ontology file
   * [`ontology/0.1/custodial_history.html`](../custodial_history/ontology/0.1/custodial_history.html): Human-readable documentation
   
-* [`measurement`](../measurement/): Measurement ontology 
+* [`measurement`](../measurement): Measurement ontology 
   * [`ontology/0.1/measurement.rdf`](../measurement/ontology/0.1/measurement.rdf): Ontology file
   * [`ontology/0.1/measurement.html`](../measurement/ontology/0.1/measurement.html): Human-readable documentation
   
-* [`application_profiles`](../application_profiles/): Application profiles 
-  * [`art/shacl/`](../application_profiles/art/shacl/): SHACL application profiles for artworks
-  * [`raremat_monograph/shacl/`](../application_profiles/raremat_monograph/shacl/): SHACL application profiles for rare materials monographs
-  * [`sources/`](../application_profiles/sources/): Source ontology and vocabulary fragments used in the application profiles and modeling recommendations 
+* [`application_profiles`](../application_profiles): Application profiles 
+  * [`art/shacl`](../application_profiles/art/shacl): SHACL application profiles for artworks
+  * [`raremat_monograph/shacl`](../application_profiles/raremat_monograph/shacl): SHACL application profiles for rare materials monographs
+  * [`sources`](../application_profiles/sources): Source ontology and vocabulary fragments used in the application profiles and modeling recommendations 
   
 * [`doc`](.): Informational documents 
   * [`versioning.md`](versioning.md): The ARM versioning protocol for ontologies and vocabularies
   * [`repository_contents.md`](repository_contents.md): This document 
   
 * [`tools`](../tools/): Tools used in support of the ontology and vocabulary development, such as XSL data conversion scripts or generating human-readable documentation
-  * [`rbms_vocabs`](../tools/rbms_vocabs/) Converts RBMS vocabulary XML dumps to RDF
+  * [`rbms_vocabs`](../tools/rbms_vocabs/ Converts RBMS vocabulary XML dumps to RDF
   * [`build-lode-docs.py`](../tools/build-lode-docs.py) Generates ontology and vocabulary LODE documentation with various modifications 
   
-* [`css`](../css/): CSS files used in the display of the human-readable LODE documentation
-* [`js`](../js/): JavaScript files used in the display of the human-readable LODE documentation
+* [`css`](../css): CSS files used in the display of the human-readable LODE documentation
+* [`js`](../js): JavaScript files used in the display of the human-readable LODE documentation
   
 
