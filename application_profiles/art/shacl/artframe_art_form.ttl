@@ -1,5 +1,5 @@
 @prefix aat: <http://vocab.getty.edu/aat/> .
-@prefix activity: <https://w3id.org/arm/core/activity/0.1/> .
+@prefix activity: <https://w3id.org/arm/activity/ontology/0.1/> .
 @prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
 @prefix artframe_art_property_groups: <https://w3id.org/arm/application_profiles/artframe_art/shacl/artframe_art_property_groups/> .
 @prefix award: <https://w3id.org/arm/award/ontology/0.1/> .
