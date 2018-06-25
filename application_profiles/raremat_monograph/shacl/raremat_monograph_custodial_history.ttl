@@ -1,4 +1,4 @@
-@prefix activity: <https://w3id.org/arm/core/activity/0.1/> .
+@prefix activity: <https://w3id.org/arm/activity/ontology/0.1/> .
 @prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix ch: <https://w3id.org/arm/custodial_history/ontology/0.1/> .

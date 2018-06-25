@@ -41,19 +41,19 @@ Adoption, maintenance, and use of these ontologies will be determined by RBMS-BS
 
 Core ontology used in the description of art and rare materials.
 
-The core ontology has been split into two OWL files, `core.rdf` and `activity.rdf`, because the issue of whether to adopt the BIBFRAME Contribution model
-or the [bibliotek-o](http://bibliotek-o.org) Activity model is still unresolved. As a temporary accommodation, the Activity model is used, but the relevant terms are stored in a separate RDF file
-for easy separation.
-
 #### Core
 
 * [Ontology specification](https://w3id.org/arm/core/ontology/0.1/core.rdf)
 * [Human-readable documentation](https://w3id.org/arm/core/ontology/0.1/core.html)
 
-#### Activity
+#### <a name="activity">Activity Ontology</activity>
 
-* [Ontology specification](https://w3id.org/arm/core/ontology/0.1/activity.rdf)
-* [Human-readable documentation](https://w3id.org/arm/core/ontology/0.1/activity.html)
+The issue of whether to adopt the BIBFRAME Contribution model or the [bibliotek-o](http://bibliotek-o.org) Activity model has not yet been resolved. As a temporary accommodation, the Activity model is used, but the terms are stored in a separate ontology file
+with a distinct namespace for easy separation. The expectation is that either (1) the Activity model will be adopted, and the terms merged into the ARM Core Ontology, or (2) the BIBFRAME Contribution model will be adopted, the Activity ontology deprecated, and
+other associated revisions to the ARM ontologies and vocabularies be implemented. 
+
+* [Ontology specification](https://w3id.org/arm/activity/ontology/0.1/activity.rdf)
+* [Human-readable documentation](https://w3id.org/arm/activity/ontology/0.1/activity.html)
 
 ### Award Ontology
 

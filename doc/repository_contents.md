@@ -37,11 +37,9 @@ All paths are relative to the top level of the repository.
 
 * [`modeling_recommendations`](../modeling_recommendations): Modeling recommendations
 
-* [`core`](../core/): Core art and rare materials ontologies and vocabularies 
-  * [`ontology/0.1/core.rdf`](../core/ontology/0.1/core.rdf): Primary ontology file
+* [`core`](../core/): Core art and rare materials ontology and vocabularies 
+  * [`ontology/0.1/core.rdf`](../core/ontology/0.1/core.rdf): Ontology file
   * [`ontology/0.1/core.html`](../core/ontology/0.1/core.html): Human-readable documentation of primary ontology
-  * [`ontology/0.1/activity.rdf`](../core/ontology/0.1/activity.rdf): Secondary ontology file containing definitions of Activity classes and related predicates
-  * [`ontology/0.1/activity.html`](../core/ontology/0.1/activity.html): Human-readable documentation of Activity terms
   * [`vocabularies`](../core/vocabularies): Original ARM controlled vocabularies
     * [`vocabularies/arrangement/0.1/arrangement.rdf`](../core/vocabularies/arrangement/0.1/arrangement.rdf): Arrangement
     * [`vocabularies/arrangement/0.1/arrangement.html`](../core/vocabularies/arrangement/0.1/arrangement.html): Human-readable documentation of Arrangement vocabulary
@@ -54,6 +52,10 @@ All paths are relative to the top level of the repository.
     * [`vocabularies/typeface/0.1/typeface.rdf`](../core/vocabularies/typeface/0.1/typeface.rdf): Typeface
     * [`vocabularies/typeface/0.1/typeface.html`](../core/vocabularies/typeface/0.1/typeface.html): Human-readable documentation of Typeface vocabulary
   * [`validation/shacl/`](../core/validation/shacl/): SHACL validation files for the core ontology
+  
+* [`activity`](../activity/): Secondary ontology for definitions of Activity classes and related predicates. See the [`README`](../README.md#activity) discussion on the status of this ontology. 
+  * [`ontology/0.1/activity.rdf`](../activity/ontology/0.1/activity.rdf):Ontology file 
+  * [`ontology/0.1/activity.html`](../activity/ontology/0.1/activity.html): Human-readable documentation of Activity terms
     
 * [`award`](../award): Award ontology 
   * [`ontology/0.1/award.rdf`](../award/ontology/0.1/award.rdf): Ontology file
