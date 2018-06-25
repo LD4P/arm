@@ -20,7 +20,7 @@ BASE = '/arm'
 
 RDF_FILES = [
     'award/ontology/0.1/award.rdf',
-    'core/ontology/0.1/activity.rdf',
+    'activity/ontology/0.1/activity.rdf',
     'core/ontology/0.1/core.rdf',
     'core/vocabularies/arrangement/0.1/arrangement.rdf',
     'core/vocabularies/handwriting_type/0.1/handwriting_type.rdf',
