@@ -52,7 +52,7 @@
     
     <owl:NamedIndividual rdf:about="https://w3id.org/arm/core/vocabularies/arrangement/0.1/unfolded">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdfs:label>infolded</rdfs:label>
+        <rdfs:label>unfolded</rdfs:label>
         <skos:definition>The condition of being unfolded, such as a parchment. Particular measurements and other descriptions may pertain to the object in this arrangement.</skos:definition>
         <dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
         <dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>        
