@@ -237,7 +237,7 @@ cannot be defined due to wide or perhaps unlimited variability.
 
 **Notes/TBD**
 
--   Rationale for a state object is not necessarily that there are other assertions to be made about it, but that a controlled vocabulary of states, rather than literal values, can be used.
+-   Rationale for an arrangement object is not necessarily that there are other assertions to be made about it, but that a controlled vocabulary of states, rather than literal values, can be used.
 
 -   Examples of resources with arrangements: road maps (folded/unfolded), parchments (rolled/unrolled), book (open/closed).
 
