@@ -125,7 +125,7 @@
     sh:property :MarkingNote_rdf_type ;
     .
 
-:MarkingNoteForm_rdf_type 
+:MarkingNote_rdf_type 
     a sh:PropertyShape ;
     sh:node arm_core_property_shapes:rdf_type ;
     sh:in (
