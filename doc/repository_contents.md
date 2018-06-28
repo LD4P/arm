@@ -56,6 +56,7 @@ All paths are relative to the top level of the repository.
 * [`activity`](../activity/): Secondary ontology for definitions of Activity classes and related predicates. See the [`README`](../README.md#activity) discussion on the status of this ontology. 
   * [`ontology/0.1/activity.rdf`](../activity/ontology/0.1/activity.rdf):Ontology file 
   * [`ontology/0.1/activity.html`](../activity/ontology/0.1/activity.html): Human-readable documentation of Activity terms
+  * [`validation/shacl/`](../activity/validation/shacl/): SHACL validation files for the activity ontology
     
 * [`award`](../award): Award ontology 
   * [`ontology/0.1/award.rdf`](../award/ontology/0.1/award.rdf): Ontology file
