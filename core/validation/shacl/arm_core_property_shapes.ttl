@@ -80,12 +80,11 @@
 # Links an Exhibition context node to the ExhibitionEvent.
 :arm_Exhibition_bf_partOf_schema_ExhibitionEvent
     a sh:PropertyShape ;
-    sh:path bf:partOf ;
+    sh:node :bf_partOf ;
     sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
     .
-    
-   
+      
 # Links a resource to its Arrangement (e.g., rolled, folded, open to page 10),
 # or a group of resources to their organization.    
 :arm_hasArrangement 
@@ -242,8 +241,7 @@
 # Links an ExhibitionEvent to an Exhibition context node.  
  :bf_hasPart_arm_Exhibition 
     a sh:PropertyShape ;
-    sh:path bf:hasPart;
-    sh:nodeKind sh:IRI ;
+    sh:node :bf_hasPart ;
     sh:class arm:Exhibition ;
     .
  
@@ -254,12 +252,10 @@
     sh:nodeKind sh:IRI ;
     .
     
-# Links a multi-part or traveling ExhibitionEvent to an ExhibitionEvent that
-# is part of it.   
+# Links a multi-part or traveling ExhibitionEvent to one of its sub-events.  
  :bf_hasPart_schema_ExhibitionEvent
     a sh:PropertyShape ;
-    sh:path bf:partOf ;
-    sh:nodeKind sh:IRI ;
+    sh:node :bf_hasPart ;  
     sh:class schema:ExhibitionEvent ;
     .
 
@@ -353,8 +349,7 @@
 # which it is a part.
  :schema_ExhibitionEvent_bf_partOf_schema_ExhibitionEvent
     a sh:PropertyShape ;
-    sh:path bf:partOf ;
-    sh:nodeKind sh:IRI ;
+    sh:node :bf_partOf ;
     sh:class schema:ExhibitionEvent ;
     sh:maxCount 1 ;
     .

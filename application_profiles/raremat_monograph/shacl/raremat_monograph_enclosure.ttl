@@ -24,9 +24,9 @@
 @prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/> . 
 
 
-# Generic PropertyShape linking a resource to an Enclosure. Specific
-# constraints are added in InstanceForm_bf_hasPart_arm_Enclosure and 
-# ItemForm_bf_hasPart_arm_Enclosure.
+# Generic PropertyShape linking a resource to an Enclosure. Characteristics 
+# specific to subject type are added in InstanceForm_bf_hasPart_arm_Enclosure 
+# and ItemForm_bf_hasPart_arm_Enclosure.
 :bf_hasPart_arm_Enclosure
     a sh:PropertyShape ;
     sh:node arm_core_property_shapes:bf_hasPart ;
@@ -39,9 +39,9 @@
     .
 
 # Links Instance to Enclosure. Note that Instance and Item use different
-# PropertyShapes because they belong to different property groups. The need
-# for different property groups is that properties need to be ordered
-# differently for Instance and Items.
+# PropertyShapes because they belong to different property groups. Distinct
+# property groups are needed because properties are ordered differently  for 
+# Instances and Items.
 :InstanceForm_bf_hasPart_arm_Enclosure
     a sh:PropertyShape ;
     sh:node :bf_hasPart_arm_Enclosure ;
@@ -50,10 +50,10 @@
     sh:order "10"^^xsd:int ;             
     .
 
-# Links Instance to Enclosure. Note that Instance and Item use different
-# PropertyShapes because they belong to different property groups. The need
-# for different property groups is that properties need to be ordered
-# differently for Instance and Items.
+# Links Item to Enclosure. Note that Instance and Item use different
+# PropertyShapes because they belong to different property groups. Distinct
+# property groups are needed because properties are ordered differently  for 
+# Instances and Items.
 :ItemForm_bf_hasPart_arm_Enclosure
     a sh:PropertyShape ;
     sh:node :bf_hasPart_arm_Enclosure ;      
