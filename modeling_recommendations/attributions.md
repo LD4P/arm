@@ -1,6 +1,6 @@
 Attribution
 ===============
-ArtFrame, March 16, 2018
+ArtFrame, March 16, 2018, updated June 28, 2018
 
 **Table of Contents**
 - [Background](#background)
@@ -23,7 +23,7 @@ by the Library of Congress have not yet addressed this concept.
 <a name="recommendations">Recommendations for Moving Forward</a>
 ---------------------------
 
-This model proposes a new object property (ex:hasAttribution) and a class (ex:Attribution). Necessary information such as dates of 
+This model proposes a new object property (arm:hasAttribution) and a class (arm:Attribution). Necessary information such as dates of 
 the attribution, agent responsible for making the attribution, and/or the source on which this attribution is based can be associated 
 directly with this Attribution node. Complex information that cannot easily be expressed in structured form should be recorded in 
 a bf:Note.
@@ -31,28 +31,28 @@ a bf:Note.
 <a name="classes">Recommended Classes</a>
 -----------
 
-**ex:Attribution**
+**arm:Attribution**
 > - **Label:** Attribution
-> - **IRI:** TBD
+> - **IRI:** https://w3id.org/arm/core/ontology/0.1/Attribution
 > - **Definition:** The ascribing of an activity to a particular agent or agents. This attribution may change over time based on new evidence.  
 > - **Scope note:** The Attribution is directly related to an Activity, and carries additional data about the agent, source, date, etc. of the attribution.
 > - **Example:** The activity of creating an artwork is ascribed to a particular artist.
 
-**ex:Activity**
+**activity:Activity**
 > - **Label:** Activity
-> - **IRI:** TBD
+> - **IRI:** https://w3id.org/arm/activity/ontology/0.1/Activity
 > - **Definition:** An activity or contribution by a single agent that affects or alters the existence or state of a resource.
 
-**ex:ArtistActivity**
+**activity:ArtistActivity**
 > - **Label:** Artist
-> - **IRI:** TBD
+> - **IRI:** https://w3id.org/arm/activity/ontology/0.1/ArtistActivity
 > - **Definition:** The activity of creating a work by conceiving, and implementing, an original graphic design, drawing, 
                     painting, etc. For book illustrators, prefer IllustratorActivity.
-> - **Subclass of:** ex:Activity
+> - **Subclass of:** activity:Activity
 > - **Editorial note:** Future work: consider more formal alignment between the class and corresponding MARC relator.
 > - **Scope note:** This class is derived from the MARC relator: http://id.loc.gov/vocabulary/relators/art.
 
-*NB:* ex:ArtistActivity is listed as one example of an activity that can be associated with ex:hasAttribution. Other activities 
+*NB:* activity:ArtistActivity is listed as one example of an activity that can be associated with ex:hasAttribution. Other activities 
 may be used as provided by the ontology.
 
 **bf:Agent**
@@ -68,19 +68,19 @@ may be used as provided by the ontology.
 <a name="properties">Recommended Properties</a>
 -----------
 
-**ex:hasAttribution (object property)**
+**arm:hasAttribution (object property)**
 > - **Label:** has attribution
-> - **IRI:** TBD
+> - **IRI:** https://w3id.org/arm/core/ontology/0.1/hasAttribution
 > - **Definition:** Used to attribute an Activity, such as ArtistActivity, to a particular agent or agents: relates the Activity (or other resource) to an Attribution resource, which carries information about the agent, source, date, etc. of the attribution.
-> - **Range:* ex:Attribution
-> - **Inverse:** ex:isAttributionOf
+> - **Range:* arm:Attribution
+> - **Inverse:** arm:isAttributionOf
 
-**ex:isAttributionOf (object property)**
+**arm:isAttributionOf (object property)**
 > - **Label:** is attribution of
-> - **IRI:** TBD
+> - **IRI:** https://w3id.org/arm/core/ontology/0.1/isAttributionOf
 > - **Definition:** Used to attribute an Activity, such as ArtistActivity, to a particular agent or agents: relates an Attribution resource to the Activity (or other resource), where the Attribution carries information about the agent, source, date, etc. of the attribution. 
-> - **Domain:* ex:Attribution
-> - **Inverse:** ex:hasAttribution
+> - **Domain:* arm:Attribution
+> - **Inverse:** arm:hasAttribution
 
 **bf:agent (object property)**
 > - **Label:** Associated agent
@@ -90,20 +90,20 @@ may be used as provided by the ontology.
 > - **Comment** Used with Unspecified.
 > - **Range:** bf:Agent
 
-**ex:hasActivity (object property)**
+**activity:hasActivity (object property)**
 > - **Label:** has activity
-> - **IRI:** TBD
+> - **IRI:** https://w3id.org/arm/activity/ontology/0.1/hasActivity
 > - **Definition:** Relates this resource to an activity or contribution by a single agent that affects or alters its existence 
                     or state.
-> - **Range** ex:Activity
-> - **Inverse:** ex:isActivityOf
+> - **Range** activity:Activity
+> - **Inverse:** activity:isActivityOf
 
-**ex:isActivityOf (object property)**
+**activity:isActivityOf (object property)**
 > - **Label:** is activity of
-> - **IRI:** TBD
+> - **IRI:** https://w3id.org/arm/activity/ontology/0.1/isActivityOf
 > - **Definition:** Relates an activity to the affected resource.
-> - **Domain:* ex:Activity
-> - **Inverse:** ex:hasActivity
+> - **Domain:* activity:Activity
+> - **Inverse:** activity:hasActivity
 
 **bf:date (object property)**
 > - **Label:** Date
@@ -113,19 +113,19 @@ may be used as provided by the ontology.
                     production of a resource. May be date typed.
 > - **Comment** Used with Unspecified.
 
-**ex:hasSource (object property)**
+**arm:hasSource (object property)**
 > - **Label:** has source
-> - **IRI:** TBD
+> - **IRI:** https://w3id.org/arm/core/ontology/0.1/hasSource
 > - **Definition:** Relates this resource to the source from which it was derived.
 > - **Comment:** Has general applicability to many types of sources and resources.
-> - **Inverse:** ex:isSourceOf
+> - **Inverse:** arm:isSourceOf
 
-**ex:isSourceOf (object property)**
+**arm:isSourceOf (object property)**
 > - **Label:** is source of
-> - **IRI:** TBD
+> - **IRI:** "https://w3id.org/arm/core/ontology/0.1/isSourceOf
 > - **Definition:** Relates this resource to a resource of which it is the source.
 > - **Comment:** Has general applicability to many types of sources and resources.
-> - **Inverse:** ex:hasSource
+> - **Inverse:** arm:hasSource
 
 **bf:note (object property)**
 > - **Label:** Note
@@ -140,15 +140,15 @@ may be used as provided by the ontology.
 
 ```
 :work a bf:Work ;
-    ex:hasActivity :artistActivity .
+    activity:hasActivity :artistActivity .
 
- :artistActivity a ex:ArtistActivity ;
+ :artistActivity a activity:ArtistActivity ;
       bf:agent :artist ;
-      ex:hasAttribution :attribution .
-:attribution a ex:Attribution ;
+      arm:hasAttribution :attribution .
+:attribution a arm:Attribution ;
     bf:agent :attributor ;
     bf:date "2017" ;
-    ex:hasSource :source ;
+    arm:hasSource :source ;
     bf:note :note .
 
 :note1 a bf:Note ;
