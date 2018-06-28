@@ -23,25 +23,7 @@
 #
 #
 # These are preliminary validation shapes. Add more constraints later.
-#
-
-# Links a resource to its Activity.
-:activity_hasActivity 
-    a sh:PropertyShape ;
-    sh:path activity:hasActivity ;
-    sh:nodeKind sh:IRI ; 
-    sh:class arm:Activity ;
-    .
-
-# Links an Activity to a resource.
-:activity_isActivityOf 
-    a sh:PropertyShape ;
-    sh:path activity:isActivityOf ;
-    sh:nodeKind sh:IRI ; 
-    # Not always true. E.g., in the ARM model, BinderActivity links to both 
-    # Item and Binding.
-    # sh:maxCount 1 ;
-    .   
+#   
 
 # Links a resource to its location.    
 :arm_atLocation
@@ -81,7 +63,9 @@
 :arm_Exhibition_bf_partOf_schema_ExhibitionEvent
     a sh:PropertyShape ;
     sh:node :bf_partOf ;
+    sh:targetClass arm:Exhibition ;
     sh:nodeKind sh:IRI ;
+    sh:class schema:ExhibitionEvent ;
     sh:maxCount 1 ;
     .
       
@@ -132,6 +116,7 @@
 :arm_isAgentOf
     a sh:PropertyShape ;
     sh:path arm:isAgentOf ;
+    sh:targetClass bf:Agent ;
     sh:nodeKind sh:IRI ;
     .
 
@@ -140,6 +125,7 @@
 :arm_isArrangementOf
     a sh:PropertyShape ;
     sh:path arm:isArrangementOf ;
+    sh:targetClass arm:Arrangement ;
     sh:nodeKind sh:IRI ;
     .
 
@@ -147,6 +133,7 @@
 :arm_isExhibitionOf
     a sh:PropertyShape ;
     sh:path arm:isExhibitionOf ;
+    sh:targetClass arm:Exhibition ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
@@ -159,10 +146,11 @@
     sh:nodeKind sh:IRI ;
     .
             
-# Links material to resource made of it in whole or in part.
+# Links a material to resource made of it in whole or in part.
 :arm_isMaterialOf 
     a sh:PropertyShape ;
     sh:path arm:isMaterialOf ;
+    sh:targetClass crm:E57_Material ;
     sh:nodeKind sh:IRI ; 
     .
 
@@ -178,6 +166,7 @@
 :arm_marks 
     a sh:PropertyShape ;
     sh:path arm:marks ;
+    sh:targetClass arm:Marking ;
     sh:nodeKind sh:IRI ; 
     # Can't have a Marking without being in or on something.
     sh:minCount 1 ;
@@ -189,6 +178,7 @@
     a sh:PropertyShape ;
     sh:path arm:isPreferredTitleOf ;
     sh:nodeKind sh:IRI ; 
+    sh:class bf:Title ;
     sh:maxCount 1 ;
     .
     
@@ -205,6 +195,7 @@
 :arm_titleOf 
     a sh:PropertyShape ;
     sh:path arm:titleOf ;
+    sh:targetClass bf:Title ;
     sh:nodeKind sh:IRI ; 
     sh:minCount 1 ;
     # Titles are unique to a specific resource.
@@ -242,6 +233,7 @@
  :bf_hasPart_arm_Exhibition 
     a sh:PropertyShape ;
     sh:node :bf_hasPart ;
+    sh:targetClass arm:ExhibitionEvent ;
     sh:class arm:Exhibition ;
     .
  
@@ -249,6 +241,7 @@
  :bf_hasPart_arm_isExhibitionOf
     a sh:PropertyShape ;
     sh:path ( bf:hasPart arm:isExhibitionOf ) ;
+    sh:targetClass arm:ExhibitionEvent ;
     sh:nodeKind sh:IRI ;
     .
     
@@ -256,6 +249,7 @@
  :bf_hasPart_schema_ExhibitionEvent
     a sh:PropertyShape ;
     sh:node :bf_hasPart ;  
+    sh:targetClass schema:ExhibitionEvent ;
     sh:class schema:ExhibitionEvent ;
     .
 
@@ -271,6 +265,7 @@
 :bf_identifies
     a sh:PropertyShape ;
     sh:path bf:identifies ;
+    sh:targetClass bf:Identifier ;
     sh:nodeKind sh:IRI ;
     .
 
@@ -350,6 +345,7 @@
  :schema_ExhibitionEvent_bf_partOf_schema_ExhibitionEvent
     a sh:PropertyShape ;
     sh:node :bf_partOf ;
+    sh:targetClass schema:ExhibitionEvent ;
     sh:class schema:ExhibitionEvent ;
     sh:maxCount 1 ;
     .

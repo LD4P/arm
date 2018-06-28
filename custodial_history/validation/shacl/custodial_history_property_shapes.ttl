@@ -33,15 +33,16 @@
 # Links a resource to its Activity.
 :activity_hasActivity 
     a sh:PropertyShape ;
-    sh:path arm:hasActivity ;
+    sh:path activity:hasActivity ;
     sh:nodeKind sh:IRI ; 
-    sh:class arm:Activity ;
+    sh:class activity:Activity ;
     .
 
 # Links an Activity to a resource.
 :activity_isActivityOf 
     a sh:PropertyShape ;
     sh:path activity:isActivityOf ;
+    sh:targetClass activity:Activity ;
     sh:nodeKind sh:IRI ; 
     # Not always true. E.g., in the ARM model, BinderActivity links to both 
     # Item and Binding.
@@ -60,6 +61,7 @@
 :arm_isAgentOf
     a sh:PropertyShape ;
     sh:path arm:isAgentOf ;
+    sh:targetClass bf:Agent ;
     sh:nodeKind sh:IRI ;
     .
 
@@ -102,6 +104,7 @@
 :bf_hasPart_ch_CustodialEvent 
     a sh:PropertyShape ;
     sh:node :bf_hasPart ;
+    sh:targetClass ch:CustodialHistory ;
     sh:class ch:CustodialEvent ;       
     .  
 
@@ -162,6 +165,7 @@
 # CustodialEvent to resource via CustodialHistory
 :bf_partOf_ch_isCustodialHistoryOf 
     sh:path ( bf:partOf ch:isCustodialHistoryOf ) ;
+    sh:targetClass ch:CustodialEvent ;
     sh:nodeKind sh:IRI ;
     # NB Don't include sh:class bf:Item, since the ontology and validation
     # shapes can be used outside the bibliographic context.
@@ -183,6 +187,7 @@
 :ch_accessionedBy 
     a sh:PropertyShape ;
     sh:path ch:accessionedBy ;
+    sh:targetClass ch:CustodialEvent ;
     sh:nodeKind sh:IRI ; 
     sh:class arm:AccessionNumber ;
     .
@@ -191,6 +196,7 @@
 :ch_accessionedBy_bf_identifies 
     a sh:PropertyShape ;
     sh:path ( ch:accessionedBy bf:identifies ) ;
+    sh:targetClass ch:CustodialEvent ;
     sh:nodeKind sh:IRI ; 
     # NB Don't include sh:class bf:Item, since the ontology and validation
     # shapes can be used outside the bibliographic context.
@@ -200,6 +206,7 @@
 :ch_accessions 
     a sh:PropertyShape ;
     sh:path ch:accessions ;
+    sh:targetClass arm:AccessionNumber ;
     sh:nodeKind sh:IRI ; 
     sh:class ch:CustodialEvent ;
     .
@@ -208,9 +215,7 @@
 :ch_CustodialEvent_rdf_type 
     a sh:PropertyShape ;
     sh:node :rdf_type ;
-    # Can we just specify sh:class and have the application present all
-    # the subclasses, since all subclasses are allowed?
-    sh:class ch:CustodialEvent ;
+    sh:targetClass ch:CustodialEvent ;
     sh:in (
         ch:Accessioning
         ch:Auction
@@ -242,6 +247,7 @@
 :ch_CustodialEvent_activity_Activity_rdf_type 
     a sh:PropertyShape ;
     sh:node :rdf_type ;
+    sh:targetClass ch:CustodialEvent ;
     sh:in (
         ch:AccessionerActivity
         ch:AcquisitionActivity
@@ -295,7 +301,8 @@
 :ch_isCustodialHistoryOf 
     a sh:PropertyShape ;
     sh:path ch:isCustodialHistoryOf ;
-    sh:nodeKind sh:IRI ; 
+    sh:targetClass ch:CustodialHistory ;
+    sh:nodeKind sh:IRI ;
     # NB Don't include sh:class bf:Item, since the ontology and validation
     # shapes can be used outside the bibliographic context.
     sh:maxCount 1 ;
@@ -327,6 +334,7 @@
 :schema_price
     a sh:PropertyShape ;
     sh:path schema:price ;
+    sh:targetClass schema:PriceSpecification ;
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:decimal ;
     # A resource can have multiple prices (PriceSpecifications), either in
@@ -339,6 +347,7 @@
 :schema_priceCurrency
     a sh:PropertyShape ;
     sh:path schema:priceCurrency ;
+    sh:targetClass schema:PriceSpecification ;
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
     # Schema defines the value as "The currency (in 3-letter ISO 4217 
@@ -354,6 +363,7 @@
 :schema_priceSpecification
     a sh:PropertyShape ;
     sh:path schema:priceSpecification ;
+    sh:targetClass schema:PriceSpecification ;
     sh:nodeKind sh:IRI ;
     sh:class schema:PriceSpecification ;
     .
@@ -362,6 +372,7 @@
 :seq_directlyFollows
     a sh:PropertyShape ;
     sh:path seq:directlyFollows ;
+    sh:targetClass ch:CustodialEvent ;
     sh:nodeKind sh:IRI ;
     sh:class ch:CustodialEvent ;
     sh:maxCount 1 ;
@@ -371,6 +382,7 @@
 :seq_directlyPrecedes
     a sh:PropertyShape ;
     sh:path seq:directlyPrecedes ;
+    sh:targetClass ch:CustodialEvent ;
     sh:nodeKind sh:IRI ;
     sh:class ch:CustodialEvent ;
     sh:maxCount 1 ;
@@ -380,14 +392,16 @@
 :seq_follows
     a sh:PropertyShape ;
     sh:path seq:follows ;
+    sh:targetClass ch:CustodialEvent ;
     sh:nodeKind sh:IRI ;
     sh:class ch:CustodialEvent ;
     .
 
-# Links a CustodialEvent to a directly or indirectly following one.    
+# Links CustodialEvent to a directly or indirectly following one.    
 :seq_precedes
     a sh:PropertyShape ;
     sh:path seq:precede ;
+    sh:targetClass ch:CustodialEvent ;
     sh:nodeKind sh:IRI ;
     sh:class ch:CustodialEvent ;
     .

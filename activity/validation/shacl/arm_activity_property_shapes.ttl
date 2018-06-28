@@ -1,0 +1,40 @@
+@prefix activity: <https://w3id.org/arm/activity/ontology/0.1/> .
+@prefix arm: <https://w3id.org/arm/core/ontology/0.1/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix crm: <http://www.cidoc-crm.org/Property/P2-has-type/Version-6.2/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix : <https://w3id.org/arm/activity/validation/shacl/arm_activity_property_shapes/> .
+
+#
+# ///// ACTIVITY PROPERTY SHAPES - MAY BE EXTENDED BY UI SHAPES ///// #
+#
+
+#
+# These are preliminary validation shapes. Add more constraints later.
+#
+
+# Links a resource to its Activity.
+:activity_hasActivity 
+    a sh:PropertyShape ;
+    sh:path activity:hasActivity ;
+    sh:nodeKind sh:IRI ; 
+    sh:class activity:Activity ;
+    .
+
+# Links an Activity to a resource.
+:activity_isActivityOf 
+    a sh:PropertyShape ;
+    sh:path activity:isActivityOf ;
+    sh:targetClass activity:Activity ;
+    sh:nodeKind sh:IRI ; 
+    # Not always true. E.g., in the ARM model, BinderActivity links to both 
+    # Item and Binding.
+    # sh:maxCount 1 ;
+    .   

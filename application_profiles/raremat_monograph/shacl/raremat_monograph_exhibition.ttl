@@ -14,6 +14,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 @prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_exhibition/> .
+@prefix arm_activity_property_shapes: <https://w3id.org/arm/activity/validation/shacl/arm_activity_property_shapes/> .
 @prefix arm_core_property_shapes: <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
 @prefix raremat_monograph_activity: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_activity/> .
 @prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_form/> .
@@ -45,6 +46,7 @@
     sh:group raremat_monograph_form:ItemHistoryAndProvenancePropertyGroup ;     
     sh:order "1"^^xsd:int ;   
     tosh:editWidget swa:NestedObjectEditor ;
+    .
        
 #
 # ///// EXHIBITION EVENT FORM ///// #
@@ -186,7 +188,7 @@
     
 :ExhibitionEventForm_arm_hasActivity
     a sh:PropertyShape ;  
-    sh:node arm_core_property_shapes:arm_hasActivity ;
+    sh:node arm_activity_property_shapes:activity_hasActivity ;
     # NON-VALIDATING
     sh:name "Associated agent and role" ; 
     sh:description "Agent and role associated with the exhibition." ;      
@@ -373,7 +375,7 @@
                 
 :ExhibitionForm_arm_hasActivity 
     a sh:PropertyShape ;
-    sh:node arm_core_property_shapes:activity_hasActivity ;  
+    sh:node arm_activity_property_shapes:activity_hasActivity ;  
     # NON-VALIDATING
     sh:name "Associated agent and role" ; 
     sh:description "Agent activity and role for the item in the exhibition (e.g., curator)." ;  

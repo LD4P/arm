@@ -13,7 +13,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 @prefix : <https://w3id.org/arm/application_profiles/raremat_monograph/shacl/raremat_monograph_activity/> .
-@prefix arm_core_property_shapes: <https://w3id.org/arm/validation/shacl/arm_core_property_shapes/> .
+@prefix arm_activity_property_shapes: <https://w3id.org/arm/activity/validation/shacl/arm_activity_property_shapes/> .
+@prefix arm_core_property_shapes: <https://w3id.org/arm/core/validation/shacl/arm_core_property_shapes/> .
 @prefix raremat_monograph_form: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_form> . 
 @prefix raremat_monograph_property_groups: <https://w3id.org/arm/application_profiles/shacl/raremat_monograph_property_groups/> . 
 
@@ -42,7 +43,7 @@
 # Not editable. Only for display of related resource on Activity page. 
 :ActivityForm_activity_isActivityOf 
     a sh:PropertyShape ;
-    sh:node arm_core_property_shapes:activity_isActivityOf ;
+    sh:node arm_activity_property_shapes:activity_isActivityOf ;
     # NON-VALIDATING
     sh:name "Associated resource" ;
     sh:order "10"^^xsd:int ;
@@ -52,8 +53,6 @@
     a sh:PropertyShape ;
     sh:node arm_core_property_shapes:bf_agent ;
     sh:maxCount 1 ;
-    sh:nodeKind sh:IRI ; 
-    sh:class bf:Agent ;
     # NON-VALIDATING
     sh:name "Agent" ;
     sh:description "Agent" ;
@@ -79,7 +78,6 @@
 :ActivityForm_arm_atLocation 
     a sh:PropertyShape ;
     sh:node arm_core_property_shapes:arm_atLocation ;
-    # TODO May need to fix based on email thread
     sh:class gn:Feature ;
     # NON-VALIDATING
     sh:name "Location" ;

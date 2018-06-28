@@ -59,7 +59,7 @@
     sh:group raremat_monograph_property_groups:ItemHistoryAndProvenancePropertyGroup ;
     sh:order "0"^^xsd:int ;
     tosh:editWidget swa:NestedObjectEditor ; 
-    
+    .
 
 ##### CUSTODIAL HISTORY #####
 
@@ -298,7 +298,7 @@
 # cases.
 :AccessionNumberForm_bf_identifies
     a sh:PropertyShape ;
-    sh:node custodial_history_property_shape:bf_identifies ;
+    sh:node custodial_history_property_shapes:bf_identifies ;
     # NON-VALIDATING
     sh:name "Item" ;
     sh:description "Item identified by the accession number." ;
