@@ -233,5 +233,5 @@ Note that ex is the namespace of the current model, while ex1 is the namespace o
 ===========
 - Can emulsion (bf:emulsion, bf:Emulsion) be integrated into the Materials model, or does it require different treatment?
 - Consider whether the hasAppliedMaterial predicate should actually connect the applied material to the base material rather than the object; that seems to be more semantically accurate. Could there be layers of applied materials, each applied on top of the other? That couldn’t be captured by multiple hasAppliedMaterial assertions on the resource.
-- Consider whether it would be useful to ask RDA to define a superproperty “has material” of properties “has applied material” and “has base material”.
+- Consider whether it would be useful to ask RDA to define the superproperty “has material” (and its inverse) of properties “has applied material” and “has base material,” and deprecate the ARM predicates.
 
