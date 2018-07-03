@@ -5,12 +5,30 @@
     <dcterms:modified>2017-03-15T16:23:59.852-04:00</dcterms:modified>
   </owl:Ontology>
   
-  <!-- bf:AccessionNumber still needs to be added to the official BF ontology-->  
+  <!-- 
+    This file includes all BIBFRAME Classes and Properties identified for use with the ARM ontology (and others) to catalog rare materials.
+    
+    Classes, Object properties, and Datatype properties are organized alphabetically. 
+    
+    BIBFRAME terms that were either identified as not for use, or require more deliberation are commented out at the bottom of this file.
+    
+     -->
   
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/AccessionNumber">
-    <rdfs:label>Accession Number</rdfs:label>
-    <skos:definition>Numeric, alphanumeric, or other identifying codes assigned when an art object, book, or other item enters the collection of a museum, library, or other repository. Such codes are unique within the set of codes, and specifically identify the particular item at hand. The numbers may be marked on the objects or not. (http://vocab.getty.edu/aat/300312355)</skos:definition>
-    <dcterms:modified>(Still needs to be added to the official ontology)</dcterms:modified>
+  <!-- TODO Review Object and Datatype Properties -->
+  
+  <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // CLASSES
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/AbbreviatedTitle">
+    <rdfs:label>Abbreviated title</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+    <skos:definition>Title as abbreviated for citation, indexing, and/or identification.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
   </owl:Class>
   
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Agent">
@@ -21,9 +39,275 @@
     <dcterms:modified>2016-05-13 (New subclass)</dcterms:modified>
   </owl:Class>
   
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Archival">
+    <rdfs:label>Archival controlled</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <skos:definition>Resources organically created, accumulated, and/or used by a person, family, or organization in the course of conduct of affairs and preserved because of their continuing value.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Arrangement">
+    <rdfs:label>Organization of materials information</rdfs:label>
+    <skos:definition>Information about the organization and arrangement of a collection of items. For instance, for computer files, organization and arrangement information may be the file structure and sort sequence of a file; for visual materials, this information may be how a collection is arranged.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Audio">
+    <rdfs:label>Audio</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Resources expressed in an audible form, including music or other sounds.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Cartography">
+    <rdfs:label>Cartography</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Resource that shows spatial information, including maps, atlases, globes, digital, and other cartographic resources.</skos:definition>
+    <dcterms:modified>2016-04-25 (fixed typo in definition)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Coden">
+    <rdfs:label>CODEN</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>Identifier for scientific and technical periodical titles assigned by the International CODEN Section of Chemical Abstracts Service.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Collection">
+    <rdfs:label>Collection</rdfs:label>
+    <skos:definition>Aggregation of resources, generally gathered together artificially.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/CollectiveTitle">
+    <rdfs:label>Collective title</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+    <skos:definition>Title for a compilation of resources.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/CopyrightNumber">
+    <rdfs:label>Copyright-legal deposit number</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>Identifier assigned to a copyright registration or legal deposit.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Dataset">
+    <rdfs:label>Dataset</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Data encoded in a defined structure. Includes numeric data, environmental data,etc., used by applications software to calculate averages, correlations, etc., or to produce models, etc., but not normally displayed in its raw form.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/DissertationIdentifier">
+    <rdfs:label>Dissertation Identifier</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>Identifier assigned to a thesis or dissertation for identification purposes .</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Electronic">
+    <rdfs:label>Electronic</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <skos:definition>Resource that is intended for manipulation by a computer, accessed either directly or remotely.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Event">
+    <rdfs:label>Event entity</rdfs:label>
+    <skos:definition>Something that happens at a certain time and location, such as a performance, speech, or athletic event, that is documented by a resource.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Fingerprint">
+    <rdfs:label>Fingerprint identifier</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>Identifier that is used to assist in the identification of antiquarian books by recording information comprising groups of characters taken from specified positions on specified pages of the book.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Identifier">
+    <rdfs:label>Identifier</rdfs:label>
+    <skos:definition>Token or name that is associated with a resource, such as a URI or an ISBN.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Illustration">
+    <rdfs:label>Illustrative content</rdfs:label>
+    <skos:definition>Information about content intended to illustrate a resource.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Instance">
+    <rdfs:label>Instance</rdfs:label>
+    <skos:definition>Resource reflecting an individual, material embodiment of a Work.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Isbn">
+    <rdfs:label>ISBN</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>International Standard Book Number.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Ismn">
+    <rdfs:label>ISMN</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>International Standard Music Number.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Iso">
+    <rdfs:label>ISO number</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>International Organization for Standardization standard number.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Istc">
+    <rdfs:label>ISTC</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>International Standard Text Code, a numbering system developed to enable the unique identification of textual works.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Iswc">
+    <rdfs:label>ISWC</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>International Standard Musical Work Code, a unique, persistent reference number for the identification of musical works.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Item">
     <rdfs:label>Item</rdfs:label>
     <skos:definition>Single example of an Instance.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/KeyTitle">
+    <rdfs:label>Key title</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+    <skos:definition>Unique title for a continuing resource that is assigned by the ISSN International Center in conjunction with an ISSN.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Lccn">
+    <rdfs:label>LCCN</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>Library of Congress Control Number that identifies a resource description.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Local">
+    <rdfs:label>Local identifier</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>Identifier established locally and not a standard number.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Manuscript">
+    <rdfs:label>Manuscript</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <skos:definition>Resource that is written in handwriting or typescript. These are generally unique resources.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/MovingImage">
+    <rdfs:label>Moving image</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Images intended to be perceived as moving, including motion pictures (using liveaction and/or animation), video recordings of performances, events,etc.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+    <dcterms:modified>2016-04-26 (fixed typo in definition)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/MixedMaterial">
+    <rdfs:label>Mixed material</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Resource comprised of multiple types which are not driven by software. This may include materials in two or more forms that are related by virtue of their having been accumulated by or about a person or body., archival fonds.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/MovementNotation">
+    <rdfs:label>Movement notation used</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Notation"/>
+    <skos:definition>Information on the symbol system used to convey the content of a movement resource.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Multimedia">
+    <rdfs:label>Software or multimedia</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Electronic resource that is a computer program (i.e., digitally encoded instructions intended to be processed and performed by a computer) or which consists of multiple media types that are software driven, such as videogames.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/MusicNotation">
+    <rdfs:label>Music notation used</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Notation"/>
+    <skos:definition>Information on the symbol system used to convey the content of a music resource.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Nbn">
+    <rdfs:label>NBN</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>National Bibliography Number that identifies a resource description.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/NotatedMusic">
+    <rdfs:label>Notated music</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Graphic, non-realized representations of musical works intended to be perceived visually.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/NotatedMovement">
+    <rdfs:label>Notated movement</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Graphic, non-realized representations of movement intended to be perceived visually, e.g. dance.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Notation">
+    <rdfs:label>Notation</rdfs:label>
+    <skos:definition>Information on the alphabet, script, or symbol system used to convey the content of the resource, including specialized scripts, typefaces, tactile notation, movement notation, and musical notation.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Note">
+    <rdfs:label>Note</rdfs:label>
+    <skos:definition>Information, usually in textual form, on attributes of a resource or some aspect of a resource.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Object">
+    <rdfs:label>Three-dimensional object</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Resource in a form intended to be perceived visually in three-dimensions. Includes man-made objects such as models, sculptures, clothing, and toys, as well as naturally occurring objects such as specimens mounted for viewing.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Organization">
+    <rdfs:label>Organization</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+    <skos:definition>Corporation or group of persons and/or organizations that acts, or may act, as a unit.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/ParallelTitle">
+    <rdfs:label>Parallel title proper</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
+    <skos:definition>Title in another language and/or script.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Person">
+    <rdfs:label>Person</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <skos:definition>Individual or identity established by an individual (either alone or in collaboration with one or more other individuals).</skos:definition>
     <dcterms:modified>2016-04-21 (New)</dcterms:modified>
   </owl:Class>
   
@@ -32,6 +316,109 @@
     <skos:definition>Geographic location.</skos:definition>
     <dcterms:modified>2016-04-21 (New)</dcterms:modified>
   </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/PublisherNumber">
+    <rdfs:label>Other publisher number</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>Number assigned by a publisher that is not one of the specific defined types.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Print">
+    <rdfs:label>Printed</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <skos:definition>Resource that is printed.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/ReportNumber">
+    <rdfs:label>Technical report number</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>Identification number of a technical report that is not a Standard Technical Report Number.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Script">
+    <rdfs:label>Script used</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Notation"/>
+    <skos:definition>Information on the script, or symbol system used to convey the content of a text resource.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/ShelfMark">
+    <rdfs:label>Shelf location</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>Piece/item identifier, such as a call or other type of number.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Status">
+    <rdfs:label>Status</rdfs:label>
+    <skos:definition>Designation of the validity or position of something, e.g., whether something is incorrect or available.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/StillImage">
+    <rdfs:label>Still image</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Resource expressed through line, shape, shading, etc., intended to be perceived visually as a still image or images in two dimensions. Includes two-dimensional images and slides and transparencies.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Strn">
+    <rdfs:label>STRN</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>Standard Technical Report Number.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Tactile">
+    <rdfs:label>Tactile material</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
+    <skos:definition>Resource that is intended to be perceived by touch.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/TactileNotation">
+    <rdfs:label>Tactile notation used</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Notation"/>
+    <skos:definition>Information on the symbol system used to convey the content of a tactile resource.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Temporal">
+    <rdfs:label>Temporal concept</rdfs:label>
+    <skos:definition>Chronological period.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Text">
+    <rdfs:label>Text</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
+    <skos:definition>Resource intended to be perceived visually and understood through the use of language in written or spoken form.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Title">
+    <rdfs:label>Title entity</rdfs:label>
+    <skos:definition>Title information relating to a resource: work title, preferred title, instance title, transcribed title, translated title, variant form of title, etc.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+    <dcterms:modified>2017-02-03 (Definition changed)</dcterms:modified>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Work">
+    <rdfs:label>Work</rdfs:label>
+    <skos:definition>Resource reflecting a conceptual essence of a cataloging resource.</skos:definition>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:Class>
+  
+  <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // OBJECT PROPERTIES
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
   
   <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/agent">
     <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
@@ -58,6 +445,23 @@
     <owl:inverseOf rdf:resource="http://id.loc.gov/ontologies/bibframe/partOf"/>
     <dcterms:modified>2016-04-21 (New)</dcterms:modified>
     <dcterms:modified>2016-04-29 (added inverse)</dcterms:modified>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/identifiedBy">
+    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <skos:definition>Character string associated with a resource that serves to differentiate that resource from other resources, i.e., that uniquely identifies an entity.</skos:definition>
+    <rdfs:comment>Used with Unspecified</rdfs:comment>
+    <rdfs:label>Identifier</rdfs:label>
+    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/identifies">
+    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <skos:definition>Resource that is associated with a character string that serves to differentiate one resource from another.</skos:definition>
+    <rdfs:label>Resouce identified</rdfs:label>
+    <owl:inverseOf rdf:resource="http://id.loc.gov/ontologies/bibframe/identifiedBy"/>
+    <dcterms:modified>2017-02-03 (New inverse)</dcterms:modified>
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/note">
@@ -95,6 +499,14 @@
     <dcterms:modified>2016-04-21 (New)</dcterms:modified>
   </owl:ObjectProperty>
   
+  <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // DATATYPE PROPERTIES
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+  
   <owl:DatatypeProperty rdf:about="http://id.loc.gov/ontologies/bibframe/date">
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <skos:definition>Date designation associated with a resource or element of description, such as date of title variation; year a degree was awarded; date associated with the publication, printing, distribution, issue, release or production of a resource. May be date typed.</skos:definition>
@@ -104,133 +516,7 @@
   </owl:DatatypeProperty>
   
   <!-- 
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Work">
-    <rdfs:label>Work</rdfs:label>
-    <skos:definition>Resource reflecting a conceptual essence of a cataloging resource.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Instance">
-    <rdfs:label>Instance</rdfs:label>
-    <skos:definition>Resource reflecting an individual, material embodiment of a Work.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Item">
-    <rdfs:label>Item</rdfs:label>
-    <skos:definition>Single example of an Instance.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Text">
-    <rdfs:label>Text</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
-    <skos:definition>Resource intended to be perceived visually and understood through the use of language in written or spoken form.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Cartography">
-    <rdfs:label>Cartography</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
-    <skos:definition>Resource that shows spatial information, including maps, atlases, globes, digital, and other cartographic resources.</skos:definition>
-    <dcterms:modified>2016-04-25 (fixed typo in definition)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Audio">
-    <rdfs:label>Audio</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
-    <skos:definition>Resources expressed in an audible form, including music or other sounds.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/NotatedMusic">
-    <rdfs:label>Notated music</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
-    <skos:definition>Graphic, non-realized representations of musical works intended to be perceived visually.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/NotatedMovement">
-    <rdfs:label>Notated movement</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
-    <skos:definition>Graphic, non-realized representations of movement intended to be perceived visually, e.g. dance.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Dataset">
-    <rdfs:label>Dataset</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
-    <skos:definition>Data encoded in a defined structure. Includes numeric data, environmental data,etc., used by applications software to calculate averages, correlations, etc., or to produce models, etc., but not normally displayed in its raw form.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/StillImage">
-    <rdfs:label>Still image</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
-    <skos:definition>Resource expressed through line, shape, shading, etc., intended to be perceived visually as a still image or images in two dimensions. Includes two-dimensional images and slides and transparencies.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/MovingImage">
-    <rdfs:label>Moving image</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
-    <skos:definition>Images intended to be perceived as moving, including motion pictures (using liveaction and/or animation), video recordings of performances, events,etc.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-    <dcterms:modified>2016-04-26 (fixed typo in definition)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Object">
-    <rdfs:label>Three-dimensional object</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
-    <skos:definition>Resource in a form intended to be perceived visually in three-dimensions. Includes man-made objects such as models, sculptures, clothing, and toys, as well as naturally occurring objects such as specimens mounted for viewing.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Multimedia">
-    <rdfs:label>Software or multimedia</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
-    <skos:definition>Electronic resource that is a computer program (i.e., digitally encoded instructions intended to be processed and performed by a computer) or which consists of multiple media types that are software driven, such as videogames.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/MixedMaterial">
-    <rdfs:label>Mixed material</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Work"/>
-    <skos:definition>Resource comprised of multiple types which are not driven by software. This may include materials in two or more forms that are related by virtue of their having been accumulated by or about a person or body., archival fonds.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Print">
-    <rdfs:label>Printed</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
-    <skos:definition>Resource that is printed.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Manuscript">
-    <rdfs:label>Manuscript</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
-    <skos:definition>Resource that is written in handwriting or typescript. These are generally unique resources.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Archival">
-    <rdfs:label>Archival controlled</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
-    <skos:definition>Resources organically created, accumulated, and/or used by a person, family, or organization in the course of conduct of affairs and preserved because of their continuing value.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Tactile">
-    <rdfs:label>Tactile material</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
-    <skos:definition>Resource that is intended to be perceived by touch.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Collection">
-    <rdfs:label>Collection</rdfs:label>
-    <skos:definition>Aggregation of resources, generally gathered together artificially.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Electronic">
-    <rdfs:label>Electronic</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Instance"/>
-    <skos:definition>Resource that is intended for manipulation by a computer, accessed either directly or remotely.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Note">
-    <rdfs:label>Note</rdfs:label>
-    <skos:definition>Information, usually in textual form, on attributes of a resource or some aspect of a resource.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Identifier">
-    <rdfs:label>Identifier</rdfs:label>
-    <skos:definition>Token or name that is associated with a resource, such as a URI or an ISBN.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
+
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Unit">
     <rdfs:label>Unit</rdfs:label>
     <skos:definition>Units in which a value is expressed.</skos:definition>
@@ -246,36 +532,14 @@
     <skos:definition>Resource from which value or label came or was derived.</skos:definition>
     <dcterms:modified>2016-04-21 (New)</dcterms:modified>
   </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Status">
-    <rdfs:label>Status</rdfs:label>
-    <skos:definition>Designation of the validity or position of something, e.g., whether something is incorrect or available.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Agent">
-    <rdfs:label>Agent</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-    <skos:definition>Entity having a role in a resource, such as a person or organization.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-    <dcterms:modified>2016-05-13 (New subclass)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Person">
-    <rdfs:label>Person</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <skos:definition>Individual or identity established by an individual (either alone or in collaboration with one or more other individuals).</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
+
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Family">
     <rdfs:label>Family</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
     <skos:definition>Two or more persons related by birth, marriage, adoption, civil union, or similar legal status, or who otherwise present themselves as a family.</skos:definition>
     <dcterms:modified>2016-04-21 (New)</dcterms:modified>
   </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Organization">
-    <rdfs:label>Organization</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
-    <skos:definition>Corporation or group of persons and/or organizations that acts, or may act, as a unit.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
+
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Jurisdiction">
     <rdfs:label>Jurisdiction</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
@@ -291,21 +555,6 @@
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Topic">
     <rdfs:label>Topic</rdfs:label>
     <skos:definition>Concept or area of knowledge.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Temporal">
-    <rdfs:label>Temporal concept</rdfs:label>
-    <skos:definition>Chronological period.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Place">
-    <rdfs:label>Place</rdfs:label>
-    <skos:definition>Geographic location.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Event">
-    <rdfs:label>Event entity</rdfs:label>
-    <skos:definition>Something that happens at a certain time and location, such as a performance, speech, or athletic event, that is documented by a resource.</skos:definition>
     <dcterms:modified>2016-04-21 (New)</dcterms:modified>
   </owl:Class>
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Contribution">
@@ -333,42 +582,13 @@
     <skos:definition>Characteristics of works with similar plots, themes, settings, etc. (e.g., westerns, thrillers), or with a particular format of purpose (e.g., animation, short), or a combination (e.g., horror film where horror is the genre and film is the form).</skos:definition>
     <dcterms:modified>2016-04-21 (New)</dcterms:modified>
   </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Title">
-    <rdfs:label>Title entity</rdfs:label>
-    <skos:definition>Title information relating to a resource: work title, preferred title, instance title, transcribed title, translated title, variant form of title, etc.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-    <dcterms:modified>2017-02-03 (Definition changed)</dcterms:modified>
-  </owl:Class>
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/VariantTitle">
     <rdfs:label>Title variation</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
     <skos:definition>Title associated with the resource that is different from the Work or Instance title.</skos:definition>
     <dcterms:modified>2016-04-21 (New)</dcterms:modified>
   </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/KeyTitle">
-    <rdfs:label>Key title</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
-    <skos:definition>Unique title for a continuing resource that is assigned by the ISSN International Center in conjunction with an ISSN.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/AbbreviatedTitle">
-    <rdfs:label>Abbreviated title</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
-    <skos:definition>Title as abbreviated for citation, indexing, and/or identification.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/ParallelTitle">
-    <rdfs:label>Parallel title proper</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
-    <skos:definition>Title in another language and/or script.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/CollectiveTitle">
-    <rdfs:label>Collective title</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/VariantTitle"/>
-    <skos:definition>Title for a compilation of resources.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
+
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Language">
     <rdfs:label>Language entity</rdfs:label>
     <skos:definition>Language entity.</skos:definition>
@@ -404,11 +624,7 @@
     <skos:definition>Information that identifies the specific intended or target audience or intellectual level for which the content described is considered appropriate. Also used to record interest and motivation levels and special learner characteristics.</skos:definition>
     <dcterms:modified>2016-04-21 (New)</dcterms:modified>
   </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Arrangement">
-    <rdfs:label>Organization of materials information</rdfs:label>
-    <skos:definition>Information about the organization and arrangement of a collection of items. For instance, for computer files, organization and arrangement information may be the file structure and sort sequence of a file; for visual materials, this information may be how a collection is arranged.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
+
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Dissertation">
     <rdfs:label>Dissertation information</rdfs:label>
     <skos:definition>Information about a work presented as part of the formal requirements for an academic degree.</skos:definition>
@@ -424,45 +640,13 @@
     <skos:definition>Information about place and date associated with the capture (i.e., recording, filming, etc.) of the content of a resource.</skos:definition>
     <dcterms:modified>2016-04-21 (New)</dcterms:modified>
   </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Notation">
-    <rdfs:label>Notation</rdfs:label>
-    <skos:definition>Information on the alphabet, script, or symbol system used to convey the content of the resource, including specialized scripts, typefaces, tactile notation, movement notation, and musical notation.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
+
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/ContentAccessibility">
     <rdfs:label>Content accessibility information</rdfs:label>
     <skos:definition>Information that assists those with a sensory impairment for greater understanding of content, e.g., captions.</skos:definition>
     <dcterms:modified>2017-02-07 (New)</dcterms:modified>
   </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Script">
-    <rdfs:label>Script used</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Notation"/>
-    <skos:definition>Information on the script, or symbol system used to convey the content of a text resource.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/MusicNotation">
-    <rdfs:label>Music notation used</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Notation"/>
-    <skos:definition>Information on the symbol system used to convey the content of a music resource.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/TactileNotation">
-    <rdfs:label>Tactile notation used</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Notation"/>
-    <skos:definition>Information on the symbol system used to convey the content of a tactile resource.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/MovementNotation">
-    <rdfs:label>Movement notation used</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Notation"/>
-    <skos:definition>Information on the symbol system used to convey the content of a movement resource.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Illustration">
-    <rdfs:label>Illustrative content</rdfs:label>
-    <skos:definition>Information about content intended to illustrate a resource.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
+
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/SupplementaryContent">
     <rdfs:label>Supplementary material</rdfs:label>
     <skos:definition>Index, bibliography, appendix, etc. intended to supplement the primary content of a resource.</skos:definition>
@@ -832,12 +1016,7 @@
     <skos:definition>Specific place within the holding entity where the item is located or made available.</skos:definition>
     <dcterms:modified>2016-04-21 (New)</dcterms:modified>
   </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/ShelfMark">
-    <rdfs:label>Shelf location</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
-    <skos:definition>Piece/item identifier, such as a call or other type of number.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
+
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/ShelfMarkDdc">
     <rdfs:label>DDC call number</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/ShelfMark"/>
@@ -916,24 +1095,9 @@
     <dcterms:modified>2016-04-21 (New)</dcterms:modified>
     <dcterms:modified>2017-02-03 (Moved to Identifier class group from Item group)</dcterms:modified>
   </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Coden">
-    <rdfs:label>CODEN</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
-    <skos:definition>Identifier for scientific and technical periodical titles assigned by the International CODEN Section of Chemical Abstracts Service.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/CopyrightNumber">
-    <rdfs:label>Copyright-legal deposit number</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
-    <skos:definition>Identifier assigned to a copyright registration or legal deposit.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/DissertationIdentifier">
-    <rdfs:label>Dissertation Identifier</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
-    <skos:definition>Identifier assigned to a thesis or dissertation for identification purposes .</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
+
+
+
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Doi">
     <rdfs:label>DOI</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
@@ -946,12 +1110,7 @@
     <skos:definition>International Article Identifier.</skos:definition>
     <dcterms:modified>2016-04-21 (New)</dcterms:modified>
   </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Fingerprint">
-    <rdfs:label>Fingerprint identifier</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
-    <skos:definition>Identifier that is used to assist in the identification of antiquarian books by recording information comprising groups of characters taken from specified positions on specified pages of the book.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
+
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Gtin14Number">
     <rdfs:label>Global Trade Item Number 14</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
@@ -970,30 +1129,15 @@
     <skos:definition>International Standard Audiovisual Number.</skos:definition>
     <dcterms:modified>2016-04-21 (New)</dcterms:modified>
   </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Isbn">
-    <rdfs:label>ISBN</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
-    <skos:definition>International Standard Book Number.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Ismn">
-    <rdfs:label>ISMN</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
-    <skos:definition>International Standard Music Number.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
+
+
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Isni">
     <rdfs:label>ISNI</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
     <skos:definition>International Standard Name Identifier, a unique, persistent reference number for the identities of contributors to creative works.</skos:definition>
     <dcterms:modified>2017-02-03 (New)</dcterms:modified>
   </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Iso">
-    <rdfs:label>ISO number</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
-    <skos:definition>International Organization for Standardization standard number.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
+
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Isrc">
     <rdfs:label>ISRC</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
@@ -1012,36 +1156,16 @@
     <skos:definition>International Standard Serial Number that links together various media versions of a continuing resource.</skos:definition>
     <dcterms:modified>2016-04-21 (New)</dcterms:modified>
   </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Istc">
-    <rdfs:label>ISTC</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
-    <skos:definition>International Standard Text Code, a numbering system developed to enable the unique identification of textual works.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Iswc">
-    <rdfs:label>ISWC</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
-    <skos:definition>International Standard Musical Work Code, a unique, persistent reference number for the identification of musical works.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
+
+
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/LcOverseasAcq">
     <rdfs:label>LC acquisition program</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
     <skos:definition>Identification number assigned by the Library of Congress to works acquired through one of its collaborative overseas acquisition programs.</skos:definition>
     <dcterms:modified>2016-04-21 (New)</dcterms:modified>
   </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Lccn">
-    <rdfs:label>LCCN</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
-    <skos:definition>Library of Congress Control Number that identifies a resource description.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Local">
-    <rdfs:label>Local identifier</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
-    <skos:definition>Identifier established locally and not a standard number.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
+
+
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/MatrixNumber">
     <rdfs:label>Audio matrix number</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
@@ -1069,30 +1193,15 @@
     <dcterms:modified>2016-04-21 (New)</dcterms:modified>
     <dcterms:modified>2017-02-03 (Revised definition)</dcterms:modified>
   </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Nbn">
-    <rdfs:label>NBN</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
-    <skos:definition>National Bibliography Number that identifies a resource description.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
+
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/PostalRegistration">
     <rdfs:label>Postal registration number</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
     <skos:definition>Number assigned to a publication for which the specified postal service permits the use of a special mailing class privilege.</skos:definition>
     <dcterms:modified>2016-04-21 (New)</dcterms:modified>
   </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/PublisherNumber">
-    <rdfs:label>Other publisher number</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
-    <skos:definition>Number assigned by a publisher that is not one of the specific defined types.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/ReportNumber">
-    <rdfs:label>Technical report number</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
-    <skos:definition>Identification number of a technical report that is not a Standard Technical Report Number.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
+
+
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Sici">
     <rdfs:label>SICI</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
@@ -1105,12 +1214,7 @@
     <skos:definition>Identification number used for stock purposes and assigned by agencies such as distributors, publishers, or vendors.</skos:definition>
     <dcterms:modified>2016-04-21 (New)</dcterms:modified>
   </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Strn">
-    <rdfs:label>STRN</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
-    <skos:definition>Standard Technical Report Number.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:Class>
+
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/StudyNumber">
     <rdfs:label>Study number</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
@@ -1162,21 +1266,7 @@
     <dcterms:modified>2016-04-21 (New)</dcterms:modified>
     <dcterms:modified>2016-04-29 (fixed class name)</dcterms:modified>
   </owl:Class>
-  <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/identifiedBy">
-    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
-    <skos:definition>Character string associated with a resource that serves to differentiate that resource from other resources, i.e., that uniquely identifies an entity.</skos:definition>
-    <rdfs:comment>Used with Unspecified</rdfs:comment>
-    <rdfs:label>Identifier</rdfs:label>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/identifies">
-    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Identifier"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-    <skos:definition>Resource that is associated with a character string that serves to differentiate one resource from another.</skos:definition>
-    <rdfs:label>Resouce identified</rdfs:label>
-    <owl:inverseOf rdf:resource="http://id.loc.gov/ontologies/bibframe/identifiedBy"/>
-    <dcterms:modified>2017-02-03 (New inverse)</dcterms:modified>
-  </owl:ObjectProperty>
+
   <owl:DatatypeProperty rdf:about="http://id.loc.gov/ontologies/bibframe/qualifier">
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <skos:definition>Qualifier of information, such as an addition to a title to make it unique or qualifying information associated with an identifier.</skos:definition>

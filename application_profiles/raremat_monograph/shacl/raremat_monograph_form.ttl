@@ -2525,7 +2525,7 @@ raremat_monograph_form:WorkTitleForm_arm_hasSource
     
 raremat_monograph_form:WorkTitleForm_bf_status 
     a sh:PropertyShape ;
-    sh:path bf:Status ;
+    sh:path bf:status ;
     sh:in ( <https://w3id.org/arm/core/vocabularies/status/0.1/cancelled> <https://w3id.org/arm/core/vocabularies/status/0.1/current> <https://w3id.org/arm/core/vocabularies/status/0.1/deprecated> <https://w3id.org/arm/core/vocabularies/status/0.1/invalid> ) ;
     sh:description "The place from which this title originates, such as spine, cover, container, etc." ;
     sh:order "7"^^xsd:int ;
