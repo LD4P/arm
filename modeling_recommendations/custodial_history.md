@@ -128,19 +128,19 @@ This sample describes a scenario in which one item has been sold twice, with an 
 :history2 a ch:CustodialHistory ;
     bf:hasPart :individualEvent4 .
 
-:individualEvent1 a ch:SaleEvent ; 
+:individualEvent1 a ch:Sale ; 
     seq:precedes :individualEvent2 ;
     bf:partOf :aggregateEvent1 .
 
 :individualEvent2 a ch:OwnershipEvent ; 
     seq:precedes :individualEvent3 .
     
-:individualEvent3 a ch:SaleEvent .
+:individualEvent3 a ch:Sale .
 
 :individualEvent4 a ch:CustodialEvent ;
     bf:partOf :aggregateEvent1 .
 
-:aggregateEvent1 a ch:SaleEvent ;
+:aggregateEvent1 a ch:Sale ;
     activity:hasActivity :sellerActivity1 ;
     bf:date “1984”^^edtf:edtf ;
     arm:atLocation <uri-of-location> ;
@@ -334,7 +334,7 @@ Some of these classes are also defined as subclasses of schema:Event. “Static�
 > - **URI**: https://w3id.org/arm/custodial_history/ontology/Sale
 > - **Definition**: The exchange of a resource for money or other object of value.
 > - **Comment**: Typical associated Activities: BuyerActivity, SellerActivity, DealerActivity.
-> - **SubclassOf**: ch:CustodialEvent, bf:SaleEvent.
+> - **SubclassOf**: ch:CustodialEvent, schema:SaleEvent.
 
 **ch:Theft**
 > - **Label**: Theft
