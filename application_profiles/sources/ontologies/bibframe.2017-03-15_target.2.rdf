@@ -5,14 +5,6 @@
     <dcterms:modified>2017-03-15T16:23:59.852-04:00</dcterms:modified>
   </owl:Ontology>
   
-  <!-- bf:AccessionNumber still needs to be added to the official BF ontology-->  
-  
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/AccessionNumber">
-    <rdfs:label>Accession Number</rdfs:label>
-    <skos:definition>Numeric, alphanumeric, or other identifying codes assigned when an art object, book, or other item enters the collection of a museum, library, or other repository. Such codes are unique within the set of codes, and specifically identify the particular item at hand. The numbers may be marked on the objects or not. (http://vocab.getty.edu/aat/300312355)</skos:definition>
-    <dcterms:modified>(Still needs to be added to the official ontology)</dcterms:modified>
-  </owl:Class>
-  
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Agent">
     <rdfs:label>Agent</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
