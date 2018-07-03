@@ -6,6 +6,17 @@
   </owl:Ontology>
   
   <!-- 
+    This file includes all BIBFRAME Classes and Properties identified for use with the ARM ontology (and others) to catalog rare materials.
+    
+    Classes, Object properties, and Datatype properties are organized alphabetically. 
+    
+    BIBFRAME terms that were either identified as not for use, or require more deliberation are commented out at the bottom of this file.
+    
+     -->
+  
+  <!-- TODO Review Object and Datatype Properties -->
+  
+  <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // CLASSES
