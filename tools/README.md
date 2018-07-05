@@ -10,21 +10,22 @@ The set of RDF ontology and vocabulary files to be processed is hard-coded into 
 
 For each RDF ontology or vocabulary file, the script performs the following set of steps:
 
-  1. Reads the RDF/XML file for the ontology or vocabulary and makes two substitutions (based on simple string matches so potentially fragile):
-    * `skos:definition` -> `rdfs:comment` - because the LODE script does not look for `skos:definition`.
-    * `void:Dataset` -> `owl:Ontology` - because the LODE script is designed only to work with OWL ontologies and will ignore the `void:Dataset` descriptions used with the ARM vocabularies.
-  2. Extracts the namespace using either:
-    * the `owl:versionIRI` property for the ontologies, or
-    * the subject of the `owl:Ontology` type definition (was `void:Dataset` before substitution above) for the vocabularies.
-  3. Sends the modified RDF/XML to the LODE service and receives and HTML datastream in return.
-  4. Makes the following modifications:
-    * The internal anchors are modified to use the property and class names so that property and class URIs can be made to resolve with after the redirect from the namespace URI changes them from a path element to a fragment id. For example, <https://w3id.org/arm/core/ontology/0.1/Attribution> becomes <https://ld4p.github.io/arm/core/ontology/0.1/core.html#Attribution> after redirect, which relies upon the internal anchor `#Attribution`.
-    * Changes the anchor text "Ontology source" to "Vocabulary source" for vocabularies.
-    * Make a kludge to change the presentation of IRI and versionIRI which aren't in our `void:Dataset` description for the vocabularies. Takes the URI that LODE outputs as the IRI, strips version suffix for IRI, puts full URI in the versionURI field instead.
-    * Fixes link target for source to use canonical URI.
-    * Changes absolute URIs to LODE website for CSS, favicon, JavaScript to instead point to local copies in `/css/` and `/js/`.
-  5. Saves the modified HTML to a file with the same path and name as the RDF/XML input except with extension changed from `.rdf` to `.html` (e.g. processing `award/ontology/0.1/award.rdf` writes `award/ontology/0.1/award.html`).
-  6. Before committing updates it is useful to use `git diff` to see whether the changes make sense. 
+1. Reads the RDF/XML file for the ontology or vocabulary and makes two substitutions (based on simple string matches so potentially fragile):
+  * `skos:definition` -> `rdfs:comment` - because the LODE script does not look for `skos:definition`.
+  * `void:Dataset` -> `owl:Ontology` - because the LODE script is designed only to work with OWL ontologies and will ignore the `void:Dataset` descriptions used with the ARM vocabularies.
+2. Extracts the namespace from either:
+  * the `owl:versionIRI` property for the ontologies, or
+  * the subject of the `owl:Ontology` type definition (was `void:Dataset` before substitution above) for the vocabularies.
+3. Sends the modified RDF/XML to the LODE service and receives an HTML datastream in return.
+4. Makes the following modifications:
+  * The internal anchors are modified to use the property and class names so that property and class URIs can be made to resolve correctly after the redirect from the namespace URI changes them from a path element to a fragment id. For example, <https://w3id.org/arm/core/ontology/0.1/Attribution> becomes <https://ld4p.github.io/arm/core/ontology/0.1/core.html#Attribution> after redirect, which relies upon the internal anchor `#Attribution`.
+  * Changes the anchor text "Ontology source" to "Vocabulary source" for vocabularies.
+  * Make changes to present IRI and versionIRI which aren't in our `void:Dataset` description for the vocabularies. Takes the URI that LODE outputs as the IRI, strips version suffix for IRI, puts full URI in the versionURI field instead.
+  * Fixes link target for source to use canonical URI.
+  * Changes absolute URIs to LODE website for CSS, favicon, JavaScript to instead point to local copies in `/css/` and `/js/`.
+5. Saves the modified HTML to a file with the same path and name as the RDF/XML input except with extension changed from `.rdf` to `.html` (e.g. processing `award/ontology/0.1/award.rdf` writes `award/ontology/0.1/award.html`).
+
+Before committing updates it is useful to use `git diff` to see whether the changes make sense.
 
 ### Running
 
