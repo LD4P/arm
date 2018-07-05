@@ -131,6 +131,35 @@
         <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/abstractedIn.en" />
     </rdf:Description>
     
+    <!-- Property: is reprint of -->
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60168">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+        <reg:name xml:lang="en">reprintOf</reg:name>
+        <rdfs:label xml:lang="en">is reprint of</rdfs:label>
+        <skos:definition xml:lang="en">Relates a resource to a resource that reissues the same resource as a printed resource being described.</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60297" />
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60271" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40038" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30093" />
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/reprintOf.en" />
+    </rdf:Description>
+    
+    <!-- Property: is abstracted in -->
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60177">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+        <reg:name xml:lang="en">abstractedIn</reg:name>
+        <rdfs:label xml:lang="en">is abstracted in</rdfs:label>
+        <skos:definition xml:lang="en">Relates a resource to a resource that is an abstracting and indexing service that abstracts the contents of a source entity.</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60250" />
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60308" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20090" />
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/abstractedIn.en" />
+    </rdf:Description>
+    
     <!-- Property: is indexed in -->
     <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60178">
         <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
@@ -157,6 +186,20 @@
         <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60293" />
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20092" />
         <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/adaptedAsChoreography.en" />
+    </rdf:Description>
+    
+    <!-- Property: is illustrations -->
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60182">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+        <reg:name xml:lang="en">illustrations</reg:name>
+        <rdfs:label xml:lang="en">is illustrations</rdfs:label>
+        <skos:definition xml:lang="en">Relates a resource to a resource consisting of pictorial content designed to explain or decorate an augmented resource.</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60204" />
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60254" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20094" />
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/illustrations.en" />
     </rdf:Description>
     
     <!-- Property: is adapted as screenplay -->
@@ -202,6 +245,28 @@
         <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60243" />
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20119" />
         <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/freelyTranslatedAs.en" />
+    </rdf:Description>
+    
+    <!-- Property: is complemented by -->
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60198">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+        <reg:name xml:lang="en">complementedBy</reg:name>
+        <rdfs:label xml:lang="en">is complemented by</rdfs:label>
+        <skos:definition xml:lang="en">Relates a resource to a resource paired with another resource without either resource being considered to predominate.</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60709" />
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60198" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60117" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60201" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60264" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60267" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60270" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60285" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20100" />
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/complementedBy.en" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60740" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60741" />
     </rdf:Description>
     
     <!-- Property: is continued in part by -->
@@ -574,6 +639,20 @@
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60833" />
     </rdf:Description> 
     
+    <!-- Property: is illustrations for -->
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60254">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+        <reg:name xml:lang="en">illustrationsFor</reg:name>
+        <rdfs:label xml:lang="en">is illustrations for</rdfs:label>
+        <skos:definition xml:lang="en">Relates a resource to a resource that is augmented by pictorial content designed to explain or decorate it.</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60307" />
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60182" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20148" />
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/illustrationsFor.en" />
+    </rdf:Description>
+    
     <!-- Property: is adapted as -->
     <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60260">
         <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
@@ -626,6 +705,40 @@
         <rdfs:label xml:lang="da">er forudgået af</rdfs:label>
         <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/forudgåetAf.da" />
         <skos:definition xml:lang="da">Relaterer en ressource til en ressource, der går forud for den efterfølgende ressource, fx på et tidligere tidspunkt eller før noget i en fortælling.</skos:definition>
+    </rdf:Description>
+    
+    <!-- Property: is reprinted as -->
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60271">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+        <reg:name xml:lang="en">reprintedAs</reg:name>
+        <rdfs:label xml:lang="en">is reprinted as</rdfs:label>
+        <skos:definition xml:lang="en">Relates a resource to a resource that reissues the same resource as a printed resource being described.</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60272" />
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60168" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40060" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30038" />
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/reprintedAs.en" />
+    </rdf:Description>
+    
+    <!-- Property: is reproduced as -->
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60272">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+        <reg:name xml:lang="en">reproducedAs</reg:name>
+        <rdfs:label xml:lang="en">is reproduced as</rdfs:label>
+        <skos:definition xml:lang="en">Relates a resource to a resource that reproduces another resource.</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60191" />
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60297" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60083" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60200" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60217" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60271" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40055" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30039" />
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/reproducedAs.en" />
     </rdf:Description>
     
     <!-- Property: is abridged as -->
@@ -780,6 +893,26 @@
         <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/paraphraseOf.en" />
     </rdf:Description>
     
+    <!-- Property: is reproduction of -->
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60297">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+        <reg:name xml:lang="en">reproductionOf</reg:name>
+        <rdfs:label xml:lang="en">is reproduction of</rdfs:label>
+        <skos:definition xml:lang="en">Relates a resource to a resource that is used as a basis for a reproduction.</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60191" />
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60272" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60168" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60287" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60301" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60469" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/i/P40042" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/m/P30043" />
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/reproductionOf.en" />
+    </rdf:Description>
+    
+    
     <!-- Property: is revision of -->
     <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60303">
         <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
@@ -842,6 +975,31 @@
         <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20191" />
         <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/continuedBy.en" />
         <skos:scopeNote xml:lang="en">This relationship applies generally to serials.</skos:scopeNote>
+    </rdf:Description>
+    
+    <!-- Property: is augmentation of -->
+    <rdf:Description rdf:about="http://rdaregistry.info/Elements/u/P60307">
+        <rdfs:isDefinedBy rdf:resource="http://rdaregistry.info/Elements/u/" />
+        <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1001" />
+        <reg:name xml:lang="en">augmentationOf</reg:name>
+        <rdfs:label xml:lang="en">is augmentation of</rdfs:label>
+        <skos:definition xml:lang="en">Relates a resource to a resource whose content is added to by another resource.</skos:definition>
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+        <rdfs:subPropertyOf rdf:resource="http://rdaregistry.info/Elements/u/P60709" />
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60204" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60116" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60251" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60252" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60253" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60254" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60259" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60286" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60290" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60291" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60302" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/u/P60474" />
+        <reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20192" />
+        <reg:lexicalAlias rdf:resource="http://rdaregistry.info/Elements/u/augmentationOf.en" />
     </rdf:Description>
     
     <!-- Property: is abstracts for -->
