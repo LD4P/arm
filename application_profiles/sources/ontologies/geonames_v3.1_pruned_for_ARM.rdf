@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF 
+         xml:base="http://www.geonames.org/ontology"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:cc="http://creativecommons.org/ns#"
+         xmlns:gn="http://www.geonames.org/ontology#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:dcterms="http://purl.org/dc/terms/"
+         xmlns:vann="http://purl.org/vocab/vann/"
+         xmlns:mrel="http://id.loc.gov/vocabulary/relators/"
+         xmlns:adms="http://www.w3.org/ns/adms#">
+
+<!-- Ontology Information -->  
+      <owl:Ontology rdf:about="http://www.geonames.org/ontology">
+      <dcterms:title xml:lang="en">The Geonames ontology</dcterms:title>
+      <dcterms:description xml:lang="en">The Geonames ontologies provides elements of description for geographical features, in particular those defined in the geonames.org data base</dcterms:description>
+      <adms:relatedDocumentation rdf:resource="http://www.geonames.org/ontology/documentation.html"/>
+      <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+      <dcterms:creator>
+            <foaf:Person rdf:about="http://data.semanticweb.org/person/bernard-vatant">
+                  <foaf:name>Bernard Vatant</foaf:name>
+                  <foaf:page rdf:resource="http://blog.hubjects.com"/>
+                  <foaf:workplaceHomepage  rdf:resource="http://www.mondeca.com"/>
+            </foaf:Person>
+      </dcterms:creator>
+      <dcterms:contributor>Erik Bolstad (norwegian and swedish translations)</dcterms:contributor>
+      <dcterms:contributor>Valery Hronusov (russian translation)</dcterms:contributor>
+      <dcterms:contributor>Roman Rachkov (bulgarian translation)</dcterms:contributor>
+      <dcterms:publisher>
+            <foaf:Organization rdf:about="http://dbpedia.org/resource/GeoNames">
+                  <foaf:name>GeoNames</foaf:name>
+                  <foaf:homepage rdf:resource="http://www.geonames.org"/>
+                  <mrel:dtm>
+                        <foaf:Person rdf:about="#Marc-Wick">
+                              <foaf:name>Marc Wick</foaf:name>
+                        </foaf:Person>
+                  </mrel:dtm>
+            </foaf:Organization>
+      </dcterms:publisher>
+      <rdfs:comment xml:lang="en">Modifications from version 3.01 :
+            Added : gn:GeonamesFeature, subclass of gn:Feature.
+            Added : explicit property gn:geonamesID, mandatory and unique for each gn:GeonamesFeature instance.
+            Deleted : owl:FunctionalProperty declarations for properties attached to gn:Feature, replaced by local cardinality restrictions on gn:GeonamesFeature
+            The gn:Feature class and attached properties can therefore be used in the open world for features not necessarily identified in the Geonames data base, or with partial descriptions.
+            Modified : Equivalent classes and superclasses of geonames:Feature in other vocabularies.
+            Added : new feature codes for historical features.
+            Improved metadata.
+      </rdfs:comment>
+      <rdfs:isDefinedBy rdf:resource="http://www.geonames.org/ontology/ontology_v3.1.rdf"/>
+      <owl:priorVersion rdf:resource="http://www.geonames.org/ontology/ontology_v3.0.1.rdf"/>
+      <owl:versionInfo xml:lang="en">Version 3.1 - 2012-10-29</owl:versionInfo>
+      <foaf:homepage rdf:resource="http://www.geonames.org/ontology/documentation.html"/>
+      <dcterms:issued>2006-10-14</dcterms:issued>
+      <dcterms:modified>2012-10-29</dcterms:modified>
+  <vann:preferredNamespacePrefix>gn</vann:preferredNamespacePrefix>
+  <vann:preferredNamespaceUri>http://www.geonames.org/ontology#</vann:preferredNamespaceUri>
+  </owl:Ontology>
+
+  <owl:Class rdf:about="#Feature">
+    <rdfs:comment xml:lang="en">A geographical feature</rdfs:comment>
+    <skos:historyNote xml:lang="en">Modified in version 3.1 : The cardinality constraints on feature code, feature class are relaxed on this class, and put on the specific subclass Geonames Feature. This class and attached properties can therefore be used for features not necessarily identified in the Geoanmes data base</skos:historyNote>
+    <rdfs:label xml:lang="en">Feature</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <owl:equivalentClass rdf:resource="http://www.mindswap.org/2003/owl/geo/geoFeatures20040307.owl#GeographicFeature"/>
+    <owl:equivalentClass rdf:resource="http://geovocab.org/spatial#Feature"/>  
+  </owl:Class>
+
+
+</rdf:RDF>
