@@ -1,0 +1,82 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://www.lingvoj.org/ontology#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+@prefix lode: <http://linkedevents.org/ontology/> .
+@prefix olca: <http://www.lingvoj.org/olca#> .
+@prefix lvont: <http://lexvo.org/ontology#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://www.lingvoj.org/ontology> .
+
+### Vocabulary metadata ###
+
+<http://www.lingvoj.org/ontology> 
+	a owl:Ontology;
+	a voaf:Vocabulary ;
+	rdfs:label "The Lingvoj Ontology"@en ;
+	dcterms:title "The Lingvoj Ontology"@en ;
+	rdfs:label "Ontología de lenguajes"@es ;
+	dcterms:title "Ontología de lenguajes"@es ;
+	rdfs:label "Ontologie des langues"@fr ;
+	dcterms:title "Ontologie des langues"@fr ;
+	rdfs:label  "Taal Ontologie"@nl ;
+	dcterms:title  "Taal Ontologie"@nl ;
+	rdfs:label "言語オントロジー"@ja ;
+	dcterms:title "言語オントロジー"@ja ;
+	rdfs:label "Ontologia de idiomas"@pt ;
+	dcterms:title "A Ontologia dos idiomas"@pt ;
+	dcterms:language <http://lexvo.org/id/iso639-3/eng>, <http://lexvo.org/id/iso639-3/spa>, <http://lexvo.org/id/iso639-3/fra>,<http://lexvo.org/id/iso639-3/nld>, <http://lexvo.org/id/iso639-3/jap>, <http://www.lexvo.org/id/iso639-3/por> ;
+	rdfs:comment "A vocabulary for describing the use of languages by people and organizations, their geographical scope and status as well as their usage in documents or during events"@en ;
+	rdfs:comment "Un vocabulaire pour décrire l'utilisation des langues par les personnes et les organisations, leur répartition géographique et leur statut, ainsi que leur usage dans les documents ou lors des événements"@fr ;
+	rdfs:comment "Un vocabulario para describir la utilización de lenguas por parte de personas y organizaciones, su ambito geográfico y su estatus, así como su utilización en documentos o durante eventos"@es ;
+    rdfs:comment "Een vokabular voor de beschrijving en het gebruik van talen door personen en organisaties, de geografische extensie en status en het gebruik ervan in documenten en tijdens evenmenten"@nl ;
+	rdfs:comment "人や組織による言語の使用、ドキュメント内やイベント期間中におけるその使用に加え、その地理的範囲と状況を記述するための語彙"@ja ;
+	rdfs:comment "Um vocabulário para descrever a utilização de idiomas por parte de pessoas ou organizações, o seu âmbito geográfico e seu estatuto, assim como a sua utilização em documentos ou durante eventos"@pt ;
+	vann:preferredNamespacePrefix "lingvo" ;
+	vann:preferredNamespaceUri "http://www.lingvoj.org/ontology#" ;
+	dcterms:creator <http://google.com/+BernardVatant> ;
+	dcterms:contributor <http://google.com/+MaríaPovedaVillalón> ;
+	dcterms:contributor <http://google.com/+RonaldPoell> ;
+	dcterms:contributor [foaf:name "Shuji Kamitsuna"; foaf:homepage <http://www.asahi-net.or.jp/~ax2s-kmtn/>] ;
+	dcterms:contributor <https://plus.google.com/113072078430654119300> ;
+	dcterms:modified "2014-08-11";
+	dcterms:issued "2007-09-17";
+	skos:historyNote "v2.33 : Corrected minor typos, and added portuguese translations, provided by Mariana Curado Malta" ;	
+	skos:historyNote "v2.32 : Added japanese translations, provided by Shuji Kamitsuna" ;
+	skos:historyNote "v2.31 : Added more translations, language metadata, fixed typos plus cosmetic changes in the .ttl file" ;
+	skos:historyNote "v2.3 : Added :LanguageResource class, subclasses and properties. Added properties :tag :officialIn :fromCountry" ;
+	skos:historyNote "v2.21 : Added dutch translations plus 'interpreter' property suggested by Ronald Poell, along with minor corrections" ;
+	skos:historyNote "v2.2 : Added spanish translations, provided by María Poveda Villalón" ;
+	skos:historyNote "v2.1 : Relaxed domain constraints on several properties, replaced by Ontology Loose Coupling Annotations" ;
+	rdfs:seeAlso  <http://www.lingvoj.org/> ;
+	owl:versionIRI <http://www.lingvoj.org/ontology_v2.33.ttl> ;
+	owl:priorVersion <http://www.lingvoj.org/ontology_v2.32.ttl> ;
+	owl:incompatibleWith <http://www.lingvoj.org/ontology_v1.3.rdf> ;
+	owl:versionInfo "v2.33" .
+	
+								  
+###  Language Class ###
+
+:Lingvo 
+	a owl:Class ;    
+	rdfs:label "Sprache"@de , "Language"@en ,"Lingvo"@eo , "Lenguaje"@es , "Kieli"@fi , "Langue"@fr , "Linguaggio"@it , "言語"@ja , "Taal"@nl , "Språk"@no , "Jezyk"@pl , "Idioma"@pt , "Язык"@ru , "Språk"@sv , "Dil"@tr , "语言"@zh ;    
+	rdfs:subClassOf <http://purl.org/dc/terms/LinguisticSystem> , <http://www.loc.gov/mads/rdf/v1#Language> ;
+	owl:equivalentClass <http://schema.org/Language>, <http://d-nb.info/standards/elementset/gnd#Language>, <http://purl.org/linguistics/gold/Language> , <http://www.ontotext.com/proton/protontop#Language> ;
+	lvont:somewhatSameAs <http://lexvo.org/ontology#Language> ;
+	vann:example  <http://lexvo.org/id/iso639-3/fra>, <http://id.loc.gov/vocabulary/iso639-1/ja> ;		
+	rdfs:comment "A language used in spoken or written human communication, or in which a resource is written or recorded. It is recommended to use instances defined on the basis of ISO 639 codes, such as those in examples"@en ;
+	rdfs:comment "Una lengua utilizada en la comunicación oral o escrita entre personas, o en la que se escribe o graba un recurso. Se recomienda el uso de las instancias definidas según los códigos ISO 639, como los que aparecen en los ejemplos"@es ;
+	rdfs:comment "Une langue utilisée dans la communication orale ou écrite entre humains, ou dans laquelle une ressource est écrite ou enregistrée. Il est recommandé d'utiliser des instances définies sur la base d'un code ISO 639, comme dans les exemples"@fr ;
+	rdfs:comment "Een taal gebruikt in geschreven of gesproken communicatie tussen mensen of in welke een bron is geschreven of opgenomen. Het is aan te raden instanties te gebruiken gedefinieerd op basis van de ISO 630 codes, zoals in deze voorbeelden"@nl ;
+	rdfs:comment "会話または記述による人間のコミュニケーションで使用される言語、または資源が記述または記録される言語。例にあるような、ISO 639コードに基づいて定義されたインスタンスを使用することが推奨される"@ja ;
+	rdfs:comment "Um idioma utilizado na comunicação oral ou escrita entre pessoas, ou na que se escreve ou grava um recurso. Recomenda-se a utilização das instâncias definidas segundo os códigos ISO 639, como os que aparecem nos excemplos"@pt .
+
+
+			 
