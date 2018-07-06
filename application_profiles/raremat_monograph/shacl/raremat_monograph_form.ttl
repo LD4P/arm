@@ -270,7 +270,7 @@ raremat_monograph_form:WorkForm_bf_subject
                 sh:class gn:Feature ;
         ]
         [
-                sh:class bf:Event ;
+                sh:class schema:Event ;
         ]
       ) .
 

@@ -17,6 +17,13 @@
 		<rdfs:isDefinedBy rdf:resource="http://schema.org/Event"/>
 	</rdf:Description>
 	
+	<rdfs:Class rdf:about="http://schema.org/ExhibitionEvent">
+		<rdfs:comment>Event type: Exhibition event, e.g. at a museum, library, archive, tradeshow, ...</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+		<rdfs:label>ExhibitionEvent</rdfs:label>
+		<schema:sameAs rdf:resource="https://schema.org/ExhibitionEvent"/>
+	</rdfs:Class>
+	
 	<rdf:Description rdf:about="http://schema.org/PriceSpecification">
 		<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
 		<rdfs:label xml:lang="en">Price Specification</rdfs:label>
