@@ -62,14 +62,14 @@ Specialized ontology for the description of awards received by bibliographic res
 
 ### Custodial History Ontology
 
-Specialized ontology for the description of awards received by bibliographic resources or agents; reusable in contexts beyond the bibliographic domain.
+Specialized ontology for the description of an object's custodial history or provenance; reusable in contexts beyond the bibliographic domain.
 
 * [Ontology specification](https://w3id.org/arm/custodial_history/ontology/0.1/custodial_history.rdf)
 * [Human-readable documentation](https://w3id.org/arm/custodial_history/ontology/0.1/custodial_history.html)
 
 ### Measurement Ontology
 
-Specialized ontology for the description of awards received by bibliographic resources or agents; reusable in contexts beyond the bibliographic domain.
+Specialized ontology for the description of an object's measurements; reusable in contexts beyond the bibliographic domain.
 
 * [Ontology specification](https://w3id.org/arm/measurement/ontology/0.1/measurement.rdf)
 * [Human-readable documentation](https://w3id.org/arm/measurement/ontology/0.1/measurement.html)
