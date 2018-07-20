@@ -56,42 +56,42 @@ The ArtFrame group analyzed a number of content standards used in the library an
 > - **IRI:** [*http://id.loc.gov/ontologies/bibframe/Note*](http://id.loc.gov/ontologies/bibframe/Note)
 > - **Definition:** Information, usually in textual form, on attributes of a resource or some aspect of a resource.
 
-**ex:CaptionNote**
+**arm:CaptionNote**
 > - **Label:** Caption note
-> - **IRI:** TBD
+> - **IRI:** https://w3id.org/arm/core/ontology/0.1/CaptionNote
 > - **Definition:** A distinctive caption independent of the resource title, including mottos and headings.
 > - **Comment:** Use separate notes for multiple captions.
 > - **Subclass of:** bf:Note
 
-**ex:LimitationNote**
+**arm:LimitationNote**
 > - **Label:** Limitation note
-> - **IRI:** TBD
+> - **IRI:** https://w3id.org/arm/core/ontology/0.1/LimitationNote
 > - **Definition:** A note relating to the size and nature of a print run limited to a specific quantity of copies produced, or a statement relating to the enumeration and nature of a copy in relation to the larger print run.
 > - **Subclass of:** bf:Note
 
-**ex:InaccuracyNote**
+**arm:InaccuracyNote**
 > - **Label:** Inaccuracy note
-> - **IRI:** TBD
+> - **IRI:** https://w3id.org/arm/core/ontology/0.1/InaccuracyNote
 > - **Definition:** A note explaining an unintentional or intentional inaccuracy, misspelling, or misprint relating to a specific resource. 
 > - **Comment:** For multiple inaccuracies use separate notes.
 > - **Subclass of:** bf:Note
 
-**ex:PreferredCitation**
+**arm:PreferredCitation**
 > - **Label:** Preferred citation
-> - **IRI:** TBD
+> - **IRI:** https://w3id.org/arm/core/ontology/0.1/PreferredCitation
 > - **Definition:** DA note providing a specific citation format for citing the resource.
 > - **Subclass of:** bf:Note
 
-**ex:RelatedMaterialNote**
+**arm:RelatedMaterialNote**
 > - **Label:** Related material note
-> - **IRI:** TBD
+> - **IRI:** https://w3id.org/arm/core/ontology/0.1/RelatedMaterialNote
 > - **Definition:** A note providing information on materials (e.g. archival materials or publications) related to the described resource.
 > - **Scope note:** Use if information describing the related material cannot be parsed into the appropriate relationship.
 > - **Subclass of:** bf:Note
 
-**ex:SubjectNote**
+**arm:SubjectNote**
 > - **Label:** Subject note
-> - **IRI:** TBD
+> - **IRI:** https://w3id.org/arm/core/ontology/0.1/SubjectNote
 > - **Definition:** Textual information describing the subject or iconographic details of a resource.
 > - **Scope note:** Use for textual notes only, not for subject terms from a controlled value vocabulary.
 > - **Subclass of:** bf:Note
@@ -110,9 +110,9 @@ The ArtFrame group analyzed a number of content standards used in the library an
 ---------
 
 
-![subject notes](modeling_diagrams/note_subject.png)
+![subject notes](modeling_diagrams/subject_note.png)
 **Descriptive note**
-![descriptive notes](modeling_diagrams/note_descriptive.png)
+![descriptive notes](modeling_diagrams/descriptive_note.png)
 
 
 <a name="samples">RDF Samples</a>
@@ -120,12 +120,12 @@ The ArtFrame group analyzed a number of content standards used in the library an
 **Descriptive note specifying information about the label**
 ```
 :item a bf:Item ;
-    ex:markedBy :marking .
+    arm:markedBy :marking .
 
-:marking a ex:Label ;
+:marking a arm:Label ;
      bf:note :note1 .
 
-:note1 a ex:DescriptiveNote ;
+:note1 a arm:DescriptiveNote ;
      rdf:value "Two labels that were once affixed to the back and have now fallen off. One is 
      an identifying label and the other is a xerox copy of a 1947 Boston Post news article
      about the life and work of Norman Ritchie."
@@ -136,7 +136,7 @@ The ArtFrame group analyzed a number of content standards used in the library an
 :work a bf:Work ;
     bf:note :note1 .
 
-:note1 a ex:SubjectNote ;
+:note1 a arm:SubjectNote ;
     rdf:value "Two head-and-shoulder portraits in separate ornamental oval frames, one frame 
     held by eagle. "
 
