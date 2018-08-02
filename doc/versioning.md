@@ -43,18 +43,19 @@ and following the conventions described below for use of [version numbers](#vers
 <a name="version-numbering">Version Numbering</a>
 ----------------
 
-Two possible version number conventions are shown here. Note that Model A is more rigorously defined than Model B, because the latter uses subjective notions of "sufficiently large" and "sufficiently significant" alongside the
-objective notions of backward- and non-backward-compatibility. Possibly Model B can be provided a fully objective formulation.
+Two possible version number conventions are shown here. Note that Model A is more rigorously defined than Model B, because the latter uses subjective notions of "sufficiently large" and "sufficiently significant" alongside the objective notions of backward- and non-backward-compatibility. Possibly Model B can be provided a fully objective formulation.
 
 **MODEL A (the bibliotek-o model)**
-    * `MAJOR`: non-backward-compatible modifications
-    * `MINOR`: backward-compatible semantic modifications
-    * `PATCH`: non-semantic modifications, such as fixing typos or adding rdfs:labels in other languages
+
+    * MAJOR: non-backward-compatible modifications
+    * MINOR: backward-compatible semantic modifications
+    * PATCH: non-semantic modifications, such as fixing typos or adding rdfs:labels in other languages
     
 **MODEL B:**
-    * `MAJOR`: a sufficiently large set of sufficiently significant and non-backward-compatible changes so as to represent a new major version 
-    * `MINOR`: non-backward-compatible semantic modifications
-    * `PATCH`: backward-compatible semantic modifications as well as non-semantic modifications, such as fixing typos or adding rdfs:labels in other languages
+
+    * MAJOR: a sufficiently large set of sufficiently significant and non-backward-compatible changes so as to represent a new major version 
+    * MINOR: non-backward-compatible semantic modifications
+    * PATCH: backward-compatible semantic modifications as well as non-semantic modifications, such as fixing typos or adding rdfs:labels in other languages
 
 
 * To avoid an unnecessary proliferation of `MAJOR` versions, `owl:deprecated` is applied to terms slated for removal. The precise implementation depends on the choice of Model A or B above:
