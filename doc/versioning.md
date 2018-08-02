@@ -47,13 +47,11 @@ Two possible version number conventions are shown here. Note that Model A is mor
 objective notions of backward- and non-backward-compatibility. Possibly Model B can be provided a fully objective formulation.
 
 **MODEL A (the bibliotek-o model)**
-
     * `MAJOR`: non-backward-compatible modifications
     * `MINOR`: backward-compatible semantic modifications
     * `PATCH`: non-semantic modifications, such as fixing typos or adding rdfs:labels in other languages
     
 **MODEL B:**
-
     * `MAJOR`: a sufficiently large set of sufficiently significant and non-backward-compatible changes so as to represent a new major version 
     * `MINOR`: non-backward-compatible semantic modifications
     * `PATCH`: backward-compatible semantic modifications as well as non-semantic modifications, such as fixing typos or adding rdfs:labels in other languages
@@ -65,7 +63,7 @@ objective notions of backward- and non-backward-compatibility. Possibly Model B 
 
 * `owl:versionInfo` provides a label containing the version number, formatted as "Version n.n.n"; e.g., "Version 1.1.0". This version number is also used to tag the repository, in this case `v1.1.0`. 
 * `owl:priorVersion` provides the URI of the previous MAJOR.MINOR version of the ontology, if any.
-* `owl:backwardCompatibleWith` or `owl:incompatibleWith` may also be used to reference previous MAJOR.MINOR versions of the ontology, where applicable.
+* `owl:backwardCompatibleWith` or `owl:incompatibleWith` may also be used to reference previous `MAJOR.MINOR` versions of the ontology, where applicable.
 
 
 
