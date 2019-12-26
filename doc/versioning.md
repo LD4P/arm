@@ -23,10 +23,10 @@ This document describes a process and protocol for versioning and change managem
 
 The following protocols are used to version the ontologies. 
 
-* The use of OWL versioning predicates follows the [OWL 2 specification](https://www.w3.org/TR/owl2-syntax/#Ontology_IRI_and_Version_IRI).
-* `owl:ontologyIRI` identifies the unversioned ontology namespace; e.g., `https://w3id.org/arm/core/ontology/`.
+* The use of OWL versioning predicates follows the [OWL 2 specification](https://www.w3.org/TR/owl2-syntax/#Ontology_IRI_and_Version_IRI).* `owl:ontologyIRI` identifies the unversioned ontology namespace; e.g., `https://w3id.org/arm/core/ontology/`.
+* The ontology IRI is the IRI which is the subject of the rdf:type owl:Ontology assertion in the ontology header.
 * `owl:versionIRI` identifies a particular version of the ontology; e.g., `https://w3id.org/arm/core/ontology/0.1/`. 
-* The `owl:ontologyIRI` redirects to the `owl:versionIRI` of the current version of the ontology.
+* The ontology IRI redirects to the `owl:versionIRI` of the current version of the ontology.
 * Previous versions of the ontology continue to be available at their `owl:versionIRI`.
 * By importing or referencing terms from a particular `owl:versionIRI`, users are insulated from non-backward-compatible changes in newer published versions until they decide to upgrade.
 * Version numbering (`MAJOR.MINOR.PATCH`). See [discussion below](#version-numbering) on two possible numbering conventions.
@@ -37,7 +37,7 @@ The following protocols are used to version the ontologies.
 ------------
 
 Several of the predicates used in the ontology versioning protocol are of type `owl:OntologyProperty` and thus cannot be used with our vocabularies, which are typed `void:Dataset` rather than
-`owl:Ontology`.  In particular, `owl:ontologyIRI` and `owl:versionIRI` have domain `owl:Ontology`, so only versioned URIs are used for the vocabularies (e.g., `https://w3id.org/arm/core/vocabularies/typeface/0.1/`), using the same schema outlined for ontologies. Versioning is also supported by defining `owl:versionInfo` on the Dataset 
+`owl:Ontology`.  In particular, `owl:versionIRI` has domain `owl:Ontology`, so only versioned URIs are used for the vocabularies (e.g., `https://w3id.org/arm/core/vocabularies/typeface/0.1/`), using the same schema outlined for ontologies. Versioning is also supported by defining `owl:versionInfo` on the Dataset 
 and following the conventions described below for use of [version numbers](#version-numbering), [issuance and modification datetimes](#datetimes), and [change descriptions](#change-descriptions). 
 
 <a name="version-numbering">Version Numbering</a>
