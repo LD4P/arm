@@ -23,8 +23,8 @@ This document describes a process and protocol for versioning and change managem
 
 The following protocols are used to version the ontologies. 
 
-* The use of OWL versioning predicates follows the [OWL 2 specification](https://www.w3.org/TR/owl2-syntax/#Ontology_IRI_and_Version_IRI).* `owl:ontologyIRI` identifies the unversioned ontology namespace; e.g., `https://w3id.org/arm/core/ontology/`.
-* The ontology IRI is the IRI which is the subject of the rdf:type owl:Ontology assertion in the ontology header.
+* The use of OWL versioning predicates follows the [OWL 2 specification](https://www.w3.org/TR/owl2-syntax/#Ontology_IRI_and_Version_IRI).
+* The ontology IRI is the unversioned IRI that is the subject of the `rdf:type` owl:Ontology assertion in the ontology header.
 * `owl:versionIRI` identifies a particular version of the ontology; e.g., `https://w3id.org/arm/core/ontology/0.1/`. 
 * The ontology IRI redirects to the `owl:versionIRI` of the current version of the ontology.
 * Previous versions of the ontology continue to be available at their `owl:versionIRI`.
