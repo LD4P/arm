@@ -28,6 +28,8 @@ The Art and Rare Materials BIBFRAME Ontology Extensions are a product of the And
 
 Adoption, maintenance, and use of these ontologies will be determined by RBMS-BSC and ARLIS CAC following initial development and assessment.
 
+*NOTE*: this work is continued/replaced by work hosted on: https://github.com/Art-and-Rare-Materials-BF-Ext/ARM-ontology/
+
 <a name="news">News</a>
 -------------
 
