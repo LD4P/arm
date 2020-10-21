@@ -1,37 +1,38 @@
 Art and Rare Materials (ARM) BIBFRAME Ontology Extensions
 ==========================
 
-*NOTE*: this work is continued/replaced by work hosted on: https://github.com/Art-and-Rare-Materials-BF-Ext/ARM-ontology/
-
-Table of Contents
----------
-
-* [Introduction](#intro)
-* [News](#news)
-* [ARM Ontologies](#ontologies)
-* [ARM Vocabularies](#vocabularies)
-
-<a name="intro">Introduction</a>
-------------
-
-The ontologies housed in this repository have been developed as extensions of the [BIBFRAME ontology](http://id.loc.gov/ontologies/bibframe/) for generalized bibliographic description to provide specialized modeling in the art and rare materials domains. These were originally conceived of as two separate projects: Columbia University led [ArtFrame](https://wiki.duraspace.org/display/LD4P/ArtFrame), an ontology extension for the description of two-and three-dimensional artworks, in collaboration with the Art Libraries Society of North America's [Cataloging Advisory Committee](https://www.arlisna.org/organization/committees/76-cataloging-advisory-committee) (ARLIS CAC), the Library of Congress Prints and Photographs Division, The Clark Library, and the Morgan Library & Museum. Meanwhile, Cornell University led the [Rare Materials Ontology Extension](https://wiki.duraspace.org/display/LD4P/Rare+Materials+Ontology+Extension) (RareMat) in collaboration with the ACRL Rare Books and Manuscript Section's [Bibliographic Standards Committee](http://rbms.info/committees/bibliographic_standards/) (RBMS-BSC); RareMat was intended to provide modeling for the complexity of rare materials, particularly item-level description not addressed in BIBFRAME. 
-
-As work proceeded, it became apparent that many of the modeling needs of the two groups overlapped: physical description, physical condition and conservation, custodial history, measurements, awards and exhibitions, and so on. It was thus decided to merge the projects and jointly develop a single set of models. 
-
-Meanwhile, select models were considered separable from the core models, amenable to independent implementation by users within and outside the bibliographic domain. These models have been pulled out of the core ontology into three modularized ontologies: awards, custodial history, and measurements.
-
-In addition to the ontologies, the group has generated several other outputs:
-- [A set of controlled vocabularies](core/vocabularies/) for arrangement of physical objects (e.g., rolled and unrolled), origin (e.g., of titles), status (e.g., of identifiers), typefaces, and handwriting types. 
-- [Detailed documentation of each model](modeling_recommendations). These include use cases; model overviews, with motivation and rationale in reference to the use cases and legacy data; diagrams; RDF samples; term specifications; recommendations for future modifications to BIBFRAME, where applicable; and lists of related topics out-of-scope of the current project but of interest for future research.
-- [Application profiles](application_profiles), formalized in SHACL and accompanied by external ontologies and vocabularies, to support form and display interfaces in [VitroLib](https://github.com/ld4l-labs/vitrolib), an RDF cataloging tool under development in the associated [Linked Data for Libraries Labs](https://wiki.duraspace.org/pages/viewpage.action?pageId=77447730) project. Two application profiles are under development: art and rare monographs. Also included are fragments of source ontologies and vocabularies used in the application profiles and modeling recommendations. 
-- Experimental: SHACL validation profiles stored with the associated ontologies, which can be used as a basis for application profiles but whose primary purpose is to define expected implementation of the ontologies independent of any application. Some proof-of-concept application profiles are built on the validation SHACL in this way; when the profiles are complete we will evaluate the feasibility and usefulness of refactoring all the application profiles according to this model. Currently available are [core validation](core/validation/shacl/) and [custodial_history](custodial_history/validation/shacl/) SHACL shapes.
-
-The Art and Rare Materials BIBFRAME Ontology Extensions are a product of the Andrew W. Mellon Foundation funded Linked Data for Production (LD4P) project, 2016-2018. See the [LD4P public wiki](https://wiki.duraspace.org/pages/viewpage.action?pageId=74515029) for more information about this project. 
-
-Adoption, maintenance, and use of these ontologies will be determined by RBMS-BSC and ARLIS CAC following initial development and assessment.
+*NOTE*: this work is continued/forked from work hosted on: https://github.com/LD4P/arm
 
 
-<a name="news">News</a>
+The ontology housed in this repository is being developed as an extension of the [BIBFRAME ontology](http://id.loc.gov/ontologies/bibframe/) for generalized bibliographic description to provide specialized modeling in the archives, art and rare materials domains. This work was originally created under the LD4P 2016-2018 project; those ontologies are located on the [LD4P project's GitHub repository](https://github.com/LD4P/arm). 
+
+Work in this repository replaces work posted in the grant-funded LD4P repository: [https://github.com/LD4P/arm](https://github.com/LD4P/arm)
+
+Work on ARM is under the auspices of the Art Libraries Society of North America's Cataloging Advisory Committee, the Association of College and Research Library's Rare Books and Manuscript Section's Bibliographic Committee and the Society of American Archivists' Standards Committee.
+
+Members
+-------
+
+Robin Desmeules, McGill University  
+Christine DeZelar-Tiedman, University of Minnesota  
+Marie-Chantal L'Écuyer-Coelho, Bibliothèque et Archives nationales du Québec (ARLIS lead)  
+Meredith Hale, University of Tennessee Knoxville  
+Regine Heberlein, Princeton University  
+Linda Isaac, Harvard University  
+Jason Kovari, Cornell University (ACRL-RBMS lead)  
+Jonathan Lill, Museum of Modern Art  
+Mark Matienzo, Stanford University  
+Danijela Matkovic, Yale University  
+Jennifer Page, National Museum of Women in the Arts  
+Elizabeth Russey Roke, Emory University (SAA lead)  
+Timothy Thompson, Yale University  
+Ruth Kitchin Tillman, Pennsylvania State University  
+Melanie Wacker, Columbia University  
+Jessica Zieman, Library of Congress  
+
+
+
+<a name="news">News, copied from previous repository:</a>
 -------------
 
 * **2018-04-27** Release of Version 0.1.0 of all ontologies and vocabularies.
