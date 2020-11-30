@@ -63,8 +63,8 @@ new in 1.0:
 	</owl:Class>
 	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Event">
 		<rdfs:label xml:lang="en">Event</rdfs:label>
-		<skos:definition xml:lang="en">Optional mechanism to provide granular documentation of events on
-			resources. May include conservation activities, exhibits, provenance
+		<skos:definition xml:lang="en">Optional mechanism to provide granular documentation of
+			events on resources. May include conservation activities, exhibits, provenance
 			information, or physical condition.</skos:definition>
 		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/ItemHistory"/>
 		<dcterms:issued>2020-11-14T00:00:00-04:00</dcterms:issued>
@@ -72,7 +72,8 @@ new in 1.0:
 	</owl:Class>
 	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/ItemHistory">
 		<rdfs:label xml:lang="en">Item History</rdfs:label>
-		<skos:definition xml:lang="en">Optional superclass to gather all events for a resource together as needed.</skos:definition>
+		<skos:definition xml:lang="en">Optional superclass to gather all events for a resource
+			together as needed.</skos:definition>
 		<dcterms:issued>2020-11-14T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2020-11-14T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
@@ -719,7 +720,6 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	
 	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/hasOrigin">
 		<rdfs:label xml:lang="en">has origin</rdfs:label>
 		<skos:definition xml:lang="en">Specifies the physical location from which this resource
@@ -800,7 +800,6 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	
 	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/isArrangementOf">
 		<rdfs:label xml:lang="en">is arrangement of</rdfs:label>
 		<skos:definition xml:lang="en">Relates information about the organization or arrangement of
@@ -828,7 +827,6 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	
 	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/isCitationOf">
 		<rdfs:label xml:lang="en">is citation of</rdfs:label>
 		<skos:definition xml:lang="en"/>
@@ -869,7 +867,6 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	
 	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/isOnCarrier">
 		<rdfs:label xml:lang="en">is on carrier</rdfs:label>
 		<skos:definition xml:lang="en">The resource being described is on or contained in a
@@ -1093,7 +1090,7 @@ new in 1.0:
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 	<owl:Datatype rdf:about="https://w3id.org/arm/core/ontology/1.0/endDate">
-		<rdfs:label xml:lang="en">start date</rdfs:label>
+		<rdfs:label xml:lang="en">end date</rdfs:label>
 		<skos:definition xml:lang="en">The end date of a resource, such as an
 			event.</skos:definition>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
@@ -1103,6 +1100,28 @@ new in 1.0:
 		<rdfs:label xml:lang="en">start date</rdfs:label>
 		<skos:definition xml:lang="en">The start date of a resource, such as an
 			event.</skos:definition>
+		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+	</owl:Datatype>
+	<owl:Datatype rdf:about="https://w3id.org/arm/core/ontology/1.0/physicalPresentation">
+		<rdfs:label xml:lang="en">physical presentation</rdfs:label>
+		<skos:definition xml:lang="en">The physical state of the resource (e.g. rolled, folded,
+			unframed) or other aspects of the resource (eg.g. initial letters or illustrations on a
+			single page) when a measurement is taken</skos:definition>
+		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+	</owl:Datatype>
+	<owl:Datatype rdf:about="https://w3id.org/arm/core/ontology/1.0/hasType">
+		<rdfs:label xml:lang="en">type</rdfs:label>
+		<skos:definition xml:lang="en">This property allows implementers to choose an appropriate
+			vocabulary for events, inscriptions, enclosures, etc.</skos:definition>
+		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+	</owl:Datatype>
+	<owl:Datatype rdf:about="https://w3id.org/arm/core/ontology/1.0/hasRelatedEvent">
+		<rdfs:label xml:lang="en">related event</rdfs:label>
+		<skos:definition xml:lang="en">This property allows implementers to link together events
+			with an unspecified relationship.</skos:definition>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Datatype>
