@@ -103,12 +103,8 @@ new in 1.0:
 	</owl:Class>
 	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Autograph">
 		<rdfs:label xml:lang="en">Autograph</rdfs:label>
-		<skos:definition xml:lang="en">A person's name written on a resource in his or her own hand
-			as part of the creation or production process.</skos:definition>
+		<skos:definition xml:lang="en">A person's name written on a resource in their own hand.</skos:definition>
 		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/Marking"/>
-		<skos:editorialNote xml:lang="en">As currently defined, excludes post-production autographs
-			on an item, such as on a gift. This distinction is subject to future
-			review.</skos:editorialNote>
 		<skos:example xml:lang="en">A binder's signature</skos:example>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
@@ -188,9 +184,7 @@ new in 1.0:
 	</owl:Class>
 	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Enclosure">
 		<rdfs:label xml:lang="en">Enclosure</rdfs:label>
-		<skos:definition xml:lang="en">Covering of a book which holds the sheets together to provide
-			protection, and collectively all the parts of a book applied in the process of attaching
-			the leaves and covering them.</skos:definition>
+		<skos:definition xml:lang="en">Covering or container to provide protection, identification, and/or keep constitutent parts together.</skos:definition>
 		<skos:scopeNote xml:lang="en">This class includes containers, such as a box containing a
 			paper doll set.</skos:scopeNote>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
@@ -267,8 +261,8 @@ new in 1.0:
 	</owl:Class>
 	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Inscription">
 		<rdfs:label xml:lang="en">Inscription</rdfs:label>
-		<skos:definition xml:lang="en">Words, texts, lettering, or symbols written in manuscript on
-			a resource.</skos:definition>
+		<skos:definition xml:lang="en">Words, texts, lettering or symbols written or engraved on a
+			resource, often reflecting commemoration or presentation.</skos:definition>
 		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/Marking"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
@@ -293,10 +287,8 @@ new in 1.0:
 	</owl:Class>
 	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Marking">
 		<rdfs:label xml:lang="en">Marking</rdfs:label>
-		<skos:definition xml:lang="en">A standardized symbol, notation, or other marking present in
-			or applied to the materials of which an object is composed, or applied to an object
-			during or after creation, conveying information such as the object's origin or maker,
-			its authenticity, or a change in its official status.</skos:definition>
+		<skos:definition xml:lang="en">A symbol, notation, or other mark present in or applied to an
+			object during or after creation.</skos:definition>
 		<skos:editorialNote xml:lang="en">As currently defined, contrasts with marginialia and other
 			unofficial markings applied by individual users outside the creation or production
 			process or custodial history of an object. This distinction may at times be subtle, and
