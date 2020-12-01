@@ -1098,8 +1098,8 @@ new in 1.0:
 	<owl:Datatype rdf:about="https://w3id.org/arm/core/ontology/1.0/physicalPresentation">
 		<rdfs:label xml:lang="en">physical presentation</rdfs:label>
 		<skos:definition xml:lang="en">The physical state of the resource (e.g. rolled, folded,
-			unframed) or other aspects of the resource (eg.g. initial letters or illustrations on a
-			single page) when a measurement is taken</skos:definition>
+			unframed) or other aspects of the resource (e.g. initial letters or illustrations on a
+			single page) when a measurement is taken.</skos:definition>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Datatype>
