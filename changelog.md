@@ -136,9 +136,11 @@
 - arm:accessionedBy
 - arm:accessions
 - arm:hasActivity
+- arm:hasArrangement
 - arm:hasCustodialHistory
 - arm:hasMaterial
 - arm:isActivityOf
+- arm:isArrangementOf
 - arm:isCustodialHistoryOf
 - arm:isAppliedMaterialOf
 - arm:isBaseMaterialOf
