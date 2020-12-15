@@ -1,5 +1,8 @@
 # ARM Changelog
 
+## [v. 1.0] - 2020-12-08
+- Reorganized repository so that directories based on versions is at the top-level.
+
 ## [v. 1.0] - 2020-12-02 
 - Created version 1.0 from version 0.1
 
