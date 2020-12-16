@@ -59,7 +59,6 @@
 		<skos:definition xml:lang="en">Optional mechanism to provide granular documentation of
 			events on resources. May include conservation activities, exhibits, provenance
 			information, or physical condition.</skos:definition>
-		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/ItemHistory"/>
 		<dcterms:issued>2020-11-14T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2020-11-14T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
@@ -317,6 +316,12 @@
 			appearance, level of damage, quality, or completeness.</skos:definition>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+	</owl:Class>
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/PhysicalPresentation">
+		<rdfs:label xml:lang="en">Physical Presentation</rdfs:label>
+		<skos:definition xml:lang="en">The physical state of the resource (e.g., rolled, folded, unframed) when a measurement is taken.</skos:definition>
+		<dcterms:issued>2020-12-16T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2020-12-16T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
 	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/PreferredCitation">
 		<rdfs:label xml:lang="en">Preferred citation</rdfs:label>
@@ -990,12 +995,6 @@
 		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/measuredBy"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/physicalPresentation">
-		<rdfs:label xml:lang="en">physical presentation</rdfs:label>
-		<skos:definition xml:lang="en">The physical state of the resource (e.g., rolled, folded, unframed) when a measurement is taken.</skos:definition>
-		<dcterms:issued>2020-11-11T00:00:00-04:00</dcterms:issued>
-		<dcterms:modified>2020-12-16T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
 	<!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
