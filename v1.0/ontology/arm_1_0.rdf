@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns="https://w3id.org/arm/core/ontology/1.0/" xmlns:dcterms="http://purl.org/dc/terms/"
+<rdf:RDF xmlns="https://w3id.org/arm/ontology/1.0/" xmlns:dcterms="http://purl.org/dc/terms/"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -13,7 +13,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 	<owl:Ontology rdf:about="https://w3id.org/arm/core/ontology/">
-		<owl:versionIRI rdf:resource="https://w3id.org/arm/core/ontology/1.0/"/>
+		<owl:versionIRI rdf:resource="https://w3id.org/arm/ontology/1.0/"/>
 		<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version
 			1.0</owl:versionInfo>
 		<dcterms:issued>2020-11-11T00:00:00-04:00</dcterms:issued>
@@ -35,49 +35,42 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-	<!-- 
-new in 1.0:
- arm:Annotation
- arm:Bookplate
- arm:Event
- arm:ItemHistory
- -->
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Annotation">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Annotation">
 		<rdfs:label xml:lang="en">Annotation</rdfs:label>
 		<skos:definition xml:lang="en">Remarks, notes, highlighting, or symbols that describe,
 			explain, evaluate, or otherwise reflect an agent’s interaction with an object or that
 			document the history or provenance of the object.</skos:definition>
-		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/Marking"/>
+		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/Marking"/>
 		<dcterms:issued>2020-11-14T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2020-11-14T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Bookplate">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Bookplate">
 		<rdfs:label xml:lang="en">Bookplate</rdfs:label>
 		<skos:definition xml:lang="en">Labels affixed to a book to indicate ownership or used for
 			identification. They may be printed or engraved, frequently with a distinctive design,
 			tipped in or pasted on the inside of the upper or lower cover or
 			flyleaf.</skos:definition>
-		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/Marking"/>
+		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/Marking"/>
 		<dcterms:issued>2020-11-14T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2020-11-14T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Event">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Event">
 		<rdfs:label xml:lang="en">Event</rdfs:label>
 		<skos:definition xml:lang="en">Optional mechanism to provide granular documentation of
 			events on resources. May include conservation activities, exhibits, provenance
 			information, or physical condition.</skos:definition>
-		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/ItemHistory"/>
+		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/ItemHistory"/>
 		<dcterms:issued>2020-11-14T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2020-11-14T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/ItemHistory">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/ItemHistory">
 		<rdfs:label xml:lang="en">Item History</rdfs:label>
 		<skos:definition xml:lang="en">Optional superclass to gather all events for a resource
 			together as needed.</skos:definition>
 		<dcterms:issued>2020-11-14T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2020-11-14T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/AccessionNumber">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/AccessionNumber">
 		<rdfs:label xml:lang="en">Accession number</rdfs:label>
 		<skos:definition xml:lang="en">Numeric, alphanumeric, or other identifying codes assigned
 			when an art object, book, or other item enters the collection of a museum, library, or
@@ -89,7 +82,7 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Attribution">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Attribution">
 		<rdfs:label xml:lang="en">Attribution</rdfs:label>
 		<skos:definition xml:lang="en">The ascribing of an activity to a particular agent or agents.
 			This attribution may change over time based on new evidence.</skos:definition>
@@ -101,25 +94,25 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Autograph">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Autograph">
 		<rdfs:label xml:lang="en">Autograph</rdfs:label>
 		<skos:definition xml:lang="en">A person's name written on a resource in their own hand.</skos:definition>
-		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/Marking"/>
+		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/Marking"/>
 		<skos:example xml:lang="en">A binder's signature</skos:example>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/BindersTicket">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/BindersTicket">
 		<rdfs:label xml:lang="en">Binder's ticket</rdfs:label>
 		<skos:definition xml:lang="en">Small engraved or printed label, usually found on the upper
 			outside corner of one of the front flyleaves, giving the name and usually the address of
 			the bookbinder; common in the 18th and early 19th centuries.</skos:definition>
-		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/Marking"/>
+		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/Marking"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Binding">
-		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/Enclosure"/>
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Binding">
+		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/Enclosure"/>
 		<rdfs:label xml:lang="en">Binding</rdfs:label>
 		<skos:definition xml:lang="en">Covering of a book which holds the sheets together to provide
 			protection, and collectively all the parts of a book applied in the process of attaching
@@ -127,7 +120,7 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/BoundCollection">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/BoundCollection">
 		<rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
 		<rdfs:label xml:lang="en">Bound collection</rdfs:label>
 		<skos:definition xml:lang="en">An artificial gathering of two or more items physically into
@@ -138,7 +131,7 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/CaptionNote">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/CaptionNote">
 		<rdfs:label xml:lang="en">Caption note</rdfs:label>
 		<skos:definition xml:lang="en">A distinctive caption independent of the resource title,
 			including mottos and headings.</skos:definition>
@@ -147,14 +140,14 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Citation">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Citation">
 		<rdfs:label xml:lang="en">Citation</rdfs:label>
 		<skos:definition xml:lang="en">A single citation within a bibliographic
 			source.</skos:definition>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/ConditionAssessment">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/ConditionAssessment">
 		<rdfs:label xml:lang="en">Condition assessment</rdfs:label>
 		<skos:definition xml:lang="en">Assessment and/or documentation of the physical condition of
 			an item, including damage, material vulnerabilities, special storage requirements, etc.
@@ -163,7 +156,7 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/ContentsNote">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/ContentsNote">
 		<rdfs:label xml:lang="en">Contents note</rdfs:label>
 		<rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
 		<skos:definition xml:lang="en">A note to provide a main contents of the resource rather than
@@ -175,14 +168,14 @@ new in 1.0:
 			bf:Notes extension, but need to add it here for now.</skos:editorialNote>
 		<dcterms:issued>2018-01-29T00:00:00-04:00</dcterms:issued>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/DescriptiveNote">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/DescriptiveNote">
 		<rdfs:label xml:lang="en">Descriptive note</rdfs:label>
 		<skos:definition xml:lang="en">A note that describes the resource.</skos:definition>
 		<rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Enclosure">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Enclosure">
 		<rdfs:label xml:lang="en">Enclosure</rdfs:label>
 		<skos:definition xml:lang="en">Covering or container to provide protection, identification, and/or keep constitutent parts together.</skos:definition>
 		<skos:scopeNote xml:lang="en">This class includes containers, such as a box containing a
@@ -190,7 +183,7 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Entry">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Entry">
 		<rdfs:label xml:lang="en">Entry</rdfs:label>
 		<skos:definition xml:lang="en">A specific entry within a bibliographic
 			resource.</skos:definition>
@@ -203,7 +196,7 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Exhibition">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Exhibition">
 		<rdfs:label xml:lang="en">Exhibition</rdfs:label>
 		<skos:definition xml:lang="en">The relationship between an ExhibitionEvent and an Item in
 			that event.</skos:definition>
@@ -213,7 +206,7 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Font">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Font">
 		<rdfs:label xml:lang="en">Font</rdfs:label>
 		<skos:definition xml:lang="en">A font is the digital representation of a typeface. It is a
 			collection of all the characters of a typeface in one size (12pt/1in) and one style
@@ -222,28 +215,28 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/FontStyle">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/FontStyle">
 		<rdfs:label xml:lang="en">Font style</rdfs:label>
 		<skos:definition xml:lang="en">Style of the font, e.g. bold, italic</skos:definition>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Frame">
-		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/Mount"/>
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Frame">
+		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/Mount"/>
 		<rdfs:label xml:lang="en">Frame</rdfs:label>
 		<skos:definition xml:lang="en">A supportive structure that surrounds or encloses an
 			item.</skos:definition>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Handwriting">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Handwriting">
 		<rdfs:label xml:lang="en">Handwriting</rdfs:label>
 		<skos:definition xml:lang="en">A specific example of a handwriting found in a textual
 			resource. A handwriting can have a particular HandWritingType.</skos:definition>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/HandwritingType">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/HandwritingType">
 		<rdfs:label xml:lang="en">Handwriting type</rdfs:label>
 		<skos:definition xml:lang="en">A type of writing hand; not the same as a writing system or a
 			handwriting style (such as cursive or block letters). Examples include Gothic,
@@ -251,7 +244,7 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/InaccuracyNote">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/InaccuracyNote">
 		<rdfs:label xml:lang="en">Inaccuracy note</rdfs:label>
 		<skos:definition xml:lang="en">A note explaining an unintentional or intentional inaccuracy,
 			misspelling, or misprint relating to a specific resource.</skos:definition>
@@ -259,24 +252,24 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Inscription">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Inscription">
 		<rdfs:label xml:lang="en">Inscription</rdfs:label>
 		<skos:definition xml:lang="en">Words, texts, lettering or symbols written or engraved on a
 			resource, often reflecting commemoration or presentation.</skos:definition>
-		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/Marking"/>
+		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/Marking"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Label">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Label">
 		<rdfs:label xml:lang="en">Label</rdfs:label>
 		<skos:definition xml:lang="en">A piece of paper, leather, fabric, or other material
 			inscribed, printed, or engraved with information and affixed to a resource or part of a
 			resource for identification or description.</skos:definition>
-		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/Marking"/>
+		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/Marking"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/LimitationNote">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/LimitationNote">
 		<rdfs:label xml:lang="en">Limitation note</rdfs:label>
 		<skos:definition xml:lang="en">A note relating to the size and nature of a print run limited
 			to a specific quantity of copies produced, or a statement relating to the enumeration
@@ -285,7 +278,7 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Marking">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Marking">
 		<rdfs:label xml:lang="en">Marking</rdfs:label>
 		<skos:definition xml:lang="en">A symbol, notation, or other mark present in or applied to an
 			object during or after creation.</skos:definition>
@@ -296,7 +289,7 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Mount">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Mount">
 		<rdfs:label xml:lang="en">Mount</rdfs:label>
 		<skos:definition xml:lang="en">An item placed on a pedestal or a case, or otherwise attached
 			to a print, photographic image, or document protected by framing, usually against a
@@ -304,7 +297,7 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Page">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Page">
 		<rdfs:label xml:lang="en">Page</rdfs:label>
 		<skos:definition xml:lang="en">A single page within a resource.</skos:definition>
 		<rdfs:comment xml:lang="en">Used in any page-level description, as well as in parsing out
@@ -312,7 +305,7 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/PaginationFoliation">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/PaginationFoliation">
 		<rdfs:label xml:lang="en">Pagination foliation</rdfs:label>
 		<skos:definition xml:lang="en">Sequential numbering of individual leaves, plates, pages
 			(numbering on both sides), or columns (used as a sequence of numbering) of a
@@ -321,15 +314,15 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Pedestal">
-		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/Mount"/>
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Pedestal">
+		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/Mount"/>
 		<rdfs:label xml:lang="en">Pedestal</rdfs:label>
 		<skos:definition xml:lang="en">A solid, fixed base or support on which an item or part of an
 			item is mounted.</skos:definition>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/PhysicalCondition">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/PhysicalCondition">
 		<rdfs:label xml:lang="en">Physical Condition</rdfs:label>
 		<skos:definition xml:lang="en">One specific aspect of the condition of an object or part of
 			an object, including perceptible or measurable characteristics such as physical
@@ -337,7 +330,7 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/PreferredCitation">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/PreferredCitation">
 		<rdfs:label xml:lang="en">Preferred citation</rdfs:label>
 		<skos:definition xml:lang="en">A note providing a specific citation format for citing the
 			resource.</skos:definition>
@@ -345,7 +338,7 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/RelatedMaterialNote">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/RelatedMaterialNote">
 		<rdfs:label xml:lang="en">Related material note</rdfs:label>
 		<skos:definition xml:lang="en">A note providing information on materials (e.g. archival
 			materials or publications) related to the described resource.</skos:definition>
@@ -355,17 +348,17 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Seal">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Seal">
 		<rdfs:label xml:lang="en">Seal</rdfs:label>
 		<skos:definition xml:lang="en">An impression that has been made in wax, clay, or another
 			soft material by the impact of a hard engraved surface with monograms, writing, numbers,
 			symbols, or design in intaglio, generally used to authenticate documents or for
 			decoration.</skos:definition>
-		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/Marking"/>
+		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/Marking"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/SignatureStatement">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/SignatureStatement">
 		<rdfs:label xml:lang="en">Signature statement</rdfs:label>
 		<skos:definition xml:lang="en">A formulaic statement describing the pattern followed in
 			assembling the sheets of the book, as expressed in its signatures. Signatures are
@@ -375,23 +368,23 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Stamp">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Stamp">
 		<rdfs:label xml:lang="en">Stamp</rdfs:label>
 		<skos:definition xml:lang="en">A mark that is impressed, printed, perforated, or embossed,
 			made by a hard object, especially a die, block, or other tool, on a softer material such
 			as paper or wax.</skos:definition>
-		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/Marking"/>
+		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/Marking"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/StylePeriod">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/StylePeriod">
 		<rdfs:label xml:lang="en">Style/Period</rdfs:label>
 		<skos:definition xml:lang="en">A defined style, historical or artistic period, movement,
 			group, or school whose characteristics are represented in a work.</skos:definition>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/SubjectNote">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/SubjectNote">
 		<rdfs:label xml:lang="en">Subject note</rdfs:label>
 		<skos:definition xml:lang="en">Textual information describing the subject or iconographic
 			details of a resource.</skos:definition>
@@ -401,7 +394,7 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/SummaryNote">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/SummaryNote">
 		<rdfs:label xml:lang="en">Summary note</rdfs:label>
 		<rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
 		<skos:definition xml:lang="en">A note providing a summary of the resource.</skos:definition>
@@ -410,7 +403,7 @@ new in 1.0:
 			extension, but need to add it here for now.</skos:editorialNote>
 		<dcterms:issued>2018-01-29T00:00:00-04:00</dcterms:issued>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/SupplementaryContentNote">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/SupplementaryContentNote">
 		<rdfs:label xml:lang="en">Supplementary content note</rdfs:label>
 		<rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Note"/>
 		<skos:definition xml:lang="en">A note indicating the existence of supplementary content such
@@ -421,8 +414,8 @@ new in 1.0:
 			general bf:Notes extension, but need to add it here for now.</skos:editorialNote>
 		<dcterms:issued>2018-01-29T00:00:00-04:00</dcterms:issued>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/TextBlock">
-		<owl:disjointWith rdf:resource="https://w3id.org/arm/core/ontology/1.0/Enclosure"/>
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/TextBlock">
+		<owl:disjointWith rdf:resource="https://w3id.org/arm/ontology/1.0/Enclosure"/>
 		<rdfs:label xml:lang="en">Text block</rdfs:label>
 		<skos:definition xml:lang="en">Those parts of a book consisting of the stack of leaves or
 			gatherings to be bound, exclusive of the materials, such as endpapers or boards, that
@@ -433,7 +426,7 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Typeface">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Typeface">
 		<rdfs:label xml:lang="en">Typeface</rdfs:label>
 		<skos:definition xml:lang="en">A design or “font family” created by a typographer or type
 			designer. It defines specific stylistic features to determine the type display of a
@@ -443,7 +436,7 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Volume">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Volume">
 		<rdfs:label xml:lang="en"/>
 		<skos:definition xml:lang="en">A single bibliographic or physical volume of a
 			resource.</skos:definition>
@@ -452,61 +445,61 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Watermark">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Watermark">
 		<rdfs:label xml:lang="en">Watermark</rdfs:label>
 		<skos:definition xml:lang="en">A faint design or device incorporated into paper as it is
 			made and appearing as translucent or shaded areas visual only through transmitted light.
 			Often used to give the name of the manufacturer and the date of the paper's manufacture;
 			a symbol, seal, or initials are also common. Often used to detect and prevent
 			counterfeiting and forgery.</skos:definition>
-		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/Marking"/>
+		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/Marking"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<!-- https://w3id.org/arm/core/ontology/1.0/AwardCitation -->
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/AwardCitation">
-		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/AwardReceipt"/>
+	<!-- https://w3id.org/arm/ontology/1.0/AwardCitation -->
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/AwardCitation">
+		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/AwardReceipt"/>
 		<skos:definition>The specific nature of the award receipt is citation.</skos:definition>
 		<rdfs:label>Award citation</rdfs:label>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<!-- https://w3id.org/arm/core/ontology/1.0/AwardGranterActivity -->
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/AwardGranterActivity">
-		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/Activity"/>
+	<!-- https://w3id.org/arm/ontology/1.0/AwardGranterActivity -->
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/AwardGranterActivity">
+		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/Activity"/>
 		<skos:definition>The activity of granting an award.</skos:definition>
 		<skos:scopeNote>This class is not derived from a MARC relator.</skos:scopeNote>
 		<rdfs:label>Award granter</rdfs:label>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<!-- https://w3id.org/arm/core/ontology/1.0/AwardHonoraryMention -->
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/AwardHonoraryMention">
-		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/AwardReceipt"/>
+	<!-- https://w3id.org/arm/ontology/1.0/AwardHonoraryMention -->
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/AwardHonoraryMention">
+		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/AwardReceipt"/>
 		<skos:definition>The specific nature of the award receipt is honorary
 			mention.</skos:definition>
 		<rdfs:label>Award honorary mention</rdfs:label>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<!-- https://w3id.org/arm/core/ontology/1.0/AwardLonglist -->
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/AwardLonglist">
-		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/AwardReceipt"/>
+	<!-- https://w3id.org/arm/ontology/1.0/AwardLonglist -->
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/AwardLonglist">
+		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/AwardReceipt"/>
 		<skos:definition>The specific nature of the award receipt is longlist.</skos:definition>
 		<rdfs:label>Award longlist</rdfs:label>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<!-- https://w3id.org/arm/core/ontology/1.0/AwardNominee -->
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/AwardNominee">
-		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/AwardReceipt"/>
+	<!-- https://w3id.org/arm/ontology/1.0/AwardNominee -->
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/AwardNominee">
+		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/AwardReceipt"/>
 		<skos:definition>The specific nature of the award receipt is nominee.</skos:definition>
 		<rdfs:label>Award nominee</rdfs:label>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<!-- https://w3id.org/arm/core/ontology/1.0/AwardReceipt -->
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/AwardReceipt">
+	<!-- https://w3id.org/arm/ontology/1.0/AwardReceipt -->
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/AwardReceipt">
 		<skos:definition>The bestowal of an award, honor, or distinction to an Agent or Work. The
 			award bestowed should be represented with the Award class. The AwardReceipt is a context
 			node between the award and the recipient which may contain further information, such as
@@ -515,9 +508,9 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<!-- https://w3id.org/arm/core/ontology/1.0/AwardSelectorActivity -->
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/AwardSelectorActivity">
-		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/Activity"/>
+	<!-- https://w3id.org/arm/ontology/1.0/AwardSelectorActivity -->
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/AwardSelectorActivity">
+		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/Activity"/>
 		<skos:definition>The activity of nominating or judging a resource in relation to an award,
 			honor, etc.</skos:definition>
 		<skos:scopeNote>This class is not derived from a MARC relator.</skos:scopeNote>
@@ -525,24 +518,24 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<!-- https://w3id.org/arm/core/ontology/1.0/AwardShortlist -->
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/AwardShortlist">
-		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/AwardReceipt"/>
+	<!-- https://w3id.org/arm/ontology/1.0/AwardShortlist -->
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/AwardShortlist">
+		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/AwardReceipt"/>
 		<skos:definition>The specific nature of the award receipt is award
 			shortlist.</skos:definition>
 		<rdfs:label>Award shortlist</rdfs:label>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<!-- https://w3id.org/arm/core/ontology/1.0/AwardWinner -->
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/AwardWinner">
-		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/AwardReceipt"/>
+	<!-- https://w3id.org/arm/ontology/1.0/AwardWinner -->
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/AwardWinner">
+		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/AwardReceipt"/>
 		<skos:definition>The specific nature of the award receipt is award winner.</skos:definition>
 		<rdfs:label>Award winner</rdfs:label>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/Measurement">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Measurement">
 		<rdfs:label>Measurement</rdfs:label>
 		<skos:definition xml:lang="en-us">The measurement of a single aspect of a resource,
 			including value, units, and the dimension measured. For example, a book may have a
@@ -551,7 +544,7 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/core/ontology/1.0/MeasurementGroup">
+	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/MeasurementGroup">
 		<rdfs:label>Measurement Group</rdfs:label>
 		<skos:definition xml:lang="en-us">A set of measurements pertaining to a specific resource,
 			part of a resource, or resource in a particular arrangement. For example, a book may
@@ -569,7 +562,7 @@ new in 1.0:
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/agentOf">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/agentOf">
 		<rdfs:label xml:lang="en">agent of</rdfs:label>
 		<skos:definition xml:lang="en">Relates an agent to the activity it participated
 			in.</skos:definition>
@@ -578,81 +571,81 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/atLocation">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/atLocation">
 		<rdfs:label xml:lang="en">at location</rdfs:label>
 		<skos:definition xml:lang="en">The resource being described is at the specified
 			location.</skos:definition>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/isLocationOf"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/isLocationOf"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/carries">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/carries">
 		<rdfs:label xml:lang="en">carries</rdfs:label>
 		<skos:definition xml:lang="en">A particular physical form, such as a volume, a sheet of
 			paper, or a computer disk, contains or has on it the resource being
 			described.</skos:definition>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/isOnCarrier"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/isOnCarrier"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/cites">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/cites">
 		<rdfs:label xml:lang="en">cites</rdfs:label>
 		<skos:definition xml:lang="en">Visual citation is an artistic process/practice in which a
 			creator reproduces the totality or a section of a (well-known) work of art (here, the
 			object) to incorporate it a new visual creation (here, the subject).</skos:definition>
 		<rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/citedBy"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/citedBy"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/citedBy">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/citedBy">
 		<rdfs:label xml:lang="en">cited by</rdfs:label>
 		<skos:definition xml:lang="en">Visual citation is an artistic process/practice in which a
 			creator reproduces the totality or a section of a (well-known) work of art (here, the
 			subject) to incorporate it into a new visual creation (here, the
 			object).</skos:definition>
 		<rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/relatedTo"/>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/cites"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/cites"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/coveredIn">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/coveredIn">
 		<rdfs:label xml:lang="en">covered in</rdfs:label>
 		<skos:definition xml:lang="en">Specifies a resource whose content covers this time period or
 			location.</skos:definition>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/covers"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/covers"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/covers">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/covers">
 		<rdfs:label xml:lang="en">covers</rdfs:label>
 		<skos:definition xml:lang="en">Specifies a time period or location covered in the content of
 			this resource.</skos:definition>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/coveredIn"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/coveredIn"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/describedBy">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/describedBy">
 		<rdfs:label xml:lang="en">described by</rdfs:label>
 		<skos:definition xml:lang="en">This resource is described by another, for example a
 			PhysicalCondition is described by a ConditionAssessment</skos:definition>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/describes"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/describes"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/describes">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/describes">
 		<rdfs:label xml:lang="en">describes</rdfs:label>
 		<skos:definition xml:lang="en">This resource provides a description of another, for example
 			a ConditionAssessment describes a PhysicalCondition.</skos:definition>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/describedBy"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/describedBy"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/hasArrangement">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasArrangement">
 		<rdfs:label xml:lang="en">has arrangement</rdfs:label>
 		<skos:definition xml:lang="en">Relates an object or collection of objects to information
 			about its organization or arrangement.</skos:definition>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/isArrangementOf"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/isArrangementOf"/>
 		<skos:example xml:lang="en">For computer files, organization and arrangement information may
 			be the file structure and sort sequence of a file.</skos:example>
 		<skos:example xml:lang="en">For visual materials, this information may be how a collection
@@ -664,104 +657,118 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/hasAttribution">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasAttribution">
 		<rdfs:label xml:lang="en">has attribution</rdfs:label>
 		<skos:definition xml:lang="en">Used to attribute an Activity, such as ArtistActivity, to a
 			particular agent or agents: relates the Activity (or other resource) to an Attribution
 			resource, which carries information about the agent, source, date, etc. of the
 			attribution.</skos:definition>
-		<rdfs:range rdf:resource="https://w3id.org/arm/core/ontology/1.0/Attribution"/>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/isAttributionOf"/>
+		<rdfs:range rdf:resource="https://w3id.org/arm/ontology/1.0/Attribution"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/isAttributionOf"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/hasCitation">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasCitation">
 		<rdfs:label xml:lang="en">has citation</rdfs:label>
 		<skos:definition xml:lang="en">The resource that is the focus of description (e.g., a
 			bf:Item or bf:Instance) has a citation located in a standard reference
 			source.</skos:definition>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/isCitationOf"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/isCitationOf"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/hasExhibition">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasExhibition">
 		<rdfs:label xml:lang="en">has exhibition</rdfs:label>
 		<skos:definition xml:lang="en">Relates an item to the Exhibition resource representing the
 			relationship between the item and an ExhibitionEvent.</skos:definition>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/isExhibitionOf"/>
-		<rdfs:range rdf:resource="https://w3id.org/arm/core/ontology/1.0/Exhibition"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/isExhibitionOf"/>
+		<rdfs:range rdf:resource="https://w3id.org/arm/ontology/1.0/Exhibition"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/hasHandwritingType">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasHandwritingType">
 		<rdfs:label xml:lang="en">has handwriting type</rdfs:label>
 		<skos:definition xml:lang="en">A relationship between a resource that includes handwriting
 			and the type of writing hand, e.g. Gothic, Secretary, Carolingian minuscule, and
 			Sütterlin.</skos:definition>
 		<rdfs:comment xml:lang="en">Use on a :Handwriting</rdfs:comment>
-		<rdfs:range rdf:resource="https://w3id.org/arm/core/ontology/1.0/HandwritingType"/>
+		<rdfs:range rdf:resource="https://w3id.org/arm/ontology/1.0/HandwritingType"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/hasInput">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasInput">
 		<rdfs:label xml:lang="en">has input</rdfs:label>
 		<skos:definition xml:lang="en">One resource has another resource as input, for example when
 			one resource is informed or acted on by another. A ConservatorActivity has input from a
 			ConditionAssessment.</skos:definition>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/isInputTo"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/isInputTo"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/hasOrigin">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasItemHistory">
+		<rdfs:label xml:lang="en">has item history</rdfs:label>
+		<skos:definition xml:lang="en">Links an item history from an Item.</skos:definition>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/isInputTo"/>
+		<dcterms:issued>2020-12-16T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2020-12-16T00:00:00-04:00</dcterms:modified>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasOrigin">
 		<rdfs:label xml:lang="en">has origin</rdfs:label>
 		<skos:definition xml:lang="en">Specifies the physical location from which this resource
 			(e.g., a title) originates, such as spine, cover, container, etc.</skos:definition>
 		<skos:scopeNote xml:lang="en">Distinct from
-			https://w3id.org/arm/core/ontology/1.0/hasSource, which specifies an external
+			https://w3id.org/arm/ontology/1.0/hasSource, which specifies an external
 			organization or scheme from which the resource was obtained.</skos:scopeNote>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/hasPhysicalCondition">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasPhysicalCondition">
 		<rdfs:label xml:lang="en">has physical condition</rdfs:label>
 		<skos:definition xml:lang="en">Relates an object or part of an object to a specific aspect
 			of its physical condition.</skos:definition>
-		<rdfs:range rdf:resource="https://w3id.org/arm/core/ontology/1.0/PhysicalCondition"/>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/isPhysicalConditionOf"/>
+		<rdfs:range rdf:resource="https://w3id.org/arm/ontology/1.0/PhysicalCondition"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/isPhysicalConditionOf"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/hasPreferredTitle">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasPreferredTitle">
 		<rdfs:label xml:lang="en">has preferred title</rdfs:label>
 		<skos:definition xml:lang="en">Specifies the preferred title of this
 			resource.</skos:definition>
 		<skos:scopeNote xml:lang="en">A resource may have multiple directly linked titles, among
 			which this is the preferred title.</skos:scopeNote>
 		<rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/title"/>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/isPreferredTitleOf"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/isPreferredTitleOf"/>
 		<rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/hasSignatureStatement">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasRelatedEvent">
+		<rdfs:label xml:lang="en">related event</rdfs:label>
+		<skos:definition xml:lang="en">This property allows implementers to link together events
+			with an unspecified relationship.</skos:definition>
+		<dcterms:issued>2020-12-16T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2020-12-16T00:00:00-04:00</dcterms:modified>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasSignatureStatement">
 		<rdfs:label xml:lang="en">has signature statement</rdfs:label>
 		<skos:definition xml:lang="en">Relationship between a Resource and a signature
 			statement.</skos:definition>
-		<rdfs:range rdf:resource="https://w3id.org/arm/core/ontology/1.0/SignatureStatement"/>
+		<rdfs:range rdf:resource="https://w3id.org/arm/ontology/1.0/SignatureStatement"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/hasSource">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasSource">
 		<rdfs:label xml:lang="en">has source</rdfs:label>
 		<skos:definition xml:lang="en">Relates this resource to the source from which it was
 			derived.</skos:definition>
 		<skos:scopeNote xml:lang="en">Has general applicability to many types of sources and
 			resources.</skos:scopeNote>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/isSourceOf"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/isSourceOf"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/hasStyle">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasStyle">
 		<rdfs:label xml:lang="en">has style</rdfs:label>
 		<skos:definition xml:lang="en">A relationship between a resource and a
 			style.</skos:definition>
@@ -772,31 +779,38 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/hasStylePeriod">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasStylePeriod">
 		<rdfs:label xml:lang="en">has style/period</rdfs:label>
 		<skos:definition xml:lang="en">A resource’s relationship to a style/period it
 			represents.</skos:definition>
 		<skos:editorialNote xml:lang="en">Range is unspecified to allow values from controlled
 			vocabularies not typed as arm:StylePeriod without unwanted
 			entailments.</skos:editorialNote>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/isStylePeriodOf"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/isStylePeriodOf"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/hasTypeface">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasType">
+		<rdfs:label xml:lang="en">type</rdfs:label>
+		<skos:definition xml:lang="en">This property allows implementers to choose an appropriate
+			vocabulary for events, inscriptions, enclosures, etc.</skos:definition>
+		<dcterms:issued>2020-12-16T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2020-12-16T00:00:00-04:00</dcterms:modified>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasTypeface">
 		<rdfs:label xml:lang="en">has typeface</rdfs:label>
 		<skos:definition xml:lang="en">A relationship between a Font and its design or “font
 			family”</skos:definition>
-		<rdfs:domain rdf:resource="https://w3id.org/arm/core/ontology/1.0/Font"/>
-		<rdfs:range rdf:resource="https://w3id.org/arm/core/ontology/1.0/Typeface"/>
+		<rdfs:domain rdf:resource="https://w3id.org/arm/ontology/1.0/Font"/>
+		<rdfs:range rdf:resource="https://w3id.org/arm/ontology/1.0/Typeface"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/isArrangementOf">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/isArrangementOf">
 		<rdfs:label xml:lang="en">is arrangement of</rdfs:label>
 		<skos:definition xml:lang="en">Relates information about the organization or arrangement of
 			an object or collection of objects to that object or collection.</skos:definition>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/hasArrangement"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/hasArrangement"/>
 		<skos:example xml:lang="en">For computer files, organization and arrangement information may
 			be the file structure and sort sequence of a file.</skos:example>
 		<skos:example xml:lang="en">For visual materials, this information may be how a collection
@@ -808,125 +822,125 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/isAttributionOf">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/isAttributionOf">
 		<rdfs:label xml:lang="en">is attribution of</rdfs:label>
 		<skos:definition xml:lang="en">Used to attribute an Activity, such as ArtistActivity, to a
 			particular agent or agents: relates an Attribution resource to the Activity (or other
 			resource), where the Attribution carries information about the agent, source, date, etc.
 			of the attribution.</skos:definition>
-		<rdfs:domain rdf:resource="https://w3id.org/arm/core/ontology/1.0/Attribution"/>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/hasAttribution"/>
+		<rdfs:domain rdf:resource="https://w3id.org/arm/ontology/1.0/Attribution"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/hasAttribution"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/isCitationOf">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/isCitationOf">
 		<rdfs:label xml:lang="en">is citation of</rdfs:label>
 		<skos:definition xml:lang="en"/>
-		<rdfs:range rdf:resource="https://w3id.org/arm/core/ontology/1.0/Activity"/>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/hasCitation"/>
+		<rdfs:range rdf:resource="https://w3id.org/arm/ontology/1.0/Activity"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/hasCitation"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/isColorContentOf">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/isColorContentOf">
 		<rdfs:label xml:lang="en">is color content of</rdfs:label>
 		<skos:definition xml:lang="en-us">Relates a color content to a resource.</skos:definition>
 		<owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60596"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/isExhibitionOf">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/isExhibitionOf">
 		<rdfs:label xml:lang="en">is exhibition of</rdfs:label>
 		<skos:definition xml:lang="en">Relates an Exhibition resource representing the relationship
 			between an item and an ExhibitionEvent to the item.</skos:definition>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/hasExhibition"/>
-		<rdfs:domain rdf:resource="https://w3id.org/arm/core/ontology/1.0/Exhibition"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/hasExhibition"/>
+		<rdfs:domain rdf:resource="https://w3id.org/arm/ontology/1.0/Exhibition"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/isInputTo">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/isInputTo">
 		<rdfs:label xml:lang="en">is input to</rdfs:label>
 		<skos:definition xml:lang="en">One resource provides input to another. For example, a
 			ConditionAssessment provides input to a ConservatorActivity.</skos:definition>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/hasInput"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/hasInput"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/isLocationOf">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/isLocationOf">
 		<rdfs:label xml:lang="en">is location of</rdfs:label>
 		<skos:definition xml:lang="en">The specified resource is at the location being
 			described.</skos:definition>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/atLocation"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/atLocation"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/isOnCarrier">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/isOnCarrier">
 		<rdfs:label xml:lang="en">is on carrier</rdfs:label>
 		<skos:definition xml:lang="en">The resource being described is on or contained in a
 			particular physical form, such as a volume, a sheet of paper, or a computer
 			disk.</skos:definition>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/carries"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/carries"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/isPhysicalConditionOf">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/isPhysicalConditionOf">
 		<rdfs:label xml:lang="en">is physical condition of</rdfs:label>
 		<skos:definition xml:lang="en">Relates a specific physical condition to an object or part of
 			an object.</skos:definition>
-		<rdfs:domain rdf:resource="https://w3id.org/arm/core/ontology/1.0/PhysicalCondition"/>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/hasPhysicalCondition"/>
+		<rdfs:domain rdf:resource="https://w3id.org/arm/ontology/1.0/PhysicalCondition"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/hasPhysicalCondition"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/isPreferredTitleOf">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/isPreferredTitleOf">
 		<rdfs:label xml:lang="en">is preferred title of</rdfs:label>
 		<skos:definition xml:lang="en">Specifies the resource for which this is the preferred
 			title.</skos:definition>
 		<skos:scopeNote xml:lang="en">A resource may have multiple directly linked titles, among
 			which this is the preferred title.</skos:scopeNote>
-		<rdfs:subPropertyOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/titleOf"/>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/hasPreferredTitle"/>
+		<rdfs:subPropertyOf rdf:resource="https://w3id.org/arm/ontology/1.0/titleOf"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/hasPreferredTitle"/>
 		<rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/isSourceOf">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/isSourceOf">
 		<rdfs:label xml:lang="en">is source of</rdfs:label>
 		<skos:definition xml:lang="en">Relates this resource to a resource of which it is the
 			source.</skos:definition>
 		<skos:scopeNote xml:lang="en">Has general applicability to many types of sources and
 			resources.</skos:scopeNote>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/hasSource"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/hasSource"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/isStylePeriodOf">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/isStylePeriodOf">
 		<rdfs:label xml:lang="en">is style/period of</rdfs:label>
 		<skos:definition xml:lang="en">A resource’s relationship to a style/period representing
 			it.</skos:definition>
 		<skos:editorialNote xml:lang="en">Domain is unspecified to allow subjects from controlled
 			vocabularies not typed as arm:StylePeriod without unwanted
 			entailments.</skos:editorialNote>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/hasStylePeriod"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/hasStylePeriod"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/markedBy">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/markedBy">
 		<rdfs:label xml:lang="en">marked by</rdfs:label>
 		<skos:definition xml:lang="en">A resource’s relationship to a Marking it
 			bears.</skos:definition>
-		<rdfs:domain rdf:resource="https://w3id.org/arm/core/ontology/1.0/Marking"/>
+		<rdfs:domain rdf:resource="https://w3id.org/arm/ontology/1.0/Marking"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/marks">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/marks">
 		<rdfs:label xml:lang="en">marks</rdfs:label>
 		<skos:definition xml:lang="en">A Marking’s relationship to the resource it is on or
 			in.</skos:definition>
-		<rdfs:domain rdf:resource="https://w3id.org/arm/core/ontology/1.0/Marking"/>
+		<rdfs:domain rdf:resource="https://w3id.org/arm/ontology/1.0/Marking"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/notates">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/notates">
 		<rdfs:label xml:lang="en">notates</rdfs:label>
 		<skos:definition xml:lang="en">A Note's relationship to the resource it
 			notates.</skos:definition>
@@ -935,14 +949,14 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/subjectOf">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/subjectOf">
 		<rdfs:label xml:lang="en">subject of</rdfs:label>
 		<skos:definition xml:lang="en">The relationship between a resource and another resource of
 			which it is the subject.</skos:definition>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/titleOf">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/titleOf">
 		<rdfs:label xml:lang="en">title of</rdfs:label>
 		<skos:definition xml:lang="en">Resource that this title belongs to.</skos:definition>
 		<owl:inverseOf rdf:resource="http://id.loc.gov/ontologies/bibframe/title"/>
@@ -950,7 +964,7 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/writtenIn">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/writtenIn">
 		<rdfs:label xml:lang="en">written in</rdfs:label>
 		<skos:definition xml:lang="en">The relationship between a resource containing text and the
 			Font or HandWriting the textual information is displayed in.</skos:definition>
@@ -958,121 +972,127 @@ new in 1.0:
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<!-- https://w3id.org/arm/core/ontology/1.0/hasAward -->
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/hasAward">
-		<rdfs:domain rdf:resource="https://w3id.org/arm/core/ontology/1.0/AwardReceipt"/>
+	<!-- https://w3id.org/arm/ontology/1.0/hasAward -->
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasAward">
+		<rdfs:domain rdf:resource="https://w3id.org/arm/ontology/1.0/AwardReceipt"/>
 		<rdfs:range rdf:resource="http://vivoweb.org/ontology/core#Award"/>
 		<skos:definition>This resource is a receipt of the specified award or
 			honor.</skos:definition>
 		<rdfs:label>has award</rdfs:label>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/isAwardOf"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/isAwardOf"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<!-- https://w3id.org/arm/core/ontology/1.0/isAwardOf -->
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/isAwardOf">
+	<!-- https://w3id.org/arm/ontology/1.0/isAwardOf -->
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/isAwardOf">
 		<rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Award"/>
-		<rdfs:range rdf:resource="https://w3id.org/arm/core/ontology/1.0/AwardReceipt"/>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/hasAward"/>
+		<rdfs:range rdf:resource="https://w3id.org/arm/ontology/1.0/AwardReceipt"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/hasAward"/>
 		<skos:definition>Links a specified award or honor to its receipt.</skos:definition>
 		<rdfs:label>is award of</rdfs:label>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/hasAward"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/hasAward"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<!-- https://w3id.org/arm/core/ontology/1.0/receives -->
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/receives">
-		<rdfs:range rdf:resource="https://w3id.org/arm/core/ontology/1.0/AwardReceipt"/>
+	<!-- https://w3id.org/arm/ontology/1.0/receives -->
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/receives">
+		<rdfs:range rdf:resource="https://w3id.org/arm/ontology/1.0/AwardReceipt"/>
 		<skos:definition>This resource, such as an Agent or Work, is the recipient of the specified
 			AwardReceipt.</skos:definition>
 		<rdfs:label>receives</rdfs:label>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/receivedBy"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/receivedBy"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<!-- https://w3id.org/arm/core/ontology/1.0/receivedBy -->
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/receivedBy">
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/receives"/>
-		<rdfs:domain rdf:resource="https://w3id.org/arm/core/ontology/1.0/AwardReceipt"/>
+	<!-- https://w3id.org/arm/ontology/1.0/receivedBy -->
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/receivedBy">
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/receives"/>
+		<rdfs:domain rdf:resource="https://w3id.org/arm/ontology/1.0/AwardReceipt"/>
 		<skos:definition>This AwardReceipt was received by the specified award recipient (such as an
 			Agent or Work).</skos:definition>
 		<rdfs:label>received by</rdfs:label>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/hasMeasurement">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasMeasurement">
 		<rdfs:label xml:lang="en">has measurement</rdfs:label>
 		<skos:definition xml:lang="en">The relationship of a reasourse to a
 			measurement.</skos:definition>
-		<rdfs:range rdf:resource="https://w3id.org/arm/core/ontology/1.0/Measurement"/>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/isMeasurementOf"/>
+		<rdfs:range rdf:resource="https://w3id.org/arm/ontology/1.0/Measurement"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/isMeasurementOf"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/hasMeasurementGroup">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasMeasurementGroup">
 		<rdfs:label xml:lang="en">has measurement group</rdfs:label>
 		<skos:definition xml:lang="en">The relationship of a resource to a measurement group,
 			indicating that the measurement group applies to the resource.</skos:definition>
-		<rdfs:range rdf:resource="https://w3id.org/arm/core/ontology/1.0/MeasurementGroup"/>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/isMeasurementGroupOf"/>
+		<rdfs:range rdf:resource="https://w3id.org/arm/ontology/1.0/MeasurementGroup"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/isMeasurementGroupOf"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/hasUnit">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasUnit">
 		<rdfs:label xml:lang="en">has unit</rdfs:label>
 		<skos:definition xml:lang="en">Relationship between the measurement and the unit used to
 			express the measurement.</skos:definition>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/isUnitOf"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/isUnitOf"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/isMeasurementOf">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/isMeasurementOf">
 		<rdfs:label xml:lang="en">is measurement of</rdfs:label>
 		<skos:definition xml:lang="en">The relationship of a measurement to a
 			resource.</skos:definition>
-		<rdfs:domain rdf:resource="https://w3id.org/arm/core/ontology/1.0/Measurement"/>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/hasMeasurement"/>
+		<rdfs:domain rdf:resource="https://w3id.org/arm/ontology/1.0/Measurement"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/hasMeasurement"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/isMeasurementGroupOf">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/isMeasurementGroupOf">
 		<rdfs:label xml:lang="en">is measurement group of</rdfs:label>
 		<skos:definition xml:lang="en">The relationship of a measurement group to a resource,
 			indicating that the measurement group applies to the resource.</skos:definition>
-		<rdfs:domain rdf:resource="https://w3id.org/arm/core/ontology/1.0/MeasurementGroup"/>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/hasMeasurementGroup"/>
+		<rdfs:domain rdf:resource="https://w3id.org/arm/ontology/1.0/MeasurementGroup"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/hasMeasurementGroup"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/isUnitOf">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/isUnitOf">
 		<rdfs:label xml:lang="en">is unit of</rdfs:label>
 		<skos:definition xml:lang="en">Relationship between the unit and the measurement used to
 			express the measurement.</skos:definition>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/hasUnit"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/hasUnit"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/measuredBy">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/measuredBy">
 		<rdfs:label xml:lang="en">measured by</rdfs:label>
 		<skos:definition xml:lang="en">The relationship between a dimension or other aspect of a
 			resource and the Measurement that measures it. For example, the length, height, weight,
 			file size, etc. of a resource may be the aspect that is measured by a particular
 			Measurement.</skos:definition>
-		<rdfs:range rdf:resource="https://w3id.org/arm/core/ontology/1.0/Measurement"/>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/measures"/>
+		<rdfs:range rdf:resource="https://w3id.org/arm/ontology/1.0/Measurement"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/measures"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/core/ontology/1.0/measures">
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/measures">
 		<rdfs:label xml:lang="en">measures</rdfs:label>
 		<skos:definition xml:lang="en">The relationship between a Measurement and the dimension or
 			other aspect of a resource that is measured by this Measurement. For example, a
 			Measurement may specify the length, height, weight, file size, etc. of a
 			resource.</skos:definition>
-		<rdfs:domain rdf:resource="https://w3id.org/arm/core/ontology/1.0/Measurement"/>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/core/ontology/1.0/measuredBy"/>
+		<rdfs:domain rdf:resource="https://w3id.org/arm/ontology/1.0/Measurement"/>
+		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/measuredBy"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/physicalPresentation">
+		<rdfs:label xml:lang="en">physical presentation</rdfs:label>
+		<skos:definition xml:lang="en">The physical state of the resource (e.g., rolled, folded, unframed) when a measurement is taken.</skos:definition>
+		<dcterms:issued>2020-11-11T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2020-12-16T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
 	<!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -1081,39 +1101,17 @@ new in 1.0:
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-	<owl:Datatype rdf:about="https://w3id.org/arm/core/ontology/1.0/endDate">
+	<owl:Datatype rdf:about="https://w3id.org/arm/ontology/1.0/endDate">
 		<rdfs:label xml:lang="en">end date</rdfs:label>
 		<skos:definition xml:lang="en">The end date of a resource, such as an
 			event.</skos:definition>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Datatype>
-	<owl:Datatype rdf:about="https://w3id.org/arm/core/ontology/1.0/startDate">
+	<owl:Datatype rdf:about="https://w3id.org/arm/ontology/1.0/startDate">
 		<rdfs:label xml:lang="en">start date</rdfs:label>
 		<skos:definition xml:lang="en">The start date of a resource, such as an
 			event.</skos:definition>
-		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-	</owl:Datatype>
-	<owl:Datatype rdf:about="https://w3id.org/arm/core/ontology/1.0/physicalPresentation">
-		<rdfs:label xml:lang="en">physical presentation</rdfs:label>
-		<skos:definition xml:lang="en">The physical state of the resource (e.g. rolled, folded,
-			unframed) or other aspects of the resource (e.g. initial letters or illustrations on a
-			single page) when a measurement is taken.</skos:definition>
-		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-	</owl:Datatype>
-	<owl:Datatype rdf:about="https://w3id.org/arm/core/ontology/1.0/hasType">
-		<rdfs:label xml:lang="en">type</rdfs:label>
-		<skos:definition xml:lang="en">This property allows implementers to choose an appropriate
-			vocabulary for events, inscriptions, enclosures, etc.</skos:definition>
-		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-	</owl:Datatype>
-	<owl:Datatype rdf:about="https://w3id.org/arm/core/ontology/1.0/hasRelatedEvent">
-		<rdfs:label xml:lang="en">related event</rdfs:label>
-		<skos:definition xml:lang="en">This property allows implementers to link together events
-			with an unspecified relationship.</skos:definition>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Datatype>
