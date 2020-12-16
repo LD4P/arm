@@ -82,18 +82,6 @@
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Attribution">
-		<rdfs:label xml:lang="en">Attribution</rdfs:label>
-		<skos:definition xml:lang="en">The ascribing of an activity to a particular agent or agents.
-			This attribution may change over time based on new evidence.</skos:definition>
-		<skos:scopeNote xml:lang="en">The Attribution is directly related to an Activity, and
-			carries additional data about the agent, source, date, etc. of the
-			attribution.</skos:scopeNote>
-		<skos:example xml:lang="en">The activity of creating an artwork is ascribed to a particular
-			artist.</skos:example>
-		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-	</owl:Class>
 	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Autograph">
 		<rdfs:label xml:lang="en">Autograph</rdfs:label>
 		<skos:definition xml:lang="en">A person's name written on a resource in their own hand.</skos:definition>
@@ -151,10 +139,10 @@
 		<rdfs:label xml:lang="en">Condition assessment</rdfs:label>
 		<skos:definition xml:lang="en">Assessment and/or documentation of the physical condition of
 			an item, including damage, material vulnerabilities, special storage requirements, etc.
-			The assessment is generally the output of a condition assessment activity, and may or
-			may not result in a conservator activity.</skos:definition>
+			The assessment is generally the output of a condition assessment, and may or
+			may not result in a conservator contribution.</skos:definition>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+		<dcterms:modified>2020-12-16T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
 	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/ContentsNote">
 		<rdfs:label xml:lang="en">Contents note</rdfs:label>
@@ -456,7 +444,6 @@
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<!-- https://w3id.org/arm/ontology/1.0/AwardCitation -->
 	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/AwardCitation">
 		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/AwardReceipt"/>
 		<skos:definition>The specific nature of the award receipt is citation.</skos:definition>
@@ -464,16 +451,6 @@
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<!-- https://w3id.org/arm/ontology/1.0/AwardGranterActivity -->
-	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/AwardGranterActivity">
-		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/Activity"/>
-		<skos:definition>The activity of granting an award.</skos:definition>
-		<skos:scopeNote>This class is not derived from a MARC relator.</skos:scopeNote>
-		<rdfs:label>Award granter</rdfs:label>
-		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-	</owl:Class>
-	<!-- https://w3id.org/arm/ontology/1.0/AwardHonoraryMention -->
 	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/AwardHonoraryMention">
 		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/AwardReceipt"/>
 		<skos:definition>The specific nature of the award receipt is honorary
@@ -482,7 +459,6 @@
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<!-- https://w3id.org/arm/ontology/1.0/AwardLonglist -->
 	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/AwardLonglist">
 		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/AwardReceipt"/>
 		<skos:definition>The specific nature of the award receipt is longlist.</skos:definition>
@@ -490,7 +466,6 @@
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<!-- https://w3id.org/arm/ontology/1.0/AwardNominee -->
 	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/AwardNominee">
 		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/AwardReceipt"/>
 		<skos:definition>The specific nature of the award receipt is nominee.</skos:definition>
@@ -498,7 +473,6 @@
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<!-- https://w3id.org/arm/ontology/1.0/AwardReceipt -->
 	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/AwardReceipt">
 		<skos:definition>The bestowal of an award, honor, or distinction to an Agent or Work. The
 			award bestowed should be represented with the Award class. The AwardReceipt is a context
@@ -508,17 +482,6 @@
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<!-- https://w3id.org/arm/ontology/1.0/AwardSelectorActivity -->
-	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/AwardSelectorActivity">
-		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/Activity"/>
-		<skos:definition>The activity of nominating or judging a resource in relation to an award,
-			honor, etc.</skos:definition>
-		<skos:scopeNote>This class is not derived from a MARC relator.</skos:scopeNote>
-		<rdfs:label>Award selector</rdfs:label>
-		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-	</owl:Class>
-	<!-- https://w3id.org/arm/ontology/1.0/AwardShortlist -->
 	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/AwardShortlist">
 		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/AwardReceipt"/>
 		<skos:definition>The specific nature of the award receipt is award
@@ -527,7 +490,6 @@
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
-	<!-- https://w3id.org/arm/ontology/1.0/AwardWinner -->
 	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/AwardWinner">
 		<rdfs:subClassOf rdf:resource="https://w3id.org/arm/ontology/1.0/AwardReceipt"/>
 		<skos:definition>The specific nature of the award receipt is award winner.</skos:definition>
@@ -562,15 +524,6 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/agentOf">
-		<rdfs:label xml:lang="en">agent of</rdfs:label>
-		<skos:definition xml:lang="en">Relates an agent to the activity it participated
-			in.</skos:definition>
-		<rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
-		<owl:inverseOf rdf:resource="http://id.loc.gov/ontologies/bibframe/agent"/>
-		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-	</owl:ObjectProperty>
 	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/atLocation">
 		<rdfs:label xml:lang="en">at location</rdfs:label>
 		<skos:definition xml:lang="en">The resource being described is at the specified
@@ -641,33 +594,6 @@
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasArrangement">
-		<rdfs:label xml:lang="en">has arrangement</rdfs:label>
-		<skos:definition xml:lang="en">Relates an object or collection of objects to information
-			about its organization or arrangement.</skos:definition>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/isArrangementOf"/>
-		<skos:example xml:lang="en">For computer files, organization and arrangement information may
-			be the file structure and sort sequence of a file.</skos:example>
-		<skos:example xml:lang="en">For visual materials, this information may be how a collection
-			is arranged.</skos:example>
-		<skos:example xml:lang="en">For an individual book on display in an exhibition, the
-			arrangement may be the page to which the book is opened for display.</skos:example>
-		<skos:example xml:lang="en">For a scroll, the arrangement may be rolled or
-			unrolled.</skos:example>
-		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasAttribution">
-		<rdfs:label xml:lang="en">has attribution</rdfs:label>
-		<skos:definition xml:lang="en">Used to attribute an Activity, such as ArtistActivity, to a
-			particular agent or agents: relates the Activity (or other resource) to an Attribution
-			resource, which carries information about the agent, source, date, etc. of the
-			attribution.</skos:definition>
-		<rdfs:range rdf:resource="https://w3id.org/arm/ontology/1.0/Attribution"/>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/isAttributionOf"/>
-		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-	</owl:ObjectProperty>
 	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasCitation">
 		<rdfs:label xml:lang="en">has citation</rdfs:label>
 		<skos:definition xml:lang="en">The resource that is the focus of description (e.g., a
@@ -699,11 +625,11 @@
 	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasInput">
 		<rdfs:label xml:lang="en">has input</rdfs:label>
 		<skos:definition xml:lang="en">One resource has another resource as input, for example when
-			one resource is informed or acted on by another. A ConservatorActivity has input from a
+			one resource is informed or acted on by another. A Contribution with type of Conservator has input from a
 			ConditionAssessment.</skos:definition>
 		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/isInputTo"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+		<dcterms:modified>2020-12-16T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
 	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasItemHistory">
 		<rdfs:label xml:lang="en">has item history</rdfs:label>
@@ -730,6 +656,15 @@
 		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/isPhysicalConditionOf"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasPhysicalPresentation">
+		<rdfs:label xml:lang="en">has physical presentation</rdfs:label>
+		<skos:definition xml:lang="en">Relates an object or collection of objects to information
+			about its organization or arrangement at the time of measuring.</skos:definition>
+		<skos:example xml:lang="en">For a scroll, the arrangement may be rolled or
+			unrolled.</skos:example>
+		<dcterms:issued>2020-12-16T00:00:00-04:00</dcterms:issued>
+		<dcterms:modified>2020-12-16T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
 	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasPreferredTitle">
 		<rdfs:label xml:lang="en">has preferred title</rdfs:label>
@@ -822,24 +757,12 @@
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/isAttributionOf">
-		<rdfs:label xml:lang="en">is attribution of</rdfs:label>
-		<skos:definition xml:lang="en">Used to attribute an Activity, such as ArtistActivity, to a
-			particular agent or agents: relates an Attribution resource to the Activity (or other
-			resource), where the Attribution carries information about the agent, source, date, etc.
-			of the attribution.</skos:definition>
-		<rdfs:domain rdf:resource="https://w3id.org/arm/ontology/1.0/Attribution"/>
-		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/hasAttribution"/>
-		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
-	</owl:ObjectProperty>
 	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/isCitationOf">
 		<rdfs:label xml:lang="en">is citation of</rdfs:label>
-		<skos:definition xml:lang="en"/>
-		<rdfs:range rdf:resource="https://w3id.org/arm/ontology/1.0/Activity"/>
+		<skos:definition xml:lang="en">Links a citation to the Item being cited.</skos:definition>
 		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/hasCitation"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+		<dcterms:modified>2020-12-16T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
 	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/isColorContentOf">
 		<rdfs:label xml:lang="en">is color content of</rdfs:label>
@@ -860,10 +783,10 @@
 	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/isInputTo">
 		<rdfs:label xml:lang="en">is input to</rdfs:label>
 		<skos:definition xml:lang="en">One resource provides input to another. For example, a
-			ConditionAssessment provides input to a ConservatorActivity.</skos:definition>
+			ConditionAssessment provides input to a Contribution with a type of Conservator.</skos:definition>
 		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/hasInput"/>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+		<dcterms:modified>2020-12-16T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
 	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/isLocationOf">
 		<rdfs:label xml:lang="en">is location of</rdfs:label>
