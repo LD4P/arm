@@ -155,6 +155,7 @@
 - arm:Bookplate
 - arm:Event
 - arm:ItemHistory
+- arm:PhysicalPresentation
 
 #### Object Properties
 - arm:hasItemHistory
