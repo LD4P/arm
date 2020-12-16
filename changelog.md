@@ -1,9 +1,6 @@
 # ARM Changelog
 
-## [v. 1.0] - 2020-12-08
-- Reorganized repository so that directories based on versions is at the top-level.
-
-## [v. 1.0] - 2020-12-02 
+## [v. 1.0] - 2020-12-02 - 2020-12-16 
 - Created version 1.0 from version 0.1
 
 ### Merged files
@@ -27,8 +24,11 @@
 - arm:Art copyist
 - arm:Artist
 - arm:Assignee
+- arm:Attribution
 - arm:Auction
 - arm:Author
+- arm:AwardGranterActivity
+- arm:AwardSelectorActivity
 - arm:Bequest
 - arm:Binder
 - arm:Borrower
@@ -137,10 +137,12 @@
 - arm:accessions
 - arm:hasActivity
 - arm:hasArrangement
+- arm:hasAttribution
 - arm:hasCustodialHistory
 - arm:hasMaterial
 - arm:isActivityOf
 - arm:isArrangementOf
+- arm:isAttributionOf
 - arm:isCustodialHistoryOf
 - arm:isAppliedMaterialOf
 - arm:isBaseMaterialOf
@@ -155,6 +157,8 @@
 - arm:ItemHistory
 
 #### Object Properties
+- arm:hasItemHistory
+- arm:hasPhysicalPresentation
 - arm:hasRelatedEvent
 - arm:hasType
 
@@ -167,4 +171,7 @@
 - arm:endDate - correct label
 - arm:Inscription - change definition
 - arm:Marking - change definition
+
+## [v. 1.0] - 2020-12-08
+- Reorganized repository so that directories based on versions is at the top-level.
 
