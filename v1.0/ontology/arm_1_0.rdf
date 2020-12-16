@@ -879,7 +879,6 @@
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<!-- https://w3id.org/arm/ontology/1.0/hasAward -->
 	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/hasAward">
 		<rdfs:domain rdf:resource="https://w3id.org/arm/ontology/1.0/AwardReceipt"/>
 		<rdfs:range rdf:resource="http://vivoweb.org/ontology/core#Award"/>
@@ -890,7 +889,6 @@
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<!-- https://w3id.org/arm/ontology/1.0/isAwardOf -->
 	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/isAwardOf">
 		<rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Award"/>
 		<rdfs:range rdf:resource="https://w3id.org/arm/ontology/1.0/AwardReceipt"/>
@@ -901,7 +899,6 @@
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<!-- https://w3id.org/arm/ontology/1.0/receives -->
 	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/receives">
 		<rdfs:range rdf:resource="https://w3id.org/arm/ontology/1.0/AwardReceipt"/>
 		<skos:definition>This resource, such as an Agent or Work, is the recipient of the specified
@@ -911,7 +908,6 @@
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:ObjectProperty>
-	<!-- https://w3id.org/arm/ontology/1.0/receivedBy -->
 	<owl:ObjectProperty rdf:about="https://w3id.org/arm/ontology/1.0/receivedBy">
 		<owl:inverseOf rdf:resource="https://w3id.org/arm/ontology/1.0/receives"/>
 		<rdfs:domain rdf:resource="https://w3id.org/arm/ontology/1.0/AwardReceipt"/>
