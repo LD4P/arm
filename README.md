@@ -1,7 +1,7 @@
 Art and Rare Materials (ARM) BIBFRAME Ontology Extensions
 ==========================
 
-*NOTE*: this work is continued/replaced by work hosted on: https://github.com/Art-and-Rare-Materials-BF-Ext/ARM-ontology/
+*NOTE*: this work is continued/replaced by work hosted on: https://github.com/Art-and-Rare-Materials-BF-Ext/arm
 
 Table of Contents
 ---------
