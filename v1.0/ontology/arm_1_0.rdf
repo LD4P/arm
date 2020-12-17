@@ -430,7 +430,7 @@
 		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
 	</owl:Class>
 	<owl:Class rdf:about="https://w3id.org/arm/ontology/1.0/Volume">
-		<rdfs:label xml:lang="en"/>
+		<rdfs:label xml:lang="en">Volume</rdfs:label>
 		<skos:definition xml:lang="en">A single bibliographic or physical volume of a
 			resource.</skos:definition>
 		<rdfs:comment xml:lang="en">Used in any volume-level description, as well as in parsing out
@@ -1008,7 +1008,7 @@
 		<skos:definition xml:lang="en">The end date of a resource, such as an
 			event.</skos:definition>
 		<dcterms:issued>2018-04-27T00:00:00-04:00</dcterms:issued>
-		<dcterms:modified>2018-04-27T00:00:00-04:00</dcterms:modified>
+		<dcterms:modified>2020-11-11T00:00:00-04:00</dcterms:modified>
 	</owl:Datatype>
 	<owl:Datatype rdf:about="https://w3id.org/arm/ontology/1.0/startDate">
 		<rdfs:label xml:lang="en">start date</rdfs:label>
